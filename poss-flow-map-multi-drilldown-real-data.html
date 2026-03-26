@@ -11,6 +11,9 @@
     * { box-sizing:border-box; }
     body { margin:0; color:var(--text); font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); }
     .wrap { max-width:1420px; margin:0 auto; padding:20px 16px 30px; }
+    .page-nav { display:flex; justify-content:flex-end; margin-bottom:10px; }
+    .home-link { display:inline-flex; align-items:center; justify-content:center; padding:8px 12px; border-radius:999px; border:1px solid rgba(111,132,171,.28); background:#14223e; color:var(--text); text-decoration:none; font-size:13px; }
+    .home-link:hover { background:#21365e; border-color:#4f6b99; }
     .grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
     .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.32); }
     .header { padding:20px 24px 14px; border-bottom:1px solid rgba(111,132,171,.12); }
@@ -19,6 +22,7 @@
     h1 { margin:0 0 8px; font-size:28px; line-height:1.12; }
     .headline { color:#d9e6ff; font-size:15px; line-height:1.55; max-width:940px; }
     .controls { margin-top:14px; display:flex; flex-wrap:wrap; gap:8px; }
+    .controls-divider { width:1px; height:28px; background:rgba(111,132,171,.32); margin:0 4px; align-self:center; }
     button { background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); border-radius:999px; padding:8px 12px; cursor:pointer; font-size:13px; }
     button.active { background:#21365e; border-color:#4f6b99; }
     .viz { position:relative; padding:8px 8px 10px; }
@@ -68,6 +72,9 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="page-nav">
+    <a class="home-link" href="./index.html">Home</a>
+  </div>
   <div class="grid">
     <div class="card">
       <div class="header">
@@ -120,6 +127,7 @@ let renderSequence = 0;
 const width = 1280, height = 860;
 let dataBundle = null, colors = {}, currentView = "top";
 let teamFocus = null; // When set, the Sankey diagram renders only one team.
+let lastSingleTeam = null; // Remembers last selected single-team focus.
 
 // Allow switching between multiple games by passing ?file=... in the URL.
 // Default now points to assets/processed for processed files.
@@ -172,6 +180,32 @@ fetch(autoInsightsFile)
   });
 
 function rgba(hex, alpha){ const c=d3.color(hex||"#888"); return `rgba(${c.r}, ${c.g}, ${c.b}, ${alpha})`; }
+
+function getAvailableTeams(){
+  if(!dataBundle) return [];
+  const out = [];
+  const seen = new Set();
+  const pushTeam = (raw) => {
+    const t = String(raw || "").trim();
+    if(!t || seen.has(t)) return;
+    seen.add(t);
+    out.push(t);
+  };
+  const meta = dataBundle.meta || {};
+  pushTeam(meta.team_a);
+  pushTeam(meta.team_b);
+  const topStarts = (dataBundle.views && dataBundle.views.top && dataBundle.views.top.starts) || {};
+  Object.keys(topStarts).forEach(pushTeam);
+  Object.keys(colors || {}).forEach(pushTeam);
+  return out;
+}
+
+function defaultSingleTeam(){
+  const teams = getAvailableTeams();
+  if(lastSingleTeam && teams.indexOf(lastSingleTeam) !== -1) return lastSingleTeam;
+  if(teams.length) return teams[0];
+  return null;
+}
 
 function renderInsights(list){
   if(!Array.isArray(list)) return "";
@@ -413,11 +447,39 @@ function setPanel(viewKey, custom=null){
 }
 function buildControls(){
   const order=["top","halfcourt","transition","oreb","made2","made3"].filter(k=>dataBundle.views[k]);
-  controls.innerHTML=order.map(k=>`<button data-view="${k}" class="${k===currentView?'active':''}">${dataBundle.views[k].label}</button>`).join("");
-  controls.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>setView(btn.dataset.view)));
+  const teams = getAvailableTeams();
+  const singleTeam = teamFocus || defaultSingleTeam();
+  const modeButtons = [
+    `<button data-mode="dual" class="${teamFocus ? "" : "active"}">2 Teams</button>`,
+    `<button data-mode="single" class="${teamFocus ? "active" : ""}">1 Team</button>`,
+  ];
+  const singleTeamButtons = teamFocus
+    ? teams.map((team, idx) => `<button data-team-index="${idx}" class="${teamFocus===team?'active':''}">${team}</button>`)
+    : [];
+
+  controls.innerHTML = [
+    ...order.map(k=>`<button data-view="${k}" class="${k===currentView?'active':''}">${dataBundle.views[k].label}</button>`),
+    `<span class="controls-divider" aria-hidden="true"></span>`,
+    ...modeButtons,
+    ...singleTeamButtons,
+  ].join("");
+
+  controls.querySelectorAll("button[data-view]").forEach(btn=>btn.addEventListener("click",()=>setView(btn.dataset.view)));
+  controls.querySelectorAll("button[data-mode='dual']").forEach(btn=>btn.addEventListener("click",()=>setView(currentView,{teamFocus:null})));
+  controls.querySelectorAll("button[data-mode='single']").forEach(btn=>btn.addEventListener("click",()=>{
+    const team = singleTeam || defaultSingleTeam();
+    if(team) setView(currentView,{teamFocus:team});
+  }));
+  controls.querySelectorAll("button[data-team-index]").forEach(btn=>btn.addEventListener("click",()=>{
+    const idx = parseInt(btn.dataset.teamIndex || "-1", 10);
+    const team = teams[idx];
+    if(team) setView(currentView,{teamFocus:team});
+  }));
 }
 function setView(viewKey, opts = {}) {
-  teamFocus = ("teamFocus" in opts) ? opts.teamFocus : null;
+  const prevView = currentView;
+  teamFocus = ("teamFocus" in opts) ? opts.teamFocus : teamFocus;
+  if(teamFocus) lastSingleTeam = teamFocus;
   currentView = viewKey;
   buildControls();
   setPanel(viewKey);
@@ -425,7 +487,11 @@ function setView(viewKey, opts = {}) {
   // For the 4->3 PoC, we want a real "nodes shift left" effect.
   // So we render the drilldown in its full (4-column) layout first,
   // then immediately morph to the compressed (3-column) layout.
-  if (typeZoomVariant === 3 && TYPE_ZOOM_VIEWS.has(viewKey)) {
+  const isTypeZoom = TYPE_ZOOM_VIEWS.has(viewKey);
+  const wasTypeZoom = TYPE_ZOOM_VIEWS.has(prevView);
+  const shouldRunFourToThreePush = typeZoomVariant === 3 && isTypeZoom && !wasTypeZoom;
+
+  if (shouldRunFourToThreePush) {
     const seq = ++renderSequence;
     renderView(viewKey, { omitStartOverride: false, animate: false });
     requestAnimationFrame(() => {
@@ -592,7 +658,9 @@ function renderView(viewKey, opts = {}){
 
         if (next) {
           const ctrl = !!(event.ctrlKey || event.metaKey);
-          setView(next, { teamFocus: ctrl ? null : d.team });
+          // Ctrl-click forces single-team drilldown to the clicked team.
+          // Plain click preserves current team mode (2-team or 1-team).
+          setView(next, { teamFocus: ctrl ? d.team : teamFocus });
           return;
         }
       }
