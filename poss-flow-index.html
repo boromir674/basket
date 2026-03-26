@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Euroleague Sankey — Game Switcher</title>
+  <style>
+    :root { --text:#eef4ff; --muted:#9db0cf; --card-bg:rgba(16,25,43,.96); --border:rgba(111,132,171,.28); --accent:#3a86ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); color:var(--text); }
+    .wrap { max-width:1440px; margin:0 auto; padding:20px 16px 28px; }
+    .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:4px; }
+    h1 { margin:0 0 4px; font-size:24px; }
+    .subtitle { color:var(--muted); font-size:13px; margin-bottom:14px; }
+    .layout { display:grid; grid-template-columns:320px minmax(0,1fr); gap:14px; align-items:stretch; }
+    .card { background:var(--card-bg); border-radius:16px; border:1px solid var(--border); padding:12px 12px 14px; }
+    .games-list { max-height:80vh; overflow:auto; }
+    .game-row { padding:8px 10px; border-radius:10px; border:1px solid transparent; cursor:pointer; margin-bottom:6px; }
+    .game-row:hover { border-color:rgba(111,132,171,.6); background:rgba(15,24,42,.9); }
+    .game-row.active { border-color:var(--accent); background:rgba(58,134,255,.16); }
+    .game-title { font-size:13px; font-weight:600; margin-bottom:2px; }
+    .game-meta { font-size:12px; color:var(--muted); }
+    .pill { display:inline-block; font-size:11px; padding:2px 7px; border-radius:999px; border:1px solid rgba(111,132,171,.5); margin-right:4px; color:var(--muted); }
+    .iframe-wrap { height:80vh; border-radius:14px; overflow:hidden; border:1px solid var(--border); background:#050816; }
+    iframe { width:100%; height:100%; border:0; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Euroleague MVP visualization spike</div>
+  <h1>Game switcher</h1>
+  <div class="subtitle">Pick any synced game on the left. The main Sankey view on the right reloads with that game's JSON.</div>
+
+  <div class="layout">
+    <div class="card">
+      <div class="games-list" id="games-list">Loading games_manifest.json…</div>
+    </div>
+    <div class="card">
+      <div class="iframe-wrap">
+        <iframe id="viewer" src="./poss-flow-map-multi-drilldown-real-data.html" title="Possession Flow Map"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var listEl = document.getElementById("games-list");
+  var viewer = document.getElementById("viewer");
+  if (!listEl || !viewer) return;
+
+  function setActive(rowEl) {
+    Array.prototype.forEach.call(listEl.querySelectorAll('.game-row'), function (el) {
+      el.classList.remove('active');
+    });
+    if (rowEl) rowEl.classList.add('active');
+  }
+
+  function loadGame(file) {
+    var url = './poss-flow-map-multi-drilldown-real-data.html?file=' + encodeURIComponent(file);
+    viewer.src = url;
+  }
+
+  fetch('./assets/processed/games_manifest.json')
+    .then(function (r) { return r.json(); })
+    .then(function (entries) {
+      if (!Array.isArray(entries) || !entries.length) {
+        listEl.textContent = 'No games found. Run `docker compose run --rm season_sync` first.';
+        return;
+      }
+
+      listEl.innerHTML = '';
+      entries.forEach(function (g, idx) {
+        var row = document.createElement('div');
+        row.className = 'game-row';
+        row.dataset.file = `assets/processed/${g.file}`;
+
+        var title = document.createElement('div');
+        title.className = 'game-title';
+        title.textContent = (g.seasoncode || '?') + ' / ' + (g.gamecode || '?');
+        row.appendChild(title);
+
+        var meta = document.createElement('div');
+        meta.className = 'game-meta';
+        meta.textContent = (g.team_a || '?') + ' vs ' + (g.team_b || '?');
+        row.appendChild(meta);
+
+        var meta2 = document.createElement('div');
+        meta2.className = 'game-meta';
+        var date = g.gamedate || 'date unknown';
+        var synced = g.synced_at || 'synced unknown';
+        meta2.textContent = 'Played: ' + date + ' · Synced: ' + synced;
+        row.appendChild(meta2);
+
+        row.addEventListener('click', function () {
+          loadGame(`assets/processed/${g.file}`);
+          setActive(row);
+        });
+
+        listEl.appendChild(row);
+
+        if (idx === 0) {
+          // Auto-select first game.
+          loadGame(`assets/processed/${g.file}`);
+          setActive(row);
+        }
+      });
+    })
+    .catch(function () {
+      listEl.textContent = 'Failed to load games_manifest.json.';
+    });
+})();
+</script>
+</body>
+</html>

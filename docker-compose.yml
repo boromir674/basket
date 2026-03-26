@@ -1,0 +1,110 @@
+services:
+  demo:
+    build: .
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Primary entry point: small curated batch + viewer JSON + validation.
+    command: ["demo"]
+
+  demo_auto_insights:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Experimental entry point: generate a single demo game (if needed)
+    # and enrich it with automatic insights for the viewer.
+    command: ["demo_auto_insights"]
+
+  pipeline:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Example pipeline+validation invocation for a small batch.
+    command: [
+      "run_pipeline_and_validate",
+      "--seasoncode", "E2021",
+      "--gamecode", "54,55",
+      "--output-dir", "/app",
+      "--output-pattern", "multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
+    ]
+
+  tests:
+    build:
+      context: .
+      target: tests
+    image: euroleague-sankey-tests
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Pytest-based test suite: run all tests in the dedicated test image.
+    entrypoint: ["python", "-m", "pytest"]
+    command: ["-q", "tests"]
+
+  season_sync:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Fill up data for a block of games in a given season and
+    # refresh games_manifest.json for the UI.
+    entrypoint: ["python"]
+    command: [
+      "season_sync.py",
+      "--seasoncode", "E2021",
+      "--start-gamecode", "1",
+      "--end-gamecode", "200",
+      "--output-dir", "/app"
+    ]
+
+  season_sync_dry:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Dry-run variant: preview which games would be built without
+    # touching the filesystem.
+    entrypoint: ["python"]
+    command: [
+      "season_sync.py",
+      "--seasoncode", "E2021",
+      "--start-gamecode", "1",
+      "--end-gamecode", "200",
+      "--output-dir", "/app",
+      "--dry-run"
+    ]
+
+  validate_auto_json:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes:
+      - ./assets/processed:/app/assets/processed
+    command:
+      - python
+      - "-c"
+      - |
+        import os
+        import json
+
+        directory = "/app/assets/processed"
+        print(f"Looking inside directory: {directory}\n")
+
+        if not os.path.exists(directory):
+            print(f"Directory does not exist: {directory}")
+        else:
+            for root, dirs, files in os.walk(directory):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    # print(f"Found file: {file_path}")
+
+                    if file.endswith("_auto.json"):
+                        print(f"Validating JSON file: {file_path}")
+                        try:
+                            with open(file_path, "r") as f:
+                                json.load(f)
+                            print(f"{file_path} is valid JSON.")
+                        except json.JSONDecodeError as e:
+                            print(f"{file_path} is invalid JSON: {e}")
+

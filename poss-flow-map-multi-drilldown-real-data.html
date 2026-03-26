@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Possession Flow Map — Real Data</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <style>
+    :root { --text:#eef4ff; --muted:#9db0cf; --node-stroke:#6f84ab; --tooltip:rgba(7,11,20,.97); }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--text); font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); }
+    .wrap { max-width:1420px; margin:0 auto; padding:20px 16px 30px; }
+    .grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
+    .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.32); }
+    .header { padding:20px 24px 14px; border-bottom:1px solid rgba(111,132,171,.12); }
+    .eyebrow,.crumbs,.muted,.node-pct-label,.col-label { color:var(--muted); }
+    .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    h1 { margin:0 0 8px; font-size:28px; line-height:1.12; }
+    .headline { color:#d9e6ff; font-size:15px; line-height:1.55; max-width:940px; }
+    .controls { margin-top:14px; display:flex; flex-wrap:wrap; gap:8px; }
+    button { background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); border-radius:999px; padding:8px 12px; cursor:pointer; font-size:13px; }
+    button.active { background:#21365e; border-color:#4f6b99; }
+    .viz { position:relative; padding:8px 8px 10px; }
+    svg { width:100%; height:860px; display:block; }
+    .col-label { fill:var(--muted); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .link { fill:none; stroke-opacity:.62; transition:stroke-opacity .15s ease, filter .15s ease; cursor:pointer; }
+    .link:hover { stroke-opacity:.92; filter:brightness(1.07); }
+    .node rect { rx:5px; ry:5px; stroke:var(--node-stroke); stroke-width:1px; cursor:pointer; }
+    .node-main-label { fill:var(--text); font-size:12px; font-weight:600; dominant-baseline:middle; pointer-events:none; }
+    .node-pct-label { fill:var(--muted); font-size:11px; dominant-baseline:middle; pointer-events:none; }
+    .footer { padding:0 24px 20px; color:var(--muted); font-size:13px; line-height:1.45; }
+    .tooltip { position:absolute; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
+    .tooltip.show { opacity:1; transform:translateY(0); }
+    .tag { display:inline-block; color:white; border-radius:999px; font-size:11px; padding:2px 8px; margin-bottom:7px; }
+    .side { padding:18px 18px 16px; }
+    .kpi { margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .tile,.list .item { background:rgba(14,23,40,.95); border:1px solid rgba(111,132,171,.14); border-radius:12px; padding:12px; }
+    .tile .label { color:var(--muted); font-size:12px; margin-bottom:6px; }
+    .tile .value { font-size:18px; font-weight:700; }
+    .list { margin-top:12px; display:grid; gap:8px; }
+    .panel-title { margin-top:18px; margin-bottom:8px; font-size:14px; color:#d9e6ff; }
+    .hint { margin-top:10px; padding:10px 12px; border-radius:12px; background:rgba(145,200,255,.08); border:1px solid rgba(145,200,255,.15); color:#d9e6ff; font-size:13px; line-height:1.4; }
+    .insight-auto { border-color:#4f6b99; box-shadow:0 0 0 1px rgba(79,107,153,.35); }
+    .insight-auto-primary { border-color:#ffbe0b; box-shadow:0 0 0 1px rgba(255,190,11,.65); }
+    .insight-auto-tag { display:inline-flex; align-items:center; gap:6px; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#f4f3ff; background:linear-gradient(90deg,#3a86ff,#8338ec); padding:2px 8px; border-radius:999px; margin-bottom:6px; }
+    .insight-auto-tag span { opacity:.86; }
+    .insight-auto-meta { margin-top:4px; font-size:12px; color:var(--muted); }
+    .insight-rarity { margin-top:8px; display:flex; flex-direction:column; gap:4px; }
+    .insight-rarity-row { display:flex; flex-direction:column; gap:2px; }
+    .insight-rarity-bar { position:relative; width:100%; height:6px; border-radius:999px; background:rgba(111,132,171,.35); overflow:hidden; }
+    .insight-rarity-fill { position:absolute; left:0; top:0; bottom:0; border-radius:999px; background:linear-gradient(90deg,#3a86ff,#ff006e); }
+    .insight-rarity-fill-league { background:linear-gradient(90deg,#ffbe0b,#ff006e); }
+    .insight-rarity-label { font-size:11px; color:var(--muted); }
+    .insight-hist { margin-top:6px; display:flex; gap:2px; align-items:flex-end; height:18px; }
+    .insight-hist-bar { flex:1; background:rgba(111,132,171,.35); border-radius:4px 4px 0 0; }
+    .insight-hist-bar-active { background:linear-gradient(180deg,#ff006e,#ffbe0b); }
+    .shot-profile-row { margin-top:8px; }
+    .shot-profile-label { font-size:11px; color:var(--muted); margin-bottom:3px; }
+    .shot-profile-bar { height:8px; border-radius:999px; overflow:hidden; display:flex; background:rgba(111,132,171,.18); }
+    .shot-profile-seg { height:100%; }
+    .radar-card { margin-top:16px; padding:10px 12px; border-radius:14px; border:1px solid rgba(111,132,171,.18); background:rgba(10,18,35,.96); }
+    .radar-title { font-size:13px; color:#d9e6ff; margin-bottom:4px; }
+    .radar-subtitle { font-size:11px; color:var(--muted); margin-bottom:4px; }
+    .radar-legend { display:flex; flex-wrap:wrap; gap:8px; font-size:11px; color:var(--muted); margin-top:4px; }
+    .radar-dot { width:8px; height:8px; border-radius:999px; display:inline-block; margin-right:4px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid">
+    <div class="card">
+      <div class="header">
+        <div class="eyebrow">Euroleague MVP visualization spike — real data</div>
+        <h1 id="page-title">Possession Flow Map</h1>
+        <div class="headline" id="headline">Loading…</div>
+        <div class="controls" id="controls"></div>
+        <div class="crumbs" id="crumbs">View: Top-level</div>
+      </div>
+      <div class="viz">
+        <div class="tooltip" id="tooltip"></div>
+        <svg id="chart" viewBox="0 0 1280 860"></svg>
+      </div>
+      <div class="footer">Feature-rich multi-drilldown view using real API-derived JSON.</div>
+    </div>
+    <div class="card">
+      <div class="side">
+        <h2 id="panel-title">Context</h2>
+        <div class="muted" id="panel-desc"></div>
+        <div class="kpi" id="kpi-grid"></div>
+        <div class="panel-title">Plain-language interpretation</div>
+        <div class="list" id="insights"></div>
+        <div class="hint">Product pattern: self-explainable first, explorable second.</div>
+        <div class="radar-card" id="radar-card">
+          <div class="radar-title">Efficiency radar 
+            <span style="color:var(--muted);font-weight:400;font-size:11px;">— top view</span>
+          </div>
+          <div class="radar-subtitle">PPP, 3P mix, turnovers, OREB share.</div>
+          <svg id="radar-svg" width="220" height="180"></svg>
+          <div class="radar-legend" id="radar-legend"></div>
+        </div>
+        <div class="panel-title">Shot outcome mix (current view)</div>
+        <div id="shot-profile"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const tooltip = document.getElementById("tooltip");
+const controls = document.getElementById("controls");
+const svg = d3.select("#chart");
+const width = 1280, height = 860;
+let dataBundle = null, colors = {}, currentView = "top";
+
+// Allow switching between multiple games by passing ?file=... in the URL.
+// Default now points to assets/processed for processed files.
+const params = new URLSearchParams(window.location.search);
+const paramFile = params.get("file");
+let dataFile = paramFile || "assets/processed/multi_drilldown_real_data.json";
+// Allow callers to pass just a filename (e.g. "multi_drilldown_real_data_E2021_54_auto.json")
+// while our processed JSON lives under assets/processed/.
+if (paramFile && !paramFile.includes("/")) {
+  dataFile = `assets/processed/${paramFile}`;
+}
+// Removed derivation of auto-insights file from dataFile.
+const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_auto.json";
+
+// Log the file being fetched for debugging purposes.
+console.log(`Attempting to fetch auto-insights file: ${autoInsightsFile}`);
+
+// Fetch the auto-insights file if it exists.
+fetch(autoInsightsFile)
+  .then(response => {
+    if (!response.ok) {
+      console.warn(`Auto-insights file not found: ${autoInsightsFile}`);
+      return null; // Gracefully handle missing auto-insights file.
+    }
+    return response.json();
+  })
+  .then(autoData => {
+    if (autoData) {
+      console.log("Auto-insights data loaded successfully.");
+      // Ensure renderAutoInsights is defined before calling it.
+      if (typeof renderAutoInsights === "function") {
+        renderAutoInsights(autoData); // Function to render auto-insights.
+      } else {
+        console.error("Error: renderAutoInsights function is not defined.");
+      }
+    }
+  })
+  .catch(error => {
+    console.error("Error loading auto-insights file:", error);
+  });
+
+function rgba(hex, alpha){ const c=d3.color(hex||"#888"); return `rgba(${c.r}, ${c.g}, ${c.b}, ${alpha})`; }
+
+function renderInsights(list){
+  if(!Array.isArray(list)) return "";
+  return list.map(function(raw){
+    const text=String(raw||"");
+    if(!text.startsWith("AUTO:")){
+      return `<div class="item">${text}</div>`;
+    }
+    const main=text.replace(/^AUTO:\s*/i,"").trim();
+    let summary=main, details="";
+    const idx=main.lastIndexOf("(");
+    if(idx>0){
+      summary=main.slice(0,idx).trim();
+      details=main.slice(idx).replace(/[()]/g,"").trim();
+    }
+    let z=null; const m=main.match(/z-score\s+(-?\d+(?:\.\d+)?)/i); if(m){ z=parseFloat(m[1]||"0"); }
+    let teamPct=null; const mp=main.match(/team-percentile\s+(\d+)/i); if(mp){ teamPct=parseInt(mp[1]||"0",10); }
+    let leaguePct=null; const ml=main.match(/league-percentile\s+(\d+)/i); if(ml){ leaguePct=parseInt(ml[1]||"0",10); }
+    const az=(z===null?0:Math.abs(z));
+    let levelLabel="Mild anomaly", levelClass="";
+    if(az>=3){ levelLabel="Very rare"; levelClass=" insight-auto-primary"; }
+    else if(az>=2){ levelLabel="Unusual"; }
+    const baseClass="item insight-auto"+levelClass;
+    let rarityHtml="";
+    if(teamPct!==null && teamPct>=1 && teamPct<=99){
+      const tWidth=Math.max(5,Math.min(95,teamPct));
+      const tTop=100-teamPct;
+      const tBucket=tTop<=5?"Top 5%":tTop<=10?"Top 10%":tTop<=25?"Top 25%":"Unusual";
+      let rows = `<div class=\"insight-rarity-row\"><div class=\"insight-rarity-label\">${tBucket} for this team this season</div><div class=\"insight-rarity-bar\"><div class=\"insight-rarity-fill\" style=\"width:${tWidth}%\"></div></div></div>`;
+
+      if(leaguePct!==null && leaguePct>=1 && leaguePct<=99){
+        const lWidth=Math.max(5,Math.min(95,leaguePct));
+        const lTop=100-leaguePct;
+        const lBucket=lTop<=5?"Top 5%":lTop<=10?"Top 10%":lTop<=25?"Top 25%":"Unusual";
+        rows += `<div class=\"insight-rarity-row\"><div class=\"insight-rarity-label\">${lBucket} across all teams</div><div class=\"insight-rarity-bar\"><div class=\"insight-rarity-fill insight-rarity-fill-league\" style=\"width:${lWidth}%\"></div></div></div>`;
+      }
+
+      rarityHtml = `<div class=\"insight-rarity\">${rows}</div>`;
+    }
+    let histHtml="";
+    if(z!==null && isFinite(z)){
+      const clamped=Math.max(-3,Math.min(3,z));
+      const bins=7;
+      const binIndex=Math.max(0,Math.min(bins-1,Math.floor(((clamped+3)/6)*bins)));
+      const heights=[];
+      let maxH=0;
+      for(let i=0;i<bins;i++){
+        const mid=-3+((i+0.5)*(6/bins));
+        const h=Math.exp(-0.5*mid*mid); // normal-ish bump
+        heights.push(h);
+        if(h>maxH) maxH=h;
+      }
+      const bars=heights.map(function(h,idx){
+        const rel=maxH>0?(h/maxH):0;
+        const hPct=Math.max(10,Math.round(rel*100));
+        const cls="insight-hist-bar"+(idx===binIndex?" insight-hist-bar-active":"");
+        return `<div class=\"${cls}\" style=\"height:${hPct}%\"></div>`;
+      }).join("");
+      histHtml = `<div class=\"insight-hist\">${bars}</div>`;
+    }
+    return `<div class="${baseClass}"><div class="insight-auto-tag"><strong>Auto insight</strong><span>${levelLabel}</span></div><div class="insight-auto-text">${summary}</div>${details?`<div class="insight-auto-meta">${details}</div>`:""}${rarityHtml}${histHtml}</div>`;
+  }).join("");
+}
+function computeTopMetrics(){
+  if(!dataBundle||!dataBundle.views||!dataBundle.views.top) return null;
+  const top=dataBundle.views.top;
+  const oreb=dataBundle.views.oreb||null;
+  const starts=top.starts||{};
+  const nodes=top.nodes||[];
+  const links=top.links||[];
+  const nodeById=new Map(nodes.map(n=>[n.id,n]));
+  function pointsFromView(view, team){
+    if(!view||!view.links) return 0;
+    let total=0;
+    view.links.forEach(l=>{
+      const target=l.target; const val=l.value;
+      if(typeof target!=="string"||typeof val!=="number") return;
+      const prefix=team+"_";
+      if(!target.startsWith(prefix)) return;
+      const suffix=target.slice(prefix.length);
+      const pts=parseInt(suffix,10);
+      if(!isFinite(pts)) return;
+      total+=pts*val;
+    });
+    return total;
+  }
+  const metrics={};
+  Object.keys(starts).forEach(team=>{
+    const poss=parseFloat(starts[team]||0);
+    if(!isFinite(poss)||poss<=0) return;
+    const totalPts=pointsFromView(top,team);
+    let made2=0, made3=0, to=0;
+    links.forEach(l=>{
+      const sid=l.source; const val=l.value;
+      if(typeof sid!=="string"||typeof val!=="number") return;
+      const node=nodeById.get(sid);
+      if(!node||node.team!==team||node.stage!=="event") return;
+      if(node.name==="Made 2") made2+=val;
+      else if(node.name==="Made 3") made3+=val;
+      else if(node.name==="Turnover") to+=val;
+    });
+    const fgTotal=made2+made3;
+    const ppp=totalPts>0? totalPts/poss:null;
+    const fg3Share=fgTotal>0? made3/fgTotal:null;
+    const toRate=to>0? to/poss:null;
+    let orebShare=null;
+    if(oreb){
+      const orebPts=pointsFromView(oreb,team);
+      if(orebPts>0&&totalPts>0) orebShare=orebPts/totalPts;
+    }
+    metrics[team]={ppp:ppp, fg3_share:fg3Share, to_rate:toRate, oreb_share:orebShare};
+  });
+  return metrics;
+}
+function renderRadar(viewKey){
+  const card=document.getElementById("radar-card");
+  const svgNode=document.getElementById("radar-svg");
+  const legend=document.getElementById("radar-legend");
+  if(!card||!svgNode||!legend) return;
+  if(viewKey!=="top"){ card.style.display="none"; svgNode.innerHTML=""; legend.innerHTML=""; return; }
+  const metrics=computeTopMetrics();
+  if(!metrics||Object.keys(metrics).length===0){ card.style.display="none"; svgNode.innerHTML=""; legend.innerHTML=""; return; }
+  card.style.display="block";
+  const teams=Object.keys(metrics);
+  const axes=[
+    {key:"ppp", label:"PPP", max:1.6},
+    {key:"fg3_share", label:"3P mix", max:0.7},
+    {key:"to_rate", label:"TO rate", max:0.35},
+    {key:"oreb_share", label:"OREB pts", max:0.5}
+  ];
+  const svgSel=d3.select(svgNode);
+  svgSel.selectAll("*").remove();
+  const w=+svgSel.attr("width"), h=+svgSel.attr("height");
+  const cx=w/2, cy=h/2+8; const radius=Math.min(w,h)/2-28;
+  const angleStep=2*Math.PI/axes.length;
+  const gridLevels=3;
+  for(let lvl=1; lvl<=gridLevels; lvl++){
+    const r=radius*lvl/gridLevels;
+    const pts=[];
+    for(let i=0;i<axes.length;i++){
+      const ang=-Math.PI/2+i*angleStep;
+      pts.push([cx+Math.cos(ang)*r, cy+Math.sin(ang)*r]);
+    }
+    svgSel.append("path").attr("d",d3.line().curve(d3.curveLinearClosed)(pts)).attr("fill","none").attr("stroke","rgba(111,132,171,.25)").attr("stroke-width",1);
+  }
+  axes.forEach((ax,i)=>{
+    const ang=-Math.PI/2+i*angleStep;
+    const x2=cx+Math.cos(ang)*radius;
+    const y2=cy+Math.sin(ang)*radius;
+    svgSel.append("line").attr("x1",cx).attr("y1",cy).attr("x2",x2).attr("y2",y2).attr("stroke","rgba(111,132,171,.4)").attr("stroke-width",1);
+    const lx=cx+Math.cos(ang)*(radius+14);
+    const ly=cy+Math.sin(ang)*(radius+16);
+    svgSel.append("text").attr("x",lx).attr("y",ly).attr("fill","#9db0cf").attr("font-size",10).attr("text-anchor","middle").text(ax.label);
+  });
+  const line=d3.line().curve(d3.curveCardinalClosed);
+  teams.forEach(team=>{
+    const m=metrics[team];
+    const baseColor=colors[team]||"#3a86ff";
+    const pts=[];
+    axes.forEach((ax,i)=>{
+      const v=m[ax.key];
+      let norm=0;
+      if(v!=null&&isFinite(v)&&ax.max>0){ norm=Math.max(0,Math.min(1,v/ax.max)); }
+      const ang=-Math.PI/2+i*angleStep;
+      const r=radius*norm;
+      pts.push([cx+Math.cos(ang)*r, cy+Math.sin(ang)*r]);
+    });
+    svgSel.append("path").attr("d",line(pts)).attr("fill",rgba(baseColor,0.2)).attr("stroke",rgba(baseColor,0.9)).attr("stroke-width",1.5);
+  });
+  legend.innerHTML=teams.map(team=>{
+    const c=colors[team]||"#3a86ff";
+    return `<span><span class="radar-dot" style="background:${c}"></span>${team}</span>`;
+  }).join(" ");
+}
+function renderShotProfile(viewKey){
+  const el=document.getElementById("shot-profile");
+  if(!el||!dataBundle||!dataBundle.views) return;
+  const v=dataBundle.views[viewKey];
+  if(!v){ el.innerHTML=""; return; }
+  const nodes=v.nodes||[];
+  const links=v.links||[];
+  if(!nodes.length||!links.length){ el.innerHTML=""; return; }
+  const nodeById=new Map(nodes.map(n=>[n.id,n]));
+  const outcomes=["Made 3","Made 2","Shooting foul / FTs","Missed shot","Turnover"];
+  const keyFor={"Made 3":"made3","Made 2":"made2","Shooting foul / FTs":"fts","Missed shot":"miss","Turnover":"to"};
+  const perTeam={};
+  links.forEach(l=>{
+    const sid=l.source; const val=l.value;
+    if(typeof sid!=="string"||typeof val!=="number") return;
+    const node=nodeById.get(sid);
+    if(!node||node.stage!=="event") return;
+    const outcome=node.name;
+    if(outcomes.indexOf(outcome)===-1) return;
+    const team=node.team;
+    if(!perTeam[team]){
+      perTeam[team]={total:0, made3:0, made2:0, fts:0, miss:0, to:0};
+    }
+    const k=keyFor[outcome];
+    perTeam[team][k]+=val;
+    perTeam[team].total+=val;
+  });
+  const teams=Object.keys(perTeam);
+  if(!teams.length){ el.innerHTML=""; return; }
+  const colorsMap={made3:"#ff006e", made2:"#3a86ff", fts:"#ffbe0b", miss:"#6c757d", to:"#d62839"};
+  let html="";
+  teams.forEach(team=>{
+    const s=perTeam[team];
+    if(!s.total) return;
+    html+=`<div class="shot-profile-row"><div class="shot-profile-label">${team}</div><div class="shot-profile-bar">`;
+    outcomes.forEach(o=>{
+      const k=keyFor[o]; const vval=s[k]||0; if(!vval) return;
+      const pct=(100*vval/s.total).toFixed(1);
+      html+=`<div class="shot-profile-seg" style="width:${pct}%;background:${colorsMap[k]}" title="${o}: ${pct}% (${vval.toFixed? vval.toFixed(0):vval} poss)"></div>`;
+    });
+    html+="</div></div>";
+  });
+  el.innerHTML=html;
+}
+function setPanel(viewKey, custom=null){
+  const v=dataBundle.views[viewKey], t=document.getElementById("panel-title"), d=document.getElementById("panel-desc"), k=document.getElementById("kpi-grid"), i=document.getElementById("insights");
+  if(custom){ t.textContent=custom.title; d.innerHTML=custom.desc; k.innerHTML=custom.kpis; i.innerHTML=custom.insights; return; }
+  t.textContent=v.title; d.innerHTML=v.desc;
+  k.innerHTML=(v.kpis||[]).map(([l,val])=>`<div class="tile"><div class="label">${l}</div><div class="value">${val}</div></div>`).join("");
+  i.innerHTML=renderInsights(v.insights||[]);
+  renderRadar(viewKey);
+  renderShotProfile(viewKey);
+}
+function buildControls(){
+  const order=["top","halfcourt","transition","oreb","made2","made3"].filter(k=>dataBundle.views[k]);
+  controls.innerHTML=order.map(k=>`<button data-view="${k}" class="${k===currentView?'active':''}">${dataBundle.views[k].label}</button>`).join("");
+  controls.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>setView(btn.dataset.view)));
+}
+function setView(viewKey){ currentView=viewKey; buildControls(); renderView(viewKey); setPanel(viewKey); document.getElementById("crumbs").textContent=`View: ${dataBundle.views[viewKey].label}`; }
+function nodeExplain(d){
+  const inbound=d.targetLinks?d.targetLinks.reduce((s,x)=>s+x.value,0):0, outbound=d.sourceLinks?d.sourceLinks.reduce((s,x)=>s+x.value,0):0, volume=Math.max(inbound,outbound);
+  return { title:`${d.team} — ${d.stage==="start"?"start":d.name}`, desc:`${volume} possessions flowed through this node in the current view.`, kpis:`<div class="tile"><div class="label">Team</div><div class="value">${d.team}</div></div><div class="tile"><div class="label">Flow volume</div><div class="value">${volume}</div></div>`, insights:`<div class="item">This node can support deeper narratives later once a metrics layer is added.</div>` };
+}
+function linkExplain(d){
+  return { title:`${d.source.team} — ${d.source.name} → ${d.target.name}`, desc:`This branch carried ${d.value} possessions.`, kpis:`<div class="tile"><div class="label">Team</div><div class="value">${d.source.team}</div></div><div class="tile"><div class="label">Branch volume</div><div class="value">${d.value}</div></div>`, insights:`<div class="item">Flows are strong drill targets because they already encode a mini-story.</div>` };
+}
+function renderView(viewKey){
+  svg.selectAll("*").remove();
+  const dataset=dataBundle.views[viewKey];
+  const nodes=dataset.nodes.map(d=>({...d}));
+  const idx=new Map(nodes.map((d,i)=>[d.id,i]));
+  const links=(dataset.links||[]).filter(d=>d.value>0).map(d=>({...d,source:idx.get(d.source),target:idx.get(d.target)}));
+  const stageOrder={start:0,type:1,event:2,points:3}; nodes.forEach(d=>d.layer=stageOrder[d.stage]);
+  const sankey=d3.sankey().nodeWidth(18).nodePadding(18).nodeAlign(d=>d.layer).extent([[52,84],[width-52,height-48]]);
+  const graph=sankey({nodes:nodes.map(d=>({...d})),links:links.map(d=>({...d}))});
+  const xs=[55,340,700,1100];
+  svg.append("g").selectAll("text").data(dataset.columns.map((label,i)=>({label,x:xs[i]}))).join("text").attr("class","col-label").attr("x",d=>d.x).attr("y",40).text(d=>d.label);
+  svg.append("g").selectAll("path").data(graph.links).join("path").attr("class","link").attr("d",d3.sankeyLinkHorizontal()).attr("stroke",d=>rgba(colors[d.source.team]||"#888",0.55)).attr("stroke-width",d=>Math.max(1,d.width))
+    .on("mousemove",(event,d)=>{ tooltip.innerHTML=`<div class="tag" style="background:${colors[d.source.team]||'#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>`; tooltip.style.left=`${event.offsetX+18}px`; tooltip.style.top=`${event.offsetY+18}px`; tooltip.classList.add("show"); })
+    .on("mouseleave",()=>tooltip.classList.remove("show")).on("click",(_,d)=>setPanel(viewKey,linkExplain(d)));
+  const node=svg.append("g").selectAll("g").data(graph.nodes).join("g").attr("class","node");
+  node.append("rect").attr("x",d=>d.x0).attr("y",d=>d.y0).attr("width",d=>d.x1-d.x0).attr("height",d=>Math.max(6,d.y1-d.y0)).attr("fill",d=>rgba(colors[d.team]||"#888",0.18))
+    .on("click",(_,d)=>setPanel(viewKey,nodeExplain(d)))
+    .on("mousemove",(event,d)=>{ const inbound=d.targetLinks.reduce((s,x)=>s+x.value,0), outbound=d.sourceLinks.reduce((s,x)=>s+x.value,0), volume=Math.max(inbound,outbound); let extra=""; if(d.stage==="type"){ const total=dataset.starts[d.team]; if(total) extra=`<div style="margin-top:4px;color:#9db0cf">Share: ${(100*volume/total).toFixed(1)}%</div>`;} tooltip.innerHTML=`<div class="tag" style="background:${colors[d.team]||'#888'}">${d.team}</div><div><strong>${d.stage==="start"?d.team:d.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${volume}</div>${extra}`; tooltip.style.left=`${event.offsetX+18}px`; tooltip.style.top=`${event.offsetY+18}px`; tooltip.classList.add("show"); })
+    .on("mouseleave",()=>tooltip.classList.remove("show"));
+  node.append("text").attr("class","node-main-label").attr("x",d=>d.layer<=1?d.x1+8:d.x0-8).attr("y",d=>(d.y0+d.y1)/2-(d.stage==="type"?7:0)).attr("text-anchor",d=>d.layer<=1?"start":"end").text(d=>d.stage==="start"?d.team:d.name);
+  node.filter(d=>d.stage==="type").append("text").attr("class","node-pct-label").attr("x",d=>d.x1+8).attr("y",d=>(d.y0+d.y1)/2+9).attr("text-anchor","start").text(d=>{ const total=dataset.starts[d.team]; const volume=Math.max(d.targetLinks.reduce((s,x)=>s+x.value,0),d.sourceLinks.reduce((s,x)=>s+x.value,0)); return total?`${(100*volume/total).toFixed(1)}% of starts`:""; });
+}
+
+// Add a tiny cache-buster so that when JSON files are regenerated on disk
+// (via Docker pipeline runs), the browser does not keep serving a stale
+// cached copy. Query params are ignored by the simple static server, so this
+// is backwards-compatible while forcing a fresh fetch per load.
+const fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+
+fetch(fetchUrl).then(r=>{
+  if(!r.ok){
+    throw new Error(`Failed to fetch JSON: ${fetchUrl} (HTTP ${r.status})`);
+  }
+  return r.json();
+}).then(bundle=>{
+  dataBundle=bundle;
+  colors=bundle.colors||{};
+  const meta=bundle.meta||{};
+  document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
+  document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.`;
+  buildControls();
+  setView("top");
+}).catch(err=>{
+  document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
+  console.error(err);
+});
+
+// Added a placeholder for the renderAutoInsights function to prevent errors.
+function renderAutoInsights(data) {
+  console.log("Rendering auto-insights data:", data);
+  // TODO: Implement the actual rendering logic here.
+}
+</script>
+</body>
+</html>
