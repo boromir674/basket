@@ -109,8 +109,17 @@
 const tooltip = document.getElementById("tooltip");
 const controls = document.getElementById("controls");
 const svg = d3.select("#chart");
+const vizRoot = svg.append("g").attr("id", "viz-root").attr("transform", "translate(0,0) scale(1)");
+// PoC renderer layers: keep DOM stable and morph node/link geometry on view changes.
+const linkLayer = vizRoot.append("g").attr("id", "link-layer");
+const nodeLayer = vizRoot.append("g").attr("id", "node-layer");
+const labelsLayer = vizRoot.append("g").attr("id", "labels-layer");
+let currentGraphState = null;
+const linkGen = d3.sankeyLinkHorizontal();
+let renderSequence = 0;
 const width = 1280, height = 860;
 let dataBundle = null, colors = {}, currentView = "top";
+let teamFocus = null; // When set, the Sankey diagram renders only one team.
 
 // Allow switching between multiple games by passing ?file=... in the URL.
 // Default now points to assets/processed for processed files.
@@ -124,6 +133,16 @@ if (paramFile && !paramFile.includes("/")) {
 }
 // Removed derivation of auto-insights file from dataFile.
 const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_auto.json";
+
+// PoC switch: when drilling into possession-type views, render either 4 columns (default)
+// or 3 columns (omit Start stage) for a visual comparison.
+// Usage: ?file=...&typeZoomVariant=4  OR  ?file=...&typeZoomVariant=3
+const typeZoomVariant = Math.max(3, Math.min(4, parseInt(params.get("typeZoomVariant") || "4", 10)));
+const TYPE_ZOOM_VIEWS = new Set(["halfcourt", "transition", "oreb"]);
+const omitStartStageForViz = (viewKey) => typeZoomVariant === 3 && TYPE_ZOOM_VIEWS.has(viewKey);
+
+// Note: for this PoC we want in-place reshaping (not camera swoops).
+// Keep a static transform on vizRoot.
 
 // Log the file being fetched for debugging purposes.
 console.log(`Attempting to fetch auto-insights file: ${autoInsightsFile}`);
@@ -216,7 +235,7 @@ function renderInsights(list){
     return `<div class="${baseClass}"><div class="insight-auto-tag"><strong>Auto insight</strong><span>${levelLabel}</span></div><div class="insight-auto-text">${summary}</div>${details?`<div class="insight-auto-meta">${details}</div>`:""}${rarityHtml}${histHtml}</div>`;
   }).join("");
 }
-function computeTopMetrics(){
+function computeTopMetrics(focusTeam = null){
   if(!dataBundle||!dataBundle.views||!dataBundle.views.top) return null;
   const top=dataBundle.views.top;
   const oreb=dataBundle.views.oreb||null;
@@ -241,6 +260,7 @@ function computeTopMetrics(){
   }
   const metrics={};
   Object.keys(starts).forEach(team=>{
+    if(focusTeam && team !== focusTeam) return;
     const poss=parseFloat(starts[team]||0);
     if(!isFinite(poss)||poss<=0) return;
     const totalPts=pointsFromView(top,team);
@@ -267,13 +287,13 @@ function computeTopMetrics(){
   });
   return metrics;
 }
-function renderRadar(viewKey){
+function renderRadar(viewKey, focusTeam = null){
   const card=document.getElementById("radar-card");
   const svgNode=document.getElementById("radar-svg");
   const legend=document.getElementById("radar-legend");
   if(!card||!svgNode||!legend) return;
   if(viewKey!=="top"){ card.style.display="none"; svgNode.innerHTML=""; legend.innerHTML=""; return; }
-  const metrics=computeTopMetrics();
+  const metrics=computeTopMetrics(focusTeam);
   if(!metrics||Object.keys(metrics).length===0){ card.style.display="none"; svgNode.innerHTML=""; legend.innerHTML=""; return; }
   card.style.display="block";
   const teams=Object.keys(metrics);
@@ -327,7 +347,7 @@ function renderRadar(viewKey){
     return `<span><span class="radar-dot" style="background:${c}"></span>${team}</span>`;
   }).join(" ");
 }
-function renderShotProfile(viewKey){
+function renderShotProfile(viewKey, focusTeam = null){
   const el=document.getElementById("shot-profile");
   if(!el||!dataBundle||!dataBundle.views) return;
   const v=dataBundle.views[viewKey];
@@ -355,10 +375,11 @@ function renderShotProfile(viewKey){
     perTeam[team].total+=val;
   });
   const teams=Object.keys(perTeam);
-  if(!teams.length){ el.innerHTML=""; return; }
+  const filteredTeams = focusTeam ? teams.filter(t => t === focusTeam) : teams;
+  if(!filteredTeams.length){ el.innerHTML=""; return; }
   const colorsMap={made3:"#ff006e", made2:"#3a86ff", fts:"#ffbe0b", miss:"#6c757d", to:"#d62839"};
   let html="";
-  teams.forEach(team=>{
+  filteredTeams.forEach(team=>{
     const s=perTeam[team];
     if(!s.total) return;
     html+=`<div class="shot-profile-row"><div class="shot-profile-label">${team}</div><div class="shot-profile-bar">`;
@@ -373,19 +394,48 @@ function renderShotProfile(viewKey){
 }
 function setPanel(viewKey, custom=null){
   const v=dataBundle.views[viewKey], t=document.getElementById("panel-title"), d=document.getElementById("panel-desc"), k=document.getElementById("kpi-grid"), i=document.getElementById("insights");
-  if(custom){ t.textContent=custom.title; d.innerHTML=custom.desc; k.innerHTML=custom.kpis; i.innerHTML=custom.insights; return; }
-  t.textContent=v.title; d.innerHTML=v.desc;
-  k.innerHTML=(v.kpis||[]).map(([l,val])=>`<div class="tile"><div class="label">${l}</div><div class="value">${val}</div></div>`).join("");
-  i.innerHTML=renderInsights(v.insights||[]);
-  renderRadar(viewKey);
-  renderShotProfile(viewKey);
+  if(custom){
+    t.textContent=custom.title;
+    d.innerHTML=custom.desc;
+    k.innerHTML=custom.kpis;
+    i.innerHTML=custom.insights;
+  } else {
+    const focusSuffix = teamFocus ? ` — ${teamFocus}` : "";
+    t.textContent=v.title + focusSuffix;
+    d.innerHTML=v.desc + (teamFocus ? `<div style="margin-top:8px;color:var(--muted);font-size:12px;">Focused on one team.</div>` : "");
+    const allKpis = (v.kpis || []);
+    const kpis = teamFocus ? allKpis.filter(([l,val]) => String(l).startsWith(teamFocus)) : allKpis;
+    k.innerHTML=(kpis||[]).map(([l,val])=>`<div class="tile"><div class="label">${l}</div><div class="value">${val}</div></div>`).join("");
+    i.innerHTML=renderInsights(v.insights||[]);
+  }
+  renderRadar(viewKey, teamFocus);
+  renderShotProfile(viewKey, teamFocus);
 }
 function buildControls(){
   const order=["top","halfcourt","transition","oreb","made2","made3"].filter(k=>dataBundle.views[k]);
   controls.innerHTML=order.map(k=>`<button data-view="${k}" class="${k===currentView?'active':''}">${dataBundle.views[k].label}</button>`).join("");
   controls.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>setView(btn.dataset.view)));
 }
-function setView(viewKey){ currentView=viewKey; buildControls(); renderView(viewKey); setPanel(viewKey); document.getElementById("crumbs").textContent=`View: ${dataBundle.views[viewKey].label}`; }
+function setView(viewKey, opts = {}) {
+  teamFocus = ("teamFocus" in opts) ? opts.teamFocus : null;
+  currentView = viewKey;
+  buildControls();
+  setPanel(viewKey);
+  document.getElementById("crumbs").textContent=`View: ${dataBundle.views[viewKey].label}`;
+  // For the 4->3 PoC, we want a real "nodes shift left" effect.
+  // So we render the drilldown in its full (4-column) layout first,
+  // then immediately morph to the compressed (3-column) layout.
+  if (typeZoomVariant === 3 && TYPE_ZOOM_VIEWS.has(viewKey)) {
+    const seq = ++renderSequence;
+    renderView(viewKey, { omitStartOverride: false, animate: false });
+    requestAnimationFrame(() => {
+      if (seq !== renderSequence) return;
+      renderView(viewKey, { omitStartOverride: true, animate: true });
+    });
+  } else {
+    renderView(viewKey, { animate: true });
+  }
+}
 function nodeExplain(d){
   const inbound=d.targetLinks?d.targetLinks.reduce((s,x)=>s+x.value,0):0, outbound=d.sourceLinks?d.sourceLinks.reduce((s,x)=>s+x.value,0):0, volume=Math.max(inbound,outbound);
   return { title:`${d.team} — ${d.stage==="start"?"start":d.name}`, desc:`${volume} possessions flowed through this node in the current view.`, kpis:`<div class="tile"><div class="label">Team</div><div class="value">${d.team}</div></div><div class="tile"><div class="label">Flow volume</div><div class="value">${volume}</div></div>`, insights:`<div class="item">This node can support deeper narratives later once a metrics layer is added.</div>` };
@@ -393,27 +443,216 @@ function nodeExplain(d){
 function linkExplain(d){
   return { title:`${d.source.team} — ${d.source.name} → ${d.target.name}`, desc:`This branch carried ${d.value} possessions.`, kpis:`<div class="tile"><div class="label">Team</div><div class="value">${d.source.team}</div></div><div class="tile"><div class="label">Branch volume</div><div class="value">${d.value}</div></div>`, insights:`<div class="item">Flows are strong drill targets because they already encode a mini-story.</div>` };
 }
-function renderView(viewKey){
-  svg.selectAll("*").remove();
-  const dataset=dataBundle.views[viewKey];
-  const nodes=dataset.nodes.map(d=>({...d}));
-  const idx=new Map(nodes.map((d,i)=>[d.id,i]));
-  const links=(dataset.links||[]).filter(d=>d.value>0).map(d=>({...d,source:idx.get(d.source),target:idx.get(d.target)}));
-  const stageOrder={start:0,type:1,event:2,points:3}; nodes.forEach(d=>d.layer=stageOrder[d.stage]);
-  const sankey=d3.sankey().nodeWidth(18).nodePadding(18).nodeAlign(d=>d.layer).extent([[52,84],[width-52,height-48]]);
-  const graph=sankey({nodes:nodes.map(d=>({...d})),links:links.map(d=>({...d}))});
-  const xs=[55,340,700,1100];
-  svg.append("g").selectAll("text").data(dataset.columns.map((label,i)=>({label,x:xs[i]}))).join("text").attr("class","col-label").attr("x",d=>d.x).attr("y",40).text(d=>d.label);
-  svg.append("g").selectAll("path").data(graph.links).join("path").attr("class","link").attr("d",d3.sankeyLinkHorizontal()).attr("stroke",d=>rgba(colors[d.source.team]||"#888",0.55)).attr("stroke-width",d=>Math.max(1,d.width))
-    .on("mousemove",(event,d)=>{ tooltip.innerHTML=`<div class="tag" style="background:${colors[d.source.team]||'#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>`; tooltip.style.left=`${event.offsetX+18}px`; tooltip.style.top=`${event.offsetY+18}px`; tooltip.classList.add("show"); })
-    .on("mouseleave",()=>tooltip.classList.remove("show")).on("click",(_,d)=>setPanel(viewKey,linkExplain(d)));
-  const node=svg.append("g").selectAll("g").data(graph.nodes).join("g").attr("class","node");
-  node.append("rect").attr("x",d=>d.x0).attr("y",d=>d.y0).attr("width",d=>d.x1-d.x0).attr("height",d=>Math.max(6,d.y1-d.y0)).attr("fill",d=>rgba(colors[d.team]||"#888",0.18))
-    .on("click",(_,d)=>setPanel(viewKey,nodeExplain(d)))
-    .on("mousemove",(event,d)=>{ const inbound=d.targetLinks.reduce((s,x)=>s+x.value,0), outbound=d.sourceLinks.reduce((s,x)=>s+x.value,0), volume=Math.max(inbound,outbound); let extra=""; if(d.stage==="type"){ const total=dataset.starts[d.team]; if(total) extra=`<div style="margin-top:4px;color:#9db0cf">Share: ${(100*volume/total).toFixed(1)}%</div>`;} tooltip.innerHTML=`<div class="tag" style="background:${colors[d.team]||'#888'}">${d.team}</div><div><strong>${d.stage==="start"?d.team:d.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${volume}</div>${extra}`; tooltip.style.left=`${event.offsetX+18}px`; tooltip.style.top=`${event.offsetY+18}px`; tooltip.classList.add("show"); })
-    .on("mouseleave",()=>tooltip.classList.remove("show"));
-  node.append("text").attr("class","node-main-label").attr("x",d=>d.layer<=1?d.x1+8:d.x0-8).attr("y",d=>(d.y0+d.y1)/2-(d.stage==="type"?7:0)).attr("text-anchor",d=>d.layer<=1?"start":"end").text(d=>d.stage==="start"?d.team:d.name);
-  node.filter(d=>d.stage==="type").append("text").attr("class","node-pct-label").attr("x",d=>d.x1+8).attr("y",d=>(d.y0+d.y1)/2+9).attr("text-anchor","start").text(d=>{ const total=dataset.starts[d.team]; const volume=Math.max(d.targetLinks.reduce((s,x)=>s+x.value,0),d.sourceLinks.reduce((s,x)=>s+x.value,0)); return total?`${(100*volume/total).toFixed(1)}% of starts`:""; });
+function renderView(viewKey, opts = {}){
+  const dataset = dataBundle.views[viewKey];
+  const omitStart = ("omitStartOverride" in opts) ? opts.omitStartOverride : omitStartStageForViz(viewKey);
+  const animate = (!("animate" in opts)) || opts.animate !== false;
+
+  const baseNodes = (dataset.nodes || []).map(d => ({ ...d }));
+  const nodes = baseNodes
+    .filter(d => !teamFocus || d.team === teamFocus)
+    .filter(d => !omitStart || d.stage !== "start");
+
+  const idx = new Map(nodes.map((d, i) => [d.id, i]));
+  const links = (dataset.links || [])
+    .filter(d => d.value > 0)
+    .filter(d => idx.has(d.source) && idx.has(d.target))
+    .map(d => {
+      const sourceId = d.source;
+      const targetId = d.target;
+      return {
+        ...d,
+        sourceId,
+        targetId,
+        key: `${sourceId}->${targetId}`,
+        source: idx.get(sourceId),
+        target: idx.get(targetId),
+      };
+    });
+
+  const stageOrder = omitStart ? { type: 0, event: 1, points: 2 } : { start: 0, type: 1, event: 2, points: 3 };
+  nodes.forEach(d => d.layer = stageOrder[d.stage]);
+
+  const sankey = d3.sankey().nodeWidth(18).nodePadding(18).nodeAlign(d => d.layer).extent([[52, 84], [width - 52, height - 48]]);
+  const graph = sankey({ nodes: nodes.map(d => ({ ...d })), links: links.map(d => ({ ...d })) });
+
+  const prevNodesById = (currentGraphState && currentGraphState.nodesById) ? currentGraphState.nodesById : new Map();
+  const newNodesById = new Map(graph.nodes.map(n => [n.id, n]));
+
+  // Update column labels (no need to morph; keep it snappy).
+  const columnsForViz = (!omitStart) ? dataset.columns : dataset.columns.slice(1, 4);
+  const xs = columnsForViz.length === 4 ? [55, 340, 700, 1100] : [55, 640, 1100];
+
+  // Shared transition duration for label exit + link/node morphs.
+  const tDur = animate ? 650 : 0;
+  const t = vizRoot.transition().duration(tDur);
+
+  labelsLayer.selectAll("text.col-label").data(columnsForViz.map((label, i) => ({ label, i })), d => d.label)
+    .join(
+      enter => enter.append("text")
+        .attr("class", "col-label")
+        .attr("y", 40)
+        .attr("x", d => xs[d.i])
+        .attr("transform", null)
+        .text(d => d.label),
+      update => update
+        .attr("x", d => xs[d.i])
+        .attr("transform", null)
+        .text(d => d.label),
+      exit => exit.transition().duration(tDur).style("opacity", 0).attr("transform", "translate(-80,0)").remove()
+    );
+
+  // ---- Links ----
+  const linkKeyFn = (d) => {
+    const sid = d.source && d.source.id !== undefined ? d.source.id : d.sourceId;
+    const tid = d.target && d.target.id !== undefined ? d.target.id : d.targetId;
+    return `${sid ?? ""}->${tid ?? ""}`;
+  };
+  const linkSel = linkLayer.selectAll("path.link").data(graph.links, d => linkKeyFn(d));
+
+  const linkEnter = linkSel.enter().append("path")
+    .attr("class", "link")
+    .style("opacity", 0)
+    .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.55))
+    .attr("stroke-width", d => Math.max(1, d.width))
+    .attr("d", d => {
+      const srcId = (d.source && d.source.id !== undefined) ? String(d.source.id) : String(d.sourceId ?? "");
+      const tgtId = (d.target && d.target.id !== undefined) ? String(d.target.id) : String(d.targetId ?? "");
+      const oldS = prevNodesById.get(srcId);
+      const oldT = prevNodesById.get(tgtId);
+      if (oldS && oldT) return linkGen({ source: oldS, target: oldT });
+      return linkGen(d);
+    });
+
+  const linkMerged = linkEnter.merge(linkSel);
+
+  linkMerged
+    .on("mousemove", (event, d) => {
+      tooltip.innerHTML = `<div class="tag" style="background:${colors[d.source.team] || '#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>`;
+      tooltip.style.left = `${event.offsetX + 18}px`;
+      tooltip.style.top = `${event.offsetY + 18}px`;
+      tooltip.classList.add("show");
+    })
+    .on("mouseleave", () => tooltip.classList.remove("show"))
+    .on("click", (_, d) => setPanel(viewKey, linkExplain(d)));
+
+  const lerp = (a, b, tt) => a + (b - a) * tt;
+  // Correctness-first: do not tween link paths. Tweening `d` between two
+  // sankey layouts is the source of the missing-links artifact; instead,
+  // set links to the final `d3-sankey` geometry for the target state.
+  // (Nodes still transition, so the overall morph remains visually coherent.)
+  linkMerged
+    .transition(t)
+    .style("opacity", 1)
+    .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.55))
+    .attr("stroke-width", d => Math.max(1, d.width))
+    .attr("d", d => linkGen(d));
+
+  linkSel.exit().transition().duration(animate ? 200 : 0).style("opacity", 0).remove();
+
+  // ---- Nodes ----
+  const nodeSel = nodeLayer.selectAll("g.node").data(graph.nodes, d => d.id);
+  const nodeEnter = nodeSel.enter().append("g").attr("class", "node").style("opacity", 0);
+  nodeEnter.append("rect");
+  nodeEnter.append("text").attr("class", "node-main-label");
+  nodeEnter.append("text").attr("class", "node-pct-label");
+
+  // Set initial positions for newly entered nodes to their previous layout if available.
+  nodeEnter.select("rect")
+    .attr("x", d => {
+      const pn = prevNodesById.get(d.id);
+      return pn ? pn.x0 : d.x0;
+    })
+    .attr("y", d => {
+      const pn = prevNodesById.get(d.id);
+      return pn ? pn.y0 : d.y0;
+    })
+    .attr("width", d => {
+      const pn = prevNodesById.get(d.id);
+      const w = pn ? (pn.x1 - pn.x0) : (d.x1 - d.x0);
+      return w;
+    })
+    .attr("height", d => {
+      const pn = prevNodesById.get(d.id);
+      const h = pn ? (pn.y1 - pn.y0) : (d.y1 - d.y0);
+      return Math.max(6, h);
+    })
+    .attr("fill", d => rgba(colors[d.team] || "#888", 0.18));
+
+  const nodeMerged = nodeEnter.merge(nodeSel);
+  nodeMerged
+    .select("rect")
+    .on("click", (event, d) => {
+      // UX PoC: only allow animated drilldown from the *top-level* possession-type nodes.
+      if (viewKey === "top" && d.stage === "type") {
+        let next = null;
+        if (d.name === "Half-court") next = "halfcourt";
+        else if (d.name === "Transition / Fast break") next = "transition";
+        else if (d.name === "After OREB") next = "oreb";
+
+        if (next) {
+          const ctrl = !!(event.ctrlKey || event.metaKey);
+          setView(next, { teamFocus: ctrl ? null : d.team });
+          return;
+        }
+      }
+      setPanel(viewKey, nodeExplain(d));
+    })
+    .on("mousemove", (event, d) => {
+      const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
+      const outbound = (d.sourceLinks || []).reduce((s, x) => s + x.value, 0);
+      const volume = Math.max(inbound, outbound);
+      let extra = "";
+      if (d.stage === "type") {
+        const total = dataset.starts ? dataset.starts[d.team] : null;
+        if (total) extra = `<div style="margin-top:4px;color:#9db0cf">Share: ${(100 * volume / total).toFixed(1)}%</div>`;
+      }
+      tooltip.innerHTML = `<div class="tag" style="background:${colors[d.team] || '#888'}">${d.team}</div><div><strong>${d.stage === "start" ? d.team : d.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${volume}</div>${extra}`;
+      tooltip.style.left = `${event.offsetX + 18}px`;
+      tooltip.style.top = `${event.offsetY + 18}px`;
+      tooltip.classList.add("show");
+    })
+    .on("mouseleave", () => tooltip.classList.remove("show"));
+
+  // Animate nodes to new layout.
+  nodeMerged.transition(t).style("opacity", 1);
+  nodeMerged.select("rect")
+    .transition(t)
+    .attr("x", d => d.x0)
+    .attr("y", d => d.y0)
+    .attr("width", d => d.x1 - d.x0)
+    .attr("height", d => Math.max(6, d.y1 - d.y0))
+    .attr("fill", d => rgba(colors[d.team] || "#888", 0.18));
+
+  nodeMerged.select("text.node-main-label")
+    .transition(t)
+    .attr("x", d => d.layer <= 1 ? d.x1 + 8 : d.x0 - 8)
+    .attr("y", d => (d.y0 + d.y1) / 2 - (d.stage === "type" ? 7 : 0))
+    .attr("text-anchor", d => d.layer <= 1 ? "start" : "end")
+    .text(d => d.stage === "start" ? d.team : d.name);
+
+  nodeMerged.select("text.node-pct-label")
+    .transition(t)
+    .attr("x", d => d.x1 + 8)
+    .attr("y", d => (d.y0 + d.y1) / 2 + 9)
+    .attr("text-anchor", "start")
+    .style("opacity", d => d.stage === "type" ? 1 : 0)
+    .text(d => {
+      if (d.stage !== "type") return "";
+      const total = dataset.starts ? dataset.starts[d.team] : null;
+      const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
+      const outbound = (d.sourceLinks || []).reduce((s, x) => s + x.value, 0);
+      const volume = Math.max(inbound, outbound);
+      return total ? `${(100 * volume / total).toFixed(1)}% of starts` : "";
+    });
+
+  nodeSel.exit().transition().duration(animate ? 200 : 0).style("opacity", 0).remove();
+
+  currentGraphState = { nodesById: newNodesById };
+
+  // Defensive: ensure links are visible after morphs settle.
+  // (Prevents rare join/transition timing issues during rapid PoC interactions.)
+  linkLayer.selectAll("path.link").style("opacity", 1);
 }
 
 // Add a tiny cache-buster so that when JSON files are regenerated on disk
