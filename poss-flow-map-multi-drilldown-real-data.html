@@ -34,8 +34,24 @@
     .node-main-label { fill:var(--text); font-size:12px; font-weight:600; dominant-baseline:middle; pointer-events:none; }
     .node-pct-label { fill:var(--muted); font-size:11px; dominant-baseline:middle; pointer-events:none; }
     .footer { padding:0 24px 20px; color:var(--muted); font-size:13px; line-height:1.45; }
-    .tooltip { position:absolute; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
+    .tooltip { position:absolute; z-index:90; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
     .tooltip.show { opacity:1; transform:translateY(0); }
+    .explode-pop { position:absolute; z-index:120; min-width:260px; max-width:320px; background:rgba(7,11,20,.97); color:var(--text); border:1px solid rgba(111,132,171,.32); border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.5); opacity:0; pointer-events:none; transform:translateY(8px); transition:opacity .16s ease, transform .16s ease; }
+    .explode-pop.show { opacity:1; transform:translateY(0); }
+    .explode-title { font-size:12px; color:#d9e6ff; margin-bottom:6px; }
+    .explode-stack { height:10px; border-radius:999px; overflow:hidden; display:flex; background:rgba(111,132,171,.18); margin-bottom:8px; }
+    .explode-seg { height:100%; }
+    .explode-row { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--muted); margin-top:4px; }
+    .explode-left { display:inline-flex; align-items:center; gap:6px; min-width:0; }
+    .explode-dot { width:8px; height:8px; border-radius:999px; flex:0 0 auto; }
+    .explode-name { color:#d9e6ff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .replay-hud { position:absolute; z-index:95; left:14px; top:14px; width:320px; padding:10px 12px; border-radius:12px; border:1px solid rgba(111,132,171,.32); background:rgba(6,12,23,.9); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+    .replay-line { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:12px; color:#d9e6ff; }
+    .replay-meta { color:var(--muted); font-size:11px; margin-top:4px; }
+    .replay-progress { margin-top:8px; height:8px; border-radius:999px; background:rgba(111,132,171,.25); overflow:hidden; }
+    .replay-fill { height:100%; width:0%; background:linear-gradient(90deg,#3a86ff,#ff006e); }
+    .replay-ctl { margin-top:8px; display:flex; gap:6px; }
+    .replay-ctl button { padding:6px 10px; font-size:11px; }
     .tag { display:inline-block; color:white; border-radius:999px; font-size:11px; padding:2px 8px; margin-bottom:7px; }
     .side { padding:18px 18px 16px; }
     .kpi { margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -44,6 +60,15 @@
     .tile .value { font-size:18px; font-weight:700; }
     .list { margin-top:12px; display:grid; gap:8px; }
     .panel-title { margin-top:18px; margin-bottom:8px; font-size:14px; color:#d9e6ff; }
+    .flow-lab { margin-top:14px; padding:10px 12px; border-radius:12px; border:1px solid rgba(111,132,171,.2); background:rgba(9,16,30,.86); }
+    .flow-q-list { display:grid; gap:8px; margin-top:8px; }
+    .flow-q-btn { text-align:left; border-radius:10px; padding:8px 10px; background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); font-size:12px; cursor:pointer; }
+    .flow-q-btn.active { background:#2a4a7e; border-color:#6d92ca; }
+    .flow-answer { margin-top:8px; font-size:12px; color:#d9e6ff; line-height:1.45; }
+    .flow-story { margin-top:8px; display:flex; gap:8px; }
+    .flow-story button { font-size:11px; padding:6px 10px; }
+    .flow-bubbles { margin-top:10px; border:1px solid rgba(111,132,171,.18); border-radius:10px; background:rgba(7,12,24,.78); padding:8px; }
+    .flow-bubbles-title { font-size:11px; color:var(--muted); margin-bottom:6px; }
     .hint { margin-top:10px; padding:10px 12px; border-radius:12px; background:rgba(145,200,255,.08); border:1px solid rgba(145,200,255,.15); color:#d9e6ff; font-size:13px; line-height:1.4; }
     .insight-auto { border-color:#4f6b99; box-shadow:0 0 0 1px rgba(79,107,153,.35); }
     .insight-auto-primary { border-color:#ffbe0b; box-shadow:0 0 0 1px rgba(255,190,11,.65); }
@@ -86,6 +111,24 @@
       </div>
       <div class="viz">
         <div class="tooltip" id="tooltip"></div>
+        <div class="explode-pop" id="explode-pop"></div>
+        <div class="replay-hud" id="replay-hud" style="display:none;">
+          <div class="replay-line">
+            <strong>Live Replay</strong>
+            <span id="replay-clock">00:00</span>
+          </div>
+          <div class="replay-line">
+            <span id="replay-score-a">Team A 0</span>
+            <span id="replay-score-b">0 Team B</span>
+          </div>
+          <div class="replay-meta" id="replay-minute">Minute 0.0 / 40.0</div>
+          <div class="replay-progress"><div class="replay-fill" id="replay-fill"></div></div>
+          <div class="replay-ctl">
+            <button id="replay-play">Play</button>
+            <button id="replay-pause">Pause</button>
+            <button id="replay-reset">Reset</button>
+          </div>
+        </div>
         <svg id="chart" viewBox="0 0 1280 860"></svg>
       </div>
       <div class="footer">Feature-rich multi-drilldown view using real API-derived JSON.</div>
@@ -98,6 +141,20 @@
         <div class="panel-title">Plain-language interpretation</div>
         <div class="list" id="insights"></div>
         <div class="hint">Product pattern: self-explainable first, explorable second.</div>
+        <div class="flow-lab" id="flow-index-lab" style="display:none;">
+          <div class="panel-title" style="margin-top:0;">Flow Index Lab</div>
+          <div class="muted" style="font-size:12px;">Click a question. The chart jumps to the relevant branch and answers it.</div>
+          <div class="flow-story">
+            <button id="flow-story-play">Play Story</button>
+            <button id="flow-story-stop">Stop</button>
+          </div>
+          <div class="flow-q-list" id="flow-q-list"></div>
+          <div class="flow-answer" id="flow-q-answer"></div>
+          <div class="flow-bubbles">
+            <div class="flow-bubbles-title">Player Impact Map (flow value vs game valuation)</div>
+            <svg id="flow-bubbles-svg" width="300" height="170"></svg>
+          </div>
+        </div>
         <div class="radar-card" id="radar-card">
           <div class="radar-title">Efficiency radar 
             <span style="color:var(--muted);font-weight:400;font-size:11px;">— top view</span>
@@ -114,11 +171,26 @@
 </div>
 <script>
 const tooltip = document.getElementById("tooltip");
+const explodePop = document.getElementById("explode-pop");
+const replayHud = document.getElementById("replay-hud");
+const replayClock = document.getElementById("replay-clock");
+const replayScoreA = document.getElementById("replay-score-a");
+const replayScoreB = document.getElementById("replay-score-b");
+const replayMinute = document.getElementById("replay-minute");
+const replayFill = document.getElementById("replay-fill");
+const replayPlayBtn = document.getElementById("replay-play");
+const replayPauseBtn = document.getElementById("replay-pause");
+const replayResetBtn = document.getElementById("replay-reset");
 const controls = document.getElementById("controls");
 const svg = d3.select("#chart");
+svg.on("click", () => {
+  if(explodeLab) clearExplodeFocus();
+});
 const vizRoot = svg.append("g").attr("id", "viz-root").attr("transform", "translate(0,0) scale(1)");
 // PoC renderer layers: keep DOM stable and morph node/link geometry on view changes.
+const baselineLayer = vizRoot.append("g").attr("id", "baseline-layer");
 const linkLayer = vizRoot.append("g").attr("id", "link-layer");
+const explodeLayer = vizRoot.append("g").attr("id", "explode-layer");
 const nodeLayer = vizRoot.append("g").attr("id", "node-layer");
 const labelsLayer = vizRoot.append("g").attr("id", "labels-layer");
 let currentGraphState = null;
@@ -128,6 +200,25 @@ const width = 1280, height = 860;
 let dataBundle = null, colors = {}, currentView = "top";
 let teamFocus = null; // When set, the Sankey diagram renders only one team.
 let lastSingleTeam = null; // Remembers last selected single-team focus.
+let explodedLinkKey = null;
+let explodedLinkData = null;
+let hoveredTwinKey = null;
+let hoveredTwinLane = null;
+let currentGraphLinks = [];
+let activeFlowQuestion = null;
+let flowStoryTimer = null;
+let replayState = {
+  active: false,
+  playing: false,
+  progress: 0,
+  timer: null,
+  durationMs: 20000,
+  graphLinks: [],
+  graphNodes: [],
+  scheduleByKey: new Map(),
+  finalScoreA: 0,
+  finalScoreB: 0
+};
 
 // Allow switching between multiple games by passing ?file=... in the URL.
 // Default now points to assets/processed for processed files.
@@ -148,6 +239,11 @@ const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_au
 const typeZoomVariant = Math.max(3, Math.min(4, parseInt(params.get("typeZoomVariant") || "4", 10)));
 const TYPE_ZOOM_VIEWS = new Set(["halfcourt", "transition", "oreb"]);
 const omitStartStageForViz = (viewKey) => typeZoomVariant === 3 && TYPE_ZOOM_VIEWS.has(viewKey);
+const flowIndexLab = params.get("flowIndexLab") === "1";
+const explodeLab = params.get("explodeLab") === "1" || flowIndexLab;
+const twinLab = params.get("twinLab") === "1";
+const xrayLab = params.get("xrayLab") === "1" || twinLab;
+const replayLab = params.get("replayLab") === "1";
 
 // Note: for this PoC we want in-place reshaping (not camera swoops).
 // Keep a static transform on vizRoot.
@@ -205,6 +301,614 @@ function defaultSingleTeam(){
   if(lastSingleTeam && teams.indexOf(lastSingleTeam) !== -1) return lastSingleTeam;
   if(teams.length) return teams[0];
   return null;
+}
+
+function hashString(input){
+  let h = 2166136261;
+  for(let i=0;i<input.length;i++){
+    h ^= input.charCodeAt(i);
+    h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24);
+  }
+  return Math.abs(h >>> 0);
+}
+
+function buildPseudoPlayerMix(link){
+  const total = Math.max(1, Math.round(Number(link.value) || 1));
+  const team = String(link.source && link.source.team ? link.source.team : "Team");
+  const seed = hashString(`${team}|${link.key || ""}|${currentView}`);
+  const baseShares = [0.40, 0.27, 0.19, 0.14];
+  const jitter = ((seed % 13) - 6) / 100; // -0.06..0.06
+  const adjusted = [
+    Math.max(0.16, baseShares[0] + jitter),
+    Math.max(0.12, baseShares[1] - jitter / 2),
+    Math.max(0.10, baseShares[2] - jitter / 3),
+    Math.max(0.08, baseShares[3] - jitter / 4),
+  ];
+  const sum = adjusted.reduce((s,v)=>s+v,0) || 1;
+  const norm = adjusted.map(v=>v/sum);
+
+  const archetypes = ["Primary Guard", "Wing Creator", "Roll Big", "Bench Unit"];
+  const players = norm.map((share, idx) => ({
+    name: archetypes[idx],
+    share,
+    poss: 0,
+    color: d3.interpolateTurbo((seed % 997 + idx * 137) % 997 / 997),
+  }));
+
+  let used = 0;
+  for(let i=0;i<players.length;i++){
+    const left = total - used;
+    const raw = (i === players.length - 1) ? left : Math.max(0, Math.round(total * players[i].share));
+    players[i].poss = Math.min(left, raw);
+    used += players[i].poss;
+  }
+  if(used < total){
+    players[0].poss += (total - used);
+  }
+  const possSum = players.reduce((s,p)=>s+p.poss,0) || 1;
+  players.forEach(p => { p.share = p.poss / possSum; });
+  return { mode: "synthetic", players };
+}
+
+function buildRealPlayerMix(link){
+  if(!dataBundle || !dataBundle.views) return null;
+  const view = dataBundle.views[currentView];
+  if(!view || !view.player_flows || typeof view.player_flows !== "object") return null;
+  const rows = view.player_flows[link.key];
+  if(!Array.isArray(rows) || !rows.length) return null;
+  const normalized = rows
+    .map(r => {
+      const poss = Math.max(0, parseInt(String((r && r.poss) ?? "0"), 10) || 0);
+      const pid = String((r && r.player_id) || "").trim() || "unknown";
+      const pname = String((r && r.player_name) || "").trim() || "Unknown";
+      return { pid, pname, poss };
+    })
+    .filter(r => r.poss > 0);
+  if(!normalized.length) return null;
+  const total = normalized.reduce((s,r)=>s+r.poss,0) || 1;
+  const players = normalized.map((r, idx) => ({
+    name: r.pname,
+    playerId: r.pid,
+    poss: r.poss,
+    share: r.poss / total,
+    color: d3.interpolateTurbo((hashString(`${r.pid}|${r.pname}|${idx}`) % 997) / 997),
+  }));
+  return { mode: "real", players };
+}
+
+function pathForExplodedSegment(link, centerOffset){
+  const sx = link.source.x1;
+  const sy = link.y0 + centerOffset;
+  const tx = link.target.x0;
+  const ty = link.y1 + centerOffset;
+  const curve = Math.max(26, (tx - sx) * 0.35);
+  return `M${sx},${sy} C${sx + curve},${sy} ${tx - curve},${ty} ${tx},${ty}`;
+}
+
+function clearExplodeFocus(){
+  explodedLinkKey = null;
+  explodedLinkData = null;
+  explodeLayer.selectAll("path.explode-link").remove();
+  if(explodePop){
+    explodePop.classList.remove("show");
+    explodePop.innerHTML = "";
+  }
+  linkLayer.selectAll("path.link").style("opacity", 1);
+}
+
+function renderExplodeFocus(link){
+  if(!explodeLab) return;
+  if(!link || !link.key){
+    clearExplodeFocus();
+    return;
+  }
+  explodedLinkData = link;
+  const mix = buildRealPlayerMix(link) || buildPseudoPlayerMix(link);
+  const players = mix.players;
+  const totalWidth = Math.max(2, Number(link.width) || 2);
+  let cursor = -totalWidth / 2;
+  const segments = players.map((p, idx) => {
+    const segWidth = Math.max(1.5, totalWidth * p.share);
+    const center = cursor + (segWidth / 2);
+    cursor += segWidth;
+    return { ...p, segWidth, center, idx };
+  });
+
+  linkLayer.selectAll("path.link")
+    .style("opacity", d => (d.key === link.key ? 0.18 : 0.45));
+
+  const segSel = explodeLayer.selectAll("path.explode-link")
+    .data(segments, d => d.name);
+
+  segSel.enter()
+    .append("path")
+    .attr("class", "explode-link")
+    .style("fill", "none")
+    .style("stroke-linecap", "round")
+    .style("opacity", 0)
+    .attr("d", d => pathForExplodedSegment(link, d.center))
+    .attr("stroke", d => d.color)
+    .attr("stroke-width", 1)
+    .merge(segSel)
+    .transition()
+    .duration(360)
+    .style("opacity", 0.95)
+    .attr("d", d => pathForExplodedSegment(link, d.center))
+    .attr("stroke", d => d.color)
+    .attr("stroke-width", d => d.segWidth);
+
+  segSel.exit().transition().duration(160).style("opacity",0).remove();
+
+  if(explodePop){
+    const stack = segments.map(s => `<div class="explode-seg" style="width:${(s.share*100).toFixed(1)}%;background:${s.color}"></div>`).join("");
+    const rows = segments
+      .sort((a,b)=>b.poss-a.poss)
+      .map(s => `<div class="explode-row"><span class="explode-left"><span class="explode-dot" style="background:${s.color}"></span><span class="explode-name">${s.name}</span></span><span>${s.poss} poss · ${(s.share*100).toFixed(1)}%</span></div>`)
+      .join("");
+    const modeLabel = mix.mode === "real" ? "API player attribution (from processed player_flows)" : "Prototype fallback (synthetic split)";
+    explodePop.innerHTML = `<div class="explode-title">Flow explode lab · ${link.source.name} -> ${link.target.name}</div><div class="explode-stack">${stack}</div>${rows}<div class="explode-row"><span>Mode</span><span>${modeLabel}</span></div>`;
+    const px = Math.min(930, Math.max(18, ((link.source.x1 + link.target.x0) / 2) - 120));
+    const py = Math.min(640, Math.max(94, ((link.y0 + link.y1) / 2) - 34));
+    explodePop.style.left = `${px}px`;
+    explodePop.style.top = `${py}px`;
+    explodePop.classList.add("show");
+  }
+}
+
+function buildSyntheticBaselineByKey(graphLinks){
+  const buckets = {};
+  graphLinks.forEach(l => {
+    const team = (l.source && l.source.team) ? String(l.source.team) : "Team";
+    const srcStage = (l.source && l.source.stage) ? String(l.source.stage) : "stage";
+    const tgtStage = (l.target && l.target.stage) ? String(l.target.stage) : "stage";
+    const key = `${team}|${srcStage}->${tgtStage}`;
+    if(!buckets[key]) buckets[key] = [];
+    buckets[key].push(Number(l.value) || 0);
+  });
+  const means = {};
+  Object.keys(buckets).forEach(k => {
+    const arr = buckets[k];
+    const s = arr.reduce((a,b)=>a+b,0);
+    means[k] = arr.length ? (s / arr.length) : 0;
+  });
+  const out = {};
+  graphLinks.forEach(l => {
+    const team = (l.source && l.source.team) ? String(l.source.team) : "Team";
+    const srcStage = (l.source && l.source.stage) ? String(l.source.stage) : "stage";
+    const tgtStage = (l.target && l.target.stage) ? String(l.target.stage) : "stage";
+    const bucket = `${team}|${srcStage}->${tgtStage}`;
+    out[l.key] = means[bucket] || 0;
+  });
+  return out;
+}
+
+function xrayDeltaStats(link, baselineByKey){
+  const cur = Number(link.value) || 0;
+  const base = Math.max(0, Number((baselineByKey && baselineByKey[link.key]) || 0));
+  const delta = cur - base;
+  const pct = base > 0 ? (delta / base) : 0;
+  return { cur, base, delta, pct };
+}
+
+function xrayLinkStroke(link, baselineByKey){
+  const teamColor = colors[link.source.team] || "#888";
+  if(!xrayLab) return rgba(teamColor, 0.55);
+  const s = xrayDeltaStats(link, baselineByKey);
+  const intensity = Math.max(0, Math.min(1, Math.abs(s.pct)));
+  const up = "#ff8a00";
+  const down = "#35c6ff";
+  const target = s.delta >= 0 ? up : down;
+  const c = d3.interpolateRgb(teamColor, target)(0.2 + 0.8 * intensity);
+  return rgba(c, 0.72);
+}
+
+function twinLinkPath(link, spec){
+  const dx = spec.dx || 0;
+  const dy = spec.dy || 0;
+  const tilt = spec.tilt || 0;
+  const tiltScale = 120;
+  const sx = link.source.x1 + dx + tilt * ((link.y0 / height) * tiltScale);
+  const sy = link.y0 + dy;
+  const tx = link.target.x0 + dx + tilt * ((link.y1 / height) * tiltScale);
+  const ty = link.y1 + dy;
+  const curve = Math.max(26, (tx - sx) * 0.35);
+  return `M${sx},${sy} C${sx + curve},${sy} ${tx - curve},${ty} ${tx},${ty}`;
+}
+
+function linkExpectedPoints(link){
+  const sourceName = String((link.source && link.source.name) || "");
+  const targetName = String((link.target && link.target.name) || "");
+  if (targetName.indexOf("3 pts") !== -1 || sourceName === "Made 3") return 3;
+  if (targetName.indexOf("2 pts") !== -1 || sourceName === "Made 2") return 2;
+  if (targetName.indexOf("1 pt") !== -1 || sourceName === "Shooting foul / FTs") return 1;
+  return 0;
+}
+
+function flowIndexScore(link){
+  const v = Math.max(0, Number(link.value) || 0);
+  const ev = linkExpectedPoints(link);
+  // Spike formula for "valuable flow": volume * expected points.
+  return v * ev;
+}
+
+function getFlowMix(link){
+  return buildRealPlayerMix(link) || buildPseudoPlayerMix(link);
+}
+
+function focusFlowLink(viewKey, link, answerText){
+  if(!link) return;
+  activeFlowQuestion = answerText ? String(answerText) : activeFlowQuestion;
+  setPanel(viewKey, linkExplain(link));
+  if (explodeLab) {
+    explodedLinkKey = link.key;
+    renderExplodeFocus(link);
+  }
+  const target = linkLayer.selectAll("path.link").filter(d => d && d.key === link.key);
+  target.interrupt()
+    .transition().duration(180).attr("stroke-width", d => Math.max(2, (Number(d.width) || Number(d.twinWidth) || 2) * 1.35))
+    .transition().duration(220).attr("stroke-width", d => Math.max(1, Number(d.width) || Number(d.twinWidth) || 1));
+  const ans = document.getElementById("flow-q-answer");
+  if(ans && activeFlowQuestion) ans.innerHTML = activeFlowQuestion;
+}
+
+function formatPlayerBranchShare(topPlayer, link){
+  const branchVolume = Math.max(0, Number((link && link.value) || 0));
+  const poss = Math.max(0, Number((topPlayer && topPlayer.poss) || 0));
+  const pct = branchVolume > 0 ? (100 * poss / branchVolume) : ((Number(topPlayer && topPlayer.share) || 0) * 100);
+  const src = String((link && link.source && link.source.name) || "");
+  const tgt = String((link && link.target && link.target.name) || "");
+  let unit = "branch possessions";
+  if (src === "Made 3" || tgt.indexOf("3 pts") !== -1) unit = "made-3 events on this branch";
+  else if (src === "Made 2" || tgt.indexOf("2 pts") !== -1) unit = "made-2 events on this branch";
+  return `${poss} of ${branchVolume} ${unit} (${pct.toFixed(1)}%)`;
+}
+
+function buildBoxscoreLookup(){
+  const rows = (dataBundle && Array.isArray(dataBundle.boxscore_players)) ? dataBundle.boxscore_players : [];
+  const byId = new Map();
+  const byName = new Map();
+  rows.forEach(r => {
+    const id = String((r && r.player_id) || "").trim();
+    const name = String((r && r.player_name) || "").trim();
+    if(id) byId.set(id, r);
+    if(name) byName.set(name, r);
+  });
+  return { byId, byName };
+}
+
+function renderFlowImpactBubbles(links){
+  const svgNode = document.getElementById("flow-bubbles-svg");
+  if(!svgNode) return;
+  const svgSel = d3.select(svgNode);
+  svgSel.selectAll("*").remove();
+  if(!Array.isArray(links) || !links.length) return;
+
+  const lookup = buildBoxscoreLookup();
+  const perPlayer = new Map();
+  links.forEach(link => {
+    const mix = getFlowMix(link);
+    const branchScore = flowIndexScore(link);
+    (mix.players || []).forEach(p => {
+      const key = String(p.playerId || p.name || "unknown");
+      if(!perPlayer.has(key)){
+        const bs = lookup.byId.get(String(p.playerId || "")) || lookup.byName.get(String(p.name || "")) || null;
+        perPlayer.set(key, {
+          name: p.name || "Unknown",
+          id: p.playerId || key,
+          team: (link.source && link.source.team) || "",
+          volume: 0,
+          flowValue: 0,
+          valuation: bs ? Number(bs.valuation || 0) : 0,
+        });
+      }
+      const row = perPlayer.get(key);
+      const poss = Number(p.poss || 0);
+      row.volume += poss;
+      row.flowValue += branchScore * (Number(p.share) || 0);
+    });
+  });
+  const data = Array.from(perPlayer.values()).filter(d => d.volume > 0).sort((a,b)=>b.flowValue-a.flowValue).slice(0,10);
+  if(!data.length) return;
+
+  const w = Number(svgSel.attr("width") || 300);
+  const h = Number(svgSel.attr("height") || 170);
+  const pad = 22;
+  const xMax = d3.max(data, d => d.flowValue) || 1;
+  const yMax = Math.max(1, d3.max(data, d => d.valuation) || 1);
+  const rMax = Math.max(1, d3.max(data, d => d.volume) || 1);
+  const x = d3.scaleLinear().domain([0, xMax]).range([pad, w - pad]);
+  const y = d3.scaleLinear().domain([0, yMax]).range([h - pad, pad]);
+  const r = d3.scaleSqrt().domain([0, rMax]).range([4, 17]);
+
+  svgSel.append("line").attr("x1", pad).attr("y1", h-pad).attr("x2", w-pad).attr("y2", h-pad).attr("stroke", "rgba(111,132,171,.4)");
+  svgSel.append("line").attr("x1", pad).attr("y1", h-pad).attr("x2", pad).attr("y2", pad).attr("stroke", "rgba(111,132,171,.4)");
+  svgSel.append("text").attr("x", w - pad).attr("y", h - 6).attr("fill", "#9db0cf").attr("font-size", 10).attr("text-anchor", "end").text("Flow value");
+  svgSel.append("text").attr("x", pad + 2).attr("y", pad - 6).attr("fill", "#9db0cf").attr("font-size", 10).text("Valuation");
+
+  const nodes = svgSel.selectAll("g.dot").data(data, d => d.id).join("g").attr("class", "dot");
+  nodes.append("circle")
+    .attr("cx", d => x(d.flowValue))
+    .attr("cy", d => y(d.valuation))
+    .attr("r", d => r(d.volume))
+    .attr("fill", d => rgba(colors[d.team] || "#888", 0.8))
+    .attr("stroke", "rgba(230,240,255,.7)")
+    .attr("stroke-width", 0.8);
+  nodes.append("text")
+    .attr("x", d => x(d.flowValue))
+    .attr("y", d => y(d.valuation) - r(d.volume) - 3)
+    .attr("fill", "#d9e6ff")
+    .attr("font-size", 9)
+    .attr("text-anchor", "middle")
+    .text(d => String(d.name || "").split(",")[0].slice(0,10));
+}
+
+function stopFlowStory(){
+  if(flowStoryTimer){
+    clearInterval(flowStoryTimer);
+    flowStoryTimer = null;
+  }
+}
+
+function stopReplayTimer(){
+  if(replayState.timer){
+    clearInterval(replayState.timer);
+    replayState.timer = null;
+  }
+}
+
+function replayFinalScoreFromTop(){
+  const out = { a: 0, b: 0 };
+  if(!dataBundle || !dataBundle.views || !dataBundle.views.top) return out;
+  const top = dataBundle.views.top;
+  const links = top.links || [];
+  const teamA = (dataBundle.meta && dataBundle.meta.team_a) || "";
+  const teamB = (dataBundle.meta && dataBundle.meta.team_b) || "";
+  links.forEach(l => {
+    const target = String(l.target || "");
+    const val = Number(l.value || 0);
+    if(!val) return;
+    if(teamA && target === `${teamA}_3`) out.a += 3 * val;
+    else if(teamA && target === `${teamA}_2`) out.a += 2 * val;
+    else if(teamA && target === `${teamA}_1`) out.a += 1 * val;
+    if(teamB && target === `${teamB}_3`) out.b += 3 * val;
+    else if(teamB && target === `${teamB}_2`) out.b += 2 * val;
+    else if(teamB && target === `${teamB}_1`) out.b += 1 * val;
+  });
+  return out;
+}
+
+function replayScheduleForLinks(links){
+  const map = new Map();
+  const stageBand = {
+    "start->type": [0.02, 0.55],
+    "type->event": [0.08, 0.78],
+    "event->points": [0.14, 0.96],
+    "other": [0.05, 0.90]
+  };
+  links.forEach((l, idx) => {
+    const srcStage = String((l.source && l.source.stage) || "");
+    const tgtStage = String((l.target && l.target.stage) || "");
+    const keyBand = `${srcStage}->${tgtStage}`;
+    const band = stageBand[keyBand] || stageBand.other;
+    const hash = hashString(`${l.key}|${idx}`);
+    const jitter = ((hash % 17) - 8) / 100;
+    const start = Math.max(0, Math.min(0.98, band[0] + jitter));
+    const end = Math.max(start + 0.02, Math.min(1, band[1] + jitter));
+    map.set(l.key, { start, end });
+  });
+  return map;
+}
+
+function replayReveal(schedule, progress){
+  if(!schedule) return 1;
+  if(progress <= schedule.start) return 0;
+  if(progress >= schedule.end) return 1;
+  const t = (progress - schedule.start) / Math.max(0.0001, (schedule.end - schedule.start));
+  return Math.max(0, Math.min(1, t));
+}
+
+function applyReplayFrame(){
+  if(!replayState.active) return;
+  const p = Math.max(0, Math.min(1, replayState.progress));
+  const mins = 40 * p;
+  const mm = Math.floor(mins);
+  const ss = Math.floor((mins - mm) * 60);
+  if(replayClock) replayClock.textContent = `${String(mm).padStart(2,"0")}:${String(ss).padStart(2,"0")}`;
+  if(replayMinute) replayMinute.textContent = `Minute ${mins.toFixed(1)} / 40.0`;
+  if(replayFill) replayFill.style.width = `${(p * 100).toFixed(1)}%`;
+  const meta = dataBundle && dataBundle.meta ? dataBundle.meta : {};
+  const teamA = meta.team_a || "Team A";
+  const teamB = meta.team_b || "Team B";
+  const scoreA = Math.round(replayState.finalScoreA * p);
+  const scoreB = Math.round(replayState.finalScoreB * p);
+  if(replayScoreA) replayScoreA.textContent = `${teamA} ${scoreA}`;
+  if(replayScoreB) replayScoreB.textContent = `${scoreB} ${teamB}`;
+
+  linkLayer.selectAll("path.link")
+    .attr("stroke-width", d => {
+      const base = Math.max(1, Number(d.twinWidth) || Number(d.width) || 1);
+      const r = replayReveal(replayState.scheduleByKey.get(d.key), p);
+      return Math.max(0.4, base * r);
+    })
+    .style("opacity", d => {
+      const r = replayReveal(replayState.scheduleByKey.get(d.key), p);
+      return Math.max(0.04, 0.08 + 0.92 * r);
+    });
+
+  nodeLayer.selectAll("g.node")
+    .style("opacity", d => {
+      if(!d) return 1;
+      const src = (d.sourceLinks || []).reduce((s,l)=>s+replayReveal(replayState.scheduleByKey.get(l.key), p),0);
+      const tgt = (d.targetLinks || []).reduce((s,l)=>s+replayReveal(replayState.scheduleByKey.get(l.key), p),0);
+      const v = Math.max(src, tgt);
+      return Math.max(0.08, Math.min(1, 0.14 + v));
+    });
+}
+
+function startReplay(){
+  if(!replayState.active || replayState.playing) return;
+  replayState.playing = true;
+  const stepMs = 50;
+  const delta = stepMs / Math.max(1000, replayState.durationMs);
+  stopReplayTimer();
+  replayState.timer = setInterval(() => {
+    replayState.progress = Math.min(1, replayState.progress + delta);
+    applyReplayFrame();
+    if(replayState.progress >= 1){
+      stopReplayTimer();
+      replayState.playing = false;
+    }
+  }, stepMs);
+}
+
+function pauseReplay(){
+  replayState.playing = false;
+  stopReplayTimer();
+}
+
+function resetReplay(){
+  replayState.progress = 0;
+  replayState.playing = false;
+  stopReplayTimer();
+  applyReplayFrame();
+}
+
+function initReplayForGraph(graph){
+  replayState.active = !!replayLab;
+  replayState.graphLinks = (graph && graph.links) ? graph.links : [];
+  replayState.graphNodes = (graph && graph.nodes) ? graph.nodes : [];
+  replayState.scheduleByKey = replayScheduleForLinks(replayState.graphLinks);
+  const fs = replayFinalScoreFromTop();
+  replayState.finalScoreA = fs.a;
+  replayState.finalScoreB = fs.b;
+  replayState.progress = 0;
+  replayState.playing = false;
+  stopReplayTimer();
+  if(replayHud){
+    replayHud.style.display = replayLab ? "block" : "none";
+  }
+  applyReplayFrame();
+}
+
+function buildFlowIndexQuestions(viewKey){
+  if(!flowIndexLab) return;
+  const wrap = document.getElementById("flow-index-lab");
+  const list = document.getElementById("flow-q-list");
+  const ans = document.getElementById("flow-q-answer");
+  const playBtn = document.getElementById("flow-story-play");
+  const stopBtn = document.getElementById("flow-story-stop");
+  if(!wrap || !list || !ans) return;
+  wrap.style.display = "block";
+  const links = (currentGraphLinks || []).filter(l => l && l.key);
+  renderFlowImpactBubbles(links);
+  const lookup = buildBoxscoreLookup();
+  const playerContext = (top) => {
+    if(!top) return "";
+    const bs = lookup.byId.get(String(top.playerId || "")) || lookup.byName.get(String(top.name || "")) || null;
+    if(!bs) return "";
+    const val = bs.valuation != null ? `VAL ${bs.valuation}` : null;
+    const pts = bs.points != null ? `PTS ${bs.points}` : null;
+    const mins = bs.minutes ? `MIN ${bs.minutes}` : null;
+    const parts = [val, pts, mins].filter(Boolean);
+    return parts.length ? ` <span style="color:#9db0cf">(${parts.join(" · ")})</span>` : "";
+  };
+  if(!links.length){
+    list.innerHTML = "";
+    ans.textContent = "No flow links available for this view.";
+    stopFlowStory();
+    return;
+  }
+
+  const q = [
+    {
+      id: "q_best_driver",
+      label: "Who drives the most valuable flows?",
+      run: () => {
+        const ranked = links
+          .map(l => ({ link:l, score:flowIndexScore(l) }))
+          .filter(x => x.score > 0)
+          .sort((a,b) => b.score - a.score);
+        const picked = ranked[0] ? ranked[0].link : links[0];
+        const mix = getFlowMix(picked);
+        const top = (mix.players || []).slice().sort((a,b)=>b.poss-a.poss)[0];
+        const text = top
+          ? `<strong>Answer:</strong> ${top.name} is the lead driver on this high-value branch (<code>${picked.source.name} → ${picked.target.name}</code>) with ${formatPlayerBranchShare(top, picked)}.${playerContext(top)}`
+          : `<strong>Answer:</strong> This branch is currently the top valuable flow by Flow Index.`;
+        focusFlowLink(viewKey, picked, text);
+      }
+    },
+    {
+      id: "q_most_concentrated",
+      label: "Which valuable flow is most concentrated in one player?",
+      run: () => {
+        const candidates = links
+          .map(l => {
+            const mix = getFlowMix(l);
+            const topShare = (mix.players || []).reduce((m,p)=>Math.max(m, Number(p.share)||0),0);
+            return { link:l, topShare, score:flowIndexScore(l), mix };
+          })
+          .filter(x => x.score > 0)
+          .sort((a,b) => (b.topShare - a.topShare) || (b.score - a.score));
+        const picked = candidates[0] ? candidates[0].link : links[0];
+        const mix = getFlowMix(picked);
+        const top = (mix.players || []).slice().sort((a,b)=>b.share-a.share)[0];
+        const text = top
+          ? `<strong>Answer:</strong> ${top.name} has the highest concentration on this valuable branch: ${formatPlayerBranchShare(top, picked)} on <code>${picked.source.name} → ${picked.target.name}</code>.${playerContext(top)}`
+          : `<strong>Answer:</strong> This branch shows the highest concentration among current valuable flows.`;
+        focusFlowLink(viewKey, picked, text);
+      }
+    },
+    {
+      id: "q_made2_driver",
+      label: "Who is the main driver of Made 2 outcomes?",
+      run: () => {
+        const made2 = links.filter(l => String((l.source && l.source.name) || "") === "Made 2" || String((l.target && l.target.name) || "").indexOf("2 pts") !== -1);
+        const picked = (made2.sort((a,b)=>(Number(b.value)||0)-(Number(a.value)||0))[0]) || links[0];
+        const mix = getFlowMix(picked);
+        const top = (mix.players || []).slice().sort((a,b)=>b.poss-a.poss)[0];
+        const text = top
+          ? `<strong>Answer:</strong> ${top.name} is the main Made-2 driver on this branch with ${formatPlayerBranchShare(top, picked)}.${playerContext(top)}`
+          : `<strong>Answer:</strong> This is the dominant Made-2 branch in the current view.`;
+        focusFlowLink(viewKey, picked, text);
+      }
+    }
+  ];
+
+  list.innerHTML = q.map(item => `<button class="flow-q-btn" data-q="${item.id}">${item.label}</button>`).join("");
+  list.querySelectorAll("button.flow-q-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      list.querySelectorAll("button.flow-q-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const match = q.find(x => x.id === btn.dataset.q);
+      if(match) match.run();
+    });
+  });
+  const runQuestionByIndex = (idx) => {
+    const buttons = Array.from(list.querySelectorAll("button.flow-q-btn"));
+    if(!buttons.length) return;
+    const safe = ((idx % buttons.length) + buttons.length) % buttons.length;
+    const btn = buttons[safe];
+    btn.click();
+  };
+  if(playBtn){
+    playBtn.onclick = () => {
+      stopFlowStory();
+      let i = 0;
+      runQuestionByIndex(i);
+      flowStoryTimer = setInterval(() => {
+        i += 1;
+        runQuestionByIndex(i);
+      }, 2600);
+    };
+  }
+  if(stopBtn){
+    stopBtn.onclick = () => stopFlowStory();
+  }
+  if(!activeFlowQuestion){
+    ans.textContent = "Try: 'Who drives the most valuable flows?'";
+  } else {
+    ans.innerHTML = activeFlowQuestion;
+  }
 }
 
 function renderInsights(list){
@@ -478,6 +1182,8 @@ function buildControls(){
 }
 function setView(viewKey, opts = {}) {
   const prevView = currentView;
+  clearExplodeFocus();
+  pauseReplay();
   teamFocus = ("teamFocus" in opts) ? opts.teamFocus : teamFocus;
   if(teamFocus) lastSingleTeam = teamFocus;
   currentView = viewKey;
@@ -497,9 +1203,11 @@ function setView(viewKey, opts = {}) {
     requestAnimationFrame(() => {
       if (seq !== renderSequence) return;
       renderView(viewKey, { omitStartOverride: true, animate: true });
+      buildFlowIndexQuestions(viewKey);
     });
   } else {
     renderView(viewKey, { animate: true });
+    buildFlowIndexQuestions(viewKey);
   }
 }
 function nodeExplain(d){
@@ -511,6 +1219,7 @@ function linkExplain(d){
 }
 function renderView(viewKey, opts = {}){
   const dataset = dataBundle.views[viewKey];
+  const twinMode = twinLab;
   const omitStart = ("omitStartOverride" in opts) ? opts.omitStartOverride : omitStartStageForViz(viewKey);
   const animate = (!("animate" in opts)) || opts.animate !== false;
 
@@ -541,6 +1250,9 @@ function renderView(viewKey, opts = {}){
 
   const sankey = d3.sankey().nodeWidth(18).nodePadding(18).nodeAlign(d => d.layer).extent([[52, 84], [width - 52, height - 48]]);
   const graph = sankey({ nodes: nodes.map(d => ({ ...d })), links: links.map(d => ({ ...d })) });
+  currentGraphLinks = graph.links || [];
+  initReplayForGraph(graph);
+  const baselineByKey = xrayLab ? buildSyntheticBaselineByKey(graph.links) : null;
 
   const prevNodesById = (currentGraphState && currentGraphState.nodesById) ? currentGraphState.nodesById : new Map();
   const newNodesById = new Map(graph.nodes.map(n => [n.id, n]));
@@ -568,7 +1280,150 @@ function renderView(viewKey, opts = {}){
       exit => exit.transition().duration(tDur).style("opacity", 0).attr("transform", "translate(-80,0)").remove()
     );
 
+  labelsLayer.selectAll("text.twin-lane-label").remove();
+  if (twinMode) {
+    labelsLayer.append("text")
+      .attr("class", "col-label twin-lane-label")
+      .attr("x", 60)
+      .attr("y", 70)
+      .text("CURRENT GAME");
+    labelsLayer.append("text")
+      .attr("class", "col-label twin-lane-label")
+      .attr("x", 200)
+      .attr("y", 325)
+      .text("REFERENCE / AVG");
+  }
+
+  // ---- XRay baseline ghost links ----
+  if (!twinMode && xrayLab && baselineByKey) {
+    const baselineData = graph.links.map(l => {
+      const base = Math.max(0, Number(baselineByKey[l.key] || 0));
+      const current = Math.max(0.0001, Number(l.value) || 0.0001);
+      const ratio = base / current;
+      const bw = Math.max(1, l.width * ratio);
+      return { ...l, baselineValue: base, baselineWidth: bw };
+    });
+    const baseSel = baselineLayer.selectAll("path.baseline-link").data(baselineData, d => d.key);
+    baseSel.enter()
+      .append("path")
+      .attr("class", "baseline-link")
+      .style("fill", "none")
+      .style("pointer-events", "none")
+      .style("opacity", 0)
+      .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.22))
+      .attr("stroke-dasharray", "4 3")
+      .attr("stroke-width", 1)
+      .attr("d", d => linkGen(d))
+      .merge(baseSel)
+      .transition(t)
+      .style("opacity", 0.75)
+      .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.22))
+      .attr("stroke-width", d => d.baselineWidth)
+      .attr("d", d => linkGen(d));
+    baseSel.exit().transition().duration(180).style("opacity",0).remove();
+  } else {
+    baselineLayer.selectAll("path.baseline-link").remove();
+  }
+
   // ---- Links ----
+  if (twinMode) {
+    clearExplodeFocus();
+    const twinBaseline = buildSyntheticBaselineByKey(graph.links);
+    const currentSpec = { dx: -90, dy: -68, tilt: 0.10 };
+    const baselineSpec = { dx: 120, dy: 186, tilt: 0.18 };
+    const twinData = [];
+    graph.links.forEach(l => {
+      const currentVal = Math.max(0.0001, Number(l.value) || 0.0001);
+      const baselineVal = Math.max(0, Number(twinBaseline[l.key] || 0));
+      const ratio = baselineVal / currentVal;
+      twinData.push({
+        ...l,
+        lane: "current",
+        twinWidth: Math.max(1, l.width),
+        spec: currentSpec,
+        baselineVal,
+      });
+      twinData.push({
+        ...l,
+        lane: "baseline",
+        twinWidth: Math.max(1, l.width * ratio),
+        spec: baselineSpec,
+        baselineVal,
+      });
+    });
+
+    const paintTwinStyles = (sel) => {
+      sel
+        .style("opacity", d => {
+          if (!hoveredTwinKey) return 0.92;
+          return d.key === hoveredTwinKey ? 1 : 0.14;
+        })
+        .attr("stroke", d => {
+          const teamColor = colors[d.source.team] || "#888";
+          if (!hoveredTwinKey || d.key !== hoveredTwinKey) {
+            return d.lane === "current" ? rgba(teamColor, 0.68) : rgba("#9cb2d7", 0.42);
+          }
+          const stat = xrayDeltaStats(d, twinBaseline);
+          const signal = stat.delta >= 0 ? "#2ecc71" : "#ff4d4f";
+          if (hoveredTwinLane && d.lane !== hoveredTwinLane) return rgba(signal, 0.95);
+          return d.lane === "current" ? rgba(teamColor, 0.95) : rgba("#f7faff", 0.88);
+        })
+        .attr("stroke-width", d => {
+          if (hoveredTwinKey && d.key === hoveredTwinKey) return d.twinWidth * 1.12;
+          return d.twinWidth;
+        });
+    };
+
+    const twinSel = linkLayer.selectAll("path.link").data(twinData, d => `${d.lane}:${d.key}`);
+    const twinEnter = twinSel.enter().append("path")
+      .attr("class", "link")
+      .style("fill", "none")
+      .style("stroke-linecap", "round")
+      .style("opacity", 0)
+      .attr("d", d => twinLinkPath(d, d.spec))
+      .attr("stroke-width", d => d.twinWidth);
+
+    const twinMerged = twinEnter.merge(twinSel);
+    twinMerged
+      .on("mousemove", (event, d) => {
+        hoveredTwinKey = d.key;
+        hoveredTwinLane = d.lane;
+        const s = xrayDeltaStats(d, twinBaseline);
+        const signalUp = s.delta >= 0;
+        const signalLabel = signalUp ? "OVER baseline" : "UNDER baseline";
+        const signalColor = signalUp ? "#2ecc71" : "#ff4d4f";
+        tooltip.innerHTML = `<div class="tag" style="background:${colors[d.source.team] || '#888'}">${d.source.team} · ${d.lane}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Current: ${s.cur.toFixed(1)} · Ref: ${s.base.toFixed(1)}</div><div style="margin-top:4px;color:${signalColor}">Signal on opposite lane: ${signalLabel} (${s.delta>=0?"+":""}${s.delta.toFixed(1)}, ${(s.pct*100).toFixed(0)}%)</div>`;
+        tooltip.style.left = `${event.offsetX + 18}px`;
+        tooltip.style.top = `${event.offsetY + 18}px`;
+        tooltip.classList.add("show");
+        paintTwinStyles(twinMerged);
+      })
+      .on("mouseleave", () => {
+        hoveredTwinKey = null;
+        hoveredTwinLane = null;
+        tooltip.classList.remove("show");
+        paintTwinStyles(twinMerged);
+      })
+      .on("click", (event, d) => {
+        event.stopPropagation();
+        setPanel(viewKey, linkExplain(d));
+      });
+
+    twinMerged
+      .transition(t)
+      .style("opacity", 1)
+      .attr("d", d => twinLinkPath(d, d.spec))
+      .attr("stroke-width", d => d.twinWidth)
+      .call(paintTwinStyles);
+
+    twinSel.exit().transition().duration(animate ? 220 : 0).style("opacity", 0).remove();
+    baselineLayer.selectAll("*").remove();
+    nodeLayer.selectAll("*").remove();
+    currentGraphState = { nodesById: newNodesById };
+    linkLayer.selectAll("path.link").style("opacity", d => (hoveredTwinKey && d.key !== hoveredTwinKey) ? 0.14 : 1);
+    return;
+  }
+
   const linkKeyFn = (d) => {
     const sid = d.source && d.source.id !== undefined ? d.source.id : d.sourceId;
     const tid = d.target && d.target.id !== undefined ? d.target.id : d.targetId;
@@ -579,7 +1434,7 @@ function renderView(viewKey, opts = {}){
   const linkEnter = linkSel.enter().append("path")
     .attr("class", "link")
     .style("opacity", 0)
-    .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.55))
+    .attr("stroke", d => xrayLinkStroke(d, baselineByKey))
     .attr("stroke-width", d => Math.max(1, d.width))
     .attr("d", d => {
       const srcId = (d.source && d.source.id !== undefined) ? String(d.source.id) : String(d.sourceId ?? "");
@@ -594,13 +1449,30 @@ function renderView(viewKey, opts = {}){
 
   linkMerged
     .on("mousemove", (event, d) => {
-      tooltip.innerHTML = `<div class="tag" style="background:${colors[d.source.team] || '#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>`;
+      let xray = "";
+      if (xrayLab && baselineByKey) {
+        const s = xrayDeltaStats(d, baselineByKey);
+        const sign = s.delta >= 0 ? "+" : "";
+        xray = `<div style="margin-top:4px;color:#9db0cf">Baseline: ${s.base.toFixed(1)} · Delta: ${sign}${s.delta.toFixed(1)} (${sign}${(s.pct*100).toFixed(0)}%)</div>`;
+      }
+      tooltip.innerHTML = `<div class="tag" style="background:${colors[d.source.team] || '#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>${xray}`;
       tooltip.style.left = `${event.offsetX + 18}px`;
       tooltip.style.top = `${event.offsetY + 18}px`;
       tooltip.classList.add("show");
     })
     .on("mouseleave", () => tooltip.classList.remove("show"))
-    .on("click", (_, d) => setPanel(viewKey, linkExplain(d)));
+    .on("click", (event, d) => {
+      event.stopPropagation();
+      setPanel(viewKey, linkExplain(d));
+      if(explodeLab){
+        if(explodedLinkKey === d.key){
+          clearExplodeFocus();
+        } else {
+          explodedLinkKey = d.key;
+          renderExplodeFocus(d);
+        }
+      }
+    });
 
   const lerp = (a, b, tt) => a + (b - a) * tt;
   // Correctness-first: do not tween link paths. Tweening `d` between two
@@ -610,11 +1482,19 @@ function renderView(viewKey, opts = {}){
   linkMerged
     .transition(t)
     .style("opacity", 1)
-    .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.55))
+    .attr("stroke", d => xrayLinkStroke(d, baselineByKey))
     .attr("stroke-width", d => Math.max(1, d.width))
     .attr("d", d => linkGen(d));
 
   linkSel.exit().transition().duration(animate ? 200 : 0).style("opacity", 0).remove();
+  if(explodeLab && explodedLinkKey){
+    const selected = graph.links.find(l => l.key === explodedLinkKey) || null;
+    if(selected){
+      renderExplodeFocus(selected);
+    } else {
+      clearExplodeFocus();
+    }
+  }
 
   // ---- Nodes ----
   const nodeSel = nodeLayer.selectAll("g.node").data(graph.nodes, d => d.id);
@@ -649,6 +1529,7 @@ function renderView(viewKey, opts = {}){
   nodeMerged
     .select("rect")
     .on("click", (event, d) => {
+      event.stopPropagation();
       // UX PoC: only allow animated drilldown from the *top-level* possession-type nodes.
       if (viewKey === "top" && d.stage === "type") {
         let next = null;
@@ -665,6 +1546,7 @@ function renderView(viewKey, opts = {}){
         }
       }
       setPanel(viewKey, nodeExplain(d));
+      if(explodeLab) clearExplodeFocus();
     })
     .on("mousemove", (event, d) => {
       const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
@@ -738,8 +1620,14 @@ fetch(fetchUrl).then(r=>{
   dataBundle=bundle;
   colors=bundle.colors||{};
   const meta=bundle.meta||{};
+  const modeLabel = replayLab
+    ? " · Mode: Live Replay Lab"
+    : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
   document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
-  document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.`;
+  document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.${modeLabel}`;
+  if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
+  if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
+  if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
   buildControls();
   setView("top");
 }).catch(err=>{

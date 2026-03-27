@@ -77,6 +77,41 @@
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: renders 4→3 drilldown and keeps the detail panel wired for inspection.</div>
       <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json&typeZoomVariant=3">Test 4 → 3</a>
     </div>
+
+    <div class="card">
+      <div class="card-title">Flow explode lab (player mix)</div>
+      <div class="card-meta">Experimental UX: click any Sankey link to explode it into player-colored micro-flows and show proportional player mix.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `explodeLab=1`; reads real `player_flows` when available in the loaded JSON.</div>
+      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&explodeLab=1">Open flow explode lab</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tactical X-Ray lab</div>
+      <div class="card-meta">Overlay a ghost baseline and highlight where current game branches diverge in volume.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `xrayLab=1`; this spike currently uses a synthetic structural baseline per stage-pair bucket.</div>
+      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&xrayLab=1">Open tactical X-Ray</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tactical Twin Sankey lab</div>
+      <div class="card-meta">Pseudo-3D dual-lane Sankey: current game vs reference with opposite-lane green/red signal on hover.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `twinLab=1`; renders two separated perspective lanes and paired link highlighting for tactical comparison.</div>
+      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&twinLab=1">Open tactical Twin Sankey</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Flow Index Q&A lab</div>
+      <div class="card-meta">Guided questions that auto-drive chart state to answer: who drives valuable flows and Made-2 branches.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `flowIndexLab=1` and player explode detail for guided narrative interaction.</div>
+      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&flowIndexLab=1">Open Flow Index Q&A</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Live Replay Timeline Lab</div>
+      <div class="card-meta">0→40 minute smooth playback with live clock, score growth, and flows appearing/thickening over simulated game time.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `replayLab=1`; use Play/Pause/Reset HUD controls directly on the chart.</div>
+      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&replayLab=1">Open Live Replay Timeline</a>
+    </div>
   </div>
 
   <div class="hint">
