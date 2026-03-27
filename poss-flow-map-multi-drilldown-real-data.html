@@ -26,7 +26,8 @@
     button { background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); border-radius:999px; padding:8px 12px; cursor:pointer; font-size:13px; }
     button.active { background:#21365e; border-color:#4f6b99; }
     .viz { position:relative; padding:8px 8px 10px; }
-    svg { width:100%; height:860px; display:block; }
+    #chart { width:100%; height:860px; display:block; }
+    .side svg { height:auto; display:block; }
     .col-label { fill:var(--muted); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
     .link { fill:none; stroke-opacity:.62; transition:stroke-opacity .15s ease, filter .15s ease; cursor:pointer; }
     .link:hover { stroke-opacity:.92; filter:brightness(1.07); }
@@ -45,13 +46,34 @@
     .explode-left { display:inline-flex; align-items:center; gap:6px; min-width:0; }
     .explode-dot { width:8px; height:8px; border-radius:999px; flex:0 0 auto; }
     .explode-name { color:#d9e6ff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .replay-hud { position:absolute; z-index:95; left:14px; top:14px; width:320px; padding:10px 12px; border-radius:12px; border:1px solid rgba(111,132,171,.32); background:rgba(6,12,23,.9); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+    .replay-hud { position:relative; width:100%; margin-bottom:14px; padding:10px 12px; border-radius:12px; border:1px solid rgba(111,132,171,.32); background:rgba(6,12,23,.9); box-shadow:0 8px 24px rgba(0,0,0,.35); }
     .replay-line { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:12px; color:#d9e6ff; }
     .replay-meta { color:var(--muted); font-size:11px; margin-top:4px; }
     .replay-progress { margin-top:8px; height:8px; border-radius:999px; background:rgba(111,132,171,.25); overflow:hidden; }
     .replay-fill { height:100%; width:0%; background:linear-gradient(90deg,#3a86ff,#ff006e); }
     .replay-ctl { margin-top:8px; display:flex; gap:6px; }
     .replay-ctl button { padding:6px 10px; font-size:11px; }
+    .replay-state-grid { margin-top:8px; display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+    .replay-state-card { border:1px solid rgba(111,132,171,.24); border-radius:10px; padding:6px 8px; background:rgba(9,16,30,.8); }
+    .replay-state-title { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; }
+    .replay-state-value { font-size:11px; color:#d9e6ff; margin-top:2px; }
+    .replay-tag { display:inline-flex; padding:2px 7px; border-radius:999px; font-size:10px; border:1px solid rgba(111,132,171,.4); margin-left:4px; }
+    .replay-callouts { margin-top:8px; border:1px solid rgba(111,132,171,.2); border-radius:10px; padding:6px 8px; background:rgba(8,14,28,.72); min-height:42px; }
+    .replay-callout { font-size:11px; color:#d9e6ff; }
+    .replay-mini-title { margin-top:8px; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; }
+    .replay-analytics { margin-top:6px; border:1px solid rgba(111,132,171,.2); border-radius:10px; background:rgba(8,14,28,.72); padding:6px; }
+    .replay-analytics svg { width:100%; display:block; }
+    .replay-help { margin-top:6px; font-size:11px; color:#9db0cf; line-height:1.35; }
+    .replay-trend-legend { margin-top:5px; display:flex; gap:8px; flex-wrap:wrap; color:var(--muted); font-size:10px; }
+    .replay-trend-legend span { display:inline-flex; align-items:center; gap:5px; }
+    .replay-trend-mark { width:12px; height:0; border-top:2px solid #8ca2c5; }
+    .replay-trend-mark.dash { border-top-style:dashed; }
+    .replay-hover-readout { margin-top:6px; font-size:11px; color:#d9e6ff; min-height:16px; }
+    .replay-base-toggle { margin-top:8px; display:flex; gap:6px; flex-wrap:wrap; }
+    .replay-base-toggle button { padding:5px 9px; font-size:11px; }
+    .replay-base-note { margin-top:5px; font-size:10px; color:#9db0cf; line-height:1.35; }
+    .replay-film-legend { margin-top:6px; display:flex; align-items:center; gap:8px; color:#9db0cf; font-size:10px; }
+    .replay-film-gradient { flex:1 1 auto; height:8px; border-radius:999px; border:1px solid rgba(111,132,171,.35); background:linear-gradient(90deg,#b80f35,#ffb44a,#44db7f); }
     .tag { display:inline-block; color:white; border-radius:999px; font-size:11px; padding:2px 8px; margin-bottom:7px; }
     .side { padding:18px 18px 16px; }
     .kpi { margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -112,6 +134,12 @@
       <div class="viz">
         <div class="tooltip" id="tooltip"></div>
         <div class="explode-pop" id="explode-pop"></div>
+        <svg id="chart" viewBox="0 0 1280 860"></svg>
+      </div>
+      <div class="footer">Feature-rich multi-drilldown view using real API-derived JSON.</div>
+    </div>
+    <div class="card">
+      <div class="side">
         <div class="replay-hud" id="replay-hud" style="display:none;">
           <div class="replay-line">
             <strong>Live Replay</strong>
@@ -128,13 +156,55 @@
             <button id="replay-pause">Pause</button>
             <button id="replay-reset">Reset</button>
           </div>
+          <div class="replay-state-grid">
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-off-a">Team A Offence</div>
+              <div class="replay-state-value" id="replay-off-a">--</div>
+            </div>
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-def-a">Team A Defence</div>
+              <div class="replay-state-value" id="replay-def-a">--</div>
+            </div>
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-off-b">Team B Offence</div>
+              <div class="replay-state-value" id="replay-off-b">--</div>
+            </div>
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-def-b">Team B Defence</div>
+              <div class="replay-state-value" id="replay-def-b">--</div>
+            </div>
+          </div>
+          <div class="replay-base-toggle">
+            <button id="replay-base-game" class="active">Game Baseline</button>
+            <button id="replay-base-league">League Baseline</button>
+          </div>
+          <div class="replay-base-note" id="replay-base-note">Baseline mode controls how Off/Def 0-100 is normalized.</div>
+          <div class="replay-mini-title">Narrative Signals</div>
+          <div class="replay-callouts" id="replay-callouts"></div>
+          <div class="replay-mini-title">Trend Lines (Live + Smoothed)</div>
+          <div class="replay-analytics">
+            <svg id="replay-trends-svg" width="370" height="140"></svg>
+            <div class="replay-trend-legend">
+              <span><i class="replay-trend-mark"></i>Offence</span>
+              <span><i class="replay-trend-mark dash"></i>Defence</span>
+              <span>Team colors apply for A/B</span>
+            </div>
+            <div class="replay-hover-readout" id="replay-hover-readout">Hover the chart to inspect minute values.</div>
+          </div>
+          <div class="replay-mini-title">Offence-Defence Phase Map</div>
+          <div class="replay-analytics">
+            <svg id="replay-phase-svg" width="370" height="150"></svg>
+            <div class="replay-help" id="replay-phase-help">Right = stronger offence relative to baseline. Up = stronger defence relative to baseline. Hover trajectories for minute-level snapshots.</div>
+            <div class="replay-hover-readout" id="replay-phase-readout">Hover phase map to inspect point-time-state mapping.</div>
+          </div>
+          <div class="replay-mini-title">State Filmstrip (Meta Timeline)</div>
+          <div class="replay-analytics">
+            <svg id="replay-filmstrip-svg" width="370" height="110"></svg>
+            <div class="replay-film-legend"><span>Under</span><div class="replay-film-gradient"></div><span>Neutral</span><span>Over</span></div>
+            <div class="replay-help" id="replay-film-help">Each row is a team-channel (Off/Def). Color encodes state score vs selected baseline.</div>
+            <div class="replay-hover-readout" id="replay-filmstrip-readout">Hover filmstrip to inspect all channel values at one minute.</div>
+          </div>
         </div>
-        <svg id="chart" viewBox="0 0 1280 860"></svg>
-      </div>
-      <div class="footer">Feature-rich multi-drilldown view using real API-derived JSON.</div>
-    </div>
-    <div class="card">
-      <div class="side">
         <h2 id="panel-title">Context</h2>
         <div class="muted" id="panel-desc"></div>
         <div class="kpi" id="kpi-grid"></div>
@@ -181,6 +251,24 @@ const replayFill = document.getElementById("replay-fill");
 const replayPlayBtn = document.getElementById("replay-play");
 const replayPauseBtn = document.getElementById("replay-pause");
 const replayResetBtn = document.getElementById("replay-reset");
+const replayOffA = document.getElementById("replay-off-a");
+const replayDefA = document.getElementById("replay-def-a");
+const replayOffB = document.getElementById("replay-off-b");
+const replayDefB = document.getElementById("replay-def-b");
+const replayTitleOffA = document.getElementById("replay-title-off-a");
+const replayTitleDefA = document.getElementById("replay-title-def-a");
+const replayTitleOffB = document.getElementById("replay-title-off-b");
+const replayTitleDefB = document.getElementById("replay-title-def-b");
+const replayBaseGameBtn = document.getElementById("replay-base-game");
+const replayBaseLeagueBtn = document.getElementById("replay-base-league");
+const replayBaseNote = document.getElementById("replay-base-note");
+const replayCallouts = document.getElementById("replay-callouts");
+const replayTrendsSvg = document.getElementById("replay-trends-svg");
+const replayPhaseSvg = document.getElementById("replay-phase-svg");
+const replayFilmstripSvg = document.getElementById("replay-filmstrip-svg");
+const replayHoverReadout = document.getElementById("replay-hover-readout");
+const replayPhaseReadout = document.getElementById("replay-phase-readout");
+const replayFilmstripReadout = document.getElementById("replay-filmstrip-readout");
 const controls = document.getElementById("controls");
 const svg = d3.select("#chart");
 svg.on("click", () => {
@@ -215,9 +303,19 @@ let replayState = {
   durationMs: 20000,
   graphLinks: [],
   graphNodes: [],
+  metricLinks: [],
+  startsByTeam: {},
   scheduleByKey: new Map(),
+  metricScheduleByKey: new Map(),
   finalScoreA: 0,
-  finalScoreB: 0
+  finalScoreB: 0,
+  baselines: {},
+  gameBaselines: {},
+  leagueBaselines: {},
+  baselineMode: "game",
+  historyByTeam: {},
+  lastHistoryT: -1,
+  trendHover: null
 };
 
 // Allow switching between multiple games by passing ?file=... in the URL.
@@ -707,6 +805,535 @@ function replayReveal(schedule, progress){
   return Math.max(0, Math.min(1, t));
 }
 
+function replayTeams(){
+  const meta = (dataBundle && dataBundle.meta) ? dataBundle.meta : {};
+  const a = String(meta.team_a || "").trim();
+  const b = String(meta.team_b || "").trim();
+  return [a || "Team A", b || "Team B"];
+}
+
+function teamAbbr(name){
+  const s = String(name || "").trim();
+  if(!s) return "TM";
+  const words = s.split(/\s+/).filter(Boolean);
+  if(words.length >= 2){
+    const code = words.slice(0, 3).map(w => w[0]).join("").toUpperCase();
+    return code || s.slice(0, 3).toUpperCase();
+  }
+  const clean = s.replace(/[^A-Za-z]/g, "");
+  return (clean.slice(0, 3) || s.slice(0, 3)).toUpperCase();
+}
+
+function replayStateLabelPair(team){
+  const ab = teamAbbr(team);
+  return {
+    off: `${ab} Offence`,
+    def: `${ab} Defence`
+  };
+}
+
+function replayCurrentBaselines(){
+  if(replayState.baselineMode === "league" && replayState.leagueBaselines){
+    return replayState.leagueBaselines;
+  }
+  return replayState.gameBaselines || replayState.baselines || {};
+}
+
+function replaySetBaselineMode(mode){
+  replayState.baselineMode = mode === "league" ? "league" : "game";
+  if(replayBaseGameBtn) replayBaseGameBtn.classList.toggle("active", replayState.baselineMode === "game");
+  if(replayBaseLeagueBtn) replayBaseLeagueBtn.classList.toggle("active", replayState.baselineMode === "league");
+  if(replayBaseNote){
+    const msg = replayState.baselineMode === "league"
+      ? "League baseline: scores compare against fixed Euroleague priors (PPP 1.05, pace 1.90, 3P mix 37%, TO 13%)."
+      : "Game baseline: scores compare against this game's final profile (relative in-game over/underperformance).";
+    replayBaseNote.textContent = msg;
+  }
+  applyReplayFrame();
+}
+
+function replayBinOffence(v){
+  if(v >= 75) return { label:"On Fire", color:"#00e676" };
+  if(v >= 62) return { label:"Attacking Well", color:"#7cff8d" };
+  if(v >= 48) return { label:"Neutral", color:"#f2c14e" };
+  if(v >= 35) return { label:"Cold", color:"#ff8e3c" };
+  return { label:"Stalled", color:"#ff4d6d" };
+}
+
+function replayBinDefence(v){
+  if(v >= 75) return { label:"Lockdown", color:"#00e676" };
+  if(v >= 62) return { label:"Pressure", color:"#7cff8d" };
+  if(v >= 48) return { label:"Balanced", color:"#f2c14e" };
+  if(v >= 35) return { label:"Leaky", color:"#ff8e3c" };
+  return { label:"Broken", color:"#ff4d6d" };
+}
+
+function replayFmtValue(v){
+  return `${Math.round(v)}/100`;
+}
+
+function replayTagHtml(bin){
+  return `<span class="replay-tag" style="border-color:${rgba(bin.color,0.7)};color:${bin.color};">${bin.label}</span>`;
+}
+
+function replayGaussianSmooth(samples, sigmaMins){
+  const out = [];
+  const sigma = Math.max(0.0001, Number(sigmaMins || 1.4));
+  for(let i = 0; i < samples.length; i++){
+    const xi = Number(samples[i].t || 0);
+    let sw = 0;
+    let sy = 0;
+    for(let j = 0; j < samples.length; j++){
+      const xj = Number(samples[j].t || 0);
+      const d = (xi - xj) / sigma;
+      const w = Math.exp(-0.5 * d * d);
+      sw += w;
+      sy += w * Number(samples[j].v || 0);
+    }
+    out.push({ t: xi, v: sw > 0 ? (sy / sw) : Number(samples[i].v || 0) });
+  }
+  return out;
+}
+
+function replayBuildMetricsAt(progress){
+  const p = Math.max(0, Math.min(1, Number(progress || 0)));
+  const links = replayState.graphLinks || [];
+  const [teamA, teamB] = replayTeams();
+  const teams = [teamA, teamB];
+  const byTeam = {};
+  teams.forEach(team => {
+    byTeam[team] = {
+      poss: 0,
+      points: 0,
+      made2: 0,
+      made3: 0,
+      misses: 0,
+      turnovers: 0
+    };
+  });
+
+  links.forEach(l => {
+    const r = replayReveal(replayState.scheduleByKey.get(l.key), p);
+    if(r <= 0) return;
+    const wv = Number(l.value || 0) * r;
+    if(wv <= 0) return;
+    const source = l.source || {};
+    const target = l.target || {};
+    const team = String(source.team || target.team || "").trim();
+    if(!byTeam[team]){
+      byTeam[team] = { poss: 0, points: 0, made2: 0, made3: 0, misses: 0, turnovers: 0 };
+    }
+
+    if(source.stage === "type" && target.stage === "event"){
+      byTeam[team].poss += wv;
+    }
+    if(source.stage === "event"){
+      const ev = String(source.name || "").toLowerCase();
+      if(ev.indexOf("made 3") !== -1) byTeam[team].made3 += wv;
+      if(ev.indexOf("made 2") !== -1) byTeam[team].made2 += wv;
+      if(ev.indexOf("miss") !== -1) byTeam[team].misses += wv;
+      if(ev.indexOf("turnover") !== -1) byTeam[team].turnovers += wv;
+    }
+    if(target.stage === "points"){
+      const m = String(target.id || target.name || "").match(/_(\d+)$|(\d+)/);
+      const pts = m ? Number(m[1] || m[2] || 0) : 0;
+      if(pts > 0) byTeam[team].points += pts * wv;
+    }
+  });
+
+  const baselines = replayCurrentBaselines();
+  const minutes = 40 * p;
+  const maxMinutes = Math.max(1, minutes);
+  const score = {};
+  teams.forEach(team => {
+    const m = byTeam[team] || { poss:0, points:0, made2:0, made3:0, misses:0, turnovers:0 };
+    const base = baselines[team] || {};
+    const ppp = m.points / Math.max(1, m.poss);
+    const pace = m.poss / maxMinutes;
+    const makeVol = m.made2 + m.made3;
+    const made3share = makeVol > 0 ? (m.made3 / makeVol) : 0;
+    const tor = m.turnovers / Math.max(1, m.poss);
+    const basePpp = Number(base.ppp || 1);
+    const basePace = Number(base.pace || 1);
+    const base3Share = Number(base.made3share || 0.35);
+    const baseTo = Number(base.tor || 0.12);
+    const offenceRaw =
+      50
+      + 34 * ((ppp - basePpp) / Math.max(0.25, basePpp))
+      + 10 * ((pace - basePace) / Math.max(0.2, basePace))
+      + 16 * ((made3share - base3Share) / Math.max(0.1, base3Share))
+      - 14 * ((tor - baseTo) / Math.max(0.05, baseTo));
+    score[team] = {
+      ppp,
+      pace,
+      made3share,
+      tor,
+      points: m.points,
+      poss: m.poss,
+      offence: Math.max(0, Math.min(100, offenceRaw)),
+      defence: 50
+    };
+  });
+
+  const a = teams[0], b = teams[1];
+  const offA = score[a] ? score[a].offence : 50;
+  const offB = score[b] ? score[b].offence : 50;
+  if(score[a]) score[a].defence = Math.max(0, Math.min(100, 100 - offB));
+  if(score[b]) score[b].defence = Math.max(0, Math.min(100, 100 - offA));
+
+  return { teams, byTeam, score, minute: minutes };
+}
+
+function replayUpdateHistory(metrics){
+  const t = Number(metrics.minute || 0);
+  const dt = t - Number(replayState.lastHistoryT || -1);
+  if(dt < 0.22 && t < 40) return;
+  replayState.lastHistoryT = t;
+  metrics.teams.forEach(team => {
+    if(!replayState.historyByTeam[team]) replayState.historyByTeam[team] = [];
+    replayState.historyByTeam[team].push({
+      t,
+      off: Number(metrics.score[team] ? metrics.score[team].offence : 50),
+      def: Number(metrics.score[team] ? metrics.score[team].defence : 50)
+    });
+    if(replayState.historyByTeam[team].length > 260){
+      replayState.historyByTeam[team].shift();
+    }
+  });
+}
+
+function replayValueToColor(v){
+  const t = Math.max(0, Math.min(1, Number(v || 0) / 100));
+  return d3.interpolateRgbBasis(["#b80f35", "#ffb44a", "#44db7f"])(t);
+}
+
+function replayNearestByMinute(hist, minute, key){
+  if(!hist || !hist.length) return null;
+  let best = hist[0];
+  let bestDt = Math.abs(Number(best.t || 0) - minute);
+  for(let i = 1; i < hist.length; i++){
+    const dt = Math.abs(Number(hist[i].t || 0) - minute);
+    if(dt < bestDt){
+      bestDt = dt;
+      best = hist[i];
+    }
+  }
+  return { t: Number(best.t || 0), v: Number(best[key] || 50) };
+}
+
+function replayRenderTrendLines(){
+  if(!replayTrendsSvg) return;
+  const svgSel = d3.select(replayTrendsSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 140);
+  svgSel.selectAll("*").remove();
+  const m = { l: 24, r: 6, t: 8, b: 18 };
+  const x = d3.scaleLinear().domain([0, 40]).range([m.l, w - m.r]);
+  const y = d3.scaleLinear().domain([0, 100]).range([h - m.b, m.t]);
+  svgSel.append("line").attr("x1", m.l).attr("y1", h - m.b).attr("x2", w - m.r).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", m.t).attr("x2", m.l).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  [20, 40, 60, 80].forEach(v => {
+    svgSel.append("line")
+      .attr("x1", m.l).attr("x2", w - m.r).attr("y1", y(v)).attr("y2", y(v))
+      .attr("stroke", "rgba(111,132,171,.16)").attr("stroke-dasharray", "3 3");
+  });
+  const line = d3.line().x(d => x(d.t)).y(d => y(d.v)).curve(d3.curveMonotoneX);
+  const [teamA, teamB] = replayTeams();
+  const series = [
+    { team: teamA, metric: "off", color: colors[teamA] || "#3a86ff", dash: null },
+    { team: teamA, metric: "def", color: rgba(colors[teamA] || "#3a86ff", 0.9), dash: "4 3" },
+    { team: teamB, metric: "off", color: colors[teamB] || "#ff006e", dash: null },
+    { team: teamB, metric: "def", color: rgba(colors[teamB] || "#ff006e", 0.9), dash: "4 3" }
+  ];
+  const liveSeries = [];
+  series.forEach(s => {
+    const hist = (replayState.historyByTeam[s.team] || []).map(d => ({ t: d.t, v: Number(d[s.metric] || 50) }));
+    if(hist.length < 2) return;
+    liveSeries.push({ team: s.team, metric: s.metric, hist, color: s.color, dash: s.dash });
+    const smooth = replayGaussianSmooth(hist, 1.25);
+    svgSel.append("path")
+      .attr("d", line(hist))
+      .attr("fill", "none")
+      .attr("stroke", rgba(s.color, 0.42))
+      .attr("stroke-width", 1.2)
+      .attr("stroke-dasharray", s.dash || null);
+    svgSel.append("path")
+      .attr("d", line(smooth))
+      .attr("fill", "none")
+      .attr("stroke", rgba(s.color, 0.92))
+      .attr("stroke-width", 2)
+      .attr("stroke-dasharray", s.dash || null);
+  });
+
+  const hoverLayer = svgSel.append("g");
+  const probe = hoverLayer.append("line")
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "rgba(233,241,255,.55)")
+    .attr("stroke-dasharray", "3 3")
+    .style("display", "none");
+  const dotLayer = hoverLayer.append("g");
+
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      if(!liveSeries.length) return;
+      const px = Math.max(m.l, Math.min(w - m.r, d3.pointer(event)[0]));
+      const minute = x.invert(px);
+      probe.style("display", null).attr("x1", px).attr("x2", px);
+      const dots = [];
+      liveSeries.forEach(s => {
+        const near = replayNearestByMinute((replayState.historyByTeam[s.team] || []), minute, s.metric);
+        if(!near) return;
+        dots.push({
+          x: x(near.t),
+          y: y(near.v),
+          color: s.color,
+          text: `${teamAbbr(s.team)} ${s.metric === "off" ? "Off" : "Def"} ${Math.round(near.v)}`
+        });
+      });
+      dotLayer.selectAll("circle")
+        .data(dots)
+        .join("circle")
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+        .attr("r", 2.8)
+        .attr("fill", d => d.color)
+        .attr("stroke", "#f4f8ff")
+        .attr("stroke-width", 0.7);
+      if(replayHoverReadout){
+        replayHoverReadout.textContent = `Minute ${minute.toFixed(1)}: ${dots.map(d => d.text).join(" | ")}`;
+      }
+    })
+    .on("mouseleave", () => {
+      probe.style("display", "none");
+      dotLayer.selectAll("*").remove();
+      if(replayHoverReadout){
+        replayHoverReadout.textContent = "Hover the chart to inspect minute values.";
+      }
+    });
+}
+
+function replayRenderFilmstrip(){
+  if(!replayFilmstripSvg) return;
+  const svgSel = d3.select(replayFilmstripSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 110);
+  svgSel.selectAll("*").remove();
+  const m = { l: 24, r: 6, t: 8, b: 18 };
+  const x = d3.scaleLinear().domain([0, 40]).range([m.l, w - m.r]);
+  const [teamA, teamB] = replayTeams();
+  const tracks = [
+    { team: teamA, metric: "off", label: `${teamAbbr(teamA)} Off` },
+    { team: teamA, metric: "def", label: `${teamAbbr(teamA)} Def` },
+    { team: teamB, metric: "off", label: `${teamAbbr(teamB)} Off` },
+    { team: teamB, metric: "def", label: `${teamAbbr(teamB)} Def` }
+  ];
+  const trackHeight = (h - m.t - m.b) / tracks.length;
+  const bucket = 0.4;
+  tracks.forEach((tr, rowIdx) => {
+    const y0 = m.t + rowIdx * trackHeight;
+    svgSel.append("text")
+      .attr("x", 2)
+      .attr("y", y0 + trackHeight * 0.62)
+      .attr("fill", "#9db0cf")
+      .attr("font-size", 9)
+      .text(tr.label);
+    const hist = replayState.historyByTeam[tr.team] || [];
+    for(let t = 0; t < 40; t += bucket){
+      const near = replayNearestByMinute(hist, t, tr.metric);
+      if(!near) continue;
+      svgSel.append("rect")
+        .attr("x", x(t))
+        .attr("y", y0 + 1)
+        .attr("width", Math.max(0.8, x(t + bucket) - x(t) + 0.2))
+        .attr("height", Math.max(1, trackHeight - 2))
+        .attr("fill", replayValueToColor(near.v))
+        .attr("opacity", 0.95);
+    }
+  });
+  const playX = x(40 * replayState.progress);
+  svgSel.append("line")
+    .attr("x1", playX)
+    .attr("x2", playX)
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "#f1f6ff")
+    .attr("stroke-width", 1.2);
+  svgSel.append("line").attr("x1", m.l).attr("x2", w - m.r).attr("y1", h - m.b).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("text").attr("x", w - m.r).attr("y", h - 4).attr("fill", "#9db0cf").attr("font-size", 9).attr("text-anchor", "end").text("min");
+  const hoverProbe = svgSel.append("line")
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "rgba(233,241,255,.62)")
+    .attr("stroke-dasharray", "3 3")
+    .style("display", "none");
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      const px = Math.max(m.l, Math.min(w - m.r, d3.pointer(event)[0]));
+      const minute = x.invert(px);
+      hoverProbe.style("display", null).attr("x1", px).attr("x2", px);
+      const chunks = [];
+      tracks.forEach(tr => {
+        const hist = replayState.historyByTeam[tr.team] || [];
+        const near = replayNearestByMinute(hist, minute, tr.metric);
+        if(!near) return;
+        chunks.push(`${tr.label} ${Math.round(near.v)}`);
+      });
+      if(replayFilmstripReadout){
+        replayFilmstripReadout.textContent = `Minute ${minute.toFixed(1)} (${replayState.baselineMode} baseline): ${chunks.join(" | ")}`;
+      }
+    })
+    .on("mouseleave", () => {
+      hoverProbe.style("display", "none");
+      if(replayFilmstripReadout){
+        replayFilmstripReadout.textContent = "Hover filmstrip to inspect all channel values at one minute.";
+      }
+    });
+}
+
+function replayRenderPhaseMap(){
+  if(!replayPhaseSvg) return;
+  const svgSel = d3.select(replayPhaseSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 150);
+  svgSel.selectAll("*").remove();
+  const m = { l: 30, r: 8, t: 8, b: 22 };
+  const x = d3.scaleLinear().domain([0, 100]).range([m.l, w - m.r]);
+  const y = d3.scaleLinear().domain([0, 100]).range([h - m.b, m.t]);
+  svgSel.append("line").attr("x1", x(50)).attr("y1", m.t).attr("x2", x(50)).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.26)").attr("stroke-dasharray","3 3");
+  svgSel.append("line").attr("x1", m.l).attr("y1", y(50)).attr("x2", w - m.r).attr("y2", y(50)).attr("stroke", "rgba(111,132,171,.26)").attr("stroke-dasharray","3 3");
+  svgSel.append("rect")
+    .attr("x", x(35)).attr("y", y(75))
+    .attr("width", x(75) - x(35)).attr("height", y(35) - y(75))
+    .attr("fill", "rgba(41,194,113,.08)").attr("stroke", "rgba(41,194,113,.24)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", h - m.b).attr("x2", w - m.r).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", m.t).attr("x2", m.l).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("text").attr("x", w - m.r).attr("y", h - 6).attr("fill", "#9db0cf").attr("font-size", 10).attr("text-anchor", "end").text("Offence");
+  svgSel.append("text").attr("x", m.l + 2).attr("y", m.t + 10).attr("fill", "#9db0cf").attr("font-size", 10).text("Defence");
+  svgSel.append("text").attr("x", x(72)).attr("y", y(82)).attr("fill", "rgba(126,233,161,.78)").attr("font-size", 9).text("Two-way surge");
+  svgSel.append("text").attr("x", x(72)).attr("y", y(24)).attr("fill", "rgba(255,175,133,.8)").attr("font-size", 9).text("Score-first / soft defense");
+  svgSel.append("text").attr("x", x(16)).attr("y", y(82)).attr("fill", "rgba(255,175,133,.8)").attr("font-size", 9).text("Defensive grind");
+  svgSel.append("text").attr("x", x(16)).attr("y", y(24)).attr("fill", "rgba(247,121,130,.82)").attr("font-size", 9).text("Breakdown zone");
+  const line = d3.line().x(d => x(d.off)).y(d => y(d.def)).curve(d3.curveCatmullRom.alpha(0.6));
+  const allPoints = [];
+  replayTeams().forEach(team => {
+    const hist = replayState.historyByTeam[team] || [];
+    if(hist.length < 2) return;
+    const c = colors[team] || "#3a86ff";
+    svgSel.append("path")
+      .attr("d", line(hist))
+      .attr("fill", "none")
+      .attr("stroke", rgba(c, 0.72))
+      .attr("stroke-width", 1.8);
+    const last = hist[hist.length - 1];
+    svgSel.append("circle")
+      .attr("cx", x(last.off)).attr("cy", y(last.def)).attr("r", 3.1)
+      .attr("fill", c).attr("stroke", "#f3f7ff").attr("stroke-width", 0.8);
+    hist.forEach(p => allPoints.push({ team, t: p.t, off: p.off, def: p.def, x: x(p.off), y: y(p.def), color: c }));
+  });
+  const hoverDot = svgSel.append("circle").attr("r", 4).attr("fill", "#f1f6ff").attr("stroke", "#0d1222").attr("stroke-width", 1).style("display", "none");
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      if(!allPoints.length) return;
+      const [mx, my] = d3.pointer(event);
+      let best = null;
+      let bestD = Infinity;
+      allPoints.forEach(p => {
+        const dx = p.x - mx;
+        const dy = p.y - my;
+        const d = (dx * dx) + (dy * dy);
+        if(d < bestD){
+          bestD = d;
+          best = p;
+        }
+      });
+      if(!best) return;
+      hoverDot.style("display", null).attr("cx", best.x).attr("cy", best.y).attr("fill", best.color);
+      if(replayPhaseReadout){
+        replayPhaseReadout.textContent = `${teamAbbr(best.team)} at ${best.t.toFixed(1)} min: Off ${Math.round(best.off)}, Def ${Math.round(best.def)} (${replayState.baselineMode} baseline).`;
+      }
+    })
+    .on("mouseleave", () => {
+      hoverDot.style("display", "none");
+      if(replayPhaseReadout){
+        replayPhaseReadout.textContent = "Hover phase map to inspect point-time-state mapping.";
+      }
+    });
+}
+
+function replayRenderCallouts(metrics){
+  if(!replayCallouts) return;
+  const teams = metrics.teams;
+  const out = [];
+  teams.forEach(team => {
+    const s = metrics.score[team];
+    if(!s) return;
+    const bOff = replayBinOffence(s.offence);
+    const bDef = replayBinDefence(s.defence);
+    const made3Pct = Math.round(100 * (s.made3share || 0));
+    if(s.offence >= 72 && made3Pct >= 42){
+      out.push(`${team}: on fire from 3 (${made3Pct}% of made shots are 3s).`);
+    } else if(s.offence >= 72){
+      out.push(`${team}: offense surge (${s.ppp.toFixed(2)} PPP).`);
+    }
+    if(s.defence >= 72){
+      out.push(`${team}: defensive pressure ramping up.`);
+    }
+    if(s.offence <= 34){
+      out.push(`${team}: offense stalled, low quality finish rate.`);
+    }
+    if(s.tor >= 0.17){
+      out.push(`${team}: turnover wave (${(100 * s.tor).toFixed(1)}% of possessions).`);
+    }
+    if(out.length < 2){
+      out.push(`${team}: Off ${replayFmtValue(s.offence)} (${bOff.label}), Def ${replayFmtValue(s.defence)} (${bDef.label}).`);
+    }
+  });
+  const uniq = [];
+  out.forEach(x => {
+    if(uniq.indexOf(x) === -1) uniq.push(x);
+  });
+  replayCallouts.innerHTML = uniq.slice(0, 3).map(x => `<div class="replay-callout">${x}</div>`).join("");
+}
+
+function replayRenderStateCards(metrics){
+  const [teamA, teamB] = metrics.teams;
+  const titleA = replayStateLabelPair(teamA);
+  const titleB = replayStateLabelPair(teamB);
+  if(replayTitleOffA) replayTitleOffA.textContent = titleA.off;
+  if(replayTitleDefA) replayTitleDefA.textContent = titleA.def;
+  if(replayTitleOffB) replayTitleOffB.textContent = titleB.off;
+  if(replayTitleDefB) replayTitleDefB.textContent = titleB.def;
+  const a = metrics.score[teamA] || { offence:50, defence:50 };
+  const b = metrics.score[teamB] || { offence:50, defence:50 };
+  const binOffA = replayBinOffence(a.offence);
+  const binDefA = replayBinDefence(a.defence);
+  const binOffB = replayBinOffence(b.offence);
+  const binDefB = replayBinDefence(b.defence);
+  if(replayOffA) replayOffA.innerHTML = `${replayFmtValue(a.offence)} ${replayTagHtml(binOffA)}`;
+  if(replayDefA) replayDefA.innerHTML = `${replayFmtValue(a.defence)} ${replayTagHtml(binDefA)}`;
+  if(replayOffB) replayOffB.innerHTML = `${replayFmtValue(b.offence)} ${replayTagHtml(binOffB)}`;
+  if(replayDefB) replayDefB.innerHTML = `${replayFmtValue(b.defence)} ${replayTagHtml(binDefB)}`;
+}
+
 function applyReplayFrame(){
   if(!replayState.active) return;
   const p = Math.max(0, Math.min(1, replayState.progress));
@@ -743,6 +1370,14 @@ function applyReplayFrame(){
       const v = Math.max(src, tgt);
       return Math.max(0.08, Math.min(1, 0.14 + v));
     });
+
+  const metrics = replayBuildMetricsAt(p);
+  replayUpdateHistory(metrics);
+  replayRenderStateCards(metrics);
+  replayRenderCallouts(metrics);
+  replayRenderTrendLines();
+  replayRenderPhaseMap();
+  replayRenderFilmstrip();
 }
 
 function startReplay(){
@@ -783,6 +1418,31 @@ function initReplayForGraph(graph){
   replayState.finalScoreB = fs.b;
   replayState.progress = 0;
   replayState.playing = false;
+  replayState.historyByTeam = {};
+  replayState.lastHistoryT = -1;
+  replayState.baselines = {};
+  replayState.gameBaselines = {};
+  replayState.leagueBaselines = {};
+  const full = replayBuildMetricsAt(1);
+  if(full && full.teams){
+    full.teams.forEach(team => {
+      const s = full.score[team] || {};
+      replayState.gameBaselines[team] = {
+        ppp: Number(s.ppp || 1),
+        pace: Number(s.pace || 1),
+        made3share: Number(s.made3share || 0.35),
+        tor: Number(s.tor || 0.12)
+      };
+      replayState.leagueBaselines[team] = {
+        ppp: 1.05,
+        pace: 1.90,
+        made3share: 0.37,
+        tor: 0.13
+      };
+    });
+  }
+  replayState.baselines = replayCurrentBaselines();
+  replaySetBaselineMode(replayState.baselineMode || "game");
   stopReplayTimer();
   if(replayHud){
     replayHud.style.display = replayLab ? "block" : "none";
@@ -1628,6 +2288,8 @@ fetch(fetchUrl).then(r=>{
   if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
   if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
   if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
+  if (replayBaseGameBtn) replayBaseGameBtn.onclick = () => replaySetBaselineMode("game");
+  if (replayBaseLeagueBtn) replayBaseLeagueBtn.onclick = () => replaySetBaselineMode("league");
   buildControls();
   setView("top");
 }).catch(err=>{
