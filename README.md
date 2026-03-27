@@ -172,3 +172,28 @@ docker run --rm \
 - Main viewer: `poss-flow-map-multi-drilldown-real-data.html`
 - Landing/game switchers: `index.html`, `poss-flow-index.html`
 - Team notes/spike context: `efforts/`, `epics_catalog.md`, `.github/copilot-instructions.md`
+
+## 9) Product Surface Separation (Prod vs Labs)
+
+We treat visualization labs as first-class source code (similar to tests in backend repos).
+Labs can live in `main`, but public production exposure is controlled by entry pages and deploy packaging.
+
+- `main` branch: production-safe source of truth.
+- `dev` branch: integration and pre-release hardening.
+- `spike` (or `lab`) branch: long-lived experimental branch where POCs and exploratory UI can continue evolving.
+- optional `spike/*` sub-branches can still be used for focused experiments before merging back to `spike`.
+
+Deployment policy:
+
+- Production deployment publishes only curated MVP pages/routes.
+- Preview/spike deployment can expose full labs/features for exploration from the long-lived experimental branch.
+- Do not rely on branch name alone to hide/show features; use explicit deploy allowlists for pages/assets.
+
+Release gate:
+
+- Localhost UAT is required before promoting `dev -> main`.
+- UAT feedback is triaged into:
+  - must-fix before release
+  - post-release refinement backlog
+
+See `docs/dev_guide.md` for day-to-day workflow details.
