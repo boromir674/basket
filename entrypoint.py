@@ -84,7 +84,7 @@ def main(argv: list[str] | None = None) -> int:
         print("  entrypoint.py run_pipeline_and_validate [ARGS...]")
         print("  entrypoint.py demo")
         print("  entrypoint.py demo_auto_insights")
-        print("  entrypoint.py rebuild_manifest --seasoncode E2021 [--output-dir .]")
+        print("  entrypoint.py rebuild_manifest --seasoncode E2021 [--output-dir assets/processed]")
         print()
         print("Examples:")
         print("  run_pipeline_and_validate --seasoncode E2021 --gamecode 54")
@@ -104,7 +104,8 @@ def main(argv: list[str] | None = None) -> int:
         from build_from_euroleague_api import run_game
 
         scenarios = [("E2021", 54), ("E2021", 55)]
-        out_dir = Path(".").resolve()
+        out_dir = Path(os.getenv("BASKET_APP_FILE_STORE_URI", "assets")).resolve() / "processed"
+        out_dir.mkdir(parents=True, exist_ok=True)
         print("=== Demo run: generating sample games ===")
         last_path: Path | None = None
         for seasoncode, gamecode in scenarios:
@@ -148,7 +149,8 @@ def main(argv: list[str] | None = None) -> int:
 
         seasoncode = "E2021"
         gamecode = 54
-        out_dir = Path(".").resolve()
+        out_dir = Path(os.getenv("BASKET_APP_FILE_STORE_URI", "assets")).resolve() / "processed"
+        out_dir.mkdir(parents=True, exist_ok=True)
 
         # Ensure the base JSON for this game exists so the engine has
         # something to work with.
@@ -175,8 +177,8 @@ def main(argv: list[str] | None = None) -> int:
         parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2021")
         parser.add_argument(
             "--output-dir",
-            default=".",
-            help="Directory where JSON files live (default: current directory)",
+            default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
+            help="Directory where JSON files live (default: BASKET_APP_FILE_STORE_URI/processed)",
         )
         args = parser.parse_args(rest)
 

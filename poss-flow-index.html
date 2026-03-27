@@ -9,6 +9,9 @@
     * { box-sizing:border-box; }
     body { margin:0; font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); color:var(--text); }
     .wrap { max-width:1440px; margin:0 auto; padding:20px 16px 28px; }
+    .page-nav { display:flex; justify-content:flex-end; margin-bottom:10px; }
+    .home-link { display:inline-flex; align-items:center; justify-content:center; padding:8px 12px; border-radius:999px; border:1px solid var(--border); background:#14223e; color:var(--text); text-decoration:none; font-size:13px; }
+    .home-link:hover { background:#21365e; border-color:#4f6b99; }
     .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:4px; }
     h1 { margin:0 0 4px; font-size:24px; }
     .subtitle { color:var(--muted); font-size:13px; margin-bottom:14px; }
@@ -27,6 +30,9 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="page-nav">
+    <a class="home-link" href="./index.html">Home</a>
+  </div>
   <div class="eyebrow">Euroleague MVP visualization spike</div>
   <h1>Game switcher</h1>
   <div class="subtitle">Pick any synced game on the left. The main Sankey view on the right reloads with that game's JSON.</div>
