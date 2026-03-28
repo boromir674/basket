@@ -3,204 +3,498 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Euroleague Sankey — Unified Game Explorer</title>
-  <meta name="description" content="Interactive possession flow maps and player-level insights for Euroleague games — explore flows, compare teams, and discover key possessions." />
-  <meta property="og:title" content="Euroleague Sankey — Unified Game Explorer" />
-  <meta property="og:description" content="Interactive possession flow maps and player-level insights for Euroleague games." />
+  <title>MVP Unified Explorer</title>
   <style>
     :root {
-      --bg-1:#091423;
-      --bg-2:#0f2240;
-      --panel:#0f1c33;
       --text:#edf3ff;
       --muted:#9ab0d4;
       --line:#2b4268;
+      --bg:#081425;
+      --panel:#0d1e38;
+      --anchor:#3a86ff;
+      --opp:#ff5a7a;
     }
     * { box-sizing:border-box; }
     body {
       margin:0;
       font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color:var(--text);
-      background:
-        radial-gradient(1200px 500px at 90% -5%, rgba(52,160,255,.16), transparent 60%),
-        radial-gradient(1000px 500px at -10% 0%, rgba(255,209,102,.12), transparent 55%),
-        linear-gradient(170deg, var(--bg-2), var(--bg-1));
-      min-height:100vh;
+      background:linear-gradient(180deg,#0e203b,var(--bg));
     }
-    .wrap { max-width:1100px; margin:0 auto; padding:28px 16px 40px; }
-    .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-    h1 { margin:10px 0 10px; font-size:34px; line-height:1.1; }
-    .subtitle { margin:0; color:var(--muted); font-size:15px; max-width:760px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:22px; }
-    /* Hero */
-    .hero { display:flex; align-items:center; gap:18px; margin-top:16px; }
-    .hero-left { flex:1; }
-    .motto { margin:0 0 12px; font-size:16px; color:#d8e9ff; }
-    .hero-right { width:340px; flex:0 0 340px; display:flex; align-items:center; justify-content:center; }
-    #sankey-teaser svg { width:100%; height:auto; display:block; }
-    .teaser-path { stroke-dasharray: 400; stroke-dashoffset: 400; transition: stroke-dashoffset 1.4s ease-out; }
-    body.show-teaser .teaser-path { stroke-dashoffset: 0; }
-
-    /* Collapsible context: when collapsed, hide panels to reveal more page */
-    .context-toggle { margin-top:12px; display:inline-block; font-size:13px; color:var(--muted); cursor:pointer; }
-    body.context-collapsed .panel { display:none; }
-
-    /* Responsive */
-    @media (max-width:860px) {
-      .hero { flex-direction:column; }
-      .hero-right { width:100%; }
-      .wrap { padding:20px 12px 30px; }
+    .wrap { max-width:1500px; margin:0 auto; padding:16px; }
+    .top {
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      justify-content:space-between;
+      margin-bottom:10px;
+      flex-wrap:wrap;
     }
-    @media (max-width:420px) {
-      h1 { font-size:26px; }
-      .motto { font-size:14px; }
-      .btn { padding:8px 10px; font-size:13px; }
-    }
-    .card {
-      background:linear-gradient(180deg, rgba(16,34,62,.92), rgba(10,19,34,.94));
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:16px;
-    }
-    .card h2 { margin:0 0 8px; font-size:19px; }
-    .card p { margin:0 0 14px; color:var(--muted); font-size:14px; line-height:1.45; }
+    .title { font-size:21px; font-weight:700; }
+    .muted { color:var(--muted); font-size:12px; }
     .btn {
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:#1a355e;
+      color:var(--text);
+      border-radius:999px;
+      padding:7px 11px;
+      font-size:12px;
+    }
+     /* Keep the viewer from shrinking by giving it a minimum width. The
+       left context/sidebar remains 360px; the viewer will not go below
+       560px which preserves Sankey rendering on narrow viewports while
+       reducing horizontal overflow. */
+     .layout { display:grid; grid-template-columns: 360px minmax(560px,1fr); gap:12px; }
+    .card { background:rgba(10,21,39,.94); border:1px solid var(--line); border-radius:14px; padding:11px; }
+    .row { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:8px; }
+    .row.split { justify-content:space-between; align-items:center; }
+    button {
+      border:1px solid var(--line);
+      background:#19345c;
+      color:var(--text);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      cursor:pointer;
+    }
+    button.active { border-color:#62b6ff; background:#25508a; }
+    .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+    select {
+      width:100%;
+      border:1px solid #355783;
+      border-radius:10px;
+      padding:8px;
+      background:#0f213f;
+      color:var(--text);
+      margin-bottom:8px;
+    }
+    .hidden { display:none; }
+    .games { max-height:70vh; overflow:auto; }
+    .game-row {
+      border:1px solid transparent;
+      border-radius:10px;
+      padding:8px;
+      margin-bottom:6px;
+      cursor:pointer;
+    }
+    .game-row:hover { border-color:#406393; background:rgba(18,33,57,.75); }
+    .game-row.active { border-color:#62b6ff; background:rgba(38,80,138,.4); }
+    .g-title { font-size:13px; font-weight:600; }
+    .g-meta { font-size:12px; color:var(--muted); }
+    .pill { display:inline-block; border:1px solid #3f608f; border-radius:999px; padding:2px 8px; font-size:11px; color:#b7cdf1; margin-top:5px; }
+    .viewer-head {
+      margin-bottom:8px;
+      border:1px solid var(--line);
+      background:rgba(11,22,40,.84);
+      border-radius:10px;
+      padding:8px 10px;
+      min-height:58px;
+    }
+    .vh-top { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .team-chip {
       display:inline-flex;
       align-items:center;
-      justify-content:center;
-      text-decoration:none;
+      border:1px solid var(--line);
       border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--text);
-      background:#173057;
-      padding:8px 13px;
-      font-size:13px;
+      padding:3px 9px;
+      font-size:12px;
+      transition:opacity .24s ease, transform .24s ease;
     }
-    .btn:hover { border-color:#4f6f9e; background:#1f3c6b; }
-    .panel {
-      margin-top:22px;
-      background:rgba(8,15,28,.72);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:14px 16px;
+    .team-chip.anchor { border-color:var(--anchor); color:#d7e9ff; }
+    .team-chip.opp { border-color:var(--opp); color:#ffd9e3; }
+    .vh-game {
+      margin-top:4px;
+      font-size:12px;
+      color:var(--muted);
+      transition:opacity .24s ease, transform .24s ease;
     }
-    .panel h3 { margin:0 0 8px; font-size:15px; }
-    .panel ul { margin:0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.4; }
-    code { background:#0b1629; border:1px solid #263d61; border-radius:6px; padding:2px 6px; color:#cfe1ff; }
+    .fade-step { opacity:0; transform:translateY(-4px); }
+    .iframe-wrap { position:relative; }
+    /* Keep iframe at a minimum width so the Sankey does not shrink; ensure
+       it renders above other page chrome so in-iframe tooltips are visible. */
+    iframe {
+      min-width:560px;
+      width:100%;
+      height:80vh;
+      border:0;
+      border-radius:10px;
+      background:#04080f;
+      opacity:1;
+      transition:opacity .25s ease;
+      position:relative;
+      z-index:9999;
+    }
+
+    /* Lower z-index for surrounding page chrome so iframe popups are shown */
+    .panel, .card { position:relative; z-index:1; }
+
+    /* Hide legacy/spike home which is no longer relevant for the MVP */
+    a.btn[href="../index.html"] { display:none !important; }
+    iframe.loading { opacity:.15; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="eyebrow">Euroleague Sankey</div>
-    <h1>Unified Game Explorer</h1>
-    <p class="subtitle">
-      One screen to explore possession flows, discover high-value possessions, and compare team performance.
-    </p>
-
-    <div class="hero">
-      <div class="hero-left">
-        <p class="motto">Visualize how games were won — fast, clear, and story-driven.</p>
-      </div>
-      <div class="hero-right">
-        <div id="sankey-teaser" aria-hidden="true">
-          <!-- Lightweight decorative Sankey teaser: animated path strokes -->
-          <svg width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1">
-                <stop offset="0" stop-color="#4fc0ff" stop-opacity="0.9" />
-                <stop offset="1" stop-color="#ffd166" stop-opacity="0.9" />
-              </linearGradient>
-            </defs>
-            <g fill="none" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-              <path class="teaser-path" d="M10 20 C80 30, 120 30, 150 40" opacity="0.9" />
-              <path class="teaser-path" d="M10 60 C70 70, 120 70, 170 80" opacity="0.75" />
-              <path class="teaser-path" d="M10 100 C60 110, 140 110, 200 100" opacity="0.6" />
-            </g>
-          </svg>
-        </div>
-      </div>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="title">MVP Unified Explorer</div>
+      <div class="muted">One screen for Core, Flow Explode, Live Replay, and Team Anchor Compare.</div>
     </div>
-
-    <div class="grid">
-      <div class="card">
-        <h2>Unified Explorer</h2>
-        <p>Explore mode toggles and anchor scope controls in one place. Anchor mode keeps selected team fixed as Team A/top lane.</p>
-      </div>
-
-      <div class="card">
-        <h2>Anchor-Focused Entry</h2>
-        <p>Open the explorer and switch to anchor mode from the Explorer controls.</p>
-      </div>
-    </div>
-
-    <div style="display:flex;align-items:center;gap:12px;margin-top:18px;">
-      <div class="context-toggle" id="contextToggle">Hide context ▾</div>
-    </div>
-
-    <div class="panel">
-      <h3>Coverage</h3>
-      <ul>
-        <li>Curated games are included for demonstration and evaluation.</li>
-        <li>Full season coverage and advanced filters are on the roadmap.</li>
-      </ul>
-    </div>
-
-    <div class="panel">
-      <h3>For testers</h3>
-      <ul>
-        <li>Scroll down to reveal an inline preview of the Unified Explorer — the full Explorer loads automatically.</li>
-        <li>If you need developer-only details, refer to internal docs in the repo.</li>
-      </ul>
-    </div>
-
-    <div id="explorerPreview" class="explorer-preview" aria-hidden="true">
-      <!-- explorer iframe will be lazy-loaded here when user scrolls -->
-      <div class="explorer-placeholder">Scrolling reveals the full Explorer preview</div>
+    <div style="display:flex; gap:8px;">
+      <a class="btn" href="./index.html">MVP Home</a>
+      <a class="btn" href="../index.html">Spike Home</a>
     </div>
   </div>
-  <script>
-    // teaser animation on first paint
-    document.documentElement.classList.add('show-teaser');
-    // context toggle
-    (function(){
-      var btn = document.getElementById('contextToggle');
-      btn.addEventListener('click', function(){
-        var collapsed = document.body.classList.toggle('context-collapsed');
-        btn.textContent = collapsed ? 'Show context ▴' : 'Hide context ▾';
+
+  <div class="layout">
+    <div class="card">
+      <div class="label" style="margin-bottom:4px;">Modes</div>
+      <div class="row" id="modeRow">
+        <button class="mode-btn active" data-mode="core">Core</button>
+        <button class="mode-btn" data-mode="replay">Live Replay</button>
+      </div>
+
+      <div class="row split" style="margin-top:6px;">
+        <div class="label" style="margin:0;">Game Scope</div>
+        <div class="row" style="margin:0;">
+          <button id="scope-all" class="active">All Games</button>
+          <button id="scope-anchor">Anchor Team</button>
+        </div>
+      </div>
+
+      <div id="anchorBlock" class="hidden" style="margin-top:8px;">
+        <div class="label">Anchor Team (forced as Team A / top lane)</div>
+        <select id="teamSelect"></select>
+        <div class="muted">Anchor color remains fixed across game switches.</div>
+      </div>
+
+      <div class="games" id="games" style="margin-top:10px;">Loading games...</div>
+    </div>
+
+    <div class="card">
+      <div class="viewer-head">
+        <div class="vh-top">
+          <span class="team-chip anchor" id="chipAnchor">Anchor: --</span>
+          <span class="team-chip opp" id="chipOpp">Opponent: --</span>
+        </div>
+        <div class="vh-game" id="gameMeta">Select a game.</div>
+      </div>
+      <div class="iframe-wrap">
+        <iframe id="viewer" src="/poss-flow-map-multi-drilldown-real-data.html" title="Sankey Viewer"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const qs = new URLSearchParams(window.location.search);
+  const gamesEl = document.getElementById("games");
+  const viewer = document.getElementById("viewer");
+  const modeBtns = Array.from(document.querySelectorAll(".mode-btn"));
+  const scopeAllBtn = document.getElementById("scope-all");
+  const scopeAnchorBtn = document.getElementById("scope-anchor");
+  const anchorBlock = document.getElementById("anchorBlock");
+  const teamSelect = document.getElementById("teamSelect");
+  const chipAnchor = document.getElementById("chipAnchor");
+  const chipOpp = document.getElementById("chipOpp");
+  const gameMeta = document.getElementById("gameMeta");
+
+  const ANCHOR_COLOR = "#3a86ff";
+  const OPP_COLOR = "#ff5a7a";
+
+  let entries = [];
+  let selectedMode = "core";
+  let anchorMode = false;
+  let selectedTeam = "";
+  let selectedGame = null;
+
+  const normalizedCache = new Map();
+
+  function modeParams(mode){
+    // explode interactions are always available by default; do not require an explicit mode.
+    if(mode === "replay") return "typeZoomVariant=4&replayLab=1";
+    return "typeZoomVariant=4";
+  }
+
+  function setMode(mode){
+    selectedMode = mode;
+    modeBtns.forEach((btn) => btn.classList.toggle("active", btn.dataset.mode === mode));
+    if(selectedGame) loadSelectedGame();
+  }
+
+  function setScope(isAnchor){
+    anchorMode = isAnchor;
+    scopeAllBtn.classList.toggle("active", !isAnchor);
+    scopeAnchorBtn.classList.toggle("active", isAnchor);
+    anchorBlock.classList.toggle("hidden", !isAnchor);
+    renderGames();
+  }
+
+  function teamInGame(g, t){ return g.team_a === t || g.team_b === t; }
+
+  function escapeRegExp(str){
+    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function swapName(v, a, b){
+    if(v === a) return b;
+    if(v === b) return a;
+    return v;
+  }
+
+  function swapNamesInText(text, a, b){
+    if(typeof text !== "string" || !text) return text;
+    const token = "__TMP_TEAM_TOKEN__";
+    return text
+      .replace(new RegExp(escapeRegExp(a), "g"), token)
+      .replace(new RegExp(escapeRegExp(b), "g"), a)
+      .replace(new RegExp(token, "g"), b);
+  }
+
+  function normalizeBundleForAnchor(bundle, anchorTeam){
+    const copy = JSON.parse(JSON.stringify(bundle));
+    const meta = copy.meta || {};
+    const a = meta.team_a;
+    const b = meta.team_b;
+    if(!a || !b || anchorTeam !== b){
+      if(copy.colors){
+        copy.colors[anchorTeam] = ANCHOR_COLOR;
+        const opp = anchorTeam === a ? b : a;
+        if(opp) copy.colors[opp] = OPP_COLOR;
+      }
+      return copy;
+    }
+
+    meta.team_a = b;
+    meta.team_b = a;
+    copy.meta = meta;
+
+    if(copy.colors && typeof copy.colors === "object"){
+      const next = {};
+      Object.keys(copy.colors).forEach((k) => {
+        const nk = swapName(k, a, b);
+        next[nk] = copy.colors[k];
       });
-    })();
+      next[meta.team_a] = ANCHOR_COLOR;
+      next[meta.team_b] = OPP_COLOR;
+      copy.colors = next;
+    }
 
-    // Lazy-load the inline Explorer iframe when user scrolls past the hero
-    (function(){
-      var hero = document.querySelector('.hero');
-      var preview = document.getElementById('explorerPreview');
-      var loaded = false;
-      if (!hero || !preview) return;
+    if(copy.players && typeof copy.players === "object"){
+      Object.values(copy.players).forEach((p) => {
+        if(p && typeof p === "object" && typeof p.team === "string"){
+          p.team = swapName(p.team, a, b);
+        }
+      });
+    }
 
-      var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          // when hero leaves viewport (i.e. user scrolled), reveal explorer
-          if (!e.isIntersecting && !loaded) {
-            document.body.classList.add('show-explorer');
-            // replace placeholder with iframe
-            var iframe = document.createElement('iframe');
-            iframe.src = './game-explorer.html';
-            iframe.loading = 'lazy';
-            iframe.style.border = '0';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.title = 'Unified Explorer';
-            preview.innerHTML = '';
-            preview.appendChild(iframe);
-            preview.setAttribute('aria-hidden','false');
-            loaded = true;
-            obs.disconnect();
-          }
-        });
-      }, { root: null, threshold: 0, rootMargin: '0px' });
+    if(Array.isArray(copy.boxscore_players)){
+      copy.boxscore_players.forEach((r) => {
+        if(r && typeof r.team === "string") r.team = swapName(r.team, a, b);
+      });
+    }
 
-      obs.observe(hero);
-    })();
-  </script>
+    if(copy.views && typeof copy.views === "object"){
+      Object.values(copy.views).forEach((view) => {
+        if(!view || typeof view !== "object") return;
+
+        if(view.starts && typeof view.starts === "object"){
+          const nextStarts = {};
+          Object.keys(view.starts).forEach((k) => { nextStarts[swapName(k, a, b)] = view.starts[k]; });
+          view.starts = nextStarts;
+        }
+
+        if(Array.isArray(view.nodes)){
+          view.nodes.forEach((n) => {
+            if(n && typeof n.team === "string") n.team = swapName(n.team, a, b);
+          });
+        }
+
+        if(view.player_flows && typeof view.player_flows === "object"){
+          Object.values(view.player_flows).forEach((arr) => {
+            if(Array.isArray(arr)){
+              arr.forEach((row) => {
+                if(row && typeof row.team === "string") row.team = swapName(row.team, a, b);
+              });
+            }
+          });
+        }
+
+        if(Array.isArray(view.insights)){
+          view.insights = view.insights.map((s) => swapNamesInText(s, a, b));
+        }
+        if(typeof view.title === "string") view.title = swapNamesInText(view.title, a, b);
+        if(typeof view.desc === "string") view.desc = swapNamesInText(view.desc, a, b);
+      });
+    }
+
+    return copy;
+  }
+
+  async function resolveGameFile(g){
+    const rawPath = `assets/processed/${g.file}`;
+    if(!anchorMode || !selectedTeam) return rawPath;
+
+    const key = `${rawPath}|${selectedTeam}`;
+    if(normalizedCache.has(key)) return normalizedCache.get(key);
+
+    const response = await fetch(`../${rawPath}`);
+    const bundle = await response.json();
+    const normalized = normalizeBundleForAnchor(bundle, selectedTeam);
+    const blob = new Blob([JSON.stringify(normalized)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    normalizedCache.set(key, url);
+    return url;
+  }
+
+  function setHead(anchorTeam, oppTeam, game){
+    chipAnchor.classList.add("fade-step");
+    chipOpp.classList.add("fade-step");
+    gameMeta.classList.add("fade-step");
+    window.setTimeout(() => {
+      chipAnchor.textContent = `Anchor: ${anchorTeam || "--"}`;
+      chipOpp.textContent = `Opponent: ${oppTeam || "--"}`;
+      const title = game ? `${game.seasoncode || "?"} / ${game.gamecode || "?"}` : "--";
+      const date = game ? (game.gamedate || "date unknown") : "--";
+      gameMeta.textContent = `${title} · ${date}`;
+      chipAnchor.classList.remove("fade-step");
+      chipOpp.classList.remove("fade-step");
+      gameMeta.classList.remove("fade-step");
+    }, 120);
+  }
+
+  function currentAnchorForGame(g){
+    if(!g) return "";
+    if(anchorMode && selectedTeam) return selectedTeam;
+    return g.team_a || "";
+  }
+
+  function currentOppForGame(g){
+    if(!g) return "";
+    const anchor = currentAnchorForGame(g);
+    if(!anchor) return "";
+    if(g.team_a === anchor) return g.team_b || "";
+    if(g.team_b === anchor) return g.team_a || "";
+    return g.team_b || "";
+  }
+
+  async function loadSelectedGame(){
+    if(!selectedGame) return;
+    const anchor = currentAnchorForGame(selectedGame);
+    const opp = currentOppForGame(selectedGame);
+    setHead(anchor, opp, selectedGame);
+
+    viewer.classList.add("loading");
+    const file = await resolveGameFile(selectedGame);
+    const params = modeParams(selectedMode);
+    // Prefer sending a postMessage to the iframe so the viewer can fetch and
+    // morph in-place (no full iframe reload). Fall back to setting src if
+    // the iframe isn't ready to receive postMessage.
+    try{
+      if(viewer && viewer.contentWindow && typeof viewer.contentWindow.postMessage === 'function'){
+        viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params }, '*');
+      } else {
+        // Fallback: set src (keeps older behavior)
+        viewer.src = `../poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+      }
+    }catch(e){
+      // On any failure, fallback to setting src
+      viewer.src = `../poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+    }
+  }
+
+  viewer.addEventListener("load", () => viewer.classList.remove("loading"));
+
+  // Listen for bundleLoaded messages from the iframe (used when we postMessage
+  // the iframe to load a bundle so it can do an in-place morph without reloading).
+  window.addEventListener('message', (ev) => {
+    try{
+      const msg = ev && ev.data;
+      if(!msg || msg.type !== 'bundleLoaded') return;
+      viewer.classList.remove('loading');
+    }catch(e){ /* ignore */ }
+  });
+
+  function renderGames(){
+    const rows = anchorMode && selectedTeam
+      ? entries.filter((g) => teamInGame(g, selectedTeam))
+      : entries.slice();
+
+    gamesEl.innerHTML = "";
+    if(!rows.length){
+      gamesEl.textContent = "No games available for current filter.";
+      selectedGame = null;
+      return;
+    }
+
+    rows.forEach((g, idx) => {
+      const row = document.createElement("div");
+      row.className = "game-row";
+      const anchor = anchorMode && selectedTeam ? selectedTeam : (g.team_a || "?");
+      const opp = anchor === g.team_a ? (g.team_b || "?") : (anchor === g.team_b ? (g.team_a || "?") : (g.team_b || "?"));
+      row.innerHTML = `<div class=\"g-title\">${g.seasoncode || "?"} / ${g.gamecode || "?"}</div><div class=\"g-meta\">${g.team_a || "?"} vs ${g.team_b || "?"}</div><div class=\"g-meta\">${g.gamedate || "date unknown"}</div><div class=\"pill\">Anchor ${anchor} · Opp ${opp}</div>`;
+      row.addEventListener("click", async () => {
+        selectedGame = g;
+        document.querySelectorAll(".game-row").forEach((el) => el.classList.remove("active"));
+        row.classList.add("active");
+        await loadSelectedGame();
+      });
+      gamesEl.appendChild(row);
+
+      if(idx === 0){
+        selectedGame = g;
+        row.classList.add("active");
+      }
+    });
+
+    loadSelectedGame();
+  }
+
+  function renderTeamSelect(){
+    const teams = Array.from(new Set(entries.flatMap((g) => [g.team_a, g.team_b]).filter(Boolean))).sort();
+    teamSelect.innerHTML = teams.map((t) => `<option value=\"${t}\">${t}</option>`).join("");
+    selectedTeam = teams[0] || "";
+    teamSelect.value = selectedTeam;
+  }
+
+  modeBtns.forEach((btn) => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
+  scopeAllBtn.addEventListener("click", () => setScope(false));
+  scopeAnchorBtn.addEventListener("click", () => setScope(true));
+  teamSelect.addEventListener("change", () => {
+    selectedTeam = teamSelect.value;
+    renderGames();
+  });
+
+  fetch("/assets/processed/games_manifest.json")
+    .then((r) => r.json())
+    .then((data) => {
+      if(!Array.isArray(data) || !data.length){
+        gamesEl.textContent = "No games found. Generate data first.";
+        return;
+      }
+      entries = data;
+      renderTeamSelect();
+      const initialTeam = qs.get("anchorTeam");
+      if(initialTeam && Array.from(teamSelect.options).some((o) => o.value === initialTeam)){
+        selectedTeam = initialTeam;
+        teamSelect.value = initialTeam;
+      }
+      const initialScope = (qs.get("scope") || "").toLowerCase();
+      if(initialScope === "anchor" || initialScope === "anchored"){
+        setScope(true);
+      }
+      const initialMode = (qs.get("mode") || "").toLowerCase();
+      if(["core", "explode", "replay"].includes(initialMode)){
+        setMode(initialMode);
+      }
+      renderGames();
+    })
+    .catch(() => {
+      gamesEl.textContent = "Failed to load assets/processed/games_manifest.json";
+    });
+})();
+</script>
 </body>
 </html>
