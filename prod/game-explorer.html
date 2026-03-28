@@ -181,7 +181,7 @@
         <div class="vh-game" id="gameMeta">Select a game.</div>
       </div>
       <div class="iframe-wrap">
-        <iframe id="viewer" src="/poss-flow-map-multi-drilldown-real-data.html" title="Sankey Viewer"></iframe>
+        <iframe id="viewer" src="./poss-flow-map-multi-drilldown-real-data.html" title="Sankey Viewer"></iframe>
       </div>
     </div>
   </div>
@@ -340,7 +340,7 @@
     const key = `${rawPath}|${selectedTeam}`;
     if(normalizedCache.has(key)) return normalizedCache.get(key);
 
-    const response = await fetch(`../${rawPath}`);
+    const response = await fetch(rawPath);
     const bundle = await response.json();
     const normalized = normalizeBundleForAnchor(bundle, selectedTeam);
     const blob = new Blob([JSON.stringify(normalized)], { type: "application/json" });
@@ -397,11 +397,11 @@
         viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params }, '*');
       } else {
         // Fallback: set src (keeps older behavior)
-        viewer.src = `../poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+        viewer.src = `./poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
       }
     }catch(e){
       // On any failure, fallback to setting src
-      viewer.src = `../poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+      viewer.src = `./poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
     }
   }
 
@@ -467,7 +467,7 @@
     renderGames();
   });
 
-  fetch("/assets/processed/games_manifest.json")
+  fetch("assets/processed/games_manifest.json")
     .then((r) => r.json())
     .then((data) => {
       if(!Array.isArray(data) || !data.length){
