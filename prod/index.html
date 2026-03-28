@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Euroleague Sankey — Unified Game Explorer</title>
+  <meta name="description" content="Interactive possession flow maps and player-level insights for Euroleague games — explore flows, compare teams, and discover key possessions." />
+  <meta property="og:title" content="Euroleague Sankey — Unified Game Explorer" />
+  <meta property="og:description" content="Interactive possession flow maps and player-level insights for Euroleague games." />
+  <style>
+    :root {
+      --bg-1:#091423;
+      --bg-2:#0f2240;
+      --panel:#0f1c33;
+      --text:#edf3ff;
+      --muted:#9ab0d4;
+      --line:#2b4268;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 500px at 90% -5%, rgba(52,160,255,.16), transparent 60%),
+        radial-gradient(1000px 500px at -10% 0%, rgba(255,209,102,.12), transparent 55%),
+        linear-gradient(170deg, var(--bg-2), var(--bg-1));
+      min-height:100vh;
+    }
+    .wrap { max-width:1100px; margin:0 auto; padding:28px 16px 40px; }
+    .eyebrow { font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    h1 { margin:10px 0 10px; font-size:34px; line-height:1.1; }
+    .subtitle { margin:0; color:var(--muted); font-size:15px; max-width:760px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:22px; }
+    /* Hero */
+    .hero { display:flex; align-items:center; gap:18px; margin-top:16px; }
+    .hero-left { flex:1; }
+    .motto { margin:0 0 12px; font-size:16px; color:#d8e9ff; }
+    .hero-right { width:340px; flex:0 0 340px; display:flex; align-items:center; justify-content:center; }
+    #sankey-teaser svg { width:100%; height:auto; display:block; }
+    .teaser-path { stroke-dasharray: 400; stroke-dashoffset: 400; transition: stroke-dashoffset 1.4s ease-out; }
+    body.show-teaser .teaser-path { stroke-dashoffset: 0; }
+
+    /* Collapsible context: when collapsed, hide panels to reveal more page */
+    .context-toggle { margin-top:12px; display:inline-block; font-size:13px; color:var(--muted); cursor:pointer; }
+    body.context-collapsed .panel { display:none; }
+
+    /* Responsive */
+    @media (max-width:860px) {
+      .hero { flex-direction:column; }
+      .hero-right { width:100%; }
+      .wrap { padding:20px 12px 30px; }
+    }
+    @media (max-width:420px) {
+      h1 { font-size:26px; }
+      .motto { font-size:14px; }
+      .btn { padding:8px 10px; font-size:13px; }
+    }
+    .card {
+      background:linear-gradient(180deg, rgba(16,34,62,.92), rgba(10,19,34,.94));
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+    }
+    .card h2 { margin:0 0 8px; font-size:19px; }
+    .card p { margin:0 0 14px; color:var(--muted); font-size:14px; line-height:1.45; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--text);
+      background:#173057;
+      padding:8px 13px;
+      font-size:13px;
+    }
+    .btn:hover { border-color:#4f6f9e; background:#1f3c6b; }
+    .panel {
+      margin-top:22px;
+      background:rgba(8,15,28,.72);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 16px;
+    }
+    .panel h3 { margin:0 0 8px; font-size:15px; }
+    .panel ul { margin:0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.4; }
+    code { background:#0b1629; border:1px solid #263d61; border-radius:6px; padding:2px 6px; color:#cfe1ff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Euroleague Sankey</div>
+    <h1>Unified Game Explorer</h1>
+    <p class="subtitle">
+      One screen to explore possession flows, discover high-value possessions, and compare team performance.
+    </p>
+
+    <div class="hero">
+      <div class="hero-left">
+        <p class="motto">Visualize how games were won — fast, clear, and story-driven.</p>
+      </div>
+      <div class="hero-right">
+        <div id="sankey-teaser" aria-hidden="true">
+          <!-- Lightweight decorative Sankey teaser: animated path strokes -->
+          <svg width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#4fc0ff" stop-opacity="0.9" />
+                <stop offset="1" stop-color="#ffd166" stop-opacity="0.9" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+              <path class="teaser-path" d="M10 20 C80 30, 120 30, 150 40" opacity="0.9" />
+              <path class="teaser-path" d="M10 60 C70 70, 120 70, 170 80" opacity="0.75" />
+              <path class="teaser-path" d="M10 100 C60 110, 140 110, 200 100" opacity="0.6" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Unified Explorer</h2>
+        <p>Explore mode toggles and anchor scope controls in one place. Anchor mode keeps selected team fixed as Team A/top lane.</p>
+      </div>
+
+      <div class="card">
+        <h2>Anchor-Focused Entry</h2>
+        <p>Open the explorer and switch to anchor mode from the Explorer controls.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px;margin-top:18px;">
+      <div class="context-toggle" id="contextToggle">Hide context ▾</div>
+    </div>
+
+    <div class="panel">
+      <h3>Coverage</h3>
+      <ul>
+        <li>Curated games are included for demonstration and evaluation.</li>
+        <li>Full season coverage and advanced filters are on the roadmap.</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h3>For testers</h3>
+      <ul>
+        <li>Scroll down to reveal an inline preview of the Unified Explorer — the full Explorer loads automatically.</li>
+        <li>If you need developer-only details, refer to internal docs in the repo.</li>
+      </ul>
+    </div>
+
+    <div id="explorerPreview" class="explorer-preview" aria-hidden="true">
+      <!-- explorer iframe will be lazy-loaded here when user scrolls -->
+      <div class="explorer-placeholder">Scrolling reveals the full Explorer preview</div>
+    </div>
+  </div>
+  <script>
+    // teaser animation on first paint
+    document.documentElement.classList.add('show-teaser');
+    // context toggle
+    (function(){
+      var btn = document.getElementById('contextToggle');
+      btn.addEventListener('click', function(){
+        var collapsed = document.body.classList.toggle('context-collapsed');
+        btn.textContent = collapsed ? 'Show context ▴' : 'Hide context ▾';
+      });
+    })();
+
+    // Lazy-load the inline Explorer iframe when user scrolls past the hero
+    (function(){
+      var hero = document.querySelector('.hero');
+      var preview = document.getElementById('explorerPreview');
+      var loaded = false;
+      if (!hero || !preview) return;
+
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          // when hero leaves viewport (i.e. user scrolled), reveal explorer
+          if (!e.isIntersecting && !loaded) {
+            document.body.classList.add('show-explorer');
+            // replace placeholder with iframe
+            var iframe = document.createElement('iframe');
+            iframe.src = './game-explorer.html';
+            iframe.loading = 'lazy';
+            iframe.style.border = '0';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.title = 'Unified Explorer';
+            preview.innerHTML = '';
+            preview.appendChild(iframe);
+            preview.setAttribute('aria-hidden','false');
+            loaded = true;
+            obs.disconnect();
+          }
+        });
+      }, { root: null, threshold: 0, rootMargin: '0px' });
+
+      obs.observe(hero);
+    })();
+  </script>
+</body>
+</html>
