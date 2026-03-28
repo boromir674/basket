@@ -1,0 +1,82 @@
+name: 'Build Minified Bundle'
+
+# Reusable Workflow to make a Production Build
+
+# Production build in the case of SSR, is building the html/css/js minified bundle
+# for static file serving
+
+
+
+on:
+  workflow_call:
+    inputs:
+      # Optional CI Artifact key/placeholder for bundle
+      ci_artifact:
+        required: false
+        type: string
+        description: 'CI Artifact key/placeholder for bundle'
+        default: 'bundle'
+
+      # Trigger Behavior Settings #
+      trigger:
+        required: false
+        default: '{"default_trigger": true, "override": ""}'
+        description: "JSON object controlling Trigger behaviour/logic. If 'override' is set to 'true' the workflow will run regardless of the default trigger. If 'override' is set to 'false' the workflow will not run regardless of the default trigger. If 'override' is not set, the default trigger will be used."
+        type: string
+
+    ### OUTPUTS ###
+    # Map the workflow outputs to job outputs
+    outputs:
+      BUNDLE_CI_ARTIFACT:
+        description: "CI Artifact (id/alias) of uploaded minified html/css/js Bundle"
+        value: ${{ jobs.build.outputs.BUNDLE_CI_ARTIFACT }}
+      BUNDLE_SIZE:
+        description: "Size of the minified html/css/js Bundle"
+        value: ${{ jobs.build.outputs.BUNDLE_SIZE }}
+
+jobs:
+  build:
+    # if: inputs.override == 'true' || (inputs.override != 'false' && inputs.default_trigger == true)
+    # equivalent to old solution leveraging json input object
+    if: (fromJson(inputs.trigger).override == 'true' || (fromJson(inputs.trigger).override != 'false' && fromJson(inputs.trigger).default_trigger == true))
+    runs-on: ubuntu-latest
+    env:
+      _IMAGE_NAME: 'spa-prod-bundle'
+    outputs:
+      BUNDLE_CI_ARTIFACT: ${{ steps.set_coverage_artifact.outputs.BUNDLE_CI_ARTIFACT }}
+      BUNDLE_SIZE: ${{ steps.bundle_size.outputs.BUNDLE_SIZE }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # in our monolitic SPA we have ./index.html ./poss-..html and ./assets/processed/*.json files
+      # create a ./public dir and copy them there
+
+      - name: 'Prepare simple bundle with html/css/js and asset files'
+        run: |
+          mkdir public
+          cp index.html public/
+          cp poss-flow-map-multi-drilldown-real-data.html public/
+          mkdir -p public/assets/processed
+          cp assets/processed/*.json public/assets/processed/
+
+      # NOW BUNDLE is in ./public dir
+
+      - name: Measure Bundle Size
+        id: bundle_size
+        run: echo BUNDLE_SIZE=$(du -sh ${PWD}/public/ | cut -f1) >> $GITHUB_OUTPUT
+
+      - run: 'echo "*Bundle Size*: **${{ steps.bundle_size.outputs.BUNDLE_SIZE }}**" >> $GITHUB_STEP_SUMMARY'
+
+      # CI ARTIFACTS - Upload Minified Bundle
+      - name: Upload Minified html/css/js Bundle, as CI Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          # name under which to upload the Artifact(s) and later reference them
+          name: ${{ inputs.ci_artifact }}
+          # Path to the file/folder to upload
+          path: public
+          if-no-files-found: error
+
+      - name: Output the BUNDLE_CI_ARTIFACT
+        run: echo BUNDLE_CI_ARTIFACT="${{ inputs.ci_artifact }}" >> $GITHUB_OUTPUT
+        id: set_coverage_artifact

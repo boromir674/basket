@@ -1,0 +1,69 @@
+# CI/CD Pipeline
+
+# Test -> Build -> Deploy
+
+# Triggers
+on:
+  push:
+    branches:
+      # - "main"
+      # - "dev"
+      # - "ci"
+
+    # we use release branch for semver/changelog updates and deploying 'rc' tags
+    # thus we filter out events for branch 'release', to NOT trigger
+    # avoid triggering on sem ver bump / changelog update commits
+      - "!release"
+      # [Git Ops]: do not trigger on Branches used only for PR labeling
+      - '!board-n-release-*'
+      - '!board-request-*'
+    tags:
+      - v*
+
+
+# Note: env context only available as env vars in code, not in 'if' conditions!
+# Many 'Job Triggers' can be overridden using the 'Repository Variables' gh feature:
+#  - https://github.com/boromir674/konstantinoslampridis.io/settings/variables/actions
+
+jobs:
+
+  ## BUILD PRODUCTION MINIFIED BUNDLE
+  build:
+    uses: ./.github/workflows/build-bundle.yml
+    with:
+      trigger: "{'default_trigger': ${{ vars.OV_DEPLOY == 'false' && 'false' || 'true' }}, 'override': '${{ vars.OV_GATSBY }}'}"
+      ci_artifact: web_bundle
+
+  # LOGICAL AGGREGATION OF CI QA Jobs
+  check:
+    if: always()
+    needs: ['build']
+    uses: boromir674/automated-workflows/.github/workflows/go-single-status.yml@v1.13.1
+    with:
+      # TODO: allow-skips passes an empty array here
+      # check syntax needs.*.result == 'skipped'
+      allowed-skips: ${{ needs.*.result == 'skipped' || '[]' }}
+      needs_json: ${{ toJSON(needs) }}  # should never change
+
+  signal_deploy:
+    needs: check  # add ['test', 'e2e', ..] if 'check' job.if and/or job.needs changes
+    if: ${{ startsWith(github.event.ref, 'refs/tags/v') }}
+    uses: ./.github/workflows/signal-deploy.yml
+    with:
+      main_branch: main
+      release_branch: release
+
+  # DEPLOY to GITHUB PAGES the 'Web Bundle' (of files)
+  deploy:
+    needs: signal_deploy
+    if: always() && needs.signal_deploy.outputs.AUTOMATED_DEPLOY == 'true'
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: 'github-pages'
+      website_artifact: web_bundle
