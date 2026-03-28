@@ -405,7 +405,18 @@
     }
   }
 
-  viewer.addEventListener("load", () => viewer.classList.remove("loading"));
+  viewer.addEventListener("load", () => {
+    // If the `loading` class was already cleared by a `bundleLoaded` message
+    // then the iframe received and processed the game data — just ensure the
+    // class is removed and we're done.
+    // If it's still present the postMessage was fired before the iframe's
+    // listener was live (race condition on first page load) — resend now.
+    if (viewer.classList.contains("loading") && selectedGame) {
+      loadSelectedGame();
+    } else {
+      viewer.classList.remove("loading");
+    }
+  });
 
   // Listen for bundleLoaded messages from the iframe (used when we postMessage
   // the iframe to load a bundle so it can do an in-place morph without reloading).
