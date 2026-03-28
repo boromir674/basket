@@ -16,7 +16,7 @@
     .home-link:hover { background:#21365e; border-color:#4f6b99; }
     .grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
     .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.32); }
-    .header { padding:20px 24px 14px; border-bottom:1px solid rgba(111,132,171,.12); }
+    .header { padding:16px 24px 10px; border-bottom:1px solid rgba(111,132,171,.12); }
     .eyebrow,.crumbs,.muted,.node-pct-label,.col-label { color:var(--muted); }
     .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
     h1 { margin:0 0 8px; font-size:28px; line-height:1.12; }
@@ -26,7 +26,7 @@
     button { background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); border-radius:999px; padding:8px 12px; cursor:pointer; font-size:13px; }
     button.active { background:#21365e; border-color:#4f6b99; }
     .viz { position:relative; padding:8px 8px 10px; }
-    #chart { width:100%; height:860px; display:block; }
+    #chart { width:100%; height:720px; display:block; }
     .side svg { height:auto; display:block; }
     .col-label { fill:var(--muted); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
     .link { fill:none; stroke-opacity:.62; transition:stroke-opacity .15s ease, filter .15s ease; cursor:pointer; }
@@ -128,6 +128,7 @@
         <div class="eyebrow">Euroleague MVP visualization spike — real data</div>
         <h1 id="page-title">Possession Flow Map</h1>
         <div class="headline" id="headline">Loading…</div>
+        <div id="scoreboard" style="margin-top:8px;font-weight:700;color:#d9e6ff;font-size:15px;">&nbsp;</div>
         <div class="controls" id="controls"></div>
         <div class="crumbs" id="crumbs">View: Top-level</div>
       </div>
@@ -328,20 +329,34 @@ let dataFile = paramFile || "assets/processed/multi_drilldown_real_data.json";
 if (paramFile && !paramFile.includes("/")) {
   dataFile = `assets/processed/${paramFile}`;
 }
+
+// Support a runtime base path for static hosting (S3) via either a global
+// `window.BASKET_APP_FILE_STORE_URI` (recommended for prod builds) or via the
+// `?fileBase=` query param. This lets the same viewer work locally (serve
+// from `assets/processed`) and in production where files live under a remote
+// CDN/S3 base path. Do not alter blob: URLs.
+const fileBaseParam = params.get("fileBase");
+const runtimeBase = (typeof window !== 'undefined' && window.BASKET_APP_FILE_STORE_URI) || fileBaseParam || null;
+if (runtimeBase && !String(dataFile).startsWith('http') && !String(dataFile).startsWith('/') && !String(dataFile).startsWith('blob:')) {
+  const base = runtimeBase.endsWith('/') ? runtimeBase.slice(0, -1) : runtimeBase;
+  // If dataFile is already inside assets/processed, keep the path but prefix it.
+  dataFile = `${base}/${dataFile}`;
+}
 // Removed derivation of auto-insights file from dataFile.
 const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_auto.json";
 
 // PoC switch: when drilling into possession-type views, render either 4 columns (default)
 // or 3 columns (omit Start stage) for a visual comparison.
 // Usage: ?file=...&typeZoomVariant=4  OR  ?file=...&typeZoomVariant=3
-const typeZoomVariant = Math.max(3, Math.min(4, parseInt(params.get("typeZoomVariant") || "4", 10)));
+let typeZoomVariant = Math.max(3, Math.min(4, parseInt(params.get("typeZoomVariant") || "4", 10)));
 const TYPE_ZOOM_VIEWS = new Set(["halfcourt", "transition", "oreb"]);
 const omitStartStageForViz = (viewKey) => typeZoomVariant === 3 && TYPE_ZOOM_VIEWS.has(viewKey);
-const flowIndexLab = params.get("flowIndexLab") === "1";
-const explodeLab = params.get("explodeLab") === "1" || flowIndexLab;
-const twinLab = params.get("twinLab") === "1";
-const xrayLab = params.get("xrayLab") === "1" || twinLab;
-const replayLab = params.get("replayLab") === "1";
+let flowIndexLab = params.get("flowIndexLab") === "1";
+// By default enable explode interactions across pages unless explicitly disabled via ?explodeLab=0
+let explodeLab = params.get("explodeLab") !== "0" || flowIndexLab;
+let twinLab = params.get("twinLab") === "1";
+let xrayLab = params.get("xrayLab") === "1" || twinLab;
+let replayLab = params.get("replayLab") === "1";
 
 // Note: for this PoC we want in-place reshaping (not camera swoops).
 // Keep a static transform on vizRoot.
@@ -1917,6 +1932,22 @@ function renderView(viewKey, opts = {}){
   const prevNodesById = (currentGraphState && currentGraphState.nodesById) ? currentGraphState.nodesById : new Map();
   const newNodesById = new Map(graph.nodes.map(n => [n.id, n]));
 
+  // Helper: robustly find a previous node for smoother transitions when IDs change
+  function findPrevNode(d){
+    if(!prevNodesById) return null;
+    const byId = prevNodesById.get(d.id || String(d.id));
+    if(byId) return byId;
+    // fallback: match by team + stage + name when IDs were remapped (anchor normalization)
+    for(const old of prevNodesById.values()){
+      if(old && old.team === d.team && old.stage === d.stage && old.name === d.name) return old;
+    }
+    // last resort: match by team + stage
+    for(const old of prevNodesById.values()){
+      if(old && old.team === d.team && old.stage === d.stage) return old;
+    }
+    return null;
+  }
+
   // Update column labels (no need to morph; keep it snappy).
   const columnsForViz = (!omitStart) ? dataset.columns : dataset.columns.slice(1, 4);
   const xs = columnsForViz.length === 4 ? [55, 340, 700, 1100] : [55, 640, 1100];
@@ -2097,10 +2128,10 @@ function renderView(viewKey, opts = {}){
     .attr("stroke", d => xrayLinkStroke(d, baselineByKey))
     .attr("stroke-width", d => Math.max(1, d.width))
     .attr("d", d => {
-      const srcId = (d.source && d.source.id !== undefined) ? String(d.source.id) : String(d.sourceId ?? "");
-      const tgtId = (d.target && d.target.id !== undefined) ? String(d.target.id) : String(d.targetId ?? "");
-      const oldS = prevNodesById.get(srcId);
-      const oldT = prevNodesById.get(tgtId);
+      const srcNode = (d.source && d.source.id !== undefined) ? d.source : { id: d.sourceId, team: d.source && d.source.team, stage: d.source && d.source.stage, name: d.source && d.source.name };
+      const tgtNode = (d.target && d.target.id !== undefined) ? d.target : { id: d.targetId, team: d.target && d.target.team, stage: d.target && d.target.stage, name: d.target && d.target.name };
+      const oldS = findPrevNode(srcNode);
+      const oldT = findPrevNode(tgtNode);
       if (oldS && oldT) return linkGen({ source: oldS, target: oldT });
       return linkGen(d);
     });
@@ -2163,23 +2194,60 @@ function renderView(viewKey, opts = {}){
   nodeEnter.append("text").attr("class", "node-main-label");
   nodeEnter.append("text").attr("class", "node-pct-label");
 
+  // Initialize text positions for entering nodes so they don't flash from (0,0).
+  nodeEnter.select("text.node-main-label")
+    .attr("x", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return pn.layer <= 1 ? (pn.x1 + 8) : (pn.x0 - 8); }
+      return d.layer <= 1 ? (d.x1 + 8) : (d.x0 - 8);
+    })
+    .attr("y", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return (pn.y0 + pn.y1) / 2 - (d.stage === "type" ? 7 : 0); }
+      return (d.y0 + d.y1) / 2 - (d.stage === "type" ? 7 : 0);
+    })
+    .attr("text-anchor", d => d.layer <= 1 ? "start" : "end")
+    .text(d => d.stage === "start" ? d.team : d.name);
+
+  nodeEnter.select("text.node-pct-label")
+    .attr("x", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return pn.x1 + 8; }
+      return d.x1 + 8;
+    })
+    .attr("y", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return (pn.y0 + pn.y1) / 2 + 9; }
+      return (d.y0 + d.y1) / 2 + 9;
+    })
+    .attr("text-anchor", "start")
+    .style("opacity", d => d.stage === "type" ? 1 : 0)
+    .text(d => {
+      if (d.stage !== "type") return "";
+      const total = dataset.starts ? dataset.starts[d.team] : null;
+      const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
+      const outbound = (d.sourceLinks || []).reduce((s, x) => s + x.value, 0);
+      const volume = Math.max(inbound, outbound);
+      return total ? `${(100 * volume / total).toFixed(1)}% of starts` : "";
+    });
+
   // Set initial positions for newly entered nodes to their previous layout if available.
   nodeEnter.select("rect")
     .attr("x", d => {
-      const pn = prevNodesById.get(d.id);
+      const pn = findPrevNode(d) || null;
       return pn ? pn.x0 : d.x0;
     })
     .attr("y", d => {
-      const pn = prevNodesById.get(d.id);
+      const pn = findPrevNode(d) || null;
       return pn ? pn.y0 : d.y0;
     })
     .attr("width", d => {
-      const pn = prevNodesById.get(d.id);
+      const pn = findPrevNode(d) || null;
       const w = pn ? (pn.x1 - pn.x0) : (d.x1 - d.x0);
       return w;
     })
     .attr("height", d => {
-      const pn = prevNodesById.get(d.id);
+      const pn = findPrevNode(d) || null;
       const h = pn ? (pn.y1 - pn.y0) : (d.y1 - d.y0);
       return Math.max(6, h);
     })
@@ -2269,7 +2337,36 @@ function renderView(viewKey, opts = {}){
 // (via Docker pipeline runs), the browser does not keep serving a stale
 // cached copy. Query params are ignored by the simple static server, so this
 // is backwards-compatible while forcing a fresh fetch per load.
-const fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+// NOTE: if `dataFile` is a blob/object URL (starts with `blob:`) we must
+// not append query params because blob URLs do not accept them. Handle that
+// case explicitly so normalized bundles passed as object URLs from the
+// parent (iframe) remain reachable.
+let fetchUrl;
+if (String(dataFile).startsWith('blob:')) {
+  fetchUrl = dataFile;
+} else {
+  fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+}
+
+// Update the scoreboard element (computes team totals from boxscore_players when possible)
+function updateScoreboard(){
+  const el = document.getElementById("scoreboard");
+  if(!el || !dataBundle) return;
+  const meta = dataBundle.meta || {};
+  let scoreA = 0, scoreB = 0;
+  const playersMap = dataBundle.players || {};
+  if(Array.isArray(dataBundle.boxscore_players)){
+    dataBundle.boxscore_players.forEach(r => {
+      const pid = r.player_id;
+      let teamName = null;
+      if(pid && playersMap[pid] && playersMap[pid].team) teamName = playersMap[pid].team;
+      if(!teamName && typeof r.team === 'string') teamName = r.team;
+      if(teamName === meta.team_a) scoreA += (r.points || 0);
+      else if(teamName === meta.team_b) scoreB += (r.points || 0);
+    });
+  }
+  el.textContent = `${meta.team_a || 'Team A'} ${scoreA} — ${scoreB} ${meta.team_b || 'Team B'}`;
+}
 
 fetch(fetchUrl).then(r=>{
   if(!r.ok){
@@ -2284,7 +2381,19 @@ fetch(fetchUrl).then(r=>{
     ? " · Mode: Live Replay Lab"
     : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
   document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
-  document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.${modeLabel}`;
+  // Prefer showing a human-readable game date; fall back to season year from seasoncode; otherwise leave blank.
+  (function(){
+    var displayDate = "";
+    try{
+      if(meta && meta.gamedate) displayDate = String(meta.gamedate).trim();
+      if(!displayDate && meta && meta.seasoncode){
+        var match = String(meta.seasoncode).match(/(\d{4})/);
+        if(match) displayDate = match[1];
+      }
+    }catch(e){ displayDate = ""; }
+    var headlineText = displayDate ? (displayDate + (modeLabel || "")) : (modeLabel ? modeLabel.replace(/^\s*·\s*/, '') : '');
+    document.getElementById("headline").textContent = headlineText || '';
+  })();
   if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
   if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
   if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
@@ -2292,7 +2401,11 @@ fetch(fetchUrl).then(r=>{
   if (replayBaseLeagueBtn) replayBaseLeagueBtn.onclick = () => replaySetBaselineMode("league");
   buildControls();
   setView("top");
-}).catch(err=>{
+  // Update scoreboard (if data present)
+  try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
+  // Notify parent that the bundle has been loaded so parent can clear any loading UI
+  try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
+  }).catch(err=>{
   document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
   console.error(err);
 });
@@ -2302,6 +2415,58 @@ function renderAutoInsights(data) {
   console.log("Rendering auto-insights data:", data);
   // TODO: Implement the actual rendering logic here.
 }
+
+// Accept postMessage loads from a parent (e.g. `prod/game-explorer.html`)
+window.addEventListener('message', (ev) => {
+  try{
+    const msg = ev && ev.data;
+    if(!msg || msg.type !== 'loadBundle') return;
+    const url = msg.url;
+    const paramsString = msg.params || '';
+    // Parse params string and update local mode flags
+    if(paramsString){
+      const p = new URLSearchParams(paramsString);
+      typeZoomVariant = Math.max(3, Math.min(4, parseInt(p.get('typeZoomVariant') || typeZoomVariant, 10)));
+      flowIndexLab = p.get('flowIndexLab') === '1';
+      explodeLab = (p.get('explodeLab') !== '0') || flowIndexVariant === '1' || flowIndexLab; // keep explode default unless explicitly disabled
+      twinLab = p.get('twinLab') === '1';
+      xrayLab = p.get('xrayLab') === '1' || twinLab;
+      replayLab = p.get('replayLab') === '1';
+    }
+    if(!url) return;
+    // Set dataFile to provided URL and fetch bundle (respect blob URLs)
+    dataFile = url;
+    let fetchUrlLocal;
+    if (String(dataFile).startsWith('blob:')) {
+      fetchUrlLocal = dataFile;
+    } else {
+      fetchUrlLocal = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+    }
+    fetch(fetchUrlLocal).then(r=>{
+      if(!r.ok) throw new Error(`Failed to fetch JSON: ${fetchUrlLocal} (HTTP ${r.status})`);
+      return r.json();
+    }).then(bundle=>{
+      dataBundle = bundle;
+      colors = bundle.colors||{};
+      const meta=bundle.meta||{};
+      const modeLabel = replayLab
+        ? " · Mode: Live Replay Lab"
+        : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
+      document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
+      document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.${modeLabel}`;
+      if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
+      if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
+      if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
+      if (replayBaseGameBtn) replayBaseGameBtn.onclick = () => replaySetBaselineMode("game");
+      if (replayBaseLeagueBtn) replayBaseLeagueBtn.onclick = () => replaySetBaselineMode("league");
+      buildControls();
+      setView("top");
+      try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
+      // Notify parent that the bundle from postMessage load has been handled
+      try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
+    }).catch(err=>{ console.error('loadBundle failed', err); document.getElementById("headline").textContent=`Failed to load ${dataFile}`; });
+  }catch(e){ console.warn('message handler error', e); }
+});
 </script>
 </body>
 </html>
