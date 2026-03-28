@@ -49,6 +49,7 @@ Open:
 - `http://localhost:8080/index.html`
 - `http://localhost:8080/poss-flow-index.html`
 - `http://localhost:8080/poss-flow-map-multi-drilldown-real-data.html`
+- `http://localhost:8080/prod/index.html` (curated MVP surface)
 
 ## 3) Common Commands
 
@@ -128,6 +129,29 @@ docker run --rm \
   -v "${PWD}:/app" -w /app euroleague-sankey demo
 ```
 
+### Static viewer runtime config (S3 / CDN)
+
+When deploying the static `prod/` content to S3 or CDN, the viewer can load processed JSON from a different base path than the repository `assets/` folder. Two options are supported:
+
+- Add a small runtime config file that your bundler or deployment step writes into the published `prod/` folder, for example `prod/config.js`:
+
+```html
+<!-- prod/config.js -->
+<script>window.BASKET_APP_FILE_STORE_URI = 'https://my-bucket.s3.amazonaws.com/assets';</script>
+```
+
+Include this `config.js` before the viewer HTML so the viewer honors the global `window.BASKET_APP_FILE_STORE_URI` at runtime.
+
+- Or, for ad-hoc loads, append `?fileBase=` to the viewer URL when opening the page, for example:
+
+```
+http://my-host/poss-flow-map-multi-drilldown-real-data.html?file=multi_drilldown_real_data_E2021_54.json&fileBase=https://my-bucket.s3.amazonaws.com/assets
+```
+
+Notes:
+- The viewer automatically preserves `blob:` object URLs (used by `prod/game-explorer.html` when normalizing bundles) and will not attempt to prefix or append cache-busters to them.
+- Keep the `BASKET_APP_FILE_STORE_URI` convention aligned with pipeline defaults so dev -> prod paths are consistent.
+
 ## 6) Visualization Data Catalog
 
 | Visualization / Module | Required Data (JSON) | Source Type | Notes |
@@ -197,3 +221,28 @@ Release gate:
   - post-release refinement backlog
 
 See `docs/dev_guide.md` for day-to-day workflow details.
+
+## 10) Surface Builds (Prod vs Preview)
+
+Build deployment payloads without changing spike/demo source files:
+
+```bash
+scripts/build_surfaces.sh
+```
+
+Outputs:
+
+- `dist/prod`: curated public MVP pages and required assets.
+- `dist/preview`: spike/preview surface with full exploratory experience.
+
+One-command local preparation:
+
+```bash
+scripts/publish_mvp.sh
+```
+
+UAT and launch docs:
+
+- `docs/uat_checklist.md`
+- `docs/launch_runbook_2h.md`
+ - `docs/product_specs.md` — concise product-level MVP spec and acceptance criteria for the Unified Explorer.
