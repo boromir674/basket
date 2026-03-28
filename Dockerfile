@@ -6,6 +6,9 @@ RUN pip install --no-cache-dir requests
 
 # Copy pipeline and helper scripts once into the base image.
 COPY build_from_euroleague_api.py pipeline_runner.py validate_output.py entrypoint.py season_sync.py regression_tests.py ./
+# Include helper scripts and tests in the image so services don't need the full repo mount.
+COPY scripts ./scripts
+COPY tests ./tests
 
 
 # Dedicated test stage: extend base and add pytest only here.

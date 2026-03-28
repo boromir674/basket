@@ -3,28 +3,39 @@ services:
     build: .
     image: euroleague-sankey
     working_dir: /app
+    # Mount only assets so demos can read/write curated demo JSONs. Do NOT mount the full repo.
     volumes:
-      - ./:/app
+      - ./assets:/app/assets
     # Primary entry point: small curated batch + viewer JSON + validation.
+    # Classification: Demo / Lab only (not for PROD).
+    # Usage: `docker compose run demo` — generates demo bundles for local UI testing.
     command: ["demo"]
 
   demo_auto_insights:
     image: euroleague-sankey
     working_dir: /app
+    # Mount only assets for demo generation and enrichment.
     volumes:
-      - ./:/app
-    # Experimental entry point: generate a single demo game (if needed)
-    # and enrich it with automatic insights for the viewer.
+      - ./assets:/app/assets
+    # Experimental entry point: generate a single demo game and enrich with auto insights.
+    # Classification: Demo / Lab (experimental).
+    # Usage: `docker compose run demo_auto_insights` — creates a single demo bundle with insights.
     command: ["demo_auto_insights"]
 
   pipeline:
     image: euroleague-sankey
     working_dir: /app
+    # Mount only assets so pipeline can write raw/processed files without exposing repo source tree.
     volumes:
-      - ./:/app
-    # Example pipeline+validation invocation for a small batch.
+      - ./assets:/app/assets
+    # Pipeline runner: prefer explicit entrypoint so callers can append args.
+    # Usage examples:
+    #  - default (no args): runs the example batch below
+    #  - override args: `docker compose run pipeline -- --seasoncode E2025 --gamecode 54,55`
+    # Classification: Backend (can be used for both dev and production data generation).
+    # Note: when used for production, ensure output files are placed in durable storage (S3/CDN).
+    entrypoint: ["python", "pipeline_runner.py"]
     command: [
-      "run_pipeline_and_validate",
       "--seasoncode", "E2021",
       "--gamecode", "54,55",
       "--output-dir", "/app",
@@ -37,22 +48,30 @@ services:
       target: tests
     image: euroleague-sankey-tests
     working_dir: /app
-    volumes:
-      - ./:/app
-    # Pytest-based test suite: run all tests in the dedicated test image.
+    # Tests run from the image; do NOT mount the full repo. Tests are baked into the image.
+    # Pytest-based test suite: entrypoint is pytest; callers can append pytest args.
+    # Classification: Dev / CI only (not for serving production site).
+    # Examples:
+    #  - default: `docker compose run tests` -> runs `pytest -q tests`
+    #  - with extra args: `docker compose run tests -k pattern -q` -> runs `pytest -k pattern -q`
     entrypoint: ["python", "-m", "pytest"]
     command: ["-q", "tests"]
 
   season_sync:
     image: euroleague-sankey
     working_dir: /app
+    # Mount only assets so season_sync writes into the assets folder (durable storage path).
     volumes:
-      - ./:/app
-    # Fill up data for a block of games in a given season and
-    # refresh games_manifest.json for the UI.
-    entrypoint: ["python"]
+      - ./assets:/app/assets
+      - ./scripts:/app/scripts
+      - ./build_from_euroleague_api.py:/app/build_from_euroleague_api.py
+      - ./validate_output.py:/app/validate_output.py
+    # Fill up data for a block of games in a given season and refresh `games_manifest.json`.
+    # Classification: Backend (used to populate processed JSONs for the UI).
+    # Usage: `docker compose run season_sync --seasoncode E2025 --dry-run`.
+    # When using for PROD, mount or set `BASKET_APP_FILE_STORE_URI` to durable storage and avoid committing large JSONs to git.
+    entrypoint: ["python", "season_sync.py"]
     command: [
-      "season_sync.py",
       "--seasoncode", "E2021",
       "--start-gamecode", "1",
       "--end-gamecode", "200",
@@ -63,12 +82,13 @@ services:
     image: euroleague-sankey
     working_dir: /app
     volumes:
-      - ./:/app
-    # Dry-run variant: preview which games would be built without
-    # touching the filesystem.
-    entrypoint: ["python"]
+      - ./assets:/app/assets
+    # Dry-run variant: preview which games would be built without touching the filesystem.
+    # Classification: Backend / Dev (dry-run only).
+    # Usage: `docker compose run season_sync_dry --seasoncode E2025` or use `season_sync` with `--dry-run`.
+    # Keep entrypoint/script in the entrypoint so args passed to `docker compose run` are forwarded.
+    entrypoint: ["python", "season_sync.py"]
     command: [
-      "season_sync.py",
       "--seasoncode", "E2021",
       "--start-gamecode", "1",
       "--end-gamecode", "200",
@@ -77,34 +97,16 @@ services:
     ]
 
   validate_auto_json:
-    image: python:3.12-slim
+    image: euroleague-sankey
     working_dir: /app
+    # Mount only processed assets for validation; helper script is baked into the runtime image.
     volumes:
       - ./assets/processed:/app/assets/processed
-    command:
-      - python
-      - "-c"
-      - |
-        import os
-        import json
-
-        directory = "/app/assets/processed"
-        print(f"Looking inside directory: {directory}\n")
-
-        if not os.path.exists(directory):
-            print(f"Directory does not exist: {directory}")
-        else:
-            for root, dirs, files in os.walk(directory):
-                for file in files:
-                    file_path = os.path.join(root, file)
-                    # print(f"Found file: {file_path}")
-
-                    if file.endswith("_auto.json"):
-                        print(f"Validating JSON file: {file_path}")
-                        try:
-                            with open(file_path, "r") as f:
-                                json.load(f)
-                            print(f"{file_path} is valid JSON.")
-                        except json.JSONDecodeError as e:
-                            print(f"{file_path} is invalid JSON: {e}")
+    # Lightweight JSON validity checker: validate processed JSONs under `assets/processed`.
+    # Classification: Dev / CI helper (not for PROD asset generation).
+    # Usage: `docker compose run validate_auto_json` — checks all `*.json` by default.
+    # You may pass a single glob pattern as an arg to target files, e.g.:
+    #   docker compose run validate_auto_json "multi_drilldown_real_data_E2025_*.json"
+    entrypoint: ["python", "scripts/validate_processed.py"]
+    command: ["*.json"]
 

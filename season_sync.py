@@ -73,6 +73,22 @@ def main() -> None:
         help="Rebuild games even if output JSON already exists",
     )
     parser.add_argument(
+        "--interactive",
+        action="store_true",
+        help="After the first successful game build, prompt user to confirm continuing",
+    )
+    parser.add_argument(
+        "--yes",
+        action="store_true",
+        help="Non-interactive accept prompts (implies --interactive)",
+    )
+    parser.add_argument(
+        "--progress-interval",
+        type=int,
+        default=10,
+        help="Print a progress update every N processed games (default: 10)",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Do not write or validate JSON, just log what would be done",
@@ -91,6 +107,9 @@ def main() -> None:
 
     failures = 0
     processed = 0
+    first_game_meta = None
+    first_game_year = None
+    prompted_after_first = False
 
     for gamecode in range(start_gc, end_gc + 1):
         out_name = f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
@@ -132,7 +151,56 @@ def main() -> None:
                 print("Too many failures, stopping early.")
                 break
 
+        # attempt to read meta from produced file (best-effort) to report progress
+        try:
+            data = json.loads(out_path.read_text(encoding="utf-8"))
+            meta = data.get("meta", {}) if isinstance(data, dict) else {}
+        except Exception:
+            meta = {}
+
+        # on first successful processed game, record metadata and optionally prompt
+        if processed == 0 and not args.dry_run:
+            first_game_meta = meta
+            gamedate = meta.get("gamedate")
+            if gamedate and isinstance(gamedate, str) and len(gamedate) >= 4:
+                try:
+                    first_game_year = int(gamedate[:4])
+                except Exception:
+                    first_game_year = None
+            print("\n[INFO] First successful game fetched:")
+            print(f"  seasoncode: {meta.get('seasoncode')}")
+            print(f"  gamecode:   {meta.get('gamecode')}")
+            print(f"  gamedate:   {meta.get('gamedate')}")
+            # interactive confirmation
+            if args.interactive and not prompted_after_first:
+                if args.yes:
+                    print("  [INTERACTIVE] --yes set, continuing without prompt")
+                else:
+                    ans = input("Proceed with the rest of the season? [y/N]: ")
+                    if ans.strip().lower() not in ("y", "yes"):
+                        print("Aborting as requested by user.")
+                        break
+                prompted_after_first = True
+
+        # detect season/year change compared to first game
+        if first_game_meta and meta:
+            if meta.get("seasoncode") != first_game_meta.get("seasoncode"):
+                print(f"\n[NOTICE] Detected seasoncode change: now processing {meta.get('seasoncode')} (previous {first_game_meta.get('seasoncode')})")
+            # compare gamedate year if available
+            gamedate = meta.get("gamedate")
+            if gamedate and first_game_year:
+                try:
+                    year = int(str(gamedate)[:4])
+                    if year != first_game_year:
+                        print(f"\n[NOTICE] Detected gamedate year change: now processing year {year} (previous {first_game_year})")
+                except Exception:
+                    pass
+
         processed += 1
+
+        # periodic progress update
+        if processed % args.progress_interval == 0:
+            print(f"[PROGRESS] processed={processed}, failures={failures}")
 
     print(f"=== Done. processed={processed}, failures={failures} (mode={mode}) ===")
 

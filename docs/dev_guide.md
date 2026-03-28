@@ -90,6 +90,62 @@ This section is a concise, copy-paste friendly checklist to get a new developer 
 	- Run pipeline for specific game(s): see `README.md` examples using `run_pipeline_and_validate`.
 	- Run validation tests: `docker compose run --rm tests` or run `validate_output.py` locally.
 
+### season_sync (sync a season)
+
+Very short reference for the season sync helper script used by our Docker pipeline.
+
+- **Purpose**: iterate a range of gamecodes for a season, run the pipeline for each game, validate output JSON, and write a season manifest `games_manifest.json` into the chosen output directory.
+- **Key CLI flags**:
+	- `--seasoncode` (required): e.g. `E2024`
+	- `--start-gamecode` / `--end-gamecode`: inclusive range to try (defaults: `1..200`)
+	- `--output-dir`: where processed JSONs are written (default: `.`)
+	- `--max-failures`: stop early after this many failures (default: `25`)
+	- `--force`: rebuild even when output exists
+	- `--dry-run`: do not write files; log actions only
+
+- **How it is invoked (examples)**:
+
+```bash
+# dry-run for a single season (no files written)
+python season_sync.py --seasoncode E2024 --start-gamecode 1 --end-gamecode 200 --dry-run
+
+# run inside Docker Compose (recommended):
+docker compose run --rm season_sync --seasoncode E2024 --start-gamecode 1 --end-gamecode 200 --output-dir assets/processed
+
+# force rebuild a small range (one-liners):
+python season_sync.py --seasoncode E2024 --start-gamecode 54 --end-gamecode 56 --force --output-dir assets/processed
+```
+
+- **What it writes / side-effects**:
+	- Processed files `multi_drilldown_real_data_{seasoncode}_{gamecode}.json` in `--output-dir`.
+	- `games_manifest.json` in the same directory (rebuilt when run in non-dry-run mode).
+
+- **Quick verification (after run)**:
+	- Count manifest entries: `jq '. | length' assets/processed/games_manifest.json`
+	- Peek first entry: `jq '.[0]' assets/processed/games_manifest.json`
+
+- **Notes**:
+	- The script uses `build_from_euroleague_api.run_game` to build per-game bundles and `validate_output.validate_file` to sanity-check the JSON.
+
+**Passing args via Make / Docker**
+
+- You can forward extra flags from `make` into Docker/pytest using the `ARGS` variable. Example:
+
+```bash
+# run pytest with a pattern
+make data-tests ARGS="-k test_basic_structure -q"
+
+# run season ingest for E2025 using the YEAR helper but include dry-run flag
+make data-get-season YEAR=2025 ARGS="--dry-run"
+```
+
+- `docker compose run` also supports passing args directly. Because `season_sync` and `tests` set their entrypoint to the script, any trailing args will be treated as script flags. Examples:
+
+```bash
+docker compose run tests -k pattern -q
+docker compose run season_sync --seasoncode E2025 --dry-run
+```
+
 - **UAT flow (required before promoting `dev -> main`)**:
 	1. `docker compose run --rm demo` (or run the pipeline for the candidate game set).
  2. Serve site and open `http://localhost:8080/prod/index.html` or `http://localhost:8080/prod/game-explorer.html`.
