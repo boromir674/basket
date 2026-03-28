@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # in our monolitic SPA we have ./index.html ./poss-..html and ./assets/processed/*.json files
+      # in our monolitic SPA we have ./index.html ./poss-..html and ./data/*.json files
       # create a ./public dir and copy them there
 
       - name: 'Prepare simple bundle with html/css/js and asset files'
@@ -57,7 +57,7 @@ jobs:
           cp index.html public/
           cp poss-flow-map-multi-drilldown-real-data.html public/
           mkdir -p public/assets/processed
-          cp assets/processed/*.json public/assets/processed/
+          cp data/*.json public/assets/processed/
 
       # NOW BUNDLE is in ./public dir
 
