@@ -116,6 +116,25 @@ def row_number_of_play(row: dict) -> Optional[int]:
     except ValueError:
         return None
 
+def normalize_player_id(raw: Any) -> Optional[str]:
+    if raw is None:
+        return None
+    s = str(raw).strip()
+    return s or None
+
+def normalize_player_name(raw: Any) -> Optional[str]:
+    if raw is None:
+        return None
+    s = str(raw).strip()
+    return s or None
+
+def row_player(row: dict) -> tuple[Optional[str], Optional[str]]:
+    if not isinstance(row, dict):
+        return None, None
+    pid = normalize_player_id(first_key(row, ["PLAYER_ID", "ID_PLAYER", "player_id", "playerId"], None))
+    pname = normalize_player_name(first_key(row, ["PLAYER", "player", "Player"], None))
+    return pid, pname
+
 TURNOVER_CODES = {"TO", "OF"}
 OREB_CODES = {"O"}
 DREB_CODES = {"D"}
@@ -136,6 +155,8 @@ class Possession:
     terminal: str
     points: int
     number_of_play: Optional[int] = None
+    player_id: Optional[str] = None
+    player_name: Optional[str] = None
 
 def classify_terminal(play_type: str):
     if play_type in MADE_2_CODES:
@@ -155,6 +176,7 @@ def infer_possessions(pbp_rows: list[dict]):
         pt = row_play_type(row)
         team = row_team(row)
         nop = row_number_of_play(row)
+        pid, pname = row_player(row)
 
         if pt in STEAL_CODES:
             current_origin_by_team[team] = "Transition / Fast break"
@@ -166,7 +188,7 @@ def infer_possessions(pbp_rows: list[dict]):
             current_origin_by_team[team] = "After OREB"
             continue
         if pt in TURNOVER_CODES:
-            possessions.append(Possession(team, current_origin_by_team[team], "Turnover", 0, nop))
+            possessions.append(Possession(team, current_origin_by_team[team], "Turnover", 0, nop, pid, pname))
             current_origin_by_team[team] = "Half-court"
             continue
 
@@ -181,7 +203,7 @@ def infer_possessions(pbp_rows: list[dict]):
             if next_row and next_pt in OREB_CODES and next_team == team:
                 continue
 
-        possessions.append(Possession(team, current_origin_by_team[team], terminal, pts, nop))
+        possessions.append(Possession(team, current_origin_by_team[team], terminal, pts, nop, pid, pname))
         current_origin_by_team[team] = "Half-court"
     return possessions
 
@@ -261,9 +283,51 @@ def counter_to_links(counter):
 def node_id(team, name):
     return f"{team}_{name}".replace(" / ", "_").replace(" ", "_")
 
+def possession_player_ref(p: Possession) -> tuple[str, str]:
+    """Return stable player id/name for attribution; falls back to Unknown."""
+    pid = normalize_player_id(p.player_id)
+    pname = normalize_player_name(p.player_name)
+    if pid and pname:
+        return pid, pname
+    if pid and not pname:
+        return pid, pid
+    if pname and not pid:
+        return f"anon::{pname}", pname
+    return f"unknown::{p.team}", "Unknown"
+
+def counter_to_player_flows(counter: Counter) -> dict[str, list[dict[str, Any]]]:
+    """Convert (source,target,pid,pname,team)->count into link keyed payload."""
+    bucketed: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for (source, target, pid, pname, team), poss in counter.items():
+        if poss <= 0:
+            continue
+        link_key = f"{source}->{target}"
+        bucketed[link_key].append(
+            {
+                "player_id": pid,
+                "player_name": pname,
+                "team": team,
+                "poss": int(poss),
+            }
+        )
+    out: dict[str, list[dict[str, Any]]] = {}
+    for link_key, rows in bucketed.items():
+        out[link_key] = sorted(rows, key=lambda r: (-int(r.get("poss", 0)), str(r.get("player_name", ""))))
+    return out
+
+def build_players_index(possessions: list[Possession]) -> dict[str, dict[str, str]]:
+    players: dict[str, dict[str, str]] = {}
+    for p in possessions:
+        pid, pname = possession_player_ref(p)
+        if pid.startswith("unknown::"):
+            continue
+        players[pid] = {"name": pname, "team": p.team}
+    return players
+
 def build_top_view(team_a, team_b, possessions):
     starts = Counter(p.team for p in possessions)
     nodes, links = [], Counter()
+    player_flows = Counter()
     for team in [team_a, team_b]:
         add_node(nodes, node_id(team, "start"), f"{team} Start", team, "start")
         for typ in ["Half-court", "Transition / Fast break", "After OREB"]:
@@ -277,9 +341,13 @@ def build_top_view(team_a, team_b, possessions):
         t = node_id(p.team, p.origin)
         e = node_id(p.team, p.terminal)
         pnode = f"{p.team}_{p.points if p.points in [0,1,2,3] else 0}"
+        pid, pname = possession_player_ref(p)
         links[(s,t)] += 1
         links[(t,e)] += 1
         links[(e,pnode)] += 1
+        player_flows[(s, t, pid, pname, p.team)] += 1
+        player_flows[(t, e, pid, pname, p.team)] += 1
+        player_flows[(e, pnode, pid, pname, p.team)] += 1
 
     # Lightweight, backwards-compatible metrics for the top view.
     totals = {
@@ -338,11 +406,13 @@ def build_top_view(team_a, team_b, possessions):
         "columns": ["Start", "Possession Type", "Terminal Event", "Points"],
         "nodes": nodes,
         "links": counter_to_links(links),
+        "player_flows": counter_to_player_flows(player_flows),
     }
 
 def build_subview(label, title, desc, columns, team_a, team_b, start_name_a, start_name_b, subset, subtype_fn, points_map):
     starts = Counter(p.team for p in subset)
     nodes, links = [], Counter()
+    player_flows = Counter()
     typed_rows, subtypes, terminals, point_values = [], set(), set(), set()
 
     add_node(nodes, node_id(team_a, "start"), start_name_a, team_a, "start")
@@ -369,9 +439,13 @@ def build_subview(label, title, desc, columns, team_a, team_b, start_name_a, sta
         t = node_id(p.team, subtype)
         e = node_id(p.team, p.terminal)
         pnode = f"{p.team}_{p.points if p.points in [0,1,2,3] else 0}"
+        pid, pname = possession_player_ref(p)
         links[(s,t)] += 1
         links[(t,e)] += 1
         links[(e,pnode)] += 1
+        player_flows[(s, t, pid, pname, p.team)] += 1
+        player_flows[(t, e, pid, pname, p.team)] += 1
+        player_flows[(e, pnode, pid, pname, p.team)] += 1
 
     return {
         "label":label,
@@ -382,7 +456,8 @@ def build_subview(label, title, desc, columns, team_a, team_b, start_name_a, sta
         "insights":[f"{label} derived heuristically from real endpoint data.","Subtype names are inferred categories for the product spike."],
         "columns":columns,
         "nodes":nodes,
-        "links":counter_to_links(links)
+        "links":counter_to_links(links),
+        "player_flows":counter_to_player_flows(player_flows),
     }
 
 def build_views(team_a, team_b, possessions, points_rows):
@@ -448,6 +523,44 @@ def extract_game_date(box_json: Any, pbp_json: Any) -> Optional[str]:
 
     return None
 
+def extract_boxscore_players(box_json: Any) -> list[dict[str, Any]]:
+    """Extract compact player stat rows from Boxscore payload when available."""
+    out: list[dict[str, Any]] = []
+    if not isinstance(box_json, dict):
+        return out
+    stats = box_json.get("Stats")
+    if not isinstance(stats, list):
+        return out
+    for team_block in stats:
+        if not isinstance(team_block, dict):
+            continue
+        players = team_block.get("PlayersStats")
+        if not isinstance(players, list):
+            continue
+        for row in players:
+            if not isinstance(row, dict):
+                continue
+            pid = normalize_player_id(first_key(row, ["Player_ID", "PLAYER_ID", "ID_PLAYER"], None))
+            pname = normalize_player_name(first_key(row, ["Player", "PLAYER"], None))
+            team = normalize_team_name(first_key(row, ["Team", "TEAM"], None))
+            if not pname:
+                continue
+            out.append(
+                {
+                    "player_id": pid or f"anon::{pname}",
+                    "player_name": pname,
+                    "team": team,
+                    "minutes": first_key(row, ["Minutes", "MIN"], None),
+                    "points": first_key(row, ["Points", "PTS"], None),
+                    "valuation": first_key(row, ["Valuation", "PIR"], None),
+                    "plusminus": first_key(row, ["Plusminus", "PlusMinus", "+/-"], None),
+                    "assists": first_key(row, ["Assistances", "Assists", "AST"], None),
+                    "rebounds": first_key(row, ["TotalRebounds", "REB"], None),
+                    "turnovers": first_key(row, ["Turnovers", "TO"], None),
+                }
+            )
+    return out
+
 def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real_data.json") -> dict:
     """Run the pipeline for a single game and write JSON output.
 
@@ -479,6 +592,8 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
             "synced_at": synced_at,
             "source_endpoints": ["PlaybyPlay","Points","Boxscore"]
         },
+        "players": build_players_index(possessions),
+        "boxscore_players": extract_boxscore_players(box_json),
         "colors": {team_a:"#d62839", team_b:"#3a86ff"},
         "views": build_views(team_a, team_b, possessions, points_rows)
     }

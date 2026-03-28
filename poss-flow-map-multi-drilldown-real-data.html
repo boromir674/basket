@@ -11,18 +11,23 @@
     * { box-sizing:border-box; }
     body { margin:0; color:var(--text); font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); }
     .wrap { max-width:1420px; margin:0 auto; padding:20px 16px 30px; }
+    .page-nav { display:flex; justify-content:flex-end; margin-bottom:10px; }
+    .home-link { display:inline-flex; align-items:center; justify-content:center; padding:8px 12px; border-radius:999px; border:1px solid rgba(111,132,171,.28); background:#14223e; color:var(--text); text-decoration:none; font-size:13px; }
+    .home-link:hover { background:#21365e; border-color:#4f6b99; }
     .grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
     .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.32); }
-    .header { padding:20px 24px 14px; border-bottom:1px solid rgba(111,132,171,.12); }
+    .header { padding:16px 24px 10px; border-bottom:1px solid rgba(111,132,171,.12); }
     .eyebrow,.crumbs,.muted,.node-pct-label,.col-label { color:var(--muted); }
     .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
     h1 { margin:0 0 8px; font-size:28px; line-height:1.12; }
     .headline { color:#d9e6ff; font-size:15px; line-height:1.55; max-width:940px; }
     .controls { margin-top:14px; display:flex; flex-wrap:wrap; gap:8px; }
+    .controls-divider { width:1px; height:28px; background:rgba(111,132,171,.32); margin:0 4px; align-self:center; }
     button { background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); border-radius:999px; padding:8px 12px; cursor:pointer; font-size:13px; }
     button.active { background:#21365e; border-color:#4f6b99; }
     .viz { position:relative; padding:8px 8px 10px; }
-    svg { width:100%; height:860px; display:block; }
+    #chart { width:100%; height:720px; display:block; }
+    .side svg { height:auto; display:block; }
     .col-label { fill:var(--muted); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
     .link { fill:none; stroke-opacity:.62; transition:stroke-opacity .15s ease, filter .15s ease; cursor:pointer; }
     .link:hover { stroke-opacity:.92; filter:brightness(1.07); }
@@ -30,8 +35,45 @@
     .node-main-label { fill:var(--text); font-size:12px; font-weight:600; dominant-baseline:middle; pointer-events:none; }
     .node-pct-label { fill:var(--muted); font-size:11px; dominant-baseline:middle; pointer-events:none; }
     .footer { padding:0 24px 20px; color:var(--muted); font-size:13px; line-height:1.45; }
-    .tooltip { position:absolute; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
+    .tooltip { position:absolute; z-index:90; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
     .tooltip.show { opacity:1; transform:translateY(0); }
+    .explode-pop { position:absolute; z-index:120; min-width:260px; max-width:320px; background:rgba(7,11,20,.97); color:var(--text); border:1px solid rgba(111,132,171,.32); border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.5); opacity:0; pointer-events:none; transform:translateY(8px); transition:opacity .16s ease, transform .16s ease; }
+    .explode-pop.show { opacity:1; transform:translateY(0); }
+    .explode-title { font-size:12px; color:#d9e6ff; margin-bottom:6px; }
+    .explode-stack { height:10px; border-radius:999px; overflow:hidden; display:flex; background:rgba(111,132,171,.18); margin-bottom:8px; }
+    .explode-seg { height:100%; }
+    .explode-row { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--muted); margin-top:4px; }
+    .explode-left { display:inline-flex; align-items:center; gap:6px; min-width:0; }
+    .explode-dot { width:8px; height:8px; border-radius:999px; flex:0 0 auto; }
+    .explode-name { color:#d9e6ff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .replay-hud { position:relative; width:100%; margin-bottom:14px; padding:10px 12px; border-radius:12px; border:1px solid rgba(111,132,171,.32); background:rgba(6,12,23,.9); box-shadow:0 8px 24px rgba(0,0,0,.35); }
+    .replay-line { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:12px; color:#d9e6ff; }
+    .replay-meta { color:var(--muted); font-size:11px; margin-top:4px; }
+    .replay-progress { margin-top:8px; height:8px; border-radius:999px; background:rgba(111,132,171,.25); overflow:hidden; }
+    .replay-fill { height:100%; width:0%; background:linear-gradient(90deg,#3a86ff,#ff006e); }
+    .replay-ctl { margin-top:8px; display:flex; gap:6px; }
+    .replay-ctl button { padding:6px 10px; font-size:11px; }
+    .replay-state-grid { margin-top:8px; display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+    .replay-state-card { border:1px solid rgba(111,132,171,.24); border-radius:10px; padding:6px 8px; background:rgba(9,16,30,.8); }
+    .replay-state-title { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; }
+    .replay-state-value { font-size:11px; color:#d9e6ff; margin-top:2px; }
+    .replay-tag { display:inline-flex; padding:2px 7px; border-radius:999px; font-size:10px; border:1px solid rgba(111,132,171,.4); margin-left:4px; }
+    .replay-callouts { margin-top:8px; border:1px solid rgba(111,132,171,.2); border-radius:10px; padding:6px 8px; background:rgba(8,14,28,.72); min-height:42px; }
+    .replay-callout { font-size:11px; color:#d9e6ff; }
+    .replay-mini-title { margin-top:8px; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; }
+    .replay-analytics { margin-top:6px; border:1px solid rgba(111,132,171,.2); border-radius:10px; background:rgba(8,14,28,.72); padding:6px; }
+    .replay-analytics svg { width:100%; display:block; }
+    .replay-help { margin-top:6px; font-size:11px; color:#9db0cf; line-height:1.35; }
+    .replay-trend-legend { margin-top:5px; display:flex; gap:8px; flex-wrap:wrap; color:var(--muted); font-size:10px; }
+    .replay-trend-legend span { display:inline-flex; align-items:center; gap:5px; }
+    .replay-trend-mark { width:12px; height:0; border-top:2px solid #8ca2c5; }
+    .replay-trend-mark.dash { border-top-style:dashed; }
+    .replay-hover-readout { margin-top:6px; font-size:11px; color:#d9e6ff; min-height:16px; }
+    .replay-base-toggle { margin-top:8px; display:flex; gap:6px; flex-wrap:wrap; }
+    .replay-base-toggle button { padding:5px 9px; font-size:11px; }
+    .replay-base-note { margin-top:5px; font-size:10px; color:#9db0cf; line-height:1.35; }
+    .replay-film-legend { margin-top:6px; display:flex; align-items:center; gap:8px; color:#9db0cf; font-size:10px; }
+    .replay-film-gradient { flex:1 1 auto; height:8px; border-radius:999px; border:1px solid rgba(111,132,171,.35); background:linear-gradient(90deg,#b80f35,#ffb44a,#44db7f); }
     .tag { display:inline-block; color:white; border-radius:999px; font-size:11px; padding:2px 8px; margin-bottom:7px; }
     .side { padding:18px 18px 16px; }
     .kpi { margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
@@ -40,6 +82,15 @@
     .tile .value { font-size:18px; font-weight:700; }
     .list { margin-top:12px; display:grid; gap:8px; }
     .panel-title { margin-top:18px; margin-bottom:8px; font-size:14px; color:#d9e6ff; }
+    .flow-lab { margin-top:14px; padding:10px 12px; border-radius:12px; border:1px solid rgba(111,132,171,.2); background:rgba(9,16,30,.86); }
+    .flow-q-list { display:grid; gap:8px; margin-top:8px; }
+    .flow-q-btn { text-align:left; border-radius:10px; padding:8px 10px; background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); font-size:12px; cursor:pointer; }
+    .flow-q-btn.active { background:#2a4a7e; border-color:#6d92ca; }
+    .flow-answer { margin-top:8px; font-size:12px; color:#d9e6ff; line-height:1.45; }
+    .flow-story { margin-top:8px; display:flex; gap:8px; }
+    .flow-story button { font-size:11px; padding:6px 10px; }
+    .flow-bubbles { margin-top:10px; border:1px solid rgba(111,132,171,.18); border-radius:10px; background:rgba(7,12,24,.78); padding:8px; }
+    .flow-bubbles-title { font-size:11px; color:var(--muted); margin-bottom:6px; }
     .hint { margin-top:10px; padding:10px 12px; border-radius:12px; background:rgba(145,200,255,.08); border:1px solid rgba(145,200,255,.15); color:#d9e6ff; font-size:13px; line-height:1.4; }
     .insight-auto { border-color:#4f6b99; box-shadow:0 0 0 1px rgba(79,107,153,.35); }
     .insight-auto-primary { border-color:#ffbe0b; box-shadow:0 0 0 1px rgba(255,190,11,.65); }
@@ -68,29 +119,113 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="page-nav">
+    <a class="home-link" href="./index.html">Home</a>
+  </div>
   <div class="grid">
     <div class="card">
       <div class="header">
         <div class="eyebrow">Euroleague MVP visualization spike — real data</div>
         <h1 id="page-title">Possession Flow Map</h1>
         <div class="headline" id="headline">Loading…</div>
+        <div id="scoreboard" style="margin-top:8px;font-weight:700;color:#d9e6ff;font-size:15px;">&nbsp;</div>
         <div class="controls" id="controls"></div>
         <div class="crumbs" id="crumbs">View: Top-level</div>
       </div>
       <div class="viz">
         <div class="tooltip" id="tooltip"></div>
+        <div class="explode-pop" id="explode-pop"></div>
         <svg id="chart" viewBox="0 0 1280 860"></svg>
       </div>
       <div class="footer">Feature-rich multi-drilldown view using real API-derived JSON.</div>
     </div>
     <div class="card">
       <div class="side">
+        <div class="replay-hud" id="replay-hud" style="display:none;">
+          <div class="replay-line">
+            <strong>Live Replay</strong>
+            <span id="replay-clock">00:00</span>
+          </div>
+          <div class="replay-line">
+            <span id="replay-score-a">Team A 0</span>
+            <span id="replay-score-b">0 Team B</span>
+          </div>
+          <div class="replay-meta" id="replay-minute">Minute 0.0 / 40.0</div>
+          <div class="replay-progress"><div class="replay-fill" id="replay-fill"></div></div>
+          <div class="replay-ctl">
+            <button id="replay-play">Play</button>
+            <button id="replay-pause">Pause</button>
+            <button id="replay-reset">Reset</button>
+          </div>
+          <div class="replay-state-grid">
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-off-a">Team A Offence</div>
+              <div class="replay-state-value" id="replay-off-a">--</div>
+            </div>
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-def-a">Team A Defence</div>
+              <div class="replay-state-value" id="replay-def-a">--</div>
+            </div>
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-off-b">Team B Offence</div>
+              <div class="replay-state-value" id="replay-off-b">--</div>
+            </div>
+            <div class="replay-state-card">
+              <div class="replay-state-title" id="replay-title-def-b">Team B Defence</div>
+              <div class="replay-state-value" id="replay-def-b">--</div>
+            </div>
+          </div>
+          <div class="replay-base-toggle">
+            <button id="replay-base-game" class="active">Game Baseline</button>
+            <button id="replay-base-league">League Baseline</button>
+          </div>
+          <div class="replay-base-note" id="replay-base-note">Baseline mode controls how Off/Def 0-100 is normalized.</div>
+          <div class="replay-mini-title">Narrative Signals</div>
+          <div class="replay-callouts" id="replay-callouts"></div>
+          <div class="replay-mini-title">Trend Lines (Live + Smoothed)</div>
+          <div class="replay-analytics">
+            <svg id="replay-trends-svg" width="370" height="140"></svg>
+            <div class="replay-trend-legend">
+              <span><i class="replay-trend-mark"></i>Offence</span>
+              <span><i class="replay-trend-mark dash"></i>Defence</span>
+              <span>Team colors apply for A/B</span>
+            </div>
+            <div class="replay-hover-readout" id="replay-hover-readout">Hover the chart to inspect minute values.</div>
+          </div>
+          <div class="replay-mini-title">Offence-Defence Phase Map</div>
+          <div class="replay-analytics">
+            <svg id="replay-phase-svg" width="370" height="150"></svg>
+            <div class="replay-help" id="replay-phase-help">Right = stronger offence relative to baseline. Up = stronger defence relative to baseline. Hover trajectories for minute-level snapshots.</div>
+            <div class="replay-hover-readout" id="replay-phase-readout">Hover phase map to inspect point-time-state mapping.</div>
+          </div>
+          <div class="replay-mini-title">State Filmstrip (Meta Timeline)</div>
+          <div class="replay-analytics">
+            <svg id="replay-filmstrip-svg" width="370" height="110"></svg>
+            <div class="replay-film-legend"><span>Under</span><div class="replay-film-gradient"></div><span>Neutral</span><span>Over</span></div>
+            <div class="replay-help" id="replay-film-help">Each row is a team-channel (Off/Def). Color encodes state score vs selected baseline.</div>
+            <div class="replay-hover-readout" id="replay-filmstrip-readout">Hover filmstrip to inspect all channel values at one minute.</div>
+          </div>
+        </div>
         <h2 id="panel-title">Context</h2>
         <div class="muted" id="panel-desc"></div>
         <div class="kpi" id="kpi-grid"></div>
         <div class="panel-title">Plain-language interpretation</div>
         <div class="list" id="insights"></div>
         <div class="hint">Product pattern: self-explainable first, explorable second.</div>
+        <div class="flow-lab" id="flow-index-lab" style="display:none;">
+          <div class="panel-title" style="margin-top:0;">Flow Index Lab</div>
+          <div class="muted" style="font-size:12px;">Click a question. The chart jumps to the relevant branch and answers it.</div>
+          <div class="flow-story">
+            <button id="flow-story-play">Play Story</button>
+            <button id="flow-story-stop">Stop</button>
+          </div>
+          <div class="flow-q-list" id="flow-q-list"></div>
+          <div class="flow-answer" id="flow-q-answer"></div>
+          <div class="flow-bubbles">
+            <div class="flow-bubbles-title">Player Impact Map (flow value vs game valuation)</div>
+            <svg id="flow-bubbles-svg" width="300" height="170"></svg>
+          </div>
+        </div>
         <div class="radar-card" id="radar-card">
           <div class="radar-title">Efficiency radar 
             <span style="color:var(--muted);font-weight:400;font-size:11px;">— top view</span>
@@ -107,10 +242,82 @@
 </div>
 <script>
 const tooltip = document.getElementById("tooltip");
+const explodePop = document.getElementById("explode-pop");
+const replayHud = document.getElementById("replay-hud");
+const replayClock = document.getElementById("replay-clock");
+const replayScoreA = document.getElementById("replay-score-a");
+const replayScoreB = document.getElementById("replay-score-b");
+const replayMinute = document.getElementById("replay-minute");
+const replayFill = document.getElementById("replay-fill");
+const replayPlayBtn = document.getElementById("replay-play");
+const replayPauseBtn = document.getElementById("replay-pause");
+const replayResetBtn = document.getElementById("replay-reset");
+const replayOffA = document.getElementById("replay-off-a");
+const replayDefA = document.getElementById("replay-def-a");
+const replayOffB = document.getElementById("replay-off-b");
+const replayDefB = document.getElementById("replay-def-b");
+const replayTitleOffA = document.getElementById("replay-title-off-a");
+const replayTitleDefA = document.getElementById("replay-title-def-a");
+const replayTitleOffB = document.getElementById("replay-title-off-b");
+const replayTitleDefB = document.getElementById("replay-title-def-b");
+const replayBaseGameBtn = document.getElementById("replay-base-game");
+const replayBaseLeagueBtn = document.getElementById("replay-base-league");
+const replayBaseNote = document.getElementById("replay-base-note");
+const replayCallouts = document.getElementById("replay-callouts");
+const replayTrendsSvg = document.getElementById("replay-trends-svg");
+const replayPhaseSvg = document.getElementById("replay-phase-svg");
+const replayFilmstripSvg = document.getElementById("replay-filmstrip-svg");
+const replayHoverReadout = document.getElementById("replay-hover-readout");
+const replayPhaseReadout = document.getElementById("replay-phase-readout");
+const replayFilmstripReadout = document.getElementById("replay-filmstrip-readout");
 const controls = document.getElementById("controls");
 const svg = d3.select("#chart");
+svg.on("click", () => {
+  if(explodeLab) clearExplodeFocus();
+});
+const vizRoot = svg.append("g").attr("id", "viz-root").attr("transform", "translate(0,0) scale(1)");
+// PoC renderer layers: keep DOM stable and morph node/link geometry on view changes.
+const baselineLayer = vizRoot.append("g").attr("id", "baseline-layer");
+const linkLayer = vizRoot.append("g").attr("id", "link-layer");
+const explodeLayer = vizRoot.append("g").attr("id", "explode-layer");
+const nodeLayer = vizRoot.append("g").attr("id", "node-layer");
+const labelsLayer = vizRoot.append("g").attr("id", "labels-layer");
+let currentGraphState = null;
+const linkGen = d3.sankeyLinkHorizontal();
+let renderSequence = 0;
 const width = 1280, height = 860;
 let dataBundle = null, colors = {}, currentView = "top";
+let teamFocus = null; // When set, the Sankey diagram renders only one team.
+let lastSingleTeam = null; // Remembers last selected single-team focus.
+let explodedLinkKey = null;
+let explodedLinkData = null;
+let hoveredTwinKey = null;
+let hoveredTwinLane = null;
+let currentGraphLinks = [];
+let activeFlowQuestion = null;
+let flowStoryTimer = null;
+let replayState = {
+  active: false,
+  playing: false,
+  progress: 0,
+  timer: null,
+  durationMs: 20000,
+  graphLinks: [],
+  graphNodes: [],
+  metricLinks: [],
+  startsByTeam: {},
+  scheduleByKey: new Map(),
+  metricScheduleByKey: new Map(),
+  finalScoreA: 0,
+  finalScoreB: 0,
+  baselines: {},
+  gameBaselines: {},
+  leagueBaselines: {},
+  baselineMode: "game",
+  historyByTeam: {},
+  lastHistoryT: -1,
+  trendHover: null
+};
 
 // Allow switching between multiple games by passing ?file=... in the URL.
 // Default now points to assets/processed for processed files.
@@ -122,8 +329,37 @@ let dataFile = paramFile || "assets/processed/multi_drilldown_real_data.json";
 if (paramFile && !paramFile.includes("/")) {
   dataFile = `assets/processed/${paramFile}`;
 }
+
+// Support a runtime base path for static hosting (S3) via either a global
+// `window.BASKET_APP_FILE_STORE_URI` (recommended for prod builds) or via the
+// `?fileBase=` query param. This lets the same viewer work locally (serve
+// from `assets/processed`) and in production where files live under a remote
+// CDN/S3 base path. Do not alter blob: URLs.
+const fileBaseParam = params.get("fileBase");
+const runtimeBase = (typeof window !== 'undefined' && window.BASKET_APP_FILE_STORE_URI) || fileBaseParam || null;
+if (runtimeBase && !String(dataFile).startsWith('http') && !String(dataFile).startsWith('/') && !String(dataFile).startsWith('blob:')) {
+  const base = runtimeBase.endsWith('/') ? runtimeBase.slice(0, -1) : runtimeBase;
+  // If dataFile is already inside assets/processed, keep the path but prefix it.
+  dataFile = `${base}/${dataFile}`;
+}
 // Removed derivation of auto-insights file from dataFile.
 const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_auto.json";
+
+// PoC switch: when drilling into possession-type views, render either 4 columns (default)
+// or 3 columns (omit Start stage) for a visual comparison.
+// Usage: ?file=...&typeZoomVariant=4  OR  ?file=...&typeZoomVariant=3
+let typeZoomVariant = Math.max(3, Math.min(4, parseInt(params.get("typeZoomVariant") || "4", 10)));
+const TYPE_ZOOM_VIEWS = new Set(["halfcourt", "transition", "oreb"]);
+const omitStartStageForViz = (viewKey) => typeZoomVariant === 3 && TYPE_ZOOM_VIEWS.has(viewKey);
+let flowIndexLab = params.get("flowIndexLab") === "1";
+// By default enable explode interactions across pages unless explicitly disabled via ?explodeLab=0
+let explodeLab = params.get("explodeLab") !== "0" || flowIndexLab;
+let twinLab = params.get("twinLab") === "1";
+let xrayLab = params.get("xrayLab") === "1" || twinLab;
+let replayLab = params.get("replayLab") === "1";
+
+// Note: for this PoC we want in-place reshaping (not camera swoops).
+// Keep a static transform on vizRoot.
 
 // Log the file being fetched for debugging purposes.
 console.log(`Attempting to fetch auto-insights file: ${autoInsightsFile}`);
@@ -153,6 +389,1202 @@ fetch(autoInsightsFile)
   });
 
 function rgba(hex, alpha){ const c=d3.color(hex||"#888"); return `rgba(${c.r}, ${c.g}, ${c.b}, ${alpha})`; }
+
+function getAvailableTeams(){
+  if(!dataBundle) return [];
+  const out = [];
+  const seen = new Set();
+  const pushTeam = (raw) => {
+    const t = String(raw || "").trim();
+    if(!t || seen.has(t)) return;
+    seen.add(t);
+    out.push(t);
+  };
+  const meta = dataBundle.meta || {};
+  pushTeam(meta.team_a);
+  pushTeam(meta.team_b);
+  const topStarts = (dataBundle.views && dataBundle.views.top && dataBundle.views.top.starts) || {};
+  Object.keys(topStarts).forEach(pushTeam);
+  Object.keys(colors || {}).forEach(pushTeam);
+  return out;
+}
+
+function defaultSingleTeam(){
+  const teams = getAvailableTeams();
+  if(lastSingleTeam && teams.indexOf(lastSingleTeam) !== -1) return lastSingleTeam;
+  if(teams.length) return teams[0];
+  return null;
+}
+
+function hashString(input){
+  let h = 2166136261;
+  for(let i=0;i<input.length;i++){
+    h ^= input.charCodeAt(i);
+    h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24);
+  }
+  return Math.abs(h >>> 0);
+}
+
+function buildPseudoPlayerMix(link){
+  const total = Math.max(1, Math.round(Number(link.value) || 1));
+  const team = String(link.source && link.source.team ? link.source.team : "Team");
+  const seed = hashString(`${team}|${link.key || ""}|${currentView}`);
+  const baseShares = [0.40, 0.27, 0.19, 0.14];
+  const jitter = ((seed % 13) - 6) / 100; // -0.06..0.06
+  const adjusted = [
+    Math.max(0.16, baseShares[0] + jitter),
+    Math.max(0.12, baseShares[1] - jitter / 2),
+    Math.max(0.10, baseShares[2] - jitter / 3),
+    Math.max(0.08, baseShares[3] - jitter / 4),
+  ];
+  const sum = adjusted.reduce((s,v)=>s+v,0) || 1;
+  const norm = adjusted.map(v=>v/sum);
+
+  const archetypes = ["Primary Guard", "Wing Creator", "Roll Big", "Bench Unit"];
+  const players = norm.map((share, idx) => ({
+    name: archetypes[idx],
+    share,
+    poss: 0,
+    color: d3.interpolateTurbo((seed % 997 + idx * 137) % 997 / 997),
+  }));
+
+  let used = 0;
+  for(let i=0;i<players.length;i++){
+    const left = total - used;
+    const raw = (i === players.length - 1) ? left : Math.max(0, Math.round(total * players[i].share));
+    players[i].poss = Math.min(left, raw);
+    used += players[i].poss;
+  }
+  if(used < total){
+    players[0].poss += (total - used);
+  }
+  const possSum = players.reduce((s,p)=>s+p.poss,0) || 1;
+  players.forEach(p => { p.share = p.poss / possSum; });
+  return { mode: "synthetic", players };
+}
+
+function buildRealPlayerMix(link){
+  if(!dataBundle || !dataBundle.views) return null;
+  const view = dataBundle.views[currentView];
+  if(!view || !view.player_flows || typeof view.player_flows !== "object") return null;
+  const rows = view.player_flows[link.key];
+  if(!Array.isArray(rows) || !rows.length) return null;
+  const normalized = rows
+    .map(r => {
+      const poss = Math.max(0, parseInt(String((r && r.poss) ?? "0"), 10) || 0);
+      const pid = String((r && r.player_id) || "").trim() || "unknown";
+      const pname = String((r && r.player_name) || "").trim() || "Unknown";
+      return { pid, pname, poss };
+    })
+    .filter(r => r.poss > 0);
+  if(!normalized.length) return null;
+  const total = normalized.reduce((s,r)=>s+r.poss,0) || 1;
+  const players = normalized.map((r, idx) => ({
+    name: r.pname,
+    playerId: r.pid,
+    poss: r.poss,
+    share: r.poss / total,
+    color: d3.interpolateTurbo((hashString(`${r.pid}|${r.pname}|${idx}`) % 997) / 997),
+  }));
+  return { mode: "real", players };
+}
+
+function pathForExplodedSegment(link, centerOffset){
+  const sx = link.source.x1;
+  const sy = link.y0 + centerOffset;
+  const tx = link.target.x0;
+  const ty = link.y1 + centerOffset;
+  const curve = Math.max(26, (tx - sx) * 0.35);
+  return `M${sx},${sy} C${sx + curve},${sy} ${tx - curve},${ty} ${tx},${ty}`;
+}
+
+function clearExplodeFocus(){
+  explodedLinkKey = null;
+  explodedLinkData = null;
+  explodeLayer.selectAll("path.explode-link").remove();
+  if(explodePop){
+    explodePop.classList.remove("show");
+    explodePop.innerHTML = "";
+  }
+  linkLayer.selectAll("path.link").style("opacity", 1);
+}
+
+function renderExplodeFocus(link){
+  if(!explodeLab) return;
+  if(!link || !link.key){
+    clearExplodeFocus();
+    return;
+  }
+  explodedLinkData = link;
+  const mix = buildRealPlayerMix(link) || buildPseudoPlayerMix(link);
+  const players = mix.players;
+  const totalWidth = Math.max(2, Number(link.width) || 2);
+  let cursor = -totalWidth / 2;
+  const segments = players.map((p, idx) => {
+    const segWidth = Math.max(1.5, totalWidth * p.share);
+    const center = cursor + (segWidth / 2);
+    cursor += segWidth;
+    return { ...p, segWidth, center, idx };
+  });
+
+  linkLayer.selectAll("path.link")
+    .style("opacity", d => (d.key === link.key ? 0.18 : 0.45));
+
+  const segSel = explodeLayer.selectAll("path.explode-link")
+    .data(segments, d => d.name);
+
+  segSel.enter()
+    .append("path")
+    .attr("class", "explode-link")
+    .style("fill", "none")
+    .style("stroke-linecap", "round")
+    .style("opacity", 0)
+    .attr("d", d => pathForExplodedSegment(link, d.center))
+    .attr("stroke", d => d.color)
+    .attr("stroke-width", 1)
+    .merge(segSel)
+    .transition()
+    .duration(360)
+    .style("opacity", 0.95)
+    .attr("d", d => pathForExplodedSegment(link, d.center))
+    .attr("stroke", d => d.color)
+    .attr("stroke-width", d => d.segWidth);
+
+  segSel.exit().transition().duration(160).style("opacity",0).remove();
+
+  if(explodePop){
+    const stack = segments.map(s => `<div class="explode-seg" style="width:${(s.share*100).toFixed(1)}%;background:${s.color}"></div>`).join("");
+    const rows = segments
+      .sort((a,b)=>b.poss-a.poss)
+      .map(s => `<div class="explode-row"><span class="explode-left"><span class="explode-dot" style="background:${s.color}"></span><span class="explode-name">${s.name}</span></span><span>${s.poss} poss · ${(s.share*100).toFixed(1)}%</span></div>`)
+      .join("");
+    const modeLabel = mix.mode === "real" ? "API player attribution (from processed player_flows)" : "Prototype fallback (synthetic split)";
+    explodePop.innerHTML = `<div class="explode-title">Flow explode lab · ${link.source.name} -> ${link.target.name}</div><div class="explode-stack">${stack}</div>${rows}<div class="explode-row"><span>Mode</span><span>${modeLabel}</span></div>`;
+    const px = Math.min(930, Math.max(18, ((link.source.x1 + link.target.x0) / 2) - 120));
+    const py = Math.min(640, Math.max(94, ((link.y0 + link.y1) / 2) - 34));
+    explodePop.style.left = `${px}px`;
+    explodePop.style.top = `${py}px`;
+    explodePop.classList.add("show");
+  }
+}
+
+function buildSyntheticBaselineByKey(graphLinks){
+  const buckets = {};
+  graphLinks.forEach(l => {
+    const team = (l.source && l.source.team) ? String(l.source.team) : "Team";
+    const srcStage = (l.source && l.source.stage) ? String(l.source.stage) : "stage";
+    const tgtStage = (l.target && l.target.stage) ? String(l.target.stage) : "stage";
+    const key = `${team}|${srcStage}->${tgtStage}`;
+    if(!buckets[key]) buckets[key] = [];
+    buckets[key].push(Number(l.value) || 0);
+  });
+  const means = {};
+  Object.keys(buckets).forEach(k => {
+    const arr = buckets[k];
+    const s = arr.reduce((a,b)=>a+b,0);
+    means[k] = arr.length ? (s / arr.length) : 0;
+  });
+  const out = {};
+  graphLinks.forEach(l => {
+    const team = (l.source && l.source.team) ? String(l.source.team) : "Team";
+    const srcStage = (l.source && l.source.stage) ? String(l.source.stage) : "stage";
+    const tgtStage = (l.target && l.target.stage) ? String(l.target.stage) : "stage";
+    const bucket = `${team}|${srcStage}->${tgtStage}`;
+    out[l.key] = means[bucket] || 0;
+  });
+  return out;
+}
+
+function xrayDeltaStats(link, baselineByKey){
+  const cur = Number(link.value) || 0;
+  const base = Math.max(0, Number((baselineByKey && baselineByKey[link.key]) || 0));
+  const delta = cur - base;
+  const pct = base > 0 ? (delta / base) : 0;
+  return { cur, base, delta, pct };
+}
+
+function xrayLinkStroke(link, baselineByKey){
+  const teamColor = colors[link.source.team] || "#888";
+  if(!xrayLab) return rgba(teamColor, 0.55);
+  const s = xrayDeltaStats(link, baselineByKey);
+  const intensity = Math.max(0, Math.min(1, Math.abs(s.pct)));
+  const up = "#ff8a00";
+  const down = "#35c6ff";
+  const target = s.delta >= 0 ? up : down;
+  const c = d3.interpolateRgb(teamColor, target)(0.2 + 0.8 * intensity);
+  return rgba(c, 0.72);
+}
+
+function twinLinkPath(link, spec){
+  const dx = spec.dx || 0;
+  const dy = spec.dy || 0;
+  const tilt = spec.tilt || 0;
+  const tiltScale = 120;
+  const sx = link.source.x1 + dx + tilt * ((link.y0 / height) * tiltScale);
+  const sy = link.y0 + dy;
+  const tx = link.target.x0 + dx + tilt * ((link.y1 / height) * tiltScale);
+  const ty = link.y1 + dy;
+  const curve = Math.max(26, (tx - sx) * 0.35);
+  return `M${sx},${sy} C${sx + curve},${sy} ${tx - curve},${ty} ${tx},${ty}`;
+}
+
+function linkExpectedPoints(link){
+  const sourceName = String((link.source && link.source.name) || "");
+  const targetName = String((link.target && link.target.name) || "");
+  if (targetName.indexOf("3 pts") !== -1 || sourceName === "Made 3") return 3;
+  if (targetName.indexOf("2 pts") !== -1 || sourceName === "Made 2") return 2;
+  if (targetName.indexOf("1 pt") !== -1 || sourceName === "Shooting foul / FTs") return 1;
+  return 0;
+}
+
+function flowIndexScore(link){
+  const v = Math.max(0, Number(link.value) || 0);
+  const ev = linkExpectedPoints(link);
+  // Spike formula for "valuable flow": volume * expected points.
+  return v * ev;
+}
+
+function getFlowMix(link){
+  return buildRealPlayerMix(link) || buildPseudoPlayerMix(link);
+}
+
+function focusFlowLink(viewKey, link, answerText){
+  if(!link) return;
+  activeFlowQuestion = answerText ? String(answerText) : activeFlowQuestion;
+  setPanel(viewKey, linkExplain(link));
+  if (explodeLab) {
+    explodedLinkKey = link.key;
+    renderExplodeFocus(link);
+  }
+  const target = linkLayer.selectAll("path.link").filter(d => d && d.key === link.key);
+  target.interrupt()
+    .transition().duration(180).attr("stroke-width", d => Math.max(2, (Number(d.width) || Number(d.twinWidth) || 2) * 1.35))
+    .transition().duration(220).attr("stroke-width", d => Math.max(1, Number(d.width) || Number(d.twinWidth) || 1));
+  const ans = document.getElementById("flow-q-answer");
+  if(ans && activeFlowQuestion) ans.innerHTML = activeFlowQuestion;
+}
+
+function formatPlayerBranchShare(topPlayer, link){
+  const branchVolume = Math.max(0, Number((link && link.value) || 0));
+  const poss = Math.max(0, Number((topPlayer && topPlayer.poss) || 0));
+  const pct = branchVolume > 0 ? (100 * poss / branchVolume) : ((Number(topPlayer && topPlayer.share) || 0) * 100);
+  const src = String((link && link.source && link.source.name) || "");
+  const tgt = String((link && link.target && link.target.name) || "");
+  let unit = "branch possessions";
+  if (src === "Made 3" || tgt.indexOf("3 pts") !== -1) unit = "made-3 events on this branch";
+  else if (src === "Made 2" || tgt.indexOf("2 pts") !== -1) unit = "made-2 events on this branch";
+  return `${poss} of ${branchVolume} ${unit} (${pct.toFixed(1)}%)`;
+}
+
+function buildBoxscoreLookup(){
+  const rows = (dataBundle && Array.isArray(dataBundle.boxscore_players)) ? dataBundle.boxscore_players : [];
+  const byId = new Map();
+  const byName = new Map();
+  rows.forEach(r => {
+    const id = String((r && r.player_id) || "").trim();
+    const name = String((r && r.player_name) || "").trim();
+    if(id) byId.set(id, r);
+    if(name) byName.set(name, r);
+  });
+  return { byId, byName };
+}
+
+function renderFlowImpactBubbles(links){
+  const svgNode = document.getElementById("flow-bubbles-svg");
+  if(!svgNode) return;
+  const svgSel = d3.select(svgNode);
+  svgSel.selectAll("*").remove();
+  if(!Array.isArray(links) || !links.length) return;
+
+  const lookup = buildBoxscoreLookup();
+  const perPlayer = new Map();
+  links.forEach(link => {
+    const mix = getFlowMix(link);
+    const branchScore = flowIndexScore(link);
+    (mix.players || []).forEach(p => {
+      const key = String(p.playerId || p.name || "unknown");
+      if(!perPlayer.has(key)){
+        const bs = lookup.byId.get(String(p.playerId || "")) || lookup.byName.get(String(p.name || "")) || null;
+        perPlayer.set(key, {
+          name: p.name || "Unknown",
+          id: p.playerId || key,
+          team: (link.source && link.source.team) || "",
+          volume: 0,
+          flowValue: 0,
+          valuation: bs ? Number(bs.valuation || 0) : 0,
+        });
+      }
+      const row = perPlayer.get(key);
+      const poss = Number(p.poss || 0);
+      row.volume += poss;
+      row.flowValue += branchScore * (Number(p.share) || 0);
+    });
+  });
+  const data = Array.from(perPlayer.values()).filter(d => d.volume > 0).sort((a,b)=>b.flowValue-a.flowValue).slice(0,10);
+  if(!data.length) return;
+
+  const w = Number(svgSel.attr("width") || 300);
+  const h = Number(svgSel.attr("height") || 170);
+  const pad = 22;
+  const xMax = d3.max(data, d => d.flowValue) || 1;
+  const yMax = Math.max(1, d3.max(data, d => d.valuation) || 1);
+  const rMax = Math.max(1, d3.max(data, d => d.volume) || 1);
+  const x = d3.scaleLinear().domain([0, xMax]).range([pad, w - pad]);
+  const y = d3.scaleLinear().domain([0, yMax]).range([h - pad, pad]);
+  const r = d3.scaleSqrt().domain([0, rMax]).range([4, 17]);
+
+  svgSel.append("line").attr("x1", pad).attr("y1", h-pad).attr("x2", w-pad).attr("y2", h-pad).attr("stroke", "rgba(111,132,171,.4)");
+  svgSel.append("line").attr("x1", pad).attr("y1", h-pad).attr("x2", pad).attr("y2", pad).attr("stroke", "rgba(111,132,171,.4)");
+  svgSel.append("text").attr("x", w - pad).attr("y", h - 6).attr("fill", "#9db0cf").attr("font-size", 10).attr("text-anchor", "end").text("Flow value");
+  svgSel.append("text").attr("x", pad + 2).attr("y", pad - 6).attr("fill", "#9db0cf").attr("font-size", 10).text("Valuation");
+
+  const nodes = svgSel.selectAll("g.dot").data(data, d => d.id).join("g").attr("class", "dot");
+  nodes.append("circle")
+    .attr("cx", d => x(d.flowValue))
+    .attr("cy", d => y(d.valuation))
+    .attr("r", d => r(d.volume))
+    .attr("fill", d => rgba(colors[d.team] || "#888", 0.8))
+    .attr("stroke", "rgba(230,240,255,.7)")
+    .attr("stroke-width", 0.8);
+  nodes.append("text")
+    .attr("x", d => x(d.flowValue))
+    .attr("y", d => y(d.valuation) - r(d.volume) - 3)
+    .attr("fill", "#d9e6ff")
+    .attr("font-size", 9)
+    .attr("text-anchor", "middle")
+    .text(d => String(d.name || "").split(",")[0].slice(0,10));
+}
+
+function stopFlowStory(){
+  if(flowStoryTimer){
+    clearInterval(flowStoryTimer);
+    flowStoryTimer = null;
+  }
+}
+
+function stopReplayTimer(){
+  if(replayState.timer){
+    clearInterval(replayState.timer);
+    replayState.timer = null;
+  }
+}
+
+function replayFinalScoreFromTop(){
+  const out = { a: 0, b: 0 };
+  if(!dataBundle || !dataBundle.views || !dataBundle.views.top) return out;
+  const top = dataBundle.views.top;
+  const links = top.links || [];
+  const teamA = (dataBundle.meta && dataBundle.meta.team_a) || "";
+  const teamB = (dataBundle.meta && dataBundle.meta.team_b) || "";
+  links.forEach(l => {
+    const target = String(l.target || "");
+    const val = Number(l.value || 0);
+    if(!val) return;
+    if(teamA && target === `${teamA}_3`) out.a += 3 * val;
+    else if(teamA && target === `${teamA}_2`) out.a += 2 * val;
+    else if(teamA && target === `${teamA}_1`) out.a += 1 * val;
+    if(teamB && target === `${teamB}_3`) out.b += 3 * val;
+    else if(teamB && target === `${teamB}_2`) out.b += 2 * val;
+    else if(teamB && target === `${teamB}_1`) out.b += 1 * val;
+  });
+  return out;
+}
+
+function replayScheduleForLinks(links){
+  const map = new Map();
+  const stageBand = {
+    "start->type": [0.02, 0.55],
+    "type->event": [0.08, 0.78],
+    "event->points": [0.14, 0.96],
+    "other": [0.05, 0.90]
+  };
+  links.forEach((l, idx) => {
+    const srcStage = String((l.source && l.source.stage) || "");
+    const tgtStage = String((l.target && l.target.stage) || "");
+    const keyBand = `${srcStage}->${tgtStage}`;
+    const band = stageBand[keyBand] || stageBand.other;
+    const hash = hashString(`${l.key}|${idx}`);
+    const jitter = ((hash % 17) - 8) / 100;
+    const start = Math.max(0, Math.min(0.98, band[0] + jitter));
+    const end = Math.max(start + 0.02, Math.min(1, band[1] + jitter));
+    map.set(l.key, { start, end });
+  });
+  return map;
+}
+
+function replayReveal(schedule, progress){
+  if(!schedule) return 1;
+  if(progress <= schedule.start) return 0;
+  if(progress >= schedule.end) return 1;
+  const t = (progress - schedule.start) / Math.max(0.0001, (schedule.end - schedule.start));
+  return Math.max(0, Math.min(1, t));
+}
+
+function replayTeams(){
+  const meta = (dataBundle && dataBundle.meta) ? dataBundle.meta : {};
+  const a = String(meta.team_a || "").trim();
+  const b = String(meta.team_b || "").trim();
+  return [a || "Team A", b || "Team B"];
+}
+
+function teamAbbr(name){
+  const s = String(name || "").trim();
+  if(!s) return "TM";
+  const words = s.split(/\s+/).filter(Boolean);
+  if(words.length >= 2){
+    const code = words.slice(0, 3).map(w => w[0]).join("").toUpperCase();
+    return code || s.slice(0, 3).toUpperCase();
+  }
+  const clean = s.replace(/[^A-Za-z]/g, "");
+  return (clean.slice(0, 3) || s.slice(0, 3)).toUpperCase();
+}
+
+function replayStateLabelPair(team){
+  const ab = teamAbbr(team);
+  return {
+    off: `${ab} Offence`,
+    def: `${ab} Defence`
+  };
+}
+
+function replayCurrentBaselines(){
+  if(replayState.baselineMode === "league" && replayState.leagueBaselines){
+    return replayState.leagueBaselines;
+  }
+  return replayState.gameBaselines || replayState.baselines || {};
+}
+
+function replaySetBaselineMode(mode){
+  replayState.baselineMode = mode === "league" ? "league" : "game";
+  if(replayBaseGameBtn) replayBaseGameBtn.classList.toggle("active", replayState.baselineMode === "game");
+  if(replayBaseLeagueBtn) replayBaseLeagueBtn.classList.toggle("active", replayState.baselineMode === "league");
+  if(replayBaseNote){
+    const msg = replayState.baselineMode === "league"
+      ? "League baseline: scores compare against fixed Euroleague priors (PPP 1.05, pace 1.90, 3P mix 37%, TO 13%)."
+      : "Game baseline: scores compare against this game's final profile (relative in-game over/underperformance).";
+    replayBaseNote.textContent = msg;
+  }
+  applyReplayFrame();
+}
+
+function replayBinOffence(v){
+  if(v >= 75) return { label:"On Fire", color:"#00e676" };
+  if(v >= 62) return { label:"Attacking Well", color:"#7cff8d" };
+  if(v >= 48) return { label:"Neutral", color:"#f2c14e" };
+  if(v >= 35) return { label:"Cold", color:"#ff8e3c" };
+  return { label:"Stalled", color:"#ff4d6d" };
+}
+
+function replayBinDefence(v){
+  if(v >= 75) return { label:"Lockdown", color:"#00e676" };
+  if(v >= 62) return { label:"Pressure", color:"#7cff8d" };
+  if(v >= 48) return { label:"Balanced", color:"#f2c14e" };
+  if(v >= 35) return { label:"Leaky", color:"#ff8e3c" };
+  return { label:"Broken", color:"#ff4d6d" };
+}
+
+function replayFmtValue(v){
+  return `${Math.round(v)}/100`;
+}
+
+function replayTagHtml(bin){
+  return `<span class="replay-tag" style="border-color:${rgba(bin.color,0.7)};color:${bin.color};">${bin.label}</span>`;
+}
+
+function replayGaussianSmooth(samples, sigmaMins){
+  const out = [];
+  const sigma = Math.max(0.0001, Number(sigmaMins || 1.4));
+  for(let i = 0; i < samples.length; i++){
+    const xi = Number(samples[i].t || 0);
+    let sw = 0;
+    let sy = 0;
+    for(let j = 0; j < samples.length; j++){
+      const xj = Number(samples[j].t || 0);
+      const d = (xi - xj) / sigma;
+      const w = Math.exp(-0.5 * d * d);
+      sw += w;
+      sy += w * Number(samples[j].v || 0);
+    }
+    out.push({ t: xi, v: sw > 0 ? (sy / sw) : Number(samples[i].v || 0) });
+  }
+  return out;
+}
+
+function replayBuildMetricsAt(progress){
+  const p = Math.max(0, Math.min(1, Number(progress || 0)));
+  const links = replayState.graphLinks || [];
+  const [teamA, teamB] = replayTeams();
+  const teams = [teamA, teamB];
+  const byTeam = {};
+  teams.forEach(team => {
+    byTeam[team] = {
+      poss: 0,
+      points: 0,
+      made2: 0,
+      made3: 0,
+      misses: 0,
+      turnovers: 0
+    };
+  });
+
+  links.forEach(l => {
+    const r = replayReveal(replayState.scheduleByKey.get(l.key), p);
+    if(r <= 0) return;
+    const wv = Number(l.value || 0) * r;
+    if(wv <= 0) return;
+    const source = l.source || {};
+    const target = l.target || {};
+    const team = String(source.team || target.team || "").trim();
+    if(!byTeam[team]){
+      byTeam[team] = { poss: 0, points: 0, made2: 0, made3: 0, misses: 0, turnovers: 0 };
+    }
+
+    if(source.stage === "type" && target.stage === "event"){
+      byTeam[team].poss += wv;
+    }
+    if(source.stage === "event"){
+      const ev = String(source.name || "").toLowerCase();
+      if(ev.indexOf("made 3") !== -1) byTeam[team].made3 += wv;
+      if(ev.indexOf("made 2") !== -1) byTeam[team].made2 += wv;
+      if(ev.indexOf("miss") !== -1) byTeam[team].misses += wv;
+      if(ev.indexOf("turnover") !== -1) byTeam[team].turnovers += wv;
+    }
+    if(target.stage === "points"){
+      const m = String(target.id || target.name || "").match(/_(\d+)$|(\d+)/);
+      const pts = m ? Number(m[1] || m[2] || 0) : 0;
+      if(pts > 0) byTeam[team].points += pts * wv;
+    }
+  });
+
+  const baselines = replayCurrentBaselines();
+  const minutes = 40 * p;
+  const maxMinutes = Math.max(1, minutes);
+  const score = {};
+  teams.forEach(team => {
+    const m = byTeam[team] || { poss:0, points:0, made2:0, made3:0, misses:0, turnovers:0 };
+    const base = baselines[team] || {};
+    const ppp = m.points / Math.max(1, m.poss);
+    const pace = m.poss / maxMinutes;
+    const makeVol = m.made2 + m.made3;
+    const made3share = makeVol > 0 ? (m.made3 / makeVol) : 0;
+    const tor = m.turnovers / Math.max(1, m.poss);
+    const basePpp = Number(base.ppp || 1);
+    const basePace = Number(base.pace || 1);
+    const base3Share = Number(base.made3share || 0.35);
+    const baseTo = Number(base.tor || 0.12);
+    const offenceRaw =
+      50
+      + 34 * ((ppp - basePpp) / Math.max(0.25, basePpp))
+      + 10 * ((pace - basePace) / Math.max(0.2, basePace))
+      + 16 * ((made3share - base3Share) / Math.max(0.1, base3Share))
+      - 14 * ((tor - baseTo) / Math.max(0.05, baseTo));
+    score[team] = {
+      ppp,
+      pace,
+      made3share,
+      tor,
+      points: m.points,
+      poss: m.poss,
+      offence: Math.max(0, Math.min(100, offenceRaw)),
+      defence: 50
+    };
+  });
+
+  const a = teams[0], b = teams[1];
+  const offA = score[a] ? score[a].offence : 50;
+  const offB = score[b] ? score[b].offence : 50;
+  if(score[a]) score[a].defence = Math.max(0, Math.min(100, 100 - offB));
+  if(score[b]) score[b].defence = Math.max(0, Math.min(100, 100 - offA));
+
+  return { teams, byTeam, score, minute: minutes };
+}
+
+function replayUpdateHistory(metrics){
+  const t = Number(metrics.minute || 0);
+  const dt = t - Number(replayState.lastHistoryT || -1);
+  if(dt < 0.22 && t < 40) return;
+  replayState.lastHistoryT = t;
+  metrics.teams.forEach(team => {
+    if(!replayState.historyByTeam[team]) replayState.historyByTeam[team] = [];
+    replayState.historyByTeam[team].push({
+      t,
+      off: Number(metrics.score[team] ? metrics.score[team].offence : 50),
+      def: Number(metrics.score[team] ? metrics.score[team].defence : 50)
+    });
+    if(replayState.historyByTeam[team].length > 260){
+      replayState.historyByTeam[team].shift();
+    }
+  });
+}
+
+function replayValueToColor(v){
+  const t = Math.max(0, Math.min(1, Number(v || 0) / 100));
+  return d3.interpolateRgbBasis(["#b80f35", "#ffb44a", "#44db7f"])(t);
+}
+
+function replayNearestByMinute(hist, minute, key){
+  if(!hist || !hist.length) return null;
+  let best = hist[0];
+  let bestDt = Math.abs(Number(best.t || 0) - minute);
+  for(let i = 1; i < hist.length; i++){
+    const dt = Math.abs(Number(hist[i].t || 0) - minute);
+    if(dt < bestDt){
+      bestDt = dt;
+      best = hist[i];
+    }
+  }
+  return { t: Number(best.t || 0), v: Number(best[key] || 50) };
+}
+
+function replayRenderTrendLines(){
+  if(!replayTrendsSvg) return;
+  const svgSel = d3.select(replayTrendsSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 140);
+  svgSel.selectAll("*").remove();
+  const m = { l: 24, r: 6, t: 8, b: 18 };
+  const x = d3.scaleLinear().domain([0, 40]).range([m.l, w - m.r]);
+  const y = d3.scaleLinear().domain([0, 100]).range([h - m.b, m.t]);
+  svgSel.append("line").attr("x1", m.l).attr("y1", h - m.b).attr("x2", w - m.r).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", m.t).attr("x2", m.l).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  [20, 40, 60, 80].forEach(v => {
+    svgSel.append("line")
+      .attr("x1", m.l).attr("x2", w - m.r).attr("y1", y(v)).attr("y2", y(v))
+      .attr("stroke", "rgba(111,132,171,.16)").attr("stroke-dasharray", "3 3");
+  });
+  const line = d3.line().x(d => x(d.t)).y(d => y(d.v)).curve(d3.curveMonotoneX);
+  const [teamA, teamB] = replayTeams();
+  const series = [
+    { team: teamA, metric: "off", color: colors[teamA] || "#3a86ff", dash: null },
+    { team: teamA, metric: "def", color: rgba(colors[teamA] || "#3a86ff", 0.9), dash: "4 3" },
+    { team: teamB, metric: "off", color: colors[teamB] || "#ff006e", dash: null },
+    { team: teamB, metric: "def", color: rgba(colors[teamB] || "#ff006e", 0.9), dash: "4 3" }
+  ];
+  const liveSeries = [];
+  series.forEach(s => {
+    const hist = (replayState.historyByTeam[s.team] || []).map(d => ({ t: d.t, v: Number(d[s.metric] || 50) }));
+    if(hist.length < 2) return;
+    liveSeries.push({ team: s.team, metric: s.metric, hist, color: s.color, dash: s.dash });
+    const smooth = replayGaussianSmooth(hist, 1.25);
+    svgSel.append("path")
+      .attr("d", line(hist))
+      .attr("fill", "none")
+      .attr("stroke", rgba(s.color, 0.42))
+      .attr("stroke-width", 1.2)
+      .attr("stroke-dasharray", s.dash || null);
+    svgSel.append("path")
+      .attr("d", line(smooth))
+      .attr("fill", "none")
+      .attr("stroke", rgba(s.color, 0.92))
+      .attr("stroke-width", 2)
+      .attr("stroke-dasharray", s.dash || null);
+  });
+
+  const hoverLayer = svgSel.append("g");
+  const probe = hoverLayer.append("line")
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "rgba(233,241,255,.55)")
+    .attr("stroke-dasharray", "3 3")
+    .style("display", "none");
+  const dotLayer = hoverLayer.append("g");
+
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      if(!liveSeries.length) return;
+      const px = Math.max(m.l, Math.min(w - m.r, d3.pointer(event)[0]));
+      const minute = x.invert(px);
+      probe.style("display", null).attr("x1", px).attr("x2", px);
+      const dots = [];
+      liveSeries.forEach(s => {
+        const near = replayNearestByMinute((replayState.historyByTeam[s.team] || []), minute, s.metric);
+        if(!near) return;
+        dots.push({
+          x: x(near.t),
+          y: y(near.v),
+          color: s.color,
+          text: `${teamAbbr(s.team)} ${s.metric === "off" ? "Off" : "Def"} ${Math.round(near.v)}`
+        });
+      });
+      dotLayer.selectAll("circle")
+        .data(dots)
+        .join("circle")
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+        .attr("r", 2.8)
+        .attr("fill", d => d.color)
+        .attr("stroke", "#f4f8ff")
+        .attr("stroke-width", 0.7);
+      if(replayHoverReadout){
+        replayHoverReadout.textContent = `Minute ${minute.toFixed(1)}: ${dots.map(d => d.text).join(" | ")}`;
+      }
+    })
+    .on("mouseleave", () => {
+      probe.style("display", "none");
+      dotLayer.selectAll("*").remove();
+      if(replayHoverReadout){
+        replayHoverReadout.textContent = "Hover the chart to inspect minute values.";
+      }
+    });
+}
+
+function replayRenderFilmstrip(){
+  if(!replayFilmstripSvg) return;
+  const svgSel = d3.select(replayFilmstripSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 110);
+  svgSel.selectAll("*").remove();
+  const m = { l: 24, r: 6, t: 8, b: 18 };
+  const x = d3.scaleLinear().domain([0, 40]).range([m.l, w - m.r]);
+  const [teamA, teamB] = replayTeams();
+  const tracks = [
+    { team: teamA, metric: "off", label: `${teamAbbr(teamA)} Off` },
+    { team: teamA, metric: "def", label: `${teamAbbr(teamA)} Def` },
+    { team: teamB, metric: "off", label: `${teamAbbr(teamB)} Off` },
+    { team: teamB, metric: "def", label: `${teamAbbr(teamB)} Def` }
+  ];
+  const trackHeight = (h - m.t - m.b) / tracks.length;
+  const bucket = 0.4;
+  tracks.forEach((tr, rowIdx) => {
+    const y0 = m.t + rowIdx * trackHeight;
+    svgSel.append("text")
+      .attr("x", 2)
+      .attr("y", y0 + trackHeight * 0.62)
+      .attr("fill", "#9db0cf")
+      .attr("font-size", 9)
+      .text(tr.label);
+    const hist = replayState.historyByTeam[tr.team] || [];
+    for(let t = 0; t < 40; t += bucket){
+      const near = replayNearestByMinute(hist, t, tr.metric);
+      if(!near) continue;
+      svgSel.append("rect")
+        .attr("x", x(t))
+        .attr("y", y0 + 1)
+        .attr("width", Math.max(0.8, x(t + bucket) - x(t) + 0.2))
+        .attr("height", Math.max(1, trackHeight - 2))
+        .attr("fill", replayValueToColor(near.v))
+        .attr("opacity", 0.95);
+    }
+  });
+  const playX = x(40 * replayState.progress);
+  svgSel.append("line")
+    .attr("x1", playX)
+    .attr("x2", playX)
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "#f1f6ff")
+    .attr("stroke-width", 1.2);
+  svgSel.append("line").attr("x1", m.l).attr("x2", w - m.r).attr("y1", h - m.b).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("text").attr("x", w - m.r).attr("y", h - 4).attr("fill", "#9db0cf").attr("font-size", 9).attr("text-anchor", "end").text("min");
+  const hoverProbe = svgSel.append("line")
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "rgba(233,241,255,.62)")
+    .attr("stroke-dasharray", "3 3")
+    .style("display", "none");
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      const px = Math.max(m.l, Math.min(w - m.r, d3.pointer(event)[0]));
+      const minute = x.invert(px);
+      hoverProbe.style("display", null).attr("x1", px).attr("x2", px);
+      const chunks = [];
+      tracks.forEach(tr => {
+        const hist = replayState.historyByTeam[tr.team] || [];
+        const near = replayNearestByMinute(hist, minute, tr.metric);
+        if(!near) return;
+        chunks.push(`${tr.label} ${Math.round(near.v)}`);
+      });
+      if(replayFilmstripReadout){
+        replayFilmstripReadout.textContent = `Minute ${minute.toFixed(1)} (${replayState.baselineMode} baseline): ${chunks.join(" | ")}`;
+      }
+    })
+    .on("mouseleave", () => {
+      hoverProbe.style("display", "none");
+      if(replayFilmstripReadout){
+        replayFilmstripReadout.textContent = "Hover filmstrip to inspect all channel values at one minute.";
+      }
+    });
+}
+
+function replayRenderPhaseMap(){
+  if(!replayPhaseSvg) return;
+  const svgSel = d3.select(replayPhaseSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 150);
+  svgSel.selectAll("*").remove();
+  const m = { l: 30, r: 8, t: 8, b: 22 };
+  const x = d3.scaleLinear().domain([0, 100]).range([m.l, w - m.r]);
+  const y = d3.scaleLinear().domain([0, 100]).range([h - m.b, m.t]);
+  svgSel.append("line").attr("x1", x(50)).attr("y1", m.t).attr("x2", x(50)).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.26)").attr("stroke-dasharray","3 3");
+  svgSel.append("line").attr("x1", m.l).attr("y1", y(50)).attr("x2", w - m.r).attr("y2", y(50)).attr("stroke", "rgba(111,132,171,.26)").attr("stroke-dasharray","3 3");
+  svgSel.append("rect")
+    .attr("x", x(35)).attr("y", y(75))
+    .attr("width", x(75) - x(35)).attr("height", y(35) - y(75))
+    .attr("fill", "rgba(41,194,113,.08)").attr("stroke", "rgba(41,194,113,.24)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", h - m.b).attr("x2", w - m.r).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", m.t).attr("x2", m.l).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("text").attr("x", w - m.r).attr("y", h - 6).attr("fill", "#9db0cf").attr("font-size", 10).attr("text-anchor", "end").text("Offence");
+  svgSel.append("text").attr("x", m.l + 2).attr("y", m.t + 10).attr("fill", "#9db0cf").attr("font-size", 10).text("Defence");
+  svgSel.append("text").attr("x", x(72)).attr("y", y(82)).attr("fill", "rgba(126,233,161,.78)").attr("font-size", 9).text("Two-way surge");
+  svgSel.append("text").attr("x", x(72)).attr("y", y(24)).attr("fill", "rgba(255,175,133,.8)").attr("font-size", 9).text("Score-first / soft defense");
+  svgSel.append("text").attr("x", x(16)).attr("y", y(82)).attr("fill", "rgba(255,175,133,.8)").attr("font-size", 9).text("Defensive grind");
+  svgSel.append("text").attr("x", x(16)).attr("y", y(24)).attr("fill", "rgba(247,121,130,.82)").attr("font-size", 9).text("Breakdown zone");
+  const line = d3.line().x(d => x(d.off)).y(d => y(d.def)).curve(d3.curveCatmullRom.alpha(0.6));
+  const allPoints = [];
+  replayTeams().forEach(team => {
+    const hist = replayState.historyByTeam[team] || [];
+    if(hist.length < 2) return;
+    const c = colors[team] || "#3a86ff";
+    svgSel.append("path")
+      .attr("d", line(hist))
+      .attr("fill", "none")
+      .attr("stroke", rgba(c, 0.72))
+      .attr("stroke-width", 1.8);
+    const last = hist[hist.length - 1];
+    svgSel.append("circle")
+      .attr("cx", x(last.off)).attr("cy", y(last.def)).attr("r", 3.1)
+      .attr("fill", c).attr("stroke", "#f3f7ff").attr("stroke-width", 0.8);
+    hist.forEach(p => allPoints.push({ team, t: p.t, off: p.off, def: p.def, x: x(p.off), y: y(p.def), color: c }));
+  });
+  const hoverDot = svgSel.append("circle").attr("r", 4).attr("fill", "#f1f6ff").attr("stroke", "#0d1222").attr("stroke-width", 1).style("display", "none");
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      if(!allPoints.length) return;
+      const [mx, my] = d3.pointer(event);
+      let best = null;
+      let bestD = Infinity;
+      allPoints.forEach(p => {
+        const dx = p.x - mx;
+        const dy = p.y - my;
+        const d = (dx * dx) + (dy * dy);
+        if(d < bestD){
+          bestD = d;
+          best = p;
+        }
+      });
+      if(!best) return;
+      hoverDot.style("display", null).attr("cx", best.x).attr("cy", best.y).attr("fill", best.color);
+      if(replayPhaseReadout){
+        replayPhaseReadout.textContent = `${teamAbbr(best.team)} at ${best.t.toFixed(1)} min: Off ${Math.round(best.off)}, Def ${Math.round(best.def)} (${replayState.baselineMode} baseline).`;
+      }
+    })
+    .on("mouseleave", () => {
+      hoverDot.style("display", "none");
+      if(replayPhaseReadout){
+        replayPhaseReadout.textContent = "Hover phase map to inspect point-time-state mapping.";
+      }
+    });
+}
+
+function replayRenderCallouts(metrics){
+  if(!replayCallouts) return;
+  const teams = metrics.teams;
+  const out = [];
+  teams.forEach(team => {
+    const s = metrics.score[team];
+    if(!s) return;
+    const bOff = replayBinOffence(s.offence);
+    const bDef = replayBinDefence(s.defence);
+    const made3Pct = Math.round(100 * (s.made3share || 0));
+    if(s.offence >= 72 && made3Pct >= 42){
+      out.push(`${team}: on fire from 3 (${made3Pct}% of made shots are 3s).`);
+    } else if(s.offence >= 72){
+      out.push(`${team}: offense surge (${s.ppp.toFixed(2)} PPP).`);
+    }
+    if(s.defence >= 72){
+      out.push(`${team}: defensive pressure ramping up.`);
+    }
+    if(s.offence <= 34){
+      out.push(`${team}: offense stalled, low quality finish rate.`);
+    }
+    if(s.tor >= 0.17){
+      out.push(`${team}: turnover wave (${(100 * s.tor).toFixed(1)}% of possessions).`);
+    }
+    if(out.length < 2){
+      out.push(`${team}: Off ${replayFmtValue(s.offence)} (${bOff.label}), Def ${replayFmtValue(s.defence)} (${bDef.label}).`);
+    }
+  });
+  const uniq = [];
+  out.forEach(x => {
+    if(uniq.indexOf(x) === -1) uniq.push(x);
+  });
+  replayCallouts.innerHTML = uniq.slice(0, 3).map(x => `<div class="replay-callout">${x}</div>`).join("");
+}
+
+function replayRenderStateCards(metrics){
+  const [teamA, teamB] = metrics.teams;
+  const titleA = replayStateLabelPair(teamA);
+  const titleB = replayStateLabelPair(teamB);
+  if(replayTitleOffA) replayTitleOffA.textContent = titleA.off;
+  if(replayTitleDefA) replayTitleDefA.textContent = titleA.def;
+  if(replayTitleOffB) replayTitleOffB.textContent = titleB.off;
+  if(replayTitleDefB) replayTitleDefB.textContent = titleB.def;
+  const a = metrics.score[teamA] || { offence:50, defence:50 };
+  const b = metrics.score[teamB] || { offence:50, defence:50 };
+  const binOffA = replayBinOffence(a.offence);
+  const binDefA = replayBinDefence(a.defence);
+  const binOffB = replayBinOffence(b.offence);
+  const binDefB = replayBinDefence(b.defence);
+  if(replayOffA) replayOffA.innerHTML = `${replayFmtValue(a.offence)} ${replayTagHtml(binOffA)}`;
+  if(replayDefA) replayDefA.innerHTML = `${replayFmtValue(a.defence)} ${replayTagHtml(binDefA)}`;
+  if(replayOffB) replayOffB.innerHTML = `${replayFmtValue(b.offence)} ${replayTagHtml(binOffB)}`;
+  if(replayDefB) replayDefB.innerHTML = `${replayFmtValue(b.defence)} ${replayTagHtml(binDefB)}`;
+}
+
+function applyReplayFrame(){
+  if(!replayState.active) return;
+  const p = Math.max(0, Math.min(1, replayState.progress));
+  const mins = 40 * p;
+  const mm = Math.floor(mins);
+  const ss = Math.floor((mins - mm) * 60);
+  if(replayClock) replayClock.textContent = `${String(mm).padStart(2,"0")}:${String(ss).padStart(2,"0")}`;
+  if(replayMinute) replayMinute.textContent = `Minute ${mins.toFixed(1)} / 40.0`;
+  if(replayFill) replayFill.style.width = `${(p * 100).toFixed(1)}%`;
+  const meta = dataBundle && dataBundle.meta ? dataBundle.meta : {};
+  const teamA = meta.team_a || "Team A";
+  const teamB = meta.team_b || "Team B";
+  const scoreA = Math.round(replayState.finalScoreA * p);
+  const scoreB = Math.round(replayState.finalScoreB * p);
+  if(replayScoreA) replayScoreA.textContent = `${teamA} ${scoreA}`;
+  if(replayScoreB) replayScoreB.textContent = `${scoreB} ${teamB}`;
+
+  linkLayer.selectAll("path.link")
+    .attr("stroke-width", d => {
+      const base = Math.max(1, Number(d.twinWidth) || Number(d.width) || 1);
+      const r = replayReveal(replayState.scheduleByKey.get(d.key), p);
+      return Math.max(0.4, base * r);
+    })
+    .style("opacity", d => {
+      const r = replayReveal(replayState.scheduleByKey.get(d.key), p);
+      return Math.max(0.04, 0.08 + 0.92 * r);
+    });
+
+  nodeLayer.selectAll("g.node")
+    .style("opacity", d => {
+      if(!d) return 1;
+      const src = (d.sourceLinks || []).reduce((s,l)=>s+replayReveal(replayState.scheduleByKey.get(l.key), p),0);
+      const tgt = (d.targetLinks || []).reduce((s,l)=>s+replayReveal(replayState.scheduleByKey.get(l.key), p),0);
+      const v = Math.max(src, tgt);
+      return Math.max(0.08, Math.min(1, 0.14 + v));
+    });
+
+  const metrics = replayBuildMetricsAt(p);
+  replayUpdateHistory(metrics);
+  replayRenderStateCards(metrics);
+  replayRenderCallouts(metrics);
+  replayRenderTrendLines();
+  replayRenderPhaseMap();
+  replayRenderFilmstrip();
+}
+
+function startReplay(){
+  if(!replayState.active || replayState.playing) return;
+  replayState.playing = true;
+  const stepMs = 50;
+  const delta = stepMs / Math.max(1000, replayState.durationMs);
+  stopReplayTimer();
+  replayState.timer = setInterval(() => {
+    replayState.progress = Math.min(1, replayState.progress + delta);
+    applyReplayFrame();
+    if(replayState.progress >= 1){
+      stopReplayTimer();
+      replayState.playing = false;
+    }
+  }, stepMs);
+}
+
+function pauseReplay(){
+  replayState.playing = false;
+  stopReplayTimer();
+}
+
+function resetReplay(){
+  replayState.progress = 0;
+  replayState.playing = false;
+  stopReplayTimer();
+  applyReplayFrame();
+}
+
+function initReplayForGraph(graph){
+  replayState.active = !!replayLab;
+  replayState.graphLinks = (graph && graph.links) ? graph.links : [];
+  replayState.graphNodes = (graph && graph.nodes) ? graph.nodes : [];
+  replayState.scheduleByKey = replayScheduleForLinks(replayState.graphLinks);
+  const fs = replayFinalScoreFromTop();
+  replayState.finalScoreA = fs.a;
+  replayState.finalScoreB = fs.b;
+  replayState.progress = 0;
+  replayState.playing = false;
+  replayState.historyByTeam = {};
+  replayState.lastHistoryT = -1;
+  replayState.baselines = {};
+  replayState.gameBaselines = {};
+  replayState.leagueBaselines = {};
+  const full = replayBuildMetricsAt(1);
+  if(full && full.teams){
+    full.teams.forEach(team => {
+      const s = full.score[team] || {};
+      replayState.gameBaselines[team] = {
+        ppp: Number(s.ppp || 1),
+        pace: Number(s.pace || 1),
+        made3share: Number(s.made3share || 0.35),
+        tor: Number(s.tor || 0.12)
+      };
+      replayState.leagueBaselines[team] = {
+        ppp: 1.05,
+        pace: 1.90,
+        made3share: 0.37,
+        tor: 0.13
+      };
+    });
+  }
+  replayState.baselines = replayCurrentBaselines();
+  replaySetBaselineMode(replayState.baselineMode || "game");
+  stopReplayTimer();
+  if(replayHud){
+    replayHud.style.display = replayLab ? "block" : "none";
+  }
+  applyReplayFrame();
+}
+
+function buildFlowIndexQuestions(viewKey){
+  if(!flowIndexLab) return;
+  const wrap = document.getElementById("flow-index-lab");
+  const list = document.getElementById("flow-q-list");
+  const ans = document.getElementById("flow-q-answer");
+  const playBtn = document.getElementById("flow-story-play");
+  const stopBtn = document.getElementById("flow-story-stop");
+  if(!wrap || !list || !ans) return;
+  wrap.style.display = "block";
+  const links = (currentGraphLinks || []).filter(l => l && l.key);
+  renderFlowImpactBubbles(links);
+  const lookup = buildBoxscoreLookup();
+  const playerContext = (top) => {
+    if(!top) return "";
+    const bs = lookup.byId.get(String(top.playerId || "")) || lookup.byName.get(String(top.name || "")) || null;
+    if(!bs) return "";
+    const val = bs.valuation != null ? `VAL ${bs.valuation}` : null;
+    const pts = bs.points != null ? `PTS ${bs.points}` : null;
+    const mins = bs.minutes ? `MIN ${bs.minutes}` : null;
+    const parts = [val, pts, mins].filter(Boolean);
+    return parts.length ? ` <span style="color:#9db0cf">(${parts.join(" · ")})</span>` : "";
+  };
+  if(!links.length){
+    list.innerHTML = "";
+    ans.textContent = "No flow links available for this view.";
+    stopFlowStory();
+    return;
+  }
+
+  const q = [
+    {
+      id: "q_best_driver",
+      label: "Who drives the most valuable flows?",
+      run: () => {
+        const ranked = links
+          .map(l => ({ link:l, score:flowIndexScore(l) }))
+          .filter(x => x.score > 0)
+          .sort((a,b) => b.score - a.score);
+        const picked = ranked[0] ? ranked[0].link : links[0];
+        const mix = getFlowMix(picked);
+        const top = (mix.players || []).slice().sort((a,b)=>b.poss-a.poss)[0];
+        const text = top
+          ? `<strong>Answer:</strong> ${top.name} is the lead driver on this high-value branch (<code>${picked.source.name} → ${picked.target.name}</code>) with ${formatPlayerBranchShare(top, picked)}.${playerContext(top)}`
+          : `<strong>Answer:</strong> This branch is currently the top valuable flow by Flow Index.`;
+        focusFlowLink(viewKey, picked, text);
+      }
+    },
+    {
+      id: "q_most_concentrated",
+      label: "Which valuable flow is most concentrated in one player?",
+      run: () => {
+        const candidates = links
+          .map(l => {
+            const mix = getFlowMix(l);
+            const topShare = (mix.players || []).reduce((m,p)=>Math.max(m, Number(p.share)||0),0);
+            return { link:l, topShare, score:flowIndexScore(l), mix };
+          })
+          .filter(x => x.score > 0)
+          .sort((a,b) => (b.topShare - a.topShare) || (b.score - a.score));
+        const picked = candidates[0] ? candidates[0].link : links[0];
+        const mix = getFlowMix(picked);
+        const top = (mix.players || []).slice().sort((a,b)=>b.share-a.share)[0];
+        const text = top
+          ? `<strong>Answer:</strong> ${top.name} has the highest concentration on this valuable branch: ${formatPlayerBranchShare(top, picked)} on <code>${picked.source.name} → ${picked.target.name}</code>.${playerContext(top)}`
+          : `<strong>Answer:</strong> This branch shows the highest concentration among current valuable flows.`;
+        focusFlowLink(viewKey, picked, text);
+      }
+    },
+    {
+      id: "q_made2_driver",
+      label: "Who is the main driver of Made 2 outcomes?",
+      run: () => {
+        const made2 = links.filter(l => String((l.source && l.source.name) || "") === "Made 2" || String((l.target && l.target.name) || "").indexOf("2 pts") !== -1);
+        const picked = (made2.sort((a,b)=>(Number(b.value)||0)-(Number(a.value)||0))[0]) || links[0];
+        const mix = getFlowMix(picked);
+        const top = (mix.players || []).slice().sort((a,b)=>b.poss-a.poss)[0];
+        const text = top
+          ? `<strong>Answer:</strong> ${top.name} is the main Made-2 driver on this branch with ${formatPlayerBranchShare(top, picked)}.${playerContext(top)}`
+          : `<strong>Answer:</strong> This is the dominant Made-2 branch in the current view.`;
+        focusFlowLink(viewKey, picked, text);
+      }
+    }
+  ];
+
+  list.innerHTML = q.map(item => `<button class="flow-q-btn" data-q="${item.id}">${item.label}</button>`).join("");
+  list.querySelectorAll("button.flow-q-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      list.querySelectorAll("button.flow-q-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const match = q.find(x => x.id === btn.dataset.q);
+      if(match) match.run();
+    });
+  });
+  const runQuestionByIndex = (idx) => {
+    const buttons = Array.from(list.querySelectorAll("button.flow-q-btn"));
+    if(!buttons.length) return;
+    const safe = ((idx % buttons.length) + buttons.length) % buttons.length;
+    const btn = buttons[safe];
+    btn.click();
+  };
+  if(playBtn){
+    playBtn.onclick = () => {
+      stopFlowStory();
+      let i = 0;
+      runQuestionByIndex(i);
+      flowStoryTimer = setInterval(() => {
+        i += 1;
+        runQuestionByIndex(i);
+      }, 2600);
+    };
+  }
+  if(stopBtn){
+    stopBtn.onclick = () => stopFlowStory();
+  }
+  if(!activeFlowQuestion){
+    ans.textContent = "Try: 'Who drives the most valuable flows?'";
+  } else {
+    ans.innerHTML = activeFlowQuestion;
+  }
+}
 
 function renderInsights(list){
   if(!Array.isArray(list)) return "";
@@ -216,7 +1648,7 @@ function renderInsights(list){
     return `<div class="${baseClass}"><div class="insight-auto-tag"><strong>Auto insight</strong><span>${levelLabel}</span></div><div class="insight-auto-text">${summary}</div>${details?`<div class="insight-auto-meta">${details}</div>`:""}${rarityHtml}${histHtml}</div>`;
   }).join("");
 }
-function computeTopMetrics(){
+function computeTopMetrics(focusTeam = null){
   if(!dataBundle||!dataBundle.views||!dataBundle.views.top) return null;
   const top=dataBundle.views.top;
   const oreb=dataBundle.views.oreb||null;
@@ -241,6 +1673,7 @@ function computeTopMetrics(){
   }
   const metrics={};
   Object.keys(starts).forEach(team=>{
+    if(focusTeam && team !== focusTeam) return;
     const poss=parseFloat(starts[team]||0);
     if(!isFinite(poss)||poss<=0) return;
     const totalPts=pointsFromView(top,team);
@@ -267,13 +1700,13 @@ function computeTopMetrics(){
   });
   return metrics;
 }
-function renderRadar(viewKey){
+function renderRadar(viewKey, focusTeam = null){
   const card=document.getElementById("radar-card");
   const svgNode=document.getElementById("radar-svg");
   const legend=document.getElementById("radar-legend");
   if(!card||!svgNode||!legend) return;
   if(viewKey!=="top"){ card.style.display="none"; svgNode.innerHTML=""; legend.innerHTML=""; return; }
-  const metrics=computeTopMetrics();
+  const metrics=computeTopMetrics(focusTeam);
   if(!metrics||Object.keys(metrics).length===0){ card.style.display="none"; svgNode.innerHTML=""; legend.innerHTML=""; return; }
   card.style.display="block";
   const teams=Object.keys(metrics);
@@ -327,7 +1760,7 @@ function renderRadar(viewKey){
     return `<span><span class="radar-dot" style="background:${c}"></span>${team}</span>`;
   }).join(" ");
 }
-function renderShotProfile(viewKey){
+function renderShotProfile(viewKey, focusTeam = null){
   const el=document.getElementById("shot-profile");
   if(!el||!dataBundle||!dataBundle.views) return;
   const v=dataBundle.views[viewKey];
@@ -355,10 +1788,11 @@ function renderShotProfile(viewKey){
     perTeam[team].total+=val;
   });
   const teams=Object.keys(perTeam);
-  if(!teams.length){ el.innerHTML=""; return; }
+  const filteredTeams = focusTeam ? teams.filter(t => t === focusTeam) : teams;
+  if(!filteredTeams.length){ el.innerHTML=""; return; }
   const colorsMap={made3:"#ff006e", made2:"#3a86ff", fts:"#ffbe0b", miss:"#6c757d", to:"#d62839"};
   let html="";
-  teams.forEach(team=>{
+  filteredTeams.forEach(team=>{
     const s=perTeam[team];
     if(!s.total) return;
     html+=`<div class="shot-profile-row"><div class="shot-profile-label">${team}</div><div class="shot-profile-bar">`;
@@ -373,19 +1807,84 @@ function renderShotProfile(viewKey){
 }
 function setPanel(viewKey, custom=null){
   const v=dataBundle.views[viewKey], t=document.getElementById("panel-title"), d=document.getElementById("panel-desc"), k=document.getElementById("kpi-grid"), i=document.getElementById("insights");
-  if(custom){ t.textContent=custom.title; d.innerHTML=custom.desc; k.innerHTML=custom.kpis; i.innerHTML=custom.insights; return; }
-  t.textContent=v.title; d.innerHTML=v.desc;
-  k.innerHTML=(v.kpis||[]).map(([l,val])=>`<div class="tile"><div class="label">${l}</div><div class="value">${val}</div></div>`).join("");
-  i.innerHTML=renderInsights(v.insights||[]);
-  renderRadar(viewKey);
-  renderShotProfile(viewKey);
+  if(custom){
+    t.textContent=custom.title;
+    d.innerHTML=custom.desc;
+    k.innerHTML=custom.kpis;
+    i.innerHTML=custom.insights;
+  } else {
+    const focusSuffix = teamFocus ? ` — ${teamFocus}` : "";
+    t.textContent=v.title + focusSuffix;
+    d.innerHTML=v.desc + (teamFocus ? `<div style="margin-top:8px;color:var(--muted);font-size:12px;">Focused on one team.</div>` : "");
+    const allKpis = (v.kpis || []);
+    const kpis = teamFocus ? allKpis.filter(([l,val]) => String(l).startsWith(teamFocus)) : allKpis;
+    k.innerHTML=(kpis||[]).map(([l,val])=>`<div class="tile"><div class="label">${l}</div><div class="value">${val}</div></div>`).join("");
+    i.innerHTML=renderInsights(v.insights||[]);
+  }
+  renderRadar(viewKey, teamFocus);
+  renderShotProfile(viewKey, teamFocus);
 }
 function buildControls(){
   const order=["top","halfcourt","transition","oreb","made2","made3"].filter(k=>dataBundle.views[k]);
-  controls.innerHTML=order.map(k=>`<button data-view="${k}" class="${k===currentView?'active':''}">${dataBundle.views[k].label}</button>`).join("");
-  controls.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>setView(btn.dataset.view)));
+  const teams = getAvailableTeams();
+  const singleTeam = teamFocus || defaultSingleTeam();
+  const modeButtons = [
+    `<button data-mode="dual" class="${teamFocus ? "" : "active"}">2 Teams</button>`,
+    `<button data-mode="single" class="${teamFocus ? "active" : ""}">1 Team</button>`,
+  ];
+  const singleTeamButtons = teamFocus
+    ? teams.map((team, idx) => `<button data-team-index="${idx}" class="${teamFocus===team?'active':''}">${team}</button>`)
+    : [];
+
+  controls.innerHTML = [
+    ...order.map(k=>`<button data-view="${k}" class="${k===currentView?'active':''}">${dataBundle.views[k].label}</button>`),
+    `<span class="controls-divider" aria-hidden="true"></span>`,
+    ...modeButtons,
+    ...singleTeamButtons,
+  ].join("");
+
+  controls.querySelectorAll("button[data-view]").forEach(btn=>btn.addEventListener("click",()=>setView(btn.dataset.view)));
+  controls.querySelectorAll("button[data-mode='dual']").forEach(btn=>btn.addEventListener("click",()=>setView(currentView,{teamFocus:null})));
+  controls.querySelectorAll("button[data-mode='single']").forEach(btn=>btn.addEventListener("click",()=>{
+    const team = singleTeam || defaultSingleTeam();
+    if(team) setView(currentView,{teamFocus:team});
+  }));
+  controls.querySelectorAll("button[data-team-index]").forEach(btn=>btn.addEventListener("click",()=>{
+    const idx = parseInt(btn.dataset.teamIndex || "-1", 10);
+    const team = teams[idx];
+    if(team) setView(currentView,{teamFocus:team});
+  }));
 }
-function setView(viewKey){ currentView=viewKey; buildControls(); renderView(viewKey); setPanel(viewKey); document.getElementById("crumbs").textContent=`View: ${dataBundle.views[viewKey].label}`; }
+function setView(viewKey, opts = {}) {
+  const prevView = currentView;
+  clearExplodeFocus();
+  pauseReplay();
+  teamFocus = ("teamFocus" in opts) ? opts.teamFocus : teamFocus;
+  if(teamFocus) lastSingleTeam = teamFocus;
+  currentView = viewKey;
+  buildControls();
+  setPanel(viewKey);
+  document.getElementById("crumbs").textContent=`View: ${dataBundle.views[viewKey].label}`;
+  // For the 4->3 PoC, we want a real "nodes shift left" effect.
+  // So we render the drilldown in its full (4-column) layout first,
+  // then immediately morph to the compressed (3-column) layout.
+  const isTypeZoom = TYPE_ZOOM_VIEWS.has(viewKey);
+  const wasTypeZoom = TYPE_ZOOM_VIEWS.has(prevView);
+  const shouldRunFourToThreePush = typeZoomVariant === 3 && isTypeZoom && !wasTypeZoom;
+
+  if (shouldRunFourToThreePush) {
+    const seq = ++renderSequence;
+    renderView(viewKey, { omitStartOverride: false, animate: false });
+    requestAnimationFrame(() => {
+      if (seq !== renderSequence) return;
+      renderView(viewKey, { omitStartOverride: true, animate: true });
+      buildFlowIndexQuestions(viewKey);
+    });
+  } else {
+    renderView(viewKey, { animate: true });
+    buildFlowIndexQuestions(viewKey);
+  }
+}
 function nodeExplain(d){
   const inbound=d.targetLinks?d.targetLinks.reduce((s,x)=>s+x.value,0):0, outbound=d.sourceLinks?d.sourceLinks.reduce((s,x)=>s+x.value,0):0, volume=Math.max(inbound,outbound);
   return { title:`${d.team} — ${d.stage==="start"?"start":d.name}`, desc:`${volume} possessions flowed through this node in the current view.`, kpis:`<div class="tile"><div class="label">Team</div><div class="value">${d.team}</div></div><div class="tile"><div class="label">Flow volume</div><div class="value">${volume}</div></div>`, insights:`<div class="item">This node can support deeper narratives later once a metrics layer is added.</div>` };
@@ -393,34 +1892,481 @@ function nodeExplain(d){
 function linkExplain(d){
   return { title:`${d.source.team} — ${d.source.name} → ${d.target.name}`, desc:`This branch carried ${d.value} possessions.`, kpis:`<div class="tile"><div class="label">Team</div><div class="value">${d.source.team}</div></div><div class="tile"><div class="label">Branch volume</div><div class="value">${d.value}</div></div>`, insights:`<div class="item">Flows are strong drill targets because they already encode a mini-story.</div>` };
 }
-function renderView(viewKey){
-  svg.selectAll("*").remove();
-  const dataset=dataBundle.views[viewKey];
-  const nodes=dataset.nodes.map(d=>({...d}));
-  const idx=new Map(nodes.map((d,i)=>[d.id,i]));
-  const links=(dataset.links||[]).filter(d=>d.value>0).map(d=>({...d,source:idx.get(d.source),target:idx.get(d.target)}));
-  const stageOrder={start:0,type:1,event:2,points:3}; nodes.forEach(d=>d.layer=stageOrder[d.stage]);
-  const sankey=d3.sankey().nodeWidth(18).nodePadding(18).nodeAlign(d=>d.layer).extent([[52,84],[width-52,height-48]]);
-  const graph=sankey({nodes:nodes.map(d=>({...d})),links:links.map(d=>({...d}))});
-  const xs=[55,340,700,1100];
-  svg.append("g").selectAll("text").data(dataset.columns.map((label,i)=>({label,x:xs[i]}))).join("text").attr("class","col-label").attr("x",d=>d.x).attr("y",40).text(d=>d.label);
-  svg.append("g").selectAll("path").data(graph.links).join("path").attr("class","link").attr("d",d3.sankeyLinkHorizontal()).attr("stroke",d=>rgba(colors[d.source.team]||"#888",0.55)).attr("stroke-width",d=>Math.max(1,d.width))
-    .on("mousemove",(event,d)=>{ tooltip.innerHTML=`<div class="tag" style="background:${colors[d.source.team]||'#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>`; tooltip.style.left=`${event.offsetX+18}px`; tooltip.style.top=`${event.offsetY+18}px`; tooltip.classList.add("show"); })
-    .on("mouseleave",()=>tooltip.classList.remove("show")).on("click",(_,d)=>setPanel(viewKey,linkExplain(d)));
-  const node=svg.append("g").selectAll("g").data(graph.nodes).join("g").attr("class","node");
-  node.append("rect").attr("x",d=>d.x0).attr("y",d=>d.y0).attr("width",d=>d.x1-d.x0).attr("height",d=>Math.max(6,d.y1-d.y0)).attr("fill",d=>rgba(colors[d.team]||"#888",0.18))
-    .on("click",(_,d)=>setPanel(viewKey,nodeExplain(d)))
-    .on("mousemove",(event,d)=>{ const inbound=d.targetLinks.reduce((s,x)=>s+x.value,0), outbound=d.sourceLinks.reduce((s,x)=>s+x.value,0), volume=Math.max(inbound,outbound); let extra=""; if(d.stage==="type"){ const total=dataset.starts[d.team]; if(total) extra=`<div style="margin-top:4px;color:#9db0cf">Share: ${(100*volume/total).toFixed(1)}%</div>`;} tooltip.innerHTML=`<div class="tag" style="background:${colors[d.team]||'#888'}">${d.team}</div><div><strong>${d.stage==="start"?d.team:d.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${volume}</div>${extra}`; tooltip.style.left=`${event.offsetX+18}px`; tooltip.style.top=`${event.offsetY+18}px`; tooltip.classList.add("show"); })
-    .on("mouseleave",()=>tooltip.classList.remove("show"));
-  node.append("text").attr("class","node-main-label").attr("x",d=>d.layer<=1?d.x1+8:d.x0-8).attr("y",d=>(d.y0+d.y1)/2-(d.stage==="type"?7:0)).attr("text-anchor",d=>d.layer<=1?"start":"end").text(d=>d.stage==="start"?d.team:d.name);
-  node.filter(d=>d.stage==="type").append("text").attr("class","node-pct-label").attr("x",d=>d.x1+8).attr("y",d=>(d.y0+d.y1)/2+9).attr("text-anchor","start").text(d=>{ const total=dataset.starts[d.team]; const volume=Math.max(d.targetLinks.reduce((s,x)=>s+x.value,0),d.sourceLinks.reduce((s,x)=>s+x.value,0)); return total?`${(100*volume/total).toFixed(1)}% of starts`:""; });
+function renderView(viewKey, opts = {}){
+  const dataset = dataBundle.views[viewKey];
+  const twinMode = twinLab;
+  const omitStart = ("omitStartOverride" in opts) ? opts.omitStartOverride : omitStartStageForViz(viewKey);
+  const animate = (!("animate" in opts)) || opts.animate !== false;
+
+  const baseNodes = (dataset.nodes || []).map(d => ({ ...d }));
+  const nodes = baseNodes
+    .filter(d => !teamFocus || d.team === teamFocus)
+    .filter(d => !omitStart || d.stage !== "start");
+
+  const idx = new Map(nodes.map((d, i) => [d.id, i]));
+  const links = (dataset.links || [])
+    .filter(d => d.value > 0)
+    .filter(d => idx.has(d.source) && idx.has(d.target))
+    .map(d => {
+      const sourceId = d.source;
+      const targetId = d.target;
+      return {
+        ...d,
+        sourceId,
+        targetId,
+        key: `${sourceId}->${targetId}`,
+        source: idx.get(sourceId),
+        target: idx.get(targetId),
+      };
+    });
+
+  const stageOrder = omitStart ? { type: 0, event: 1, points: 2 } : { start: 0, type: 1, event: 2, points: 3 };
+  nodes.forEach(d => d.layer = stageOrder[d.stage]);
+
+  const sankey = d3.sankey().nodeWidth(18).nodePadding(18).nodeAlign(d => d.layer).extent([[52, 84], [width - 52, height - 48]]);
+  const graph = sankey({ nodes: nodes.map(d => ({ ...d })), links: links.map(d => ({ ...d })) });
+  currentGraphLinks = graph.links || [];
+  initReplayForGraph(graph);
+  const baselineByKey = xrayLab ? buildSyntheticBaselineByKey(graph.links) : null;
+
+  const prevNodesById = (currentGraphState && currentGraphState.nodesById) ? currentGraphState.nodesById : new Map();
+  const newNodesById = new Map(graph.nodes.map(n => [n.id, n]));
+
+  // Helper: robustly find a previous node for smoother transitions when IDs change
+  function findPrevNode(d){
+    if(!prevNodesById) return null;
+    const byId = prevNodesById.get(d.id || String(d.id));
+    if(byId) return byId;
+    // fallback: match by team + stage + name when IDs were remapped (anchor normalization)
+    for(const old of prevNodesById.values()){
+      if(old && old.team === d.team && old.stage === d.stage && old.name === d.name) return old;
+    }
+    // last resort: match by team + stage
+    for(const old of prevNodesById.values()){
+      if(old && old.team === d.team && old.stage === d.stage) return old;
+    }
+    return null;
+  }
+
+  // Update column labels (no need to morph; keep it snappy).
+  const columnsForViz = (!omitStart) ? dataset.columns : dataset.columns.slice(1, 4);
+  const xs = columnsForViz.length === 4 ? [55, 340, 700, 1100] : [55, 640, 1100];
+
+  // Shared transition duration for label exit + link/node morphs.
+  const tDur = animate ? 650 : 0;
+  const t = vizRoot.transition().duration(tDur);
+
+  labelsLayer.selectAll("text.col-label").data(columnsForViz.map((label, i) => ({ label, i })), d => d.label)
+    .join(
+      enter => enter.append("text")
+        .attr("class", "col-label")
+        .attr("y", 40)
+        .attr("x", d => xs[d.i])
+        .attr("transform", null)
+        .text(d => d.label),
+      update => update
+        .attr("x", d => xs[d.i])
+        .attr("transform", null)
+        .text(d => d.label),
+      exit => exit.transition().duration(tDur).style("opacity", 0).attr("transform", "translate(-80,0)").remove()
+    );
+
+  labelsLayer.selectAll("text.twin-lane-label").remove();
+  if (twinMode) {
+    labelsLayer.append("text")
+      .attr("class", "col-label twin-lane-label")
+      .attr("x", 60)
+      .attr("y", 70)
+      .text("CURRENT GAME");
+    labelsLayer.append("text")
+      .attr("class", "col-label twin-lane-label")
+      .attr("x", 200)
+      .attr("y", 325)
+      .text("REFERENCE / AVG");
+  }
+
+  // ---- XRay baseline ghost links ----
+  if (!twinMode && xrayLab && baselineByKey) {
+    const baselineData = graph.links.map(l => {
+      const base = Math.max(0, Number(baselineByKey[l.key] || 0));
+      const current = Math.max(0.0001, Number(l.value) || 0.0001);
+      const ratio = base / current;
+      const bw = Math.max(1, l.width * ratio);
+      return { ...l, baselineValue: base, baselineWidth: bw };
+    });
+    const baseSel = baselineLayer.selectAll("path.baseline-link").data(baselineData, d => d.key);
+    baseSel.enter()
+      .append("path")
+      .attr("class", "baseline-link")
+      .style("fill", "none")
+      .style("pointer-events", "none")
+      .style("opacity", 0)
+      .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.22))
+      .attr("stroke-dasharray", "4 3")
+      .attr("stroke-width", 1)
+      .attr("d", d => linkGen(d))
+      .merge(baseSel)
+      .transition(t)
+      .style("opacity", 0.75)
+      .attr("stroke", d => rgba(colors[d.source.team] || "#888", 0.22))
+      .attr("stroke-width", d => d.baselineWidth)
+      .attr("d", d => linkGen(d));
+    baseSel.exit().transition().duration(180).style("opacity",0).remove();
+  } else {
+    baselineLayer.selectAll("path.baseline-link").remove();
+  }
+
+  // ---- Links ----
+  if (twinMode) {
+    clearExplodeFocus();
+    const twinBaseline = buildSyntheticBaselineByKey(graph.links);
+    const currentSpec = { dx: -90, dy: -68, tilt: 0.10 };
+    const baselineSpec = { dx: 120, dy: 186, tilt: 0.18 };
+    const twinData = [];
+    graph.links.forEach(l => {
+      const currentVal = Math.max(0.0001, Number(l.value) || 0.0001);
+      const baselineVal = Math.max(0, Number(twinBaseline[l.key] || 0));
+      const ratio = baselineVal / currentVal;
+      twinData.push({
+        ...l,
+        lane: "current",
+        twinWidth: Math.max(1, l.width),
+        spec: currentSpec,
+        baselineVal,
+      });
+      twinData.push({
+        ...l,
+        lane: "baseline",
+        twinWidth: Math.max(1, l.width * ratio),
+        spec: baselineSpec,
+        baselineVal,
+      });
+    });
+
+    const paintTwinStyles = (sel) => {
+      sel
+        .style("opacity", d => {
+          if (!hoveredTwinKey) return 0.92;
+          return d.key === hoveredTwinKey ? 1 : 0.14;
+        })
+        .attr("stroke", d => {
+          const teamColor = colors[d.source.team] || "#888";
+          if (!hoveredTwinKey || d.key !== hoveredTwinKey) {
+            return d.lane === "current" ? rgba(teamColor, 0.68) : rgba("#9cb2d7", 0.42);
+          }
+          const stat = xrayDeltaStats(d, twinBaseline);
+          const signal = stat.delta >= 0 ? "#2ecc71" : "#ff4d4f";
+          if (hoveredTwinLane && d.lane !== hoveredTwinLane) return rgba(signal, 0.95);
+          return d.lane === "current" ? rgba(teamColor, 0.95) : rgba("#f7faff", 0.88);
+        })
+        .attr("stroke-width", d => {
+          if (hoveredTwinKey && d.key === hoveredTwinKey) return d.twinWidth * 1.12;
+          return d.twinWidth;
+        });
+    };
+
+    const twinSel = linkLayer.selectAll("path.link").data(twinData, d => `${d.lane}:${d.key}`);
+    const twinEnter = twinSel.enter().append("path")
+      .attr("class", "link")
+      .style("fill", "none")
+      .style("stroke-linecap", "round")
+      .style("opacity", 0)
+      .attr("d", d => twinLinkPath(d, d.spec))
+      .attr("stroke-width", d => d.twinWidth);
+
+    const twinMerged = twinEnter.merge(twinSel);
+    twinMerged
+      .on("mousemove", (event, d) => {
+        hoveredTwinKey = d.key;
+        hoveredTwinLane = d.lane;
+        const s = xrayDeltaStats(d, twinBaseline);
+        const signalUp = s.delta >= 0;
+        const signalLabel = signalUp ? "OVER baseline" : "UNDER baseline";
+        const signalColor = signalUp ? "#2ecc71" : "#ff4d4f";
+        tooltip.innerHTML = `<div class="tag" style="background:${colors[d.source.team] || '#888'}">${d.source.team} · ${d.lane}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Current: ${s.cur.toFixed(1)} · Ref: ${s.base.toFixed(1)}</div><div style="margin-top:4px;color:${signalColor}">Signal on opposite lane: ${signalLabel} (${s.delta>=0?"+":""}${s.delta.toFixed(1)}, ${(s.pct*100).toFixed(0)}%)</div>`;
+        tooltip.style.left = `${event.offsetX + 18}px`;
+        tooltip.style.top = `${event.offsetY + 18}px`;
+        tooltip.classList.add("show");
+        paintTwinStyles(twinMerged);
+      })
+      .on("mouseleave", () => {
+        hoveredTwinKey = null;
+        hoveredTwinLane = null;
+        tooltip.classList.remove("show");
+        paintTwinStyles(twinMerged);
+      })
+      .on("click", (event, d) => {
+        event.stopPropagation();
+        setPanel(viewKey, linkExplain(d));
+      });
+
+    twinMerged
+      .transition(t)
+      .style("opacity", 1)
+      .attr("d", d => twinLinkPath(d, d.spec))
+      .attr("stroke-width", d => d.twinWidth)
+      .call(paintTwinStyles);
+
+    twinSel.exit().transition().duration(animate ? 220 : 0).style("opacity", 0).remove();
+    baselineLayer.selectAll("*").remove();
+    nodeLayer.selectAll("*").remove();
+    currentGraphState = { nodesById: newNodesById };
+    linkLayer.selectAll("path.link").style("opacity", d => (hoveredTwinKey && d.key !== hoveredTwinKey) ? 0.14 : 1);
+    return;
+  }
+
+  const linkKeyFn = (d) => {
+    const sid = d.source && d.source.id !== undefined ? d.source.id : d.sourceId;
+    const tid = d.target && d.target.id !== undefined ? d.target.id : d.targetId;
+    return `${sid ?? ""}->${tid ?? ""}`;
+  };
+  const linkSel = linkLayer.selectAll("path.link").data(graph.links, d => linkKeyFn(d));
+
+  const linkEnter = linkSel.enter().append("path")
+    .attr("class", "link")
+    .style("opacity", 0)
+    .attr("stroke", d => xrayLinkStroke(d, baselineByKey))
+    .attr("stroke-width", d => Math.max(1, d.width))
+    .attr("d", d => {
+      const srcNode = (d.source && d.source.id !== undefined) ? d.source : { id: d.sourceId, team: d.source && d.source.team, stage: d.source && d.source.stage, name: d.source && d.source.name };
+      const tgtNode = (d.target && d.target.id !== undefined) ? d.target : { id: d.targetId, team: d.target && d.target.team, stage: d.target && d.target.stage, name: d.target && d.target.name };
+      const oldS = findPrevNode(srcNode);
+      const oldT = findPrevNode(tgtNode);
+      if (oldS && oldT) return linkGen({ source: oldS, target: oldT });
+      return linkGen(d);
+    });
+
+  const linkMerged = linkEnter.merge(linkSel);
+
+  linkMerged
+    .on("mousemove", (event, d) => {
+      let xray = "";
+      if (xrayLab && baselineByKey) {
+        const s = xrayDeltaStats(d, baselineByKey);
+        const sign = s.delta >= 0 ? "+" : "";
+        xray = `<div style="margin-top:4px;color:#9db0cf">Baseline: ${s.base.toFixed(1)} · Delta: ${sign}${s.delta.toFixed(1)} (${sign}${(s.pct*100).toFixed(0)}%)</div>`;
+      }
+      tooltip.innerHTML = `<div class="tag" style="background:${colors[d.source.team] || '#888'}">${d.source.team}</div><div><strong>${d.source.name}</strong> → <strong>${d.target.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${d.value}</div>${xray}`;
+      tooltip.style.left = `${event.offsetX + 18}px`;
+      tooltip.style.top = `${event.offsetY + 18}px`;
+      tooltip.classList.add("show");
+    })
+    .on("mouseleave", () => tooltip.classList.remove("show"))
+    .on("click", (event, d) => {
+      event.stopPropagation();
+      setPanel(viewKey, linkExplain(d));
+      if(explodeLab){
+        if(explodedLinkKey === d.key){
+          clearExplodeFocus();
+        } else {
+          explodedLinkKey = d.key;
+          renderExplodeFocus(d);
+        }
+      }
+    });
+
+  const lerp = (a, b, tt) => a + (b - a) * tt;
+  // Correctness-first: do not tween link paths. Tweening `d` between two
+  // sankey layouts is the source of the missing-links artifact; instead,
+  // set links to the final `d3-sankey` geometry for the target state.
+  // (Nodes still transition, so the overall morph remains visually coherent.)
+  linkMerged
+    .transition(t)
+    .style("opacity", 1)
+    .attr("stroke", d => xrayLinkStroke(d, baselineByKey))
+    .attr("stroke-width", d => Math.max(1, d.width))
+    .attr("d", d => linkGen(d));
+
+  linkSel.exit().transition().duration(animate ? 200 : 0).style("opacity", 0).remove();
+  if(explodeLab && explodedLinkKey){
+    const selected = graph.links.find(l => l.key === explodedLinkKey) || null;
+    if(selected){
+      renderExplodeFocus(selected);
+    } else {
+      clearExplodeFocus();
+    }
+  }
+
+  // ---- Nodes ----
+  const nodeSel = nodeLayer.selectAll("g.node").data(graph.nodes, d => d.id);
+  const nodeEnter = nodeSel.enter().append("g").attr("class", "node").style("opacity", 0);
+  nodeEnter.append("rect");
+  nodeEnter.append("text").attr("class", "node-main-label");
+  nodeEnter.append("text").attr("class", "node-pct-label");
+
+  // Initialize text positions for entering nodes so they don't flash from (0,0).
+  nodeEnter.select("text.node-main-label")
+    .attr("x", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return pn.layer <= 1 ? (pn.x1 + 8) : (pn.x0 - 8); }
+      return d.layer <= 1 ? (d.x1 + 8) : (d.x0 - 8);
+    })
+    .attr("y", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return (pn.y0 + pn.y1) / 2 - (d.stage === "type" ? 7 : 0); }
+      return (d.y0 + d.y1) / 2 - (d.stage === "type" ? 7 : 0);
+    })
+    .attr("text-anchor", d => d.layer <= 1 ? "start" : "end")
+    .text(d => d.stage === "start" ? d.team : d.name);
+
+  nodeEnter.select("text.node-pct-label")
+    .attr("x", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return pn.x1 + 8; }
+      return d.x1 + 8;
+    })
+    .attr("y", d => {
+      const pn = findPrevNode(d);
+      if(pn){ return (pn.y0 + pn.y1) / 2 + 9; }
+      return (d.y0 + d.y1) / 2 + 9;
+    })
+    .attr("text-anchor", "start")
+    .style("opacity", d => d.stage === "type" ? 1 : 0)
+    .text(d => {
+      if (d.stage !== "type") return "";
+      const total = dataset.starts ? dataset.starts[d.team] : null;
+      const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
+      const outbound = (d.sourceLinks || []).reduce((s, x) => s + x.value, 0);
+      const volume = Math.max(inbound, outbound);
+      return total ? `${(100 * volume / total).toFixed(1)}% of starts` : "";
+    });
+
+  // Set initial positions for newly entered nodes to their previous layout if available.
+  nodeEnter.select("rect")
+    .attr("x", d => {
+      const pn = findPrevNode(d) || null;
+      return pn ? pn.x0 : d.x0;
+    })
+    .attr("y", d => {
+      const pn = findPrevNode(d) || null;
+      return pn ? pn.y0 : d.y0;
+    })
+    .attr("width", d => {
+      const pn = findPrevNode(d) || null;
+      const w = pn ? (pn.x1 - pn.x0) : (d.x1 - d.x0);
+      return w;
+    })
+    .attr("height", d => {
+      const pn = findPrevNode(d) || null;
+      const h = pn ? (pn.y1 - pn.y0) : (d.y1 - d.y0);
+      return Math.max(6, h);
+    })
+    .attr("fill", d => rgba(colors[d.team] || "#888", 0.18));
+
+  const nodeMerged = nodeEnter.merge(nodeSel);
+  nodeMerged
+    .select("rect")
+    .on("click", (event, d) => {
+      event.stopPropagation();
+      // UX PoC: only allow animated drilldown from the *top-level* possession-type nodes.
+      if (viewKey === "top" && d.stage === "type") {
+        let next = null;
+        if (d.name === "Half-court") next = "halfcourt";
+        else if (d.name === "Transition / Fast break") next = "transition";
+        else if (d.name === "After OREB") next = "oreb";
+
+        if (next) {
+          const ctrl = !!(event.ctrlKey || event.metaKey);
+          // Ctrl-click forces single-team drilldown to the clicked team.
+          // Plain click preserves current team mode (2-team or 1-team).
+          setView(next, { teamFocus: ctrl ? d.team : teamFocus });
+          return;
+        }
+      }
+      setPanel(viewKey, nodeExplain(d));
+      if(explodeLab) clearExplodeFocus();
+    })
+    .on("mousemove", (event, d) => {
+      const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
+      const outbound = (d.sourceLinks || []).reduce((s, x) => s + x.value, 0);
+      const volume = Math.max(inbound, outbound);
+      let extra = "";
+      if (d.stage === "type") {
+        const total = dataset.starts ? dataset.starts[d.team] : null;
+        if (total) extra = `<div style="margin-top:4px;color:#9db0cf">Share: ${(100 * volume / total).toFixed(1)}%</div>`;
+      }
+      tooltip.innerHTML = `<div class="tag" style="background:${colors[d.team] || '#888'}">${d.team}</div><div><strong>${d.stage === "start" ? d.team : d.name}</strong></div><div style="margin-top:4px;color:#9db0cf">Flow volume: ${volume}</div>${extra}`;
+      tooltip.style.left = `${event.offsetX + 18}px`;
+      tooltip.style.top = `${event.offsetY + 18}px`;
+      tooltip.classList.add("show");
+    })
+    .on("mouseleave", () => tooltip.classList.remove("show"));
+
+  // Animate nodes to new layout.
+  nodeMerged.transition(t).style("opacity", 1);
+  nodeMerged.select("rect")
+    .transition(t)
+    .attr("x", d => d.x0)
+    .attr("y", d => d.y0)
+    .attr("width", d => d.x1 - d.x0)
+    .attr("height", d => Math.max(6, d.y1 - d.y0))
+    .attr("fill", d => rgba(colors[d.team] || "#888", 0.18));
+
+  nodeMerged.select("text.node-main-label")
+    .transition(t)
+    .attr("x", d => d.layer <= 1 ? d.x1 + 8 : d.x0 - 8)
+    .attr("y", d => (d.y0 + d.y1) / 2 - (d.stage === "type" ? 7 : 0))
+    .attr("text-anchor", d => d.layer <= 1 ? "start" : "end")
+    .text(d => d.stage === "start" ? d.team : d.name);
+
+  nodeMerged.select("text.node-pct-label")
+    .transition(t)
+    .attr("x", d => d.x1 + 8)
+    .attr("y", d => (d.y0 + d.y1) / 2 + 9)
+    .attr("text-anchor", "start")
+    .style("opacity", d => d.stage === "type" ? 1 : 0)
+    .text(d => {
+      if (d.stage !== "type") return "";
+      const total = dataset.starts ? dataset.starts[d.team] : null;
+      const inbound = (d.targetLinks || []).reduce((s, x) => s + x.value, 0);
+      const outbound = (d.sourceLinks || []).reduce((s, x) => s + x.value, 0);
+      const volume = Math.max(inbound, outbound);
+      return total ? `${(100 * volume / total).toFixed(1)}% of starts` : "";
+    });
+
+  nodeSel.exit().transition().duration(animate ? 200 : 0).style("opacity", 0).remove();
+
+  currentGraphState = { nodesById: newNodesById };
+
+  // Defensive: ensure links are visible after morphs settle.
+  // (Prevents rare join/transition timing issues during rapid PoC interactions.)
+  linkLayer.selectAll("path.link").style("opacity", 1);
 }
 
 // Add a tiny cache-buster so that when JSON files are regenerated on disk
 // (via Docker pipeline runs), the browser does not keep serving a stale
 // cached copy. Query params are ignored by the simple static server, so this
 // is backwards-compatible while forcing a fresh fetch per load.
-const fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+// NOTE: if `dataFile` is a blob/object URL (starts with `blob:`) we must
+// not append query params because blob URLs do not accept them. Handle that
+// case explicitly so normalized bundles passed as object URLs from the
+// parent (iframe) remain reachable.
+let fetchUrl;
+if (String(dataFile).startsWith('blob:')) {
+  fetchUrl = dataFile;
+} else {
+  fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+}
+
+// Update the scoreboard element (computes team totals from boxscore_players when possible)
+function updateScoreboard(){
+  const el = document.getElementById("scoreboard");
+  if(!el || !dataBundle) return;
+  const meta = dataBundle.meta || {};
+  let scoreA = 0, scoreB = 0;
+  const playersMap = dataBundle.players || {};
+  if(Array.isArray(dataBundle.boxscore_players)){
+    dataBundle.boxscore_players.forEach(r => {
+      const pid = r.player_id;
+      let teamName = null;
+      if(pid && playersMap[pid] && playersMap[pid].team) teamName = playersMap[pid].team;
+      if(!teamName && typeof r.team === 'string') teamName = r.team;
+      if(teamName === meta.team_a) scoreA += (r.points || 0);
+      else if(teamName === meta.team_b) scoreB += (r.points || 0);
+    });
+  }
+  el.textContent = `${meta.team_a || 'Team A'} ${scoreA} — ${scoreB} ${meta.team_b || 'Team B'}`;
+}
 
 fetch(fetchUrl).then(r=>{
   if(!r.ok){
@@ -431,11 +2377,35 @@ fetch(fetchUrl).then(r=>{
   dataBundle=bundle;
   colors=bundle.colors||{};
   const meta=bundle.meta||{};
+  const modeLabel = replayLab
+    ? " · Mode: Live Replay Lab"
+    : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
   document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
-  document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.`;
+  // Prefer showing a human-readable game date; fall back to season year from seasoncode; otherwise leave blank.
+  (function(){
+    var displayDate = "";
+    try{
+      if(meta && meta.gamedate) displayDate = String(meta.gamedate).trim();
+      if(!displayDate && meta && meta.seasoncode){
+        var match = String(meta.seasoncode).match(/(\d{4})/);
+        if(match) displayDate = match[1];
+      }
+    }catch(e){ displayDate = ""; }
+    var headlineText = displayDate ? (displayDate + (modeLabel || "")) : (modeLabel ? modeLabel.replace(/^\s*·\s*/, '') : '');
+    document.getElementById("headline").textContent = headlineText || '';
+  })();
+  if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
+  if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
+  if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
+  if (replayBaseGameBtn) replayBaseGameBtn.onclick = () => replaySetBaselineMode("game");
+  if (replayBaseLeagueBtn) replayBaseLeagueBtn.onclick = () => replaySetBaselineMode("league");
   buildControls();
   setView("top");
-}).catch(err=>{
+  // Update scoreboard (if data present)
+  try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
+  // Notify parent that the bundle has been loaded so parent can clear any loading UI
+  try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
+  }).catch(err=>{
   document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
   console.error(err);
 });
@@ -445,6 +2415,58 @@ function renderAutoInsights(data) {
   console.log("Rendering auto-insights data:", data);
   // TODO: Implement the actual rendering logic here.
 }
+
+// Accept postMessage loads from a parent (e.g. `prod/game-explorer.html`)
+window.addEventListener('message', (ev) => {
+  try{
+    const msg = ev && ev.data;
+    if(!msg || msg.type !== 'loadBundle') return;
+    const url = msg.url;
+    const paramsString = msg.params || '';
+    // Parse params string and update local mode flags
+    if(paramsString){
+      const p = new URLSearchParams(paramsString);
+      typeZoomVariant = Math.max(3, Math.min(4, parseInt(p.get('typeZoomVariant') || typeZoomVariant, 10)));
+      flowIndexLab = p.get('flowIndexLab') === '1';
+      explodeLab = (p.get('explodeLab') !== '0') || flowIndexVariant === '1' || flowIndexLab; // keep explode default unless explicitly disabled
+      twinLab = p.get('twinLab') === '1';
+      xrayLab = p.get('xrayLab') === '1' || twinLab;
+      replayLab = p.get('replayLab') === '1';
+    }
+    if(!url) return;
+    // Set dataFile to provided URL and fetch bundle (respect blob URLs)
+    dataFile = url;
+    let fetchUrlLocal;
+    if (String(dataFile).startsWith('blob:')) {
+      fetchUrlLocal = dataFile;
+    } else {
+      fetchUrlLocal = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+    }
+    fetch(fetchUrlLocal).then(r=>{
+      if(!r.ok) throw new Error(`Failed to fetch JSON: ${fetchUrlLocal} (HTTP ${r.status})`);
+      return r.json();
+    }).then(bundle=>{
+      dataBundle = bundle;
+      colors = bundle.colors||{};
+      const meta=bundle.meta||{};
+      const modeLabel = replayLab
+        ? " · Mode: Live Replay Lab"
+        : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
+      document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
+      document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.${modeLabel}`;
+      if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
+      if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
+      if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
+      if (replayBaseGameBtn) replayBaseGameBtn.onclick = () => replaySetBaselineMode("game");
+      if (replayBaseLeagueBtn) replayBaseLeagueBtn.onclick = () => replaySetBaselineMode("league");
+      buildControls();
+      setView("top");
+      try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
+      // Notify parent that the bundle from postMessage load has been handled
+      try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
+    }).catch(err=>{ console.error('loadBundle failed', err); document.getElementById("headline").textContent=`Failed to load ${dataFile}`; });
+  }catch(e){ console.warn('message handler error', e); }
+});
 </script>
 </body>
 </html>
