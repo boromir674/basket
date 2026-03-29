@@ -267,66 +267,29 @@
       return copy;
     }
 
+    // anchorTeam is team_b; promote it to team_a so the anchor always appears
+    // in the top lane with consistent anchor styling.  Only meta and colors need
+    // to change — node IDs, link IDs, player team labels, and starts values are
+    // already keyed by the real team names and must stay untouched so that data
+    // attribution (scores, PPP, node labels, single-team focus) remains correct.
     meta.team_a = b;
     meta.team_b = a;
     copy.meta = meta;
 
     if(copy.colors && typeof copy.colors === "object"){
-      const next = {};
-      Object.keys(copy.colors).forEach((k) => {
-        const nk = swapName(k, a, b);
-        next[nk] = copy.colors[k];
-      });
-      next[meta.team_a] = ANCHOR_COLOR;
-      next[meta.team_b] = OPP_COLOR;
-      copy.colors = next;
+      copy.colors[b] = ANCHOR_COLOR;
+      copy.colors[a] = OPP_COLOR;
     }
 
-    if(copy.players && typeof copy.players === "object"){
-      Object.values(copy.players).forEach((p) => {
-        if(p && typeof p === "object" && typeof p.team === "string"){
-          p.team = swapName(p.team, a, b);
-        }
-      });
-    }
-
-    if(Array.isArray(copy.boxscore_players)){
-      copy.boxscore_players.forEach((r) => {
-        if(r && typeof r.team === "string") r.team = swapName(r.team, a, b);
-      });
-    }
-
+    // Reorder nodes so anchor-team nodes appear first in each view's node array.
+    // d3-sankey uses the initial array order for vertical placement, so this
+    // ensures the anchor team is rendered in the top lane.
     if(copy.views && typeof copy.views === "object"){
       Object.values(copy.views).forEach((view) => {
-        if(!view || typeof view !== "object") return;
-
-        if(view.starts && typeof view.starts === "object"){
-          const nextStarts = {};
-          Object.keys(view.starts).forEach((k) => { nextStarts[swapName(k, a, b)] = view.starts[k]; });
-          view.starts = nextStarts;
-        }
-
-        if(Array.isArray(view.nodes)){
-          view.nodes.forEach((n) => {
-            if(n && typeof n.team === "string") n.team = swapName(n.team, a, b);
-          });
-        }
-
-        if(view.player_flows && typeof view.player_flows === "object"){
-          Object.values(view.player_flows).forEach((arr) => {
-            if(Array.isArray(arr)){
-              arr.forEach((row) => {
-                if(row && typeof row.team === "string") row.team = swapName(row.team, a, b);
-              });
-            }
-          });
-        }
-
-        if(Array.isArray(view.insights)){
-          view.insights = view.insights.map((s) => swapNamesInText(s, a, b));
-        }
-        if(typeof view.title === "string") view.title = swapNamesInText(view.title, a, b);
-        if(typeof view.desc === "string") view.desc = swapNamesInText(view.desc, a, b);
+        if(!view || !Array.isArray(view.nodes)) return;
+        const anchorNodes = view.nodes.filter(n => n && n.team === b);
+        const otherNodes = view.nodes.filter(n => !n || n.team !== b);
+        view.nodes = anchorNodes.concat(otherNodes);
       });
     }
 
