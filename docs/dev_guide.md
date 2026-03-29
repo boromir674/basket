@@ -75,6 +75,21 @@ This section is a concise, copy-paste friendly checklist to get a new developer 
 	- Live Replay: HUD + controls implemented in the viewer HTML/JS (elements with id `replay-*` and functions `startReplay`, `pauseReplay`, `resetReplay`). Enable with `?replayLab=1`.
 	- Anchor Team / Game Explorer: `prod/game-explorer.html` orchestrates iframe loading and normalizes bundles for Anchor mode before passing them to the viewer.
 
+- **Sankey multi-level drill-down — transition mechanics** (critical domain knowledge):
+	The viewer supports four views: `top`, `halfcourt`, `transition`, `oreb`. Clicking a possession-type node in the `top` view drills down. Clicking "Back" returns to `top`.
+
+	**View switch path:** `setView(viewKey)` → `renderView(viewKey, opts)`.
+
+	**4→3 column push** (`?typeZoomVariant=3`): when drilling from `top` into a type view, a two-phase animation fires:
+	1. Phase 1 (`animate: false`): render the drilldown at all four columns (start + type + event + points). This snapshots `currentGraphState.nodesById` with four-column positions.
+	2. Phase 2 (`animate: true`, `omitStartOverride: true`): render the drilldown at three columns (type + event + points). Nodes morph from their four-column positions to three-column positions over 650 ms.
+
+	**Node enter/exit transitions** use `findPrevNode(d)` to locate a node from the previous layout by ID → team+stage+name → team+stage → (for `start` stage) same-team `type` node. When a match is found, the entering rect starts as a zero-size box at the old node's center `((x0+x1)/2, (y0+y1)/2)` and expands to its final geometry (expand-from-center effect). Without a match the node renders directly at its final position.
+
+	**Link transitions**: entering links start as a degenerate (zero-width) path at old source/target centers and fade in with opacity. Updating links have their path `d` attribute transitioned by D3. Do **not** tween link paths across entirely different sankey layouts (different column counts) — it produces the "missing-links artifact" where cubic bezier handles cross outside node bounds.
+
+	**Returning to `top`** from a drilldown: "start" stage nodes re-enter. `findPrevNode` maps them to the same-team "type" node from the previous (drilldown) layout so they grow out from the type column rather than flashing in from nowhere.
+
 - **Data locations**:
 	- Raw snapshots: `assets/` (e.g. `raw_pbp_*.json`, `raw_box_*.json`).
 	- Processed viewer files: `assets/processed/` (e.g. `multi_drilldown_real_data_E2021_54.json`).
