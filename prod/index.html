@@ -209,6 +209,8 @@
   let anchorMode = false;
   let selectedTeam = "";
   let selectedGame = null;
+  let viewerReady = false;
+  let pendingLoad = false;
 
   const normalizedCache = new Map();
 
@@ -382,6 +384,11 @@
 
   async function loadSelectedGame(){
     if(!selectedGame) return;
+    // If the iframe hasn't finished loading yet, defer until its load event fires.
+    if(!viewerReady){
+      pendingLoad = true;
+      return;
+    }
     const anchor = currentAnchorForGame(selectedGame);
     const opp = currentOppForGame(selectedGame);
     setHead(anchor, opp, selectedGame);
@@ -405,7 +412,15 @@
     }
   }
 
-  viewer.addEventListener("load", () => viewer.classList.remove("loading"));
+  viewer.addEventListener("load", () => {
+    viewer.classList.remove("loading");
+    viewerReady = true;
+    // Flush any game load that was requested before the iframe was ready.
+    if(pendingLoad){
+      pendingLoad = false;
+      loadSelectedGame();
+    }
+  });
 
   // Listen for bundleLoaded messages from the iframe (used when we postMessage
   // the iframe to load a bundle so it can do an in-place morph without reloading).
