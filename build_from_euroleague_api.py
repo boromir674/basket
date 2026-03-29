@@ -157,17 +157,20 @@ class Possession:
     number_of_play: Optional[int] = None
     player_id: Optional[str] = None
     player_name: Optional[str] = None
+    shot_type: Optional[str] = None  # "2pt", "3pt", "ft", or None
 
 def classify_terminal(play_type: str):
     if play_type in MADE_2_CODES:
-        return "Made 2", 2
+        return "Made 2", 2, "2pt"
     if play_type in MADE_3_CODES:
-        return "Made 3", 3
-    if play_type in MISSED_2_CODES or play_type in MISSED_3_CODES:
-        return "Missed shot", 0
+        return "Made 3", 3, "3pt"
+    if play_type in MISSED_2_CODES:
+        return "Missed shot", 0, "2pt"
+    if play_type in MISSED_3_CODES:
+        return "Missed shot", 0, "3pt"
     if play_type in FT_MADE_CODES or play_type in FT_ATTEMPT_CODES:
-        return "Shooting foul / FTs", 1 if play_type in FT_MADE_CODES else 0
-    return None, 0
+        return "Shooting foul / FTs", 1 if play_type in FT_MADE_CODES else 0, "ft"
+    return None, 0, None
 
 def infer_possessions(pbp_rows: list[dict]):
     possessions = []
@@ -192,7 +195,7 @@ def infer_possessions(pbp_rows: list[dict]):
             current_origin_by_team[team] = "Half-court"
             continue
 
-        terminal, pts = classify_terminal(pt)
+        terminal, pts, shot_type = classify_terminal(pt)
         if terminal is None:
             continue
 
@@ -203,7 +206,7 @@ def infer_possessions(pbp_rows: list[dict]):
             if next_row and next_pt in OREB_CODES and next_team == team:
                 continue
 
-        possessions.append(Possession(team, current_origin_by_team[team], terminal, pts, nop, pid, pname))
+        possessions.append(Possession(team, current_origin_by_team[team], terminal, pts, nop, pid, pname, shot_type=shot_type))
         current_origin_by_team[team] = "Half-court"
     return possessions
 
@@ -324,6 +327,80 @@ def build_players_index(possessions: list[Possession]) -> dict[str, dict[str, st
         players[pid] = {"name": pname, "team": p.team}
     return players
 
+def compute_expected_values(
+    possessions: list[Possession],
+    filter_origin: Optional[str] = None,
+    filter_team: Optional[str] = None,
+) -> dict[str, dict]:
+    """Compute per-team expectation statistics: E[s], E[s2], E[s3], E[s1].
+
+    Args:
+        possessions: All (or pre-filtered) possessions to analyse.
+        filter_origin: When set, only include possessions whose ``origin``
+            matches this value (e.g. ``"Half-court"``).
+        filter_team: When set, only include possessions for this team.
+
+    Returns:
+        A mapping of team name → stats dict with keys:
+
+        * ``E_s``  – expected points per possession (all possessions).
+        * ``E_s2`` – expected points per 2-point attempt (2 × FG2%); None if
+          no 2-point attempts were recorded.
+        * ``E_s3`` – expected points per 3-point attempt (3 × FG3%); None if
+          no 3-point attempts were recorded.
+        * ``E_s1`` – expected points per FT possession (FT pts / FT possessions);
+          None if no FT possessions were recorded.
+        * ``possessions`` – total possessions in the filtered set.
+        * ``attempts_2pt`` – 2-point shot attempts (made + missed).
+        * ``attempts_3pt`` – 3-point shot attempts (made + missed).
+        * ``ft_possessions`` – possessions that ended in free-throws.
+    """
+    subset = possessions
+    if filter_origin is not None:
+        subset = [p for p in subset if p.origin == filter_origin]
+    if filter_team is not None:
+        subset = [p for p in subset if p.team == filter_team]
+
+    teams: set[str] = {p.team for p in subset}
+    result: dict[str, dict] = {}
+
+    for team in sorted(teams):
+        team_poss = [p for p in subset if p.team == team]
+        total_pos = len(team_poss)
+        total_pts = sum(p.points for p in team_poss)
+
+        # 2-point attempts (made + missed with shot_type == "2pt")
+        att_2 = sum(1 for p in team_poss if p.shot_type == "2pt")
+        made_2 = sum(1 for p in team_poss if p.terminal == "Made 2")
+
+        # 3-point attempts (made + missed with shot_type == "3pt")
+        att_3 = sum(1 for p in team_poss if p.shot_type == "3pt")
+        made_3 = sum(1 for p in team_poss if p.terminal == "Made 3")
+
+        # Free-throw possessions
+        ft_poss = [p for p in team_poss if p.terminal == "Shooting foul / FTs"]
+        ft_pts = sum(p.points for p in ft_poss)
+        ft_count = len(ft_poss)
+
+        E_s = (total_pts / total_pos) if total_pos else 0.0
+        E_s2: Optional[float] = (2.0 * made_2 / att_2) if att_2 else None
+        E_s3: Optional[float] = (3.0 * made_3 / att_3) if att_3 else None
+        E_s1: Optional[float] = (ft_pts / ft_count) if ft_count else None
+
+        result[team] = {
+            "E_s": round(E_s, 4),
+            "E_s2": round(E_s2, 4) if E_s2 is not None else None,
+            "E_s3": round(E_s3, 4) if E_s3 is not None else None,
+            "E_s1": round(E_s1, 4) if E_s1 is not None else None,
+            "possessions": total_pos,
+            "attempts_2pt": att_2,
+            "attempts_3pt": att_3,
+            "ft_possessions": ft_count,
+        }
+
+    return result
+
+
 def build_top_view(team_a, team_b, possessions):
     starts = Counter(p.team for p in possessions)
     nodes, links = [], Counter()
@@ -396,6 +473,17 @@ def build_top_view(team_a, team_b, possessions):
             insights.append(
                 f"{team} generated {ppp:.2f} points per possession over {pos} tracked possessions."
             )
+
+    ev_stats = compute_expected_values(possessions)
+    for team in [team_a, team_b]:
+        ts = ev_stats.get(team, {})
+        if ts.get("E_s2") is not None:
+            kpis.append([f"{team} E[s2] (per 2pt att.)", f"{ts['E_s2']:.3f}"])
+        if ts.get("E_s3") is not None:
+            kpis.append([f"{team} E[s3] (per 3pt att.)", f"{ts['E_s3']:.3f}"])
+        if ts.get("E_s1") is not None:
+            kpis.append([f"{team} E[s1] (per FT poss.)", f"{ts['E_s1']:.3f}"])
+
     return {
         "label": "Top-level",
         "starts": {team_a: starts[team_a], team_b: starts[team_b]},
@@ -407,6 +495,7 @@ def build_top_view(team_a, team_b, possessions):
         "nodes": nodes,
         "links": counter_to_links(links),
         "player_flows": counter_to_player_flows(player_flows),
+        "stats": ev_stats,
     }
 
 def build_subview(label, title, desc, columns, team_a, team_b, start_name_a, start_name_b, subset, subtype_fn, points_map):
@@ -458,6 +547,7 @@ def build_subview(label, title, desc, columns, team_a, team_b, start_name_a, sta
         "nodes":nodes,
         "links":counter_to_links(links),
         "player_flows":counter_to_player_flows(player_flows),
+        "stats":compute_expected_values(subset),
     }
 
 def build_views(team_a, team_b, possessions, points_rows):
