@@ -2147,7 +2147,8 @@ function renderView(viewKey, opts = {}){
         const tCy = (oldT.y0 + oldT.y1) / 2;
         const sCx = (oldS.x0 + oldS.x1) / 2;
         const tCx = (oldT.x0 + oldT.x1) / 2;
-        return linkGen({ source: { ...oldS, x1: sCx }, target: { ...oldT, x0: tCx }, y0: sCy, y1: tCy, width: 0 });
+        // linkGen (d3.sankeyLinkHorizontal) only needs source.x1, target.x0, y0, y1.
+        return linkGen({ source: { x1: sCx }, target: { x0: tCx }, y0: sCy, y1: tCy });
       }
       return linkGen(d);
     });
