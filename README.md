@@ -164,6 +164,44 @@ Notes:
 | Flow Index Q&A lab (narrative answers) | `views.<view>.player_flows`, `boxscore_players`, `views.<view>.links` | `modeled/inferred` + `raw API Boxscore` + `computed` | Combines flow contribution with boxscore context (`valuation`, `points`, `minutes`) for guided answers. |
 | Live Replay Timeline lab | `views.<view>.links`, `views.top.links`, `meta` | `computed` | Simulated 0→40 replay: link reveal schedules + score interpolation from top-view points buckets. |
 | Global player registry (optional utility) | `players` map (`player_id -> {name, team}`) | `processed` | Built from possession-level player attribution gathered from raw PBP rows. |
+| **EPV Lab** (Expected Possession Value) | `expectation.teams.<team>.<window>.<family>` with `n`, `pts_sum`, `ev`; `expectation.teams.<team>.timeline[]`; `expectation.teams.<team>.baselines` | `computed` | Empirical outcome-rate expectations grouped by shot family and time window. Denominator is always the count of possessions in the filtered set. Baselines (`team_season`, `league_season`) are populated by `expectation_baselines.py`. |
+
+### EPV data contract
+
+The `expectation` top-level section is emitted by `build_from_euroleague_api.py` for every processed game.
+
+**Filter dimensions:**
+
+| Dimension | Values | Notes |
+|---|---|---|
+| shot family | `all`, `ft`, `2pt`, `3pt` | `all` includes turnovers (0 pts). `ft` = FTM/FTA terminal. `2pt` = 2FGM/2FGA (made or missed). `3pt` = 3FGM/3FGA (made or missed). |
+| time window | `full_game`, `last_4_min` | `last_4_min` = game clock ≥ 36:00 (final 4 minutes of 40-minute regulation). |
+
+**Per-filter fields:**
+
+| Field | Type | Description |
+|---|---|---|
+| `n` | int | Possession count (denominator). |
+| `pts_sum` | int | Total points scored in the filtered set. |
+| `ev` | float \| null | Expected value = `pts_sum / n`. Null when `n == 0`. |
+| `note` | string (optional) | `"low_sample"` when `n < 5`. |
+
+**Timeline:**
+
+`expectation.teams.<team>.timeline` is an array of 1-minute clock buckets for the full game, each containing:
+`minute_bucket`, `label`, `n`, `pts_sum`, `ev`, `cumulative_n`, `cumulative_pts`, `cumulative_ev`.
+
+**Baselines** (populated by `expectation_baselines.py`):
+
+`expectation.teams.<team>.baselines.team_season` and `.league_season` contain per-window/per-family aggregates
+(`n_games`, `mean_ev`, `stdev_ev`, `delta_vs_baseline`) when ≥ 3 comparison games are available,
+or `{"status": "insufficient_sample", "n_games": <n>}` otherwise.
+Both also include `timeline_avg[]` with the season-average per-minute mean_ev when timelines are available.
+
+**POC assumptions:**
+- Metric is empirical outcome-rate expectation, not a shot-quality model.
+- Turnovers count in the `all` denominator with 0 points; they are excluded from shot-family filters.
+- Opponent-conditioned and game-state-conditioned aggregations are designed in but not yet computed.
 
 ## 7) Current UI Notes (Prototype Behavior)
 
@@ -186,6 +224,11 @@ Notes:
 - `?replayLab=1`: Live Replay Timeline mode.
   - HUD controls (`Play/Pause/Reset`) animate from minute 0 to 40.
   - links emerge/thicken over time and score grows in sync.
+- `?epvLab=1`: Expected Possession Value (EPV) lab mode.
+  - Shows the EPV panel in the side panel with KPI cards for E[s], E[s₁], E[s₂], E[s₃].
+  - Supports shot family filter (All / FT / 2PT / 3PT) and time window toggle (Full Game / Last 4 Min).
+  - Renders a per-game timeline chart (expectation over game time, 1-minute bins).
+  - Shows team-season and league baseline deltas when the file has been enriched by `expectation_baselines.py`.
 
 ## 8) Repo Pointers
 
