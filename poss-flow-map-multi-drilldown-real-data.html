@@ -1945,6 +1945,14 @@ function renderView(viewKey, opts = {}){
     for(const old of prevNodesById.values()){
       if(old && old.team === d.team && old.stage === d.stage) return old;
     }
+    // When returning to the top view, "start" nodes have no prior equivalent since
+    // drilldown views omit the start stage. Use the same-team "type" node as the
+    // origin so start nodes grow out from the type column instead of flashing in.
+    if(d.stage === "start"){
+      for(const old of prevNodesById.values()){
+        if(old && old.team === d.team && old.stage === "type") return old;
+      }
+    }
     return null;
   }
 
@@ -2132,7 +2140,15 @@ function renderView(viewKey, opts = {}){
       const tgtNode = (d.target && d.target.id !== undefined) ? d.target : { id: d.targetId, team: d.target && d.target.team, stage: d.target && d.target.stage, name: d.target && d.target.name };
       const oldS = findPrevNode(srcNode);
       const oldT = findPrevNode(tgtNode);
-      if (oldS && oldT) return linkGen({ source: oldS, target: oldT });
+      // Use old node centers as the degenerate starting path so the link
+      // appears to grow out from the center of its predecessor nodes.
+      if (oldS && oldT) {
+        const sCy = (oldS.y0 + oldS.y1) / 2;
+        const tCy = (oldT.y0 + oldT.y1) / 2;
+        const sCx = (oldS.x0 + oldS.x1) / 2;
+        const tCx = (oldT.x0 + oldT.x1) / 2;
+        return linkGen({ source: { ...oldS, x1: sCx }, target: { ...oldT, x0: tCx }, y0: sCy, y1: tCy, width: 0 });
+      }
       return linkGen(d);
     });
 
@@ -2195,10 +2211,12 @@ function renderView(viewKey, opts = {}){
   nodeEnter.append("text").attr("class", "node-pct-label");
 
   // Initialize text positions for entering nodes so they don't flash from (0,0).
+  // Use the old node's center X so labels appear to originate from the same
+  // column center rather than from a node edge in the previous layout.
   nodeEnter.select("text.node-main-label")
     .attr("x", d => {
       const pn = findPrevNode(d);
-      if(pn){ return pn.layer <= 1 ? (pn.x1 + 8) : (pn.x0 - 8); }
+      if(pn){ return (pn.x0 + pn.x1) / 2; }
       return d.layer <= 1 ? (d.x1 + 8) : (d.x0 - 8);
     })
     .attr("y", d => {
@@ -2212,7 +2230,7 @@ function renderView(viewKey, opts = {}){
   nodeEnter.select("text.node-pct-label")
     .attr("x", d => {
       const pn = findPrevNode(d);
-      if(pn){ return pn.x1 + 8; }
+      if(pn){ return (pn.x0 + pn.x1) / 2; }
       return d.x1 + 8;
     })
     .attr("y", d => {
@@ -2232,25 +2250,19 @@ function renderView(viewKey, opts = {}){
     });
 
   // Set initial positions for newly entered nodes to their previous layout if available.
+  // Using the old node's center with zero size creates an expand-from-center entry
+  // animation, which is smoother and more intentional than sliding in from a corner.
   nodeEnter.select("rect")
     .attr("x", d => {
-      const pn = findPrevNode(d) || null;
-      return pn ? pn.x0 : d.x0;
+      const pn = findPrevNode(d);
+      return pn ? (pn.x0 + pn.x1) / 2 : d.x0;
     })
     .attr("y", d => {
-      const pn = findPrevNode(d) || null;
-      return pn ? pn.y0 : d.y0;
+      const pn = findPrevNode(d);
+      return pn ? (pn.y0 + pn.y1) / 2 : d.y0;
     })
-    .attr("width", d => {
-      const pn = findPrevNode(d) || null;
-      const w = pn ? (pn.x1 - pn.x0) : (d.x1 - d.x0);
-      return w;
-    })
-    .attr("height", d => {
-      const pn = findPrevNode(d) || null;
-      const h = pn ? (pn.y1 - pn.y0) : (d.y1 - d.y0);
-      return Math.max(6, h);
-    })
+    .attr("width", d => findPrevNode(d) ? 0 : (d.x1 - d.x0))
+    .attr("height", d => findPrevNode(d) ? 0 : Math.max(6, d.y1 - d.y0))
     .attr("fill", d => rgba(colors[d.team] || "#888", 0.18));
 
   const nodeMerged = nodeEnter.merge(nodeSel);
