@@ -2122,6 +2122,17 @@ function renderView(viewKey, opts = {}){
   };
   const linkSel = linkLayer.selectAll("path.link").data(graph.links, d => linkKeyFn(d));
 
+  // Helper: build a collapsed (zero-width) link path at a node's vertical center.
+  // Used to give entering links a natural morph origin instead of popping in at
+  // their final positions.
+  const COLLAPSED_LINK_WIDTH = 0.01;
+  const collapsedPathAtNode = (node) => {
+    const cy = (node.y0 + node.y1) / 2;
+    const cx = (node.x0 + node.x1) / 2;
+    const pt = { x0: cx, x1: cx, y0: cy, y1: cy };
+    return linkGen({ source: pt, target: pt, y0: cy, y1: cy, width: COLLAPSED_LINK_WIDTH });
+  };
+
   const linkEnter = linkSel.enter().append("path")
     .attr("class", "link")
     .style("opacity", 0)
@@ -2132,7 +2143,22 @@ function renderView(viewKey, opts = {}){
       const tgtNode = (d.target && d.target.id !== undefined) ? d.target : { id: d.targetId, team: d.target && d.target.team, stage: d.target && d.target.stage, name: d.target && d.target.name };
       const oldS = findPrevNode(srcNode);
       const oldT = findPrevNode(tgtNode);
-      if (oldS && oldT) return linkGen({ source: oldS, target: oldT });
+      // Both old nodes known: morph from their vertical centers.
+      if (oldS && oldT) {
+        const sy = (oldS.y0 + oldS.y1) / 2;
+        const ty = (oldT.y0 + oldT.y1) / 2;
+        return linkGen({ source: oldS, target: oldT, y0: sy, y1: ty, width: COLLAPSED_LINK_WIDTH });
+      }
+      // One old node known: collapse to that node's center so the link unfolds from it.
+      const anchor = oldS || oldT;
+      if (anchor) return collapsedPathAtNode(anchor);
+      // No old nodes: find any same-team node in previous state as a fallback anchor.
+      const team = (d.source && d.source.team) || (srcNode && srcNode.team);
+      if (team) {
+        for (const n of prevNodesById.values()) {
+          if (n && n.team === team) return collapsedPathAtNode(n);
+        }
+      }
       return linkGen(d);
     });
 
@@ -2166,10 +2192,10 @@ function renderView(viewKey, opts = {}){
     });
 
   const lerp = (a, b, tt) => a + (b - a) * tt;
-  // Correctness-first: do not tween link paths. Tweening `d` between two
-  // sankey layouts is the source of the missing-links artifact; instead,
-  // set links to the final `d3-sankey` geometry for the target state.
-  // (Nodes still transition, so the overall morph remains visually coherent.)
+  // Entering links start from a collapsed path at the nearest old node's center
+  // (set above in linkEnter) and morph to the final d3-sankey geometry here.
+  // Existing update links transition directly to the new layout.
+  // We do not tween the path itself to avoid missing-links artifacts.
   linkMerged
     .transition(t)
     .style("opacity", 1)
