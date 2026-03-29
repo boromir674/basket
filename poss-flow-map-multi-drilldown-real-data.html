@@ -115,6 +115,29 @@
     .radar-subtitle { font-size:11px; color:var(--muted); margin-bottom:4px; }
     .radar-legend { display:flex; flex-wrap:wrap; gap:8px; font-size:11px; color:var(--muted); margin-top:4px; }
     .radar-dot { width:8px; height:8px; border-radius:999px; display:inline-block; margin-right:4px; }
+    /* EPV Lab styles */
+    .epv-lab { margin-top:14px; padding:10px 12px; border-radius:12px; border:1px solid rgba(58,134,255,.28); background:rgba(9,16,30,.9); }
+    .epv-lab-title { font-size:13px; color:#3a86ff; font-weight:600; margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+    .epv-lab-badge { font-size:10px; background:rgba(58,134,255,.22); color:#90c0ff; border:1px solid rgba(58,134,255,.4); border-radius:999px; padding:1px 7px; }
+    .epv-controls { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+    .epv-controls button { padding:5px 9px; font-size:11px; border-radius:8px; }
+    .epv-kpi-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px; }
+    .epv-tile { background:rgba(14,23,40,.95); border:1px solid rgba(111,132,171,.14); border-radius:10px; padding:10px 10px 8px; }
+    .epv-tile .epv-label { color:var(--muted); font-size:11px; margin-bottom:4px; }
+    .epv-tile .epv-value { font-size:16px; font-weight:700; color:#d9e6ff; }
+    .epv-tile .epv-delta { font-size:11px; margin-top:3px; }
+    .epv-delta-pos { color:#44db7f; }
+    .epv-delta-neg { color:#ff6b6b; }
+    .epv-delta-neu { color:var(--muted); }
+    .epv-chart-title { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; margin-top:8px; margin-bottom:4px; }
+    .epv-chart-wrap { border:1px solid rgba(111,132,171,.18); border-radius:10px; background:rgba(8,14,28,.72); padding:6px; }
+    .epv-chart-legend { margin-top:5px; display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:10px; }
+    .epv-chart-legend span { display:inline-flex; align-items:center; gap:5px; }
+    .epv-chart-mark { width:12px; height:0; border-top:2px solid #8ca2c5; display:inline-block; }
+    .epv-chart-mark.ref { border-top-style:dashed; }
+    .epv-no-data { font-size:11px; color:var(--muted); text-align:center; padding:12px 0; }
+    .epv-toggle { display:flex; gap:6px; margin-top:8px; }
+    .epv-toggle button { padding:4px 8px; font-size:10px; }
   </style>
 </head>
 <body>
@@ -236,6 +259,40 @@
         </div>
         <div class="panel-title">Shot outcome mix (current view)</div>
         <div id="shot-profile"></div>
+        <!-- EPV Lab panel — shown only when ?epvLab=1 -->
+        <div id="epv-lab-panel" style="display:none;">
+          <div class="epv-lab">
+            <div class="epv-lab-title">
+              Expected Possession Value
+              <span class="epv-lab-badge">epvLab</span>
+            </div>
+            <div class="epv-controls">
+              <button id="epv-btn-all" class="active" onclick="epvSetFamily('all')">All</button>
+              <button id="epv-btn-ft" onclick="epvSetFamily('ft')">FT</button>
+              <button id="epv-btn-2pt" onclick="epvSetFamily('2pt')">2PT</button>
+              <button id="epv-btn-3pt" onclick="epvSetFamily('3pt')">3PT</button>
+              <span style="width:1px;height:24px;background:rgba(111,132,171,.32);align-self:center;display:inline-block;margin:0 2px;"></span>
+              <button id="epv-btn-full" class="active" onclick="epvSetWindow('full_game')">Full Game</button>
+              <button id="epv-btn-last4" onclick="epvSetWindow('last_4_min')">Last 4 Min</button>
+            </div>
+            <div class="epv-kpi-grid" id="epv-kpi-grid">
+              <div class="epv-no-data">Load a game with an expectation block to see EPV metrics.</div>
+            </div>
+            <div class="epv-chart-title">Expectation over game time — per minute</div>
+            <div class="epv-chart-wrap">
+              <svg id="epv-timeline-svg" width="318" height="120"></svg>
+              <div class="epv-chart-legend" id="epv-chart-legend">
+                <span><span class="epv-chart-mark" style="border-color:#3a86ff;"></span>Team A</span>
+                <span><span class="epv-chart-mark" style="border-color:#d62839;"></span>Team B</span>
+                <span><span class="epv-chart-mark ref" style="border-color:#ffbe0b;"></span>League avg</span>
+              </div>
+            </div>
+            <div class="epv-toggle">
+              <button id="epv-btn-game-tl" class="active" onclick="epvSetTimelineMode('game')">This Game</button>
+              <button id="epv-btn-season-tl" onclick="epvSetTimelineMode('season')">Season Avg</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -357,6 +414,7 @@ let explodeLab = params.get("explodeLab") !== "0" || flowIndexLab;
 let twinLab = params.get("twinLab") === "1";
 let xrayLab = params.get("xrayLab") === "1" || twinLab;
 let replayLab = params.get("replayLab") === "1";
+let epvLab = params.get("epvLab") === "1";
 
 // Note: for this PoC we want in-place reshaping (not camera swoops).
 // Keep a static transform on vizRoot.
@@ -2403,6 +2461,8 @@ fetch(fetchUrl).then(r=>{
   setView("top");
   // Update scoreboard (if data present)
   try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
+  // Initialize EPV lab if active
+  try{ initEpvLab(); }catch(e){ console.warn("initEpvLab failed",e); }
   // Notify parent that the bundle has been loaded so parent can clear any loading UI
   try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
   }).catch(err=>{
@@ -2414,6 +2474,244 @@ fetch(fetchUrl).then(r=>{
 function renderAutoInsights(data) {
   console.log("Rendering auto-insights data:", data);
   // TODO: Implement the actual rendering logic here.
+}
+
+// ---------------------------------------------------------------------------
+// EPV Lab — Expectation Value panel
+// ---------------------------------------------------------------------------
+let epvState = {
+  family: "all",       // "all" | "ft" | "2pt" | "3pt"
+  window: "full_game", // "full_game" | "last_4_min"
+  timelineMode: "game",// "game" | "season"
+};
+
+function epvSetFamily(family) {
+  epvState.family = family;
+  ["all","ft","2pt","3pt"].forEach(f => {
+    const btn = document.getElementById(`epv-btn-${f}`);
+    if(btn) btn.classList.toggle("active", f === family);
+  });
+  renderEpvPanel();
+}
+
+function epvSetWindow(win) {
+  epvState.window = win;
+  document.getElementById("epv-btn-full") && document.getElementById("epv-btn-full").classList.toggle("active", win === "full_game");
+  document.getElementById("epv-btn-last4") && document.getElementById("epv-btn-last4").classList.toggle("active", win === "last_4_min");
+  renderEpvPanel();
+}
+
+function epvSetTimelineMode(mode) {
+  epvState.timelineMode = mode;
+  document.getElementById("epv-btn-game-tl") && document.getElementById("epv-btn-game-tl").classList.toggle("active", mode === "game");
+  document.getElementById("epv-btn-season-tl") && document.getElementById("epv-btn-season-tl").classList.toggle("active", mode === "season");
+  renderEpvTimeline();
+}
+
+function epvFmtEv(v) {
+  if(v === null || v === undefined) return "—";
+  return Number(v).toFixed(3);
+}
+
+function epvFmtDelta(delta) {
+  if(delta === null || delta === undefined) return null;
+  const d = Number(delta);
+  const sign = d >= 0 ? "+" : "";
+  return { text: `${sign}${d.toFixed(3)}`, cls: d > 0.01 ? "epv-delta-pos" : d < -0.01 ? "epv-delta-neg" : "epv-delta-neu" };
+}
+
+function epvRenderKpiGrid(teamA, teamB, expectation) {
+  const grid = document.getElementById("epv-kpi-grid");
+  if(!grid) return;
+
+  const familyLabels = { all: "E[s] all poss.", ft: "E[s₁] FT", "2pt": "E[s₂] 2PT", "3pt": "E[s₃] 3PT" };
+  const win = epvState.window;
+  const family = epvState.family;
+
+  const teams = [teamA, teamB].filter(Boolean);
+  if(!teams.length || !expectation || !expectation.teams) {
+    grid.innerHTML = '<div class="epv-no-data">No expectation data in this file.</div>';
+    return;
+  }
+
+  let html = "";
+  teams.forEach(team => {
+    const td = (expectation.teams[team] || {})[win] || {};
+    const fam = td[family] || {};
+    const ev = fam.ev !== undefined ? fam.ev : null;
+    const n = fam.n !== undefined ? fam.n : null;
+    const lowSample = fam.note === "low_sample";
+
+    // Try to get baseline deltas
+    const baselines = (expectation.teams[team] || {}).baselines || {};
+    const tsSeason = ((baselines.team_season || {})[win] || {})[family] || {};
+    const lgSeason = ((baselines.league_season || {})[win] || {})[family] || {};
+    const tsDelta = epvFmtDelta(tsSeason.delta_vs_baseline);
+    const lgDelta = epvFmtDelta(lgSeason.delta_vs_baseline);
+
+    const teamColor = (colors && colors[team]) || "#8ca2c5";
+    html += `<div class="epv-tile">
+      <div class="epv-label" style="color:${teamColor};">${team}</div>
+      <div class="epv-label">${familyLabels[family] || family} · ${win === "last_4_min" ? "Last 4 min" : "Full game"}</div>
+      <div class="epv-value">${epvFmtEv(ev)}${lowSample ? " <span style='font-size:10px;color:#ffbe0b;'>⚠ low n</span>" : ""}</div>
+      ${n !== null ? `<div class="epv-label" style="margin-top:2px;">n = ${n}</div>` : ""}
+      ${tsDelta ? `<div class="epv-delta ${tsDelta.cls}">Team season: ${tsDelta.text}</div>` : (tsSeason.status === "insufficient_sample" ? `<div class="epv-delta epv-delta-neu">Team baseline: low sample</div>` : "")}
+      ${lgDelta ? `<div class="epv-delta ${lgDelta.cls}">League: ${lgDelta.text}</div>` : (lgSeason.status === "insufficient_sample" ? `<div class="epv-delta epv-delta-neu">League baseline: low sample</div>` : "")}
+    </div>`;
+  });
+
+  grid.innerHTML = html || '<div class="epv-no-data">No data for selected filters.</div>';
+}
+
+function epvRenderTimeline() {
+  const svgEl = document.getElementById("epv-timeline-svg");
+  if(!svgEl || !dataBundle) return;
+
+  const expectation = dataBundle.expectation;
+  const meta = dataBundle.meta || {};
+  const teamA = meta.team_a || "";
+  const teamB = meta.team_b || "";
+  const mode = epvState.timelineMode;
+  const colorA = (colors && colors[teamA]) || "#3a86ff";
+  const colorB = (colors && colors[teamB]) || "#d62839";
+  const w = 318, h = 120, mx = 28, my = 14, mxr = 8, myb = 22;
+  const innerW = w - mx - mxr, innerH = h - my - myb;
+
+  const svgD3 = d3.select(svgEl);
+  svgD3.selectAll("*").remove();
+
+  if(!expectation || !expectation.teams) {
+    svgD3.append("text").attr("x", w/2).attr("y", h/2).attr("text-anchor","middle")
+      .attr("fill","#9db0cf").attr("font-size",11).text("No expectation data");
+    return;
+  }
+
+  // Build data series: per-minute ev arrays
+  function getTimeline(team) {
+    const teamBlock = expectation.teams[team] || {};
+    if(mode === "season") {
+      // Use season-average timeline from baselines if available
+      const tsSeason = (teamBlock.baselines || {}).team_season || {};
+      return tsSeason.timeline_avg || [];
+    }
+    return teamBlock.timeline || [];
+  }
+
+  // For league reference line (season avg of league)
+  function getLeagueAvgLine() {
+    const teams = [teamA, teamB].filter(Boolean);
+    for(const team of teams) {
+      const lb = ((expectation.teams[team] || {}).baselines || {}).league_season || {};
+      if(lb.timeline_avg && lb.timeline_avg.length) return lb.timeline_avg;
+    }
+    return [];
+  }
+
+  const tlA = getTimeline(teamA);
+  const tlB = getTimeline(teamB);
+  const tlLeague = getLeagueAvgLine();
+
+  // Combine all ev values for scale
+  const allEv = [
+    ...tlA.map(d => d.ev !== undefined && d.ev !== null ? d.ev : (d.mean_ev !== undefined ? d.mean_ev : null)),
+    ...tlB.map(d => d.ev !== undefined && d.ev !== null ? d.ev : (d.mean_ev !== undefined ? d.mean_ev : null)),
+    ...tlLeague.map(d => d.mean_ev !== undefined ? d.mean_ev : null),
+  ].filter(v => v !== null && !isNaN(v));
+
+  if(!allEv.length) {
+    svgD3.append("text").attr("x", w/2).attr("y", h/2).attr("text-anchor","middle")
+      .attr("fill","#9db0cf").attr("font-size",11).text("No timeline data");
+    return;
+  }
+
+  const evMin = Math.max(0, d3.min(allEv) - 0.05);
+  const evMax = d3.max(allEv) + 0.05;
+  const maxBucket = d3.max([
+    ...tlA.map(d => d.minute_bucket),
+    ...tlB.map(d => d.minute_bucket),
+    39,
+  ].filter(v => v !== null && v !== undefined));
+
+  const xScale = d3.scaleLinear().domain([0, maxBucket]).range([mx, mx + innerW]);
+  const yScale = d3.scaleLinear().domain([evMin, evMax]).range([my + innerH, my]);
+
+  const g = svgD3.append("g");
+
+  // Axes (light)
+  g.append("line").attr("x1",mx).attr("x2",mx+innerW).attr("y1",my+innerH).attr("y2",my+innerH)
+    .attr("stroke","rgba(111,132,171,.3)").attr("stroke-width",1);
+  g.append("line").attr("x1",mx).attr("x2",mx).attr("y1",my).attr("y2",my+innerH)
+    .attr("stroke","rgba(111,132,171,.3)").attr("stroke-width",1);
+
+  // Y-axis labels
+  [evMin, (evMin+evMax)/2, evMax].forEach(v => {
+    g.append("text").attr("x",mx-3).attr("y",yScale(v)+3).attr("text-anchor","end")
+      .attr("fill","#9db0cf").attr("font-size",9).text(v.toFixed(2));
+  });
+  // X-axis labels
+  [0, 10, 20, 30, maxBucket].forEach(b => {
+    g.append("text").attr("x",xScale(b)).attr("y",my+innerH+13).attr("text-anchor","middle")
+      .attr("fill","#9db0cf").attr("font-size",9).text(`${b}'`);
+  });
+
+  // Line builder
+  function drawLine(data, evKey, color, dashed) {
+    const pts = data.filter(d => d[evKey] !== null && d[evKey] !== undefined && !isNaN(d[evKey]));
+    if(pts.length < 2) return;
+    const line = d3.line()
+      .x(d => xScale(d.minute_bucket))
+      .y(d => yScale(d[evKey]))
+      .curve(d3.curveMonotoneX);
+    g.append("path").datum(pts)
+      .attr("fill","none")
+      .attr("stroke", color)
+      .attr("stroke-width", dashed ? 1.5 : 2)
+      .attr("stroke-dasharray", dashed ? "4,3" : null)
+      .attr("opacity", 0.85)
+      .attr("d", line);
+  }
+
+  const evKeyGame = "ev";
+  const evKeyAvg = "mean_ev";
+
+  if(mode === "season") {
+    drawLine(tlA, evKeyAvg, colorA, false);
+    drawLine(tlB, evKeyAvg, colorB, false);
+    drawLine(tlLeague, evKeyAvg, "#ffbe0b", true);
+  } else {
+    drawLine(tlA, evKeyGame, colorA, false);
+    drawLine(tlB, evKeyGame, colorB, false);
+    drawLine(tlLeague, evKeyAvg, "#ffbe0b", true);
+  }
+
+  // Update legend
+  const legend = document.getElementById("epv-chart-legend");
+  if(legend) {
+    legend.innerHTML = `
+      <span><span class="epv-chart-mark" style="border-color:${colorA};"></span>${teamA || "Team A"}</span>
+      <span><span class="epv-chart-mark" style="border-color:${colorB};"></span>${teamB || "Team B"}</span>
+      <span><span class="epv-chart-mark ref" style="border-color:#ffbe0b;"></span>League avg</span>
+    `;
+  }
+}
+
+function renderEpvPanel() {
+  if(!epvLab || !dataBundle) return;
+  const expectation = dataBundle.expectation;
+  const meta = dataBundle.meta || {};
+  epvRenderKpiGrid(meta.team_a, meta.team_b, expectation);
+  renderEpvTimeline();
+}
+
+function renderEpvTimeline() {
+  if(!epvLab || !dataBundle) return;
+  epvRenderTimeline();
+}
+
+function initEpvLab() {
+  const panel = document.getElementById("epv-lab-panel");
+  if(panel) panel.style.display = epvLab ? "block" : "none";
+  if(epvLab && dataBundle) renderEpvPanel();
 }
 
 // Accept postMessage loads from a parent (e.g. `prod/game-explorer.html`)
@@ -2432,6 +2730,7 @@ window.addEventListener('message', (ev) => {
       twinLab = p.get('twinLab') === '1';
       xrayLab = p.get('xrayLab') === '1' || twinLab;
       replayLab = p.get('replayLab') === '1';
+      epvLab = p.get('epvLab') === '1';
     }
     if(!url) return;
     // Set dataFile to provided URL and fetch bundle (respect blob URLs)
@@ -2462,6 +2761,7 @@ window.addEventListener('message', (ev) => {
       buildControls();
       setView("top");
       try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
+      try{ initEpvLab(); }catch(e){ console.warn("initEpvLab failed",e); }
       // Notify parent that the bundle from postMessage load has been handled
       try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
     }).catch(err=>{ console.error('loadBundle failed', err); document.getElementById("headline").textContent=`Failed to load ${dataFile}`; });

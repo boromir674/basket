@@ -64,6 +64,72 @@ def validate_file(path: Path) -> Tuple[bool, str]:
     if not (has_made2 or has_made3):
         return False, "no non-zero Made 2 or Made 3 flows detected in top view"
 
+    # Validate the expectation block when present.
+    expectation = data.get("expectation")
+    if expectation is not None:
+        ok, msg = _validate_expectation_block(expectation, meta)
+        if not ok:
+            return False, msg
+
+    return True, "ok"
+
+
+def _validate_expectation_block(expectation: object, meta: dict) -> Tuple[bool, str]:
+    """Lightweight shape and sanity checks for the ``expectation`` block."""
+    if not isinstance(expectation, dict):
+        return False, "'expectation' is not an object"
+
+    teams_block = expectation.get("teams")
+    if not isinstance(teams_block, dict):
+        return False, "'expectation.teams' is missing or not an object"
+
+    team_a = meta.get("team_a", "")
+    team_b = meta.get("team_b", "")
+    expected_teams = [t for t in [team_a, team_b] if t]
+
+    for team in expected_teams:
+        team_data = teams_block.get(team)
+        if not isinstance(team_data, dict):
+            return False, f"'expectation.teams.{team}' is missing or not an object"
+
+        for window in ("full_game", "last_4_min"):
+            window_data = team_data.get(window)
+            if not isinstance(window_data, dict):
+                return False, f"'expectation.teams.{team}.{window}' is missing or not an object"
+            for family in ("all", "ft", "2pt", "3pt"):
+                fam_data = window_data.get(family)
+                if not isinstance(fam_data, dict):
+                    return False, (
+                        f"'expectation.teams.{team}.{window}.{family}' is missing or not an object"
+                    )
+                n = fam_data.get("n")
+                if not isinstance(n, int) or n < 0:
+                    return False, (
+                        f"'expectation.teams.{team}.{window}.{family}.n' must be a non-negative int"
+                    )
+                ev = fam_data.get("ev")
+                if ev is not None:
+                    try:
+                        ev_float = float(ev)
+                    except (TypeError, ValueError):
+                        return False, (
+                            f"'expectation.teams.{team}.{window}.{family}.ev' must be numeric or null"
+                        )
+                    if ev_float < 0:
+                        return False, (
+                            f"'expectation.teams.{team}.{window}.{family}.ev' must be non-negative"
+                        )
+                    # Sanity ceiling: ev above 3 pts/possession is implausible.
+                    if ev_float > 3.0:
+                        return False, (
+                            f"'expectation.teams.{team}.{window}.{family}.ev' = {ev_float} "
+                            "exceeds plausible upper bound of 3.0"
+                        )
+
+        timeline = team_data.get("timeline")
+        if timeline is not None and not isinstance(timeline, list):
+            return False, f"'expectation.teams.{team}.timeline' must be an array or null"
+
     return True, "ok"
 
 

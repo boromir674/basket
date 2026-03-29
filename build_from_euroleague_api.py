@@ -60,11 +60,26 @@ def fetch_sources(seasoncode: str, gamecode: int):
 
 def extract_pbp_rows(pbp_json: Any) -> list[dict]:
     if isinstance(pbp_json, dict):
-        quarters = ["FirstQuarter", "SecondQuarter", "ThirdQuarter", "ForthQuarter", "FourthQuarter", "ExtraTime"]
+        quarter_keys = [
+            ("FirstQuarter", 1),
+            ("SecondQuarter", 2),
+            ("ThirdQuarter", 3),
+            ("ForthQuarter", 4),
+            ("FourthQuarter", 4),
+            ("ExtraTime", 5),
+        ]
         rows = []
-        for q in quarters:
-            if q in pbp_json and isinstance(pbp_json[q], list):
-                rows.extend(pbp_json[q])
+        seen_quarter_keys: set[str] = set()
+        for q_key, q_num in quarter_keys:
+            if q_key in seen_quarter_keys:
+                continue
+            if q_key in pbp_json and isinstance(pbp_json[q_key], list):
+                seen_quarter_keys.add(q_key)
+                for row in pbp_json[q_key]:
+                    annotated = dict(row) if isinstance(row, dict) else row
+                    if isinstance(annotated, dict) and "_quarter" not in annotated:
+                        annotated["_quarter"] = q_num
+                    rows.append(annotated)
         if rows:
             return rows
         for key in ["PlayByPlay", "Rows", "playByPlay", "items"]:
@@ -148,6 +163,60 @@ MISSED_3_CODES = {"3FGA"}
 FT_MADE_CODES = {"FTM"}
 FT_ATTEMPT_CODES = {"FTA"}
 
+# Regulation game duration in EuroLeague (4 × 10 min = 40 min)
+REGULATION_SECONDS = 40 * 60
+LAST_N_MINUTES = 4
+LAST_N_SECONDS = LAST_N_MINUTES * 60
+
+
+def row_game_clock_seconds(row: dict) -> Optional[int]:
+    """Extract game elapsed time as total seconds from game start.
+
+    EuroLeague PBP rows may encode time in several ways:
+    - MINUTE (int) + SECOND (int): raw fields
+    - GT (str): "MM:SS" or "M:SS" game-time string
+    Falls back to None if no parseable time field is found.
+    """
+    if not isinstance(row, dict):
+        return None
+    # Try "GT" style "MM:SS"
+    gt = first_key(row, ["GT", "gt", "GameTime", "GAMETIME", "gametime"], None)
+    if gt is not None:
+        s = str(gt).strip()
+        if ":" in s:
+            parts = s.split(":")
+            try:
+                return int(parts[0]) * 60 + int(parts[1])
+            except (ValueError, IndexError):
+                pass
+    # Try separate MINUTE + SECOND fields
+    minute = first_key(row, ["MINUTE", "minute", "Minute", "MIN_GAME", "min"], None)
+    if minute is not None:
+        try:
+            m = int(float(str(minute)))
+            second = first_key(row, ["SECOND", "second", "Second", "SEC", "sec"], None)
+            s = int(float(str(second))) if second is not None else 0
+            return m * 60 + s
+        except (ValueError, TypeError):
+            pass
+    return None
+
+
+def classify_shot_family(play_type: str) -> str:
+    """Map a raw PBP play-type code to an expectation shot family.
+
+    Returns one of: "2pt", "3pt", "ft", "to", or "other".
+    """
+    if play_type in MADE_2_CODES or play_type in MISSED_2_CODES:
+        return "2pt"
+    if play_type in MADE_3_CODES or play_type in MISSED_3_CODES:
+        return "3pt"
+    if play_type in FT_MADE_CODES or play_type in FT_ATTEMPT_CODES:
+        return "ft"
+    if play_type in TURNOVER_CODES:
+        return "to"
+    return "other"
+
 @dataclass
 class Possession:
     team: str
@@ -157,6 +226,12 @@ class Possession:
     number_of_play: Optional[int] = None
     player_id: Optional[str] = None
     player_name: Optional[str] = None
+    # Expectation-value enrichment fields (set during infer_possessions)
+    game_clock_seconds: Optional[int] = None  # total seconds elapsed from game start
+    minute_bucket: Optional[int] = None       # floor(game_clock_seconds / 60)
+    quarter: Optional[int] = None             # 1–4 for regulation, 5+ for OT
+    shot_family: Optional[str] = None         # "2pt", "3pt", "ft", "to", or "other"
+    opponent_team: Optional[str] = None       # opposing team name
 
 def classify_terminal(play_type: str):
     if play_type in MADE_2_CODES:
@@ -169,14 +244,23 @@ def classify_terminal(play_type: str):
         return "Shooting foul / FTs", 1 if play_type in FT_MADE_CODES else 0
     return None, 0
 
-def infer_possessions(pbp_rows: list[dict]):
+def infer_possessions(pbp_rows: list[dict], team_a: Optional[str] = None, team_b: Optional[str] = None):
+    """Infer possessions from a flat list of PBP rows.
+
+    When team_a and team_b are provided, the opponent_team field of each
+    Possession is populated so downstream expectation aggregations can apply
+    opponent-conditioned filters.
+    """
     possessions = []
     current_origin_by_team = defaultdict(lambda: "Half-court")
+    team_pair = {team_a: team_b, team_b: team_a} if team_a and team_b else {}
     for i, row in enumerate(pbp_rows):
         pt = row_play_type(row)
         team = row_team(row)
         nop = row_number_of_play(row)
         pid, pname = row_player(row)
+        clock = row_game_clock_seconds(row)
+        quarter = row.get("_quarter") if isinstance(row, dict) else None
 
         if pt in STEAL_CODES:
             current_origin_by_team[team] = "Transition / Fast break"
@@ -188,7 +272,13 @@ def infer_possessions(pbp_rows: list[dict]):
             current_origin_by_team[team] = "After OREB"
             continue
         if pt in TURNOVER_CODES:
-            possessions.append(Possession(team, current_origin_by_team[team], "Turnover", 0, nop, pid, pname))
+            p = Possession(team, current_origin_by_team[team], "Turnover", 0, nop, pid, pname)
+            p.game_clock_seconds = clock
+            p.minute_bucket = (clock // 60) if clock is not None else None
+            p.quarter = quarter
+            p.shot_family = "to"
+            p.opponent_team = team_pair.get(team)
+            possessions.append(p)
             current_origin_by_team[team] = "Half-court"
             continue
 
@@ -203,7 +293,13 @@ def infer_possessions(pbp_rows: list[dict]):
             if next_row and next_pt in OREB_CODES and next_team == team:
                 continue
 
-        possessions.append(Possession(team, current_origin_by_team[team], terminal, pts, nop, pid, pname))
+        p = Possession(team, current_origin_by_team[team], terminal, pts, nop, pid, pname)
+        p.game_clock_seconds = clock
+        p.minute_bucket = (clock // 60) if clock is not None else None
+        p.quarter = quarter
+        p.shot_family = classify_shot_family(pt)
+        p.opponent_team = team_pair.get(team)
+        possessions.append(p)
         current_origin_by_team[team] = "Half-court"
     return possessions
 
@@ -323,6 +419,151 @@ def build_players_index(possessions: list[Possession]) -> dict[str, dict[str, st
             continue
         players[pid] = {"name": pname, "team": p.team}
     return players
+
+
+# ---------------------------------------------------------------------------
+# Expectation value (EPV) helpers
+# ---------------------------------------------------------------------------
+
+_SHOT_FAMILIES = ("all", "ft", "2pt", "3pt")
+_MIN_SAMPLE_THRESHOLD = 5  # below this, mark result as insufficient_sample
+
+
+def _epv_metrics(subset: list[Possession]) -> dict[str, Any]:
+    """Compute raw expectation metrics for a filtered possession list."""
+    n = len(subset)
+    if n == 0:
+        return {"n": 0, "pts_sum": 0, "ev": None}
+    pts_sum = sum(p.points for p in subset)
+    return {"n": n, "pts_sum": pts_sum, "ev": round(pts_sum / n, 4)}
+
+
+def _filter_by_family(possessions: list[Possession], family: str) -> list[Possession]:
+    if family == "all":
+        return possessions
+    return [p for p in possessions if p.shot_family == family]
+
+
+def build_possession_timeline(possessions: list[Possession]) -> list[dict[str, Any]]:
+    """Group possessions into 1-minute clock buckets and compute per-bin metrics.
+
+    Each bin includes: minute_bucket, label, n, pts_sum, ev (per-bin),
+    cumulative_n, cumulative_pts, cumulative_ev.
+    Possessions without a game_clock_seconds value are excluded from the
+    timeline but still count toward overall totals.
+    """
+    bins: dict[int, list[Possession]] = defaultdict(list)
+    for p in possessions:
+        if p.minute_bucket is not None:
+            bins[p.minute_bucket].append(p)
+
+    if not bins:
+        return []
+
+    max_bucket = max(bins.keys())
+    timeline = []
+    cum_n = 0
+    cum_pts = 0
+    for b in range(max_bucket + 1):
+        bucket_poss = bins.get(b, [])
+        n = len(bucket_poss)
+        pts = sum(p.points for p in bucket_poss)
+        cum_n += n
+        cum_pts += pts
+        timeline.append({
+            "minute_bucket": b,
+            "label": f"Min {b}-{b + 1}",
+            "n": n,
+            "pts_sum": pts,
+            "ev": round(pts / n, 4) if n > 0 else None,
+            "cumulative_n": cum_n,
+            "cumulative_pts": cum_pts,
+            "cumulative_ev": round(cum_pts / cum_n, 4) if cum_n > 0 else None,
+        })
+    return timeline
+
+
+def build_expectation_block(team_a: str, team_b: str, possessions: list[Possession]) -> dict[str, Any]:
+    """Build the top-level ``expectation`` block for a processed game JSON.
+
+    Structure::
+
+        {
+          "filter_doc": { ... },
+          "teams": {
+            "<team>": {
+              "full_game":  { "all": {...}, "ft": {...}, "2pt": {...}, "3pt": {...} },
+              "last_4_min": { "all": {...}, "ft": {...}, "2pt": {...}, "3pt": {...} },
+              "timeline": [ { "minute_bucket": 0, ... }, ... ],
+              "baselines": { "team_season": null, "league_season": null }
+            }
+          }
+        }
+
+    The ``baselines`` sub-tree is intentionally null here; it is populated by
+    ``expectation_baselines.py`` in a subsequent enrichment pass (similar to
+    how ``auto_insights.py`` enriches insight text).
+    """
+    filter_doc = {
+        "denominator_rule": (
+            "Count of possessions in the filtered set. "
+            "Denominator is never total game possessions unless filter is all possessions."
+        ),
+        "shot_families": {
+            "all": "all possessions regardless of shot type",
+            "ft": "possessions ending in a free-throw sequence (FTM or FTA terminal)",
+            "2pt": "possessions with a 2-point attempt terminal (made or missed: 2FGM or 2FGA)",
+            "3pt": "possessions with a 3-point attempt terminal (made or missed: 3FGM or 3FGA)",
+        },
+        "time_windows": {
+            "full_game": "all possessions in the game",
+            "last_4_min": (
+                f"possessions whose game clock >= {REGULATION_SECONDS - LAST_N_SECONDS} s "
+                f"(final {LAST_N_MINUTES} minutes of regulation)"
+            ),
+        },
+        "poc_assumptions": [
+            "Metric is empirical outcome-rate expectation, not a shot-quality model.",
+            "Turnover possessions count in 'all' denominator with 0 points.",
+            "Turnovers are excluded from shot-family filters (ft/2pt/3pt).",
+        ],
+    }
+
+    teams_out: dict[str, Any] = {}
+    for team in [team_a, team_b]:
+        team_poss = [p for p in possessions if p.team == team]
+        last4_poss = [
+            p for p in team_poss
+            if p.game_clock_seconds is not None
+            and p.game_clock_seconds >= REGULATION_SECONDS - LAST_N_SECONDS
+        ]
+
+        windows = {
+            "full_game": team_poss,
+            "last_4_min": last4_poss,
+        }
+
+        window_metrics: dict[str, Any] = {}
+        for window_name, window_poss in windows.items():
+            family_metrics: dict[str, Any] = {}
+            for family in _SHOT_FAMILIES:
+                subset = _filter_by_family(window_poss, family)
+                m = _epv_metrics(subset)
+                if 0 < m["n"] < _MIN_SAMPLE_THRESHOLD:
+                    m["note"] = "low_sample"
+                family_metrics[family] = m
+            window_metrics[window_name] = family_metrics
+
+        teams_out[team] = {
+            **window_metrics,
+            "timeline": build_possession_timeline(team_poss),
+            "baselines": {
+                "team_season": None,
+                "league_season": None,
+            },
+        }
+
+    return {"filter_doc": filter_doc, "teams": teams_out}
 
 def build_top_view(team_a, team_b, possessions):
     starts = Counter(p.team for p in possessions)
@@ -576,7 +817,7 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
         raise SystemExit("No PlayByPlay rows extracted. Adjust extract_pbp_rows().")
 
     team_a, team_b = extract_team_names(box_json, pbp_rows)
-    possessions = infer_possessions(pbp_rows)
+    possessions = infer_possessions(pbp_rows, team_a=team_a, team_b=team_b)
     print_diagnostics(pbp_rows, points_rows, possessions)
 
     game_date = extract_game_date(box_json, pbp_json)
@@ -595,7 +836,8 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
         "players": build_players_index(possessions),
         "boxscore_players": extract_boxscore_players(box_json),
         "colors": {team_a:"#d62839", team_b:"#3a86ff"},
-        "views": build_views(team_a, team_b, possessions, points_rows)
+        "views": build_views(team_a, team_b, possessions, points_rows),
+        "expectation": build_expectation_block(team_a, team_b, possessions),
     }
     Path(output).write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"Wrote {output}")
