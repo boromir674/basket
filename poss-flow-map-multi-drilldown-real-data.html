@@ -137,8 +137,7 @@
     .epv-chart-mark.ref { border-top-style:dashed; }
     .epv-no-data { font-size:11px; color:var(--muted); text-align:center; padding:12px 0; }
     .epv-toggle { display:flex; gap:6px; margin-top:8px; }
-    .epv-toggle button { padding:4px 8px; font-size:10px; }
-  </style>
+    .epv-low-sample { font-size:10px; color:#ffbe0b; }
 </head>
 <body>
 <div class="wrap">
@@ -2553,7 +2552,7 @@ function epvRenderKpiGrid(teamA, teamB, expectation) {
     html += `<div class="epv-tile">
       <div class="epv-label" style="color:${teamColor};">${team}</div>
       <div class="epv-label">${familyLabels[family] || family} · ${win === "last_4_min" ? "Last 4 min" : "Full game"}</div>
-      <div class="epv-value">${epvFmtEv(ev)}${lowSample ? " <span style='font-size:10px;color:#ffbe0b;'>⚠ low n</span>" : ""}</div>
+      <div class="epv-value">${epvFmtEv(ev)}${lowSample ? " <span class='epv-low-sample'>⚠ low n</span>" : ""}</div>
       ${n !== null ? `<div class="epv-label" style="margin-top:2px;">n = ${n}</div>` : ""}
       ${tsDelta ? `<div class="epv-delta ${tsDelta.cls}">Team season: ${tsDelta.text}</div>` : (tsSeason.status === "insufficient_sample" ? `<div class="epv-delta epv-delta-neu">Team baseline: low sample</div>` : "")}
       ${lgDelta ? `<div class="epv-delta ${lgDelta.cls}">League: ${lgDelta.text}</div>` : (lgSeason.status === "insufficient_sample" ? `<div class="epv-delta epv-delta-neu">League baseline: low sample</div>` : "")}

@@ -60,12 +60,14 @@ def fetch_sources(seasoncode: str, gamecode: int):
 
 def extract_pbp_rows(pbp_json: Any) -> list[dict]:
     if isinstance(pbp_json, dict):
+        # "ForthQuarter" (misspelling) appears in some EuroLeague API responses;
+        # "FourthQuarter" is the corrected spelling. Both are included for compatibility.
         quarter_keys = [
             ("FirstQuarter", 1),
             ("SecondQuarter", 2),
             ("ThirdQuarter", 3),
-            ("ForthQuarter", 4),
-            ("FourthQuarter", 4),
+            ("ForthQuarter", 4),   # API misspelling variant
+            ("FourthQuarter", 4),  # Correct spelling variant
             ("ExtraTime", 5),
         ]
         rows = []

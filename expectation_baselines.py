@@ -152,7 +152,7 @@ def run_expectation_baselines_for_game(
             continue
         try:
             game = _load_json(candidate)
-        except Exception:  # noqa: BLE001
+        except (json.JSONDecodeError, OSError, ValueError):
             continue
         if isinstance(game.get("expectation"), dict):
             comparison_games.append(game)
