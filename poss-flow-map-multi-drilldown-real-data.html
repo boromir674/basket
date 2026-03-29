@@ -2132,7 +2132,7 @@ function renderView(viewKey, opts = {}){
       const tgtNode = (d.target && d.target.id !== undefined) ? d.target : { id: d.targetId, team: d.target && d.target.team, stage: d.target && d.target.stage, name: d.target && d.target.name };
       const oldS = findPrevNode(srcNode);
       const oldT = findPrevNode(tgtNode);
-      if (oldS && oldT) return linkGen({ source: oldS, target: oldT });
+      if (oldS && oldT) return linkGen({ source: oldS, target: oldT, y0: (oldS.y0 + oldS.y1) / 2, y1: (oldT.y0 + oldT.y1) / 2, width: Math.max(1, d.width || 1) });
       return linkGen(d);
     });
 
