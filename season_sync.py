@@ -67,8 +67,8 @@ def build_manifest(output_dir: Path, seasoncode: str) -> None:
                 "score_a": meta.get("score_a"),
                 "score_b": meta.get("score_b"),
                 "winner": meta.get("winner"),
-                "elo_a": elo_ratings.get(team_a) if team_a else None,
-                "elo_b": elo_ratings.get(team_b) if team_b else None,
+                "elo_a": elo_ratings.get(team_a),
+                "elo_b": elo_ratings.get(team_b),
                 "gamedate": meta.get("gamedate"),
                 "synced_at": meta.get("synced_at"),
             }

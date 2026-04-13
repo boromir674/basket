@@ -104,8 +104,11 @@ class TestOutcomeScore:
     def test_no_winner_draw(self) -> None:
         assert _outcome_score(None, "Alpha", "Beta", 75, 75) == 0.5
 
-    def test_no_winner_no_scores_returns_none(self) -> None:
-        assert _outcome_score(None, "Alpha", "Beta", None, None) is None
+    def test_winner_unrelated_team_returns_none(self) -> None:
+        # winner value doesn't match either team → treat as unknown
+        assert _outcome_score("Unknown", "Alpha", "Beta", None, None) is None
+
+
 
 
 # ---------------------------------------------------------------------------

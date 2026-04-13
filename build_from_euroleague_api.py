@@ -622,7 +622,12 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
     synced_at = datetime.now(timezone.utc).isoformat()
     score_a, score_b = extract_final_scores(box_json, team_a, team_b)
     if score_a is not None and score_b is not None:
-        winner: Optional[str] = team_a if score_a > score_b else (team_b if score_b > score_a else None)
+        if score_a > score_b:
+            winner: Optional[str] = team_a
+        elif score_b > score_a:
+            winner = team_b
+        else:
+            winner = None
     else:
         winner = None
 

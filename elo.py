@@ -86,8 +86,12 @@ def update_ratings(
 # ---------------------------------------------------------------------------
 
 def _parse_gamedate(gamedate: Optional[str]) -> str:
-    """Return a sortable date string, defaulting to empty string so games
-    without a date sort to the front (will be processed first)."""
+    """Return a sortable date string (first 10 chars of the ISO date).
+
+    Games without a date return an empty string, which sorts before any real
+    date string.  This means undated games are processed before all dated ones
+    — an acceptable heuristic; prefer always having a gamedate in the meta.
+    """
     if not gamedate:
         return ""
     # API returns ISO strings or "YYYY-MM-DD" fragments – take first 10 chars.
