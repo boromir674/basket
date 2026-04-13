@@ -84,6 +84,7 @@ def main(argv: list[str] | None = None) -> int:
         print("  entrypoint.py run_pipeline_and_validate [ARGS...]")
         print("  entrypoint.py demo")
         print("  entrypoint.py demo_auto_insights")
+        print("  entrypoint.py compute_elo --seasoncode E2021 [--output-dir assets/processed] [--k-factor 32] [--initial-rating 1500]")
         print("  entrypoint.py rebuild_manifest --seasoncode E2021 [--output-dir assets/processed]")
         print()
         print("Examples:")
@@ -171,6 +172,11 @@ def main(argv: list[str] | None = None) -> int:
         print("=== Running automatic insights engine ===")
         run_auto_insights_for_game(str(game_path), seasoncode, str(out_dir))
         return 0
+
+    if command == "compute_elo":
+        from elo import main as elo_main
+
+        return elo_main(rest)
 
     if command == "rebuild_manifest":
         parser = argparse.ArgumentParser(description="Rebuild games_manifest.json from existing JSON files.")

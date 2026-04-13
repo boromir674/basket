@@ -57,6 +57,20 @@ services:
     entrypoint: ["python", "-m", "pytest"]
     command: ["-q", "tests"]
 
+  compute_elo:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # Compute ELO ratings for all games in a season and write elo_{seasoncode}.json.
+    # Run after season_sync to have up-to-date game data.
+    entrypoint: ["python"]
+    command: [
+      "elo.py",
+      "--seasoncode", "E2021",
+      "--output-dir", "/app/assets/processed"
+    ]
+
   season_sync:
     image: euroleague-sankey
     working_dir: /app

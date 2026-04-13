@@ -9,6 +9,21 @@ from build_from_euroleague_api import run_game
 from validate_output import validate_file
 
 
+def _load_elo_ratings(output_dir: Path, seasoncode: str) -> Dict[str, float]:
+    """Load team ELO ratings from elo_{seasoncode}.json if it exists."""
+    elo_path = output_dir / f"elo_{seasoncode}.json"
+    if not elo_path.exists():
+        return {}
+    try:
+        data = json.loads(elo_path.read_text(encoding="utf-8"))
+        ratings = data.get("ratings", {})
+        if isinstance(ratings, dict):
+            return {str(k): float(v) for k, v in ratings.items()}
+    except Exception:  # noqa: BLE001
+        pass
+    return {}
+
+
 def build_manifest(output_dir: Path, seasoncode: str) -> None:
     """Scan JSON files and write a simple manifest for the UI.
 
@@ -17,9 +32,15 @@ def build_manifest(output_dir: Path, seasoncode: str) -> None:
       "seasoncode": "E2021",
       "gamecode": 54,
       "team_a": "...",
-      "team_b": "..."}, ...]
+      "team_b": "...",
+      "score_a": 85,
+      "score_b": 78,
+      "winner": "...",
+      "elo_a": 1563.0,
+      "elo_b": 1488.0}, ...]
     """
     entries: List[Dict[str, Any]] = []
+    elo_ratings = _load_elo_ratings(output_dir, seasoncode)
 
     pattern = f"multi_drilldown_real_data_{seasoncode}_*.json"
     for path in sorted(output_dir.glob(pattern)):
@@ -34,13 +55,20 @@ def build_manifest(output_dir: Path, seasoncode: str) -> None:
             gamecode = int(meta.get("gamecode"))
         except Exception:  # noqa: BLE001
             continue
+        team_a = meta.get("team_a")
+        team_b = meta.get("team_b")
         entries.append(
             {
                 "file": path.name,
                 "seasoncode": seasoncode,
                 "gamecode": gamecode,
-                "team_a": meta.get("team_a"),
-                "team_b": meta.get("team_b"),
+                "team_a": team_a,
+                "team_b": team_b,
+                "score_a": meta.get("score_a"),
+                "score_b": meta.get("score_b"),
+                "winner": meta.get("winner"),
+                "elo_a": elo_ratings.get(team_a) if team_a else None,
+                "elo_b": elo_ratings.get(team_b) if team_b else None,
                 "gamedate": meta.get("gamedate"),
                 "synced_at": meta.get("synced_at"),
             }
