@@ -8,6 +8,7 @@ import os
 from pipeline_runner import main as run_pipeline_main
 from validate_output import validate_file
 from season_sync import build_manifest
+from season_ops import build_season_report, normalize_season_data_files
 
 
 def run_pipeline_and_validate(argv: list[str]) -> int:
@@ -84,6 +85,10 @@ def main(argv: list[str] | None = None) -> int:
         print("  entrypoint.py run_pipeline_and_validate [ARGS...]")
         print("  entrypoint.py demo")
         print("  entrypoint.py demo_auto_insights")
+        print("  entrypoint.py sync_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --output-dir data [--log-level DEBUG]")
+        print("  entrypoint.py normalize_season_data --seasoncode E2025 --data-dir data [--dry-run]")
+        print("  entrypoint.py report_season --seasoncode E2025 --data-dir data")
+        print("  entrypoint.py prepare_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --data-dir data")
         print("  entrypoint.py compute_elo --seasoncode E2021 [--output-dir assets/processed] [--k-factor 32] [--initial-rating 1500]")
         print("  entrypoint.py rebuild_manifest --seasoncode E2021 [--output-dir assets/processed]")
         print()
@@ -177,6 +182,107 @@ def main(argv: list[str] | None = None) -> int:
         from elo import main as elo_main
 
         return elo_main(rest)
+
+    if command == "sync_season":
+        # Wrapper around season_sync so we keep a single top-level entrypoint.
+        from season_sync import main as season_sync_main
+
+        return season_sync_main(rest)
+
+    if command == "normalize_season_data":
+        parser = argparse.ArgumentParser(description="Normalize/canonicalize stored season JSON files in-place.")
+        parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2025")
+        parser.add_argument(
+            "--data-dir",
+            default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
+            help="Directory containing season JSON files (default: BASKET_APP_FILE_STORE_URI/processed)",
+        )
+        parser.add_argument("--dry-run", action="store_true", help="Report what would change without writing files")
+        args = parser.parse_args(rest)
+
+        data_dir = Path(args.data_dir).resolve()
+        counts = normalize_season_data_files(seasoncode=args.seasoncode, data_dir=data_dir, dry_run=args.dry_run)
+        mode = "DRY-RUN" if args.dry_run else "LIVE"
+        print(f"=== normalize_season_data ({mode}) {args.seasoncode} in {data_dir} ===")
+        print(f"files_total={counts['files_total']}, files_changed={counts['files_changed']}")
+
+        if not args.dry_run:
+            # Keep the UI game switcher consistent with any rewritten team labels.
+            build_manifest(data_dir, args.seasoncode)
+            print("manifest_rebuilt=1")
+        return 0
+
+    if command == "report_season":
+        parser = argparse.ArgumentParser(description="Report season data quality stats from stored JSON files.")
+        parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2025")
+        parser.add_argument(
+            "--data-dir",
+            default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
+            help="Directory containing season JSON files (default: BASKET_APP_FILE_STORE_URI/processed)",
+        )
+        args = parser.parse_args(rest)
+
+        report = build_season_report(seasoncode=args.seasoncode, data_dir=Path(args.data_dir).resolve())
+        print(f"=== Season report: {report.seasoncode} ===")
+        print(f"games={report.games}")
+        print(f"distinct_teams={report.distinct_teams}")
+        print("teams=")
+        for t in report.teams:
+            print(f"  - {t}")
+        return 0
+
+    if command == "prepare_season":
+        # One-shot helper: sync -> normalize -> compute elo -> rebuild manifest -> report.
+        parser = argparse.ArgumentParser(description="Prepare a season end-to-end (sync + normalize + elo + report).")
+        parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2025")
+        parser.add_argument("--start-gamecode", type=int, default=1)
+        parser.add_argument("--end-gamecode", type=int, default=200)
+        parser.add_argument(
+            "--data-dir",
+            default="data",
+            help="Directory where season JSONs live (and outputs are written). Default: data",
+        )
+        parser.add_argument("--max-failures", type=int, default=25)
+        parser.add_argument("--force", action="store_true")
+        args = parser.parse_args(rest)
+
+        data_dir = Path(args.data_dir).resolve()
+        data_dir.mkdir(parents=True, exist_ok=True)
+
+        from season_sync import main as season_sync_main
+        from elo import main as elo_main
+
+        print("=== [1/5] Sync season ===")
+        season_sync_main(
+            [
+                "--seasoncode",
+                args.seasoncode,
+                "--start-gamecode",
+                str(args.start_gamecode),
+                "--end-gamecode",
+                str(args.end_gamecode),
+                "--output-dir",
+                str(data_dir),
+                "--max-failures",
+                str(args.max_failures),
+            ]
+            + (["--force"] if args.force else [])
+        )
+
+        print("=== [2/5] Normalize stored JSONs ===")
+        normalize_season_data_files(seasoncode=args.seasoncode, data_dir=data_dir, dry_run=False)
+
+        print("=== [3/5] Compute Elo ===")
+        elo_main(["--seasoncode", args.seasoncode, "--output-dir", str(data_dir)])
+
+        print("=== [4/5] Rebuild manifest (includes Elo badges) ===")
+        build_manifest(data_dir, args.seasoncode)
+
+        print("=== [5/5] Report ===")
+        report = build_season_report(seasoncode=args.seasoncode, data_dir=data_dir)
+        print(f"games={report.games}")
+        print(f"distinct_teams={report.distinct_teams}")
+        return 0
 
     if command == "rebuild_manifest":
         parser = argparse.ArgumentParser(description="Rebuild games_manifest.json from existing JSON files.")
