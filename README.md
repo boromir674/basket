@@ -57,6 +57,10 @@ Open `http://localhost:8080/index.html` for the MVP surface.
 
 ## 3) Common Commands
 
+### Data ops (season sync, Elo, reporting)
+
+See `docs/data_ops.md` for the noob-friendly, Docker-first workflow and the single unified CLI.
+
 ### Single game pipeline + validation
 
 ```bash
@@ -106,6 +110,8 @@ docker compose run --rm tests
    - fetches `PlaybyPlay`, `Points`, `Boxscore`
    - writes raw snapshots to `assets/`
    - infers possessions + builds Sankey-ready views
+  - computes `meta.score_a/score_b/winner` from Boxscore (or a fallback sum of
+    per-player points mapped via `players` -> team) so ELO can update
 2. `pipeline_runner.py`
    - runs one/many games
    - writes processed JSON to `assets/processed/` by default
@@ -168,6 +174,20 @@ Notes:
 | Flow Index Q&A lab (narrative answers) | `views.<view>.player_flows`, `boxscore_players`, `views.<view>.links` | `modeled/inferred` + `raw API Boxscore` + `computed` | Combines flow contribution with boxscore context (`valuation`, `points`, `minutes`) for guided answers. |
 | Live Replay Timeline lab | `views.<view>.links`, `views.top.links`, `meta` | `computed` | Simulated 0→40 replay: link reveal schedules + score interpolation from top-view points buckets. |
 | Global player registry (optional utility) | `players` map (`player_id -> {name, team}`) | `processed` | Built from possession-level player attribution gathered from raw PBP rows. |
+| Header ELO badge | `elo_{seasoncode}.json` (`ratings` map), `meta.team_a/team_b` | `computed` | Ratings derived from Boxscore totals; if Boxscore team names are codes, scores are summed via player points mapped through `players`. |
+
+## 6.1) ELO Inputs (Why All-1500 Happens)
+
+ELO updates only when `meta.score_a`, `meta.score_b`, or `meta.winner` are present.
+If those are missing, ELO stays at the `initial_rating` (1500 by default) for all teams.
+
+We now populate scores at build time using this priority:
+
+1. Boxscore team totals (preferred): totals in `Boxscore.Stats` for each team.
+2. Fallback: sum per-player points from `boxscore_players` and map each player ID
+  to the full team name using `players`.
+
+If both methods fail, the game is marked `outcome_unknown` and ELO will not move.
 
 ## 7) Current UI Notes (Prototype Behavior)
 

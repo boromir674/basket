@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elo Showcase</title>
+  <style>
+    :root{
+      --bg:#0b0f16;
+      --panel:#101826;
+      --panel2:#0f1624;
+      --text:#e8f0ff;
+      --muted:#97a6bf;
+      --border:#24344a;
+      --accent:#62b6ff;
+      --ok:#64d2a5;
+      --warn:#ffb15a;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    .wrap{max-width:1416px; margin:0 auto; padding:16px;}
+    .top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:12px;}
+    .title{font-size:18px; font-weight:700; letter-spacing:.2px;}
+    .muted{color:var(--muted); font-size:12px;}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:var(--panel2);
+      color:var(--text);
+      font-size:12px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{filter:brightness(1.08);}
+    .btn.primary{border-color:#3a6fa8; background:#0f1e33;}
+
+    .layout{display:grid; grid-template-columns: 420px minmax(672px, 1fr); gap:12px;}
+    .card{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:12px;}
+    .label{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.8px;}
+
+    .row{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+    select, input[type="range"]{
+      width:100%;
+      background:var(--panel2);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:8px;
+      border-radius:10px;
+      font-size:12px;
+      outline:none;
+    }
+
+    .subhead{display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:8px;}
+    .pill{display:inline-block; border:1px solid #3f608f; border-radius:999px; padding:2px 8px; font-size:11px; color:#b7cdf1;}
+
+    .table{margin-top:10px; border-top:1px solid var(--border);}
+    .tr{display:grid; grid-template-columns: 42px 1fr 96px; gap:10px; padding:8px 0; border-bottom:1px solid rgba(36,52,74,.6);} 
+    .th{color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.7px;}
+    .rank{color:var(--muted); font-variant-numeric: tabular-nums;}
+    .elo{font-variant-numeric: tabular-nums; text-align:right;}
+    .tr.selected{background:rgba(98,182,255,.06); border-radius:10px; padding-left:8px; padding-right:8px;}
+    .tr.active{background:rgba(98,182,255,.12); border-radius:10px; padding-left:8px; padding-right:8px;}
+
+    .chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:5px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--panel2);
+      font-size:12px;
+    }
+    .chip .sw{width:44px; height:14px; display:inline-block;}
+    .chip .x{border:0; background:transparent; color:var(--muted); cursor:pointer; font-size:12px; padding:0; line-height:1;}
+    .chip .x:hover{color:var(--text);}
+
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+
+    .tr{outline:none;}
+    .tr:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:10px;}
+    .chip{outline:none;}
+    .chip:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+    .chartWrap{border:1px solid var(--border); border-radius:12px; background:var(--panel2); padding:10px;}
+    .chartMeta{display:flex; justify-content:space-between; gap:10px; margin:8px 0 0;}
+    .chartMeta .muted{font-size:11px;}
+
+    .err{color:#ff7d7d; font-size:12px; white-space:pre-wrap;}
+
+    @media (max-width: 980px){
+      .layout{grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="title">Elo Showcase</div>
+      <div class="muted">Rank teams by Elo (as-of a game tick) + replay season progression.</div>
+    </div>
+    <div class="row" style="justify-content:flex-end;">
+      <a class="btn" href="./index.html">Back to MVP Home</a>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="card">
+      <div class="subhead">
+        <div>
+          <div class="label">Season</div>
+          <div style="font-size:13px; font-weight:650;" id="seasonLabel">—</div>
+        </div>
+        <div class="pill" id="asOfPill">As of —</div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <div class="label">Team</div>
+        <select id="teamSelect"></select>
+        <div class="row" style="margin-top:8px; justify-content:space-between;">
+          <div class="muted" id="compareTip">Tip: Ctrl/Cmd+click teams in the rank list to compare.</div>
+          <button class="btn" id="clearBtn" style="min-width:120px;">Clear compare</button>
+        </div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <div class="label">Replay</div>
+        <div class="row" style="margin-top:6px;">
+          <button class="btn primary" id="playBtn" style="min-width:90px;">Play</button>
+          <button class="btn" id="endBtn" style="min-width:90px;">Now</button>
+          <div class="muted" id="tickLabel" style="flex:1; text-align:right;">—</div>
+        </div>
+        <div style="margin-top:8px;">
+          <input id="tickRange" type="range" min="0" max="0" step="1" value="0" />
+        </div>
+        <div class="muted" style="margin-top:6px;">Tip: “Now” jumps to the latest game (most current Elo).</div>
+      </div>
+
+      <div class="table" id="rankTable">
+        <div class="tr th">
+          <div>#</div>
+          <div>Team</div>
+          <div style="text-align:right;">Elo</div>
+        </div>
+      </div>
+      <div class="err" id="err" style="display:none; margin-top:8px;"></div>
+    </div>
+
+    <div class="card">
+      <div class="label">Selected Team Elo (This Season)</div>
+      <div style="font-size:14px; font-weight:700; margin-top:4px;" id="teamTitle">—</div>
+      <div class="muted" id="teamSubtitle" style="margin-top:2px;">—</div>
+
+      <div class="chips" id="compareChips"></div>
+      <div id="srStatus" class="sr-only" aria-live="polite"></div>
+
+      <div class="chartWrap" style="margin-top:10px;">
+        <svg id="chart" width="100%" height="461" viewBox="0 0 900 461" preserveAspectRatio="none"></svg>
+      </div>
+      <div class="chartMeta">
+        <div class="muted" id="yRange">—</div>
+        <div class="muted" id="xRange">—</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const qs = new URLSearchParams(window.location.search);
+
+  const seasonLabelEl = document.getElementById('seasonLabel');
+  const asOfPillEl = document.getElementById('asOfPill');
+  const teamSelect = document.getElementById('teamSelect');
+  const rankTable = document.getElementById('rankTable');
+  const playBtn = document.getElementById('playBtn');
+  const endBtn = document.getElementById('endBtn');
+  const tickRange = document.getElementById('tickRange');
+  const tickLabel = document.getElementById('tickLabel');
+  const teamTitle = document.getElementById('teamTitle');
+  const teamSubtitle = document.getElementById('teamSubtitle');
+  const chartSvg = document.getElementById('chart');
+  const yRangeEl = document.getElementById('yRange');
+  const xRangeEl = document.getElementById('xRange');
+  const errEl = document.getElementById('err');
+  const clearBtn = document.getElementById('clearBtn');
+  const compareChips = document.getElementById('compareChips');
+  const srStatus = document.getElementById('srStatus');
+
+  const compareTipEl = document.getElementById('compareTip');
+
+  const SEASON_TO_SEASONCODE = {
+    '2025-2026': 'E2025',
+    '2025/2026': 'E2025',
+    '2025–2026': 'E2025',
+  };
+
+  function normalizeSeasonLabel(s){
+    return String(s || '')
+      .trim()
+      .replace(/\s+/g, '')
+      .replace(/\u2013/g, '-')
+      .replace(/\u2014/g, '-')
+      .toLowerCase();
+  }
+
+  function formatSeasonPretty(s){
+    if(!s) return '';
+    const raw = String(s).trim();
+    if(raw.includes('/')) return raw.replace('/', '–');
+    if(raw.includes('-')) return raw.replace('-', '–');
+    return raw;
+  }
+
+  function seasoncodeFromQuery(){
+    const explicit = (qs.get('seasoncode') || '').trim();
+    if(explicit) return explicit;
+
+    const season = (qs.get('season') || '').trim();
+    if(season){
+      const key = normalizeSeasonLabel(season);
+      if(key === '2025-2026') return 'E2025';
+      return SEASON_TO_SEASONCODE[formatSeasonPretty(season)] || SEASON_TO_SEASONCODE[season] || '';
+    }
+
+    return 'E2025';
+  }
+
+  function seasonPrettyFromQuery(){
+    const season = (qs.get('season') || '').trim();
+    if(season) return formatSeasonPretty(season);
+    return '';
+  }
+
+  function showError(msg){
+    errEl.style.display = 'block';
+    errEl.textContent = msg;
+  }
+
+  let elo = null;
+  let teams = [];
+  let history = [];
+  let tick = 0;
+  let playing = false;
+  let timer = null;
+  let activeTeam = '';
+  let selectedSet = new Set();
+  let hoverTeam = '';
+
+  let stylesByTeam = Object.create(null);
+  let styleCache = Object.create(null);
+
+  const MAX_COMPARE = 20;
+  const WARN_COMPARE = 8;
+
+  const COLOR_VARS = ['--accent','--ok','--warn'];
+  const MARKERS = ['circle','square','triangle','diamond','cross'];
+
+  function cssVar(name, fallback){
+    const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return v || fallback || '';
+  }
+
+  function parseColorToRgb(s){
+    const str = String(s || '').trim();
+    if(!str) return null;
+
+    // #rgb or #rrggbb
+    if(str[0] === '#'){
+      const hex = str.slice(1);
+      if(hex.length === 3){
+        const r = parseInt(hex[0] + hex[0], 16);
+        const g = parseInt(hex[1] + hex[1], 16);
+        const b = parseInt(hex[2] + hex[2], 16);
+        return { r, g, b };
+      }
+      if(hex.length === 6){
+        const r = parseInt(hex.slice(0,2), 16);
+        const g = parseInt(hex.slice(2,4), 16);
+        const b = parseInt(hex.slice(4,6), 16);
+        return { r, g, b };
+      }
+      return null;
+    }
+
+    // rgb()/rgba()
+    const m = str.match(/rgba?\(([^)]+)\)/i);
+    if(m){
+      const parts = m[1].split(',').map(x => x.trim());
+      if(parts.length >= 3){
+        const r = Math.max(0, Math.min(255, parseFloat(parts[0]) || 0));
+        const g = Math.max(0, Math.min(255, parseFloat(parts[1]) || 0));
+        const b = Math.max(0, Math.min(255, parseFloat(parts[2]) || 0));
+        return { r, g, b };
+      }
+    }
+    return null;
+  }
+
+  function rgbToHex(rgb){
+    if(!rgb) return '';
+    const to2 = (n) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2,'0');
+    return `#${to2(rgb.r)}${to2(rgb.g)}${to2(rgb.b)}`;
+  }
+
+  function mixRgb(a, b, t){
+    const tt = Math.max(0, Math.min(1, t));
+    return {
+      r: a.r + (b.r - a.r) * tt,
+      g: a.g + (b.g - a.g) * tt,
+      b: a.b + (b.b - a.b) * tt,
+    };
+  }
+
+  function rgbToHsl(rgb){
+    const r = (rgb.r || 0) / 255;
+    const g = (rgb.g || 0) / 255;
+    const b = (rgb.b || 0) / 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h = 0;
+    let s = 0;
+    const l = (max + min) / 2;
+
+    if(max !== min){
+      const d = max - min;
+      s = l > 0.5 ? (d / (2 - max - min)) : (d / (max + min));
+      switch(max){
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        default: h = (r - g) / d + 4; break;
+      }
+      h *= 60;
+    }
+    return { h, s: s * 100, l: l * 100 };
+  }
+
+  function hslToRgb(hsl){
+    let h = ((hsl.h || 0) % 360 + 360) % 360;
+    const s = Math.max(0, Math.min(100, hsl.s || 0)) / 100;
+    const l = Math.max(0, Math.min(100, hsl.l || 0)) / 100;
+
+    const c = (1 - Math.abs(2 * l - 1)) * s;
+    const hh = h / 60;
+    const x = c * (1 - Math.abs((hh % 2) - 1));
+    let r1 = 0, g1 = 0, b1 = 0;
+    if(hh >= 0 && hh < 1){ r1 = c; g1 = x; b1 = 0; }
+    else if(hh < 2){ r1 = x; g1 = c; b1 = 0; }
+    else if(hh < 3){ r1 = 0; g1 = c; b1 = x; }
+    else if(hh < 4){ r1 = 0; g1 = x; b1 = c; }
+    else if(hh < 5){ r1 = x; g1 = 0; b1 = c; }
+    else { r1 = c; g1 = 0; b1 = x; }
+
+    const m = l - c / 2;
+    return {
+      r: (r1 + m) * 255,
+      g: (g1 + m) * 255,
+      b: (b1 + m) * 255,
+    };
+  }
+
+  function rgbDistance(a, b){
+    const dr = (a.r || 0) - (b.r || 0);
+    const dg = (a.g || 0) - (b.g || 0);
+    const db = (a.b || 0) - (b.b || 0);
+    return Math.sqrt(dr*dr + dg*dg + db*db);
+  }
+
+  function hashToUint32(str){
+    let h = 2166136261;
+    for(let i=0;i<str.length;i++){
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return (h >>> 0);
+  }
+
+  function buildDistinctPalette(){
+    // Goal: a *qualitative* palette with strong hue separation for small sets.
+    // We derive the starting hue from theme --accent, then spread hues evenly.
+    const base = parseColorToRgb(cssVar('--accent', '#62b6ff')) || { r: 98, g: 182, b: 255 };
+    const baseH = rgbToHsl(base).h;
+
+    // On dark background we want bright-but-not-white strokes.
+    const S = 78;
+    const L = 56;
+    const N = 28;
+
+    const colors = [];
+    for(let i=0;i<N;i++){
+      const h = (baseH + (i * 360 / N)) % 360;
+      colors.push(rgbToHex(hslToRgb({ h, s: S, l: L })));
+    }
+
+    // Also include theme --ok/--warn if present (they often help vs pure hue wheel).
+    COLOR_VARS.forEach((v) => {
+      const c = cssVar(v, '');
+      if(c && c[0] === '#') colors.push(c);
+    });
+
+    // De-dupe while preserving order.
+    const out = [];
+    const seen = new Set();
+    colors.forEach((c) => {
+      const key = String(c || '').toLowerCase();
+      if(!key || seen.has(key)) return;
+      seen.add(key);
+      out.push(c);
+    });
+    return out;
+  }
+
+  function bestColorForTeam(team, takenRgbs, palette){
+    const h = hashToUint32(String(team || ''));
+    const start = palette.length ? (h % palette.length) : 0;
+    if(!takenRgbs || !takenRgbs.length){
+      return palette[start] || cssVar('--accent', '#62b6ff');
+    }
+
+    let bestIdx = start;
+    let bestScore = -1;
+    for(let k=0;k<palette.length;k++){
+      const idx = (start + k) % palette.length;
+      const rgb = parseColorToRgb(palette[idx]);
+      if(!rgb) continue;
+      let minD = Infinity;
+      for(let j=0;j<takenRgbs.length;j++){
+        minD = Math.min(minD, rgbDistance(rgb, takenRgbs[j]));
+      }
+      if(minD > bestScore + 1e-9){
+        bestScore = minD;
+        bestIdx = idx;
+      }
+    }
+    return palette[bestIdx] || cssVar('--accent', '#62b6ff');
+  }
+
+  function bestMarkerForTeam(team, takenMarkers){
+    const h = hashToUint32(String(team || ''));
+    const start = MARKERS.length ? (h % MARKERS.length) : 0;
+    for(let k=0;k<MARKERS.length;k++){
+      const m = MARKERS[(start + k) % MARKERS.length];
+      if(!takenMarkers || !takenMarkers.has(m)) return m;
+    }
+    return 'circle';
+  }
+
+  function ensureStylesForSelectedTeams(teamList){
+    const teamsInOrder = Array.from(new Set(teamList || []));
+    const palette = buildDistinctPalette();
+
+    const takenRgbs = [];
+    const takenMarkers = new Set();
+
+    const map = Object.create(null);
+
+    // 1) Preserve existing team styles (avoid reshuffle when adding a new team).
+    teamsInOrder.forEach((team) => {
+      const st = styleCache && styleCache[team];
+      if(!st) return;
+      map[team] = st;
+      const rgb = parseColorToRgb(st.color);
+      if(rgb) takenRgbs.push(rgb);
+      if(st.marker) takenMarkers.add(st.marker);
+    });
+
+    // 2) Assign best-contrast colors to newly-added teams.
+    teamsInOrder.forEach((team) => {
+      if(map[team]) return;
+      const color = bestColorForTeam(team, takenRgbs, palette);
+      const marker = bestMarkerForTeam(team, takenMarkers);
+      const h = hashToUint32(String(team));
+      const dashOffset = (h % 23) * 1.7;
+      const st = { color, dash: '', marker, dashOffset };
+      map[team] = st;
+      styleCache[team] = st;
+      const rgb = parseColorToRgb(color);
+      if(rgb) takenRgbs.push(rgb);
+      takenMarkers.add(marker);
+    });
+
+    stylesByTeam = map;
+  }
+
+  function styleFor(team){
+    return stylesByTeam && stylesByTeam[team] ? stylesByTeam[team] : { color: cssVar('--accent', '#62b6ff'), dash: '', marker: 'circle', dashOffset: 0 };
+  }
+
+  function setCompareTip(text, kind){
+    if(!compareTipEl) return;
+    compareTipEl.textContent = text;
+    if(kind === 'warn') compareTipEl.style.color = 'var(--warn)';
+    else compareTipEl.style.color = '';
+  }
+
+  function applyHoverHighlight(hoverTeam){
+    const els = chartSvg.querySelectorAll('[data-team]');
+    els.forEach(el => {
+      const team = el.getAttribute('data-team') || '';
+      const baseOpacity = el.getAttribute('data-base-opacity');
+      const baseStrokeWidth = el.getAttribute('data-base-stroke-width');
+      const baseR = el.getAttribute('data-base-r');
+      const baseFillOpacity = el.getAttribute('data-base-fill-opacity');
+
+      if(!hoverTeam){
+        if(baseOpacity != null) el.setAttribute('opacity', baseOpacity);
+        if(baseStrokeWidth != null) el.setAttribute('stroke-width', baseStrokeWidth);
+        if(baseR != null) el.setAttribute('r', baseR);
+        if(baseFillOpacity != null) el.setAttribute('fill-opacity', baseFillOpacity);
+        return;
+      }
+
+      if(team === hoverTeam){
+        el.setAttribute('opacity', '1');
+        if(baseStrokeWidth != null && el.tagName.toLowerCase() === 'path'){
+          el.setAttribute('stroke-width', String(parseFloat(baseStrokeWidth) + 0.8));
+        }
+        if(baseR != null) el.setAttribute('r', String(parseFloat(baseR) + 0.8));
+        if(baseFillOpacity != null) el.setAttribute('fill-opacity', '1');
+      }else{
+        el.setAttribute('opacity', '0.15');
+        if(baseFillOpacity != null) el.setAttribute('fill-opacity', '0.15');
+      }
+    });
+  }
+
+  function initialRating(){
+    const v = (elo && typeof elo.initial_rating === 'number') ? elo.initial_rating : 1500;
+    return v;
+  }
+
+  function computeRatingsAt(t){
+    const ratings = {};
+    const init = initialRating();
+    teams.forEach(team => ratings[team] = init);
+
+    const n = Math.max(0, Math.min(t, history.length));
+    for(let i=0;i<n;i++){
+      const e = history[i];
+      if(e && e.team_a) ratings[e.team_a] = e.elo_a_after;
+      if(e && e.team_b) ratings[e.team_b] = e.elo_b_after;
+    }
+    return ratings;
+  }
+
+  function rankRows(ratings){
+    const rows = teams.map(team => ({ team, elo: ratings[team] }));
+    rows.sort((a,b) => b.elo - a.elo);
+    return rows;
+  }
+
+  function asOfText(){
+    if(tick <= 0) return 'As of: start';
+    const e = history[tick - 1];
+    const date = e && e.gamedate ? e.gamedate : 'date unknown';
+    return `As of: game ${tick} / ${history.length} · ${date}`;
+  }
+
+  function tickText(){
+    if(tick <= 0) return 'Start (no games applied)';
+    const e = history[tick - 1];
+    const a = e && e.team_a ? e.team_a : '?';
+    const b = e && e.team_b ? e.team_b : '?';
+    return `Tick ${tick}: ${a} vs ${b}`;
+  }
+
+  function setTick(next){
+    tick = Math.max(0, Math.min(next, history.length));
+    tickRange.value = String(tick);
+    render();
+  }
+
+  function setSelectedTeam(team){
+    teamSelect.value = team;
+    // Selecting from the dropdown is the "single-team" happy path.
+    selectedSet = new Set([team]);
+    activeTeam = team;
+    render();
+  }
+
+  function toggleTeam(team){
+    if(selectedSet.has(team)) selectedSet.delete(team);
+    else {
+      if(selectedSet.size >= MAX_COMPARE){
+        setCompareTip(`Compare limit: ${MAX_COMPARE} teams (remove one to add).`, 'warn');
+        return;
+      }
+      selectedSet.add(team);
+    }
+    if(!selectedSet.size){
+      selectedSet.add(team);
+    }
+    if(!selectedSet.has(activeTeam)){
+      activeTeam = Array.from(selectedSet)[0] || team;
+    }
+    teamSelect.value = activeTeam;
+    render();
+  }
+
+  function soloTeam(team){
+    selectedSet = new Set([team]);
+    activeTeam = team;
+    teamSelect.value = team;
+    render();
+  }
+
+  function stop(){
+    playing = false;
+    playBtn.textContent = 'Play';
+    if(timer){
+      window.clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function start(){
+    if(playing) return;
+    playing = true;
+    playBtn.textContent = 'Pause';
+    if(tick >= history.length) setTick(0);
+
+    timer = window.setInterval(() => {
+      if(tick >= history.length){
+        stop();
+        return;
+      }
+      setTick(tick + 1);
+    }, 90);
+  }
+
+  function togglePlay(){
+    if(playing) stop();
+    else start();
+  }
+
+  function clearTable(){
+    while(rankTable.children.length > 1){
+      rankTable.removeChild(rankTable.lastChild);
+    }
+  }
+
+  function drawChartMulti(seriesByTeam, active, currentIdx){
+    // SVG viewBox: 900x461
+    const W = 900;
+    const H = 461;
+    const padL = 46;
+    const padR = 18;
+    const padT = 18;
+    const padB = 34;
+
+    while(chartSvg.firstChild) chartSvg.removeChild(chartSvg.firstChild);
+
+    chartSvg.setAttribute('role', 'img');
+
+    const allTeams = Object.keys(seriesByTeam || {});
+    if(!allTeams.length) return;
+
+    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    title.setAttribute('id', 'chartTitle');
+    title.textContent = 'Elo progression chart';
+    chartSvg.appendChild(title);
+
+    const desc = document.createElementNS('http://www.w3.org/2000/svg', 'desc');
+    desc.setAttribute('id', 'chartDesc');
+    desc.textContent = `Selected teams: ${allTeams.join(', ')}. Active team is highlighted with higher opacity and thicker stroke: ${active}.`;
+    chartSvg.appendChild(desc);
+    chartSvg.setAttribute('aria-labelledby', 'chartTitle chartDesc');
+
+    let minY = Infinity;
+    let maxY = -Infinity;
+    allTeams.forEach((t) => {
+      const pts = seriesByTeam[t] || [];
+      pts.forEach(p => { minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y); });
+    });
+    if(!isFinite(minY) || !isFinite(maxY)) return;
+
+    const yPad = Math.max(8, (maxY - minY) * 0.08);
+    minY -= yPad;
+    maxY += yPad;
+
+    const anyPts = seriesByTeam[allTeams[0]] || [];
+    const maxX = Math.max(1, (anyPts[anyPts.length - 1] || {x:0}).x);
+
+    const xScale = (x) => {
+      const t = (maxX === 0) ? 0 : (x / maxX);
+      return padL + t * (W - padL - padR);
+    };
+    const yScale = (y) => {
+      const t = (y - minY) / (maxY - minY || 1);
+      return (H - padB) - t * (H - padT - padB);
+    };
+
+    // Axes
+    const axis = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    axis.setAttribute('d', `M ${padL} ${padT} V ${H - padB} H ${W - padR}`);
+    axis.setAttribute('stroke', 'rgba(36,52,74,.9)');
+    axis.setAttribute('fill', 'none');
+    axis.setAttribute('stroke-width', '1');
+    chartSvg.appendChild(axis);
+
+    // Current tick line
+    const cx = xScale(currentIdx);
+    const cur = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    cur.setAttribute('d', `M ${cx} ${padT} V ${H - padB}`);
+    cur.setAttribute('stroke', 'rgba(255,177,90,.65)');
+    cur.setAttribute('fill', 'none');
+    cur.setAttribute('stroke-width', '1');
+    chartSvg.appendChild(cur);
+
+    // Line paths (stable per-team styles; active team is thicker + solid)
+    allTeams.forEach((team) => {
+      const pts = seriesByTeam[team] || [];
+      if(!pts.length) return;
+
+      const style = styleFor(team);
+
+      let d = '';
+      pts.forEach((p, i) => {
+        const x = xScale(p.x);
+        const y = yScale(p.y);
+        d += (i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`);
+      });
+
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d);
+      path.setAttribute('stroke', style.color);
+      path.setAttribute('fill', 'none');
+      const isActive = team === active;
+      const baseStrokeWidth = isActive ? 3.2 : 2.0;
+      path.setAttribute('stroke-width', String(baseStrokeWidth));
+
+      const dash = style.dash;
+      if(dash){
+        path.setAttribute('stroke-dasharray', dash);
+        path.setAttribute('stroke-dashoffset', String(style.dashOffset || 0));
+      }
+      const baseOpacity = isActive ? 1 : 0.74;
+      path.setAttribute('opacity', String(baseOpacity));
+      path.setAttribute('data-team', team);
+      path.setAttribute('data-base-opacity', String(baseOpacity));
+      path.setAttribute('data-base-stroke-width', String(baseStrokeWidth));
+      chartSvg.appendChild(path);
+
+      // dot at current position for each team
+      const curPoint = pts[Math.min(pts.length - 1, currentIdx)];
+      const mx = xScale(curPoint.x);
+      const my = yScale(curPoint.y);
+      const r = isActive ? 4.6 : 3.6;
+      const fill = style.color;
+      const stroke = 'rgba(16,24,38,.9)';
+
+      function addMarker(shape){
+        if(shape === 'circle'){
+          const el = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+          el.setAttribute('cx', String(mx));
+          el.setAttribute('cy', String(my));
+          el.setAttribute('r', String(r));
+          el.setAttribute('fill', fill);
+          el.setAttribute('stroke', stroke);
+          el.setAttribute('stroke-width', '2');
+          return el;
+        }
+        if(shape === 'square'){
+          const el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          el.setAttribute('x', String(mx - r));
+          el.setAttribute('y', String(my - r));
+          el.setAttribute('width', String(r * 2));
+          el.setAttribute('height', String(r * 2));
+          el.setAttribute('rx', '1');
+          el.setAttribute('fill', fill);
+          el.setAttribute('stroke', stroke);
+          el.setAttribute('stroke-width', '2');
+          return el;
+        }
+        if(shape === 'triangle'){
+          const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          const d = `M ${mx} ${my - r} L ${mx + r} ${my + r} L ${mx - r} ${my + r} Z`;
+          el.setAttribute('d', d);
+          el.setAttribute('fill', fill);
+          el.setAttribute('stroke', stroke);
+          el.setAttribute('stroke-width', '2');
+          return el;
+        }
+        if(shape === 'diamond'){
+          const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          const d = `M ${mx} ${my - r} L ${mx + r} ${my} L ${mx} ${my + r} L ${mx - r} ${my} Z`;
+          el.setAttribute('d', d);
+          el.setAttribute('fill', fill);
+          el.setAttribute('stroke', stroke);
+          el.setAttribute('stroke-width', '2');
+          return el;
+        }
+        // cross
+        const bg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        bg.setAttribute('d', `M ${mx - r} ${my - r} L ${mx + r} ${my + r} M ${mx + r} ${my - r} L ${mx - r} ${my + r}`);
+        bg.setAttribute('fill', 'none');
+        bg.setAttribute('stroke', stroke);
+        bg.setAttribute('stroke-width', '5');
+        bg.setAttribute('stroke-linecap', 'round');
+        bg.setAttribute('stroke-linejoin', 'round');
+        bg.setAttribute('data-team', team);
+        bg.setAttribute('opacity', isActive ? '1' : '0.78');
+        bg.setAttribute('data-base-opacity', isActive ? '1' : '0.78');
+        bg.setAttribute('data-base-stroke-width', '5');
+        chartSvg.appendChild(bg);
+
+        const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        el.setAttribute('d', `M ${mx - r} ${my - r} L ${mx + r} ${my + r} M ${mx + r} ${my - r} L ${mx - r} ${my + r}`);
+        el.setAttribute('fill', 'none');
+        el.setAttribute('stroke', fill);
+        el.setAttribute('stroke-width', '2.6');
+        el.setAttribute('stroke-linecap', 'round');
+        el.setAttribute('stroke-linejoin', 'round');
+        return el;
+      }
+
+      const marker = addMarker(style.marker);
+      marker.setAttribute('data-team', team);
+      const mOpacity = isActive ? 1 : 0.78;
+      marker.setAttribute('opacity', String(mOpacity));
+      marker.setAttribute('data-base-opacity', String(mOpacity));
+      marker.setAttribute('data-base-fill-opacity', String(mOpacity));
+      if(marker.tagName.toLowerCase() === 'circle') marker.setAttribute('data-base-r', String(r));
+      chartSvg.appendChild(marker);
+    });
+
+    applyHoverHighlight(hoverTeam);
+
+    yRangeEl.textContent = `Elo range (chart): ${Math.round(minY)} – ${Math.round(maxY)}`;
+    xRangeEl.textContent = `Games: 0 – ${maxX}`;
+  }
+
+  function seriesForTeam(team, t){
+    const init = initialRating();
+    const pts = [{ x: 0, y: init }];
+    let curr = init;
+
+    const n = Math.max(0, Math.min(t, history.length));
+    for(let i=0;i<n;i++){
+      const e = history[i];
+      if(e.team_a === team) curr = e.elo_a_after;
+      else if(e.team_b === team) curr = e.elo_b_after;
+      pts.push({ x: i + 1, y: curr });
+    }
+
+    // If t < history.length, still draw to current tick only.
+    return pts;
+  }
+
+  function render(){
+    if(!elo) return;
+
+    const selectedTeams = Array.from(selectedSet);
+    if(selectedTeams.length > WARN_COMPARE){
+      setCompareTip(`Comparing ${selectedTeams.length} teams. Tip: hover chips to spotlight a team.`, 'warn');
+    }else if(selectedTeams.length > 1){
+      setCompareTip(`Tip: Ctrl/Cmd+click teams in the rank list to compare (up to ${MAX_COMPARE}).`, '');
+    }else{
+      setCompareTip('Tip: Ctrl/Cmd+click teams in the rank list to compare.', '');
+    }
+    if(!selectedTeams.length){
+      selectedTeams.push(teamSelect.value || teams[0]);
+      selectedSet = new Set(selectedTeams);
+    }
+
+    if(!activeTeam) activeTeam = teamSelect.value || selectedTeams[0];
+    if(!selectedSet.has(activeTeam)) activeTeam = selectedTeams[0];
+    teamSelect.value = activeTeam;
+
+    ensureStylesForSelectedTeams(selectedTeams);
+
+    const ratings = computeRatingsAt(tick);
+    const rows = rankRows(ratings);
+
+    clearTable();
+
+    const active = activeTeam;
+    rows.forEach((r, idx) => {
+      const tr = document.createElement('div');
+      const isSelected = selectedSet.has(r.team);
+      const isActive = r.team === active;
+      tr.className = 'tr' + (isSelected ? ' selected' : '') + (isActive ? ' active' : '');
+
+      tr.tabIndex = 0;
+      tr.setAttribute('role', 'button');
+      tr.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      tr.setAttribute('aria-label', `${r.team}. Rank ${idx + 1}. Elo ${Math.round(r.elo)}.`);
+
+      const rank = document.createElement('div');
+      rank.className = 'rank';
+      rank.textContent = String(idx + 1);
+
+      const name = document.createElement('div');
+      name.textContent = r.team;
+
+      const eloCell = document.createElement('div');
+      eloCell.className = 'elo';
+      eloCell.textContent = String(Math.round(r.elo));
+
+      tr.appendChild(rank);
+      tr.appendChild(name);
+      tr.appendChild(eloCell);
+
+      tr.addEventListener('click', (ev) => {
+        const multi = !!(ev && (ev.ctrlKey || ev.metaKey));
+        if(multi) toggleTeam(r.team);
+        else soloTeam(r.team);
+      });
+
+      tr.addEventListener('keydown', (ev) => {
+        if(ev.key === 'Enter' || ev.key === ' '){
+          ev.preventDefault();
+          const multi = !!(ev && (ev.ctrlKey || ev.metaKey));
+          if(multi) toggleTeam(r.team);
+          else soloTeam(r.team);
+        }
+      });
+
+      rankTable.appendChild(tr);
+    });
+
+    // Compare chips
+    if(compareChips){
+      compareChips.innerHTML = '';
+      selectedTeams.forEach((team) => {
+        const style = styleFor(team);
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.tabIndex = 0;
+        chip.setAttribute('role', 'button');
+        chip.setAttribute('aria-label', `${team}. ${team === active ? 'Active team.' : 'Set active team.'}`);
+
+        chip.addEventListener('keydown', (ev) => {
+          if(ev.key === 'Enter' || ev.key === ' '){
+            ev.preventDefault();
+            activeTeam = team;
+            teamSelect.value = team;
+            render();
+          }
+        });
+
+        chip.addEventListener('mouseenter', () => { hoverTeam = team; applyHoverHighlight(hoverTeam); });
+        chip.addEventListener('mouseleave', () => { hoverTeam = ''; applyHoverHighlight(hoverTeam); });
+        chip.addEventListener('focus', () => { hoverTeam = team; applyHoverHighlight(hoverTeam); });
+        chip.addEventListener('blur', () => { hoverTeam = ''; applyHoverHighlight(hoverTeam); });
+
+        const sw = document.createElement('span');
+        sw.className = 'sw';
+        const swSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        swSvg.setAttribute('width', '44');
+        swSvg.setAttribute('height', '14');
+        swSvg.setAttribute('viewBox', '0 0 44 14');
+
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        line.setAttribute('d', 'M 2 7 H 38');
+        line.setAttribute('fill', 'none');
+        line.setAttribute('stroke', style.color);
+        line.setAttribute('stroke-width', team === active ? '3' : '2');
+        if(style.dash){
+          line.setAttribute('stroke-dasharray', style.dash);
+          line.setAttribute('stroke-dashoffset', String(style.dashOffset || 0));
+        }
+        swSvg.appendChild(line);
+
+        const cx = 38;
+        const cy = 7;
+        const r = team === active ? 3.2 : 2.8;
+        const stroke = 'rgba(16,24,38,.9)';
+
+        function addSwMarker(shape){
+          if(shape === 'circle'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            el.setAttribute('cx', String(cx));
+            el.setAttribute('cy', String(cy));
+            el.setAttribute('r', String(r));
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          if(shape === 'square'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            el.setAttribute('x', String(cx - r));
+            el.setAttribute('y', String(cy - r));
+            el.setAttribute('width', String(r * 2));
+            el.setAttribute('height', String(r * 2));
+            el.setAttribute('rx', '1');
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          if(shape === 'triangle'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            el.setAttribute('d', `M ${cx} ${cy - r} L ${cx + r} ${cy + r} L ${cx - r} ${cy + r} Z`);
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          if(shape === 'diamond'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            el.setAttribute('d', `M ${cx} ${cy - r} L ${cx + r} ${cy} L ${cx} ${cy + r} L ${cx - r} ${cy} Z`);
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          el.setAttribute('d', `M ${cx - r} ${cy - r} L ${cx + r} ${cy + r} M ${cx + r} ${cy - r} L ${cx - r} ${cy + r}`);
+          el.setAttribute('fill', 'none');
+          el.setAttribute('stroke', style.color);
+          el.setAttribute('stroke-width', '2.4');
+          el.setAttribute('stroke-linecap', 'round');
+          return el;
+        }
+
+        swSvg.appendChild(addSwMarker(style.marker));
+        sw.appendChild(swSvg);
+
+        const label = document.createElement('span');
+        label.textContent = team;
+        label.style.cursor = 'pointer';
+        label.addEventListener('click', () => { activeTeam = team; teamSelect.value = team; render(); });
+
+        const x = document.createElement('button');
+        x.className = 'x';
+        x.textContent = '×';
+        x.title = 'Remove from compare';
+        x.addEventListener('click', (e) => { e.stopPropagation(); toggleTeam(team); });
+
+        chip.appendChild(sw);
+        chip.appendChild(label);
+        chip.appendChild(x);
+        compareChips.appendChild(chip);
+      });
+    }
+
+    const myRank = 1 + rows.findIndex(r => r.team === active);
+    const myElo = ratings[active];
+
+    asOfPillEl.textContent = asOfText();
+    tickLabel.textContent = tickText();
+
+    if(selectedTeams.length <= 1){
+      teamTitle.textContent = active;
+    }else{
+      teamTitle.textContent = `Comparing ${selectedTeams.length} teams (active: ${active})`;
+    }
+    teamSubtitle.textContent = `Rank: ${myRank}/${rows.length} · Elo: ${Math.round(myElo)}`;
+
+    const seriesByTeam = {};
+    selectedTeams.forEach((t) => { seriesByTeam[t] = seriesForTeam(t, tick); });
+    const pts0 = seriesByTeam[active] || [];
+    drawChartMulti(seriesByTeam, active, Math.max(0, pts0.length - 1));
+
+    if(srStatus){
+      const parts = selectedTeams.map(t => {
+        const rnk = 1 + rows.findIndex(r => r.team === t);
+        const v = ratings[t];
+        const tag = (t === active) ? ' (active)' : '';
+        return `${t}: rank ${rnk}, Elo ${Math.round(v)}${tag}`;
+      });
+      srStatus.setAttribute('aria-live', playing ? 'off' : 'polite');
+      srStatus.textContent = `${asOfText()}. ${tickText()}. Selected: ${parts.join('. ')}.`;
+    }
+  }
+
+  async function init(){
+    const seasoncode = seasoncodeFromQuery();
+    const seasonPretty = seasonPrettyFromQuery();
+
+    seasonLabelEl.textContent = seasonPretty ? seasonPretty : seasoncode;
+
+    const eloFile = `assets/processed/elo_${seasoncode}.json`;
+    try{
+      const resp = await fetch(eloFile);
+      if(!resp.ok) throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
+      elo = await resp.json();
+    }catch(err){
+      showError(`Failed to load ${eloFile}\n\n${String(err)}`);
+      return;
+    }
+
+    history = Array.isArray(elo.history) ? elo.history : [];
+    const ratings = (elo.ratings && typeof elo.ratings === 'object') ? elo.ratings : {};
+    teams = Object.keys(ratings).sort((a,b) => a.localeCompare(b));
+
+    if(!teams.length){
+      showError(`Elo file loaded but contains no team ratings: ${eloFile}`);
+      return;
+    }
+
+    // Default selected team: try Olympiacos first (good show-off), else first team.
+    const preferred = teams.find(t => t.includes('Olympiacos')) || teams[0];
+
+    teamSelect.innerHTML = '';
+    teams.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t;
+      teamSelect.appendChild(opt);
+    });
+
+    tickRange.min = '0';
+    tickRange.max = String(history.length);
+
+    selectedSet = new Set([preferred]);
+    activeTeam = preferred;
+    setTick(history.length);
+    teamSelect.value = preferred;
+    render();
+
+    teamSelect.addEventListener('change', () => setSelectedTeam(teamSelect.value));
+    tickRange.addEventListener('input', () => {
+      stop();
+      setTick(parseInt(tickRange.value, 10) || 0);
+    });
+    playBtn.addEventListener('click', togglePlay);
+    endBtn.addEventListener('click', () => { stop(); setTick(history.length); });
+
+    if(clearBtn){
+      clearBtn.addEventListener('click', () => {
+        stop();
+        const solo = activeTeam || preferred;
+        selectedSet = new Set([solo]);
+        render();
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if(e.key === ' '){
+        e.preventDefault();
+        togglePlay();
+      }
+      if(e.key === 'ArrowLeft'){
+        e.preventDefault();
+        stop();
+        setTick(tick - 1);
+      }
+      if(e.key === 'ArrowRight'){
+        e.preventDefault();
+        stop();
+        setTick(tick + 1);
+      }
+    });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>

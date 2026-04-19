@@ -13,6 +13,9 @@ import requests
 
 BASE = "https://live.euroleague.net/api"
 
+# First-class club normalization/validation layer (see src/basket/clubs.py).
+from basket.clubs import normalize_team_name as canonicalize_team_name
+
 def first_key(d: dict, keys: list[str], default=None):
     for k in keys:
         if k in d and d[k] is not None:
@@ -25,11 +28,9 @@ def as_float(x, default=0.0):
     except Exception:
         return default
 
-def normalize_team_name(raw: Optional[str]) -> str:
-    if raw is None:
-        return "Unknown"
-    s = str(raw).strip()
-    return s or "Unknown"
+def normalize_team_name(raw: Optional[str]) -> str:  # noqa: D401
+    """Canonicalize upstream team names into stable internal club identities."""
+    return canonicalize_team_name(raw)
 
 def safe_json_get(url: str, params: dict[str, Any]) -> Any:
     r = requests.get(url, params=params, timeout=30)
@@ -523,6 +524,74 @@ def extract_game_date(box_json: Any, pbp_json: Any) -> Optional[str]:
 
     return None
 
+def extract_final_scores(box_json: Any, team_a: str, team_b: str) -> tuple[Optional[int], Optional[int]]:
+    """Return (score_a, score_b) by summing per-player points from Boxscore Stats."""
+    if not isinstance(box_json, dict):
+        return None, None
+    stats = box_json.get("Stats")
+    if not isinstance(stats, list):
+        return None, None
+    team_scores: dict[str, int] = {}
+    for team_block in stats:
+        if not isinstance(team_block, dict):
+            continue
+        team_name = normalize_team_name(
+            first_key(team_block, ["Team", "TEAM", "TeamCode", "teamCode", "TeamName"], None)
+        )
+        total = team_block.get("totalPoints") or team_block.get("TotalPoints")
+        if total is not None:
+            try:
+                team_scores[team_name] = int(total)
+                continue
+            except (ValueError, TypeError):
+                pass
+        # Fall back to summing PlayersStats points
+        players = team_block.get("PlayersStats") or []
+        pts_sum = 0
+        for row in players:
+            if not isinstance(row, dict):
+                continue
+            pts = first_key(row, ["Points", "PTS"], 0) or 0
+            try:
+                pts_sum += int(pts)
+            except (ValueError, TypeError):
+                pass
+        if team_name != "Unknown":
+            team_scores[team_name] = pts_sum
+    score_a = team_scores.get(team_a)
+    score_b = team_scores.get(team_b)
+    return score_a, score_b
+
+
+def extract_scores_from_boxscore_players(
+    boxscore_players: list[dict[str, Any]],
+    players_index: dict[str, dict[str, str]],
+    team_a: str,
+    team_b: str,
+) -> tuple[Optional[int], Optional[int]]:
+    """Fallback: sum player points using player_id->team name mapping."""
+    if not boxscore_players:
+        return None, None
+    team_points: dict[str, int] = {}
+    for row in boxscore_players:
+        if not isinstance(row, dict):
+            continue
+        pid = row.get("player_id")
+        pts = row.get("points")
+        if pid is None or pts is None:
+            continue
+        team_name = None
+        if pid in players_index:
+            team_name = players_index[pid].get("team")
+        if not team_name:
+            continue
+        try:
+            team_points[team_name] = team_points.get(team_name, 0) + int(pts)
+        except (ValueError, TypeError):
+            continue
+    return team_points.get(team_a), team_points.get(team_b)
+
+
 def extract_boxscore_players(box_json: Any) -> list[dict[str, Any]]:
     """Extract compact player stat rows from Boxscore payload when available."""
     out: list[dict[str, Any]] = []
@@ -581,6 +650,22 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
 
     game_date = extract_game_date(box_json, pbp_json)
     synced_at = datetime.now(timezone.utc).isoformat()
+    players_index = build_players_index(possessions)
+    boxscore_players = extract_boxscore_players(box_json)
+    score_a, score_b = extract_final_scores(box_json, team_a, team_b)
+    if score_a is None or score_b is None:
+        score_a, score_b = extract_scores_from_boxscore_players(
+            boxscore_players, players_index, team_a, team_b
+        )
+    if score_a is not None and score_b is not None:
+        if score_a > score_b:
+            winner: Optional[str] = team_a
+        elif score_b > score_a:
+            winner = team_b
+        else:
+            winner = None
+    else:
+        winner = None
 
     out = {
         "meta":{
@@ -588,12 +673,15 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
             "gamecode": gamecode,
             "team_a": team_a,
             "team_b": team_b,
+            "score_a": score_a,
+            "score_b": score_b,
+            "winner": winner,
             "gamedate": game_date,
             "synced_at": synced_at,
             "source_endpoints": ["PlaybyPlay","Points","Boxscore"]
         },
-        "players": build_players_index(possessions),
-        "boxscore_players": extract_boxscore_players(box_json),
+        "players": players_index,
+        "boxscore_players": boxscore_players,
         "colors": {team_a:"#d62839", team_b:"#3a86ff"},
         "views": build_views(team_a, team_b, possessions, points_rows)
     }
