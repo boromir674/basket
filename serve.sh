@@ -21,6 +21,7 @@ mkdir -p public/assets/processed
 
 cp prod/index.html                             public/
 cp prod/game-explorer.html                     public/
+cp prod/elo.html                               public/
 cp poss-flow-map-multi-drilldown-real-data.html public/
 
 if ls data/*.json 1>/dev/null 2>&1; then
@@ -32,4 +33,5 @@ fi
 
 echo "→ Serving public/ on http://localhost:${PORT}"
 echo "   Open: http://localhost:${PORT}/index.html"
+echo "   Open: http://localhost:${PORT}/elo.html?season=2025-2026"
 python3 -m http.server "$PORT" --directory public
