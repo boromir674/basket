@@ -1,4 +1,18 @@
 services:
+  ops:
+    build: .
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./assets:/app/assets
+      - ./data:/app/data
+    # Unified CLI entrypoint for all data ops + reporting.
+    # Usage:
+    #   docker compose run --rm ops report_season --seasoncode E2025 --data-dir /app/data
+    #   docker compose run --rm ops prepare_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --data-dir /app/data
+    entrypoint: ["python", "entrypoint.py"]
+    command: ["--help"]
+
   demo:
     build: .
     image: euroleague-sankey
@@ -49,6 +63,10 @@ services:
     image: euroleague-sankey-tests
     working_dir: /app
     # Tests run from the image; do NOT mount the full repo. Tests are baked into the image.
+    # Mount only season data needed for data-quality tests.
+    volumes:
+      - ./data:/app/data:ro
+      - ./tests:/app/tests:ro
     # Pytest-based test suite: entrypoint is pytest; callers can append pytest args.
     # Classification: Dev / CI only (not for serving production site).
     # Examples:
@@ -61,14 +79,16 @@ services:
     image: euroleague-sankey
     working_dir: /app
     volumes:
-      - ./:/app
+      - ./assets:/app/assets
+      - ./data:/app/data
+      - ./elo.py:/app/elo.py
     # Compute ELO ratings for all games in a season and write elo_{seasoncode}.json.
     # Run after season_sync to have up-to-date game data.
     entrypoint: ["python"]
     command: [
       "elo.py",
-      "--seasoncode", "E2021",
-      "--output-dir", "/app/assets/processed"
+      "--seasoncode", "E2025",
+      "--output-dir", "/app/data"
     ]
 
   season_sync:
@@ -77,6 +97,7 @@ services:
     # Mount only assets so season_sync writes into the assets folder (durable storage path).
     volumes:
       - ./assets:/app/assets
+      - ./data:/app/data
       - ./scripts:/app/scripts
       - ./build_from_euroleague_api.py:/app/build_from_euroleague_api.py
       - ./validate_output.py:/app/validate_output.py
