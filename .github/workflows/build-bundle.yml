@@ -59,6 +59,7 @@ jobs:
           cp poss-flow-map-multi-drilldown-real-data.html public/
           mkdir -p public/assets/processed
           cp data/*.json public/assets/processed/
+          cp ./assets/processed/elo_E2025.json public/assets/processed/
 
       # NOW BUNDLE is in ./public dir
 
