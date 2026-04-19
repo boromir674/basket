@@ -287,6 +287,7 @@ const linkGen = d3.sankeyLinkHorizontal();
 let renderSequence = 0;
 const width = 1280, height = 860;
 let dataBundle = null, colors = {}, currentView = "top";
+let eloPayload = null;
 let teamFocus = null; // When set, the Sankey diagram renders only one team.
 let lastSingleTeam = null; // Remembers last selected single-team focus.
 let explodedLinkKey = null;
@@ -344,6 +345,21 @@ if (runtimeBase && !String(dataFile).startsWith('http') && !String(dataFile).sta
 }
 // Removed derivation of auto-insights file from dataFile.
 const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_auto.json";
+
+function formatEloValue(value){
+  if(value === null || value === undefined) return "n/a";
+  const num = Number(value);
+  if(!isFinite(num)) return "n/a";
+  return Math.round(num);
+}
+
+function fetchEloForSeason(meta){
+  if(!meta || !meta.seasoncode) return Promise.resolve(null);
+  const eloFile = `assets/processed/elo_${meta.seasoncode}.json`;
+  return fetch(eloFile)
+    .then(r => (r.ok ? r.json() : null))
+    .catch(() => null);
+}
 
 // PoC switch: when drilling into possession-type views, render either 4 columns (default)
 // or 3 columns (omit Start stage) for a visual comparison.
@@ -2365,7 +2381,14 @@ function updateScoreboard(){
       else if(teamName === meta.team_b) scoreB += (r.points || 0);
     });
   }
-  el.textContent = `${meta.team_a || 'Team A'} ${scoreA} — ${scoreB} ${meta.team_b || 'Team B'}`;
+  const teamA = meta.team_a || "Team A";
+  const teamB = meta.team_b || "Team B";
+  const ratings = (eloPayload && eloPayload.ratings) ? eloPayload.ratings : {};
+  const eloA = formatEloValue(ratings[teamA]);
+  const eloB = formatEloValue(ratings[teamB]);
+  const scoreLine = `${teamA} ${scoreA} — ${scoreB} ${teamB}`;
+  const eloLine = `ELO: ${teamA} ${eloA} · ${teamB} ${eloB}`;
+  el.innerHTML = `<div>${scoreLine}</div><div style=\"font-size:12px;color:#9db0cf;\">${eloLine}</div>`;
 }
 
 fetch(fetchUrl).then(r=>{
@@ -2394,6 +2417,10 @@ fetch(fetchUrl).then(r=>{
     var headlineText = displayDate ? (displayDate + (modeLabel || "")) : (modeLabel ? modeLabel.replace(/^\s*·\s*/, '') : '');
     document.getElementById("headline").textContent = headlineText || '';
   })();
+  fetchEloForSeason(meta).then(payload => {
+    eloPayload = payload;
+    updateScoreboard();
+  });
   if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
   if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
   if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
@@ -2454,6 +2481,10 @@ window.addEventListener('message', (ev) => {
         : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
       document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
       document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.${modeLabel}`;
+      fetchEloForSeason(meta).then(payload => {
+        eloPayload = payload;
+        updateScoreboard();
+      });
       if (replayPlayBtn) replayPlayBtn.onclick = () => startReplay();
       if (replayPauseBtn) replayPauseBtn.onclick = () => pauseReplay();
       if (replayResetBtn) replayResetBtn.onclick = () => resetReplay();
