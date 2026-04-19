@@ -2,10 +2,13 @@
   "meta": {
     "seasoncode": "E2025",
     "gamecode": 154,
-    "team_a": "Crvena Zvezda Meridianbet Belgrade",
+    "team_a": "Crvena Zvezda Belgrade",
     "team_b": "Hapoel IBI Tel Aviv",
+    "score_a": 78,
+    "score_b": 84,
+    "winner": "Hapoel IBI Tel Aviv",
     "gamedate": null,
-    "synced_at": "2026-03-28T16:34:01.254410+00:00",
+    "synced_at": "2026-04-18T23:16:43.517899+00:00",
     "source_endpoints": [
       "PlaybyPlay",
       "Points",
@@ -15,7 +18,7 @@
   "players": {
     "P009048": {
       "name": "MILLER-MCINTYRE, CODI",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P012788": {
       "name": "OTURU, DAN",
@@ -23,7 +26,7 @@
     },
     "P013363": {
       "name": "NWORA, JORDAN",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P012609": {
       "name": "MALCOLM, COLLIN",
@@ -31,7 +34,7 @@
     },
     "P004866": {
       "name": "KALINIC, NIKOLA",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P002580": {
       "name": "MICIC, VASILIJE",
@@ -47,11 +50,11 @@
     },
     "P014029": {
       "name": "IZUNDU, EBUKA",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P014163": {
       "name": "BUTLER, JARED",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P011157": {
       "name": "MOTLEY, JOHNATHAN",
@@ -59,7 +62,7 @@
     },
     "P011982": {
       "name": "OJELEYE, SEMI",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P010568": {
       "name": "JONES, CHRIS",
@@ -71,7 +74,7 @@
     },
     "P014028": {
       "name": "GRAHAM, DEVONTE",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     },
     "P010550": {
       "name": "GINAT, TOMER",
@@ -79,7 +82,7 @@
     },
     "PLCZ": {
       "name": "MOTIEJUNAS, DONATAS",
-      "team": "Crvena Zvezda Meridianbet Belgrade"
+      "team": "Crvena Zvezda Belgrade"
     }
   },
   "boxscore_players": [
@@ -373,21 +376,21 @@
     }
   ],
   "colors": {
-    "Crvena Zvezda Meridianbet Belgrade": "#d62839",
+    "Crvena Zvezda Belgrade": "#d62839",
     "Hapoel IBI Tel Aviv": "#3a86ff"
   },
   "views": {
     "top": {
       "label": "Top-level",
       "starts": {
-        "Crvena Zvezda Meridianbet Belgrade": 89,
+        "Crvena Zvezda Belgrade": 89,
         "Hapoel IBI Tel Aviv": 84
       },
       "title": "Context",
       "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
       "kpis": [
         [
-          "Crvena Zvezda Meridianbet Belgrade starts",
+          "Crvena Zvezda Belgrade starts",
           "89"
         ],
         [
@@ -395,11 +398,11 @@
           "84"
         ],
         [
-          "Crvena Zvezda Meridianbet Belgrade points per poss.",
+          "Crvena Zvezda Belgrade points per poss.",
           "0.88"
         ],
         [
-          "Crvena Zvezda Meridianbet Belgrade Made 3 share",
+          "Crvena Zvezda Belgrade Made 3 share",
           "8%"
         ],
         [
@@ -414,7 +417,7 @@
       "insights": [
         "Possession types are inferred, not native API fields.",
         "This JSON is suitable both for Sankey rendering and later metrics expansion.",
-        "Crvena Zvezda Meridianbet Belgrade generated 0.88 points per possession over 89 tracked possessions.",
+        "Crvena Zvezda Belgrade generated 0.88 points per possession over 89 tracked possessions.",
         "Hapoel IBI Tel Aviv generated 1.00 points per possession over 84 tracked possessions."
       ],
       "columns": [
@@ -426,80 +429,80 @@
       "nodes": [
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_start",
-          "name": "Crvena Zvezda Meridianbet Belgrade Start",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "name": "Crvena Zvezda Belgrade Start",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "start"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Half-court",
           "name": "Half-court",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_After_OREB",
           "name": "After OREB",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
           "name": "Turnover",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
           "name": "Missed shot",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
           "name": "Made 2",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
           "name": "Made 3",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_0",
+          "id": "Crvena Zvezda Belgrade_0",
           "name": "0 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_1",
+          "id": "Crvena Zvezda Belgrade_1",
           "name": "1 pt",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_2",
+          "id": "Crvena Zvezda Belgrade_2",
           "name": "2 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_3",
+          "id": "Crvena Zvezda Belgrade_3",
           "name": "3 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
@@ -594,7 +597,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_1",
+          "target": "Crvena Zvezda Belgrade_1",
           "value": 15
         },
         {
@@ -629,7 +632,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 27
         },
         {
@@ -674,7 +677,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 3
         },
         {
@@ -689,7 +692,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
-          "target": "Crvena Zvezda Meridianbet Belgrade_3",
+          "target": "Crvena Zvezda Belgrade_3",
           "value": 7
         },
         {
@@ -709,7 +712,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
-          "target": "Crvena Zvezda Meridianbet Belgrade_2",
+          "target": "Crvena Zvezda Belgrade_2",
           "value": 21
         },
         {
@@ -749,7 +752,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 16
         },
         {
@@ -818,37 +821,37 @@
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -856,45 +859,45 @@
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_1": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_1": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -902,49 +905,49 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 14
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 10
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 9
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -952,31 +955,31 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -1110,81 +1113,81 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 6
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -1318,49 +1321,49 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 6
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -1368,37 +1371,37 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -1458,39 +1461,39 @@
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -1530,27 +1533,27 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Meridianbet Belgrade_3": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Belgrade_3": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -1640,75 +1643,75 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Meridianbet Belgrade_2": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Belgrade_2": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -1742,25 +1745,25 @@
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -1866,81 +1869,81 @@
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2000,19 +2003,19 @@
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2020,31 +2023,31 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2090,13 +2093,13 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -2142,25 +2145,25 @@
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2168,7 +2171,7 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2222,7 +2225,7 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ]
@@ -2231,14 +2234,14 @@
     "halfcourt": {
       "label": "Half-court breakdown",
       "starts": {
-        "Crvena Zvezda Meridianbet Belgrade": 50,
+        "Crvena Zvezda Belgrade": 50,
         "Hapoel IBI Tel Aviv": 44
       },
-      "title": "Zoomed Detail \u2014 Half-court",
+      "title": "Zoomed Detail — Half-court",
       "desc": "Half-court offense broken into inferred action families.",
       "kpis": [
         [
-          "Crvena Zvezda Meridianbet Belgrade count",
+          "Crvena Zvezda Belgrade count",
           "50"
         ],
         [
@@ -2259,8 +2262,8 @@
       "nodes": [
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_start",
-          "name": "Crvena Zvezda Meridianbet Belgrade Half-court",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "name": "Crvena Zvezda Belgrade Half-court",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "start"
         },
         {
@@ -2272,67 +2275,67 @@
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
           "name": "Made 2",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
           "name": "Made 3",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
           "name": "Missed shot",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
           "name": "Turnover",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_0",
+          "id": "Crvena Zvezda Belgrade_0",
           "name": "0 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_1",
+          "id": "Crvena Zvezda Belgrade_1",
           "name": "1 pt",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_2",
+          "id": "Crvena Zvezda Belgrade_2",
           "name": "2 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_3",
+          "id": "Crvena Zvezda Belgrade_3",
           "name": "3 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
@@ -2415,7 +2418,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_1",
+          "target": "Crvena Zvezda Belgrade_1",
           "value": 10
         },
         {
@@ -2440,12 +2443,12 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 15
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 2
         },
         {
@@ -2470,7 +2473,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 9
         },
         {
@@ -2495,7 +2498,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
-          "target": "Crvena Zvezda Meridianbet Belgrade_2",
+          "target": "Crvena Zvezda Belgrade_2",
           "value": 9
         },
         {
@@ -2520,7 +2523,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
-          "target": "Crvena Zvezda Meridianbet Belgrade_3",
+          "target": "Crvena Zvezda Belgrade_3",
           "value": 5
         },
         {
@@ -2539,49 +2542,49 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 11
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 9
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 8
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2589,63 +2592,63 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_1": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_1": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2749,89 +2752,89 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 6
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 6
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -2917,75 +2920,75 @@
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -3053,63 +3056,63 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Meridianbet Belgrade_2": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Belgrade_2": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -3193,13 +3196,13 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -3207,27 +3210,27 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Meridianbet Belgrade_3": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Belgrade_3": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -3312,14 +3315,14 @@
     "transition": {
       "label": "Transition breakdown",
       "starts": {
-        "Crvena Zvezda Meridianbet Belgrade": 27,
+        "Crvena Zvezda Belgrade": 27,
         "Hapoel IBI Tel Aviv": 29
       },
-      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "title": "Zoomed Detail — Transition / Fast break",
       "desc": "Transition possessions split by inferred origin.",
       "kpis": [
         [
-          "Crvena Zvezda Meridianbet Belgrade count",
+          "Crvena Zvezda Belgrade count",
           "27"
         ],
         [
@@ -3340,8 +3343,8 @@
       "nodes": [
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_start",
-          "name": "Crvena Zvezda Meridianbet Belgrade Transition",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "name": "Crvena Zvezda Belgrade Transition",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "start"
         },
         {
@@ -3353,61 +3356,61 @@
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
           "name": "Made 2",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
           "name": "Made 3",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
           "name": "Missed shot",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
           "name": "Turnover",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_0",
+          "id": "Crvena Zvezda Belgrade_0",
           "name": "0 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_1",
+          "id": "Crvena Zvezda Belgrade_1",
           "name": "1 pt",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_2",
+          "id": "Crvena Zvezda Belgrade_2",
           "name": "2 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_3",
+          "id": "Crvena Zvezda Belgrade_3",
           "name": "3 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
@@ -3499,7 +3502,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 8
         },
         {
@@ -3509,7 +3512,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_1",
+          "target": "Crvena Zvezda Belgrade_1",
           "value": 3
         },
         {
@@ -3529,7 +3532,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
-          "target": "Crvena Zvezda Meridianbet Belgrade_3",
+          "target": "Crvena Zvezda Belgrade_3",
           "value": 1
         },
         {
@@ -3549,7 +3552,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
-          "target": "Crvena Zvezda Meridianbet Belgrade_2",
+          "target": "Crvena Zvezda Belgrade_2",
           "value": 8
         },
         {
@@ -3569,12 +3572,12 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 6
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 1
         },
         {
@@ -3712,49 +3715,49 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 6
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -3762,75 +3765,75 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -3838,39 +3841,39 @@
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_1": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_1": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -3942,15 +3945,15 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Meridianbet Belgrade_3": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Belgrade_3": [
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4010,63 +4013,63 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Meridianbet Belgrade_2": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Belgrade_2": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 4
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4096,59 +4099,59 @@
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4217,14 +4220,14 @@
     "oreb": {
       "label": "After OREB breakdown",
       "starts": {
-        "Crvena Zvezda Meridianbet Belgrade": 12,
+        "Crvena Zvezda Belgrade": 12,
         "Hapoel IBI Tel Aviv": 11
       },
-      "title": "Zoomed Detail \u2014 After OREB",
+      "title": "Zoomed Detail — After OREB",
       "desc": "Second-chance possessions decomposed by inferred continuation type.",
       "kpis": [
         [
-          "Crvena Zvezda Meridianbet Belgrade count",
+          "Crvena Zvezda Belgrade count",
           "12"
         ],
         [
@@ -4245,8 +4248,8 @@
       "nodes": [
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_start",
-          "name": "Crvena Zvezda Meridianbet Belgrade After OREB",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "name": "Crvena Zvezda Belgrade After OREB",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "start"
         },
         {
@@ -4258,73 +4261,73 @@
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Immediate_putback",
           "name": "Immediate putback",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Kick-out_perimeter",
           "name": "Kick-out perimeter",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Reset_half-court",
           "name": "Reset half-court",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
           "name": "Made 2",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
           "name": "Made 3",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
           "name": "Missed shot",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
           "name": "Turnover",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_0",
+          "id": "Crvena Zvezda Belgrade_0",
           "name": "0 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_1",
+          "id": "Crvena Zvezda Belgrade_1",
           "name": "1 pt",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_2",
+          "id": "Crvena Zvezda Belgrade_2",
           "name": "2 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_3",
+          "id": "Crvena Zvezda Belgrade_3",
           "name": "3 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
@@ -4413,7 +4416,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs",
-          "target": "Crvena Zvezda Meridianbet Belgrade_1",
+          "target": "Crvena Zvezda Belgrade_1",
           "value": 2
         },
         {
@@ -4453,7 +4456,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 4
         },
         {
@@ -4468,7 +4471,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
-          "target": "Crvena Zvezda Meridianbet Belgrade_2",
+          "target": "Crvena Zvezda Belgrade_2",
           "value": 4
         },
         {
@@ -4483,7 +4486,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
-          "target": "Crvena Zvezda Meridianbet Belgrade_3",
+          "target": "Crvena Zvezda Belgrade_3",
           "value": 1
         },
         {
@@ -4503,7 +4506,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Turnover",
-          "target": "Crvena Zvezda Meridianbet Belgrade_0",
+          "target": "Crvena Zvezda Belgrade_0",
           "value": 1
         }
       ],
@@ -4512,37 +4515,37 @@
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4550,27 +4553,27 @@
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Meridianbet Belgrade_1": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Shooting_foul_FTs->Crvena Zvezda Belgrade_1": [
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4710,51 +4713,51 @@
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Missed_shot->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P014028",
             "player_name": "GRAHAM, DEVONTE",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4762,19 +4765,19 @@
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4782,39 +4785,39 @@
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Meridianbet Belgrade_2": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Belgrade_2": [
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4822,7 +4825,7 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4830,15 +4833,15 @@
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Meridianbet Belgrade_3": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Belgrade_3": [
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -4886,15 +4889,15 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Meridianbet Belgrade_0": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Turnover->Crvena Zvezda Belgrade_0": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ]
@@ -4903,14 +4906,14 @@
     "made2": {
       "label": "Made 2 breakdown",
       "starts": {
-        "Crvena Zvezda Meridianbet Belgrade": 21,
+        "Crvena Zvezda Belgrade": 21,
         "Hapoel IBI Tel Aviv": 17
       },
-      "title": "Zoomed Detail \u2014 Made 2",
+      "title": "Zoomed Detail — Made 2",
       "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
-          "Crvena Zvezda Meridianbet Belgrade count",
+          "Crvena Zvezda Belgrade count",
           "21"
         ],
         [
@@ -4931,8 +4934,8 @@
       "nodes": [
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_start",
-          "name": "Crvena Zvezda Meridianbet Belgrade Made 2",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "name": "Crvena Zvezda Belgrade Made 2",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "start"
         },
         {
@@ -4944,19 +4947,19 @@
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Layup_runner",
           "name": "Layup / runner",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
           "name": "Made 2",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_2",
+          "id": "Crvena Zvezda Belgrade_2",
           "name": "2 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
@@ -5006,7 +5009,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_2",
-          "target": "Crvena Zvezda Meridianbet Belgrade_2",
+          "target": "Crvena Zvezda Belgrade_2",
           "value": 21
         }
       ],
@@ -5147,43 +5150,43 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
@@ -5191,87 +5194,87 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Meridianbet Belgrade_2": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_2->Crvena Zvezda Belgrade_2": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 7
           },
           {
             "player_id": "P011982",
             "player_name": "OJELEYE, SEMI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 5
           },
           {
             "player_id": "P014029",
             "player_name": "IZUNDU, EBUKA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "PLCZ",
             "player_name": "MOTIEJUNAS, DONATAS",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P004866",
             "player_name": "KALINIC, NIKOLA",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 1
           }
         ]
@@ -5280,14 +5283,14 @@
     "made3": {
       "label": "Made 3 breakdown",
       "starts": {
-        "Crvena Zvezda Meridianbet Belgrade": 7,
+        "Crvena Zvezda Belgrade": 7,
         "Hapoel IBI Tel Aviv": 12
       },
-      "title": "Zoomed Detail \u2014 Made 3",
+      "title": "Zoomed Detail — Made 3",
       "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
-          "Crvena Zvezda Meridianbet Belgrade count",
+          "Crvena Zvezda Belgrade count",
           "7"
         ],
         [
@@ -5308,8 +5311,8 @@
       "nodes": [
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_start",
-          "name": "Crvena Zvezda Meridianbet Belgrade Made 3",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "name": "Crvena Zvezda Belgrade Made 3",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "start"
         },
         {
@@ -5321,19 +5324,19 @@
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "type"
         },
         {
           "id": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
           "name": "Made 3",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "event"
         },
         {
-          "id": "Crvena Zvezda Meridianbet Belgrade_3",
+          "id": "Crvena Zvezda Belgrade_3",
           "name": "3 pts",
-          "team": "Crvena Zvezda Meridianbet Belgrade",
+          "team": "Crvena Zvezda Belgrade",
           "stage": "points"
         },
         {
@@ -5368,7 +5371,7 @@
         },
         {
           "source": "Crvena_Zvezda_Meridianbet_Belgrade_Made_3",
-          "target": "Crvena Zvezda Meridianbet Belgrade_3",
+          "target": "Crvena Zvezda Belgrade_3",
           "value": 7
         },
         {
@@ -5392,19 +5395,19 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
@@ -5412,39 +5415,39 @@
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],
-        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Meridianbet Belgrade_3": [
+        "Crvena_Zvezda_Meridianbet_Belgrade_Made_3->Crvena Zvezda Belgrade_3": [
           {
             "player_id": "P014163",
             "player_name": "BUTLER, JARED",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 3
           },
           {
             "player_id": "P009048",
             "player_name": "MILLER-MCINTYRE, CODI",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           },
           {
             "player_id": "P013363",
             "player_name": "NWORA, JORDAN",
-            "team": "Crvena Zvezda Meridianbet Belgrade",
+            "team": "Crvena Zvezda Belgrade",
             "poss": 2
           }
         ],

@@ -2,10 +2,13 @@
   "meta": {
     "seasoncode": "E2025",
     "gamecode": 200,
-    "team_a": "Kosner Baskonia Vitoria-Gasteiz",
+    "team_a": "Baskonia Vitoria-Gasteiz",
     "team_b": "FC Bayern Munich",
+    "score_a": 89,
+    "score_b": 96,
+    "winner": "FC Bayern Munich",
     "gamedate": null,
-    "synced_at": "2026-03-28T16:36:23.653003+00:00",
+    "synced_at": "2026-04-18T23:17:12.843330+00:00",
     "source_endpoints": [
       "PlaybyPlay",
       "Points",
@@ -15,7 +18,7 @@
   "players": {
     "P008072": {
       "name": "DIOP, KHALIFA",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P004863": {
       "name": "JOVIC, STEFAN",
@@ -23,7 +26,7 @@
     },
     "P013367": {
       "name": "FORREST, TRENT",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P001288": {
       "name": "LUCIC, VLADIMIR",
@@ -31,11 +34,11 @@
     },
     "P014190": {
       "name": "RADZEVICIUS, GYTIS",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P005713": {
       "name": "KURUCS, RODIONS",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P004508": {
       "name": "OBST, ANDREAS",
@@ -43,11 +46,11 @@
     },
     "P014027": {
       "name": "DIAKITE, MAMADI",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P008173": {
       "name": "SPAGNOLO, MATTEO",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P013386": {
       "name": "MCCORMACK, DAVID",
@@ -55,15 +58,15 @@
     },
     "P014026": {
       "name": "FRISCH, CLEMENT",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P014207": {
       "name": "OMORUYI, EUGENE",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P014119": {
       "name": "NOWELL, MARKQUIS",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P011836": {
       "name": "MIKE, ISIAHA",
@@ -79,7 +82,7 @@
     },
     "P014152": {
       "name": "SIMMONS, KOBI",
-      "team": "Kosner Baskonia Vitoria-Gasteiz"
+      "team": "Baskonia Vitoria-Gasteiz"
     },
     "P001557": {
       "name": "GIFFEY, NIELS",
@@ -385,21 +388,21 @@
     }
   ],
   "colors": {
-    "Kosner Baskonia Vitoria-Gasteiz": "#d62839",
+    "Baskonia Vitoria-Gasteiz": "#d62839",
     "FC Bayern Munich": "#3a86ff"
   },
   "views": {
     "top": {
       "label": "Top-level",
       "starts": {
-        "Kosner Baskonia Vitoria-Gasteiz": 85,
+        "Baskonia Vitoria-Gasteiz": 85,
         "FC Bayern Munich": 89
       },
       "title": "Context",
       "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
       "kpis": [
         [
-          "Kosner Baskonia Vitoria-Gasteiz starts",
+          "Baskonia Vitoria-Gasteiz starts",
           "85"
         ],
         [
@@ -407,11 +410,11 @@
           "89"
         ],
         [
-          "Kosner Baskonia Vitoria-Gasteiz points per poss.",
+          "Baskonia Vitoria-Gasteiz points per poss.",
           "1.05"
         ],
         [
-          "Kosner Baskonia Vitoria-Gasteiz Made 3 share",
+          "Baskonia Vitoria-Gasteiz Made 3 share",
           "14%"
         ],
         [
@@ -426,7 +429,7 @@
       "insights": [
         "Possession types are inferred, not native API fields.",
         "This JSON is suitable both for Sankey rendering and later metrics expansion.",
-        "Kosner Baskonia Vitoria-Gasteiz generated 1.05 points per possession over 85 tracked possessions.",
+        "Baskonia Vitoria-Gasteiz generated 1.05 points per possession over 85 tracked possessions.",
         "FC Bayern Munich generated 1.08 points per possession over 89 tracked possessions."
       ],
       "columns": [
@@ -438,80 +441,80 @@
       "nodes": [
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_start",
-          "name": "Kosner Baskonia Vitoria-Gasteiz Start",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "name": "Baskonia Vitoria-Gasteiz Start",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "start"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Half-court",
           "name": "Half-court",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_After_OREB",
           "name": "After OREB",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
           "name": "Turnover",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
           "name": "Missed shot",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
           "name": "Made 2",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
           "name": "Made 3",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "id": "Baskonia Vitoria-Gasteiz_0",
           "name": "0 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "id": "Baskonia Vitoria-Gasteiz_1",
           "name": "1 pt",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "id": "Baskonia Vitoria-Gasteiz_2",
           "name": "2 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "id": "Baskonia Vitoria-Gasteiz_3",
           "name": "3 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
@@ -606,7 +609,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "target": "Baskonia Vitoria-Gasteiz_2",
           "value": 19
         },
         {
@@ -631,7 +634,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 13
         },
         {
@@ -681,7 +684,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 21
         },
         {
@@ -706,7 +709,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "target": "Baskonia Vitoria-Gasteiz_3",
           "value": 12
         },
         {
@@ -766,12 +769,12 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 5
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "target": "Baskonia Vitoria-Gasteiz_1",
           "value": 15
         },
         {
@@ -835,55 +838,55 @@
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 16
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 7
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 6
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 5
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 5
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -891,81 +894,81 @@
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Kosner Baskonia Vitoria-Gasteiz_2": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Baskonia Vitoria-Gasteiz_2": [
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1117,75 +1120,75 @@
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1275,55 +1278,55 @@
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1331,19 +1334,19 @@
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1509,93 +1512,93 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 5
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1623,43 +1626,43 @@
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1667,25 +1670,25 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1693,63 +1696,63 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Kosner Baskonia Vitoria-Gasteiz_3": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Baskonia Vitoria-Gasteiz_3": [
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1821,31 +1824,31 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -1893,25 +1896,25 @@
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2059,59 +2062,59 @@
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 9
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_1": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_1": [
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 6
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 6
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           }
         ],
@@ -2139,19 +2142,19 @@
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2159,31 +2162,31 @@
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2191,7 +2194,7 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2225,13 +2228,13 @@
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2267,7 +2270,7 @@
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2275,13 +2278,13 @@
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2298,14 +2301,14 @@
     "halfcourt": {
       "label": "Half-court breakdown",
       "starts": {
-        "Kosner Baskonia Vitoria-Gasteiz": 51,
+        "Baskonia Vitoria-Gasteiz": 51,
         "FC Bayern Munich": 56
       },
-      "title": "Zoomed Detail \u2014 Half-court",
+      "title": "Zoomed Detail — Half-court",
       "desc": "Half-court offense broken into inferred action families.",
       "kpis": [
         [
-          "Kosner Baskonia Vitoria-Gasteiz count",
+          "Baskonia Vitoria-Gasteiz count",
           "51"
         ],
         [
@@ -2326,8 +2329,8 @@
       "nodes": [
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_start",
-          "name": "Kosner Baskonia Vitoria-Gasteiz Half-court",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "name": "Baskonia Vitoria-Gasteiz Half-court",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "start"
         },
         {
@@ -2339,67 +2342,67 @@
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
           "name": "Made 2",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
           "name": "Made 3",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
           "name": "Missed shot",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
           "name": "Turnover",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "id": "Baskonia Vitoria-Gasteiz_0",
           "name": "0 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "id": "Baskonia Vitoria-Gasteiz_1",
           "name": "1 pt",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "id": "Baskonia Vitoria-Gasteiz_2",
           "name": "2 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "id": "Baskonia Vitoria-Gasteiz_3",
           "name": "3 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
@@ -2482,7 +2485,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "target": "Baskonia Vitoria-Gasteiz_2",
           "value": 8
         },
         {
@@ -2507,7 +2510,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 8
         },
         {
@@ -2537,7 +2540,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 15
         },
         {
@@ -2562,12 +2565,12 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 4
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "target": "Baskonia Vitoria-Gasteiz_1",
           "value": 12
         },
         {
@@ -2582,7 +2585,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "target": "Baskonia Vitoria-Gasteiz_3",
           "value": 4
         },
         {
@@ -2606,55 +2609,55 @@
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 16
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 7
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 5
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 5
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2662,63 +2665,63 @@
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Kosner Baskonia Vitoria-Gasteiz_2": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Baskonia Vitoria-Gasteiz_2": [
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -2864,75 +2867,75 @@
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -3068,87 +3071,87 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -3276,59 +3279,59 @@
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 9
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_1": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_1": [
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 6
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           }
         ],
@@ -3336,19 +3339,19 @@
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -3356,39 +3359,39 @@
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Kosner Baskonia Vitoria-Gasteiz_3": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Baskonia Vitoria-Gasteiz_3": [
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -3457,14 +3460,14 @@
     "transition": {
       "label": "Transition breakdown",
       "starts": {
-        "Kosner Baskonia Vitoria-Gasteiz": 23,
+        "Baskonia Vitoria-Gasteiz": 23,
         "FC Bayern Munich": 27
       },
-      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "title": "Zoomed Detail — Transition / Fast break",
       "desc": "Transition possessions split by inferred origin.",
       "kpis": [
         [
-          "Kosner Baskonia Vitoria-Gasteiz count",
+          "Baskonia Vitoria-Gasteiz count",
           "23"
         ],
         [
@@ -3485,8 +3488,8 @@
       "nodes": [
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_start",
-          "name": "Kosner Baskonia Vitoria-Gasteiz Transition",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "name": "Baskonia Vitoria-Gasteiz Transition",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "start"
         },
         {
@@ -3498,61 +3501,61 @@
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
           "name": "Made 2",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
           "name": "Made 3",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
           "name": "Missed shot",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
           "name": "Turnover",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "id": "Baskonia Vitoria-Gasteiz_0",
           "name": "0 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "id": "Baskonia Vitoria-Gasteiz_1",
           "name": "1 pt",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "id": "Baskonia Vitoria-Gasteiz_2",
           "name": "2 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "id": "Baskonia Vitoria-Gasteiz_3",
           "name": "3 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
@@ -3629,7 +3632,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 4
         },
         {
@@ -3674,7 +3677,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "target": "Baskonia Vitoria-Gasteiz_3",
           "value": 5
         },
         {
@@ -3684,7 +3687,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 5
         },
         {
@@ -3704,7 +3707,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "target": "Baskonia Vitoria-Gasteiz_2",
           "value": 7
         },
         {
@@ -3724,7 +3727,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "target": "Baskonia Vitoria-Gasteiz_1",
           "value": 2
         }
       ],
@@ -3733,55 +3736,55 @@
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -3789,39 +3792,39 @@
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4065,63 +4068,63 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Kosner Baskonia Vitoria-Gasteiz_3": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Baskonia Vitoria-Gasteiz_3": [
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4129,51 +4132,51 @@
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4221,63 +4224,63 @@
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Kosner Baskonia Vitoria-Gasteiz_2": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Baskonia Vitoria-Gasteiz_2": [
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4337,27 +4340,27 @@
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_1": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_1": [
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ]
@@ -4366,14 +4369,14 @@
     "oreb": {
       "label": "After OREB breakdown",
       "starts": {
-        "Kosner Baskonia Vitoria-Gasteiz": 11,
+        "Baskonia Vitoria-Gasteiz": 11,
         "FC Bayern Munich": 6
       },
-      "title": "Zoomed Detail \u2014 After OREB",
+      "title": "Zoomed Detail — After OREB",
       "desc": "Second-chance possessions decomposed by inferred continuation type.",
       "kpis": [
         [
-          "Kosner Baskonia Vitoria-Gasteiz count",
+          "Baskonia Vitoria-Gasteiz count",
           "11"
         ],
         [
@@ -4394,8 +4397,8 @@
       "nodes": [
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_start",
-          "name": "Kosner Baskonia Vitoria-Gasteiz After OREB",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "name": "Baskonia Vitoria-Gasteiz After OREB",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "start"
         },
         {
@@ -4407,73 +4410,73 @@
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Immediate_putback",
           "name": "Immediate putback",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Kick-out_perimeter",
           "name": "Kick-out perimeter",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Reset_half-court",
           "name": "Reset half-court",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
           "name": "Made 2",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
           "name": "Made 3",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
           "name": "Missed shot",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
           "name": "Turnover",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "id": "Baskonia Vitoria-Gasteiz_0",
           "name": "0 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "id": "Baskonia Vitoria-Gasteiz_1",
           "name": "1 pt",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "id": "Baskonia Vitoria-Gasteiz_2",
           "name": "2 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "id": "Baskonia Vitoria-Gasteiz_3",
           "name": "3 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
@@ -4562,7 +4565,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "target": "Baskonia Vitoria-Gasteiz_2",
           "value": 4
         },
         {
@@ -4577,7 +4580,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "target": "Baskonia Vitoria-Gasteiz_3",
           "value": 3
         },
         {
@@ -4622,7 +4625,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 1
         },
         {
@@ -4642,7 +4645,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Turnover",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 1
         },
         {
@@ -4652,7 +4655,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_0",
+          "target": "Baskonia Vitoria-Gasteiz_0",
           "value": 1
         },
         {
@@ -4672,7 +4675,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_1",
+          "target": "Baskonia Vitoria-Gasteiz_1",
           "value": 1
         }
       ],
@@ -4681,25 +4684,25 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4707,51 +4710,51 @@
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Kosner Baskonia Vitoria-Gasteiz_2": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Baskonia Vitoria-Gasteiz_2": [
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4759,19 +4762,19 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4779,39 +4782,39 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Kosner Baskonia Vitoria-Gasteiz_3": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Baskonia Vitoria-Gasteiz_3": [
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4909,25 +4912,25 @@
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4935,15 +4938,15 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Missed_shot->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4967,15 +4970,15 @@
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Turnover->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -4983,21 +4986,21 @@
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_0": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_0": [
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -5025,11 +5028,11 @@
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Kosner Baskonia Vitoria-Gasteiz_1": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Shooting_foul_FTs->Baskonia Vitoria-Gasteiz_1": [
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ]
@@ -5038,14 +5041,14 @@
     "made2": {
       "label": "Made 2 breakdown",
       "starts": {
-        "Kosner Baskonia Vitoria-Gasteiz": 19,
+        "Baskonia Vitoria-Gasteiz": 19,
         "FC Bayern Munich": 19
       },
-      "title": "Zoomed Detail \u2014 Made 2",
+      "title": "Zoomed Detail — Made 2",
       "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
-          "Kosner Baskonia Vitoria-Gasteiz count",
+          "Baskonia Vitoria-Gasteiz count",
           "19"
         ],
         [
@@ -5066,8 +5069,8 @@
       "nodes": [
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_start",
-          "name": "Kosner Baskonia Vitoria-Gasteiz Made 2",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "name": "Baskonia Vitoria-Gasteiz Made 2",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "start"
         },
         {
@@ -5079,19 +5082,19 @@
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Layup_runner",
           "name": "Layup / runner",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
           "name": "Made 2",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "id": "Baskonia Vitoria-Gasteiz_2",
           "name": "2 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
@@ -5126,7 +5129,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_2",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_2",
+          "target": "Baskonia Vitoria-Gasteiz_2",
           "value": 19
         },
         {
@@ -5150,49 +5153,49 @@
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -5200,99 +5203,99 @@
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Kosner Baskonia Vitoria-Gasteiz_2": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_2->Baskonia Vitoria-Gasteiz_2": [
           {
             "player_id": "P014152",
             "player_name": "SIMMONS, KOBI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 4
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P008072",
             "player_name": "DIOP, KHALIFA",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014190",
             "player_name": "RADZEVICIUS, GYTIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -5451,14 +5454,14 @@
     "made3": {
       "label": "Made 3 breakdown",
       "starts": {
-        "Kosner Baskonia Vitoria-Gasteiz": 12,
+        "Baskonia Vitoria-Gasteiz": 12,
         "FC Bayern Munich": 13
       },
-      "title": "Zoomed Detail \u2014 Made 3",
+      "title": "Zoomed Detail — Made 3",
       "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
-          "Kosner Baskonia Vitoria-Gasteiz count",
+          "Baskonia Vitoria-Gasteiz count",
           "12"
         ],
         [
@@ -5479,8 +5482,8 @@
       "nodes": [
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_start",
-          "name": "Kosner Baskonia Vitoria-Gasteiz Made 3",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "name": "Baskonia Vitoria-Gasteiz Made 3",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "start"
         },
         {
@@ -5492,19 +5495,19 @@
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "type"
         },
         {
           "id": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
           "name": "Made 3",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "event"
         },
         {
-          "id": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "id": "Baskonia Vitoria-Gasteiz_3",
           "name": "3 pts",
-          "team": "Kosner Baskonia Vitoria-Gasteiz",
+          "team": "Baskonia Vitoria-Gasteiz",
           "stage": "points"
         },
         {
@@ -5539,7 +5542,7 @@
         },
         {
           "source": "Kosner_Baskonia_Vitoria-Gasteiz_Made_3",
-          "target": "Kosner Baskonia Vitoria-Gasteiz_3",
+          "target": "Baskonia Vitoria-Gasteiz_3",
           "value": 12
         },
         {
@@ -5563,43 +5566,43 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
@@ -5607,87 +5610,87 @@
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
-        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Kosner Baskonia Vitoria-Gasteiz_3": [
+        "Kosner_Baskonia_Vitoria-Gasteiz_Made_3->Baskonia Vitoria-Gasteiz_3": [
           {
             "player_id": "P005713",
             "player_name": "KURUCS, RODIONS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P014119",
             "player_name": "NOWELL, MARKQUIS",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 3
           },
           {
             "player_id": "P008173",
             "player_name": "SPAGNOLO, MATTEO",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 2
           },
           {
             "player_id": "P014027",
             "player_name": "DIAKITE, MAMADI",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P013367",
             "player_name": "FORREST, TRENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014026",
             "player_name": "FRISCH, CLEMENT",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           },
           {
             "player_id": "P014207",
             "player_name": "OMORUYI, EUGENE",
-            "team": "Kosner Baskonia Vitoria-Gasteiz",
+            "team": "Baskonia Vitoria-Gasteiz",
             "poss": 1
           }
         ],
