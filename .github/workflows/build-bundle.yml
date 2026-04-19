@@ -55,6 +55,7 @@ jobs:
         run: |
           mkdir public
           cp ./prod/index.html public/
+          cp ./prod/elo.html public/
           cp poss-flow-map-multi-drilldown-real-data.html public/
           mkdir -p public/assets/processed
           cp data/*.json public/assets/processed/
