@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-from elo import (
+from basket.elo import (
     DEFAULT_INITIAL,
     DEFAULT_K,
     _outcome_score,
@@ -70,12 +70,20 @@ class TestUpdateRatings:
 
     def test_upset_larger_gain(self) -> None:
         # Underdog wins → larger gain than favourite winning
+        # WHEN: UNDERDOG WINS: 1400 won vs 1600
         gain_upset, _ = update_ratings(1400, 1600, score_a=1.0, k=32)
+
         gain_expected, _ = update_ratings(1600, 1400, score_a=1.0, k=32)
+        
+        other_elo_gains = [update_ratings(1500, 1500, score_a=1.0, k=32)[0], update_ratings(1401, 1400, score_a=1.0, k=32)[0], update_ratings(1399, 1400, score_a=1.0, k=32)[0]]
+
         # gain_upset is from 1400 baseline, gain_expected from 1600 baseline
         diff_upset = gain_upset - 1400
         diff_expected = gain_expected - 1600
+        # THEN rating gain is bigger compared all like 'equal elo' or eloA > eloB
         assert diff_upset > diff_expected
+        
+        assert all([diff_upset > (g - 1500) for g in other_elo_gains])
 
     def test_k_factor_scales_change(self) -> None:
         a16, _ = update_ratings(1500, 1500, score_a=1.0, k=16)
