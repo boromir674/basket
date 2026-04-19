@@ -97,9 +97,26 @@
     .chip{outline:none;}
     .chip:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
 
-    .chartWrap{border:1px solid var(--border); border-radius:12px; background:var(--panel2); padding:10px;}
+    .chartWrap{border:1px solid var(--border); border-radius:12px; background:var(--panel2); padding:10px; position:relative;}
     .chartMeta{display:flex; justify-content:space-between; gap:10px; margin:8px 0 0;}
     .chartMeta .muted{font-size:11px;}
+
+    .chartTooltip{
+      position:absolute;
+      display:none;
+      z-index:5;
+      pointer-events:none;
+      max-width:280px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:8px 10px;
+      color:var(--text);
+      font-size:12px;
+      line-height:1.25;
+      white-space:pre;
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+    }
 
     .err{color:#ff7d7d; font-size:12px; white-space:pre-wrap;}
 
@@ -172,6 +189,7 @@
 
       <div class="chartWrap" style="margin-top:10px;">
         <svg id="chart" width="100%" height="461" viewBox="0 0 900 461" preserveAspectRatio="none"></svg>
+        <div id="chartTooltip" class="chartTooltip" role="status" aria-live="polite"></div>
       </div>
       <div class="chartMeta">
         <div class="muted" id="yRange">—</div>
@@ -180,6 +198,8 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 
 <script>
 (function(){
@@ -202,6 +222,8 @@
   const clearBtn = document.getElementById('clearBtn');
   const compareChips = document.getElementById('compareChips');
   const srStatus = document.getElementById('srStatus');
+
+  const chartTooltip = document.getElementById('chartTooltip');
 
   const compareTipEl = document.getElementById('compareTip');
 
@@ -261,10 +283,26 @@
   let timer = null;
   let activeTeam = '';
   let selectedSet = new Set();
-  let hoverTeam = '';
+  let chipHoverTeam = '';
+  let chartHoverTeam = '';
+  let chartHoverX = null; // int game index (x)
 
   let stylesByTeam = Object.create(null);
   let styleCache = Object.create(null);
+
+  const CHART_W = 900;
+  const CHART_H = 461;
+  const CHART_PAD = { L: 46, R: 18, T: 18, B: 34 };
+
+  let chartState = null;
+
+  function effectiveHoverTeam(){
+    return chipHoverTeam || chartHoverTeam;
+  }
+
+  function clamp(n, lo, hi){
+    return Math.max(lo, Math.min(hi, n));
+  }
 
   const MAX_COMPARE = 20;
   const WARN_COMPARE = 8;
@@ -656,37 +694,33 @@
   }
 
   function drawChartMulti(seriesByTeam, active, currentIdx){
-    // SVG viewBox: 900x461
-    const W = 900;
-    const H = 461;
-    const padL = 46;
-    const padR = 18;
-    const padT = 18;
-    const padB = 34;
+    if(!window.d3){
+      showError('D3 is required for chart interactions but failed to load.');
+      return;
+    }
 
-    while(chartSvg.firstChild) chartSvg.removeChild(chartSvg.firstChild);
-
-    chartSvg.setAttribute('role', 'img');
+    const d3 = window.d3;
+    const W = CHART_W;
+    const H = CHART_H;
+    const padL = CHART_PAD.L;
+    const padR = CHART_PAD.R;
+    const padT = CHART_PAD.T;
+    const padB = CHART_PAD.B;
 
     const allTeams = Object.keys(seriesByTeam || {});
     if(!allTeams.length) return;
 
-    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-    title.setAttribute('id', 'chartTitle');
-    title.textContent = 'Elo progression chart';
-    chartSvg.appendChild(title);
-
-    const desc = document.createElementNS('http://www.w3.org/2000/svg', 'desc');
-    desc.setAttribute('id', 'chartDesc');
-    desc.textContent = `Selected teams: ${allTeams.join(', ')}. Active team is highlighted with higher opacity and thicker stroke: ${active}.`;
-    chartSvg.appendChild(desc);
-    chartSvg.setAttribute('aria-labelledby', 'chartTitle chartDesc');
+    // Keep active team drawn last (on top).
+    const teamsOrdered = allTeams.filter(t => t !== active).concat([active]).filter(Boolean);
+    const seriesData = teamsOrdered
+      .filter((team) => Array.isArray(seriesByTeam[team]) && seriesByTeam[team].length)
+      .map((team) => ({ team, pts: seriesByTeam[team] }));
+    if(!seriesData.length) return;
 
     let minY = Infinity;
     let maxY = -Infinity;
-    allTeams.forEach((t) => {
-      const pts = seriesByTeam[t] || [];
-      pts.forEach(p => { minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y); });
+    seriesData.forEach((s) => {
+      (s.pts || []).forEach((p) => { minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y); });
     });
     if(!isFinite(minY) || !isFinite(maxY)) return;
 
@@ -694,153 +728,316 @@
     minY -= yPad;
     maxY += yPad;
 
-    const anyPts = seriesByTeam[allTeams[0]] || [];
-    const maxX = Math.max(1, (anyPts[anyPts.length - 1] || {x:0}).x);
+    const anyPts = seriesData[0].pts || [];
+    const maxX = Math.max(1, (anyPts[anyPts.length - 1] || { x: 0 }).x);
 
-    const xScale = (x) => {
-      const t = (maxX === 0) ? 0 : (x / maxX);
-      return padL + t * (W - padL - padR);
-    };
-    const yScale = (y) => {
-      const t = (y - minY) / (maxY - minY || 1);
-      return (H - padB) - t * (H - padT - padB);
-    };
+    const xScale = d3.scaleLinear().domain([0, maxX]).range([padL, W - padR]);
+    const yScale = d3.scaleLinear().domain([minY, maxY]).range([H - padB, padT]);
 
-    // Axes
-    const axis = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    axis.setAttribute('d', `M ${padL} ${padT} V ${H - padB} H ${W - padR}`);
-    axis.setAttribute('stroke', 'rgba(36,52,74,.9)');
-    axis.setAttribute('fill', 'none');
-    axis.setAttribute('stroke-width', '1');
-    chartSvg.appendChild(axis);
+    const svg = d3.select(chartSvg);
+    svg.attr('role', 'img');
+    svg.attr('tabindex', '0');
 
-    // Current tick line
+    if(!chartState){
+      const title = svg.append('title').attr('id', 'chartTitle').text('Elo progression chart');
+      const desc = svg.append('desc').attr('id', 'chartDesc');
+      svg.attr('aria-labelledby', 'chartTitle chartDesc');
+
+      const root = svg.append('g').attr('class', 'root');
+      const axis = root.append('path')
+        .attr('class', 'axis')
+        .attr('stroke', 'rgba(36,52,74,.9)')
+        .attr('fill', 'none')
+        .attr('stroke-width', 1);
+
+      const tickLine = root.append('line')
+        .attr('class', 'tick')
+        .attr('stroke', 'rgba(255,177,90,.65)')
+        .attr('stroke-width', 1);
+
+      const hoverG = root.append('g').attr('class', 'hover');
+      const hoverLine = hoverG.append('line')
+        .attr('class', 'hover-line')
+        .attr('stroke', 'rgba(232,240,255,.55)')
+        .attr('stroke-width', 1)
+        .attr('opacity', 0);
+
+      const seriesG = root.append('g').attr('class', 'series');
+      const markersG = root.append('g').attr('class', 'markers');
+
+      const overlay = root.append('rect')
+        .attr('class', 'overlay')
+        .attr('x', padL)
+        .attr('y', padT)
+        .attr('width', W - padL - padR)
+        .attr('height', H - padT - padB)
+        .attr('fill', 'transparent')
+        .style('pointer-events', 'all');
+
+      chartState = { svg, title, desc, root, axis, tickLine, hoverLine, hoverG, seriesG, markersG, overlay, xScale, yScale, maxX, minY, maxY };
+
+      function setTooltip(visible, text, clientX, clientY){
+        if(!chartTooltip) return;
+        if(!visible){
+          chartTooltip.style.display = 'none';
+          return;
+        }
+        chartTooltip.textContent = text;
+        chartTooltip.style.display = 'block';
+
+        const wrap = chartTooltip.parentElement;
+        const r = wrap ? wrap.getBoundingClientRect() : null;
+        if(!r) return;
+        const x = (clientX != null) ? (clientX - r.left) : 20;
+        const y = (clientY != null) ? (clientY - r.top) : 20;
+        // Clamp inside container.
+        const pad = 8;
+        const w = chartTooltip.offsetWidth || 220;
+        const h = chartTooltip.offsetHeight || 60;
+        const left = clamp(x + 12, pad, Math.max(pad, r.width - w - pad));
+        const top = clamp(y + 12, pad, Math.max(pad, r.height - h - pad));
+        chartTooltip.style.left = left + 'px';
+        chartTooltip.style.top = top + 'px';
+      }
+
+      function nearestTeamAtX(mx, my, xVal){
+        let bestTeam = '';
+        let bestDist = Infinity;
+        for(const s of seriesData){
+          const pts = s.pts || [];
+          if(!pts.length) continue;
+          const p = pts[clamp(xVal, 0, pts.length - 1)];
+          const yy = chartState.yScale(p.y);
+          const d = Math.abs(yy - my);
+          if(d < bestDist){
+            bestDist = d;
+            bestTeam = s.team;
+          }
+        }
+        return bestTeam;
+      }
+
+      function renderHover(clientX, clientY, mx, my, xVal){
+        chartHoverX = xVal;
+        chartState.hoverLine
+          .attr('x1', mx)
+          .attr('x2', mx)
+          .attr('y1', padT)
+          .attr('y2', H - padB)
+          .attr('opacity', 1);
+
+        const bestTeam = nearestTeamAtX(mx, my, xVal);
+        chartHoverTeam = bestTeam || '';
+        applyHoverHighlight(effectiveHoverTeam());
+
+        if(bestTeam){
+          const pts = seriesByTeam[bestTeam] || [];
+          const p = pts[clamp(xVal, 0, pts.length - 1)] || { x: xVal, y: NaN };
+          const date = (xVal > 0 && history[xVal - 1] && history[xVal - 1].gamedate) ? history[xVal - 1].gamedate : 'date unknown';
+          const text = `${bestTeam}\nGame ${xVal} / ${history.length} · ${date}\nElo ${Math.round(p.y || 0)}`;
+          setTooltip(true, text, clientX, clientY);
+        }else{
+          setTooltip(false, '', null, null);
+        }
+      }
+
+      overlay
+        .on('mousemove', (ev) => {
+          const [mx, my] = d3.pointer(ev);
+          const xVal = clamp(Math.round(chartState.xScale.invert(mx)), 0, chartState.maxX);
+          const cx = chartState.xScale(xVal);
+          renderHover(ev.clientX, ev.clientY, cx, my, xVal);
+        })
+        .on('mouseleave', () => {
+          chartHoverTeam = '';
+          chartHoverX = null;
+          chartState.hoverLine.attr('opacity', 0);
+          setTooltip(false, '', null, null);
+          applyHoverHighlight(effectiveHoverTeam());
+        });
+
+      svg
+        .on('focus', () => {
+          // keyboard fallback: focus the chart and use arrows
+          if(chartHoverX == null) chartHoverX = currentIdx;
+          const cx = chartState.xScale(clamp(chartHoverX, 0, chartState.maxX));
+          const my = (padT + (H - padB)) / 2;
+          renderHover(null, null, cx, my, clamp(chartHoverX, 0, chartState.maxX));
+        })
+        .on('blur', () => {
+          chartHoverTeam = '';
+          chartHoverX = null;
+          chartState.hoverLine.attr('opacity', 0);
+          setTooltip(false, '', null, null);
+          applyHoverHighlight(effectiveHoverTeam());
+        })
+        .on('keydown', (ev) => {
+          if(ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+          ev.preventDefault();
+          if(chartHoverX == null) chartHoverX = currentIdx;
+          chartHoverX += (ev.key === 'ArrowRight') ? 1 : -1;
+          chartHoverX = clamp(chartHoverX, 0, chartState.maxX);
+          const cx = chartState.xScale(chartHoverX);
+          const my = (padT + (H - padB)) / 2;
+          renderHover(null, null, cx, my, chartHoverX);
+        });
+    }
+
+    // Update state
+    chartState.desc.text(`Selected teams: ${teamsOrdered.join(', ')}. Active team: ${active}.`);
+    chartState.xScale = xScale;
+    chartState.yScale = yScale;
+    chartState.maxX = maxX;
+    chartState.minY = minY;
+    chartState.maxY = maxY;
+
+    chartState.overlay
+      .attr('x', padL)
+      .attr('y', padT)
+      .attr('width', W - padL - padR)
+      .attr('height', H - padT - padB);
+
+    chartState.axis.attr('d', `M ${padL} ${padT} V ${H - padB} H ${W - padR}`);
+
+    const t = chartState.svg.transition().duration(220).ease(d3.easeCubicOut);
     const cx = xScale(currentIdx);
-    const cur = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    cur.setAttribute('d', `M ${cx} ${padT} V ${H - padB}`);
-    cur.setAttribute('stroke', 'rgba(255,177,90,.65)');
-    cur.setAttribute('fill', 'none');
-    cur.setAttribute('stroke-width', '1');
-    chartSvg.appendChild(cur);
+    chartState.tickLine
+      .attr('y1', padT)
+      .attr('y2', H - padB)
+      .transition(t)
+      .attr('x1', cx)
+      .attr('x2', cx);
 
-    // Line paths (stable per-team styles; active team is thicker + solid)
-    allTeams.forEach((team) => {
-      const pts = seriesByTeam[team] || [];
-      if(!pts.length) return;
+    const line = d3.line()
+      .x((p) => xScale(p.x))
+      .y((p) => yScale(p.y));
 
-      const style = styleFor(team);
+    // Lines: keyed join so existing teams keep identity.
+    const paths = chartState.seriesG
+      .selectAll('path.team-line')
+      .data(seriesData, (d) => d.team);
 
-      let d = '';
-      pts.forEach((p, i) => {
-        const x = xScale(p.x);
-        const y = yScale(p.y);
-        d += (i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`);
-      });
+    paths.join(
+      (enter) => enter.append('path')
+        .attr('class', 'team-line')
+        .attr('fill', 'none')
+        .attr('data-team', (d) => d.team)
+        .attr('opacity', 0)
+        .attr('stroke-width', (d) => (d.team === active ? 3.2 : 2.0))
+        .attr('stroke', (d) => styleFor(d.team).color)
+        .attr('d', (d) => line(d.pts))
+        .each(function(d){
+          const el = d3.select(this);
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.74;
+          const baseStrokeWidth = isActive ? 3.2 : 2.0;
+          const st = styleFor(d.team);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-stroke-width', baseStrokeWidth);
+          if(st.dash){
+            el.attr('stroke-dasharray', st.dash)
+              .attr('stroke-dashoffset', st.dashOffset || 0);
+          }
+        })
+        .call((enter) => enter.transition(t).attr('opacity', (d) => (d.team === active ? 1 : 0.74))),
+      (update) => update
+        .each(function(d){
+          const el = d3.select(this);
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.74;
+          const baseStrokeWidth = isActive ? 3.2 : 2.0;
+          const st = styleFor(d.team);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-stroke-width', baseStrokeWidth);
+          if(st.dash){
+            el.attr('stroke-dasharray', st.dash)
+              .attr('stroke-dashoffset', st.dashOffset || 0);
+          }else{
+            el.attr('stroke-dasharray', null)
+              .attr('stroke-dashoffset', null);
+          }
+        })
+        .call((update) => update.transition(t)
+          .attr('stroke', (d) => styleFor(d.team).color)
+          .attr('stroke-width', (d) => (d.team === active ? 3.2 : 2.0))
+          .attr('opacity', (d) => (d.team === active ? 1 : 0.74))
+          .attr('d', (d) => line(d.pts))
+        ),
+      (exit) => exit.call((exit) => exit.transition(t).attr('opacity', 0).remove())
+    );
 
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', d);
-      path.setAttribute('stroke', style.color);
-      path.setAttribute('fill', 'none');
-      const isActive = team === active;
-      const baseStrokeWidth = isActive ? 3.2 : 2.0;
-      path.setAttribute('stroke-width', String(baseStrokeWidth));
+    // Markers: keyed join, animate position and size.
+    const symbolTypes = {
+      circle: d3.symbolCircle,
+      square: d3.symbolSquare,
+      triangle: d3.symbolTriangle,
+      diamond: d3.symbolDiamond,
+      cross: d3.symbolCross,
+    };
 
-      const dash = style.dash;
-      if(dash){
-        path.setAttribute('stroke-dasharray', dash);
-        path.setAttribute('stroke-dashoffset', String(style.dashOffset || 0));
-      }
-      const baseOpacity = isActive ? 1 : 0.74;
-      path.setAttribute('opacity', String(baseOpacity));
-      path.setAttribute('data-team', team);
-      path.setAttribute('data-base-opacity', String(baseOpacity));
-      path.setAttribute('data-base-stroke-width', String(baseStrokeWidth));
-      chartSvg.appendChild(path);
+    const markers = chartState.markersG
+      .selectAll('path.team-marker')
+      .data(seriesData, (d) => d.team);
 
-      // dot at current position for each team
-      const curPoint = pts[Math.min(pts.length - 1, currentIdx)];
-      const mx = xScale(curPoint.x);
-      const my = yScale(curPoint.y);
-      const r = isActive ? 4.6 : 3.6;
-      const fill = style.color;
-      const stroke = 'rgba(16,24,38,.9)';
+    markers.join(
+      (enter) => enter.append('path')
+        .attr('class', 'team-marker')
+        .attr('data-team', (d) => d.team)
+        .attr('opacity', 0)
+        .attr('fill', (d) => styleFor(d.team).color)
+        .attr('stroke', 'rgba(16,24,38,.9)')
+        .attr('stroke-width', 2)
+        .each(function(d){
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.78;
+          const baseStrokeWidth = 2;
+          const el = d3.select(this);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-fill-opacity', baseOpacity)
+            .attr('data-base-stroke-width', baseStrokeWidth);
+        })
+        .attr('transform', (d) => {
+          const pts = d.pts || [];
+          const p = pts[clamp(currentIdx, 0, pts.length - 1)] || { x: 0, y: 0 };
+          return `translate(${xScale(p.x)},${yScale(p.y)})`;
+        })
+        .attr('d', (d) => {
+          const st = styleFor(d.team);
+          const isActive = d.team === active;
+          const r = isActive ? 4.6 : 3.6;
+          const sym = d3.symbol().type(symbolTypes[st.marker] || d3.symbolCircle).size((r * 2.2) * (r * 2.2));
+          return sym();
+        })
+        .call((enter) => enter.transition(t).attr('opacity', (d) => (d.team === active ? 1 : 0.78))),
+      (update) => update
+        .each(function(d){
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.78;
+          const el = d3.select(this);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-fill-opacity', baseOpacity)
+            .attr('data-base-stroke-width', 2);
+        })
+        .call((update) => update.transition(t)
+          .attr('fill', (d) => styleFor(d.team).color)
+          .attr('opacity', (d) => (d.team === active ? 1 : 0.78))
+          .attr('transform', (d) => {
+            const pts = d.pts || [];
+            const p = pts[clamp(currentIdx, 0, pts.length - 1)] || { x: 0, y: 0 };
+            return `translate(${xScale(p.x)},${yScale(p.y)})`;
+          })
+          .attr('d', (d) => {
+            const st = styleFor(d.team);
+            const isActive = d.team === active;
+            const r = isActive ? 4.6 : 3.6;
+            const sym = d3.symbol().type(symbolTypes[st.marker] || d3.symbolCircle).size((r * 2.2) * (r * 2.2));
+            return sym();
+          })
+        ),
+      (exit) => exit.call((exit) => exit.transition(t).attr('opacity', 0).remove())
+    );
 
-      function addMarker(shape){
-        if(shape === 'circle'){
-          const el = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          el.setAttribute('cx', String(mx));
-          el.setAttribute('cy', String(my));
-          el.setAttribute('r', String(r));
-          el.setAttribute('fill', fill);
-          el.setAttribute('stroke', stroke);
-          el.setAttribute('stroke-width', '2');
-          return el;
-        }
-        if(shape === 'square'){
-          const el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-          el.setAttribute('x', String(mx - r));
-          el.setAttribute('y', String(my - r));
-          el.setAttribute('width', String(r * 2));
-          el.setAttribute('height', String(r * 2));
-          el.setAttribute('rx', '1');
-          el.setAttribute('fill', fill);
-          el.setAttribute('stroke', stroke);
-          el.setAttribute('stroke-width', '2');
-          return el;
-        }
-        if(shape === 'triangle'){
-          const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-          const d = `M ${mx} ${my - r} L ${mx + r} ${my + r} L ${mx - r} ${my + r} Z`;
-          el.setAttribute('d', d);
-          el.setAttribute('fill', fill);
-          el.setAttribute('stroke', stroke);
-          el.setAttribute('stroke-width', '2');
-          return el;
-        }
-        if(shape === 'diamond'){
-          const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-          const d = `M ${mx} ${my - r} L ${mx + r} ${my} L ${mx} ${my + r} L ${mx - r} ${my} Z`;
-          el.setAttribute('d', d);
-          el.setAttribute('fill', fill);
-          el.setAttribute('stroke', stroke);
-          el.setAttribute('stroke-width', '2');
-          return el;
-        }
-        // cross
-        const bg = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        bg.setAttribute('d', `M ${mx - r} ${my - r} L ${mx + r} ${my + r} M ${mx + r} ${my - r} L ${mx - r} ${my + r}`);
-        bg.setAttribute('fill', 'none');
-        bg.setAttribute('stroke', stroke);
-        bg.setAttribute('stroke-width', '5');
-        bg.setAttribute('stroke-linecap', 'round');
-        bg.setAttribute('stroke-linejoin', 'round');
-        bg.setAttribute('data-team', team);
-        bg.setAttribute('opacity', isActive ? '1' : '0.78');
-        bg.setAttribute('data-base-opacity', isActive ? '1' : '0.78');
-        bg.setAttribute('data-base-stroke-width', '5');
-        chartSvg.appendChild(bg);
-
-        const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        el.setAttribute('d', `M ${mx - r} ${my - r} L ${mx + r} ${my + r} M ${mx + r} ${my - r} L ${mx - r} ${my + r}`);
-        el.setAttribute('fill', 'none');
-        el.setAttribute('stroke', fill);
-        el.setAttribute('stroke-width', '2.6');
-        el.setAttribute('stroke-linecap', 'round');
-        el.setAttribute('stroke-linejoin', 'round');
-        return el;
-      }
-
-      const marker = addMarker(style.marker);
-      marker.setAttribute('data-team', team);
-      const mOpacity = isActive ? 1 : 0.78;
-      marker.setAttribute('opacity', String(mOpacity));
-      marker.setAttribute('data-base-opacity', String(mOpacity));
-      marker.setAttribute('data-base-fill-opacity', String(mOpacity));
-      if(marker.tagName.toLowerCase() === 'circle') marker.setAttribute('data-base-r', String(r));
-      chartSvg.appendChild(marker);
-    });
-
-    applyHoverHighlight(hoverTeam);
+    applyHoverHighlight(effectiveHoverTeam());
 
     yRangeEl.textContent = `Elo range (chart): ${Math.round(minY)} – ${Math.round(maxY)}`;
     xRangeEl.textContent = `Games: 0 – ${maxX}`;
@@ -955,10 +1152,10 @@
           }
         });
 
-        chip.addEventListener('mouseenter', () => { hoverTeam = team; applyHoverHighlight(hoverTeam); });
-        chip.addEventListener('mouseleave', () => { hoverTeam = ''; applyHoverHighlight(hoverTeam); });
-        chip.addEventListener('focus', () => { hoverTeam = team; applyHoverHighlight(hoverTeam); });
-        chip.addEventListener('blur', () => { hoverTeam = ''; applyHoverHighlight(hoverTeam); });
+        chip.addEventListener('mouseenter', () => { chipHoverTeam = team; applyHoverHighlight(effectiveHoverTeam()); });
+        chip.addEventListener('mouseleave', () => { chipHoverTeam = ''; applyHoverHighlight(effectiveHoverTeam()); });
+        chip.addEventListener('focus', () => { chipHoverTeam = team; applyHoverHighlight(effectiveHoverTeam()); });
+        chip.addEventListener('blur', () => { chipHoverTeam = ''; applyHoverHighlight(effectiveHoverTeam()); });
 
         const sw = document.createElement('span');
         sw.className = 'sw';
