@@ -182,6 +182,11 @@
           <div class="replay-base-note" id="replay-base-note">Baseline mode controls how Off/Def 0-100 is normalized.</div>
           <div class="replay-mini-title">Narrative Signals</div>
           <div class="replay-callouts" id="replay-callouts"></div>
+          <div class="replay-mini-title">Score Race (Timeline)</div>
+          <div class="replay-analytics">
+            <svg id="replay-score-svg" width="370" height="140"></svg>
+            <div class="replay-hover-readout" id="replay-score-readout">Hover the chart to inspect minute-level score values.</div>
+          </div>
           <div class="replay-mini-title">Trend Lines (Live + Smoothed)</div>
           <div class="replay-analytics">
             <svg id="replay-trends-svg" width="370" height="140"></svg>
@@ -264,6 +269,8 @@ const replayBaseGameBtn = document.getElementById("replay-base-game");
 const replayBaseLeagueBtn = document.getElementById("replay-base-league");
 const replayBaseNote = document.getElementById("replay-base-note");
 const replayCallouts = document.getElementById("replay-callouts");
+const replayScoreSvg = document.getElementById("replay-score-svg");
+const replayScoreReadout = document.getElementById("replay-score-readout");
 const replayTrendsSvg = document.getElementById("replay-trends-svg");
 const replayPhaseSvg = document.getElementById("replay-phase-svg");
 const replayFilmstripSvg = document.getElementById("replay-filmstrip-svg");
@@ -1009,7 +1016,8 @@ function replayUpdateHistory(metrics){
     replayState.historyByTeam[team].push({
       t,
       off: Number(metrics.score[team] ? metrics.score[team].offence : 50),
-      def: Number(metrics.score[team] ? metrics.score[team].defence : 50)
+      def: Number(metrics.score[team] ? metrics.score[team].defence : 50),
+      points: Number(metrics.score[team] ? metrics.score[team].points : 0)
     });
     if(replayState.historyByTeam[team].length > 260){
       replayState.historyByTeam[team].shift();
@@ -1022,7 +1030,7 @@ function replayValueToColor(v){
   return d3.interpolateRgbBasis(["#b80f35", "#ffb44a", "#44db7f"])(t);
 }
 
-function replayNearestByMinute(hist, minute, key){
+function replayNearestByMinute(hist, minute, key, fallback){
   if(!hist || !hist.length) return null;
   let best = hist[0];
   let bestDt = Math.abs(Number(best.t || 0) - minute);
@@ -1033,7 +1041,93 @@ function replayNearestByMinute(hist, minute, key){
       best = hist[i];
     }
   }
-  return { t: Number(best.t || 0), v: Number(best[key] || 50) };
+  const fv = (fallback == null) ? 50 : Number(fallback);
+  const val = (best[key] == null) ? fv : Number(best[key]);
+  return { t: Number(best.t || 0), v: val };
+}
+
+function replayRenderScoreTimeline(){
+  if(!replayScoreSvg) return;
+  const svgSel = d3.select(replayScoreSvg);
+  const w = Number(svgSel.attr("width") || 370);
+  const h = Number(svgSel.attr("height") || 140);
+  svgSel.selectAll("*").remove();
+  const m = { l: 30, r: 8, t: 8, b: 18 };
+  const [teamA, teamB] = replayTeams();
+  const histA = (replayState.historyByTeam[teamA] || []).map(d => ({ t: Number(d.t || 0), v: Number(d.points || 0) }));
+  const histB = (replayState.historyByTeam[teamB] || []).map(d => ({ t: Number(d.t || 0), v: Number(d.points || 0) }));
+  const all = histA.concat(histB);
+  const maxY = Math.max(10, d3.max(all, d => d.v) || 0);
+  const x = d3.scaleLinear().domain([0, 40]).range([m.l, w - m.r]);
+  const y = d3.scaleLinear().domain([0, maxY]).nice().range([h - m.b, m.t]);
+  svgSel.append("line").attr("x1", m.l).attr("y1", h - m.b).attr("x2", w - m.r).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  svgSel.append("line").attr("x1", m.l).attr("y1", m.t).attr("x2", m.l).attr("y2", h - m.b).attr("stroke", "rgba(111,132,171,.35)");
+  const line = d3.line().x(d => x(d.t)).y(d => y(d.v)).curve(d3.curveMonotoneX);
+  [
+    { team: teamA, hist: histA, color: colors[teamA] || "#3a86ff" },
+    { team: teamB, hist: histB, color: colors[teamB] || "#ff006e" }
+  ].forEach(s => {
+    if(s.hist.length < 2) return;
+    svgSel.append("path")
+      .attr("d", line(s.hist))
+      .attr("fill", "none")
+      .attr("stroke", rgba(s.color, 0.96))
+      .attr("stroke-width", 2.2);
+  });
+  const hoverLayer = svgSel.append("g");
+  const probe = hoverLayer.append("line")
+    .attr("y1", m.t)
+    .attr("y2", h - m.b)
+    .attr("stroke", "rgba(233,241,255,.55)")
+    .attr("stroke-dasharray", "3 3")
+    .style("display", "none");
+  const dotLayer = hoverLayer.append("g");
+  svgSel.append("rect")
+    .attr("x", m.l)
+    .attr("y", m.t)
+    .attr("width", Math.max(0, (w - m.r - m.l)))
+    .attr("height", Math.max(0, (h - m.b - m.t)))
+    .attr("fill", "transparent")
+    .style("cursor", "crosshair")
+    .on("mousemove", (event) => {
+      if(!all.length) return;
+      const px = Math.max(m.l, Math.min(w - m.r, d3.pointer(event)[0]));
+      const minute = x.invert(px);
+      probe.style("display", null).attr("x1", px).attr("x2", px);
+      const dots = [];
+      [
+        { team: teamA, color: colors[teamA] || "#3a86ff" },
+        { team: teamB, color: colors[teamB] || "#ff006e" }
+      ].forEach(s => {
+        const near = replayNearestByMinute((replayState.historyByTeam[s.team] || []), minute, "points", 0);
+        if(!near) return;
+        dots.push({
+          x: x(near.t),
+          y: y(near.v),
+          color: s.color,
+          text: `${teamAbbr(s.team)} ${Math.round(near.v)}`
+        });
+      });
+      dotLayer.selectAll("circle")
+        .data(dots)
+        .join("circle")
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+        .attr("r", 3)
+        .attr("fill", d => d.color)
+        .attr("stroke", "#f4f8ff")
+        .attr("stroke-width", 0.7);
+      if(replayScoreReadout){
+        replayScoreReadout.textContent = `Minute ${minute.toFixed(1)}: ${dots.map(d => d.text).join(" | ")}`;
+      }
+    })
+    .on("mouseleave", () => {
+      probe.style("display", "none");
+      dotLayer.selectAll("*").remove();
+      if(replayScoreReadout){
+        replayScoreReadout.textContent = "Hover the chart to inspect minute-level score values.";
+      }
+    });
 }
 
 function replayRenderTrendLines(){
@@ -1390,6 +1484,7 @@ function applyReplayFrame(){
   replayUpdateHistory(metrics);
   replayRenderStateCards(metrics);
   replayRenderCallouts(metrics);
+  replayRenderScoreTimeline();
   replayRenderTrendLines();
   replayRenderPhaseMap();
   replayRenderFilmstrip();
