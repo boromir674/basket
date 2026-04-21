@@ -1030,7 +1030,7 @@ function replayValueToColor(v){
   return d3.interpolateRgbBasis(["#b80f35", "#ffb44a", "#44db7f"])(t);
 }
 
-function replayNearestByMinute(hist, minute, key, fallback){
+function replayNearestByMinute(hist, minute, key, fallback = 50){
   if(!hist || !hist.length) return null;
   let best = hist[0];
   let bestDt = Math.abs(Number(best.t || 0) - minute);
@@ -1041,9 +1041,7 @@ function replayNearestByMinute(hist, minute, key, fallback){
       best = hist[i];
     }
   }
-  const fv = (fallback == null) ? 50 : Number(fallback);
-  const val = (best[key] == null) ? fv : Number(best[key]);
-  return { t: Number(best.t || 0), v: val };
+  return { t: Number(best.t || 0), v: Number(best[key] ?? fallback) };
 }
 
 function replayRenderScoreTimeline(){
@@ -1054,8 +1052,9 @@ function replayRenderScoreTimeline(){
   svgSel.selectAll("*").remove();
   const m = { l: 30, r: 8, t: 8, b: 18 };
   const [teamA, teamB] = replayTeams();
-  const histA = (replayState.historyByTeam[teamA] || []).map(d => ({ t: Number(d.t || 0), v: Number(d.points || 0) }));
-  const histB = (replayState.historyByTeam[teamB] || []).map(d => ({ t: Number(d.t || 0), v: Number(d.points || 0) }));
+  const scoreSeries = (team) => (replayState.historyByTeam[team] || []).map(d => ({ t: Number(d.t || 0), v: Number(d.points || 0) }));
+  const histA = scoreSeries(teamA);
+  const histB = scoreSeries(teamB);
   const all = histA.concat(histB);
   const maxY = Math.max(10, d3.max(all, d => d.v) || 0);
   const x = d3.scaleLinear().domain([0, 40]).range([m.l, w - m.r]);
@@ -1118,7 +1117,9 @@ function replayRenderScoreTimeline(){
         .attr("stroke", "#f4f8ff")
         .attr("stroke-width", 0.7);
       if(replayScoreReadout){
-        replayScoreReadout.textContent = `Minute ${minute.toFixed(1)}: ${dots.map(d => d.text).join(" | ")}`;
+        replayScoreReadout.textContent = dots.length
+          ? `Minute ${minute.toFixed(1)}: ${dots.map(d => d.text).join(" | ")}`
+          : "No score data available at this minute.";
       }
     })
     .on("mouseleave", () => {
