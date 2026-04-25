@@ -242,6 +242,27 @@ Notes:
 - Season filter selections must remain consecutive (A,B,C allowed; A,B,D blocked).
 - When replaying more than one season, the chart renders vertical divider lines at season boundaries.
 
+## 6.3) Re-seed ELO From A Different Initial Value
+
+When you want to recompute Elo from a different starting value (instead of 1500), use this quick flow:
+
+1. Recompute Elo in the pipeline with an explicit seed via `--initial-rating`.
+
+```bash
+docker compose run --rm ops compute_elo --auto \
+  --output-dir /app/data \
+  --output-name elo_multiseason.json \
+  --initial-rating 1400
+```
+
+2. Update the frontend Elo replay fallback in both showcase pages if you want a matching UI default for payloads that do not provide `initial_rating`.
+  - `public/elo.html` around `buildDerivedTimeline()` (`const v = (elo && typeof elo.initial_rating === 'number') ? elo.initial_rating : 1500;`)
+  - `prod/elo.html` same location and logic
+
+3. Rebuild and verify the result end-to-end.
+  - Run: `make test ARGS="-vvs -ra -k elo"`
+  - Open the Elo page and confirm baseline values reflect your new seed.
+
 ## 7) Current UI Notes (Prototype Behavior)
 
 - `?typeZoomVariant=4`: standard 4-column type zoom rendering.
