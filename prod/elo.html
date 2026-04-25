@@ -1571,36 +1571,15 @@
     setSeasonWarning('');
 
     const requestedSeasoncodes = parseSeasoncodesFromQuery();
-    const fallbackSeasoncode = requestedSeasoncodes[0] || 'E2025';
+    const defaultSeasoncode = requestedSeasoncodes[0] || 'E2025';
 
-    async function fetchJsonWithFallback(paths){
-      let lastErr = null;
-      for(const p of paths){
-        try{
-          const resp = await fetch(p);
-          if(resp.ok) return { data: await resp.json(), path: p };
-          if(resp.status === 404) continue;
-          throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
-        }catch(err){
-          lastErr = err;
-        }
-      }
-      const msg = `Tried: ${paths.join(' , ')}` + (lastErr ? `\n\n${String(lastErr)}` : '');
-      throw new Error(msg);
-    }
-
-    const eloFileCandidates = [
-      'assets/processed/elo_multiseason.json',
-      '../assets/processed/elo_multiseason.json',
-      `assets/processed/elo_${fallbackSeasoncode}.json`,
-      `../assets/processed/elo_${fallbackSeasoncode}.json`,
-    ];
-
+    const eloFile = 'assets/processed/elo_multiseason.json';
     try{
-      const loaded = await fetchJsonWithFallback(eloFileCandidates);
-      elo = loaded.data;
+      const resp = await fetch(eloFile);
+      if(!resp.ok) throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
+      elo = await resp.json();
     }catch(err){
-      showError(`Failed to load Elo JSON\n\n${String(err)}`);
+      showError(`Failed to load Elo JSON\n\nExpected: ${eloFile}\n\n${String(err)}`);
       return;
     }
 
@@ -1625,7 +1604,7 @@
       });
       allSeasoncodes = payloadSeasoncodes.slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
     }else{
-      const single = fallbackSeasoncode;
+      const single = defaultSeasoncode;
       rawHistory = rawHistory.map((h) => Object.assign({}, h, {
         seasoncode: String(h && h.seasoncode || single),
         season_label: String(h && h.season_label || seasonLabelFromCode(single)),
