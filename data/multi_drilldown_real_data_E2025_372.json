@@ -3,11 +3,11 @@
     "seasoncode": "E2025",
     "gamecode": 372,
     "team_a": "Virtus Bologna",
-    "team_b": "Maccabi Rapyd Tel Aviv",
+    "team_b": "Maccabi Tel Aviv",
     "score_a": 89,
     "score_b": 85,
     "winner": "Virtus Bologna",
-    "gamedate": null,
+    "gamedate": "2026-04-16",
     "synced_at": "2026-04-19T18:00:35.237054+00:00",
     "source_endpoints": [
       "PlaybyPlay",
@@ -22,7 +22,7 @@
     },
     "P013381": {
       "name": "RAYMAN, WILLIAM",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P005422": {
       "name": "JALLOW, KARIM",
@@ -30,11 +30,11 @@
     },
     "P006835": {
       "name": "HOARD, JAYLEN",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P011219": {
       "name": "SORKIN, ROMAN",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P012687": {
       "name": "NIANG, SALIOU",
@@ -46,7 +46,7 @@
     },
     "P013403": {
       "name": "WALKER IV, LONNIE",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P001844": {
       "name": "HACKETT, DANIEL",
@@ -54,7 +54,7 @@
     },
     "P011193": {
       "name": "BLATT, TAMIR",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P014108": {
       "name": "DIARRA, ALIOU",
@@ -66,11 +66,11 @@
     },
     "P007990": {
       "name": "DIBARTOLOMEO, JOHN",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P013304": {
       "name": "HANKINS, ZACHARY",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P013028": {
       "name": "BAIOCCHI, MATTEO",
@@ -82,15 +82,15 @@
     },
     "P014123": {
       "name": "DOWTIN JR, JEFFREY",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P014127": {
       "name": "BRISSETT, O'SHAE J",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P013289": {
       "name": "SANTOS, MARCIO",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P014219": {
       "name": "FERRARI, FRANCESCO",
@@ -365,14 +365,14 @@
   ],
   "colors": {
     "Virtus Bologna": "#d62839",
-    "Maccabi Rapyd Tel Aviv": "#3a86ff"
+    "Maccabi Tel Aviv": "#3a86ff"
   },
   "views": {
     "top": {
       "label": "Top-level",
       "starts": {
         "Virtus Bologna": 94,
-        "Maccabi Rapyd Tel Aviv": 94
+        "Maccabi Tel Aviv": 94
       },
       "title": "Context",
       "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
@@ -382,7 +382,7 @@
           "94"
         ],
         [
-          "Maccabi Rapyd Tel Aviv starts",
+          "Maccabi Tel Aviv starts",
           "94"
         ],
         [
@@ -394,11 +394,11 @@
           "7%"
         ],
         [
-          "Maccabi Rapyd Tel Aviv points per poss.",
+          "Maccabi Tel Aviv points per poss.",
           "0.90"
         ],
         [
-          "Maccabi Rapyd Tel Aviv Made 3 share",
+          "Maccabi Tel Aviv Made 3 share",
           "7%"
         ]
       ],
@@ -406,7 +406,7 @@
         "Possession types are inferred, not native API fields.",
         "This JSON is suitable both for Sankey rendering and later metrics expansion.",
         "Virtus Bologna generated 0.95 points per possession over 94 tracked possessions.",
-        "Maccabi Rapyd Tel Aviv generated 0.90 points per possession over 94 tracked possessions."
+        "Maccabi Tel Aviv generated 0.90 points per possession over 94 tracked possessions."
       ],
       "columns": [
         "Start",
@@ -495,80 +495,80 @@
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Start",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Start",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Half-court",
           "name": "Half-court",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_After_OREB",
           "name": "After OREB",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -600,7 +600,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 21
         },
         {
@@ -610,7 +610,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 25
         },
         {
@@ -655,7 +655,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Turnover",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 16
         },
         {
@@ -685,7 +685,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 22
         },
         {
@@ -695,7 +695,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 7
         },
         {
@@ -705,7 +705,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 3
         },
         {
@@ -966,55 +966,55 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 21
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 8
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 6
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 6
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           }
         ],
@@ -1022,105 +1022,105 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1128,87 +1128,87 @@
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           }
         ],
@@ -1360,61 +1360,61 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1422,37 +1422,37 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1460,25 +1460,25 @@
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1524,75 +1524,75 @@
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1638,43 +1638,43 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1764,75 +1764,75 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 14
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 13
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1840,45 +1840,45 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1938,17 +1938,17 @@
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2086,13 +2086,13 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2134,37 +2134,37 @@
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2172,19 +2172,19 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2192,13 +2192,13 @@
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2206,19 +2206,19 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2240,13 +2240,13 @@
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2282,7 +2282,7 @@
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2300,9 +2300,9 @@
       "label": "Half-court breakdown",
       "starts": {
         "Virtus Bologna": 59,
-        "Maccabi Rapyd Tel Aviv": 63
+        "Maccabi Tel Aviv": 63
       },
-      "title": "Zoomed Detail \u2014 Half-court",
+      "title": "Zoomed Detail — Half-court",
       "desc": "Half-court offense broken into inferred action families.",
       "kpis": [
         [
@@ -2310,7 +2310,7 @@
           "59"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "63"
         ]
       ],
@@ -2333,8 +2333,8 @@
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Half-court",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Half-court",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
@@ -2406,67 +2406,67 @@
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -2498,7 +2498,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 14
         },
         {
@@ -2508,7 +2508,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 15
         },
         {
@@ -2528,7 +2528,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Turnover",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 10
         },
         {
@@ -2538,7 +2538,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 18
         },
         {
@@ -2553,7 +2553,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 3
         },
         {
@@ -2593,7 +2593,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 3
         },
         {
@@ -2763,55 +2763,55 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 19
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 8
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 6
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           }
         ],
@@ -2819,87 +2819,87 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2907,75 +2907,75 @@
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3059,87 +3059,87 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3147,75 +3147,75 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 14
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 12
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3331,17 +3331,17 @@
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3473,13 +3473,13 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3487,27 +3487,27 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3531,9 +3531,9 @@
       "label": "Transition breakdown",
       "starts": {
         "Virtus Bologna": 29,
-        "Maccabi Rapyd Tel Aviv": 22
+        "Maccabi Tel Aviv": 22
       },
-      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "title": "Zoomed Detail — Transition / Fast break",
       "desc": "Transition possessions split by inferred origin.",
       "kpis": [
         [
@@ -3541,7 +3541,7 @@
           "29"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "22"
         ]
       ],
@@ -3564,8 +3564,8 @@
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Transition",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Transition",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
@@ -3631,61 +3631,61 @@
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -3717,7 +3717,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 7
         },
         {
@@ -3727,7 +3727,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 4
         },
         {
@@ -3737,7 +3737,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Turnover",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 6
         },
         {
@@ -3767,7 +3767,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 2
         },
         {
@@ -3787,7 +3787,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 3
         }
       ],
@@ -3922,61 +3922,61 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3984,75 +3984,75 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4060,51 +4060,51 @@
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4112,63 +4112,63 @@
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4304,27 +4304,27 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4360,39 +4360,39 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ]
@@ -4402,9 +4402,9 @@
       "label": "After OREB breakdown",
       "starts": {
         "Virtus Bologna": 6,
-        "Maccabi Rapyd Tel Aviv": 9
+        "Maccabi Tel Aviv": 9
       },
-      "title": "Zoomed Detail \u2014 After OREB",
+      "title": "Zoomed Detail — After OREB",
       "desc": "Second-chance possessions decomposed by inferred continuation type.",
       "kpis": [
         [
@@ -4412,7 +4412,7 @@
           "6"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "9"
         ]
       ],
@@ -4435,8 +4435,8 @@
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv After OREB",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv After OREB",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
@@ -4514,73 +4514,73 @@
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Immediate_putback",
           "name": "Immediate putback",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Kick-out_perimeter",
           "name": "Kick-out perimeter",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Reset_half-court",
           "name": "Reset half-court",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -4612,7 +4612,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 3
         },
         {
@@ -4627,7 +4627,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 3
         },
         {
@@ -4657,7 +4657,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 2
         },
         {
@@ -4677,7 +4677,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 1
         },
         {
@@ -4720,19 +4720,19 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4740,39 +4740,39 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4780,19 +4780,19 @@
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4800,27 +4800,27 @@
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4882,13 +4882,13 @@
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4896,27 +4896,27 @@
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4940,15 +4940,15 @@
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4974,9 +4974,9 @@
       "label": "Made 2 breakdown",
       "starts": {
         "Virtus Bologna": 26,
-        "Maccabi Rapyd Tel Aviv": 21
+        "Maccabi Tel Aviv": 21
       },
-      "title": "Zoomed Detail \u2014 Made 2",
+      "title": "Zoomed Detail — Made 2",
       "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
@@ -4984,7 +4984,7 @@
           "26"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "21"
         ]
       ],
@@ -5007,8 +5007,8 @@
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Made 2",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
@@ -5032,19 +5032,19 @@
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Layup_runner",
           "name": "Layup / runner",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -5076,7 +5076,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 21
         }
       ],
@@ -5235,61 +5235,61 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -5297,123 +5297,123 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013304",
             "player_name": "HANKINS, ZACHARY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ]
@@ -5423,9 +5423,9 @@
       "label": "Made 3 breakdown",
       "starts": {
         "Virtus Bologna": 7,
-        "Maccabi Rapyd Tel Aviv": 7
+        "Maccabi Tel Aviv": 7
       },
-      "title": "Zoomed Detail \u2014 Made 3",
+      "title": "Zoomed Detail — Made 3",
       "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
@@ -5433,7 +5433,7 @@
           "7"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "7"
         ]
       ],
@@ -5456,8 +5456,8 @@
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Made 3",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
@@ -5481,19 +5481,19 @@
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -5510,7 +5510,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 7
         },
         {
@@ -5534,31 +5534,31 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -5566,63 +5566,63 @@
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],

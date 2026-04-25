@@ -2,12 +2,12 @@
   "meta": {
     "seasoncode": "E2025",
     "gamecode": 65,
-    "team_a": "Panathinaikos AKTOR Athens",
-    "team_b": "Maccabi Rapyd Tel Aviv",
+    "team_a": "Panathinaikos Athens",
+    "team_b": "Maccabi Tel Aviv",
     "score_a": 99,
     "score_b": 85,
-    "winner": "Panathinaikos AKTOR Athens",
-    "gamedate": null,
+    "winner": "Panathinaikos Athens",
+    "gamedate": "2025-10-28",
     "synced_at": "2026-04-18T23:15:50.908839+00:00",
     "source_endpoints": [
       "PlaybyPlay",
@@ -18,87 +18,87 @@
   "players": {
     "P005353": {
       "name": "YURTSEVEN, OMER",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P011219": {
       "name": "SORKIN, ROMAN",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P012774": {
       "name": "NUNN, KENDRICK",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P011193": {
       "name": "BLATT, TAMIR",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P004088": {
       "name": "OSMAN, CEDI",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P006835": {
       "name": "HOARD, JAYLEN",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P012712": {
       "name": "HERNANGOMEZ, JUANCHO",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P013403": {
       "name": "WALKER IV, LONNIE",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P014127": {
       "name": "BRISSETT, O'SHAE J",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P014012": {
       "name": "LEAF, TJ",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P013699": {
       "name": "CLARK III, JIMMY",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P013289": {
       "name": "SANTOS, MARCIO",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P012608": {
       "name": "SHORTS, TJ",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P007866": {
       "name": "MITOGLOU, KONSTANTINOS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P014123": {
       "name": "DOWTIN JR, JEFFREY",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P014011": {
       "name": "HOLMES, RICHAUN",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P001926": {
       "name": "SLOUKAS, KOSTAS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P007990": {
       "name": "DIBARTOLOMEO, JOHN",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P011204": {
       "name": "GRANT, JERIAN",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P013381": {
       "name": "RAYMAN, WILLIAM",
-      "team": "Maccabi Rapyd Tel Aviv"
+      "team": "Maccabi Tel Aviv"
     },
     "P011209": {
       "name": "KALAITZAKIS, PANAGIOTIS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     }
   },
   "boxscore_players": [
@@ -392,49 +392,49 @@
     }
   ],
   "colors": {
-    "Panathinaikos AKTOR Athens": "#d62839",
-    "Maccabi Rapyd Tel Aviv": "#3a86ff"
+    "Panathinaikos Athens": "#d62839",
+    "Maccabi Tel Aviv": "#3a86ff"
   },
   "views": {
     "top": {
       "label": "Top-level",
       "starts": {
-        "Panathinaikos AKTOR Athens": 93,
-        "Maccabi Rapyd Tel Aviv": 85
+        "Panathinaikos Athens": 93,
+        "Maccabi Tel Aviv": 85
       },
       "title": "Context",
       "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
       "kpis": [
         [
-          "Panathinaikos AKTOR Athens starts",
+          "Panathinaikos Athens starts",
           "93"
         ],
         [
-          "Maccabi Rapyd Tel Aviv starts",
+          "Maccabi Tel Aviv starts",
           "85"
         ],
         [
-          "Panathinaikos AKTOR Athens points per poss.",
+          "Panathinaikos Athens points per poss.",
           "1.06"
         ],
         [
-          "Panathinaikos AKTOR Athens Made 3 share",
+          "Panathinaikos Athens Made 3 share",
           "10%"
         ],
         [
-          "Maccabi Rapyd Tel Aviv points per poss.",
+          "Maccabi Tel Aviv points per poss.",
           "1.00"
         ],
         [
-          "Maccabi Rapyd Tel Aviv Made 3 share",
+          "Maccabi Tel Aviv Made 3 share",
           "8%"
         ]
       ],
       "insights": [
         "Possession types are inferred, not native API fields.",
         "This JSON is suitable both for Sankey rendering and later metrics expansion.",
-        "Panathinaikos AKTOR Athens generated 1.06 points per possession over 93 tracked possessions.",
-        "Maccabi Rapyd Tel Aviv generated 1.00 points per possession over 85 tracked possessions."
+        "Panathinaikos Athens generated 1.06 points per possession over 93 tracked possessions.",
+        "Maccabi Tel Aviv generated 1.00 points per possession over 85 tracked possessions."
       ],
       "columns": [
         "Start",
@@ -445,158 +445,158 @@
       "nodes": [
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Start",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Start",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Half-court",
           "name": "Half-court",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_After_OREB",
           "name": "After OREB",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Start",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Start",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Half-court",
           "name": "Half-court",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_After_OREB",
           "name": "After OREB",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -613,7 +613,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 26
         },
         {
@@ -628,7 +628,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 26
         },
         {
@@ -638,7 +638,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 26
         },
         {
@@ -668,7 +668,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Turnover",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 16
         },
         {
@@ -683,7 +683,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 20
         },
         {
@@ -698,7 +698,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 9
         },
         {
@@ -708,7 +708,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 21
         },
         {
@@ -723,7 +723,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 7
         },
         {
@@ -748,7 +748,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 3
         },
         {
@@ -758,7 +758,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 12
         },
         {
@@ -768,7 +768,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 7
         },
         {
@@ -803,7 +803,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 5
         },
         {
@@ -832,55 +832,55 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 10
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 9
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 7
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -888,93 +888,93 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -982,61 +982,61 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 8
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 8
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 6
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
-            "player_id": "unknown::Maccabi Rapyd Tel Aviv",
+            "player_id": "unknown::Maccabi Tel Aviv",
             "player_name": "Unknown",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1044,81 +1044,81 @@
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1126,93 +1126,93 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 11
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1220,67 +1220,67 @@
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1288,31 +1288,31 @@
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1320,43 +1320,43 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1364,31 +1364,31 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1396,87 +1396,87 @@
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
-            "player_id": "unknown::Maccabi Rapyd Tel Aviv",
+            "player_id": "unknown::Maccabi Tel Aviv",
             "player_name": "Unknown",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
-            "player_id": "unknown::Maccabi Rapyd Tel Aviv",
+            "player_id": "unknown::Maccabi Tel Aviv",
             "player_name": "Unknown",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1484,43 +1484,43 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 9
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           }
         ],
@@ -1528,51 +1528,51 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           }
         ],
@@ -1580,37 +1580,37 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1618,51 +1618,51 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1670,93 +1670,93 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1764,31 +1764,31 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1796,51 +1796,51 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1848,37 +1848,37 @@
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1886,19 +1886,19 @@
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1906,37 +1906,37 @@
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1944,27 +1944,27 @@
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -1972,87 +1972,87 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2060,69 +2060,69 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2130,37 +2130,37 @@
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2168,25 +2168,25 @@
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2194,13 +2194,13 @@
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2208,19 +2208,19 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2228,25 +2228,25 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2254,45 +2254,45 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2300,13 +2300,13 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2314,7 +2314,7 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2322,7 +2322,7 @@
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2330,7 +2330,7 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ]
@@ -2339,18 +2339,18 @@
     "halfcourt": {
       "label": "Half-court breakdown",
       "starts": {
-        "Panathinaikos AKTOR Athens": 48,
-        "Maccabi Rapyd Tel Aviv": 48
+        "Panathinaikos Athens": 48,
+        "Maccabi Tel Aviv": 48
       },
       "title": "Zoomed Detail — Half-court",
       "desc": "Half-court offense broken into inferred action families.",
       "kpis": [
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "48"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "48"
         ]
       ],
@@ -2367,146 +2367,146 @@
       "nodes": [
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Half-court",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Half-court",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Half-court",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Half-court",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -2523,7 +2523,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 8
         },
         {
@@ -2538,7 +2538,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 12
         },
         {
@@ -2548,7 +2548,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 15
         },
         {
@@ -2558,7 +2558,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Turnover",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 12
         },
         {
@@ -2568,7 +2568,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 10
         },
         {
@@ -2578,7 +2578,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 10
         },
         {
@@ -2588,7 +2588,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 8
         },
         {
@@ -2598,7 +2598,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 6
         },
         {
@@ -2613,7 +2613,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 4
         },
         {
@@ -2628,17 +2628,17 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 4
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 5
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 2
         }
       ],
@@ -2647,55 +2647,55 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 9
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2703,75 +2703,75 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2779,61 +2779,61 @@
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 8
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
-            "player_id": "unknown::Maccabi Rapyd Tel Aviv",
+            "player_id": "unknown::Maccabi Tel Aviv",
             "player_name": "Unknown",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2841,63 +2841,63 @@
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -2905,87 +2905,87 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2993,75 +2993,75 @@
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
-            "player_id": "unknown::Maccabi Rapyd Tel Aviv",
+            "player_id": "unknown::Maccabi Tel Aviv",
             "player_name": "Unknown",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
-            "player_id": "unknown::Maccabi Rapyd Tel Aviv",
+            "player_id": "unknown::Maccabi Tel Aviv",
             "player_name": "Unknown",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3069,69 +3069,69 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3139,75 +3139,75 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3215,87 +3215,87 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3303,63 +3303,63 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3367,25 +3367,25 @@
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3393,51 +3393,51 @@
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3445,25 +3445,25 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3471,79 +3471,79 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           }
         ]
@@ -3552,18 +3552,18 @@
     "transition": {
       "label": "Transition breakdown",
       "starts": {
-        "Panathinaikos AKTOR Athens": 30,
-        "Maccabi Rapyd Tel Aviv": 27
+        "Panathinaikos Athens": 30,
+        "Maccabi Tel Aviv": 27
       },
       "title": "Zoomed Detail — Transition / Fast break",
       "desc": "Transition possessions split by inferred origin.",
       "kpis": [
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "30"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "27"
         ]
       ],
@@ -3580,134 +3580,134 @@
       "nodes": [
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Transition",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Transition",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Transition",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Transition",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -3724,7 +3724,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 9
         },
         {
@@ -3739,7 +3739,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 7
         },
         {
@@ -3749,7 +3749,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 4
         },
         {
@@ -3759,7 +3759,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 10
         },
         {
@@ -3769,7 +3769,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 3
         },
         {
@@ -3779,7 +3779,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 9
         },
         {
@@ -3789,7 +3789,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 1
         },
         {
@@ -3799,7 +3799,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 9
         },
         {
@@ -3809,12 +3809,12 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Turnover",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 4
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 1
         }
       ],
@@ -3823,67 +3823,67 @@
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3891,63 +3891,63 @@
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -3955,43 +3955,43 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 9
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           }
         ],
@@ -3999,39 +3999,39 @@
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4039,39 +4039,39 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4079,63 +4079,63 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4143,39 +4143,39 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4183,75 +4183,75 @@
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P007990",
             "player_name": "DIBARTOLOMEO, JOHN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013381",
             "player_name": "RAYMAN, WILLIAM",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4259,21 +4259,21 @@
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4281,75 +4281,75 @@
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4357,59 +4357,59 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ]
@@ -4418,18 +4418,18 @@
     "oreb": {
       "label": "After OREB breakdown",
       "starts": {
-        "Panathinaikos AKTOR Athens": 15,
-        "Maccabi Rapyd Tel Aviv": 10
+        "Panathinaikos Athens": 15,
+        "Maccabi Tel Aviv": 10
       },
       "title": "Zoomed Detail — After OREB",
       "desc": "Second-chance possessions decomposed by inferred continuation type.",
       "kpis": [
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "15"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "10"
         ]
       ],
@@ -4446,158 +4446,158 @@
       "nodes": [
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens After OREB",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens After OREB",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv After OREB",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv After OREB",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Immediate_putback",
           "name": "Immediate putback",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Kick-out_perimeter",
           "name": "Kick-out perimeter",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Reset_half-court",
           "name": "Reset half-court",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Immediate_putback",
           "name": "Immediate putback",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Kick-out_perimeter",
           "name": "Kick-out perimeter",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Reset_half-court",
           "name": "Reset half-court",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
           "name": "Missed shot",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Turnover",
           "name": "Turnover",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_0",
+          "id": "Maccabi Tel Aviv_0",
           "name": "0 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_1",
+          "id": "Maccabi Tel Aviv_1",
           "name": "1 pt",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -4614,7 +4614,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 9
         },
         {
@@ -4629,7 +4629,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 5
         },
         {
@@ -4644,7 +4644,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Missed_shot",
-          "target": "Maccabi Rapyd Tel Aviv_0",
+          "target": "Maccabi Tel Aviv_0",
           "value": 2
         },
         {
@@ -4654,7 +4654,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs",
-          "target": "Maccabi Rapyd Tel Aviv_1",
+          "target": "Maccabi Tel Aviv_1",
           "value": 3
         },
         {
@@ -4669,7 +4669,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 3
         },
         {
@@ -4684,7 +4684,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 1
         },
         {
@@ -4694,7 +4694,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 1
         },
         {
@@ -4704,7 +4704,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 1
         }
       ],
@@ -4713,31 +4713,31 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4745,63 +4745,63 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4809,19 +4809,19 @@
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4829,39 +4829,39 @@
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4869,25 +4869,25 @@
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4895,27 +4895,27 @@
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Rapyd Tel Aviv_0": [
+        "Maccabi_Rapyd_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4923,39 +4923,39 @@
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Rapyd Tel Aviv_1": [
+        "Maccabi_Rapyd_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -4963,19 +4963,19 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4983,27 +4983,27 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5011,7 +5011,7 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5019,15 +5019,15 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5035,15 +5035,15 @@
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5051,15 +5051,15 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ]
@@ -5068,18 +5068,18 @@
     "made2": {
       "label": "Made 2 breakdown",
       "starts": {
-        "Panathinaikos AKTOR Athens": 26,
-        "Maccabi Rapyd Tel Aviv": 26
+        "Panathinaikos Athens": 26,
+        "Maccabi Tel Aviv": 26
       },
       "title": "Zoomed Detail — Made 2",
       "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "26"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "26"
         ]
       ],
@@ -5096,50 +5096,50 @@
       "nodes": [
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Made 2",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Made 2",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Layup_runner",
           "name": "Layup / runner",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Layup_runner",
           "name": "Layup / runner",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_2",
           "name": "Made 2",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_2",
+          "id": "Maccabi Tel Aviv_2",
           "name": "2 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -5156,7 +5156,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 26
         },
         {
@@ -5171,7 +5171,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_2",
-          "target": "Maccabi Rapyd Tel Aviv_2",
+          "target": "Maccabi Tel Aviv_2",
           "value": 26
         }
       ],
@@ -5180,55 +5180,55 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5236,111 +5236,111 @@
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P005353",
             "player_name": "YURTSEVEN, OMER",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P014011",
             "player_name": "HOLMES, RICHAUN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5348,49 +5348,49 @@
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -5398,99 +5398,99 @@
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Rapyd Tel Aviv_2": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
           {
             "player_id": "P006835",
             "player_name": "HOARD, JAYLEN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 7
           },
           {
             "player_id": "P014012",
             "player_name": "LEAF, TJ",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 5
           },
           {
             "player_id": "P011219",
             "player_name": "SORKIN, ROMAN",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 4
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 3
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014123",
             "player_name": "DOWTIN JR, JEFFREY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ]
@@ -5499,18 +5499,18 @@
     "made3": {
       "label": "Made 3 breakdown",
       "starts": {
-        "Panathinaikos AKTOR Athens": 9,
-        "Maccabi Rapyd Tel Aviv": 7
+        "Panathinaikos Athens": 9,
+        "Maccabi Tel Aviv": 7
       },
       "title": "Zoomed Detail — Made 3",
       "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
       "kpis": [
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "9"
         ],
         [
-          "Maccabi Rapyd Tel Aviv count",
+          "Maccabi Tel Aviv count",
           "7"
         ]
       ],
@@ -5527,50 +5527,50 @@
       "nodes": [
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Made 3",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_start",
-          "name": "Maccabi Rapyd Tel Aviv Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "name": "Maccabi Tel Aviv Made 3",
+          "team": "Maccabi Tel Aviv",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "type"
         },
         {
           "id": "Maccabi_Rapyd_Tel_Aviv_Made_3",
           "name": "Made 3",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "event"
         },
         {
-          "id": "Maccabi Rapyd Tel Aviv_3",
+          "id": "Maccabi Tel Aviv_3",
           "name": "3 pts",
-          "team": "Maccabi Rapyd Tel Aviv",
+          "team": "Maccabi Tel Aviv",
           "stage": "points"
         }
       ],
@@ -5587,7 +5587,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 9
         },
         {
@@ -5602,7 +5602,7 @@
         },
         {
           "source": "Maccabi_Rapyd_Tel_Aviv_Made_3",
-          "target": "Maccabi Rapyd Tel Aviv_3",
+          "target": "Maccabi Tel Aviv_3",
           "value": 7
         }
       ],
@@ -5611,31 +5611,31 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5643,63 +5643,63 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P004088",
             "player_name": "OSMAN, CEDI",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5707,31 +5707,31 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
@@ -5739,63 +5739,63 @@
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ],
-        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Rapyd Tel Aviv_3": [
+        "Maccabi_Rapyd_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
           {
             "player_id": "P011193",
             "player_name": "BLATT, TAMIR",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P013699",
             "player_name": "CLARK III, JIMMY",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 2
           },
           {
             "player_id": "P014127",
             "player_name": "BRISSETT, O'SHAE J",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013289",
             "player_name": "SANTOS, MARCIO",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           },
           {
             "player_id": "P013403",
             "player_name": "WALKER IV, LONNIE",
-            "team": "Maccabi Rapyd Tel Aviv",
+            "team": "Maccabi Tel Aviv",
             "poss": 1
           }
         ]
