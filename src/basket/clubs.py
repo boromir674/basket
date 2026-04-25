@@ -1,8 +1,19 @@
 from __future__ import annotations
 
+import re
+from pathlib import Path
 from typing import Any, Iterable
 
+import yaml
 from attrs import define, field
+
+# YAML source of truth lives next to this module.
+_CLUBS_YAML = Path(__file__).parent / "clubs.yaml"
+
+
+def _slug(name: str) -> str:
+    """Derive a stable ID from a canonical name: lowercase, spaces → dashes."""
+    return re.sub(r"\s+", "-", name.strip().lower())
 
 
 @define(frozen=True, slots=True)
@@ -10,11 +21,16 @@ class BasketballClub:
     """Declarative club entity.
 
     `canonical_name` is the internal stable identifier we want everywhere.
+    `id` is a URL/DB-safe slug derived from canonical_name.
     `aliases` lists known upstream variants (sponsor drift, spelling, legacy).
     """
 
     canonical_name: str
     aliases: tuple[str, ...] = field(factory=tuple, converter=tuple)
+
+    @property
+    def id(self) -> str:
+        return _slug(self.canonical_name)
 
     def all_names(self) -> tuple[str, ...]:
         return (self.canonical_name, *self.aliases)
@@ -92,24 +108,23 @@ def canonicalize_json(obj: Any, *, registry: ClubRegistry) -> Any:
     return obj
 
 
-# Default registry: keep small and explicit (spike/MVP mode).
-DEFAULT_CLUBS: tuple[BasketballClub, ...] = (
-    BasketballClub(
-        canonical_name="Baskonia Vitoria-Gasteiz",
-        aliases=(
-            "Kosner Baskonia Vitoria-Gasteiz",
-        ),
-    ),
-    BasketballClub(
-        # Sponsor drift mid-season; keep internal identity stable.
-        canonical_name="Crvena Zvezda Belgrade",
-        aliases=(
-            "Crvena Zvezda Meridian Belgrade",
-            "Crvena Zvezda Meridianbet Belgrade",
-        ),
-    ),
-)
+def load_clubs_from_yaml(path: Path = _CLUBS_YAML) -> tuple[BasketballClub, ...]:
+    """Load club declarations from the YAML source of truth.
 
+    Each entry's `registered_names_historically` becomes the aliases list.
+    The `name` field is the canonical display name stored in processed JSONs.
+    """
+    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    clubs: list[BasketballClub] = []
+    for entry in raw.get("clubs", []):
+        canonical = str(entry["name"]).strip()
+        aliases = tuple(str(a).strip() for a in entry.get("registered_names_historically") or [])
+        clubs.append(BasketballClub(canonical_name=canonical, aliases=aliases))
+    return tuple(clubs)
+
+
+# Default registry built from YAML source of truth.
+DEFAULT_CLUBS: tuple[BasketballClub, ...] = load_clubs_from_yaml()
 DEFAULT_REGISTRY = ClubRegistry(DEFAULT_CLUBS)
 
 
