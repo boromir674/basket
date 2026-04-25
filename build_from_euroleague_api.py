@@ -35,12 +35,19 @@ def normalize_team_name(raw: Optional[str]) -> str:  # noqa: D401
 def safe_json_get(url: str, params: dict[str, Any]) -> Any:
     r = requests.get(url, params=params, timeout=30)
     r.raise_for_status()
-    return r.json()
+    try:
+        return r.json()
+    except Exception:  # JSONDecodeError — empty body or HTML from API for missing gamecodes
+        return {}
 
 def fetch_sources(seasoncode: str, gamecode: int):
     params = {"seasoncode": seasoncode, "gamecode": gamecode}
     pbp = safe_json_get(f"{BASE}/PlaybyPlay", params)
     pts = safe_json_get(f"{BASE}/Points", params)
+    # Both primary sources empty → this gamecode does not exist in the API (playoff slot
+    # never played, season gap, etc.). Raise so the caller skips it permanently.
+    if not pbp and not pts:
+        raise ValueError("game not available")
     try:
         box = safe_json_get(f"{BASE}/Boxscore", params)
     except Exception:
@@ -58,6 +65,31 @@ def fetch_sources(seasoncode: str, gamecode: int):
         json.dump(box, f, indent=2)
 
     return pbp, pts, box
+
+
+def fetch_season_gamecodes(seasoncode: str, *, start: int = 1, gap_limit: int = 10) -> list[int]:
+    """Discover all valid gamecodes for a season by probing the API.
+
+    Scans gamecodes starting from `start`, stopping after `gap_limit` consecutive
+    missing gamecodes (playoff slots never played, end of season, etc.).
+    Returns the list of gamecodes that have actual data.
+    """
+    valid: list[int] = []
+    consecutive_missing = 0
+    gamecode = start
+    while True:
+        params = {"seasoncode": seasoncode, "gamecode": gamecode}
+        pbp = safe_json_get(f"{BASE}/PlaybyPlay", params)
+        pts = safe_json_get(f"{BASE}/Points", params)
+        if pbp or pts:
+            valid.append(gamecode)
+            consecutive_missing = 0
+        else:
+            consecutive_missing += 1
+            if consecutive_missing >= gap_limit:
+                break
+        gamecode += 1
+    return valid
 
 def extract_pbp_rows(pbp_json: Any) -> list[dict]:
     if isinstance(pbp_json, dict):
@@ -487,7 +519,33 @@ def print_diagnostics(pbp_rows, points_rows, possessions):
     print("---------------------")
 
 
-def extract_game_date(box_json: Any, pbp_json: Any) -> Optional[str]:
+def normalize_game_date(raw: Any) -> Optional[str]:
+    if raw is None:
+        return None
+    text = str(raw).strip()
+    if not text:
+        return None
+
+    compact = "".join(ch for ch in text if ch.isdigit())
+    if len(compact) >= 8:
+        try:
+            parsed = datetime.strptime(compact[:8], "%Y%m%d")
+            return parsed.strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+
+    if len(text) >= 10:
+        prefix = text[:10]
+        try:
+            parsed = datetime.strptime(prefix, "%Y-%m-%d")
+            return parsed.strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+
+    return None
+
+
+def extract_game_date(box_json: Any, pbp_json: Any, points_json: Any = None) -> Optional[str]:
     """Best-effort game date from the raw API payloads.
 
     Returns an ISO-ish string if we find something, otherwise None. This is
@@ -509,7 +567,9 @@ def extract_game_date(box_json: Any, pbp_json: Any) -> Optional[str]:
             None,
         )
         if candidate:
-            return str(candidate)
+            normalized = normalize_game_date(candidate)
+            if normalized:
+                return normalized
 
     if isinstance(pbp_json, dict):
         meta = pbp_json.get("Game") or pbp_json.get("Meta") or {}
@@ -520,7 +580,21 @@ def extract_game_date(box_json: Any, pbp_json: Any) -> Optional[str]:
                 None,
             )
             if candidate:
-                return str(candidate)
+                normalized = normalize_game_date(candidate)
+                if normalized:
+                    return normalized
+
+    points_rows = extract_points_rows(points_json)
+    utc_candidates = []
+    for row in points_rows:
+        if not isinstance(row, dict):
+            continue
+        candidate = first_key(row, ["UTC", "utc", "Utc", "GameUTC", "gameUtc"], None)
+        normalized = normalize_game_date(candidate)
+        if normalized:
+            utc_candidates.append(normalized)
+    if utc_candidates:
+        return min(utc_candidates)
 
     return None
 
@@ -648,7 +722,7 @@ def run_game(seasoncode: str, gamecode: int, output: str = "multi_drilldown_real
     possessions = infer_possessions(pbp_rows)
     print_diagnostics(pbp_rows, points_rows, possessions)
 
-    game_date = extract_game_date(box_json, pbp_json)
+    game_date = extract_game_date(box_json, pbp_json, points_json)
     synced_at = datetime.now(timezone.utc).isoformat()
     players_index = build_players_index(possessions)
     boxscore_players = extract_boxscore_players(box_json)

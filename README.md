@@ -4,6 +4,14 @@ Docker-first Euroleague possession-flow pipeline + static D3 viewer.
 
 This README is onboarding-first: you can come back later and re-onboard quickly.
 
+## Cheatsheet
+
+-> Get a whole season "prepared via latest data model": `make redo-season SEASON="E2025`
+
+-> Normalize external Club names cause they might have variance: `make normalize-all-seasons` or `make normalize-season SEASON=E2025` 
+
+-> Simulate Elo values from start to end of Seasons in DB: `make elo-auto`
+
 ## 1) Project At A Glance
 
 - Pipeline: Python scripts fetch Euroleague API data and build Sankey JSON.
@@ -85,6 +93,12 @@ docker run --rm -v "${PWD}:/app" -w /app euroleague-sankey \
 docker compose run --rm season_sync
 ```
 
+### Sync multiple seasons in one command
+
+```bash
+make sync-seasons SEASONS='E2022 E2023 E2024' START=1 END=380
+```
+
 ### Dry-run season sync
 
 ```bash
@@ -103,6 +117,20 @@ docker run --rm -v "${PWD}:/app" -w /app euroleague-sankey \
 ```bash
 docker compose run --rm tests
 ```
+
+### Recompute multi-season Elo automatically (when stale/missing)
+
+```bash
+make elo-auto DATA_DIR=/app/data
+```
+
+What `make elo-auto` does:
+
+- scans stored files matching `multi_drilldown_real_data_E*_*.json`
+- derives stored seasoncodes from first to last season
+- verifies seasoncodes are consecutive
+- compares against `elo_multiseason.json` coverage
+- recomputes only if missing or stale (or when forced from CLI)
 
 ## 4) Data Flow
 
@@ -175,6 +203,7 @@ Notes:
 | Live Replay Timeline lab | `views.<view>.links`, `views.top.links`, `meta` | `computed` | Simulated 0→40 replay: link reveal schedules + score interpolation from top-view points buckets. |
 | Global player registry (optional utility) | `players` map (`player_id -> {name, team}`) | `processed` | Built from possession-level player attribution gathered from raw PBP rows. |
 | Header ELO badge | `elo_{seasoncode}.json` (`ratings` map), `meta.team_a/team_b` | `computed` | Ratings derived from Boxscore totals; if Boxscore team names are codes, scores are summed via player points mapped through `players`. |
+| Elo showcase timeline | `elo_multiseason.json` (`seasoncodes`, `history[].seasoncode`, `history[].season_label`, `history[].gamedate`, teams/scores/winner) | `computed` | UI enforces consecutive season selection and recomputes ratings in-browser from selected seasons only. Timeline x-axis uses fixture-style buckets (grouped by season + date). |
 
 ## 6.1) ELO Inputs (Why All-1500 Happens)
 
@@ -188,6 +217,51 @@ We now populate scores at build time using this priority:
   to the full team name using `players`.
 
 If both methods fail, the game is marked `outcome_unknown` and ELO will not move.
+
+## 6.2) Multi-Season ELO (Consecutive Seasons)
+
+Recommended flow:
+
+```bash
+make sync-seasons SEASONS='E2022 E2023 E2024' START=1 END=380
+make normalize-season SEASON=E2022
+make normalize-season SEASON=E2023
+make normalize-season SEASON=E2024
+make elo-auto DATA_DIR=/app/data
+```
+
+Manual multi-season build (explicit list):
+
+```bash
+make elo-multi SEASONS_CSV='E2022,E2023,E2024' DATA_DIR=/app/data
+```
+
+Notes:
+
+- The UI prefers `elo_multiseason.json` when available.
+- Season filter selections must remain consecutive (A,B,C allowed; A,B,D blocked).
+- When replaying more than one season, the chart renders vertical divider lines at season boundaries.
+
+## 6.3) Re-seed ELO From A Different Initial Value
+
+When you want to recompute Elo from a different starting value (instead of 1500), use this quick flow:
+
+1. Recompute Elo in the pipeline with an explicit seed via `--initial-rating`.
+
+```bash
+docker compose run --rm ops compute_elo --auto \
+  --output-dir /app/data \
+  --output-name elo_multiseason.json \
+  --initial-rating 1400
+```
+
+2. Update the frontend Elo replay fallback in both showcase pages if you want a matching UI default for payloads that do not provide `initial_rating`.
+  - `public/elo.html` around `buildDerivedTimeline()` (`const v = (elo && typeof elo.initial_rating === 'number') ? elo.initial_rating : 1500;`)
+  - `prod/elo.html` same location and logic
+
+3. Rebuild and verify the result end-to-end.
+  - Run: `make test ARGS="-vvs -ra -k elo"`
+  - Open the Elo page and confirm baseline values reflect your new seed.
 
 ## 7) Current UI Notes (Prototype Behavior)
 
@@ -212,6 +286,8 @@ If both methods fail, the game is marked `outcome_unknown` and ELO will not move
   - links emerge/thicken over time and score grows in sync.
 
 ## 8) Repo Pointers
+
+- `docs/decision_log.md`: tiny decision trail for high-impact changes that are easy to forget on revisit.
 
 - Runtime entrypoint: `entrypoint.py`
 - Pipeline: `build_from_euroleague_api.py`, `pipeline_runner.py`

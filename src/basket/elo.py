@@ -12,11 +12,13 @@ Keep this module as the single source of truth for Elo computations.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any, Iterable, Optional
 
 DEFAULT_K = 32
 DEFAULT_INITIAL = 1500
+SEASONCODE_RE = re.compile(r"^E(\d{4})$")
 
 
 # ---------------------------------------------------------------------------
@@ -60,6 +62,57 @@ def _parse_gamedate(gamedate: Optional[str]) -> str:
     if not gamedate:
         return ""
     return str(gamedate)[:10]
+
+
+def _seasoncode_year(seasoncode: str) -> Optional[int]:
+    """Return the integer start year for seasoncodes like E2025."""
+    m = SEASONCODE_RE.match(str(seasoncode or "").strip())
+    if not m:
+        return None
+    return int(m.group(1))
+
+
+def season_label_from_code(seasoncode: str) -> str:
+    """Format E2025 -> 2025-2026, fallback to the raw seasoncode."""
+    y = _seasoncode_year(seasoncode)
+    if y is None:
+        return str(seasoncode)
+    return f"{y}-{y + 1}"
+
+
+def are_consecutive_seasoncodes(seasoncodes: Iterable[str]) -> bool:
+    """Return True when seasoncodes form a year-by-year consecutive block."""
+    years = [_seasoncode_year(s) for s in seasoncodes]
+    if not years or any(y is None for y in years):
+        return False
+    ys = sorted({int(y) for y in years if y is not None})
+    return all((ys[i + 1] - ys[i]) == 1 for i in range(len(ys) - 1))
+
+
+def discover_stored_seasoncodes(output_dir: Path) -> list[str]:
+    """Discover seasoncodes from stored game bundles in output_dir."""
+
+    return sorted(
+        {
+            str(p.stem.split("_")[4])
+            for p in output_dir.glob("multi_drilldown_real_data_E*_*.json")
+            if len(p.stem.split("_")) >= 6 and _seasoncode_year(p.stem.split("_")[4]) is not None
+        },
+        key=lambda s: _seasoncode_year(s) or 0
+    )
+
+
+def missing_seasoncodes_in_range(seasoncodes: Iterable[str]) -> list[str]:
+    """Return any missing seasoncodes between the first and last year."""
+    years = sorted({_seasoncode_year(s) for s in seasoncodes if _seasoncode_year(s) is not None})
+    if not years:
+        return []
+    missing: list[str] = []
+    for y in range(years[0], years[-1] + 1):
+        code = f"E{y}"
+        if y not in years:
+            missing.append(code)
+    return missing
 
 
 def _outcome_score(
@@ -144,6 +197,8 @@ def compute_elo_from_games(
 
         gamecode = game.get("gamecode")
         gamedate = game.get("gamedate")
+        seasoncode = game.get("seasoncode")
+        season_label = game.get("season_label")
         score_a = game.get("score_a")
         score_b = game.get("score_b")
         winner = game.get("winner")
@@ -153,6 +208,8 @@ def compute_elo_from_games(
                 {
                     "gamecode": gamecode,
                     "gamedate": gamedate,
+                    "seasoncode": seasoncode,
+                    "season_label": season_label,
                     "team_a": team_a,
                     "team_b": team_b,
                     "score_a": score_a,
@@ -175,6 +232,8 @@ def compute_elo_from_games(
             {
                 "gamecode": gamecode,
                 "gamedate": gamedate,
+                "seasoncode": seasoncode,
+                "season_label": season_label,
                 "team_a": team_a,
                 "team_b": team_b,
                 "score_a": score_a,
@@ -257,3 +316,160 @@ def compute_elo_for_season(
     out_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     print(f"Wrote ELO file with {len(history)} games -> {out_path}")
     return payload
+
+
+def _collect_games_for_seasoncodes(output_dir: Path, seasoncodes: Iterable[str]) -> list[dict[str, Any]]:
+    """Load game metadata for one or more seasoncodes from output_dir."""
+    games: list[dict[str, Any]] = []
+    for seasoncode in seasoncodes:
+        pattern = f"multi_drilldown_real_data_{seasoncode}_*.json"
+        for path in output_dir.glob(pattern):
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except Exception:  # noqa: BLE001
+                continue
+            if not isinstance(data, dict):
+                continue
+            meta = data.get("meta", {})
+            if not isinstance(meta, dict):
+                continue
+            try:
+                gamecode = int(meta.get("gamecode", 0))
+            except (ValueError, TypeError):
+                continue
+            games.append(
+                {
+                    "seasoncode": seasoncode,
+                    "season_label": season_label_from_code(seasoncode),
+                    "gamecode": gamecode,
+                    "gamedate": meta.get("gamedate"),
+                    "team_a": meta.get("team_a"),
+                    "team_b": meta.get("team_b"),
+                    "score_a": meta.get("score_a"),
+                    "score_b": meta.get("score_b"),
+                    "winner": meta.get("winner"),
+                }
+            )
+    return games
+
+
+def compute_elo_for_seasoncodes(
+    output_dir: Path,
+    seasoncodes: list[str],
+    *,
+    k_factor: float = DEFAULT_K,
+    initial_rating: float = DEFAULT_INITIAL,
+    output_name: str = "elo_multiseason.json",
+) -> dict[str, Any]:
+    """Compute Elo across a consecutive list of seasoncodes and persist one payload."""
+    if not seasoncodes:
+        raise ValueError("seasoncodes must not be empty")
+
+    uniq_sorted = sorted(set(seasoncodes), key=lambda s: _seasoncode_year(s) or 0)
+    if not are_consecutive_seasoncodes(uniq_sorted):
+        missing = missing_seasoncodes_in_range(uniq_sorted)
+        msg = "seasoncodes must be consecutive"
+        if missing:
+            msg += f" (missing: {', '.join(missing)})"
+        raise ValueError(msg)
+
+    games = _collect_games_for_seasoncodes(output_dir, uniq_sorted)
+    games.sort(
+        key=lambda g: (
+            _seasoncode_year(str(g.get("seasoncode") or "")) or 0,
+            _parse_gamedate(g.get("gamedate")),
+            int(g.get("gamecode") or 0),
+        )
+    )
+
+    ratings, history = compute_elo_from_games(
+        games,
+        k_factor=k_factor,
+        initial_rating=initial_rating,
+        sort_games=False,
+    )
+
+    payload: dict[str, Any] = {
+        "mode": "multi_season",
+        "seasoncodes": uniq_sorted,
+        "season_labels": [season_label_from_code(s) for s in uniq_sorted],
+        "k_factor": k_factor,
+        "initial_rating": initial_rating,
+        "ratings": ratings,
+        "history": history,
+    }
+
+    out_path = output_dir / output_name
+    out_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    print(f"Wrote multi-season ELO with {len(history)} games -> {out_path}")
+    return payload
+
+
+def should_recompute_multiseason_elo(
+    output_dir: Path,
+    *,
+    output_name: str = "elo_multiseason.json",
+) -> tuple[bool, list[str], str]:
+    """Check whether stored seasons and existing ELO payload are aligned.
+
+    Returns:
+      (should_recompute, discovered_seasoncodes, reason)
+    """
+    seasons = discover_stored_seasoncodes(output_dir)
+    if not seasons:
+        return False, [], "no stored seasons found"
+
+    if not are_consecutive_seasoncodes(seasons):
+        missing = missing_seasoncodes_in_range(seasons)
+        if missing:
+            return False, seasons, f"stored seasons are not consecutive (missing: {', '.join(missing)})"
+        return False, seasons, "stored seasons are not consecutive"
+
+    elo_path = output_dir / output_name
+    if not elo_path.exists():
+        return True, seasons, f"missing {output_name}"
+
+    try:
+        payload = json.loads(elo_path.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return True, seasons, f"{output_name} is invalid JSON"
+
+    current = payload.get("seasoncodes")
+    if not isinstance(current, list):
+        return True, seasons, f"{output_name} missing seasoncodes"
+
+    current_norm = sorted({str(s) for s in current}, key=lambda s: _seasoncode_year(s) or 0)
+    if current_norm != seasons:
+        return True, seasons, "seasoncodes mismatch with stored data"
+
+    return False, seasons, "up-to-date"
+
+
+def recompute_multiseason_elo_if_needed(
+    output_dir: Path,
+    *,
+    k_factor: float = DEFAULT_K,
+    initial_rating: float = DEFAULT_INITIAL,
+    force: bool = False,
+    output_name: str = "elo_multiseason.json",
+) -> tuple[bool, dict[str, Any] | None, str]:
+    """Recompute multi-season Elo when coverage is stale/missing.
+
+    Returns:
+      (recomputed, payload_or_none, reason)
+    """
+    should, seasons, reason = should_recompute_multiseason_elo(output_dir, output_name=output_name)
+    if not seasons:
+        return False, None, reason
+
+    if (not should) and (not force):
+        return False, None, reason
+
+    payload = compute_elo_for_seasoncodes(
+        output_dir=output_dir,
+        seasoncodes=seasons,
+        k_factor=k_factor,
+        initial_rating=initial_rating,
+        output_name=output_name,
+    )
+    return True, payload, "recomputed"

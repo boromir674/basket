@@ -42,7 +42,13 @@ import argparse
 import os
 from pathlib import Path
 
-from basket.elo import DEFAULT_INITIAL, DEFAULT_K, compute_elo_for_season
+from basket.elo import (
+    DEFAULT_INITIAL,
+    DEFAULT_K,
+    compute_elo_for_season,
+    compute_elo_for_seasoncodes,
+    recompute_multiseason_elo_if_needed,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -53,7 +59,12 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Compute ELO ratings for a Euroleague season."
     )
-    parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2024")
+    parser.add_argument("--seasoncode", required=False, help="Season code, e.g. E2024")
+    parser.add_argument(
+        "--seasoncodes",
+        default="",
+        help="Comma-separated seasoncodes for multi-season Elo (example: E2022,E2023,E2024)",
+    )
     parser.add_argument(
         "--output-dir",
         default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
@@ -71,11 +82,55 @@ def main(argv: list[str] | None = None) -> int:
         default=DEFAULT_INITIAL,
         help=f"Starting ELO for teams with no history (default: {DEFAULT_INITIAL})",
     )
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="Auto-discover stored seasons and recompute elo_multiseason.json only when stale/missing",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force recomputation in --auto mode even when elo_multiseason.json looks up-to-date",
+    )
+    parser.add_argument(
+        "--output-name",
+        default="elo_multiseason.json",
+        help="Output filename used for multi-season payloads (default: elo_multiseason.json)",
+    )
     args = parser.parse_args(argv)
 
     output_dir = Path(args.output_dir).resolve()
     if not output_dir.exists():
         print(f"Output directory does not exist: {output_dir}")
+        return 1
+
+    if args.auto:
+        recomputed, _payload, reason = recompute_multiseason_elo_if_needed(
+            output_dir=output_dir,
+            k_factor=args.k_factor,
+            initial_rating=args.initial_rating,
+            force=args.force,
+            output_name=args.output_name,
+        )
+        if recomputed:
+            print(f"Auto recompute complete ({args.output_name})")
+        else:
+            print(f"Auto recompute skipped: {reason}")
+        return 0
+
+    seasoncodes = [s.strip() for s in str(args.seasoncodes).split(",") if s.strip()]
+    if seasoncodes:
+        compute_elo_for_seasoncodes(
+            output_dir=output_dir,
+            seasoncodes=seasoncodes,
+            k_factor=args.k_factor,
+            initial_rating=args.initial_rating,
+            output_name=args.output_name,
+        )
+        return 0
+
+    if not args.seasoncode:
+        print("--seasoncode is required unless --seasoncodes or --auto is provided")
         return 1
 
     compute_elo_for_season(

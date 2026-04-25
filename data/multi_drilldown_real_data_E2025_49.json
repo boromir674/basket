@@ -3,11 +3,11 @@
     "seasoncode": "E2025",
     "gamecode": 49,
     "team_a": "Virtus Bologna",
-    "team_b": "LDLC ASVEL Villeurbanne",
+    "team_b": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
     "score_a": 90,
     "score_b": 83,
     "winner": "Virtus Bologna",
-    "gamedate": null,
+    "gamedate": "2025-10-17",
     "synced_at": "2026-04-18T23:15:41.855381+00:00",
     "source_endpoints": [
       "PlaybyPlay",
@@ -22,7 +22,7 @@
     },
     "P000229": {
       "name": "JACKSON, EDWIN",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P011051": {
       "name": "SMAILAGIC, ALEN",
@@ -30,7 +30,7 @@
     },
     "P014013": {
       "name": "WATSON, GLYNN",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P014004": {
       "name": "TAYLOR, BRANDON",
@@ -38,7 +38,7 @@
     },
     "P012618": {
       "name": "MASSA, BODIAN",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P005422": {
       "name": "JALLOW, KARIM",
@@ -46,7 +46,7 @@
     },
     "P014088": {
       "name": "SELJAAS, ZACHARY",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P014005": {
       "name": "ALSTON JR. , DERRICK",
@@ -54,23 +54,23 @@
     },
     "P010316": {
       "name": "AJINCA, MELVIN",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P012731": {
       "name": "NDIAYE, MBAYE",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P002100": {
       "name": "DE COLO, NANDO",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P003526": {
       "name": "LIGHTY, DAVID",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P014014": {
       "name": "VAUTIER, BASTIEN",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P012687": {
       "name": "NIANG, SALIOU",
@@ -78,7 +78,7 @@
     },
     "P009556": {
       "name": "NGOUAMA, MEHDY",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P001844": {
       "name": "HACKETT, DANIEL",
@@ -90,7 +90,7 @@
     },
     "P010319": {
       "name": "TRAORE, ARMEL",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P013374": {
       "name": "DIOUF, MOUHAMET",
@@ -102,7 +102,7 @@
     },
     "P012268": {
       "name": "ATAMNA, ADAM",
-      "team": "LDLC ASVEL Villeurbanne"
+      "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne"
     },
     "P007947": {
       "name": "VILDOZA, LUCA",
@@ -405,14 +405,14 @@
   ],
   "colors": {
     "Virtus Bologna": "#d62839",
-    "LDLC ASVEL Villeurbanne": "#3a86ff"
+    "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": "#3a86ff"
   },
   "views": {
     "top": {
       "label": "Top-level",
       "starts": {
         "Virtus Bologna": 86,
-        "LDLC ASVEL Villeurbanne": 85
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": 85
       },
       "title": "Context",
       "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
@@ -422,7 +422,7 @@
           "86"
         ],
         [
-          "LDLC ASVEL Villeurbanne starts",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne starts",
           "85"
         ],
         [
@@ -434,11 +434,11 @@
           "13%"
         ],
         [
-          "LDLC ASVEL Villeurbanne points per poss.",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne points per poss.",
           "0.98"
         ],
         [
-          "LDLC ASVEL Villeurbanne Made 3 share",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Made 3 share",
           "8%"
         ]
       ],
@@ -446,7 +446,7 @@
         "Possession types are inferred, not native API fields.",
         "This JSON is suitable both for Sankey rendering and later metrics expansion.",
         "Virtus Bologna generated 1.05 points per possession over 86 tracked possessions.",
-        "LDLC ASVEL Villeurbanne generated 0.98 points per possession over 85 tracked possessions."
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne generated 0.98 points per possession over 85 tracked possessions."
       ],
       "columns": [
         "Start",
@@ -534,81 +534,81 @@
           "stage": "points"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_start",
-          "name": "LDLC ASVEL Villeurbanne Start",
-          "team": "LDLC ASVEL Villeurbanne",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Start",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Half-court",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
           "name": "Half-court",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_After_OREB",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
           "name": "After OREB",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_0",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "name": "0 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_1",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "name": "1 pt",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "name": "2 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "name": "3 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         }
       ],
@@ -629,18 +629,18 @@
           "value": 18
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
           "value": 20
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 7
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_2",
-          "target": "LDLC ASVEL Villeurbanne_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 21
         },
         {
@@ -654,13 +654,13 @@
           "value": 11
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Half-court",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
           "value": 54
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 12
         },
         {
@@ -689,13 +689,13 @@
           "value": 22
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 10
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Missed_shot",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 19
         },
         {
@@ -719,18 +719,18 @@
           "value": 4
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_After_OREB",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
           "value": 11
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_3",
-          "target": "LDLC ASVEL Villeurbanne_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 7
         },
         {
@@ -744,23 +744,23 @@
           "value": 13
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 12
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Turnover",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 16
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 17
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_1",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 20
         },
         {
@@ -774,8 +774,8 @@
           "value": 12
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 3
         },
         {
@@ -784,23 +784,23 @@
           "value": 6
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 5
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 4
         },
         {
@@ -809,8 +809,8 @@
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 1
         },
         {
@@ -819,13 +819,13 @@
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 4
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 2
         },
         {
@@ -834,8 +834,8 @@
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 1
         },
         {
@@ -844,8 +844,8 @@
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 1
         },
         {
@@ -999,141 +999,141 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Transition_Fast_break": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break": [
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Transition_Fast_break->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -1189,109 +1189,109 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Half-court": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 13
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 7
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 7
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Half-court->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -1515,97 +1515,97 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Half-court->LDLC_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -1737,111 +1737,111 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_After_OREB": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
-            "player_id": "unknown::LDLC ASVEL Villeurbanne",
+            "player_id": "unknown::LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "player_name": "Unknown",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_OREB->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -1903,185 +1903,185 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Half-court->LDLC_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
-            "player_id": "unknown::LDLC ASVEL Villeurbanne",
+            "player_id": "unknown::LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "player_name": "Unknown",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Half-court->LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 6
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           }
         ],
@@ -2143,17 +2143,17 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Transition_Fast_break->LDLC_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -2183,83 +2183,83 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Half-court->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_OREB->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Transition_Fast_break->LDLC_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_OREB->LDLC_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -2277,11 +2277,11 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Transition_Fast_break->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -2299,37 +2299,37 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Transition_Fast_break->LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -2347,11 +2347,11 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_OREB->LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -2363,11 +2363,11 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_OREB->LDLC_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
-            "player_id": "unknown::LDLC ASVEL Villeurbanne",
+            "player_id": "unknown::LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "player_name": "Unknown",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -2391,7 +2391,7 @@
       "label": "Half-court breakdown",
       "starts": {
         "Virtus Bologna": 53,
-        "LDLC ASVEL Villeurbanne": 54
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": 54
       },
       "title": "Zoomed Detail — Half-court",
       "desc": "Half-court offense broken into inferred action families.",
@@ -2401,7 +2401,7 @@
           "53"
         ],
         [
-          "LDLC ASVEL Villeurbanne count",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne count",
           "54"
         ]
       ],
@@ -2423,9 +2423,9 @@
           "stage": "start"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_start",
-          "name": "LDLC ASVEL Villeurbanne Half-court",
-          "team": "LDLC ASVEL Villeurbanne",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Half-court",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
@@ -2495,69 +2495,69 @@
           "stage": "points"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_PnR_handler_action",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Spot-up_swing",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_0",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "name": "0 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_1",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "name": "1 pt",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "name": "2 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "name": "3 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         }
       ],
@@ -2593,18 +2593,18 @@
           "value": 6
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_PnR_handler_action",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
           "value": 51
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 12
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_2",
-          "target": "LDLC ASVEL Villeurbanne_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 12
         },
         {
@@ -2618,13 +2618,13 @@
           "value": 14
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 10
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Missed_shot",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 10
         },
         {
@@ -2638,23 +2638,23 @@
           "value": 10
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 12
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Turnover",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 12
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 17
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_1",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 16
         },
         {
@@ -2668,23 +2668,23 @@
           "value": 12
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Spot-up_swing",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Spot-up_swing",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_3",
-          "target": "LDLC ASVEL Villeurbanne_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 1
         },
         {
@@ -2886,147 +2886,147 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_PnR_handler_action": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 12
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 7
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 6
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_PnR_handler_action->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -3094,79 +3094,79 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_PnR_handler_action->LDLC_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -3228,167 +3228,167 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_PnR_handler_action->LDLC_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012268",
             "player_name": "ATAMNA, ADAM",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_PnR_handler_action->LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P014014",
             "player_name": "VAUTIER, BASTIEN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -3480,71 +3480,71 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Spot-up_swing": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Spot-up_swing->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -3568,7 +3568,7 @@
       "label": "Transition breakdown",
       "starts": {
         "Virtus Bologna": 22,
-        "LDLC ASVEL Villeurbanne": 20
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": 20
       },
       "title": "Zoomed Detail — Transition / Fast break",
       "desc": "Transition possessions split by inferred origin.",
@@ -3578,7 +3578,7 @@
           "22"
         ],
         [
-          "LDLC ASVEL Villeurbanne count",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne count",
           "20"
         ]
       ],
@@ -3600,9 +3600,9 @@
           "stage": "start"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_start",
-          "name": "LDLC ASVEL Villeurbanne Transition",
-          "team": "LDLC ASVEL Villeurbanne",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Transition",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
@@ -3666,80 +3666,80 @@
           "stage": "points"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_0",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "name": "0 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_1",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "name": "1 pt",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "name": "2 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "name": "3 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         }
       ],
       "links": [
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
           "value": 20
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 7
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_2",
-          "target": "LDLC ASVEL Villeurbanne_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 7
         },
         {
@@ -3768,13 +3768,13 @@
           "value": 5
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Turnover",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 3
         },
         {
@@ -3788,13 +3788,13 @@
           "value": 6
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 5
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Missed_shot",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 5
         },
         {
@@ -3808,28 +3808,28 @@
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_3",
-          "target": "LDLC ASVEL Villeurbanne_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 4
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_1",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 3
         },
         {
@@ -3844,123 +3844,123 @@
         }
       ],
       "player_flows": {
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_After_defensive_rebound": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound": [
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_defensive_rebound->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -4124,31 +4124,31 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_defensive_rebound->LDLC_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -4204,67 +4204,67 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_defensive_rebound->LDLC_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -4296,67 +4296,67 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_defensive_rebound->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_After_defensive_rebound->LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -4394,7 +4394,7 @@
       "label": "After OREB breakdown",
       "starts": {
         "Virtus Bologna": 11,
-        "LDLC ASVEL Villeurbanne": 11
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": 11
       },
       "title": "Zoomed Detail — After OREB",
       "desc": "Second-chance possessions decomposed by inferred continuation type.",
@@ -4404,7 +4404,7 @@
           "11"
         ],
         [
-          "LDLC ASVEL Villeurbanne count",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne count",
           "11"
         ]
       ],
@@ -4426,9 +4426,9 @@
           "stage": "start"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_start",
-          "name": "LDLC ASVEL Villeurbanne After OREB",
-          "team": "LDLC ASVEL Villeurbanne",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne After OREB",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
@@ -4504,75 +4504,75 @@
           "stage": "points"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Immediate_putback",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
           "name": "Immediate putback",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Kick-out_perimeter",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
           "name": "Kick-out perimeter",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Reset_half-court",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
           "name": "Reset half-court",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_0",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "name": "0 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_1",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "name": "1 pt",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "name": "2 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "name": "3 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         }
       ],
@@ -4603,18 +4603,18 @@
           "value": 4
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Kick-out_perimeter",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Kick-out_perimeter",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 3
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_3",
-          "target": "LDLC ASVEL Villeurbanne_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 3
         },
         {
@@ -4633,33 +4633,33 @@
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Immediate_putback",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Immediate_putback",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_2",
-          "target": "LDLC ASVEL Villeurbanne_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Reset_half-court",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
           "value": 6
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Reset_half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 4
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Missed_shot",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 4
         },
         {
@@ -4678,13 +4678,13 @@
           "value": 2
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Reset_half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs",
-          "target": "LDLC ASVEL Villeurbanne_1",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 1
         },
         {
@@ -4698,13 +4698,13 @@
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Reset_half-court",
-          "target": "LDLC_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 1
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Turnover",
-          "target": "LDLC ASVEL Villeurbanne_0",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 1
         }
       ],
@@ -4833,63 +4833,63 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Kick-out_perimeter": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Kick-out_perimeter->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -4935,99 +4935,99 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Immediate_putback": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Immediate_putback->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Reset_half-court": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
-            "player_id": "unknown::LDLC ASVEL Villeurbanne",
+            "player_id": "unknown::LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "player_name": "Unknown",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Reset_half-court->LDLC_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -5073,19 +5073,19 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Reset_half-court->LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -5105,19 +5105,19 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Reset_half-court->LDLC_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
-            "player_id": "unknown::LDLC ASVEL Villeurbanne",
+            "player_id": "unknown::LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "player_name": "Unknown",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
-            "player_id": "unknown::LDLC ASVEL Villeurbanne",
+            "player_id": "unknown::LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "player_name": "Unknown",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ]
@@ -5127,7 +5127,7 @@
       "label": "Made 2 breakdown",
       "starts": {
         "Virtus Bologna": 22,
-        "LDLC ASVEL Villeurbanne": 21
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": 21
       },
       "title": "Zoomed Detail — Made 2",
       "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
@@ -5137,7 +5137,7 @@
           "22"
         ],
         [
-          "LDLC ASVEL Villeurbanne count",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne count",
           "21"
         ]
       ],
@@ -5159,9 +5159,9 @@
           "stage": "start"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_start",
-          "name": "LDLC ASVEL Villeurbanne Made 2",
-          "team": "LDLC ASVEL Villeurbanne",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Made 2",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
@@ -5183,38 +5183,38 @@
           "stage": "points"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Layup_runner",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
           "name": "Layup / runner",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "name": "2 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         }
       ],
       "links": [
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Layup_runner",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
           "value": 21
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Layup_runner",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 21
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_2",
-          "target": "LDLC ASVEL Villeurbanne_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 21
         },
         {
@@ -5234,153 +5234,153 @@
         }
       ],
       "player_flows": {
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Layup_runner": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Layup_runner->LDLC_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 5
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 4
           },
           {
             "player_id": "P000229",
             "player_name": "JACKSON, EDWIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010319",
             "player_name": "TRAORE, ARMEL",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P002100",
             "player_name": "DE COLO, NANDO",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P012618",
             "player_name": "MASSA, BODIAN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 2
           },
           {
             "player_id": "P003526",
             "player_name": "LIGHTY, DAVID",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
@@ -5558,7 +5558,7 @@
       "label": "Made 3 breakdown",
       "starts": {
         "Virtus Bologna": 11,
-        "LDLC ASVEL Villeurbanne": 7
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne": 7
       },
       "title": "Zoomed Detail — Made 3",
       "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
@@ -5568,7 +5568,7 @@
           "11"
         ],
         [
-          "LDLC ASVEL Villeurbanne count",
+          "LDLC ASVEL Villeurbanne ASVEL Villeurbanne count",
           "7"
         ]
       ],
@@ -5590,9 +5590,9 @@
           "stage": "start"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_start",
-          "name": "LDLC ASVEL Villeurbanne Made 3",
-          "team": "LDLC ASVEL Villeurbanne",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Made 3",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
@@ -5614,21 +5614,21 @@
           "stage": "points"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Above-the-break_C&S",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "name": "3 pts",
-          "team": "LDLC ASVEL Villeurbanne",
+          "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "points"
         }
       ],
@@ -5649,18 +5649,18 @@
           "value": 11
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_start",
-          "target": "LDLC_ASVEL_Villeurbanne_Above-the-break_C&S",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
           "value": 7
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Above-the-break_C&S",
-          "target": "LDLC_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 7
         },
         {
-          "source": "LDLC_ASVEL_Villeurbanne_Made_3",
-          "target": "LDLC ASVEL Villeurbanne_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 7
         }
       ],
@@ -5743,99 +5743,99 @@
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_start->LDLC_ASVEL_Villeurbanne_Above-the-break_C&S": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Above-the-break_C&S->LDLC_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ],
-        "LDLC_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P014013",
             "player_name": "WATSON, GLYNN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 3
           },
           {
             "player_id": "P010316",
             "player_name": "AJINCA, MELVIN",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P012731",
             "player_name": "NDIAYE, MBAYE",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P009556",
             "player_name": "NGOUAMA, MEHDY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           },
           {
             "player_id": "P014088",
             "player_name": "SELJAAS, ZACHARY",
-            "team": "LDLC ASVEL Villeurbanne",
+            "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
             "poss": 1
           }
         ]

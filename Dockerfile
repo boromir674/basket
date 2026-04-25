@@ -8,7 +8,7 @@ WORKDIR /app
 ENV PYTHONPATH=/app/src
 
 # Install minimal runtime dependencies for the spike.
-RUN pip install --no-cache-dir requests attrs
+RUN pip install --no-cache-dir requests attrs pyyaml
 
 # Copy pipeline and helper scripts once into the base image.
 COPY build_from_euroleague_api.py pipeline_runner.py validate_output.py entrypoint.py season_sync.py season_ops.py regression_tests.py elo.py ./

@@ -3,11 +3,11 @@
     "seasoncode": "E2025",
     "gamecode": 123,
     "team_a": "Partizan Mozzart Bet Belgrade",
-    "team_b": "Panathinaikos AKTOR Athens",
+    "team_b": "Panathinaikos Athens",
     "score_a": 69,
     "score_b": 91,
-    "winner": "Panathinaikos AKTOR Athens",
-    "gamedate": null,
+    "winner": "Panathinaikos Athens",
+    "gamedate": "2025-11-25",
     "synced_at": "2026-04-18T23:16:24.772899+00:00",
     "source_endpoints": [
       "PlaybyPlay",
@@ -22,7 +22,7 @@
     },
     "P012712": {
       "name": "HERNANGOMEZ, JUANCHO",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P004761": {
       "name": "MARINKOVIC, VANJA",
@@ -30,7 +30,7 @@
     },
     "P012774": {
       "name": "NUNN, KENDRICK",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P013667": {
       "name": "FERNANDO, BRUNO",
@@ -38,7 +38,7 @@
     },
     "P011204": {
       "name": "GRANT, JERIAN",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P008232": {
       "name": "POKUSEVSKI, ALEKSEJ",
@@ -46,7 +46,7 @@
     },
     "P012608": {
       "name": "SHORTS, TJ",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P014007": {
       "name": "MILTON, SHAKE",
@@ -54,11 +54,11 @@
     },
     "P011284": {
       "name": "FARIED, KENNETH",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P007866": {
       "name": "MITOGLOU, KONSTANTINOS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P012745": {
       "name": "PARKER, JABARI",
@@ -66,7 +66,7 @@
     },
     "P011085": {
       "name": "ROGKAVOPOULOS, NIKOLAOS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P013370": {
       "name": "WASHINGTON, DUANE",
@@ -78,11 +78,11 @@
     },
     "P001926": {
       "name": "SLOUKAS, KOSTAS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P011442": {
       "name": "SAMODUROV, ALEXANDROS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P006760": {
       "name": "BONGA, ISAAC",
@@ -94,7 +94,7 @@
     },
     "P011209": {
       "name": "KALAITZAKIS, PANAGIOTIS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P010581": {
       "name": "OSETKOWSKI, DYLAN",
@@ -102,11 +102,11 @@
     },
     "P004451": {
       "name": "KOUZELOGLOU, IOANNIS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     },
     "P002328": {
       "name": "GRIGONIS, MARIUS",
-      "team": "Panathinaikos AKTOR Athens"
+      "team": "Panathinaikos Athens"
     }
   },
   "boxscore_players": [
@@ -401,14 +401,14 @@
   ],
   "colors": {
     "Partizan Mozzart Bet Belgrade": "#d62839",
-    "Panathinaikos AKTOR Athens": "#3a86ff"
+    "Panathinaikos Athens": "#3a86ff"
   },
   "views": {
     "top": {
       "label": "Top-level",
       "starts": {
         "Partizan Mozzart Bet Belgrade": 81,
-        "Panathinaikos AKTOR Athens": 90
+        "Panathinaikos Athens": 90
       },
       "title": "Context",
       "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
@@ -418,7 +418,7 @@
           "81"
         ],
         [
-          "Panathinaikos AKTOR Athens starts",
+          "Panathinaikos Athens starts",
           "90"
         ],
         [
@@ -430,11 +430,11 @@
           "5%"
         ],
         [
-          "Panathinaikos AKTOR Athens points per poss.",
+          "Panathinaikos Athens points per poss.",
           "1.01"
         ],
         [
-          "Panathinaikos AKTOR Athens Made 3 share",
+          "Panathinaikos Athens Made 3 share",
           "8%"
         ]
       ],
@@ -442,7 +442,7 @@
         "Possession types are inferred, not native API fields.",
         "This JSON is suitable both for Sankey rendering and later metrics expansion.",
         "Partizan Mozzart Bet Belgrade generated 0.85 points per possession over 81 tracked possessions.",
-        "Panathinaikos AKTOR Athens generated 1.01 points per possession over 90 tracked possessions."
+        "Panathinaikos Athens generated 1.01 points per possession over 90 tracked possessions."
       ],
       "columns": [
         "Start",
@@ -531,80 +531,80 @@
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Start",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Start",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Half-court",
           "name": "Half-court",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Transition_Fast_break",
           "name": "Transition / Fast break",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_After_OREB",
           "name": "After OREB",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         }
       ],
@@ -636,7 +636,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 27
         },
         {
@@ -661,7 +661,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 16
         },
         {
@@ -696,7 +696,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 18
         },
         {
@@ -736,7 +736,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 14
         },
         {
@@ -756,7 +756,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 7
         },
         {
@@ -811,7 +811,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 8
         },
         {
@@ -936,37 +936,37 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -974,87 +974,87 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1168,79 +1168,79 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 12
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 7
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P002328",
             "player_name": "GRIGONIS, MARIUS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004451",
             "player_name": "KOUZELOGLOU, IOANNIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1248,81 +1248,81 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 9
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1330,37 +1330,37 @@
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1492,55 +1492,55 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 11
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1548,25 +1548,25 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1574,75 +1574,75 @@
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P002328",
             "player_name": "GRIGONIS, MARIUS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1774,49 +1774,49 @@
           {
             "player_id": "P002328",
             "player_name": "GRIGONIS, MARIUS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -1860,81 +1860,81 @@
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004451",
             "player_name": "KOUZELOGLOU, IOANNIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004451",
             "player_name": "KOUZELOGLOU, IOANNIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2030,45 +2030,45 @@
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2144,31 +2144,31 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2176,25 +2176,25 @@
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2246,31 +2246,31 @@
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2286,59 +2286,59 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
         "Panathinaikos_AKTOR_Athens_After_OREB->Panathinaikos_AKTOR_Athens_Turnover": [
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           }
         ],
@@ -2372,7 +2372,7 @@
       "label": "Half-court breakdown",
       "starts": {
         "Partizan Mozzart Bet Belgrade": 53,
-        "Panathinaikos AKTOR Athens": 48
+        "Panathinaikos Athens": 48
       },
       "title": "Zoomed Detail — Half-court",
       "desc": "Half-court offense broken into inferred action families.",
@@ -2382,7 +2382,7 @@
           "53"
         ],
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "48"
         ]
       ],
@@ -2405,8 +2405,8 @@
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Half-court",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Half-court",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
@@ -2478,67 +2478,67 @@
         {
           "id": "Panathinaikos_AKTOR_Athens_PnR_handler_action",
           "name": "PnR / handler action",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Spot-up_swing",
           "name": "Spot-up / swing",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         }
       ],
@@ -2570,7 +2570,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 11
         },
         {
@@ -2580,7 +2580,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 12
         },
         {
@@ -2600,7 +2600,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 10
         },
         {
@@ -2625,7 +2625,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 8
         },
         {
@@ -2650,7 +2650,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 2
         },
         {
@@ -2665,7 +2665,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 5
         },
         {
@@ -2829,79 +2829,79 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 11
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 7
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P002328",
             "player_name": "GRIGONIS, MARIUS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P004451",
             "player_name": "KOUZELOGLOU, IOANNIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2909,81 +2909,81 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 8
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 7
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -2991,75 +2991,75 @@
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3179,99 +3179,99 @@
           {
             "player_id": "P002328",
             "player_name": "GRIGONIS, MARIUS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P002328",
             "player_name": "GRIGONIS, MARIUS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3321,63 +3321,63 @@
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004451",
             "player_name": "KOUZELOGLOU, IOANNIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P004451",
             "player_name": "KOUZELOGLOU, IOANNIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3473,13 +3473,13 @@
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3487,27 +3487,27 @@
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3551,29 +3551,29 @@
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3591,7 +3591,7 @@
       "label": "Transition breakdown",
       "starts": {
         "Partizan Mozzart Bet Belgrade": 24,
-        "Panathinaikos AKTOR Athens": 31
+        "Panathinaikos Athens": 31
       },
       "title": "Zoomed Detail — Transition / Fast break",
       "desc": "Transition possessions split by inferred origin.",
@@ -3601,7 +3601,7 @@
           "24"
         ],
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "31"
         ]
       ],
@@ -3624,8 +3624,8 @@
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Transition",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Transition",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
@@ -3691,61 +3691,61 @@
         {
           "id": "Panathinaikos_AKTOR_Athens_After_defensive_rebound",
           "name": "After defensive rebound",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         }
       ],
@@ -3762,7 +3762,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 9
         },
         {
@@ -3807,7 +3807,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_1",
+          "target": "Panathinaikos Athens_1",
           "value": 5
         },
         {
@@ -3817,7 +3817,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 4
         },
         {
@@ -3837,7 +3837,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 5
         },
         {
@@ -3847,12 +3847,12 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 5
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 3
         },
         {
@@ -3871,55 +3871,55 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 11
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -3927,51 +3927,51 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4203,57 +4203,57 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_1": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4261,51 +4261,51 @@
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4401,63 +4401,63 @@
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4465,65 +4465,65 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011209",
             "player_name": "KALAITZAKIS, PANAGIOTIS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4549,7 +4549,7 @@
       "label": "After OREB breakdown",
       "starts": {
         "Partizan Mozzart Bet Belgrade": 4,
-        "Panathinaikos AKTOR Athens": 11
+        "Panathinaikos Athens": 11
       },
       "title": "Zoomed Detail — After OREB",
       "desc": "Second-chance possessions decomposed by inferred continuation type.",
@@ -4559,7 +4559,7 @@
           "4"
         ],
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "11"
         ]
       ],
@@ -4582,8 +4582,8 @@
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens After OREB",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens After OREB",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
@@ -4643,55 +4643,55 @@
         {
           "id": "Panathinaikos_AKTOR_Athens_Immediate_putback",
           "name": "Immediate putback",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Reset_half-court",
           "name": "Reset half-court",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Missed_shot",
           "name": "Missed shot",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Turnover",
           "name": "Turnover",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_0",
+          "id": "Panathinaikos Athens_0",
           "name": "0 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_1",
+          "id": "Panathinaikos Athens_1",
           "name": "1 pt",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         }
       ],
@@ -4723,7 +4723,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 6
         },
         {
@@ -4738,7 +4738,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Missed_shot",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 3
         },
         {
@@ -4773,7 +4773,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Turnover",
-          "target": "Panathinaikos AKTOR Athens_0",
+          "target": "Panathinaikos Athens_0",
           "value": 2
         },
         {
@@ -4816,31 +4816,31 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4848,63 +4848,63 @@
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4912,19 +4912,19 @@
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -4932,27 +4932,27 @@
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Missed_shot->Panathinaikos Athens_0": [
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5010,17 +5010,17 @@
         ],
         "Panathinaikos_AKTOR_Athens_Reset_half-court->Panathinaikos_AKTOR_Athens_Turnover": [
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos AKTOR Athens_0": [
+        "Panathinaikos_AKTOR_Athens_Turnover->Panathinaikos Athens_0": [
           {
-            "player_id": "unknown::Panathinaikos AKTOR Athens",
+            "player_id": "unknown::Panathinaikos Athens",
             "player_name": "Unknown",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           }
         ],
@@ -5046,7 +5046,7 @@
       "label": "Made 2 breakdown",
       "starts": {
         "Partizan Mozzart Bet Belgrade": 21,
-        "Panathinaikos AKTOR Athens": 27
+        "Panathinaikos Athens": 27
       },
       "title": "Zoomed Detail — Made 2",
       "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
@@ -5056,7 +5056,7 @@
           "21"
         ],
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "27"
         ]
       ],
@@ -5079,8 +5079,8 @@
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Made 2",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
@@ -5104,19 +5104,19 @@
         {
           "id": "Panathinaikos_AKTOR_Athens_Layup_runner",
           "name": "Layup / runner",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_2",
           "name": "Made 2",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_2",
+          "id": "Panathinaikos Athens_2",
           "name": "2 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         }
       ],
@@ -5148,7 +5148,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_2",
-          "target": "Panathinaikos AKTOR Athens_2",
+          "target": "Panathinaikos Athens_2",
           "value": 27
         }
       ],
@@ -5343,55 +5343,55 @@
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5399,111 +5399,111 @@
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos AKTOR Athens_2": [
+        "Panathinaikos_AKTOR_Athens_Made_2->Panathinaikos Athens_2": [
           {
             "player_id": "P011284",
             "player_name": "FARIED, KENNETH",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 6
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 5
           },
           {
             "player_id": "P011204",
             "player_name": "GRANT, JERIAN",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 4
           },
           {
             "player_id": "P012712",
             "player_name": "HERNANGOMEZ, JUANCHO",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 2
           },
           {
             "player_id": "P011442",
             "player_name": "SAMODUROV, ALEXANDROS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ]
@@ -5513,7 +5513,7 @@
       "label": "Made 3 breakdown",
       "starts": {
         "Partizan Mozzart Bet Belgrade": 4,
-        "Panathinaikos AKTOR Athens": 7
+        "Panathinaikos Athens": 7
       },
       "title": "Zoomed Detail — Made 3",
       "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
@@ -5523,7 +5523,7 @@
           "4"
         ],
         [
-          "Panathinaikos AKTOR Athens count",
+          "Panathinaikos Athens count",
           "7"
         ]
       ],
@@ -5546,8 +5546,8 @@
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_start",
-          "name": "Panathinaikos AKTOR Athens Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "name": "Panathinaikos Athens Made 3",
+          "team": "Panathinaikos Athens",
           "stage": "start"
         },
         {
@@ -5571,19 +5571,19 @@
         {
           "id": "Panathinaikos_AKTOR_Athens_Above-the-break_C&S",
           "name": "Above-the-break C&S",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "type"
         },
         {
           "id": "Panathinaikos_AKTOR_Athens_Made_3",
           "name": "Made 3",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "event"
         },
         {
-          "id": "Panathinaikos AKTOR Athens_3",
+          "id": "Panathinaikos Athens_3",
           "name": "3 pts",
-          "team": "Panathinaikos AKTOR Athens",
+          "team": "Panathinaikos Athens",
           "stage": "points"
         }
       ],
@@ -5615,7 +5615,7 @@
         },
         {
           "source": "Panathinaikos_AKTOR_Athens_Made_3",
-          "target": "Panathinaikos AKTOR Athens_3",
+          "target": "Panathinaikos Athens_3",
           "value": 7
         }
       ],
@@ -5666,31 +5666,31 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
@@ -5698,63 +5698,63 @@
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ],
-        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos AKTOR Athens_3": [
+        "Panathinaikos_AKTOR_Athens_Made_3->Panathinaikos Athens_3": [
           {
             "player_id": "P012774",
             "player_name": "NUNN, KENDRICK",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 3
           },
           {
             "player_id": "P007866",
             "player_name": "MITOGLOU, KONSTANTINOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P011085",
             "player_name": "ROGKAVOPOULOS, NIKOLAOS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P012608",
             "player_name": "SHORTS, TJ",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           },
           {
             "player_id": "P001926",
             "player_name": "SLOUKAS, KOSTAS",
-            "team": "Panathinaikos AKTOR Athens",
+            "team": "Panathinaikos Athens",
             "poss": 1
           }
         ]

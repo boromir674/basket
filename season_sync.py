@@ -6,12 +6,73 @@ import logging
 import os
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from build_from_euroleague_api import run_game
 from basket.logging_utils import configure_logging
 from validate_output import validate_file
+
+
+def _collect_stored_seasons_inventory(output_dir: Path) -> list[dict[str, Any]]:
+    """Aggregate stored game files by season with counts and date range."""
+    by_season: dict[str, dict[str, Any]] = {}
+    for path in sorted(output_dir.glob("multi_drilldown_real_data_*_*.json")):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            continue
+        if not isinstance(payload, dict):
+            continue
+        meta = payload.get("meta", {})
+        if not isinstance(meta, dict):
+            continue
+
+        seasoncode = meta.get("seasoncode")
+        gamedate = meta.get("gamedate")
+        if not isinstance(seasoncode, str) or not seasoncode:
+            continue
+        if not isinstance(gamedate, str) or not gamedate:
+            gamedate = None
+
+        row = by_season.setdefault(
+            seasoncode,
+            {
+                "seasoncode": seasoncode,
+                "games": 0,
+                "earliest": None,
+                "latest": None,
+            },
+        )
+        row["games"] += 1
+        if gamedate is None:
+            continue
+        if row["earliest"] is None or gamedate < row["earliest"]:
+            row["earliest"] = gamedate
+        if row["latest"] is None or gamedate > row["latest"]:
+            row["latest"] = gamedate
+
+    return [by_season[k] for k in sorted(by_season.keys())]
+
+
+def print_stored_seasons_inventory(output_dir: Path, *, print_if_empty: bool = False) -> int:
+    """Print season inventory summary and return number of seasons reported."""
+    rows = _collect_stored_seasons_inventory(output_dir)
+    if not rows and not print_if_empty:
+        return 0
+
+    print("\n[INFO] Stored seasons inventory:")
+    if not rows:
+        print("  (no season game files found)")
+        return 0
+
+    for row in rows:
+        earliest = row["earliest"] if row["earliest"] is not None else "n/a"
+        latest = row["latest"] if row["latest"] is not None else "n/a"
+        print(f"  {row['seasoncode']}: games={row['games']} earliest={earliest} latest={latest}")
+
+    return len(rows)
 
 
 def _env_int(name: str, default: int) -> int:
@@ -65,6 +126,8 @@ def _classify_error(exc: BaseException) -> tuple[str, str]:
 
     if isinstance(exc, SystemExit):
         return "permanent", f"SystemExit: {exc}"
+    if isinstance(exc, ValueError) and "game not available" in str(exc):
+        return "permanent", "game not available (no data from API)"
     return "transient", f"{type(exc).__name__}: {exc}"
 
 
@@ -309,6 +372,9 @@ def main(argv: list[str] | None = None) -> int:
     started_at = time.time()
     total_to_build = len(targets)
     logger.info("Planned builds: %s games (skipping existing unless --force)", total_to_build)
+    print("\n[INFO] Starting season ingestion:")
+    print(f"  seasoncode: {seasoncode}")
+    print(f"  planned_games: {total_to_build}")
 
     failed: list[dict[str, Any]] = []
 
@@ -322,12 +388,132 @@ def main(argv: list[str] | None = None) -> int:
         p.write_text(json.dumps(failed, indent=2), encoding="utf-8")
         print(f"Wrote failures ({len(failed)}) -> {p}")
 
+    def _split_tail_vs_holes(entries):
+        """
+        Split permanent failures into:
+          - tail: the trailing consecutive block at the highest gamecodes
+                  (expected — these are how we detect end-of-season)
+          - holes: permanent failures with a successful game at a higher gamecode
+                   (unexpected — real mid-season data gaps)
+        Non-permanent failures are returned as-is (neither tail nor hole logic applies).
+        """
+        permanent = sorted(
+            [e for e in entries if e.get("kind") == "permanent"],
+            key=lambda e: e.get("gamecode", 0),
+        )
+        other = [e for e in entries if e.get("kind") != "permanent"]
+
+        if not permanent:
+            return [], [], other
+
+        # Walk backwards from the highest gamecode; while consecutive, it's tail.
+        tail_set = set()
+        prev = permanent[-1].get("gamecode", 0)
+        tail_set.add(prev)
+        for entry in reversed(permanent[:-1]):
+            gc = entry.get("gamecode", 0)
+            if prev - gc == 1:
+                tail_set.add(gc)
+                prev = gc
+            else:
+                break
+
+        tail = [e for e in permanent if e.get("gamecode") in tail_set]
+        holes = [e for e in permanent if e.get("gamecode") not in tail_set]
+        return tail, holes, other
+
+    def print_failure_diagnostics(*, stopped_early: bool) -> None:
+        if not failed:
+            return
+
+        by_kind = Counter(entry.get("kind", "unknown") for entry in failed)
+
+        def classify_exception_name(msg: str) -> str:
+            m = str(msg or "")
+            if "RequestException:" in m:
+                return m.split("RequestException:", 1)[1].strip() or "RequestException"
+            if m.startswith("HTTP "):
+                return m.split()[1] if len(m.split()) > 1 else "HTTP"
+            if ":" in m:
+                return m.split(":", 1)[0].strip() or "Unknown"
+            return m or "Unknown"
+
+        tail, holes, other_failures = _split_tail_vs_holes(failed)
+
+        print("\n[INFO] Failure diagnostics:")
+        print(f"  failures_total: {len(failed)}")
+        print(f"  stopped_early: {'yes' if stopped_early else 'no'}")
+
+        # ── Tail block (expected end-of-season) ──────────────────────────────
+        if tail:
+            tail_gcs = sorted(e.get("gamecode") for e in tail)
+            print(f"  end_of_season_tail: {len(tail)} gamecodes ({tail_gcs[0]}–{tail_gcs[-1]}) — no data on API, this is normal")
+
+        # ── Mid-season holes (unexpected) ────────────────────────────────────
+        if holes:
+            hole_gcs = sorted(e.get("gamecode") for e in holes)
+            print(f"  mid_season_holes: {len(holes)} gamecodes with no API data despite later games existing")
+            print(f"    gamecodes: {hole_gcs}")
+            print(f"    ⚠  These are real gaps — investigate or re-run targeting these gamecodes.")
+
+        # ── Network / rate-limit failures ────────────────────────────────────
+        by_other = Counter(e.get("kind", "unknown") for e in other_failures)
+        if other_failures:
+            KIND_LABELS = {
+                "rate_limited": "rate_limited (HTTP 429 — slow down concurrency)",
+                "transient": "transient (network/timeout — safe to retry)",
+            }
+            print("  retriable_failures:")
+            by_exc = Counter(classify_exception_name(str(e.get("message", ""))) for e in other_failures)
+            for kind, cnt in by_other.most_common():
+                label = KIND_LABELS.get(kind, kind)
+                print(f"    - {label}: {cnt}")
+            for exc, cnt in by_exc.most_common(5):
+                print(f"    - exception: {exc}: {cnt}")
+            sample = other_failures[: min(5, len(other_failures))]
+            for entry in sample:
+                print(f"    - game={entry.get('gamecode')} type={entry.get('kind')} msg={entry.get('message')}")
+
+        # ── Mitigation hints ─────────────────────────────────────────────────
+        joined = " | ".join(str(entry.get("message", "")) for entry in failed)
+        hints = []
+        if by_kind.get("rate_limited", 0) > 0 or "HTTP 429" in joined:
+            hints.append("API rate limiting detected: lower --concurrency and/or --pressure, keep --retry-pass enabled.")
+        if "ReadTimeout" in joined or "ConnectTimeout" in joined or "ConnectionError" in joined:
+            hints.append("Network instability: lower --concurrency and rerun; transient failures should recover on retry pass.")
+        if holes:
+            hole_gcs = sorted(e.get("gamecode") for e in holes)
+            hints.append(f"Mid-season holes at {hole_gcs}: re-run sync_season targeting those gamecodes, or accept as permanently missing.")
+        if tail and stopped_early:
+            hints.append("Trailing tail is expected end-of-season behaviour — no action needed.")
+        if hints:
+            print("  mitigation:")
+            for h in hints:
+                print(f"    - {h}")
+
+        if holes:
+            hole_gcs = sorted(e.get("gamecode") for e in holes)
+            print("\n  [ACTION] Re-run these hole gamecodes individually:")
+            for gc in hole_gcs:
+                print(
+                    f"    docker-compose run --rm ops sync_season"
+                    f" --seasoncode {seasoncode}"
+                    f" --start-gamecode {gc} --end-gamecode {gc}"
+                    f" --output-dir {output_dir}"
+                    f" --concurrency 1 --max-failures 1 --force"
+                )
+
     if args.dry_run:
         for gamecode in targets:
             out_path = output_dir / f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
             logger.info("[DRY-RUN] would build %s/%s -> %s", seasoncode, gamecode, out_path)
             processed += 1
         logger.info("=== Done. processed=%s, failures=%s (mode=%s) ===", processed, failures, mode)
+        print("\n[INFO] Season ingestion summary:")
+        print(f"  seasoncode: {seasoncode}")
+        print(f"  downloaded_ok: {processed}/{total_to_build}")
+        print(f"  failures: {failures}")
+        print_stored_seasons_inventory(output_dir)
         return 0
 
     # Sequential mode (preserves previous behavior).
@@ -392,6 +578,12 @@ def main(argv: list[str] | None = None) -> int:
 
         logger.info("=== Done. processed=%s, failures=%s (mode=%s) ===", processed, failures, mode)
         maybe_write_failures()
+        print_failure_diagnostics(stopped_early=failures >= args.max_failures)
+        print("\n[INFO] Season ingestion summary:")
+        print(f"  seasoncode: {seasoncode}")
+        print(f"  downloaded_ok: {processed}/{total_to_build}")
+        print(f"  failures: {failures}")
+        print_stored_seasons_inventory(output_dir)
 
         # Avoid clobbering an existing manifest with an empty one when a probe run
         # (or a bad seasoncode) yields zero successful games.
@@ -533,6 +725,12 @@ def main(argv: list[str] | None = None) -> int:
 
     logger.info("=== Done. processed=%s, failures=%s (mode=%s) ===", processed, failures, mode)
     maybe_write_failures()
+    print_failure_diagnostics(stopped_early=failures >= args.max_failures)
+    print("\n[INFO] Season ingestion summary:")
+    print(f"  seasoncode: {seasoncode}")
+    print(f"  downloaded_ok: {processed}/{total_to_build}")
+    print(f"  failures: {failures}")
+    print_stored_seasons_inventory(output_dir)
 
     # Refresh manifest for this season so the UI can list all games.
     # If we had zero successes (e.g. probing a non-existent seasoncode), do not
