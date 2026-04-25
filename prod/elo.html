@@ -263,6 +263,20 @@
     return one ? [one] : [];
   }
 
+  function resolveEloFilePath(){
+    const defaultPath = 'assets/processed/elo_multiseason.json';
+    const fileBaseParam = String(qs.get('fileBase') || '').trim();
+    const runtimeBase = (
+      (typeof window !== 'undefined' && String(window.BASKET_APP_FILE_STORE_URI || '').trim()) ||
+      fileBaseParam
+    );
+    if(!runtimeBase) return defaultPath;
+
+    const base = runtimeBase.endsWith('/') ? runtimeBase.slice(0, -1) : runtimeBase;
+    if(base.endsWith('/processed')) return `${base}/elo_multiseason.json`;
+    return `${base}/processed/elo_multiseason.json`;
+  }
+
   function areConsecutiveSeasoncodes(codes){
     if(!Array.isArray(codes) || !codes.length) return false;
     const years = Array.from(new Set(codes.map(seasonYear).filter(v => Number.isInteger(v)))).sort((a,b) => a - b);
@@ -1573,7 +1587,7 @@
     const requestedSeasoncodes = parseSeasoncodesFromQuery();
     const defaultSeasoncode = requestedSeasoncodes[0] || 'E2025';
 
-    const eloFile = 'assets/processed/elo_multiseason.json';
+    const eloFile = resolveEloFilePath();
     try{
       const resp = await fetch(eloFile);
       if(!resp.ok) throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
