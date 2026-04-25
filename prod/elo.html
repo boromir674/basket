@@ -264,7 +264,12 @@
   }
 
   function resolveEloFilePath(){
-    const defaultPath = 'assets/processed/elo_multiseason.json';
+    const pathName = String((typeof window !== 'undefined' && window.location && window.location.pathname) || '');
+    const prodMarker = '/prod/';
+    const prodIdx = pathName.indexOf(prodMarker);
+    const defaultPath = (prodIdx >= 0)
+      ? `${pathName.slice(0, prodIdx)}/assets/processed/elo_multiseason.json`
+      : 'assets/processed/elo_multiseason.json';
     const fileBaseParam = String(qs.get('fileBase') || '').trim();
     const runtimeBase = (
       (typeof window !== 'undefined' && String(window.BASKET_APP_FILE_STORE_URI || '').trim()) ||
