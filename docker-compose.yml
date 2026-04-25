@@ -131,6 +131,41 @@ services:
       "--dry-run"
     ]
 
+  redo_season:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./assets:/app/assets
+      - ./data:/app/data
+    # Delete all stored files for a season then re-fetch every game from scratch.
+    # Probes the API sequentially until gap_limit consecutive missing gamecodes.
+    # Usage: `docker compose run --rm redo_season --seasoncode E2021 --dry-run`
+    #        `docker compose run --rm redo_season --seasoncode E2021`
+    entrypoint: ["python", "entrypoint.py", "redo_season"]
+    command: [
+      "--seasoncode", "E2021",
+      "--data-dir", "/app/data",
+      "--raw-dir", "/app/assets",
+      "--concurrency", "16"
+    ]
+
+  backfill_gamedates:
+    image: euroleague-sankey
+    working_dir: /app
+    volumes:
+      - ./assets:/app/assets
+      - ./data:/app/data
+    # Patch meta.gamedate in stored processed JSONs from raw_pts_* snapshots (no network needed).
+    # Classification: Backend ops (run after ingestion to fix null gamedates).
+    # Usage: `docker compose run --rm backfill_gamedates --seasoncode E2025 --dry-run`
+    #        `docker compose run --rm backfill_gamedates --seasoncode E2025`
+    entrypoint: ["python", "entrypoint.py", "backfill_gamedates"]
+    command: [
+      "--seasoncode", "E2025",
+      "--data-dir", "/app/data",
+      "--raw-dir", "/app/assets"
+    ]
+
   validate_auto_json:
     image: euroleague-sankey
     working_dir: /app
