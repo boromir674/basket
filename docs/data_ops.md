@@ -17,6 +17,12 @@ Prepare a season end-to-end (sync → normalize → Elo → manifest → report)
 make prepare-season SEASON=E2025 START=1 END=200
 ```
 
+Prepare multiple consecutive seasons quickly:
+
+```bash
+make sync-seasons SEASONS='E2022 E2023 E2024' START=1 END=380
+```
+
 See the report:
 
 ```bash
@@ -97,6 +103,21 @@ make report SEASON=E2025
 ```bash
 make elo SEASON=E2025
 ```
+
+3b) Compute multi-season Elo (explicit season list):
+
+```bash
+make elo-multi SEASONS_CSV='E2022,E2023,E2024'
+```
+
+3c) Auto recompute multi-season Elo only when stale/missing:
+
+```bash
+make elo-auto
+```
+
+`make elo-auto` scans stored season bundles, checks consecutive coverage, and ensures
+`elo_multiseason.json` spans the full stored consecutive range.
 
 4) Print a report (games + distinct teams):
 
