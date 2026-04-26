@@ -24,6 +24,9 @@ cp prod/game-explorer.html                     public/
 cp prod/elo.html                               public/
 cp prod/score-diff.html                        public/
 cp prod/score-d52.html                         public/
+cp prod/score-diff-v2.html                     public/
+cp prod/score-d52-v2.html                      public/
+cp prod/score-chart.js                         public/
 cp poss-flow-map-multi-drilldown-real-data.html public/
 
 # Custom Frontend Lab (not for production)
@@ -50,4 +53,6 @@ echo "   Open: http://localhost:${PORT}/index.html"
 echo "   Open: http://localhost:${PORT}/elo.html?season=2025-2026"
 echo "   Open: http://localhost:${PORT}/score-diff.html"
 echo "   Open: http://localhost:${PORT}/score-d52.html"
+echo "   Open: http://localhost:${PORT}/score-diff-v2.html"
+echo "   Open: http://localhost:${PORT}/score-d52-v2.html"
 python3 -m http.server "$PORT" --directory public
