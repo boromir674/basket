@@ -322,6 +322,13 @@ Release gate:
 
 See `docs/dev_guide.md` for day-to-day workflow details.
 
+### Games Manifest
+
+Canonical source: `data/games_manifest.json` (copied to `public/assets/processed/` and `dist/` by build scripts).
+To rebuild for all seasons: `python entrypoint.py rebuild_manifest --all-seasons --output-dir assets/processed`.
+Single-season rebuild (backwards compatible): `python entrypoint.py rebuild_manifest --seasoncode E2025`.
+Note: the manifest currently only contains E2025 — run the all-seasons rebuild after any multi-season sync.
+
 ## 10) Surface Builds (Prod vs Preview)
 
 Build deployment payloads without changing spike/demo source files:
