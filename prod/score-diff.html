@@ -264,7 +264,7 @@
       <div class="legend-sep" style="width:100%"></div>
       <div style="font-size:11px;color:var(--muted);width:100%;line-height:1.6">
         Taller upper band = more home points scored. Taller lower band = more away points.<br>
-        Margin line <strong style="color:#fff">above zero</strong> = home leading &nbsp;|&nbsp; <strong style="color:#fff">below zero</strong> = away leading.<br>
+        Margin line <strong style="color:#fff">below zero</strong> = home leading &nbsp;|&nbsp; <strong style="color:#fff">above zero</strong> = away leading.<br>
         ● White dot = lead change.
       </div>
 
@@ -449,7 +449,7 @@
         pts,
         ptsA,
         ptsB,
-        diff: ptsA - ptsB,
+        diff: ptsB - ptsA,
         home: { ...acc.home },
         away: { ...acc.away },
       });
