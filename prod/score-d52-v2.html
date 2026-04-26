@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Score Diff D52 V2 — Euroleague</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <style>
+    :root {
+      --bg: #081425;
+      --panel: #0d1e38;
+      --border: #1e3a5f;
+      --text: #edf3ff;
+      --muted: #7a9cc4;
+      --accent: #3a86ff;
+      --home: #3a86ff;
+      --away: #ff5a7a;
+      --ft: #a78bfa;
+      --two: #34d399;
+      --three: #fbbf24;
+      --diff-line: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(180deg, #0e203b, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .page { max-width: 960px; margin: 0 auto; padding: 16px; }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    header h1 { font-size: 18px; font-weight: 700; flex: 1; min-width: 160px; }
+    .back-btn {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    .back-btn:hover { color: var(--text); border-color: var(--accent); }
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    @media (min-width: 640px) {
+      .controls { grid-template-columns: auto auto 1fr auto; align-items: end; }
+    }
+    .ctrl-group { display: flex; flex-direction: column; gap: 4px; }
+    .ctrl-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    select {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9cc4' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 28px;
+    }
+    select:focus { outline: none; border-color: var(--accent); }
+    .mode-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .pill {
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .pill.active { border-color: var(--accent); background: #1a3a6e; color: var(--text); }
+    .pill:hover:not(.active) { border-color: #3a5080; color: var(--text); }
+    .game-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 44px;
+    }
+    .game-info .teams { font-size: 15px; font-weight: 600; }
+    .game-info .score { font-size: 20px; font-weight: 700; letter-spacing: .04em; }
+    .game-info .date { font-size: 12px; color: var(--muted); }
+    .team-home { color: var(--home); }
+    .team-away { color: var(--away); }
+    .info-placeholder { color: var(--muted); font-size: 13px; }
+    .chart-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      position: relative;
+    }
+    #chart-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 14px;
+      padding: 0 4px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .legend-sep {
+      width: 100%;
+      height: 0;
+      border-top: 1px solid var(--border);
+      margin: 2px 0;
+    }
+    .status {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .status.error { color: #ff5a7a; }
+    .tooltip {
+      position: fixed;
+      background: #0f2040;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .1s;
+      max-width: 200px;
+      z-index: 999;
+    }
+    .tooltip.visible { opacity: 1; }
+    .tooltip .tt-title { font-weight: 600; margin-bottom: 4px; }
+    .tooltip .tt-row { color: var(--muted); margin-top: 2px; }
+    .tooltip .tt-row span { color: var(--text); }
+    .q-label { font-size: 10px; fill: var(--muted); }
+    .q-line { stroke: var(--border); stroke-dasharray: 3 3; }
+    .diff-path { fill: none; stroke: var(--diff-line); stroke-width: 2; }
+    .zero-line { stroke: var(--border); stroke-width: 1; }
+    @keyframes pulse { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+    .loading { animation: pulse 1.2s infinite; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Score Differential D52 V2</h1>
+    <a class="back-btn" href="./index.html">← Back</a>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Season</span>
+      <select id="sel-season">
+        <option value="E2025">E2025</option>
+        <option value="E2024">E2024</option>
+        <option value="E2023">E2023</option>
+        <option value="E2022">E2022</option>
+        <option value="E2021">E2021</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Game #</span>
+      <select id="sel-game"></select>
+    </div>
+    <div></div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Stack mode</span>
+      <div class="mode-pills">
+        <button class="pill active" data-mode="points">By Points</button>
+        <button class="pill" data-mode="makes">By Makes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-info" id="game-info">
+    <span class="info-placeholder">Select a game above</span>
+  </div>
+
+  <div class="chart-card">
+    <div id="chart-area">
+      <div class="status">Choose a season and game to load.</div>
+    </div>
+    <div class="legend" id="legend" style="display:none">
+      <div class="legend-item">
+        <div class="legend-swatch" style="background:var(--diff-line)"></div>
+        Divider line (oriented margin)
+      </div>
+      <div class="legend-sep" style="width:100%"></div>
+      <div style="font-size:11px;color:var(--muted);width:100%;" id="legend-home-label">▲ Home (top area) — composition by share</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--three)"></div>3PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--two)"></div>2PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--ft)"></div>FT</div>
+      <div class="legend-sep" style="width:100%"></div>
+      <div style="font-size:11px;color:var(--muted);width:100%;" id="legend-away-label">▼ Away (bottom area) — composition by share</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--three);opacity:.6"></div>3PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--two);opacity:.6"></div>2PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--ft);opacity:.6"></div>FT</div>
+      <div class="legend-sep" style="width:100%"></div>
+      <div style="font-size:11px;color:var(--muted);width:100%;line-height:1.6">
+        Full-fill variant: top is always painted for home, bottom for away.<br>
+        Divider <strong style="color:#fff">below 0</strong> = home leading &nbsp;|&nbsp; <strong style="color:#fff">above 0</strong> = away leading.<br>
+        Area stripes show shot-type composition, not absolute score height.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip">
+  <div class="tt-title" id="tt-title"></div>
+  <div class="tt-row" id="tt-score"></div>
+  <div class="tt-row" id="tt-diff"></div>
+  <div class="tt-row" id="tt-mode"></div>
+</div>
+
+<script type="module">
+  import { initScoreChart } from './score-chart.js';
+  initScoreChart({ variant: 'd52' });
+</script>
+</body>
+</html>
