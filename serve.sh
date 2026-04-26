@@ -22,7 +22,12 @@ mkdir -p public/assets/processed
 cp prod/index.html                             public/
 cp prod/game-explorer.html                     public/
 cp prod/elo.html                               public/
+cp prod/score-diff.html                        public/
+cp prod/score-d52.html                         public/
 cp poss-flow-map-multi-drilldown-real-data.html public/
+
+# Custom Frontend Lab (not for production)
+cp -r ./lab public/lab
 
 if ls data/*.json 1>/dev/null 2>&1; then
   cp data/*.json public/assets/processed/
@@ -31,7 +36,18 @@ else
   echo "⚠  No data in data/ — run 'docker compose run --rm demo' first."
 fi
 
+# Copy raw_pts scoring event files needed by score-diff.html
+mkdir -p public/assets
+if ls assets/raw_pts_*.json 1>/dev/null 2>&1; then
+  cp assets/raw_pts_*.json public/assets/
+  echo "✓ raw_pts files copied"
+else
+  echo "⚠  No raw_pts_*.json in assets/ — score-diff page will show fetch errors."
+fi
+
 echo "→ Serving public/ on http://localhost:${PORT}"
 echo "   Open: http://localhost:${PORT}/index.html"
 echo "   Open: http://localhost:${PORT}/elo.html?season=2025-2026"
+echo "   Open: http://localhost:${PORT}/score-diff.html"
+echo "   Open: http://localhost:${PORT}/score-d52.html"
 python3 -m http.server "$PORT" --directory public
