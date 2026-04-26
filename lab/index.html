@@ -58,6 +58,20 @@
     </div>
 
     <div class="card">
+      <div class="card-title">Score Diff Explorer</div>
+      <div class="card-meta">Diverging stacked area chart showing score differential and scoring composition (2PT / 3PT / FT shares) over game time.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: self-contained page with season + game selectors. Two modes: By Points (default) and By Makes.</div>
+      <a class="button" href="./prod/score-diff.html">Open Score Diff Explorer</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Score Diff D52 (Full-Fill)</div>
+      <div class="card-meta">Experimental full-fill variant: home painted from top to divider, away from bottom to divider, with oriented margin line.</div>
+      <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: comparison candidate where divider below zero means home is leading.</div>
+      <a class="button" href="./prod/score-d52.html">Open Score Diff D52</a>
+    </div>
+
+    <div class="card">
       <div class="card-title">Elo showcase</div>
       <div class="card-meta">Rank teams by current Elo and replay progression fixture-by-fixture, with consecutive multi-season filtering.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: prefers <code>assets/processed/elo_multiseason.json</code> (from <code>make elo-auto</code>) and falls back to <code>elo_*.json</code>.</div>
