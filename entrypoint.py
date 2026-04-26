@@ -550,7 +550,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if command == "rebuild_manifest":
         parser = argparse.ArgumentParser(description="Rebuild games_manifest.json from existing JSON files.")
-        parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2021")
+        parser.add_argument("--seasoncode", default=None, help="Season code, e.g. E2021. Omit to index all seasons.")
+        parser.add_argument("--all-seasons", action="store_true", help="Index all seasons found in output-dir (same as omitting --seasoncode).")
         parser.add_argument(
             "--output-dir",
             default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
@@ -558,9 +559,11 @@ def main(argv: list[str] | None = None) -> int:
         )
         args = parser.parse_args(rest)
 
+        sc = None if (args.all_seasons or args.seasoncode is None) else args.seasoncode
         out_dir = Path(args.output_dir).resolve()
-        print(f"=== Rebuilding manifest for {args.seasoncode} in {out_dir} ===")
-        build_manifest(out_dir, args.seasoncode)
+        label = sc if sc else "ALL seasons"
+        print(f"=== Rebuilding manifest for {label} in {out_dir} ===")
+        build_manifest(out_dir, sc)
         return 0
 
     print(f"Unknown command: {command}")

@@ -12,6 +12,8 @@ This README is onboarding-first: you can come back later and re-onboard quickly.
 
 -> Simulate Elo values from start to end of Seasons in DB: `make elo-auto`
 
+-> Build Games Manifest (cheap way of frontend to discover content) from "current data": `docker-compose run --rm ops rebuild_manifest --all-seasons`
+
 ## 1) Project At A Glance
 
 - Pipeline: Python scripts fetch Euroleague API data and build Sankey JSON.
