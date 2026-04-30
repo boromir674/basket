@@ -284,6 +284,8 @@ docker compose run --rm ops compute_elo --auto \
 - `?typeZoomVariant=3`: 4 -> 3 transition prototype.
   - entering a type zoom from a non-type view uses the intentional push effect.
   - switching between type zooms (`halfcourt`, `transition`, `oreb`) now morphs in place (3 -> 3), no extra push.
+- `Made 2 breakdown` and `Made 3 breakdown` subviews were removed from navigation in both lab and prod hosts.
+  - direct navigation requests for `made2`/`made3` are normalized back to `top`.
 - `?explodeLab=1`: flow explode lab mode.
   - click a link to split it into player-colored micro-flows.
   - uses real `player_flows` data when present in processed JSON.
@@ -308,8 +310,8 @@ docker compose run --rm ops compute_elo --auto \
 - Pipeline: `build_from_euroleague_api.py`, `pipeline_runner.py`
 - Validation: `validate_output.py`
 - Batch sync + manifest: `season_sync.py`
-- Main viewer: `poss-flow-map-multi-drilldown-real-data.html`
-- Landing/game switchers: `index.html`, `poss-flow-index.html`
+- Main viewer: `game-flow-viewer.html`
+- Landing/game switchers: `index.html`, `game-flow-switcher.html`, `prod/game-explorer.html`
 - Team notes/spike context: `efforts/`, `epics_catalog.md`, `.github/copilot-instructions.md`
 
 ## 9) Product Surface Separation (Prod vs Labs)

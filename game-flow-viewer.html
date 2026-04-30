@@ -152,7 +152,6 @@
         <div class="explode-pop" id="explode-pop"></div>
         <svg id="chart" viewBox="0 0 1280 860"></svg>
       </div>
-      <div class="footer">Feature-rich multi-drilldown view using real API-derived JSON.</div>
     </div>
     <div class="card">
       <div class="side">
@@ -406,6 +405,8 @@ let xrayLab = params.get("xrayLab") === "1" || twinLab;
 let replayLab = params.get("replayLab") === "1";
 
 function resolveInitialView(bundle, requestedView) {
+  const removedViews = new Set(["made2", "made3"]);
+  if (requestedView && removedViews.has(requestedView)) return "top";
   if (requestedView && bundle && bundle.views && bundle.views[requestedView]) return requestedView;
   return "top";
 }
@@ -1877,7 +1878,7 @@ function setPanel(viewKey, custom=null){
   renderShotProfile(viewKey, teamFocus);
 }
 function buildControls(){
-  const order=["top","halfcourt","transition","oreb","made2","made3"].filter(k=>dataBundle.views[k]);
+  const order=["top","halfcourt","transition","oreb"].filter(k=>dataBundle.views[k]);
   const teams = getAvailableTeams();
   const singleTeam = teamFocus || defaultSingleTeam();
   const modeButtons = [
