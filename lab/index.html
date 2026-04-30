@@ -33,42 +33,42 @@
       <div class="card-title">Latest demo game</div>
       <div class="card-meta">Whatever <code>docker compose run --rm demo</code> last wrote to <code>assets/processed/multi_drilldown_real_data.json</code>.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: main Sankey canvas plus right-hand detail panel render from the latest demo JSON.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html">Open latest demo</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html">Open latest demo</a>
     </div>
 
     <div class="card">
       <div class="card-title">E2021 / 54 — Efes vs PAO</div>
       <div class="card-meta">Reads <code>multi_drilldown_real_data_E2021_54.json</code> if present.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: renders the 4-column drilldown Sankey and the detail panel for this game.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json">View game 54</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json">View game 54</a>
     </div>
 
     <div class="card">
       <div class="card-title">E2021 / 55 — ALBA vs Bayern</div>
       <div class="card-meta">Reads <code>multi_drilldown_real_data_E2021_55.json</code> if present.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: renders the 4-column drilldown Sankey and the detail panel for this game.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_55.json">View game 55</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_55.json">View game 55</a>
     </div>
 
     <div class="card">
       <div class="card-title">Game switcher</div>
       <div class="card-meta">New screen with a list of all synced games on the left and the main Sankey viewer on the right.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: wires to poss-flow-index.html; main viewer and game list pane.</div>
-      <a class="button" href="./poss-flow-index.html">Open game switcher</a>
+      <a class="button" href="../poss-flow-index.html">Open game switcher</a>
     </div>
 
     <div class="card">
       <div class="card-title">Score Diff Explorer</div>
       <div class="card-meta">Diverging stacked area chart showing score differential and scoring composition (2PT / 3PT / FT shares) over game time.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: self-contained page with season + game selectors. Two modes: By Points (default) and By Makes.</div>
-      <a class="button" href="./prod/score-diff.html">Open Score Diff Explorer</a>
+      <a class="button" href="../prod/score-diff.html">Open Score Diff Explorer</a>
     </div>
 
     <div class="card">
       <div class="card-title">Score Diff D52 (Full-Fill)</div>
       <div class="card-meta">Experimental full-fill variant: home painted from top to divider, away from bottom to divider, with oriented margin line.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: comparison candidate where divider below zero means home is leading.</div>
-      <a class="button" href="./prod/score-d52.html">Open Score Diff D52</a>
+      <a class="button" href="../prod/score-d52.html">Open Score Diff D52</a>
     </div>
 
     <div class="card">
@@ -82,63 +82,63 @@
       <div class="card-title">Elo showcase</div>
       <div class="card-meta">Rank teams by current Elo and replay progression fixture-by-fixture, with consecutive multi-season filtering.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: prefers <code>assets/processed/elo_multiseason.json</code> (from <code>make elo-auto</code>) and falls back to <code>elo_*.json</code>.</div>
-      <a class="button" href="./prod/elo.html?seasoncodes=E2022,E2023,E2024">Open Elo showcase (multi-season)</a>
+      <a class="button" href="../prod/elo.html?seasoncodes=E2022,E2023,E2024">Open Elo showcase (multi-season)</a>
     </div>
 
     <div class="card">
       <div class="card-title">Auto-insights experiment</div>
       <div class="card-meta">Runs the experimental stats engine on E2021 / 54 and reads <code>multi_drilldown_real_data_E2021_54_auto.json</code> if present.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: shows auto-insight tiles and meta for the loaded dataset.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json">Open auto-insights demo</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json">Open auto-insights demo</a>
     </div>
 
     <div class="card">
       <div class="card-title">Type-node smooth drilldown (4 columns)</div>
       <div class="card-meta">Click <code>Half-court</code>/<code>Transition</code>/<code>After OREB</code> nodes to morph drilldowns with D3 transitions.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: this tile renders the 4-column drilldown view and updates the detail panel on node clicks.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json&typeZoomVariant=4">Test 4 → 4</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json&typeZoomVariant=4">Test 4 → 4</a>
     </div>
 
     <div class="card">
       <div class="card-title">Type-node smooth drilldown (4 → 3)</div>
       <div class="card-meta">Same interaction, but the drilldown compresses columns (drops the soon-to-be removed 1st level).</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: renders 4→3 drilldown and keeps the detail panel wired for inspection.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json&typeZoomVariant=3">Test 4 → 3</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54_auto.json&typeZoomVariant=3">Test 4 → 3</a>
     </div>
 
     <div class="card">
       <div class="card-title">Flow explode lab (player mix)</div>
       <div class="card-meta">Experimental UX: click any Sankey link to explode it into player-colored micro-flows and show proportional player mix.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `explodeLab=1`; reads real `player_flows` when available in the loaded JSON.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&explodeLab=1">Open flow explode lab</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&explodeLab=1">Open flow explode lab</a>
     </div>
 
     <div class="card">
       <div class="card-title">Tactical X-Ray lab</div>
       <div class="card-meta">Overlay a ghost baseline and highlight where current game branches diverge in volume.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `xrayLab=1`; this spike currently uses a synthetic structural baseline per stage-pair bucket.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&xrayLab=1">Open tactical X-Ray</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&xrayLab=1">Open tactical X-Ray</a>
     </div>
 
     <div class="card">
       <div class="card-title">Tactical Twin Sankey lab</div>
       <div class="card-meta">Pseudo-3D dual-lane Sankey: current game vs reference with opposite-lane green/red signal on hover.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `twinLab=1`; renders two separated perspective lanes and paired link highlighting for tactical comparison.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&twinLab=1">Open tactical Twin Sankey</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&twinLab=1">Open tactical Twin Sankey</a>
     </div>
 
     <div class="card">
       <div class="card-title">Flow Index Q&A lab</div>
       <div class="card-meta">Guided questions that auto-drive chart state to answer: who drives valuable flows and Made-2 branches.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `flowIndexLab=1` and player explode detail for guided narrative interaction.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&flowIndexLab=1">Open Flow Index Q&A</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&flowIndexLab=1">Open Flow Index Q&A</a>
     </div>
 
     <div class="card">
       <div class="card-title">Live Replay Timeline Lab</div>
       <div class="card-meta">0→40 minute smooth playback with live clock, score growth, and flows appearing/thickening over simulated game time.</div>
       <div class="card-desc" style="font-size:12px; color:var(--muted); margin-top:6px;">HTML: activates `replayLab=1`; use Play/Pause/Reset HUD controls directly on the chart.</div>
-      <a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&replayLab=1">Open Live Replay Timeline</a>
+      <a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=assets/processed/multi_drilldown_real_data_E2021_54.json&typeZoomVariant=4&replayLab=1">Open Live Replay Timeline</a>
     </div>
   </div>
 
@@ -163,7 +163,7 @@
   const hint = document.getElementById("dynamic-hint");
   if (!container || !hint) return;
 
-  fetch("./assets/processed/games_manifest.json")
+  fetch("../assets/processed/games_manifest.json")
     .then(function (r) { return r.json(); })
     .then(function (entries) {
       if (!Array.isArray(entries) || !entries.length) {
@@ -185,7 +185,7 @@
           '<div class="card-meta">' + meta + '</div>' +
           '<div class="card-meta">Played: ' + date + ' · Synced: ' + synced + '</div>' +
           '<div class="card-meta"><code>' + file + '</code></div>' +
-          '<a class="button" href="./poss-flow-map-multi-drilldown-real-data.html?file=' + file + '">Open</a>' +
+          '<a class="button" href="../poss-flow-map-multi-drilldown-real-data.html?file=' + file + '">Open</a>' +
           '</div>'
         );
       }).join("");

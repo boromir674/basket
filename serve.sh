@@ -30,9 +30,6 @@ cp prod/style-insights.html                    public/
 cp prod/score-chart.js                         public/
 cp poss-flow-map-multi-drilldown-real-data.html public/
 
-# Custom Frontend Lab (not for production)
-cp -r ./lab public/lab
-
 if ls data/*.json 1>/dev/null 2>&1; then
   cp data/*.json public/assets/processed/
   echo "✓ Data files copied from data/"
@@ -57,5 +54,4 @@ echo "   Open: http://localhost:${PORT}/score-d52.html"
 echo "   Open: http://localhost:${PORT}/score-diff-v2.html"
 echo "   Open: http://localhost:${PORT}/score-d52-v2.html"
 echo "   Open: http://localhost:${PORT}/style-insights.html"
-echo "   Open: http://localhost:${PORT}/lab/style-consistency-lab.html"
 python3 -m http.server "$PORT" --directory public
