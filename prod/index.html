@@ -59,6 +59,8 @@
       cursor:pointer;
     }
     button.active { border-color:#62b6ff; background:#25508a; }
+    .toggle-row { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin:0 0 8px; }
+    .toggle-row input { accent-color: var(--anchor); }
     .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
     select {
       width:100%;
@@ -158,6 +160,10 @@
         <button class="mode-btn active" data-mode="core">Core</button>
         <button class="mode-btn" data-mode="replay">Live Replay</button>
       </div>
+      <label class="toggle-row">
+        <input id="show-type-nodes" type="checkbox" />
+        <span>Show possession type nodes</span>
+      </label>
 
       <div class="row split" style="margin-top:6px;">
         <div class="label" style="margin:0;">Game Scope</div>
@@ -197,6 +203,7 @@
   const gamesEl = document.getElementById("games");
   const viewer = document.getElementById("viewer");
   const modeBtns = Array.from(document.querySelectorAll(".mode-btn"));
+  const showTypeNodesEl = document.getElementById("show-type-nodes");
   const scopeAllBtn = document.getElementById("scope-all");
   const scopeAnchorBtn = document.getElementById("scope-anchor");
   const anchorBlock = document.getElementById("anchorBlock");
@@ -219,9 +226,10 @@
   const normalizedCache = new Map();
 
   function modeParams(mode){
+    const showTypeNodes = !!(showTypeNodesEl && showTypeNodesEl.checked);
     // explode interactions are always available by default; do not require an explicit mode.
-    if(mode === "replay") return "typeZoomVariant=4&replayLab=1";
-    return "typeZoomVariant=4";
+    if(mode === "replay") return `typeZoomVariant=4&replayLab=1&skipTypeStage=${showTypeNodes ? "0" : "1"}`;
+    return `typeZoomVariant=4&skipTypeStage=${showTypeNodes ? "0" : "1"}`;
   }
 
   function setMode(mode){
@@ -450,6 +458,11 @@
     selectedTeam = teamSelect.value;
     renderGames();
   });
+  if(showTypeNodesEl){
+    showTypeNodesEl.addEventListener("change", () => {
+      if(selectedGame) loadSelectedGame();
+    });
+  }
 
   fetch("../assets/processed/games_manifest.json")
     .then((r) => r.json())

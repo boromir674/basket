@@ -12,9 +12,6 @@
     * { box-sizing:border-box; }
     body { margin:0; color:var(--text); font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); }
     .wrap { max-width:1420px; margin:0 auto; padding:20px 16px 30px; }
-    .page-nav { display:flex; justify-content:flex-end; margin-bottom:10px; }
-    .home-link { display:inline-flex; align-items:center; justify-content:center; padding:8px 12px; border-radius:999px; border:1px solid rgba(111,132,171,.28); background:#14223e; color:var(--text); text-decoration:none; font-size:13px; }
-    .home-link:hover { background:#21365e; border-color:#4f6b99; }
     .grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
     .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.32); }
     .header { padding:16px 24px 10px; border-bottom:1px solid rgba(111,132,171,.12); }
@@ -141,14 +138,10 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="page-nav">
-    <a class="home-link" href="./index.html">Home</a>
-  </div>
   <div class="grid">
     <div class="card">
       <div class="header">
-        <div class="eyebrow">Euroleague MVP visualization spike — real data</div>
-        <h1 id="page-title">Possession Flow Map</h1>
+        <h1 id="page-title">Loading matchup...</h1>
         <div class="headline" id="headline">Loading…</div>
         <div id="scoreboard" style="margin-top:8px;font-weight:700;color:#d9e6ff;font-size:15px;">&nbsp;</div>
         <div class="controls" id="controls"></div>
@@ -305,6 +298,18 @@ const explodeLayer = vizRoot.append("g").attr("id", "explode-layer");
 const nodeLayer = vizRoot.append("g").attr("id", "node-layer");
 const labelsLayer = vizRoot.append("g").attr("id", "labels-layer");
 let currentGraphState = null;
+
+function buildLinkSemanticKey(linkLike){
+  const src = linkLike && linkLike.source ? linkLike.source : {};
+  const tgt = linkLike && linkLike.target ? linkLike.target : {};
+  const team = String(src.team || tgt.team || "");
+  const srcStage = String(src.stage || "");
+  const srcName = String(src.name || "");
+  const tgtStage = String(tgt.stage || "");
+  const tgtName = String(tgt.name || "");
+  return `${team}|${srcStage}|${srcName}|${tgtStage}|${tgtName}`;
+}
+
 const linkGen = d3.sankeyLinkHorizontal();
 let renderSequence = 0;
 const width = 1280, height = 860;
@@ -2036,6 +2041,8 @@ function renderView(viewKey, opts = {}){
   const baselineByKey = xrayLab ? buildSyntheticBaselineByKey(graph.links) : null;
 
   const prevNodesById = (currentGraphState && currentGraphState.nodesById) ? currentGraphState.nodesById : new Map();
+  const prevLinksBySemantic = (currentGraphState && currentGraphState.linksBySemantic) ? currentGraphState.linksBySemantic : new Map();
+  const prevLinksList = (currentGraphState && Array.isArray(currentGraphState.links)) ? currentGraphState.links : [];
   const newNodesById = new Map(graph.nodes.map(n => [n.id, n]));
 
   // Helper: robustly find a previous node for smoother transitions when IDs change
@@ -2047,11 +2054,81 @@ function renderView(viewKey, opts = {}){
     for(const old of prevNodesById.values()){
       if(old && old.team === d.team && old.stage === d.stage && old.name === d.name) return old;
     }
-    // last resort: match by team + stage
-    for(const old of prevNodesById.values()){
-      if(old && old.team === d.team && old.stage === d.stage) return old;
-    }
-    return null;
+    // For cross-view transitions (top -> poss-type), multiple nodes share a stage.
+    // Pick the closest prior node by centroid to avoid awkward off-canvas starts.
+    const dCx = ((Number(d.x0) || 0) + (Number(d.x1) || 0)) / 2;
+    const dCy = ((Number(d.y0) || 0) + (Number(d.y1) || 0)) / 2;
+    const pickClosest = (predicate) => {
+      let best = null;
+      let bestDist = Number.POSITIVE_INFINITY;
+      for(const old of prevNodesById.values()){
+        if(!old || !predicate(old)) continue;
+        const oCx = ((Number(old.x0) || 0) + (Number(old.x1) || 0)) / 2;
+        const oCy = ((Number(old.y0) || 0) + (Number(old.y1) || 0)) / 2;
+        const dist = Math.abs(dCy - oCy) + (Math.abs(dCx - oCx) * 0.35);
+        if(dist < bestDist){
+          best = old;
+          bestDist = dist;
+        }
+      }
+      return best;
+    };
+    return pickClosest(old => old.team === d.team && old.stage === d.stage)
+      || pickClosest(old => old.team === d.team)
+      || pickClosest(old => old.stage === d.stage)
+      || null;
+  }
+
+  function findPrevLink(d){
+    const direct = prevLinksBySemantic.get(buildLinkSemanticKey(d));
+    if(direct) return direct;
+
+    const src = d && d.source ? d.source : null;
+    const tgt = d && d.target ? d.target : null;
+    if(!src || !tgt || !prevLinksList.length) return null;
+
+    const team = String(src.team || tgt.team || "");
+    const srcStage = String(src.stage || "");
+    const tgtStage = String(tgt.stage || "");
+    const dMid = (((Number(d.y0) || 0) + (Number(d.y1) || 0)) / 2);
+
+    let best = null;
+    let bestDist = Number.POSITIVE_INFINITY;
+    const pickBest = (predicate) => {
+      for(const old of prevLinksList){
+        if(!old || !old.source || !old.target) continue;
+        if(!predicate(old)) continue;
+        const oMid = (((Number(old.y0) || 0) + (Number(old.y1) || 0)) / 2);
+        const dist = Math.abs(dMid - oMid);
+        if(dist < bestDist){
+          best = old;
+          bestDist = dist;
+        }
+      }
+      return best;
+    };
+
+    // Tier 1: strongest non-exact fallback (same team + same stage pair).
+    if(pickBest(old => (
+      String(old.source.team || old.target.team || "") === team
+      && String(old.source.stage || "") === srcStage
+      && String(old.target.stage || "") === tgtStage
+    ))) return best;
+
+    // Tier 2: top<->breakdown bridge when skipTypeStage is ON.
+    // Stage pairs differ (start->event vs start->type/type->event), so preserve lane by team + y.
+    if(pickBest(old => String(old.source.team || old.target.team || "") === team)) return best;
+
+    // Tier 3: anchor-mode game switches can change opponent team names across bundles.
+    // If no same-team candidate exists, keep morph continuity by stage-pair lane.
+    if(pickBest(old => (
+      String(old.source.stage || "") === srcStage
+      && String(old.target.stage || "") === tgtStage
+    ))) return best;
+
+    // Tier 4: last resort, nearest lane regardless of metadata.
+    pickBest(() => true);
+    return best;
   }
 
   // Update column labels (no need to morph; keep it snappy).
@@ -2218,7 +2295,11 @@ function renderView(viewKey, opts = {}){
     twinSel.exit().transition().duration(animate ? 220 : 0).style("opacity", 0).remove();
     baselineLayer.selectAll("*").remove();
     nodeLayer.selectAll("*").remove();
-    currentGraphState = { nodesById: newNodesById };
+    currentGraphState = {
+      nodesById: newNodesById,
+      linksBySemantic: new Map(graph.links.map(l => [buildLinkSemanticKey(l), l])),
+      links: graph.links.slice(),
+    };
     linkLayer.selectAll("path.link").style("opacity", d => (hoveredTwinKey && d.key !== hoveredTwinKey) ? 0.14 : 1);
     return;
   }
@@ -2236,6 +2317,8 @@ function renderView(viewKey, opts = {}){
     .attr("stroke", d => xrayLinkStroke(d, baselineByKey))
     .attr("stroke-width", d => Math.max(1, d.width))
     .attr("d", d => {
+      const oldL = findPrevLink(d);
+      if(oldL) return linkGen(oldL);
       const srcNode = (d.source && d.source.id !== undefined) ? d.source : { id: d.sourceId, team: d.source && d.source.team, stage: d.source && d.source.stage, name: d.source && d.source.name };
       const tgtNode = (d.target && d.target.id !== undefined) ? d.target : { id: d.targetId, team: d.target && d.target.team, stage: d.target && d.target.stage, name: d.target && d.target.name };
       const oldS = findPrevNode(srcNode);
@@ -2434,7 +2517,11 @@ function renderView(viewKey, opts = {}){
 
   nodeSel.exit().transition().duration(animate ? 200 : 0).style("opacity", 0).remove();
 
-  currentGraphState = { nodesById: newNodesById };
+  currentGraphState = {
+    nodesById: newNodesById,
+    linksBySemantic: new Map(graph.links.map(l => [buildLinkSemanticKey(l), l])),
+    links: graph.links.slice(),
+  };
 
   // Defensive: ensure links are visible after morphs settle.
   // (Prevents rare join/transition timing issues during rapid PoC interactions.)
@@ -2462,6 +2549,7 @@ function updateScoreboard(){
   if(!el || !dataBundle) return;
   const meta = dataBundle.meta || {};
   let scoreA = 0, scoreB = 0;
+  let hasScoreRows = false;
   const playersMap = dataBundle.players || {};
   if(Array.isArray(dataBundle.boxscore_players)){
     dataBundle.boxscore_players.forEach(r => {
@@ -2469,18 +2557,28 @@ function updateScoreboard(){
       let teamName = null;
       if(pid && playersMap[pid] && playersMap[pid].team) teamName = playersMap[pid].team;
       if(!teamName && typeof r.team === 'string') teamName = r.team;
-      if(teamName === meta.team_a) scoreA += (r.points || 0);
-      else if(teamName === meta.team_b) scoreB += (r.points || 0);
+      if(teamName === meta.team_a){
+        scoreA += (r.points || 0);
+        hasScoreRows = true;
+      }
+      else if(teamName === meta.team_b){
+        scoreB += (r.points || 0);
+        hasScoreRows = true;
+      }
     });
   }
   const teamA = meta.team_a || "Team A";
   const teamB = meta.team_b || "Team B";
+  const matchupLine = hasScoreRows
+    ? `${teamA} ${scoreA} — ${scoreB} ${teamB}`
+    : `${teamA} vs ${teamB}`;
+  const titleEl = document.getElementById("page-title");
+  if(titleEl) titleEl.textContent = matchupLine;
   const ratings = (eloPayload && eloPayload.ratings) ? eloPayload.ratings : {};
   const eloA = formatEloValue(ratings[teamA]);
   const eloB = formatEloValue(ratings[teamB]);
-  const scoreLine = `${teamA} ${scoreA} — ${scoreB} ${teamB}`;
   const eloLine = `ELO: ${teamA} ${eloA} · ${teamB} ${eloB}`;
-  el.innerHTML = `<div>${scoreLine}</div><div style=\"font-size:12px;color:#9db0cf;\">${eloLine}</div>`;
+  el.innerHTML = `<div style=\"font-size:12px;color:#9db0cf;\">${eloLine}</div>`;
 }
 
 fetch(fetchUrl).then(r=>{
@@ -2495,7 +2593,7 @@ fetch(fetchUrl).then(r=>{
   const modeLabel = replayLab
     ? " · Mode: Live Replay Lab"
     : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
-  document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
+  document.getElementById("page-title").textContent=`${meta.team_a||""} vs ${meta.team_b||""}`;
   // Prefer showing a human-readable game date; fall back to season year from seasoncode; otherwise leave blank.
   (function(){
     var displayDate = "";
@@ -2580,8 +2678,19 @@ window.addEventListener('message', (ev) => {
         const modeLabel = replayLab
           ? " · Mode: Live Replay Lab"
           : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
-        document.getElementById("page-title").textContent=`Possession Flow Map — ${meta.team_a||""} vs ${meta.team_b||""}`;
-        document.getElementById("headline").textContent=`File: ${dataFile} — Season ${meta.seasoncode||"?"}, game ${meta.gamecode||"?"}.${modeLabel}`;
+        document.getElementById("page-title").textContent=`${meta.team_a||""} vs ${meta.team_b||""}`;
+        (function(){
+          var displayDate = "";
+          try{
+            if(meta && meta.gamedate) displayDate = String(meta.gamedate).trim();
+            if(!displayDate && meta && meta.seasoncode){
+              var match = String(meta.seasoncode).match(/(\d{4})/);
+              if(match) displayDate = match[1];
+            }
+          }catch(e){ displayDate = ""; }
+          var headlineText = displayDate ? (displayDate + (modeLabel || "")) : (modeLabel ? modeLabel.replace(/^\s*·\s*/, '') : '');
+          document.getElementById("headline").textContent = headlineText || '';
+        })();
         fetchEloForSeason(meta).then(payload => {
           eloPayload = payload;
           updateScoreboard();

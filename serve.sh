@@ -29,7 +29,7 @@ cp prod/score-diff-v2.html                     public/
 cp prod/score-d52-v2.html                      public/
 cp prod/style-insights.html                    public/
 cp prod/score-chart.js                         public/
-cp poss-flow-map-multi-drilldown-real-data.html public/
+
 cp game-flow-viewer.html public/
 cp game-flow-switcher.html public/
 cp src/sankey-renderer.js public/src/
