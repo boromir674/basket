@@ -181,7 +181,7 @@
         <div class="vh-game" id="gameMeta">Select a game.</div>
       </div>
       <div class="iframe-wrap">
-        <iframe id="viewer" src="./poss-flow-map-multi-drilldown-real-data.html" title="Sankey Viewer"></iframe>
+        <iframe id="viewer" src="../game-flow-viewer.html" title="Sankey Viewer"></iframe>
       </div>
     </div>
   </div>
@@ -297,7 +297,7 @@
   }
 
   async function resolveGameFile(g){
-    const rawPath = `assets/processed/${g.file}`;
+    const rawPath = `../assets/processed/${g.file}`;
     if(!anchorMode || !selectedTeam) return rawPath;
 
     const key = `${rawPath}|${selectedTeam}`;
@@ -360,11 +360,11 @@
         viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params }, '*');
       } else {
         // Fallback: set src (keeps older behavior)
-        viewer.src = `./poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+        viewer.src = `../game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
       }
     }catch(e){
       // On any failure, fallback to setting src
-      viewer.src = `./poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+      viewer.src = `../game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
     }
   }
 
@@ -430,7 +430,7 @@
     renderGames();
   });
 
-  fetch("assets/processed/games_manifest.json")
+  fetch("../assets/processed/games_manifest.json")
     .then((r) => r.json())
     .then((data) => {
       if(!Array.isArray(data) || !data.length){
@@ -455,7 +455,7 @@
       renderGames();
     })
     .catch(() => {
-      gamesEl.textContent = "Failed to load assets/processed/games_manifest.json";
+      gamesEl.textContent = "Failed to load ../assets/processed/games_manifest.json";
     });
 })();
 </script>

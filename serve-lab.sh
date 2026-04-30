@@ -15,6 +15,7 @@ cd "$SCRIPT_DIR"
 echo "→ Building public-lab/ bundle..."
 rm -rf public-lab
 mkdir -p public-lab/assets/processed public-lab/prod
+mkdir -p public-lab/src
 
 # Lab pages and modules.
 cp -r ./lab public-lab/lab
@@ -31,8 +32,9 @@ cp prod/style-insights.html     public-lab/prod/
 cp prod/score-chart.js          public-lab/prod/
 
 # Shared root-level pages referenced from lab landing.
-cp poss-flow-map-multi-drilldown-real-data.html public-lab/
-cp poss-flow-index.html                          public-lab/
+cp game-flow-viewer.html                         public-lab/
+cp game-flow-switcher.html                       public-lab/
+cp src/sankey-renderer.js                        public-lab/src/
 
 if ls data/*.json 1>/dev/null 2>&1; then
   cp data/*.json public-lab/assets/processed/

@@ -133,7 +133,13 @@
     .err{color:#ff7d7d; font-size:12px; white-space:pre-wrap;}
 
     @media (max-width: 980px){
+      .wrap{padding:10px;}
       .layout{grid-template-columns: 1fr;}
+      .layout > .card:nth-child(2){order:1;}
+      .layout > .card:nth-child(1){order:2;}
+      .chartWrap{padding:8px;}
+      .tr{padding:10px 0;}
+      .btn{min-height:36px;}
     }
   </style>
 </head>
@@ -166,7 +172,10 @@
         <select id="teamSelect"></select>
         <div class="row" style="margin-top:8px; justify-content:space-between;">
           <div class="muted" id="compareTip">Tip: Ctrl/Cmd+click teams in the rank list to compare.</div>
-          <button class="btn" id="clearBtn" style="min-width:120px;">Clear compare</button>
+          <div class="row" style="justify-content:flex-end;">
+            <button class="btn" id="compareModeBtn" style="min-width:132px;">Tap compare: Off</button>
+            <button class="btn" id="clearBtn" style="min-width:120px;">Clear compare</button>
+          </div>
         </div>
       </div>
 
@@ -236,6 +245,7 @@
   const xRangeEl = document.getElementById('xRange');
   const errEl = document.getElementById('err');
   const clearBtn = document.getElementById('clearBtn');
+  const compareModeBtn = document.getElementById('compareModeBtn');
   const compareChips = document.getElementById('compareChips');
   const srStatus = document.getElementById('srStatus');
 
@@ -322,6 +332,24 @@
 
   let stylesByTeam = Object.create(null);
   let styleCache = Object.create(null);
+  let compareTapMode = false;
+
+  function isCoarsePointer(){
+    try{
+      return !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+    }catch(_e){
+      return false;
+    }
+  }
+
+  function setCompareMode(next){
+    compareTapMode = !!next;
+    if(compareModeBtn){
+      compareModeBtn.textContent = compareTapMode ? 'Tap compare: On' : 'Tap compare: Off';
+      compareModeBtn.classList.toggle('primary', compareTapMode);
+      compareModeBtn.setAttribute('aria-pressed', compareTapMode ? 'true' : 'false');
+    }
+  }
 
   const CHART_W = 900;
   const CHART_H = 461;
@@ -1372,9 +1400,17 @@
     if(selectedTeams.length > WARN_COMPARE){
       setCompareTip(`Comparing ${selectedTeams.length} teams. Tip: hover chips to spotlight a team.`, 'warn');
     }else if(selectedTeams.length > 1){
-      setCompareTip(`Tip: Ctrl/Cmd+click teams in the rank list to compare (up to ${MAX_COMPARE}).`, '');
+      if(compareTapMode){
+        setCompareTip(`Tap rows to add/remove teams (up to ${MAX_COMPARE}).`, '');
+      }else{
+        setCompareTip(`Tip: Ctrl/Cmd+click teams in the rank list to compare (up to ${MAX_COMPARE}).`, '');
+      }
     }else{
-      setCompareTip('Tip: Ctrl/Cmd+click teams in the rank list to compare.', '');
+      if(compareTapMode){
+        setCompareTip('Tap rows to add/remove teams. Turn off Tap compare for single-select mode.', '');
+      }else{
+        setCompareTip('Tip: Ctrl/Cmd+click teams in the rank list to compare.', '');
+      }
     }
     if(!selectedTeams.length){
       selectedTeams.push(teamSelect.value || teams[0]);
@@ -1420,7 +1456,7 @@
       tr.appendChild(eloCell);
 
       tr.addEventListener('click', (ev) => {
-        const multi = !!(ev && (ev.ctrlKey || ev.metaKey));
+        const multi = !!(compareTapMode || (ev && (ev.ctrlKey || ev.metaKey)));
         if(multi) toggleTeam(r.team);
         else soloTeam(r.team);
       });
@@ -1428,7 +1464,7 @@
       tr.addEventListener('keydown', (ev) => {
         if(ev.key === 'Enter' || ev.key === ' '){
           ev.preventDefault();
-          const multi = !!(ev && (ev.ctrlKey || ev.metaKey));
+          const multi = !!(compareTapMode || (ev && (ev.ctrlKey || ev.metaKey || ev.shiftKey)));
           if(multi) toggleTeam(r.team);
           else soloTeam(r.team);
         }
@@ -1662,6 +1698,13 @@
     playBtn.addEventListener('click', togglePlay);
     endBtn.addEventListener('click', () => { stop(); setTick(fixtures.length); });
 
+    if(compareModeBtn){
+      compareModeBtn.addEventListener('click', () => {
+        setCompareMode(!compareTapMode);
+        render();
+      });
+    }
+
     if(clearBtn){
       clearBtn.addEventListener('click', () => {
         stop();
@@ -1688,6 +1731,9 @@
         setTick(tick + 1);
       }
     });
+
+    setCompareMode(isCoarsePointer());
+    render();
   }
 
   init();

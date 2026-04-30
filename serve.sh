@@ -18,6 +18,7 @@ cd "$SCRIPT_DIR"
 echo "→ Building public/ bundle..."
 rm -rf public
 mkdir -p public/assets/processed
+mkdir -p public/src
 
 cp prod/index.html                             public/
 cp prod/game-explorer.html                     public/
@@ -29,6 +30,9 @@ cp prod/score-d52-v2.html                      public/
 cp prod/style-insights.html                    public/
 cp prod/score-chart.js                         public/
 cp poss-flow-map-multi-drilldown-real-data.html public/
+cp game-flow-viewer.html public/
+cp game-flow-switcher.html public/
+cp src/sankey-renderer.js public/src/
 
 if ls data/*.json 1>/dev/null 2>&1; then
   cp data/*.json public/assets/processed/
