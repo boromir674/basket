@@ -32,8 +32,8 @@ cp prod/style-insights.html     public-lab/prod/
 cp prod/score-chart.js          public-lab/prod/
 
 # Shared root-level pages referenced from lab landing.
-cp game-flow-viewer.html                         public-lab/
-cp game-flow-switcher.html                       public-lab/
+cp prod/game-flow-viewer.html                    public-lab/prod/
+cp lab/game-flow-switcher.html                   public-lab/lab/
 cp src/sankey-renderer.js                        public-lab/src/
 
 if ls data/*.json 1>/dev/null 2>&1; then

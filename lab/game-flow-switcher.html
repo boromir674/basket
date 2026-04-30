@@ -62,7 +62,7 @@
     </div>
     <div class="card viewer-card">
       <div class="iframe-wrap">
-        <iframe id="viewer" src="./game-flow-viewer.html" title="Possession Flow Map"></iframe>
+        <iframe id="viewer" src="../prod/game-flow-viewer.html" title="Possession Flow Map"></iframe>
       </div>
     </div>
   </div>
@@ -135,7 +135,7 @@
     if (activeFile) postLoadBundle(activeFile);
   });
 
-  fetch('./assets/processed/games_manifest.json')
+  fetch('../assets/processed/games_manifest.json')
     .then(function (r) { return r.json(); })
     .then(function (entries) {
       if (!Array.isArray(entries) || !entries.length) {
@@ -147,7 +147,7 @@
       entries.forEach(function (g, idx) {
         var row = document.createElement('div');
         row.className = 'game-row';
-        row.dataset.file = `assets/processed/${g.file}`;
+        row.dataset.file = `../assets/processed/${g.file}`;
 
         var title = document.createElement('div');
         title.className = 'game-title';
@@ -167,7 +167,7 @@
         row.appendChild(meta2);
 
         row.addEventListener('click', function () {
-          loadGame(`assets/processed/${g.file}`);
+          loadGame(`../assets/processed/${g.file}`);
           setActive(row);
         });
 
@@ -175,7 +175,7 @@
 
         if (idx === 0) {
           // Auto-select first game.
-          loadGame(`assets/processed/${g.file}`);
+          loadGame(`../assets/processed/${g.file}`);
           setActive(row);
         }
       });

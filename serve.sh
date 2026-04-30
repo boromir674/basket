@@ -30,8 +30,7 @@ cp prod/score-d52-v2.html                      public/
 cp prod/style-insights.html                    public/
 cp prod/score-chart.js                         public/
 
-cp game-flow-viewer.html public/
-cp game-flow-switcher.html public/
+cp prod/game-flow-viewer.html public/
 cp src/sankey-renderer.js public/src/
 
 if ls data/*.json 1>/dev/null 2>&1; then

@@ -310,8 +310,8 @@ docker compose run --rm ops compute_elo --auto \
 - Pipeline: `build_from_euroleague_api.py`, `pipeline_runner.py`
 - Validation: `validate_output.py`
 - Batch sync + manifest: `season_sync.py`
-- Main viewer: `game-flow-viewer.html`
-- Landing/game switchers: `index.html`, `game-flow-switcher.html`, `prod/game-explorer.html`
+- Main viewer: `prod/game-flow-viewer.html`
+- Landing/game switchers: `index.html`, `lab/game-flow-switcher.html`, `prod/game-explorer.html`
 - Team notes/spike context: `efforts/`, `epics_catalog.md`, `.github/copilot-instructions.md`
 
 ## 9) Product Surface Separation (Prod vs Labs)

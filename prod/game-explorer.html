@@ -134,6 +134,57 @@
     /* Hide legacy/spike home which is no longer relevant for the MVP */
     a.btn[href="../index.html"] { display:none !important; }
     iframe.loading { opacity:.15; }
+
+    /* On narrow viewports, keep Sankey first-class: viewer on top and taller. */
+    @media (max-width: 1060px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .layout > .card:first-child {
+        order: 2;
+      }
+      .layout > .card:last-child {
+        order: 1;
+      }
+      .wrap {
+        padding: 10px;
+      }
+      .viewer-head {
+        margin-bottom: 6px;
+      }
+      iframe {
+        min-width: 0;
+        height: 84vh;
+        min-height: 560px;
+      }
+      .games {
+        max-height: 44vh;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top {
+        margin-bottom: 8px;
+      }
+      .title {
+        font-size: 18px;
+      }
+      .btn {
+        font-size: 11px;
+        padding: 6px 9px;
+      }
+      .viewer-head {
+        min-height: 52px;
+        padding: 7px 8px;
+      }
+      iframe {
+        height: 86vh;
+        min-height: 520px;
+      }
+      .games {
+        max-height: 40vh;
+      }
+    }
   </style>
 </head>
 <body>
@@ -196,7 +247,7 @@
         <div class="vh-game" id="gameHomeAway">Original matchup: Home -- · Away --</div>
       </div>
       <div class="iframe-wrap">
-        <iframe id="viewer" src="../game-flow-viewer.html" title="Sankey Viewer"></iframe>
+        <iframe id="viewer" src="./game-flow-viewer.html" title="Sankey Viewer"></iframe>
       </div>
     </div>
   </div>
@@ -437,11 +488,11 @@
         viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params }, '*');
       } else {
         // Fallback: set src (keeps older behavior)
-        viewer.src = `../game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
+        viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
       }
     }catch(e){
       // On any failure, fallback to setting src
-      viewer.src = `../game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
+      viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
     }
   }
 
