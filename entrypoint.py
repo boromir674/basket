@@ -105,6 +105,8 @@ def main(argv: list[str] | None = None) -> int:
         print("  entrypoint.py compute_elo --seasoncodes E2022,E2023,E2024 [--output-dir assets/processed] [--output-name elo_multiseason.json]")
         print("  entrypoint.py compute_elo --auto [--output-dir assets/processed] [--output-name elo_multiseason.json] [--force]")
         print("  entrypoint.py rebuild_manifest --seasoncode E2021 [--output-dir assets/processed]")
+        print("  entrypoint.py build_score_timeline [--seasoncode E2025] [--gamecode 54,55] [--raw-dir assets] [--output-dir data]")
+        print("  entrypoint.py style_insights --seasoncode E2025 [--data-dir data] [--output-dir data]")
         print("  entrypoint.py check_dates [--data-dir /app/data] [--seasoncode E2025]")
         print()
         print("Examples:")
@@ -565,6 +567,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"=== Rebuilding manifest for {label} in {out_dir} ===")
         build_manifest(out_dir, sc)
         return 0
+
+    if command == "build_score_timeline":
+        from build_score_timeline import main as build_score_timeline_main
+
+        return build_score_timeline_main(rest)
+
+    if command == "style_insights":
+        from style_insights import main as style_insights_main
+
+        return style_insights_main(rest)
 
     print(f"Unknown command: {command}")
     return 1

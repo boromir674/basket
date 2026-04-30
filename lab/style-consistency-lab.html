@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Style Consistency Lab</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <style>
+    :root {
+      --bg: #071223;
+      --panel: #0f2443;
+      --line: #2f4975;
+      --text: #eaf2ff;
+      --muted: #9ab0d4;
+      --accent: #6ec8ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 8% 0%, #1a365f 0%, #09162b 45%), linear-gradient(180deg, #0c1e39, #071223);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 16px 14px 30px; }
+    .top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+    h1 { margin:0; font-size:24px; }
+    .muted { color: var(--muted); font-size: 12px; }
+    .btn {
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #1a355e;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 10px;
+      margin-bottom: 12px;
+    }
+    .group { display:flex; flex-direction:column; gap:4px; }
+    .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    select, button, input {
+      background: #102643;
+      border: 1px solid #3a5d8f;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 9px;
+      font-size: 13px;
+    }
+    .labs {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #0d223f;
+      padding: 11px;
+      min-height: 220px;
+    }
+    .card h2 { margin: 0 0 4px; font-size: 15px; }
+    .desc { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+    .legend { display:flex; gap:12px; flex-wrap:wrap; font-size:11px; color:var(--muted); margin:8px 0; }
+    .sw { width:12px; height:12px; display:inline-block; border-radius:3px; margin-right:4px; }
+    #status { margin-bottom: 10px; font-size: 12px; color: var(--muted); }
+    .full { grid-column: 1 / -1; }
+    .inspector-grid { display:grid; gap:10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .pill {
+      display:inline-block;
+      font-size:11px;
+      border-radius:999px;
+      padding:4px 8px;
+      border:1px solid #2f4975;
+      color:#9ab0d4;
+      background:#102643;
+    }
+    .pill.good { color:#b7ffd9; border-color:#23624c; background:#0f2c24; }
+    .pill.bad { color:#ffbcc8; border-color:#6a1125; background:#3a1620; }
+    .kv { font-size:12px; color:#cddcf3; margin:6px 0; }
+    .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .tb-grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
+    .tb-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #0b1f39;
+      padding: 10px;
+    }
+    .tb-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .tb-sub { color: var(--muted); font-size: 11px; margin-bottom: 8px; }
+    .mini-title { font-size: 11px; color: var(--muted); margin: 8px 0 4px; text-transform: uppercase; letter-spacing: .06em; }
+    .rank-wrap {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 10px;
+      margin-bottom: 12px;
+    }
+    .rank-grid {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      max-height: 280px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+    .rank-item {
+      border: 1px solid #2d4b78;
+      border-radius: 10px;
+      padding: 8px;
+      background: #0e2442;
+      cursor: pointer;
+    }
+    .rank-item:hover { border-color: #5d8fcd; background: #14305a; }
+    .rank-item.active { border-color: #9effd5; box-shadow: 0 0 0 1px #9effd577 inset; }
+    .rank-line { display:flex; justify-content:space-between; font-size:12px; }
+    .rank-meta { color: var(--muted); font-size: 11px; margin-top: 4px; }
+    .hover-card {
+      position: fixed;
+      z-index: 80;
+      pointer-events: none;
+      min-width: 210px;
+      max-width: 320px;
+      border: 1px solid #5d8fcd;
+      border-radius: 10px;
+      background: rgba(7,18,35,0.96);
+      backdrop-filter: blur(6px);
+      color: #eaf2ff;
+      padding: 8px;
+      font-size: 12px;
+      display: none;
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+    }
+    .hover-title { font-weight: 700; margin-bottom: 4px; }
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(2,7,16,.72);
+      z-index: 120;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    .modal.open { display: flex; }
+    .modal-card {
+      width: min(1280px, 98vw);
+      max-height: 94vh;
+      overflow: auto;
+      border: 1px solid #315385;
+      border-radius: 14px;
+      background: #08172d;
+      padding: 12px;
+    }
+    .modal-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:8px; }
+    .modal-title { font-size: 16px; margin: 0; }
+    .modal-sub { color: var(--muted); font-size: 12px; }
+    .close { border-radius: 999px; }
+    .proof-grid { display:grid; gap:10px; grid-template-columns: 1fr; }
+    @media (min-width: 960px) {
+      .proof-grid { grid-template-columns: 1fr 1fr; }
+      .proof-grid .full { grid-column: 1 / -1; }
+    }
+    .proof { border:1px solid #2b4468; border-radius: 10px; overflow: hidden; background: #091c35; }
+    .proof h4 { margin: 0; padding: 8px 10px; font-size: 12px; color: #cfe0fb; border-bottom: 1px solid #2b4468; }
+    .proof iframe { width: 100%; height: 360px; border: 0; background: #071223; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Consistency and Adaptability Lab</h1>
+        <div class="muted">All candidate visual options rendered together from reusable components for side-by-side decisioning.</div>
+      </div>
+      <div style="display:flex; gap:8px;">
+        <a class="btn" href="../index.html">MVP Home</a>
+        <a class="btn" href="./index.html">Lab Home</a>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="group">
+        <label class="label" for="season">Season</label>
+        <select id="season">
+          <option value="E2025">E2025</option>
+          <option value="E2024">E2024</option>
+          <option value="E2023">E2023</option>
+          <option value="E2022">E2022</option>
+          <option value="E2021">E2021</option>
+        </select>
+      </div>
+      <div class="group">
+        <label class="label" for="team">Team</label>
+        <select id="team"></select>
+      </div>
+      <div class="group" style="justify-content:flex-end;">
+        <label class="label" style="opacity:0">Render</label>
+        <button id="load">Render season consistency</button>
+      </div>
+    </div>
+
+    <div id="status">Load a season to compare consistency options.</div>
+
+    <section class="rank-wrap">
+      <h2 style="margin:0 0 6px; font-size:15px;">Consistency Ranking (Shot Selection / Diet)</h2>
+      <div class="desc">Click a team rank to load season-level consistency visuals.</div>
+      <div id="rank-list" class="rank-grid"></div>
+    </section>
+
+    <div class="labs">
+      <section class="card full">
+        <h2>Option 4: Season Ternary Cloud</h2>
+        <div class="desc">Each dot is one game-level attempt-share vector for the selected team and season. Tighter cloud means higher consistency.</div>
+        <div id="opt-season-cloud"></div>
+      </section>
+
+      <section class="card full">
+        <h2>Option 5: Shot-Pct Variance Strip</h2>
+        <div class="desc">For each shot type, dots show per-game shares; band is ±1 standard deviation around season mean. Narrower bands indicate lower variance.</div>
+        <div id="opt-variance-strip"></div>
+      </section>
+
+      <section class="card full">
+        <h2>Sanity Inspector: Top vs Bottom Consistency Teams</h2>
+        <div class="desc">League extremes for the season: Option 4 (season ternary cloud) and Option 5 (season variance strip) rendered side-by-side for highest and lowest consistency teams.</div>
+        <div id="consistency-inspector"></div>
+      </section>
+    </div>
+  </div>
+
+  <div id="viz-hover" class="hover-card"></div>
+
+  <div id="game-modal" class="modal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div>
+          <h3 id="modal-title" class="modal-title">Game Proof</h3>
+          <div id="modal-sub" class="modal-sub"></div>
+        </div>
+        <button id="modal-close" class="close">Close</button>
+      </div>
+      <div class="proof-grid">
+        <section class="proof">
+          <h4>Score Diff Full-Paint (Points)</h4>
+          <iframe id="proof-full-points" loading="lazy"></iframe>
+        </section>
+        <section class="proof">
+          <h4>Score Diff Full-Paint (Attempts)</h4>
+          <iframe id="proof-full-attempts" loading="lazy"></iframe>
+        </section>
+        <section class="proof full">
+          <h4>Score Diff Cone</h4>
+          <iframe id="proof-cone" loading="lazy"></iframe>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import {
+      buildGameAttemptVector,
+      renderSeasonTernaryCloud,
+      renderShotPctVarianceStrip,
+    } from "./style-consistency-viz-components.js";
+
+    const seasonEl = document.getElementById("season");
+    const teamEl = document.getElementById("team");
+    const loadBtn = document.getElementById("load");
+    const statusEl = document.getElementById("status");
+
+    const seasonCloudEl = document.getElementById("opt-season-cloud");
+    const varianceStripEl = document.getElementById("opt-variance-strip");
+    const inspectorEl = document.getElementById("consistency-inspector");
+    const rankListEl = document.getElementById("rank-list");
+    const hoverEl = document.getElementById("viz-hover");
+    const modalEl = document.getElementById("game-modal");
+    const modalTitleEl = document.getElementById("modal-title");
+    const modalSubEl = document.getElementById("modal-sub");
+    const modalCloseEl = document.getElementById("modal-close");
+    const proofFullPointsEl = document.getElementById("proof-full-points");
+    const proofFullAttemptsEl = document.getElementById("proof-full-attempts");
+    const proofConeEl = document.getElementById("proof-cone");
+
+    let stylePayload = null;
+    let manifestCache = null;
+    const seasonVectorCache = new Map();
+    let chartBasePathCache = null;
+
+    async function fetchJson(url) {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      return res.json();
+    }
+
+    function updateTeamSelect(teams) {
+      teamEl.innerHTML = "";
+      teams.forEach((t) => {
+        const opt = document.createElement("option");
+        opt.value = t;
+        opt.textContent = t;
+        teamEl.appendChild(opt);
+      });
+    }
+
+    function baselineForTeam(teamCode) {
+      if (!stylePayload || !Array.isArray(stylePayload.teams)) return null;
+      const row = stylePayload.teams.find((t) => t.team_code === teamCode);
+      if (!row || !row.style || !row.style.attempts_overall_share) return null;
+      return row.style.attempts_overall_share;
+    }
+
+    function teamCodesFromStylePayload() {
+      if (!stylePayload) return [];
+      if (stylePayload.rankings && Array.isArray(stylePayload.rankings.consistency)) {
+        return stylePayload.rankings.consistency.map((row) => row.team_code);
+      }
+      if (Array.isArray(stylePayload.teams)) {
+        return stylePayload.teams.map((row) => row.team_code);
+      }
+      return [];
+    }
+
+    function styleRowForTeam(teamCode) {
+      if (!stylePayload || !Array.isArray(stylePayload.teams)) return null;
+      return stylePayload.teams.find((t) => t.team_code === teamCode) || null;
+    }
+
+    function l1DistanceToShare(vector, share) {
+      return (
+        Math.abs(vector.ftShare - Number(share.ft || 0))
+        + Math.abs(vector.twoShare - Number(share.two || 0))
+        + Math.abs(vector.threeShare - Number(share.three || 0))
+      );
+    }
+
+    function centroidShare(vectors) {
+      if (!vectors.length) return { ft: 0, two: 0, three: 0 };
+      const n = vectors.length;
+      return {
+        ft: vectors.reduce((s, v) => s + v.ftShare, 0) / n,
+        two: vectors.reduce((s, v) => s + v.twoShare, 0) / n,
+        three: vectors.reduce((s, v) => s + v.threeShare, 0) / n,
+      };
+    }
+
+    function computeConsistencyExtremes(vectors, baselineShare) {
+      if (!vectors.length) return null;
+      const baseline = baselineShare || centroidShare(vectors);
+      const scored = vectors.map((v) => ({ ...v, dist: l1DistanceToShare(v, baseline) }));
+      scored.sort((a, b) => a.dist - b.dist);
+      return {
+        baseline,
+        most: scored[0],
+        least: scored[scored.length - 1],
+      };
+    }
+
+    function topAndBottomConsistencyTeams() {
+      if (!stylePayload || !stylePayload.rankings || !Array.isArray(stylePayload.rankings.consistency)) {
+        return { top: null, bottom: null };
+      }
+      const rows = stylePayload.rankings.consistency;
+      if (!rows.length) return { top: null, bottom: null };
+      return {
+        top: rows[0] || null,
+        bottom: rows[rows.length - 1] || null,
+      };
+    }
+
+    function baselineForStyleRow(styleRow) {
+      if (!styleRow || !styleRow.style || !styleRow.style.attempts_overall_share) return null;
+      return styleRow.style.attempts_overall_share;
+    }
+
+    function showHover(event, teamCode, point, sourceLabel) {
+      const metric = point.metric ? ` · ${point.metric}` : "";
+      hoverEl.style.display = "block";
+      hoverEl.style.left = `${event.clientX + 14}px`;
+      hoverEl.style.top = `${event.clientY + 14}px`;
+      hoverEl.innerHTML = `
+        <div class="hover-title">${sourceLabel}${metric}</div>
+        <div>Team: <strong>${teamCode}</strong> · Game: <strong>G${point.gamecode}</strong></div>
+        <div>1PT ${Math.round(point.ftShare * 100)}% · 2PT ${Math.round(point.twoShare * 100)}% · 3PT ${Math.round(point.threeShare * 100)}%</div>
+        <div style="color:#9ab0d4; margin-top:3px;">Click to open 3-chart score-diff proof modal.</div>
+      `;
+    }
+
+    function hideHover() {
+      hoverEl.style.display = "none";
+    }
+
+    async function resolveChartBasePath() {
+      if (chartBasePathCache) return chartBasePathCache;
+
+      // Support both layouts:
+      // 1) serve.sh public bundle => chart pages at root
+      // 2) repo-root static serving => chart pages under /prod
+      const candidates = [
+        "../",
+        "../prod/",
+        "./",
+        "./prod/",
+      ];
+
+      for (const base of candidates) {
+        try {
+          const res = await fetch(`${base}score-d52-v2.html`, { method: "HEAD" });
+          if (res.ok) {
+            chartBasePathCache = base;
+            return chartBasePathCache;
+          }
+        } catch (_err) {
+          // Keep trying candidates.
+        }
+      }
+
+      // Safe fallback for public/lab execution.
+      chartBasePathCache = "../";
+      return chartBasePathCache;
+    }
+
+    async function openGameModal(teamCode, season, gamecode, sourceLabel) {
+      const base = `season=${encodeURIComponent(season)}&game=${encodeURIComponent(gamecode)}&lockMode=1`;
+      const chartBase = await resolveChartBasePath();
+      proofFullPointsEl.src = `${chartBase}score-d52-v2.html?${base}&mode=points`;
+      proofFullAttemptsEl.src = `${chartBase}score-d52-v2.html?${base}&mode=attempts`;
+      proofConeEl.src = `${chartBase}score-diff-v2.html?${base}&mode=points`;
+      modalTitleEl.textContent = `${teamCode} · G${gamecode} · Score Diff Proof`;
+      modalSubEl.textContent = `${sourceLabel} · Season ${season} · full-paint (points + attempts) plus cone.`;
+      modalEl.classList.add("open");
+    }
+
+    function closeGameModal() {
+      modalEl.classList.remove("open");
+      proofFullPointsEl.src = "";
+      proofFullAttemptsEl.src = "";
+      proofConeEl.src = "";
+    }
+
+    function makeVizInteractions(teamCode, season, sourceLabel) {
+      return {
+        onPointHover: (event, point) => showHover(event, teamCode, point, sourceLabel),
+        onPointLeave: () => hideHover(),
+        onPointClick: (_event, point) => {
+          openGameModal(teamCode, season, point.gamecode, sourceLabel).catch((err) => {
+            statusEl.textContent = `Modal failed: ${err.message}`;
+          });
+        },
+      };
+    }
+
+    function renderRankingPanel(activeTeamCode) {
+      rankListEl.innerHTML = "";
+      const ranking = stylePayload && stylePayload.rankings && Array.isArray(stylePayload.rankings.consistency)
+        ? stylePayload.rankings.consistency
+        : [];
+      if (!ranking.length) {
+        rankListEl.textContent = "No consistency ranking found in payload.";
+        return;
+      }
+
+      ranking.forEach((row, idx) => {
+        const item = document.createElement("button");
+        item.className = `rank-item${row.team_code === activeTeamCode ? " active" : ""}`;
+        item.innerHTML = `
+          <div class="rank-line"><strong>#${idx + 1} ${row.team_code}</strong><span>${Number(row.score).toFixed(2)}</span></div>
+          <div class="rank-meta">Consistency score (higher = tighter season diet spread)</div>
+        `;
+        item.addEventListener("click", () => {
+          if (teamEl.value !== row.team_code) {
+            teamEl.value = row.team_code;
+          }
+          renderAll().catch((err) => {
+            statusEl.textContent = `Render failed: ${err.message}`;
+          });
+        });
+        rankListEl.appendChild(item);
+      });
+    }
+
+    async function renderTopBottomInspector(season) {
+      inspectorEl.innerHTML = "";
+      const { top, bottom } = topAndBottomConsistencyTeams();
+      if (!top || !bottom) {
+        inspectorEl.textContent = "No consistency rankings found for this season payload.";
+        return;
+      }
+
+      const topRow = styleRowForTeam(top.team_code);
+      const bottomRow = styleRowForTeam(bottom.team_code);
+      if (!topRow || !bottomRow) {
+        inspectorEl.textContent = "Could not resolve top/bottom team details from style payload.";
+        return;
+      }
+
+      const [
+        topVectors,
+        bottomVectors,
+      ] = await Promise.all([
+        loadSeasonTeamVectors(season, top.team_code),
+        loadSeasonTeamVectors(season, bottom.team_code),
+      ]);
+
+      const grid = document.createElement("div");
+      grid.className = "tb-grid";
+
+      function buildTeamCard(rankLabel, rankClass, rankScore, teamCode, vectors, styleRow) {
+        const card = document.createElement("div");
+        card.className = "tb-card";
+
+        const title = document.createElement("div");
+        title.className = "tb-title";
+        title.innerHTML = `<span class="pill ${rankClass}">${rankLabel}</span> ${teamCode}`;
+
+        const sub = document.createElement("div");
+        sub.className = "tb-sub";
+        sub.textContent = `Consistency score: ${Number(rankScore).toFixed(2)} • season sample size: ${vectors.length} games`;
+
+        const ext = computeConsistencyExtremes(vectors, baselineForStyleRow(styleRow));
+
+        const t4 = document.createElement("div");
+        t4.className = "mini-title";
+        t4.textContent = "Option 4: Season ternary cloud";
+        const c4 = document.createElement("div");
+        renderSeasonTernaryCloud(
+          c4,
+          vectors,
+          baselineForStyleRow(styleRow),
+          ext ? { mostGamecode: ext.most.gamecode, leastGamecode: ext.least.gamecode } : null,
+          makeVizInteractions(teamCode, season, `${rankLabel} · Option 4`),
+        );
+
+        const t5 = document.createElement("div");
+        t5.className = "mini-title";
+        t5.textContent = "Option 5: Shot-pct variance strip";
+        const c5 = document.createElement("div");
+        renderShotPctVarianceStrip(
+          c5,
+          vectors,
+          ext ? { mostGamecode: ext.most.gamecode, leastGamecode: ext.least.gamecode } : null,
+          makeVizInteractions(teamCode, season, `${rankLabel} · Option 5`),
+        );
+
+        card.appendChild(title);
+        card.appendChild(sub);
+        card.appendChild(t4);
+        card.appendChild(c4);
+        card.appendChild(t5);
+        card.appendChild(c5);
+        return card;
+      }
+
+      grid.appendChild(
+        buildTeamCard("Top consistency", "good", top.score, top.team_code, topVectors, topRow),
+      );
+      grid.appendChild(
+        buildTeamCard("Bottom consistency", "bad", bottom.score, bottom.team_code, bottomVectors, bottomRow),
+      );
+
+      inspectorEl.appendChild(grid);
+    }
+
+    async function fetchManifest() {
+      if (manifestCache) return manifestCache;
+      const urls = [
+        "../assets/processed/games_manifest.json",
+        "../data/games_manifest.json",
+      ];
+      for (const url of urls) {
+        try {
+          manifestCache = await fetchJson(url);
+          return manifestCache;
+        } catch (_err) {
+          // Try fallback location.
+        }
+      }
+      throw new Error("Could not load games manifest from processed or data path.");
+    }
+
+    async function mapWithConcurrency(items, limit, worker) {
+      const queue = [...items];
+      const workers = Array.from({ length: Math.max(1, limit) }, async () => {
+        while (queue.length) {
+          const item = queue.shift();
+          await worker(item);
+        }
+      });
+      await Promise.all(workers);
+    }
+
+    async function loadSeasonTeamVectors(season, teamCode) {
+      const cacheKey = `${season}::${teamCode}`;
+      if (seasonVectorCache.has(cacheKey)) {
+        return seasonVectorCache.get(cacheKey);
+      }
+
+      const manifest = await fetchManifest();
+      const gamecodes = manifest
+        .filter((row) => String(row.seasoncode) === season)
+        .map((row) => Number(row.gamecode))
+        .filter((v) => Number.isFinite(v));
+
+      if (!gamecodes.length) {
+        throw new Error(
+          `games_manifest.json has no entries for ${season}. Rebuild manifest for all seasons.`,
+        );
+      }
+
+      const vectors = [];
+      await mapWithConcurrency(gamecodes, 24, async (gamecode) => {
+        try {
+          const payload = await fetchJson(`../assets/raw_pts_${season}_${gamecode}.json`);
+          const vector = buildGameAttemptVector(Array.isArray(payload.Rows) ? payload.Rows : [], teamCode);
+          if (vector) {
+            vectors.push({ ...vector, gamecode });
+          }
+        } catch (_err) {
+          // Missing games are expected in some local snapshots.
+        }
+      });
+
+      vectors.sort((a, b) => a.gamecode - b.gamecode);
+      seasonVectorCache.set(cacheKey, vectors);
+      return vectors;
+    }
+
+    async function renderAll() {
+      const team = teamEl.value;
+      if (!team) return;
+
+      const season = seasonEl.value;
+      statusEl.textContent = `Rendering season distribution options for ${team} in ${season}...`;
+      renderRankingPanel(team);
+      const seasonVectors = await loadSeasonTeamVectors(season, team);
+      const baseline = baselineForTeam(team);
+      const extremes = computeConsistencyExtremes(seasonVectors, baseline);
+      renderSeasonTernaryCloud(
+        seasonCloudEl,
+        seasonVectors,
+        baseline,
+        extremes ? { mostGamecode: extremes.most.gamecode, leastGamecode: extremes.least.gamecode } : null,
+        makeVizInteractions(team, season, "Selected Team · Option 4"),
+      );
+      renderShotPctVarianceStrip(
+        varianceStripEl,
+        seasonVectors,
+        extremes ? { mostGamecode: extremes.most.gamecode, leastGamecode: extremes.least.gamecode } : null,
+        makeVizInteractions(team, season, "Selected Team · Option 5"),
+      );
+      await renderTopBottomInspector(season);
+
+      statusEl.textContent = `Rendered season-level consistency views for ${team} in ${season}. Season sample: ${seasonVectors.length} games.`;
+    }
+
+    async function loadAll(opts = {}) {
+      const preferredTeam = opts.preferredTeam || null;
+      const season = seasonEl.value;
+      statusEl.textContent = "Loading style payload...";
+
+      try {
+        stylePayload = await fetchJson(`../assets/processed/style_insights_${season}.json`)
+          .catch(async () => fetchJson(`../data/style_insights_${season}.json`));
+
+        const codes = teamCodesFromStylePayload();
+        if (!codes.length) {
+          statusEl.textContent = `No teams found in style insights for ${season}.`;
+          seasonCloudEl.innerHTML = "";
+          varianceStripEl.innerHTML = "";
+          inspectorEl.innerHTML = "";
+          teamEl.innerHTML = "";
+          return;
+        }
+
+        updateTeamSelect(codes);
+        if (preferredTeam && codes.includes(preferredTeam)) {
+          teamEl.value = preferredTeam;
+        }
+        await renderAll();
+      } catch (err) {
+        statusEl.textContent = `Load failed: ${err.message}`;
+      }
+    }
+
+    loadBtn.addEventListener("click", () => {
+      loadAll({ preferredTeam: teamEl.value }).catch((err) => {
+        statusEl.textContent = `Load failed: ${err.message}`;
+      });
+    });
+    seasonEl.addEventListener("change", () => {
+      loadAll({ preferredTeam: teamEl.value }).catch((err) => {
+        statusEl.textContent = `Load failed: ${err.message}`;
+      });
+    });
+    teamEl.addEventListener("change", () => {
+      renderAll().catch((err) => {
+        statusEl.textContent = `Render failed: ${err.message}`;
+      });
+    });
+
+    modalCloseEl.addEventListener("click", closeGameModal);
+    modalEl.addEventListener("click", (event) => {
+      if (event.target === modalEl) closeGameModal();
+    });
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modalEl.classList.contains("open")) {
+        closeGameModal();
+      }
+    });
+
+    loadAll();
+  </script>
+</body>
+</html>

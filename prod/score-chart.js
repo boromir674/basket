@@ -10,9 +10,15 @@ const COLORS = {
 function classifyAction(idAction) {
   if (!idAction) return null;
   const action = idAction.trim().toUpperCase();
-  if (action === 'FTM') return 'ft';
-  if (action === '2FGM') return 'two';
-  if (action === '3FGM') return 'three';
+  if (action === 'FTM' || action === 'FTA') {
+    return { type: 'ft', isMake: action === 'FTM' };
+  }
+  if (action === '2FGM' || action === '2FGA') {
+    return { type: 'two', isMake: action === '2FGM' };
+  }
+  if (action === '3FGM' || action === '3FGA') {
+    return { type: 'three', isMake: action === '3FGM' };
+  }
   return null;
 }
 
@@ -35,22 +41,26 @@ function processRows(rows) {
   }
 
   const acc = {
-    home: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0 },
-    away: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0 },
+    home: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0, ftA: 0, twoA: 0, threeA: 0 },
+    away: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0, ftA: 0, twoA: 0, threeA: 0 },
   };
 
   const timeline = [];
 
   for (const row of rows) {
-    const type = classifyAction(row.ID_ACTION);
-    if (!type) continue;
+    const parsed = classifyAction(row.ID_ACTION);
+    if (!parsed) continue;
 
     const teamKey = (row.TEAM || '').trim() === homeTeam ? 'home' : 'away';
-    const points = row.POINTS || 0;
+    const type = parsed.type;
+    const points = parsed.isMake ? (row.POINTS || 0) : 0;
 
-    acc[teamKey][type] += points;
-    acc[teamKey].total += points;
-    acc[teamKey][type + 'M'] += 1;
+    acc[teamKey][type + 'A'] += 1;
+    if (parsed.isMake) {
+      acc[teamKey][type] += points;
+      acc[teamKey].total += points;
+      acc[teamKey][type + 'M'] += 1;
+    }
 
     const ptsA = row.POINTS_A || 0;
     const ptsB = row.POINTS_B || 0;
@@ -88,8 +98,8 @@ function processRows(rows) {
     ptsB: 0,
     diff: 0,
     orientedDiff: 0,
-    home: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0 },
-    away: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0 },
+    home: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0, ftA: 0, twoA: 0, threeA: 0 },
+    away: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0, ftA: 0, twoA: 0, threeA: 0 },
   });
 
   return { points: timeline, homeTeam, awayTeam };
@@ -145,7 +155,17 @@ function renderSharedAxes(g, x, y, innerWidth, innerHeight, maxMinute) {
     .call((ax) => ax.selectAll('line').attr('stroke', '#1e3a5f'));
 }
 
-function renderHover({ variant, g, x, y, yAccessor, pts, innerWidth, innerHeight, tooltip }) {
+function getStackModeValues(teamAcc, mode) {
+  if (mode === 'makes') {
+    return { ft: teamAcc.ftM || 0, two: teamAcc.twoM || 0, three: teamAcc.threeM || 0 };
+  }
+  if (mode === 'attempts') {
+    return { ft: teamAcc.ftA || 0, two: teamAcc.twoA || 0, three: teamAcc.threeA || 0 };
+  }
+  return { ft: teamAcc.ft || 0, two: teamAcc.two || 0, three: teamAcc.three || 0 };
+}
+
+function renderHover({ variant, currentMode, g, x, y, yAccessor, pts, innerWidth, innerHeight, tooltip }) {
   const { ttTitle, ttScore, ttDiff, ttMode } = tooltip;
   const bisect = window.d3.bisector((d) => d.minute).left;
 
@@ -177,10 +197,12 @@ function renderHover({ variant, g, x, y, yAccessor, pts, innerWidth, innerHeight
       hoverLine.attr('x1', x(point.minute)).attr('x2', x(point.minute)).style('display', null);
       hoverDot.attr('cx', x(point.minute)).attr('cy', y(yAccessor(point))).style('display', null);
 
-      const homeTotal = point.home.ft + point.home.two + point.home.three || 1;
-      const awayTotal = point.away.ft + point.away.two + point.away.three || 1;
-      const homeMix = `FT ${((point.home.ft / homeTotal) * 100).toFixed(0)}% · 2PT ${((point.home.two / homeTotal) * 100).toFixed(0)}% · 3PT ${((point.home.three / homeTotal) * 100).toFixed(0)}%`;
-      const awayMix = `FT ${((point.away.ft / awayTotal) * 100).toFixed(0)}% · 2PT ${((point.away.two / awayTotal) * 100).toFixed(0)}% · 3PT ${((point.away.three / awayTotal) * 100).toFixed(0)}%`;
+      const homeVals = getStackModeValues(point.home, currentMode);
+      const awayVals = getStackModeValues(point.away, currentMode);
+      const homeTotal = homeVals.ft + homeVals.two + homeVals.three || 1;
+      const awayTotal = awayVals.ft + awayVals.two + awayVals.three || 1;
+      const homeMix = `FT ${((homeVals.ft / homeTotal) * 100).toFixed(0)}% · 2PT ${((homeVals.two / homeTotal) * 100).toFixed(0)}% · 3PT ${((homeVals.three / homeTotal) * 100).toFixed(0)}%`;
+      const awayMix = `FT ${((awayVals.ft / awayTotal) * 100).toFixed(0)}% · 2PT ${((awayVals.two / awayTotal) * 100).toFixed(0)}% · 3PT ${((awayVals.three / awayTotal) * 100).toFixed(0)}%`;
       const minLabel = point.console ? point.console : `${Math.floor(point.minute)}'`;
 
       ttTitle.textContent = `Q${Math.min(4, Math.floor(point.minute / 10) + 1)} · ${minLabel}`;
@@ -253,13 +275,11 @@ function renderDiffChart(chartArea, tooltip, data, currentMode) {
     if (mode === 'points') {
       return { ft: teamAcc.ft, two: teamAcc.two, three: teamAcc.three };
     }
-    const ft = teamAcc.ftM;
-    const two = teamAcc.twoM;
-    const three = teamAcc.threeM;
-    const totalMakes = ft + two + three;
-    if (!totalMakes || !totalScore) return { ft: 0, two: 0, three: 0 };
-    const scale = totalScore / totalMakes;
-    return { ft: ft * scale, two: two * scale, three: three * scale };
+    const vals = getStackModeValues(teamAcc, mode);
+    const total = vals.ft + vals.two + vals.three;
+    if (!total || !totalScore) return { ft: 0, two: 0, three: 0 };
+    const scale = totalScore / total;
+    return { ft: vals.ft * scale, two: vals.two * scale, three: vals.three * scale };
   }
 
   function buildLayers(side, mode) {
@@ -312,7 +332,7 @@ function renderDiffChart(chartArea, tooltip, data, currentMode) {
   }
 
   renderSharedAxes(g, x, y, innerWidth, innerHeight, maxMinute);
-  renderHover({ variant: 'diff', g, x, y, yAccessor: (point) => point.diff, pts, innerWidth, innerHeight, tooltip });
+  renderHover({ variant: 'diff', currentMode, g, x, y, yAccessor: (point) => point.diff, pts, innerWidth, innerHeight, tooltip });
   chartArea.appendChild(svg.node());
 }
 
@@ -362,9 +382,10 @@ function renderD52Chart(chartArea, tooltip, data, currentMode) {
   const types = ['ft', 'two', 'three'];
 
   function getShares(teamAcc, mode) {
-    const ft = mode === 'makes' ? teamAcc.ftM : teamAcc.ft;
-    const two = mode === 'makes' ? teamAcc.twoM : teamAcc.two;
-    const three = mode === 'makes' ? teamAcc.threeM : teamAcc.three;
+    const vals = getStackModeValues(teamAcc, mode);
+    const ft = vals.ft;
+    const two = vals.two;
+    const three = vals.three;
     const total = ft + two + three;
     if (!total) return { ft: 0, two: 0, three: 0 };
     return { ft: ft / total, two: two / total, three: three / total };
@@ -432,7 +453,7 @@ function renderD52Chart(chartArea, tooltip, data, currentMode) {
   }
 
   renderSharedAxes(g, x, y, innerWidth, innerHeight, maxMinute);
-  renderHover({ variant: 'd52', g, x, y, yAccessor: (point) => point.orientedDiff, pts, innerWidth, innerHeight, tooltip });
+  renderHover({ variant: 'd52', currentMode, g, x, y, yAccessor: (point) => point.orientedDiff, pts, innerWidth, innerHeight, tooltip });
   chartArea.appendChild(svg.node());
 }
 
@@ -507,17 +528,27 @@ export function initScoreChart({ variant }) {
   const initSeason = qs.get('season') || 'E2025';
   const initGame = parseInt(qs.get('game') || '1', 10);
   const initMode = qs.get('mode') || 'points';
+  const lockMode = qs.get('lockMode') === '1';
 
   if (SEASONS.includes(initSeason)) selSeason.value = initSeason;
   populateGameSelect(selSeason.value);
   selGame.value = initGame;
 
-  if (initMode === 'makes') {
-    currentMode = 'makes';
-    document.querySelectorAll('.pill').forEach((pill) => {
-      pill.classList.toggle('active', pill.dataset.mode === 'makes');
-    });
+  if (initMode === 'makes' || initMode === 'attempts' || initMode === 'points') {
+    currentMode = initMode;
   }
+
+  if (lockMode) {
+    const modeGroup = document.querySelector('.mode-pills');
+    if (modeGroup) modeGroup.style.display = 'none';
+    const labels = Array.from(document.querySelectorAll('.ctrl-label'));
+    const modeLabel = labels.find((node) => (node.textContent || '').toLowerCase().includes('stack mode'));
+    if (modeLabel) modeLabel.textContent = `Stack mode (locked: ${currentMode})`;
+  }
+
+  document.querySelectorAll('.pill').forEach((pill) => {
+    pill.classList.toggle('active', pill.dataset.mode === currentMode);
+  });
 
   selSeason.addEventListener('change', () => {
     populateGameSelect(selSeason.value);
@@ -527,6 +558,7 @@ export function initScoreChart({ variant }) {
 
   document.querySelectorAll('.pill').forEach((button) => {
     button.addEventListener('click', () => {
+      if (lockMode) return;
       currentMode = button.dataset.mode;
       document.querySelectorAll('.pill').forEach((pill) => {
         pill.classList.toggle('active', pill.dataset.mode === currentMode);

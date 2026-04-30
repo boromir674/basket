@@ -26,6 +26,7 @@ cp prod/score-diff.html                        public/
 cp prod/score-d52.html                         public/
 cp prod/score-diff-v2.html                     public/
 cp prod/score-d52-v2.html                      public/
+cp prod/style-insights.html                    public/
 cp prod/score-chart.js                         public/
 cp poss-flow-map-multi-drilldown-real-data.html public/
 
@@ -55,4 +56,6 @@ echo "   Open: http://localhost:${PORT}/score-diff.html"
 echo "   Open: http://localhost:${PORT}/score-d52.html"
 echo "   Open: http://localhost:${PORT}/score-diff-v2.html"
 echo "   Open: http://localhost:${PORT}/score-d52-v2.html"
+echo "   Open: http://localhost:${PORT}/style-insights.html"
+echo "   Open: http://localhost:${PORT}/lab/style-consistency-lab.html"
 python3 -m http.server "$PORT" --directory public

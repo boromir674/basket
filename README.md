@@ -114,6 +114,18 @@ docker run --rm -v "${PWD}:/app" -w /app euroleague-sankey \
   rebuild_manifest --seasoncode E2021 --output-dir /app/assets/processed
 ```
 
+### Build score timeline artifacts from raw points
+
+```bash
+docker compose run --rm ops build_score_timeline --seasoncode E2025 --raw-dir /app/assets --output-dir /app/data
+```
+
+### Build team style insights (consistency + adaptability)
+
+```bash
+docker compose run --rm ops style_insights --seasoncode E2025 --data-dir /app/data --output-dir /app/data
+```
+
 ### Run test suite (network/API dependent)
 
 ```bash
@@ -206,6 +218,7 @@ Notes:
 | Global player registry (optional utility) | `players` map (`player_id -> {name, team}`) | `processed` | Built from possession-level player attribution gathered from raw PBP rows. |
 | Header ELO badge | `elo_{seasoncode}.json` (`ratings` map), `meta.team_a/team_b` | `computed` | Ratings derived from Boxscore totals; if Boxscore team names are codes, scores are summed via player points mapped through `players`. |
 | Elo showcase timeline | `elo_multiseason.json` (`seasoncodes`, `history[].seasoncode`, `history[].season_label`, `history[].gamedate`, teams/scores/winner) | `computed` | UI enforces consecutive season selection and recomputes ratings in-browser from selected seasons only. Timeline x-axis uses fixture-style buckets (grouped by season + date). |
+| Style Insights page | `style_insights_{season}.json` (`teams[].consistency_score`, `teams[].adaptability_score`, `teams[].evidence.consistency[]`, `teams[].evidence.adaptability[]`) | `computed` + `modeled/inferred` from timeline events | Spotlight cards auto-select top teams and open modal evidence; representative games are deterministic and include reason tags plus mix/shift summaries. |
 
 ## 6.1) ELO Inputs (Why All-1500 Happens)
 
