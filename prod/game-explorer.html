@@ -253,15 +253,14 @@
   </div>
 </div>
 
+<script src="./runtime-config.js"></script>
 <script>
 (function(){
   const qs = new URLSearchParams(window.location.search);
-  const inProdSubdir = window.location.pathname.includes("/prod/");
-  let processedBase = inProdSubdir ? "../assets/processed" : "./assets/processed";
-  const fallbackProcessedBase = inProdSubdir ? "./assets/processed" : "../assets/processed";
-  const manifestFile = "__BASKET_MANIFEST_FILE__" === "__BASKET_MANIFEST_FILE__"
-    ? "games_manifest.json"
-    : "__BASKET_MANIFEST_FILE__";
+  const runtimeConfig = window.BasketRuntimeConfig;
+  if(!runtimeConfig) throw new Error("Missing runtime config. Ensure runtime-config.js is loaded.");
+  const processedBase = runtimeConfig.relBaseForSubdir(runtimeConfig.processedSubdir);
+  const manifestFile = runtimeConfig.manifestFile || "games_manifest.json";
   const gamesEl = document.getElementById("games");
   const viewer = document.getElementById("viewer");
   const modeBtns = Array.from(document.querySelectorAll(".mode-btn"));
@@ -293,23 +292,11 @@
 
   const normalizedCache = new Map();
 
-  async function fetchJsonFromCandidateBases(relativePath){
-    const tried = [];
-    const bases = [processedBase, fallbackProcessedBase];
-    for(const base of bases){
-      if(tried.includes(base)) continue;
-      tried.push(base);
-      const url = `${base}/${relativePath}`;
-      try{
-        const res = await fetch(url);
-        if(!res.ok) continue;
-        processedBase = base;
-        return await res.json();
-      }catch(_err){
-        // try next base
-      }
-    }
-    throw new Error(`Failed to load ${relativePath} from ${tried.join(" or ")}`);
+  async function fetchJsonFromProcessedBase(relativePath){
+    const url = `${processedBase}/${relativePath}`;
+    const res = await fetch(url);
+    if(!res.ok) throw new Error(`Failed to load ${relativePath} from ${processedBase} (HTTP ${res.status})`);
+    return await res.json();
   }
 
   function modeParams(mode){
@@ -608,7 +595,7 @@
     });
   }
 
-  fetchJsonFromCandidateBases(manifestFile)
+  fetchJsonFromProcessedBase(manifestFile)
     .then((data) => {
       if(!Array.isArray(data) || !data.length){
         gamesEl.textContent = "No games found. Generate data first.";

@@ -276,6 +276,7 @@
   <div class="tt-row" id="tt-mode"></div>
 </div>
 
+<script src="./runtime-config.js"></script>
 <script>
 (function () {
   // ── Constants ──────────────────────────────────────────────────────────────
@@ -318,6 +319,9 @@
   }
 
   // ── URL params support ────────────────────────────────────────────────────
+  const runtimeConfig = window.BasketRuntimeConfig;
+  if (!runtimeConfig) throw new Error('Missing runtime config. Ensure runtime-config.js is loaded.');
+
   const qs = new URLSearchParams(window.location.search);
   const initSeason = qs.get('season') || 'E2025';
   const initGame   = parseInt(qs.get('game') || '1', 10);
@@ -353,7 +357,11 @@
   async function loadGame() {
     const season = selSeason.value;
     const game   = selGame.value;
-    const url    = `../assets/raw_pts_${season}_${game}.json`;
+    const rawFilename = runtimeConfig.applyPattern(runtimeConfig.rawPtsPattern, {
+      season,
+      game,
+    });
+    const url = runtimeConfig.buildRawAssetUrl(rawFilename);
 
     chartArea.innerHTML = '<div class="status loading">Loading…</div>';
     legendEl.style.display = 'none';
