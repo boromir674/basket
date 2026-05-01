@@ -113,6 +113,30 @@
       transition:opacity .24s ease, transform .24s ease;
     }
     .fade-step { opacity:0; transform:translateY(-4px); }
+    .cone-wrap {
+      margin-top:10px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      background:rgba(11,22,40,.84);
+      overflow:hidden;
+    }
+    .cone-head {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:8px 10px;
+      border-bottom:1px solid var(--line);
+    }
+    .cone-title { font-size:12px; font-weight:700; letter-spacing:.04em; }
+    .cone-sub { font-size:11px; color:var(--muted); }
+    .cone-frame {
+      width:100%;
+      height:440px;
+      border:0;
+      background:#081425;
+      display:block;
+    }
     .iframe-wrap { position:relative; }
     /* Keep iframe at a minimum width so the Sankey does not shrink; ensure
        it renders above other page chrome so in-iframe tooltips are visible. */
@@ -252,6 +276,13 @@
         <div class="vh-game" id="gameMeta">Select a game.</div>
         <div class="vh-game" id="gameHomeAway">Home -- · Away --</div>
       </div>
+      <div class="cone-wrap">
+        <div class="cone-head">
+          <div class="cone-title">Score Diff Cone</div>
+          <div class="cone-sub" id="coneMeta">Loads per selected game</div>
+        </div>
+        <iframe id="coneFrame" class="cone-frame" src="about:blank" title="Per-game score diff cone"></iframe>
+      </div>
     </div>
   </div>
 </div>
@@ -282,6 +313,8 @@
   const chipOpp = document.getElementById("chipOpp");
   const gameMeta = document.getElementById("gameMeta");
   const gameHomeAway = document.getElementById("gameHomeAway");
+  const coneFrame = document.getElementById("coneFrame");
+  const coneMeta = document.getElementById("coneMeta");
 
   const ANCHOR_COLOR = "#3a86ff";
   const OPP_COLOR = "#ff5a7a";
@@ -517,6 +550,13 @@
     const anchor = currentAnchorForGame(selectedGame);
     const opp = currentOppForGame(selectedGame);
     setHead(anchor, opp, selectedGame);
+
+    if(coneFrame && selectedGame){
+      const season = encodeURIComponent(selectedGame.seasoncode || "");
+      const gamecode = encodeURIComponent(selectedGame.gamecode || "");
+      coneFrame.src = `./score-diff-v2.html?season=${season}&game=${gamecode}&lockMode=1&mode=points`;
+      if(coneMeta) coneMeta.textContent = `${selectedGame.seasoncode || "?"} / ${selectedGame.gamecode || "?"}`;
+    }
 
     viewer.classList.add("loading");
     const file = await resolveGameFile(selectedGame);

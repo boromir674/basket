@@ -74,11 +74,13 @@ MODE_CONFIG_JSON="$(jq -c --arg mode "$MODE" '
   };
   {
   processed_data_dir: (.sources.processed_data_dir // "data"),
+  raw_data_dir: (.sources.raw_data_dir // "assets"),
   mode: merged_mode($mode)
   }
 ' "$CONTRACT_FILE")"
 
 PROCESSED_DATA_DIR="$(jq -r '.processed_data_dir' <<<"$MODE_CONFIG_JSON")"
+RAW_DATA_DIR="$(jq -r '.raw_data_dir' <<<"$MODE_CONFIG_JSON")"
 mapfile -t REQUIRED_STATIC_FILES < <(jq -r '.mode.required_static_files | keys[]?' <<<"$MODE_CONFIG_JSON")
 mapfile -t REQUIRED_PER_GAME_PATTERNS < <(jq -r '((.mode.required_per_game_files // {} | keys) + (.mode.additional_required_per_game_files // {} | keys))[]?' <<<"$MODE_CONFIG_JSON")
 mapfile -t HTML_PAGES < <(jq -r '.mode.html_pages[]?' <<<"$MODE_CONFIG_JSON")
@@ -102,7 +104,11 @@ for req_file in "${REQUIRED_STATIC_FILES[@]}"; do
 done
 
 game_files_found=0
+REQUIRE_RAW_PTS=0
 for pattern in "${REQUIRED_PER_GAME_PATTERNS[@]}"; do
+  if [[ "$pattern" == *"/raw_pts_E*.json" || "$pattern" == "raw_pts_E*.json" ]]; then
+    REQUIRE_RAW_PTS=1
+  fi
   count=$(compgen -G "$pattern" | wc -l || true)
   if [[ "$count" -eq 0 ]]; then
     echo "✗ Build contract violation: no files found for pattern: $pattern"
@@ -111,6 +117,95 @@ for pattern in "${REQUIRED_PER_GAME_PATTERNS[@]}"; do
   fi
   game_files_found=$((game_files_found + count))
 done
+
+MANIFEST_PATH="${PROCESSED_DATA_DIR}/${MANIFEST_FILE}"
+if [[ -f "$MANIFEST_PATH" ]]; then
+  echo "→ Validating manifest coverage from ${MANIFEST_PATH}..."
+  coverage_report="$(python3 - "$MANIFEST_PATH" "$PROCESSED_DATA_DIR" <<'PY'
+import json
+import os
+import sys
+
+manifest_path = sys.argv[1]
+data_dir = sys.argv[2]
+
+with open(manifest_path, encoding="utf-8") as f:
+    manifest = json.load(f)
+
+missing = []
+for row in manifest:
+    fname = row.get("file")
+    if not fname:
+        continue
+    fpath = os.path.join(data_dir, fname)
+    if not os.path.isfile(fpath):
+        missing.append(fname)
+
+print(f"manifest_entries={len(manifest)}")
+print(f"missing_entries={len(missing)}")
+if missing:
+    print("missing_sample=" + ", ".join(missing[:10]))
+PY
+)"
+
+  manifest_entries="$(echo "$coverage_report" | awk -F= '/^manifest_entries=/{print $2}')"
+  missing_entries="$(echo "$coverage_report" | awk -F= '/^missing_entries=/{print $2}')"
+  missing_sample="$(echo "$coverage_report" | awk -F= '/^missing_sample=/{print $2}')"
+
+  if [[ "$missing_entries" != "0" ]]; then
+    echo "✗ Build contract violation: manifest references ${missing_entries} missing per-game files"
+    if [[ -n "$missing_sample" ]]; then
+      echo "  Missing sample: ${missing_sample}"
+    fi
+    echo "  Fix data/ or regenerate manifest before bundling."
+    exit 1
+  fi
+  echo "✓ Manifest coverage validated (${manifest_entries} entries, 0 missing files)"
+
+  if [[ "$REQUIRE_RAW_PTS" -eq 1 ]]; then
+    echo "→ Validating raw_pts timeline coverage from manifest..."
+    raw_pts_report="$(python3 - "$MANIFEST_PATH" "$RAW_DATA_DIR" <<'PY'
+import json
+import os
+import sys
+
+manifest_path = sys.argv[1]
+raw_data_dir = sys.argv[2]
+
+with open(manifest_path, encoding="utf-8") as f:
+    manifest = json.load(f)
+
+missing = []
+for row in manifest:
+    season = row.get("seasoncode")
+    gamecode = row.get("gamecode")
+    if not season or gamecode is None:
+        continue
+    fname = f"raw_pts_{season}_{gamecode}.json"
+    fpath = os.path.join(raw_data_dir, fname)
+    if not os.path.isfile(fpath):
+        missing.append(fname)
+
+print(f"missing_raw_pts={len(missing)}")
+if missing:
+    print("missing_raw_pts_sample=" + ", ".join(missing[:10]))
+PY
+)"
+
+    missing_raw_pts="$(echo "$raw_pts_report" | awk -F= '/^missing_raw_pts=/{print $2}')"
+    missing_raw_pts_sample="$(echo "$raw_pts_report" | awk -F= '/^missing_raw_pts_sample=/{print $2}')"
+
+    if [[ "$missing_raw_pts" != "0" ]]; then
+      echo "✗ Build contract violation: manifest references ${missing_raw_pts} games without raw_pts timeline JSON"
+      if [[ -n "$missing_raw_pts_sample" ]]; then
+        echo "  Missing raw_pts sample: ${missing_raw_pts_sample}"
+      fi
+      echo "  Cone chart requires raw_pts_{season}_{game}.json for each game in manifest."
+      exit 1
+    fi
+    echo "✓ raw_pts coverage validated (0 missing files)"
+  fi
+fi
 
 echo "✓ Contract validated (${game_files_found} files found across required per-game patterns)"
 
