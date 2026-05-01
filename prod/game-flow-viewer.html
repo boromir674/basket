@@ -350,6 +350,7 @@ let replayState = {
 // Default now points to assets/processed for processed files.
 const params = new URLSearchParams(window.location.search);
 const paramFile = params.get("file");
+const paramAutoInsightsFile = params.get("autoInsightsFile");
 const paramInitialView = params.get("initialView");
 let skipTypeStage = params.get("skipTypeStage") === "1";
 let dataFile = paramFile || "assets/processed/multi_drilldown_real_data.json";
@@ -371,8 +372,18 @@ if (runtimeBase && !String(dataFile).startsWith('http') && !String(dataFile).sta
   // If dataFile is already inside assets/processed, keep the path but prefix it.
   dataFile = `${base}/${dataFile}`;
 }
-// Removed derivation of auto-insights file from dataFile.
-const autoInsightsFile = "assets/processed/multi_drilldown_real_data_E2021_54_auto.json";
+
+let autoInsightsFile = null;
+if (paramAutoInsightsFile) {
+  autoInsightsFile = paramAutoInsightsFile.includes("/")
+    ? paramAutoInsightsFile
+    : `assets/processed/${paramAutoInsightsFile}`;
+
+  if (runtimeBase && !String(autoInsightsFile).startsWith('http') && !String(autoInsightsFile).startsWith('/') && !String(autoInsightsFile).startsWith('blob:')) {
+    const base = runtimeBase.endsWith('/') ? runtimeBase.slice(0, -1) : runtimeBase;
+    autoInsightsFile = `${base}/${autoInsightsFile}`;
+  }
+}
 
 function formatEloValue(value){
   if(value === null || value === undefined) return "n/a";
@@ -414,32 +425,30 @@ function resolveInitialView(bundle, requestedView) {
 // Note: for this PoC we want in-place reshaping (not camera swoops).
 // Keep a static transform on vizRoot.
 
-// Log the file being fetched for debugging purposes.
-console.log(`Attempting to fetch auto-insights file: ${autoInsightsFile}`);
-
-// Fetch the auto-insights file if it exists.
-fetch(autoInsightsFile)
-  .then(response => {
-    if (!response.ok) {
-      console.warn(`Auto-insights file not found: ${autoInsightsFile}`);
-      return null; // Gracefully handle missing auto-insights file.
-    }
-    return response.json();
-  })
-  .then(autoData => {
-    if (autoData) {
-      console.log("Auto-insights data loaded successfully.");
-      // Ensure renderAutoInsights is defined before calling it.
-      if (typeof renderAutoInsights === "function") {
-        renderAutoInsights(autoData); // Function to render auto-insights.
-      } else {
-        console.error("Error: renderAutoInsights function is not defined.");
+if (autoInsightsFile) {
+  console.log(`Attempting to fetch auto-insights file: ${autoInsightsFile}`);
+  fetch(autoInsightsFile)
+    .then(response => {
+      if (!response.ok) {
+        console.warn(`Auto-insights file not found: ${autoInsightsFile}`);
+        return null;
       }
-    }
-  })
-  .catch(error => {
-    console.error("Error loading auto-insights file:", error);
-  });
+      return response.json();
+    })
+    .then(autoData => {
+      if (autoData) {
+        console.log("Auto-insights data loaded successfully.");
+        if (typeof renderAutoInsights === "function") {
+          renderAutoInsights(autoData);
+        } else {
+          console.error("Error: renderAutoInsights function is not defined.");
+        }
+      }
+    })
+    .catch(error => {
+      console.error("Error loading auto-insights file:", error);
+    });
+}
 
 function rgba(hex, alpha){ const c=d3.color(hex||"#888"); return `rgba(${c.r}, ${c.g}, ${c.b}, ${alpha})`; }
 

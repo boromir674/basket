@@ -46,6 +46,38 @@ fi
 
 cd "$REPO_ROOT"
 
+# Read build contract and validate required files exist
+echo "→ Validating build contract from config/build_contract.json..."
+CONTRACT_FILE="config/build_contract.json"
+if [[ ! -f "$CONTRACT_FILE" ]]; then
+  echo "✗ Build contract not found: $CONTRACT_FILE"
+  exit 1
+fi
+
+# Check for required static files
+validate_required_files() {
+  local file="$1"
+  if [[ ! -f "$file" ]]; then
+    echo "✗ Required file missing: $file"
+    return 1
+  fi
+}
+
+# Contract validation: ensure games_manifest and at least one per-game sankey file exist
+if ! validate_required_files "data/games_manifest.json"; then
+  echo "✗ Build contract violation: data/games_manifest.json is required"
+  exit 1
+fi
+
+# Count available per-game sankey files
+game_files_found=$(ls data/multi_drilldown_real_data_E*.json 2>/dev/null | wc -l || echo 0)
+if [[ "$game_files_found" -eq 0 ]]; then
+  echo "✗ Build contract violation: No per-game files found (data/multi_drilldown_real_data_E*.json)"
+  echo "   The pipeline must generate these files before bundling."
+  exit 1
+fi
+echo "✓ Contract validated (${game_files_found} per-game sankey files found)"
+
 echo "→ Building ${OUT_DIR}/ bundle (mode=${MODE})..."
 rm -rf "$OUT_DIR"
 
@@ -109,4 +141,7 @@ if [[ "$MODE" == "lab" ]]; then
   fi
 fi
 
+echo ""
 echo "✓ Bundle ready: ${OUT_DIR}/"
+echo "  (Built per config/build_contract.json, mode=${MODE})"
+echo ""

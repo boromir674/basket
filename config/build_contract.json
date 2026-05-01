@@ -1,0 +1,51 @@
+{
+  "description": "Declarative build contract: defines required/optional files for each build mode",
+  "modes": {
+    "app": {
+      "description": "Production Sankey viewer and analytics surfaces",
+      "required_static_files": {
+        "data/games_manifest.json": "Powers game discovery in game-explorer.html dropdown",
+        "data/elo_multiseason.json": "Time-series Elo ratings for elo.html and rankings"
+      },
+      "required_per_game_files": {
+        "data/multi_drilldown_real_data_E*.json": "Core Sankey graph, shot locations, efficiency—every game needs this"
+      },
+      "optional_files": {
+        "data/multi_drilldown_real_data_E*_auto.json": "Auto-generated game insights (opt-in via query param)"
+      },
+      "html_pages": [
+        "prod/index.html",
+        "prod/game-explorer.html",
+        "prod/game-flow-viewer.html",
+        "prod/elo.html",
+        "prod/style-insights.html"
+      ],
+      "js_modules": [
+        "src/sankey-renderer.js"
+      ]
+    },
+    "lab": {
+      "description": "Lab landing with experimental visualizations",
+      "inherits_from": "app",
+      "additional_required_per_game_files": {
+        "data/raw_box_E*.json": "Box score details for shot-style-map drilling + consistency analysis"
+      },
+      "html_pages": [
+        "lab/index.html",
+        "lab/shot-style-map.html",
+        "lab/shot-style-map-3d.html",
+        "lab/style-consistency-lab.html"
+      ]
+    }
+  },
+  "file_source_priority": [
+    "data/",
+    "assets/processed/"
+  ],
+  "notes": [
+    "All required_per_game_files must exist for all games in games_manifest.json",
+    "optional_files will be copied if they exist; missing optional files do not fail the build",
+    "The build process looks for data in data/ first, then falls back to assets/processed/ for backward compat",
+    "This contract is read by scripts/build_bundle.sh and should be consulted by pipeline (entrypoint.py) for output validation"
+  ]
+}
