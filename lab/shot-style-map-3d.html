@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Shot Style 3D Lab</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+	<style>
+		:root {
+			--bg0: #06110f;
+			--bg1: #0d1c19;
+			--bg2: #132c33;
+			--card: rgba(8, 18, 18, 0.9);
+			--panel: rgba(9, 20, 20, 0.84);
+			--border: rgba(148, 199, 182, 0.24);
+			--text: #ecfff7;
+			--muted: #9dc9be;
+			--accent: #8cecc5;
+			--warn: #f3c56d;
+			--bad: #d75d65;
+			--good: #5fd59a;
+			--neutral: #d5dde1;
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			color: var(--text);
+			font-family: "Space Grotesk", system-ui, sans-serif;
+			background:
+				radial-gradient(1100px 760px at 8% -10%, #23443a 0%, transparent 58%),
+				radial-gradient(980px 700px at 94% 0%, #173a51 0%, transparent 56%),
+				linear-gradient(160deg, var(--bg0), var(--bg1) 44%, var(--bg2) 100%);
+			min-height: 100vh;
+		}
+		.wrap {
+			max-width: 1520px;
+			margin: 0 auto;
+			padding: 18px 18px 32px;
+			display: grid;
+			gap: 14px;
+		}
+		.topbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 12px;
+			flex-wrap: wrap;
+		}
+		.title h1 {
+			margin: 0;
+			font-size: 28px;
+			letter-spacing: 0.01em;
+		}
+		.title .sub {
+			margin-top: 4px;
+			font-size: 13px;
+			color: var(--muted);
+		}
+		.home-link {
+			text-decoration: none;
+			color: var(--text);
+			border: 1px solid var(--border);
+			background: rgba(17, 35, 31, 0.95);
+			padding: 8px 12px;
+			border-radius: 999px;
+			font-size: 13px;
+		}
+		.panel {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			padding: 12px;
+			backdrop-filter: blur(6px);
+		}
+		.controls {
+			display: grid;
+			grid-template-columns: repeat(7, minmax(120px, 1fr));
+			gap: 10px;
+			align-items: end;
+		}
+		label {
+			display: block;
+			margin-bottom: 6px;
+			color: var(--muted);
+			font-size: 11px;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+		}
+		select, button {
+			width: 100%;
+			height: 36px;
+			border-radius: 9px;
+			border: 1px solid var(--border);
+			background: rgba(14, 28, 26, 0.94);
+			color: var(--text);
+			font-family: inherit;
+			font-size: 13px;
+			padding: 0 10px;
+		}
+		button {
+			cursor: pointer;
+			font-weight: 700;
+			background: linear-gradient(120deg, #224237, #234761);
+		}
+		.toggle-group {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			grid-column: span 2;
+		}
+		.pill {
+			border: 1px solid var(--border);
+			border-radius: 999px;
+			padding: 7px 11px;
+			font-size: 12px;
+			color: var(--muted);
+			cursor: pointer;
+			background: rgba(14, 28, 26, 0.94);
+			user-select: none;
+		}
+		.pill.active {
+			background: linear-gradient(120deg, #8cecc5, #76d5ff);
+			color: #0b1714;
+			border-color: transparent;
+			font-weight: 700;
+		}
+		.status {
+			min-height: 16px;
+			font-size: 12px;
+			color: var(--muted);
+			margin-top: 10px;
+		}
+		.content {
+			display: grid;
+			grid-template-columns: minmax(780px, 1fr) 320px;
+			gap: 12px;
+		}
+		.charts {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(320px, 1fr));
+			gap: 12px;
+		}
+		.chart-card {
+			background: var(--panel);
+			border: 1px solid var(--border);
+			border-radius: 14px;
+			padding: 10px;
+		}
+		.chart-card.wide {
+			grid-column: 1 / -1;
+		}
+		.chart-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			gap: 8px;
+			margin-bottom: 6px;
+			flex-wrap: wrap;
+		}
+		.chart-title {
+			font-size: 15px;
+			font-weight: 700;
+		}
+		.chart-note {
+			font-size: 12px;
+			color: var(--muted);
+		}
+		.chart-tools {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			flex-wrap: wrap;
+		}
+		.button-small {
+			width: auto;
+			height: 28px;
+			padding: 0 10px;
+			font-size: 12px;
+			border-radius: 999px;
+			background: rgba(17, 35, 31, 0.95);
+		}
+		.chart-host svg {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		.chart-host.interactive {
+			cursor: grab;
+			touch-action: none;
+			user-select: none;
+		}
+		.chart-host.interactive.dragging {
+			cursor: grabbing;
+		}
+		.view-hint {
+			margin-top: 8px;
+			font-size: 11px;
+			color: var(--muted);
+		}
+		.side {
+			display: grid;
+			gap: 10px;
+			align-content: start;
+		}
+		.info-card h3 {
+			margin: 0 0 6px;
+			font-size: 13px;
+		}
+		.info-card p, .info-card li {
+			color: var(--muted);
+			font-size: 12px;
+			line-height: 1.45;
+		}
+		.info-card ul {
+			margin: 0;
+			padding-left: 16px;
+		}
+		.legend-row {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			flex-wrap: wrap;
+			font-size: 11px;
+			color: var(--muted);
+			margin-top: 8px;
+		}
+		.sw { width: 14px; height: 8px; border-radius: 2px; display: inline-block; margin-right: 4px; vertical-align: middle; }
+		.tooltip {
+			position: fixed;
+			z-index: 50;
+			pointer-events: none;
+			display: none;
+			min-width: 220px;
+			max-width: 290px;
+			background: rgba(4, 11, 10, 0.98);
+			border: 1px solid rgba(148, 199, 182, 0.36);
+			border-radius: 10px;
+			padding: 8px 10px;
+			box-shadow: 0 10px 26px rgba(0, 0, 0, 0.36);
+			color: var(--text);
+			font-size: 12px;
+		}
+		.tt-title { font-weight: 700; margin-bottom: 4px; color: #d7fff1; }
+		.tt-row { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); margin: 1px 0; }
+		.tt-row b { color: var(--text); font-weight: 600; }
+		@media (max-width: 1260px) {
+			.controls { grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+			.toggle-group { grid-column: span 4; }
+			.content { grid-template-columns: 1fr; }
+		}
+		@media (max-width: 860px) {
+			.controls { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+			.toggle-group { grid-column: span 2; }
+			.charts { grid-template-columns: 1fr; }
+			.chart-card.wide { grid-column: auto; }
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="topbar">
+			<div class="title">
+				<h1>Shot Style 3D Lab</h1>
+				<div class="sub">Offense above the floor, defense below it, and a combined bidirectional read on one court.</div>
+			</div>
+			<a class="home-link" href="./index.html">Back to Lab Landing</a>
+		</div>
+
+		<div class="panel">
+			<div class="controls">
+				<div>
+					<label for="season">Season</label>
+					<select id="season"></select>
+				</div>
+				<div>
+					<label for="team">Team</label>
+					<select id="team"></select>
+				</div>
+				<div>
+					<label for="homeaway">Home / Away</label>
+					<select id="homeaway">
+						<option value="all">All</option>
+						<option value="home">Home only</option>
+						<option value="away">Away only</option>
+					</select>
+				</div>
+				<div>
+					<label for="opponent">Opponent</label>
+					<select id="opponent">
+						<option value="all">All opponents</option>
+					</select>
+				</div>
+				<div>
+					<label for="possType">Possession Type</label>
+					<select id="possType">
+						<option value="all">All</option>
+						<option value="halfcourt">Half-court</option>
+						<option value="transition">Transition</option>
+						<option value="oreb">After OREB</option>
+					</select>
+				</div>
+				<div>
+					<label for="phase">Phase</label>
+					<select id="phase">
+						<option value="all">All</option>
+						<option value="q1">Q1</option>
+						<option value="q2">Q2</option>
+						<option value="q3">Q3</option>
+						<option value="q4">Q4</option>
+						<option value="clutch">Clutch</option>
+					</select>
+				</div>
+				<div class="toggle-group" id="metric-pills">
+					<div class="pill active" data-metric="volume">Volume</div>
+					<div class="pill" data-metric="efficiency">Efficiency</div>
+					<div class="pill" data-metric="contribution">Contribution</div>
+					<button id="loadBtn" type="button">Render</button>
+				</div>
+			</div>
+			<div class="status" id="status"></div>
+		</div>
+
+		<div class="content">
+			<div class="charts">
+				<div class="chart-card">
+					<div class="chart-head">
+						<div class="chart-title">Offensive 3D Hit Map</div>
+						<div class="chart-tools">
+							<div class="chart-note" id="offenseMeta"></div>
+							<button class="button-small" type="button" id="resetOffenseView">Reset view</button>
+						</div>
+					</div>
+					<div class="chart-host interactive" id="offenseChart"></div>
+					<div class="view-hint">Drag to orbit. Shift + drag to pan. Wheel to zoom. Double-click to reset.</div>
+				</div>
+				<div class="chart-card">
+					<div class="chart-head">
+						<div class="chart-title">Defensive 3D Hit Map</div>
+						<div class="chart-tools">
+							<div class="chart-note" id="defenseMeta"></div>
+							<button class="button-small" type="button" id="resetDefenseView">Reset view</button>
+						</div>
+					</div>
+					<div class="chart-host interactive" id="defenseChart"></div>
+					<div class="view-hint">Drag to orbit. Shift + drag to pan. Wheel to zoom. Double-click to reset.</div>
+				</div>
+				<div class="chart-card wide">
+					<div class="chart-head">
+						<div class="chart-title">Bidirectional 3D Court</div>
+						<div class="chart-tools">
+							<div class="chart-note" id="combinedMeta"></div>
+							<button class="button-small" type="button" id="resetCombinedView">Reset view</button>
+						</div>
+					</div>
+					<div class="chart-host interactive" id="combinedChart"></div>
+					<div class="view-hint">Drag to orbit. Shift + drag to pan. Wheel to zoom. Double-click to reset.</div>
+					<div class="legend-row">
+						<span><span class="sw" style="background:#d75d65"></span>better-than-baseline offense or leaky defense</span>
+						<span><span class="sw" style="background:#d5dde1"></span>neutral baseline</span>
+						<span><span class="sw" style="background:#5fd59a"></span>worse-than-baseline offense or strong defense suppression</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="side">
+				<div class="panel info-card">
+					<h3>How To Read</h3>
+					<p>The top-left chart shows where the selected team generates shot volume or value. The top-right chart flips the same geometry for what opponents create against that team. The bottom chart puts both on one floor plane.</p>
+				</div>
+				<div class="panel info-card">
+					<h3>Encoding</h3>
+					<ul>
+						<li>Height above zero plane: selected team offense</li>
+						<li>Depth below zero plane: opponent offense versus selected team</li>
+						<li>Color: efficiency delta versus league baseline in the same location</li>
+						<li>Metric toggle changes the column magnitude, not the color baseline logic</li>
+					</ul>
+				</div>
+				<div class="panel info-card">
+					<h3>Design Choice</h3>
+					<p>This lab uses a smoothed coordinate lattice rather than visible square bins, so the 3D surface reads like a spatial field instead of arbitrary grid blocks cutting through court lines.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tooltip" id="tooltip"></div>
+
+	<script>
+	(function () {
+		const manifestUrls = [
+			"../assets/processed/games_manifest.json",
+			"../data/games_manifest.json",
+			"/assets/processed/games_manifest.json",
+			"/data/games_manifest.json"
+		];
+
+		const seasonEl = document.getElementById("season");
+		const teamEl = document.getElementById("team");
+		const homeAwayEl = document.getElementById("homeaway");
+		const opponentEl = document.getElementById("opponent");
+		const possTypeEl = document.getElementById("possType");
+		const phaseEl = document.getElementById("phase");
+		const loadBtn = document.getElementById("loadBtn");
+		const statusEl = document.getElementById("status");
+		const offenseChartEl = document.getElementById("offenseChart");
+		const defenseChartEl = document.getElementById("defenseChart");
+		const combinedChartEl = document.getElementById("combinedChart");
+		const offenseMetaEl = document.getElementById("offenseMeta");
+		const defenseMetaEl = document.getElementById("defenseMeta");
+		const combinedMetaEl = document.getElementById("combinedMeta");
+		const tooltipEl = document.getElementById("tooltip");
+		const metricPills = Array.from(document.querySelectorAll("#metric-pills .pill"));
+		const resetOffenseViewEl = document.getElementById("resetOffenseView");
+		const resetDefenseViewEl = document.getElementById("resetDefenseView");
+		const resetCombinedViewEl = document.getElementById("resetCombinedView");
+
+		const gridX = 19;
+		const gridY = 14;
+		const xMin = -700;
+		const xMax = 700;
+		const yMin = 0;
+		const yMax = 1380;
+		const sigmaX = 120;
+		const sigmaY = 120;
+
+		let activeMetric = "volume";
+		let manifest = [];
+		const gameCache = new Map();
+		const baselineCache = new Map();
+		const chartStates = {
+			offense: makeDefaultCameraState(false),
+			defense: makeDefaultCameraState(false),
+			combined: makeDefaultCameraState(true)
+		};
+
+		function makeDefaultCameraState(isWide) {
+			return {
+				yaw: isWide ? 0.62 : 0.58,
+				pitch: -0.88,
+				zoom: isWide ? 1.02 : 1,
+				panX: 0,
+				panY: 0,
+				isDragging: false,
+				dragPointerId: null,
+				dragMode: "orbit",
+				lastClientX: 0,
+				lastClientY: 0,
+				rafId: 0
+			};
+		}
+
+		function text(v) {
+			return String(v == null ? "" : v).trim();
+		}
+
+		function normalizeTeamKey(v) {
+			return text(v).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+		}
+
+		function fmt(n, d) {
+			if (!Number.isFinite(n)) return "-";
+			return n.toFixed(d);
+		}
+
+		function clamp(v, lo, hi) {
+			return Math.max(lo, Math.min(hi, v));
+		}
+
+		function status(msg) {
+			statusEl.textContent = msg || "";
+		}
+
+		function normalizeAction(idAction) {
+			const a = text(idAction).toUpperCase();
+			if (a === "2FGA" || a === "2FGM" || a === "3FGA" || a === "3FGM") return a;
+			return null;
+		}
+
+		function classifyPoss(row) {
+			if (String(row.FASTBREAK || "0") === "1") return "transition";
+			if (String(row.SECOND_CHANCE || "0") === "1") return "oreb";
+			return "halfcourt";
+		}
+
+		function classifyPhase(row) {
+			const minute = Number(row.MINUTE || 0);
+			const q = clamp(Math.floor((Math.max(1, minute) - 1) / 10) + 1, 1, 4);
+			const diff = Math.abs(Number(row.POINTS_A || 0) - Number(row.POINTS_B || 0));
+			if (minute >= 35 && diff <= 5) return "clutch";
+			return "q" + q;
+		}
+
+		function estimatedPossessionsFromTotr(totr) {
+			if (!totr) return NaN;
+			const fga2 = Number(totr.FieldGoalsAttempted2 || 0);
+			const fga3 = Number(totr.FieldGoalsAttempted3 || 0);
+			const fta = Number(totr.FreeThrowsAttempted || 0);
+			const orb = Number(totr.OffensiveRebounds || 0);
+			const tov = Number(totr.Turnovers || 0);
+			const poss = (fga2 + fga3) + 0.44 * fta - orb + tov;
+			return poss > 0 ? poss : NaN;
+		}
+
+		async function fetchJsonAny(urls) {
+			let lastErr = null;
+			for (const url of urls) {
+				try {
+					const res = await fetch(url);
+					if (!res.ok) continue;
+					return await res.json();
+				} catch (err) {
+					lastErr = err;
+				}
+			}
+			throw lastErr || new Error("Could not load JSON from candidates.");
+		}
+
+		async function loadManifest() {
+			const payload = await fetchJsonAny(manifestUrls);
+			if (!Array.isArray(payload)) {
+				throw new Error("games_manifest.json payload is not an array.");
+			}
+			manifest = payload
+				.filter((g) => text(g.seasoncode) && Number.isFinite(Number(g.gamecode)))
+				.map((g) => ({
+					seasoncode: text(g.seasoncode),
+					gamecode: Number(g.gamecode),
+					team_a: text(g.team_a),
+					team_b: text(g.team_b)
+				}));
+			manifest.sort((a, b) => (a.seasoncode === b.seasoncode ? a.gamecode - b.gamecode : a.seasoncode.localeCompare(b.seasoncode)));
+			if (!manifest.length) throw new Error("Manifest loaded but has no entries.");
+		}
+
+		function seasonsFromManifest() {
+			return Array.from(new Set(manifest.map((m) => m.seasoncode))).sort();
+		}
+
+		function gamesForSeason(season) {
+			return manifest.filter((m) => m.seasoncode === season);
+		}
+
+		function teamsForSeason(season) {
+			const teams = new Set();
+			for (const g of gamesForSeason(season)) {
+				if (g.team_a) teams.add(g.team_a);
+				if (g.team_b) teams.add(g.team_b);
+			}
+			return Array.from(teams).sort();
+		}
+
+		function fillSelect(selectEl, values, keepValue) {
+			const old = keepValue || selectEl.value;
+			selectEl.innerHTML = "";
+			for (const v of values) {
+				const opt = document.createElement("option");
+				opt.value = v;
+				opt.textContent = v;
+				selectEl.appendChild(opt);
+			}
+			if (values.includes(old)) {
+				selectEl.value = old;
+			}
+		}
+
+		function refreshSeasonInputs() {
+			const season = seasonEl.value;
+			const teams = teamsForSeason(season);
+			fillSelect(teamEl, teams, teamEl.value);
+			fillSelect(opponentEl, ["all", ...teams], opponentEl.value || "all");
+		}
+
+		function buildRawPaths(season, gamecode) {
+			return {
+				pts: [`../assets/raw_pts_${season}_${gamecode}.json`, `/assets/raw_pts_${season}_${gamecode}.json`],
+				box: [`../assets/raw_box_${season}_${gamecode}.json`, `/assets/raw_box_${season}_${gamecode}.json`]
+			};
+		}
+
+		async function loadGameBundle(game) {
+			const key = `${game.seasoncode}_${game.gamecode}`;
+			if (gameCache.has(key)) return gameCache.get(key);
+
+			const paths = buildRawPaths(game.seasoncode, game.gamecode);
+			const [ptsPayload, boxPayload] = await Promise.all([
+				fetchJsonAny(paths.pts),
+				fetchJsonAny(paths.box)
+			]);
+
+			const rows = Array.isArray(ptsPayload.Rows) ? ptsPayload.Rows : [];
+			const stats = Array.isArray(boxPayload.Stats) ? boxPayload.Stats : [];
+
+			const byTeamName = new Map();
+			for (const s of stats) {
+				const longName = normalizeTeamKey(s.Team);
+				byTeamName.set(longName, {
+					shortCode: text(s && s.tmr ? s.tmr.Team : ""),
+					totr: s.totr || null
+				});
+			}
+
+			const teamAInfo = byTeamName.get(normalizeTeamKey(game.team_a)) || (stats[0] && stats[0].tmr ? { shortCode: text(stats[0].tmr.Team), totr: stats[0].totr || null } : { shortCode: "", totr: null });
+			const teamBInfo = byTeamName.get(normalizeTeamKey(game.team_b)) || (stats[1] && stats[1].tmr ? { shortCode: text(stats[1].tmr.Team), totr: stats[1].totr || null } : { shortCode: "", totr: null });
+
+			const possByShort = new Map();
+			if (teamAInfo.shortCode) possByShort.set(teamAInfo.shortCode, estimatedPossessionsFromTotr(teamAInfo.totr));
+			if (teamBInfo.shortCode) possByShort.set(teamBInfo.shortCode, estimatedPossessionsFromTotr(teamBInfo.totr));
+
+			const bundle = {
+				game,
+				rows,
+				teamAShort: teamAInfo.shortCode,
+				teamBShort: teamBInfo.shortCode,
+				possByShort
+			};
+			gameCache.set(key, bundle);
+			return bundle;
+		}
+
+		async function mapWithConcurrency(items, limit, worker) {
+			const queue = items.slice();
+			const workers = Array.from({ length: Math.max(1, limit) }, async () => {
+				while (queue.length) {
+					const item = queue.shift();
+					await worker(item);
+				}
+			});
+			await Promise.all(workers);
+		}
+
+		function gameMatchesTeamContext(game, teamName, homeAway, opponent) {
+			const isHome = game.team_a === teamName;
+			const isAway = game.team_b === teamName;
+			if (!isHome && !isAway) return false;
+			if (homeAway === "home" && !isHome) return false;
+			if (homeAway === "away" && !isAway) return false;
+			if (opponent !== "all") {
+				const opp = isHome ? game.team_b : game.team_a;
+				if (opp !== opponent) return false;
+			}
+			return true;
+		}
+
+		function buildGrid() {
+			const cells = [];
+			for (let gy = 0; gy < gridY; gy++) {
+				for (let gx = 0; gx < gridX; gx++) {
+					const x = xMin + ((gx + 0.5) / gridX) * (xMax - xMin);
+					const y = yMin + ((gy + 0.5) / gridY) * (yMax - yMin);
+					cells.push({
+						id: `${gx}_${gy}`,
+						gx,
+						gy,
+						x,
+						y,
+						attempts: 0,
+						fgAttempts: 0,
+						fgMakes: 0,
+						points: 0,
+						efgNumerator: 0
+					});
+				}
+			}
+			return cells;
+		}
+
+		function inCourt(x, y) {
+			return Number.isFinite(x) && Number.isFinite(y) && x >= xMin && x <= xMax && y >= yMin && y <= yMax;
+		}
+
+		function distributeShot(cells, row, action) {
+			const shotX = Number(row.COORD_X);
+			const shotY = Number(row.COORD_Y);
+			if (!inCourt(shotX, shotY)) return;
+
+			const neighbors = [];
+			let totalWeight = 0;
+			for (const cell of cells) {
+				const dx = (shotX - cell.x) / sigmaX;
+				const dy = (shotY - cell.y) / sigmaY;
+				const dist2 = dx * dx + dy * dy;
+				if (dist2 > 6.0) continue;
+				const weight = Math.exp(-0.5 * dist2);
+				if (weight <= 0.001) continue;
+				neighbors.push([cell, weight]);
+				totalWeight += weight;
+			}
+			if (!totalWeight) return;
+
+			const isMake = action.endsWith("M");
+			const is3 = action.startsWith("3");
+			const pts = Number(row.POINTS || 0);
+
+			for (const pair of neighbors) {
+				const cell = pair[0];
+				const weight = pair[1] / totalWeight;
+				cell.attempts += weight;
+				cell.fgAttempts += weight;
+				if (isMake) {
+					cell.fgMakes += weight;
+				}
+				cell.points += pts * weight;
+				cell.efgNumerator += isMake ? (is3 ? 1.5 : 1.0) * weight : 0;
+			}
+		}
+
+		function finalizeGrid(cells, possessions, baselineById) {
+			const poss = Number.isFinite(possessions) && possessions > 0 ? possessions : NaN;
+			return cells.map((cell) => {
+				const attemptsPer100 = Number.isFinite(poss) ? (cell.attempts / poss) * 100 : NaN;
+				const ppa = cell.attempts > 0 ? cell.points / cell.attempts : NaN;
+				const efg = cell.fgAttempts > 0 ? cell.efgNumerator / cell.fgAttempts : NaN;
+				const contributionPer100 = Number.isFinite(attemptsPer100) && Number.isFinite(ppa) ? attemptsPer100 * ppa : NaN;
+				const baseline = baselineById.get(cell.id);
+				const deltaVsLeague = Number.isFinite(ppa) && baseline && Number.isFinite(baseline.ppa) ? ppa - baseline.ppa : NaN;
+				return Object.assign({}, cell, {
+					attemptsPer100,
+					ppa,
+					efg,
+					contributionPer100,
+					deltaVsLeague,
+					baselinePpa: baseline ? baseline.ppa : NaN
+				});
+			});
+		}
+
+		async function computeLeagueBaseline(season, filters) {
+			const key = `${season}|${filters.possType}|${filters.phase}`;
+			if (baselineCache.has(key)) return baselineCache.get(key);
+
+			const cells = buildGrid();
+			const games = gamesForSeason(season);
+			await mapWithConcurrency(games, 10, async (game) => {
+				const bundle = await loadGameBundle(game);
+				for (const row of bundle.rows) {
+					const action = normalizeAction(row.ID_ACTION);
+					if (!action) continue;
+					if (filters.possType !== "all" && classifyPoss(row) !== filters.possType) continue;
+					if (filters.phase !== "all" && classifyPhase(row) !== filters.phase) continue;
+					distributeShot(cells, row, action);
+				}
+			});
+
+			const baseline = new Map();
+			for (const cell of cells) {
+				baseline.set(cell.id, { ppa: cell.attempts > 0 ? cell.points / cell.attempts : NaN });
+			}
+			baselineCache.set(key, baseline);
+			return baseline;
+		}
+
+		async function aggregateTeamContexts(teamName, season, filters, baselineById) {
+			const games = gamesForSeason(season).filter((g) => gameMatchesTeamContext(g, teamName, filters.homeAway, filters.opponent));
+			const offenseCells = buildGrid();
+			const defenseCells = buildGrid();
+			let offensePoss = 0;
+			let defensePoss = 0;
+			let offenseGames = 0;
+			let defenseGames = 0;
+
+			await mapWithConcurrency(games, 10, async (game) => {
+				const bundle = await loadGameBundle(game);
+				const isHome = game.team_a === teamName;
+				const teamShort = isHome ? bundle.teamAShort : bundle.teamBShort;
+				const oppShort = isHome ? bundle.teamBShort : bundle.teamAShort;
+				const teamPoss = bundle.possByShort.get(teamShort);
+				const oppPoss = bundle.possByShort.get(oppShort);
+				if (Number.isFinite(teamPoss)) { offensePoss += teamPoss; offenseGames += 1; }
+				if (Number.isFinite(oppPoss)) { defensePoss += oppPoss; defenseGames += 1; }
+
+				for (const row of bundle.rows) {
+					const action = normalizeAction(row.ID_ACTION);
+					if (!action) continue;
+					if (filters.possType !== "all" && classifyPoss(row) !== filters.possType) continue;
+					if (filters.phase !== "all" && classifyPhase(row) !== filters.phase) continue;
+
+					const rowTeam = text(row.TEAM);
+					if (rowTeam === teamShort) {
+						distributeShot(offenseCells, row, action);
+					} else if (rowTeam === oppShort) {
+						distributeShot(defenseCells, row, action);
+					}
+				}
+			});
+
+			return {
+				games: games.length,
+				offense: finalizeGrid(offenseCells, offenseGames ? offensePoss : NaN, baselineById),
+				defense: finalizeGrid(defenseCells, defenseGames ? defensePoss : NaN, baselineById)
+			};
+		}
+
+		function colorForDelta(delta, invert) {
+			if (!Number.isFinite(delta)) return "#8f9ea0";
+			const d = clamp(invert ? -delta : delta, -0.45, 0.45);
+			if (d >= 0) {
+				const t = d / 0.45;
+				const r = Math.round(213 - 117 * t);
+				const g = Math.round(221 + 10 * t);
+				const b = Math.round(225 - 105 * t);
+				return `rgb(${r},${g},${b})`;
+			}
+			const t = Math.abs(d) / 0.45;
+			const r = Math.round(213 + 30 * t);
+			const g = Math.round(221 - 92 * t);
+			const b = Math.round(225 - 96 * t);
+			return `rgb(${r},${g},${b})`;
+		}
+
+		function metricValue(cell) {
+			if (activeMetric === "efficiency") return Math.abs(Number.isFinite(cell.deltaVsLeague) ? cell.deltaVsLeague : 0);
+			if (activeMetric === "contribution") return Number.isFinite(cell.contributionPer100) ? cell.contributionPer100 : 0;
+			return Number.isFinite(cell.attemptsPer100) ? cell.attemptsPer100 : 0;
+		}
+
+		function maxHeightScale(offense, defense) {
+			let maxValue = 0;
+			for (const cell of offense.concat(defense)) {
+				maxValue = Math.max(maxValue, metricValue(cell));
+			}
+			return Math.max(maxValue, 0.001);
+		}
+
+		function makeCourtProjection(width, height, camera) {
+			const halfWorldWidth = 2.25;
+			const halfWorldDepth = 3.45;
+			const worldHeight = 2.5;
+			const baseDistance = 8.2;
+			const perspectiveStrength = Math.min(width, height) * 0.74;
+			const centerX = width * 0.5 + camera.panX;
+			const centerY = height * 0.58 + camera.panY;
+
+			function rotateWorld(worldPoint) {
+				const yawCos = Math.cos(camera.yaw);
+				const yawSin = Math.sin(camera.yaw);
+				const xYaw = worldPoint.x * yawCos - worldPoint.z * yawSin;
+				const zYaw = worldPoint.x * yawSin + worldPoint.z * yawCos;
+
+				const pitchCos = Math.cos(camera.pitch);
+				const pitchSin = Math.sin(camera.pitch);
+				const yPitch = worldPoint.y * pitchCos - zYaw * pitchSin;
+				const zPitch = worldPoint.y * pitchSin + zYaw * pitchCos;
+
+				return { x: xYaw, y: yPitch, z: zPitch };
+			}
+
+			function toWorld(x, y, z) {
+				const xNorm = ((x - xMin) / (xMax - xMin)) * 2 - 1;
+				const yNorm = ((y - yMin) / (yMax - yMin)) * 2 - 1;
+				return {
+					x: xNorm * halfWorldWidth,
+					y: z * worldHeight,
+					z: yNorm * halfWorldDepth
+				};
+			}
+
+			function projectRotated(rotatedPoint) {
+				const distance = baseDistance / camera.zoom;
+				const safeDepth = Math.max(0.65, distance - rotatedPoint.z);
+				const scale = perspectiveStrength / safeDepth;
+				return {
+					x: centerX + rotatedPoint.x * scale,
+					y: centerY - rotatedPoint.y * scale,
+					depth: rotatedPoint.z,
+					scale
+				};
+			}
+
+			function point(x, y, z) {
+				return projectRotated(rotateWorld(toWorld(x, y, z)));
+			}
+
+			function surfaceDepth(x, y, z) {
+				return rotateWorld(toWorld(x, y, z)).z;
+			}
+
+			return {
+				point,
+				surfaceDepth,
+				nearLeft: point(xMin, yMin, 0),
+				nearRight: point(xMax, yMin, 0),
+				farLeft: point(xMin, yMax, 0),
+				farRight: point(xMax, yMax, 0)
+			};
+		}
+
+		function pathFromPoints(points) {
+			return points.map((p, i) => `${i ? "L" : "M"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" ") + " Z";
+		}
+
+		function linePath(points) {
+			return points.map((p, i) => `${i ? "L" : "M"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" ");
+		}
+
+		function drawCourtLines(svg, projection, width, height) {
+			const ns = "http://www.w3.org/2000/svg";
+			const floor = document.createElementNS(ns, "path");
+			floor.setAttribute("d", pathFromPoints([projection.nearLeft, projection.nearRight, projection.farRight, projection.farLeft]));
+			floor.setAttribute("fill", "rgba(13,29,29,0.92)");
+			floor.setAttribute("stroke", "rgba(162,215,194,0.2)");
+			svg.appendChild(floor);
+
+			function addLine(points, stroke, widthPx, dash) {
+				const line = document.createElementNS(ns, "path");
+				line.setAttribute("d", linePath(points));
+				line.setAttribute("fill", "none");
+				line.setAttribute("stroke", stroke);
+				line.setAttribute("stroke-width", String(widthPx));
+				if (dash) line.setAttribute("stroke-dasharray", dash);
+				svg.appendChild(line);
+			}
+
+			addLine([projection.point(xMin, yMin, 0), projection.point(xMin, yMax, 0)], "rgba(174,222,202,0.24)", 1);
+			addLine([projection.point(xMax, yMin, 0), projection.point(xMax, yMax, 0)], "rgba(174,222,202,0.24)", 1);
+			addLine([projection.point(xMin, yMax, 0), projection.point(xMax, yMax, 0)], "rgba(174,222,202,0.24)", 1);
+
+			const laneLeft = -245;
+			const laneRight = 245;
+			const laneDepth = 580;
+			addLine([projection.point(laneLeft, 0, 0), projection.point(laneLeft, laneDepth, 0)], "rgba(174,222,202,0.28)", 1);
+			addLine([projection.point(laneRight, 0, 0), projection.point(laneRight, laneDepth, 0)], "rgba(174,222,202,0.28)", 1);
+			addLine([projection.point(laneLeft, laneDepth, 0), projection.point(laneRight, laneDepth, 0)], "rgba(174,222,202,0.28)", 1);
+
+			const hoop = projection.point(0, 95, 0);
+			const hoopEl = document.createElementNS(ns, "circle");
+			hoopEl.setAttribute("cx", hoop.x.toFixed(1));
+			hoopEl.setAttribute("cy", hoop.y.toFixed(1));
+			hoopEl.setAttribute("r", "4.2");
+			hoopEl.setAttribute("fill", "none");
+			hoopEl.setAttribute("stroke", "rgba(246,208,130,0.85)");
+			hoopEl.setAttribute("stroke-width", "1.1");
+			svg.appendChild(hoopEl);
+
+			const cornerY = 950;
+			const cornerX = 660;
+			addLine([projection.point(-cornerX, cornerY, 0), projection.point(-cornerX, yMax, 0)], "rgba(174,222,202,0.24)", 1);
+			addLine([projection.point(cornerX, cornerY, 0), projection.point(cornerX, yMax, 0)], "rgba(174,222,202,0.24)", 1);
+
+			const arcPts = [];
+			for (let a = -1.07; a <= 1.07; a += 0.08) {
+				const r = 675;
+				arcPts.push(projection.point(Math.sin(a) * r, 95 + Math.cos(a) * r, 0));
+			}
+			addLine(arcPts, "rgba(174,222,202,0.24)", 1);
+			addLine([projection.point(xMin, yMin, 0), projection.point(xMax, yMin, 0)], "rgba(174,222,202,0.14)", 1, "4 4");
+		}
+
+		function columnPolygons(projection, cell, zValue) {
+			const stepX = (xMax - xMin) / gridX;
+			const stepY = (yMax - yMin) / gridY;
+			const halfX = stepX * 0.36;
+			const halfY = stepY * 0.36;
+			const baseA = projection.point(cell.x - halfX, cell.y - halfY, 0);
+			const baseB = projection.point(cell.x + halfX, cell.y - halfY, 0);
+			const baseC = projection.point(cell.x + halfX, cell.y + halfY, 0);
+			const baseD = projection.point(cell.x - halfX, cell.y + halfY, 0);
+			const topA = projection.point(cell.x - halfX, cell.y - halfY, zValue);
+			const topB = projection.point(cell.x + halfX, cell.y - halfY, zValue);
+			const topC = projection.point(cell.x + halfX, cell.y + halfY, zValue);
+			const topD = projection.point(cell.x - halfX, cell.y + halfY, zValue);
+			return {
+				top: [topA, topB, topC, topD],
+				left: [baseD, baseA, topA, topD],
+				right: [baseC, baseD, topD, topC],
+				front: [baseB, baseC, topC, topB]
+			};
+		}
+
+		function shadeColor(color, factor) {
+			const m = color.match(/rgb\((\d+),(\d+),(\d+)\)/);
+			if (!m) return color;
+			const r = clamp(Math.round(Number(m[1]) * factor), 0, 255);
+			const g = clamp(Math.round(Number(m[2]) * factor), 0, 255);
+			const b = clamp(Math.round(Number(m[3]) * factor), 0, 255);
+			return `rgb(${r},${g},${b})`;
+		}
+
+		function showTooltip(ev, title, cell, invert) {
+			tooltipEl.style.display = "block";
+			const delta = Number.isFinite(cell.deltaVsLeague) ? (invert ? -cell.deltaVsLeague : cell.deltaVsLeague) : NaN;
+			const deltaText = Number.isFinite(delta) ? `${delta >= 0 ? "+" : ""}${delta.toFixed(3)}` : "-";
+			tooltipEl.innerHTML = `
+				<div class="tt-title">${title}</div>
+				<div class="tt-row"><span>Attempts</span><b>${fmt(cell.attempts, 1)}</b></div>
+				<div class="tt-row"><span>Attempts / 100</span><b>${fmt(cell.attemptsPer100, 2)}</b></div>
+				<div class="tt-row"><span>FG%</span><b>${cell.fgAttempts > 0 ? fmt((cell.fgMakes / cell.fgAttempts) * 100, 1) + "%" : "-"}</b></div>
+				<div class="tt-row"><span>eFG%</span><b>${Number.isFinite(cell.efg) ? fmt(cell.efg * 100, 1) + "%" : "-"}</b></div>
+				<div class="tt-row"><span>Points / attempt</span><b>${fmt(cell.ppa, 3)}</b></div>
+				<div class="tt-row"><span>Contribution / 100</span><b>${fmt(cell.contributionPer100, 2)}</b></div>
+				<div class="tt-row"><span>League delta</span><b>${deltaText}</b></div>
+			`;
+			tooltipEl.style.left = `${ev.clientX + 14}px`;
+			tooltipEl.style.top = `${ev.clientY + 14}px`;
+		}
+
+		function hideTooltip() {
+			tooltipEl.style.display = "none";
+		}
+
+		function resetCamera(cameraState, isWide, rerender) {
+			const next = makeDefaultCameraState(isWide);
+			cameraState.yaw = next.yaw;
+			cameraState.pitch = next.pitch;
+			cameraState.zoom = next.zoom;
+			cameraState.panX = next.panX;
+			cameraState.panY = next.panY;
+			rerender();
+		}
+
+		function scheduleRerender(cameraState, rerender) {
+			if (cameraState.rafId) return;
+			cameraState.rafId = requestAnimationFrame(() => {
+				cameraState.rafId = 0;
+				rerender();
+			});
+		}
+
+		function attachCameraControls(hostEl, svg, cameraState, rerender, resetView) {
+			hostEl.classList.add("interactive");
+
+			svg.addEventListener("pointerdown", (ev) => {
+				cameraState.isDragging = true;
+				cameraState.dragPointerId = ev.pointerId;
+				cameraState.dragMode = ev.shiftKey ? "pan" : "orbit";
+				cameraState.lastClientX = ev.clientX;
+				cameraState.lastClientY = ev.clientY;
+				hostEl.classList.add("dragging");
+				svg.setPointerCapture(ev.pointerId);
+			});
+
+			svg.addEventListener("pointermove", (ev) => {
+				if (!cameraState.isDragging || cameraState.dragPointerId !== ev.pointerId) return;
+				const dx = ev.clientX - cameraState.lastClientX;
+				const dy = ev.clientY - cameraState.lastClientY;
+				cameraState.lastClientX = ev.clientX;
+				cameraState.lastClientY = ev.clientY;
+
+				if (cameraState.dragMode === "pan") {
+					cameraState.panX += dx;
+					cameraState.panY += dy;
+				} else {
+					cameraState.yaw += dx * 0.008;
+					cameraState.pitch = clamp(cameraState.pitch + dy * 0.006, -1.42, -0.18);
+				}
+				scheduleRerender(cameraState, rerender);
+			});
+
+			function stopDragging(ev) {
+				if (cameraState.dragPointerId != null && ev.pointerId === cameraState.dragPointerId) {
+					cameraState.isDragging = false;
+					cameraState.dragPointerId = null;
+					hostEl.classList.remove("dragging");
+				}
+			}
+
+			svg.addEventListener("pointerup", stopDragging);
+			svg.addEventListener("pointercancel", stopDragging);
+			svg.addEventListener("wheel", (ev) => {
+				ev.preventDefault();
+				const zoomFactor = Math.exp(-ev.deltaY * 0.0012);
+				cameraState.zoom = clamp(cameraState.zoom * zoomFactor, 0.62, 2.4);
+				scheduleRerender(cameraState, rerender);
+			}, { passive: false });
+			svg.addEventListener("dblclick", resetView);
+		}
+
+		function renderMap(hostEl, title, cells, scaleMax, options) {
+			const ns = "http://www.w3.org/2000/svg";
+			const width = options.wide ? 980 : 480;
+			const height = options.wide ? 540 : 420;
+			const projection = makeCourtProjection(width, height, options.cameraState);
+			const svg = document.createElementNS(ns, "svg");
+			svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+			svg.setAttribute("role", "img");
+			svg.setAttribute("aria-label", title);
+
+			drawCourtLines(svg, projection, width, height);
+
+			const renderCells = cells
+				.filter((cell) => metricValue(cell) > 0.02)
+				.sort((a, b) => projection.surfaceDepth(b.x, b.y, 0) - projection.surfaceDepth(a.x, a.y, 0));
+
+			for (const cell of renderCells) {
+				const metric = metricValue(cell);
+				const normalized = metric / scaleMax;
+				const z = clamp(normalized, 0, 1.0) * 0.62 * (options.negativeOnly ? -1 : 1);
+				const polys = columnPolygons(projection, cell, z);
+				const baseColor = colorForDelta(cell.deltaVsLeague, !!options.invertDelta);
+
+				const group = document.createElementNS(ns, "g");
+				const left = document.createElementNS(ns, "path");
+				left.setAttribute("d", pathFromPoints(polys.left));
+				left.setAttribute("fill", shadeColor(baseColor, options.negativeOnly ? 0.5 : 0.7));
+				left.setAttribute("stroke", "rgba(6,12,11,0.4)");
+				left.setAttribute("stroke-width", "0.5");
+				group.appendChild(left);
+
+				const right = document.createElementNS(ns, "path");
+				right.setAttribute("d", pathFromPoints(polys.right));
+				right.setAttribute("fill", shadeColor(baseColor, options.negativeOnly ? 0.68 : 0.84));
+				right.setAttribute("stroke", "rgba(6,12,11,0.4)");
+				right.setAttribute("stroke-width", "0.5");
+				group.appendChild(right);
+
+				const front = document.createElementNS(ns, "path");
+				front.setAttribute("d", pathFromPoints(polys.front));
+				front.setAttribute("fill", shadeColor(baseColor, options.negativeOnly ? 0.62 : 0.76));
+				front.setAttribute("stroke", "rgba(6,12,11,0.4)");
+				front.setAttribute("stroke-width", "0.5");
+				group.appendChild(front);
+
+				const top = document.createElementNS(ns, "path");
+				top.setAttribute("d", pathFromPoints(polys.top));
+				top.setAttribute("fill", baseColor);
+				top.setAttribute("fill-opacity", "0.96");
+				top.setAttribute("stroke", "rgba(6,12,11,0.5)");
+				top.setAttribute("stroke-width", "0.6");
+				top.addEventListener("mousemove", (ev) => showTooltip(ev, title, cell, !!options.invertDelta));
+				top.addEventListener("mouseenter", (ev) => showTooltip(ev, title, cell, !!options.invertDelta));
+				top.addEventListener("mouseleave", hideTooltip);
+				group.appendChild(top);
+				svg.appendChild(group);
+			}
+
+			hostEl.innerHTML = "";
+			hostEl.appendChild(svg);
+			attachCameraControls(hostEl, svg, options.cameraState, options.rerender, options.resetView);
+		}
+
+		function renderCombinedMap(hostEl, teamName, offense, defense, scaleMax) {
+			const ns = "http://www.w3.org/2000/svg";
+			const width = 980;
+			const height = 540;
+			const projection = makeCourtProjection(width, height, chartStates.combined);
+			const svg = document.createElementNS(ns, "svg");
+			svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+			drawCourtLines(svg, projection, width, height);
+
+			const layers = [];
+			for (const cell of offense.filter((c) => metricValue(c) > 0.02)) {
+				layers.push({ cell, z: clamp(metricValue(cell) / scaleMax, 0, 1) * 0.62, invertDelta: false, title: `${teamName} offense` });
+			}
+			for (const cell of defense.filter((c) => metricValue(c) > 0.02)) {
+				layers.push({ cell, z: -clamp(metricValue(cell) / scaleMax, 0, 1) * 0.62, invertDelta: true, title: `${teamName} defense` });
+			}
+			layers.sort((a, b) => projection.surfaceDepth(b.cell.x, b.cell.y, b.z * 0.5) - projection.surfaceDepth(a.cell.x, a.cell.y, a.z * 0.5));
+
+			for (const layer of layers) {
+				const polys = columnPolygons(projection, layer.cell, layer.z);
+				const baseColor = colorForDelta(layer.cell.deltaVsLeague, layer.invertDelta);
+				const group = document.createElementNS(ns, "g");
+
+				const left = document.createElementNS(ns, "path");
+				left.setAttribute("d", pathFromPoints(polys.left));
+				left.setAttribute("fill", shadeColor(baseColor, layer.z < 0 ? 0.5 : 0.7));
+				left.setAttribute("stroke", "rgba(6,12,11,0.4)");
+				left.setAttribute("stroke-width", "0.5");
+				group.appendChild(left);
+
+				const right = document.createElementNS(ns, "path");
+				right.setAttribute("d", pathFromPoints(polys.right));
+				right.setAttribute("fill", shadeColor(baseColor, layer.z < 0 ? 0.68 : 0.84));
+				right.setAttribute("stroke", "rgba(6,12,11,0.4)");
+				right.setAttribute("stroke-width", "0.5");
+				group.appendChild(right);
+
+				const front = document.createElementNS(ns, "path");
+				front.setAttribute("d", pathFromPoints(polys.front));
+				front.setAttribute("fill", shadeColor(baseColor, layer.z < 0 ? 0.62 : 0.76));
+				front.setAttribute("stroke", "rgba(6,12,11,0.4)");
+				front.setAttribute("stroke-width", "0.5");
+				group.appendChild(front);
+
+				const top = document.createElementNS(ns, "path");
+				top.setAttribute("d", pathFromPoints(polys.top));
+				top.setAttribute("fill", baseColor);
+				top.setAttribute("fill-opacity", "0.96");
+				top.setAttribute("stroke", "rgba(6,12,11,0.5)");
+				top.setAttribute("stroke-width", "0.6");
+				top.addEventListener("mousemove", (ev) => showTooltip(ev, layer.title, layer.cell, layer.invertDelta));
+				top.addEventListener("mouseenter", (ev) => showTooltip(ev, layer.title, layer.cell, layer.invertDelta));
+				top.addEventListener("mouseleave", hideTooltip);
+				group.appendChild(top);
+
+				svg.appendChild(group);
+			}
+
+			hostEl.innerHTML = "";
+			hostEl.appendChild(svg);
+			attachCameraControls(hostEl, svg, chartStates.combined, () => renderCurrentScenes(), () => renderCurrentScenes("combined"));
+		}
+
+		let currentRenderPayload = null;
+
+		function renderCurrentScenes(resetKey) {
+			if (!currentRenderPayload) return;
+			if (resetKey === "offense") {
+				resetCamera(chartStates.offense, false, () => renderCurrentScenes());
+				return;
+			}
+			if (resetKey === "defense") {
+				resetCamera(chartStates.defense, false, () => renderCurrentScenes());
+				return;
+			}
+			if (resetKey === "combined") {
+				resetCamera(chartStates.combined, true, () => renderCurrentScenes());
+				return;
+			}
+
+			renderMap(offenseChartEl, `${currentRenderPayload.teamName} offense`, currentRenderPayload.offense, currentRenderPayload.scaleMax, {
+				wide: false,
+				negativeOnly: false,
+				invertDelta: false,
+				cameraState: chartStates.offense,
+				rerender: () => renderCurrentScenes(),
+				resetView: () => renderCurrentScenes("offense")
+			});
+			renderMap(defenseChartEl, `${currentRenderPayload.teamName} defense`, currentRenderPayload.defense, currentRenderPayload.scaleMax, {
+				wide: false,
+				negativeOnly: true,
+				invertDelta: true,
+				cameraState: chartStates.defense,
+				rerender: () => renderCurrentScenes(),
+				resetView: () => renderCurrentScenes("defense")
+			});
+			renderCombinedMap(combinedChartEl, currentRenderPayload.teamName, currentRenderPayload.offense, currentRenderPayload.defense, currentRenderPayload.scaleMax);
+		}
+
+		async function render() {
+			const season = seasonEl.value;
+			const teamName = teamEl.value;
+			const filters = {
+				homeAway: homeAwayEl.value,
+				opponent: opponentEl.value,
+				possType: possTypeEl.value,
+				phase: phaseEl.value
+			};
+
+			if (!season || !teamName) return;
+			status("Computing smoothed offense and defense shot fields...");
+
+			try {
+				const baselineById = await computeLeagueBaseline(season, filters);
+				const contexts = await aggregateTeamContexts(teamName, season, filters, baselineById);
+				const scaleMax = maxHeightScale(contexts.offense, contexts.defense);
+				currentRenderPayload = {
+					teamName,
+					offense: contexts.offense,
+					defense: contexts.defense,
+					scaleMax
+				};
+				renderCurrentScenes();
+
+				offenseMetaEl.textContent = `${contexts.games} games · positive z-axis`;
+				defenseMetaEl.textContent = `${contexts.games} games · negative z-axis`;
+				combinedMetaEl.textContent = `${activeMetric} · ${season} · ${filters.possType} · ${filters.phase}`;
+				status(`Rendered three 3D maps for ${teamName}. Smoothing uses a coordinate lattice to avoid visible hard bins.`);
+			} catch (err) {
+				status(`Render failed: ${err.message}`);
+			}
+		}
+
+		async function init() {
+			status("Loading games manifest...");
+			await loadManifest();
+			const seasons = seasonsFromManifest();
+			fillSelect(seasonEl, seasons, seasons[seasons.length - 1]);
+			refreshSeasonInputs();
+			status("Ready.");
+			await render();
+		}
+
+		seasonEl.addEventListener("change", () => {
+			refreshSeasonInputs();
+			render();
+		});
+		teamEl.addEventListener("change", render);
+		homeAwayEl.addEventListener("change", render);
+		opponentEl.addEventListener("change", render);
+		possTypeEl.addEventListener("change", render);
+		phaseEl.addEventListener("change", render);
+		loadBtn.addEventListener("click", render);
+		metricPills.forEach((pill) => {
+			pill.addEventListener("click", () => {
+				activeMetric = pill.dataset.metric;
+				metricPills.forEach((node) => node.classList.toggle("active", node === pill));
+				render();
+			});
+		});
+		resetOffenseViewEl.addEventListener("click", () => renderCurrentScenes("offense"));
+		resetDefenseViewEl.addEventListener("click", () => renderCurrentScenes("defense"));
+		resetCombinedViewEl.addEventListener("click", () => renderCurrentScenes("combined"));
+
+		init().catch((err) => {
+			status(`Init failed: ${err.message}`);
+		});
+	})();
+	</script>
+</body>
+</html>

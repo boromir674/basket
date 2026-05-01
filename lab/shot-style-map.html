@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shot Style Map Lab (2D Bins)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #08120f;
+      --bg1: #0f201c;
+      --bg2: #183127;
+      --card: rgba(10, 20, 18, 0.9);
+      --border: rgba(150, 200, 178, 0.25);
+      --text: #ecfff7;
+      --muted: #9cc8b8;
+      --accent: #93f5cc;
+      --bad: #f27d7d;
+      --good: #61d99a;
+      --amber: #f3c56d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 10% -10%, #224437 0%, transparent 55%),
+        radial-gradient(900px 640px at 95% 0%, #193c52 0%, transparent 52%),
+        linear-gradient(160deg, var(--bg0), var(--bg1) 48%, #0b151e 100%);
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px 18px 28px;
+      display: grid;
+      gap: 14px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.01em;
+    }
+    .title .sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+    .home-link {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      background: rgba(21, 39, 34, 0.95);
+      padding: 8px 11px;
+      border-radius: 999px;
+    }
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 14px;
+      padding: 12px;
+      backdrop-filter: blur(5px);
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(120px, 1fr));
+      gap: 10px;
+      align-items: end;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    select, button {
+      width: 100%;
+      height: 36px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(13, 26, 22, 0.95);
+      padding: 0 10px;
+    }
+    button {
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      background: linear-gradient(140deg, #234338, #1e3148);
+    }
+    .toggle-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      grid-column: span 2;
+    }
+    .pill {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      color: var(--muted);
+      cursor: pointer;
+      user-select: none;
+      background: rgba(13, 26, 22, 0.95);
+    }
+    .pill.active {
+      color: #0b1a16;
+      border-color: transparent;
+      background: linear-gradient(120deg, #8cecc5, #7ad7ff);
+      font-weight: 700;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: minmax(520px, 1fr) 320px;
+      gap: 12px;
+    }
+    .charts {
+      display: grid;
+      gap: 12px;
+    }
+    .chart-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .chart-title {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .chart-grid.compare {
+      grid-template-columns: 1fr 1fr;
+    }
+    .viz-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px;
+      background: rgba(7, 14, 13, 0.74);
+    }
+    .viz-name {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .legend {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .sw {
+      width: 14px;
+      height: 8px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .side {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .rank-card h3 {
+      margin: 0 0 6px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+    .rank-card ol {
+      margin: 0;
+      padding-left: 16px;
+      display: grid;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .status {
+      font-size: 12px;
+      color: var(--muted);
+      min-height: 16px;
+    }
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .tooltip {
+      position: fixed;
+      pointer-events: none;
+      display: none;
+      z-index: 50;
+      min-width: 220px;
+      max-width: 280px;
+      background: rgba(5, 12, 10, 0.98);
+      border: 1px solid rgba(149, 197, 175, 0.45);
+      border-radius: 10px;
+      padding: 8px 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      font-size: 12px;
+      color: var(--text);
+    }
+    .tooltip .tt-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #d5ffef;
+    }
+    .tooltip .tt-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: var(--muted);
+      margin: 1px 0;
+    }
+    .tt-row b { color: var(--text); font-weight: 600; }
+
+    @media (max-width: 1180px) {
+      .controls { grid-template-columns: repeat(3, minmax(120px, 1fr)); }
+      .toggle-group { grid-column: span 3; }
+      .content { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .controls { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .toggle-group { grid-column: span 2; }
+      .chart-grid.compare { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="title">
+        <h1>Shot Style Map Lab (2D)</h1>
+        <div class="sub">Binned half-court shot selection and impact in under 5 seconds.</div>
+      </div>
+      <a class="home-link" href="./index.html">Back to Lab Landing</a>
+    </div>
+
+    <div class="panel">
+      <div class="controls">
+        <div>
+          <label for="season">Season</label>
+          <select id="season"></select>
+        </div>
+        <div>
+          <label for="teamA">Team</label>
+          <select id="teamA"></select>
+        </div>
+        <div>
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="single">Single team</option>
+            <option value="compare">Compare (small multiples)</option>
+          </select>
+        </div>
+        <div>
+          <label for="teamB">Compare Team</label>
+          <select id="teamB"></select>
+        </div>
+        <div>
+          <label for="homeaway">Home / Away</label>
+          <select id="homeaway">
+            <option value="all">All</option>
+            <option value="home">Home only</option>
+            <option value="away">Away only</option>
+          </select>
+        </div>
+        <div>
+          <label for="opponent">Opponent (optional)</label>
+          <select id="opponent">
+            <option value="all">All opponents</option>
+          </select>
+        </div>
+        <div>
+          <label for="possType">Possession Type</label>
+          <select id="possType">
+            <option value="all">All</option>
+            <option value="halfcourt">Half-court</option>
+            <option value="transition">Transition</option>
+            <option value="oreb">After OREB</option>
+          </select>
+        </div>
+        <div>
+          <label for="phase">Phase</label>
+          <select id="phase">
+            <option value="all">All</option>
+            <option value="q1">Q1</option>
+            <option value="q2">Q2</option>
+            <option value="q3">Q3</option>
+            <option value="q4">Q4</option>
+            <option value="clutch">Clutch (last 5, +/-5)</option>
+          </select>
+        </div>
+        <div class="toggle-group" id="metric-pills">
+          <div class="pill active" data-metric="volume">Volume</div>
+          <div class="pill" data-metric="efficiency">Efficiency</div>
+          <div class="pill" data-metric="contribution">Contribution</div>
+          <button id="loadBtn" type="button">Render</button>
+        </div>
+      </div>
+      <div class="status" id="status"></div>
+    </div>
+
+    <div class="content">
+      <div class="panel charts">
+        <div class="chart-head">
+          <div class="chart-title" id="chartTitle">Shot map</div>
+          <div class="small-note" id="chartMeta"></div>
+        </div>
+        <div class="chart-grid" id="chartGrid"></div>
+        <div class="legend">
+          <span><span class="sw" style="background:#b83f45"></span>below league baseline</span>
+          <span><span class="sw" style="background:#d9dde1"></span>at baseline</span>
+          <span><span class="sw" style="background:#3ca96e"></span>above league baseline</span>
+        </div>
+      </div>
+
+      <div class="side">
+        <div class="panel rank-card">
+          <h3>Highest Volume Bins</h3>
+          <ol id="rankVolume"></ol>
+        </div>
+        <div class="panel rank-card">
+          <h3>Most Efficient Bins</h3>
+          <ol id="rankEfficiency"></ol>
+        </div>
+        <div class="panel rank-card">
+          <h3>Biggest Contribution Bins</h3>
+          <ol id="rankContribution"></ol>
+        </div>
+        <div class="panel hint">
+          Metrics:
+          <br />Selection/100 = attempts in bin / estimated team possessions * 100
+          <br />Efficiency = points per attempt
+          <br />Contribution/100 = Selection/100 * Efficiency
+          <br />Color = bin efficiency delta vs season league baseline
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+  (function () {
+    const manifestUrls = [
+      "../assets/processed/games_manifest.json",
+      "../data/games_manifest.json",
+      "/assets/processed/games_manifest.json",
+      "/data/games_manifest.json"
+    ];
+
+    const seasonEl = document.getElementById("season");
+    const teamAEl = document.getElementById("teamA");
+    const teamBEl = document.getElementById("teamB");
+    const modeEl = document.getElementById("mode");
+    const homeAwayEl = document.getElementById("homeaway");
+    const opponentEl = document.getElementById("opponent");
+    const possTypeEl = document.getElementById("possType");
+    const phaseEl = document.getElementById("phase");
+    const loadBtn = document.getElementById("loadBtn");
+    const statusEl = document.getElementById("status");
+    const chartGridEl = document.getElementById("chartGrid");
+    const chartTitleEl = document.getElementById("chartTitle");
+    const chartMetaEl = document.getElementById("chartMeta");
+    const tooltipEl = document.getElementById("tooltip");
+
+    const rankVolumeEl = document.getElementById("rankVolume");
+    const rankEfficiencyEl = document.getElementById("rankEfficiency");
+    const rankContributionEl = document.getElementById("rankContribution");
+
+    const metricPills = Array.from(document.querySelectorAll("#metric-pills .pill"));
+
+    const binsX = 12;
+    const binsY = 9;
+    const xMin = -750;
+    const xMax = 750;
+    const yMin = -50;
+    const yMax = 1400;
+
+    let activeMetric = "volume";
+    let manifest = [];
+    const gameCache = new Map();
+    const baselineCache = new Map();
+
+    function text(v) {
+      return String(v == null ? "" : v).trim();
+    }
+
+    function normalizeTeamKey(v) {
+      return text(v)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    }
+
+    function fmt(n, d) {
+      if (!Number.isFinite(n)) return "-";
+      return n.toFixed(d);
+    }
+
+    function clamp(v, lo, hi) {
+      return Math.max(lo, Math.min(hi, v));
+    }
+
+    function status(msg) {
+      statusEl.textContent = msg || "";
+    }
+
+    function normalizeAction(idAction) {
+      const a = text(idAction).toUpperCase();
+      if (a === "2FGA" || a === "2FGM" || a === "3FGA" || a === "3FGM") return a;
+      return null;
+    }
+
+    function classifyPoss(row) {
+      if (String(row.FASTBREAK || "0") === "1") return "transition";
+      if (String(row.SECOND_CHANCE || "0") === "1") return "oreb";
+      return "halfcourt";
+    }
+
+    function classifyPhase(row) {
+      const minute = Number(row.MINUTE || 0);
+      const q = clamp(Math.floor((Math.max(1, minute) - 1) / 10) + 1, 1, 4);
+      const diff = Math.abs(Number(row.POINTS_A || 0) - Number(row.POINTS_B || 0));
+      if (minute >= 35 && diff <= 5) return "clutch";
+      return "q" + q;
+    }
+
+    function estimatedPossessionsFromTotr(totr) {
+      if (!totr) return NaN;
+      const fga2 = Number(totr.FieldGoalsAttempted2 || 0);
+      const fga3 = Number(totr.FieldGoalsAttempted3 || 0);
+      const fta = Number(totr.FreeThrowsAttempted || 0);
+      const orb = Number(totr.OffensiveRebounds || 0);
+      const tov = Number(totr.Turnovers || 0);
+      const poss = (fga2 + fga3) + 0.44 * fta - orb + tov;
+      return poss > 0 ? poss : NaN;
+    }
+
+    async function fetchJsonAny(urls) {
+      let lastErr = null;
+      for (const url of urls) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) continue;
+          return await res.json();
+        } catch (err) {
+          lastErr = err;
+        }
+      }
+      throw lastErr || new Error("Could not load JSON from candidates.");
+    }
+
+    async function loadManifest() {
+      const payload = await fetchJsonAny(manifestUrls);
+      if (!Array.isArray(payload)) {
+        throw new Error("games_manifest.json payload is not an array.");
+      }
+      manifest = payload
+        .filter((g) => text(g.seasoncode) && Number.isFinite(Number(g.gamecode)))
+        .map((g) => ({
+          seasoncode: text(g.seasoncode),
+          gamecode: Number(g.gamecode),
+          team_a: text(g.team_a),
+          team_b: text(g.team_b),
+          file: text(g.file)
+        }));
+      manifest.sort((a, b) => (a.seasoncode === b.seasoncode ? a.gamecode - b.gamecode : a.seasoncode.localeCompare(b.seasoncode)));
+      if (!manifest.length) throw new Error("Manifest loaded but has no entries.");
+    }
+
+    function seasonsFromManifest() {
+      return Array.from(new Set(manifest.map((m) => m.seasoncode))).sort();
+    }
+
+    function gamesForSeason(season) {
+      return manifest.filter((m) => m.seasoncode === season);
+    }
+
+    function teamsForSeason(season) {
+      const teams = new Set();
+      for (const g of gamesForSeason(season)) {
+        if (g.team_a) teams.add(g.team_a);
+        if (g.team_b) teams.add(g.team_b);
+      }
+      return Array.from(teams).sort();
+    }
+
+    function fillSelect(selectEl, values, keepValue) {
+      const old = keepValue || selectEl.value;
+      selectEl.innerHTML = "";
+      for (const v of values) {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = v;
+        selectEl.appendChild(opt);
+      }
+      if (values.includes(old)) {
+        selectEl.value = old;
+      }
+    }
+
+    function refreshSeasonDrivenInputs() {
+      const season = seasonEl.value;
+      const teams = teamsForSeason(season);
+      fillSelect(teamAEl, teams, teamAEl.value);
+      fillSelect(teamBEl, teams, teamBEl.value);
+      if (!teamBEl.value && teams.length > 1) {
+        teamBEl.value = teams[1];
+      }
+
+      const oppOpts = ["all", ...teams];
+      fillSelect(opponentEl, oppOpts, opponentEl.value || "all");
+      opponentEl.value = opponentEl.value || "all";
+    }
+
+    function buildRawPaths(season, gamecode) {
+      return {
+        pts: [
+          `../assets/raw_pts_${season}_${gamecode}.json`,
+          `/assets/raw_pts_${season}_${gamecode}.json`
+        ],
+        box: [
+          `../assets/raw_box_${season}_${gamecode}.json`,
+          `/assets/raw_box_${season}_${gamecode}.json`
+        ]
+      };
+    }
+
+    async function loadGameBundle(game) {
+      const key = `${game.seasoncode}_${game.gamecode}`;
+      if (gameCache.has(key)) return gameCache.get(key);
+
+      const paths = buildRawPaths(game.seasoncode, game.gamecode);
+      const [ptsPayload, boxPayload] = await Promise.all([
+        fetchJsonAny(paths.pts),
+        fetchJsonAny(paths.box)
+      ]);
+
+      const rows = Array.isArray(ptsPayload.Rows) ? ptsPayload.Rows : [];
+      const stats = Array.isArray(boxPayload.Stats) ? boxPayload.Stats : [];
+
+      const byTeamName = new Map();
+      for (const s of stats) {
+        const longName = normalizeTeamKey(s.Team);
+        const shortCode = text(s && s.tmr ? s.tmr.Team : "");
+        byTeamName.set(longName, {
+          shortCode,
+          totr: s.totr || null
+        });
+      }
+
+      const teamAInfo = byTeamName.get(normalizeTeamKey(game.team_a)) || stats[0] && stats[0].tmr ? {
+        shortCode: text(stats[0].tmr.Team),
+        totr: stats[0].totr || null
+      } : { shortCode: "", totr: null };
+      const teamBInfo = byTeamName.get(normalizeTeamKey(game.team_b)) || stats[1] && stats[1].tmr ? {
+        shortCode: text(stats[1].tmr.Team),
+        totr: stats[1].totr || null
+      } : { shortCode: "", totr: null };
+      const possByShort = new Map();
+      if (teamAInfo.shortCode) possByShort.set(teamAInfo.shortCode, estimatedPossessionsFromTotr(teamAInfo.totr));
+      if (teamBInfo.shortCode) possByShort.set(teamBInfo.shortCode, estimatedPossessionsFromTotr(teamBInfo.totr));
+
+      const bundle = {
+        game,
+        rows,
+        teamAShort: teamAInfo.shortCode,
+        teamBShort: teamBInfo.shortCode,
+        possByShort
+      };
+      gameCache.set(key, bundle);
+      return bundle;
+    }
+
+    async function mapWithConcurrency(items, limit, worker) {
+      const queue = items.slice();
+      const workers = Array.from({ length: Math.max(1, limit) }, async () => {
+        while (queue.length) {
+          const item = queue.shift();
+          await worker(item);
+        }
+      });
+      await Promise.all(workers);
+    }
+
+    function gameMatchesTeamContext(game, teamName, homeAway, opponent) {
+      const isHome = game.team_a === teamName;
+      const isAway = game.team_b === teamName;
+      if (!isHome && !isAway) return false;
+      if (homeAway === "home" && !isHome) return false;
+      if (homeAway === "away" && !isAway) return false;
+      if (opponent && opponent !== "all") {
+        const opp = isHome ? game.team_b : game.team_a;
+        if (opp !== opponent) return false;
+      }
+      return true;
+    }
+
+    function buildBinStats() {
+      const bins = [];
+      for (let y = 0; y < binsY; y++) {
+        for (let x = 0; x < binsX; x++) {
+          bins.push({
+            id: `${x}_${y}`,
+            bx: x,
+            by: y,
+            attempts: 0,
+            makes: 0,
+            points: 0,
+            fgAttempts: 0,
+            fgMakes: 0,
+            efgNumerator: 0
+          });
+        }
+      }
+      return bins;
+    }
+
+    function indexForCoord(x, y) {
+      const nx = (x - xMin) / (xMax - xMin);
+      const ny = (y - yMin) / (yMax - yMin);
+      if (!Number.isFinite(nx) || !Number.isFinite(ny)) return -1;
+      if (nx < 0 || nx > 1 || ny < 0 || ny > 1) return -1;
+      const bx = clamp(Math.floor(nx * binsX), 0, binsX - 1);
+      const by = clamp(Math.floor(ny * binsY), 0, binsY - 1);
+      return by * binsX + bx;
+    }
+
+    function accumulateAttempt(bin, action, points) {
+      const is3 = action.startsWith("3");
+      const isMake = action.endsWith("M");
+      bin.attempts += 1;
+      bin.fgAttempts += 1;
+      if (isMake) {
+        bin.makes += 1;
+        bin.fgMakes += 1;
+      }
+      bin.points += Number(points || 0);
+      bin.efgNumerator += isMake ? (is3 ? 1.5 : 1.0) : 0;
+    }
+
+    function finalizeBinMetrics(bins, possessions, baselineById) {
+      const poss = Number.isFinite(possessions) && possessions > 0 ? possessions : NaN;
+      return bins.map((b) => {
+        const attemptsPer100 = Number.isFinite(poss) ? (b.attempts / poss) * 100 : NaN;
+        const ppa = b.attempts > 0 ? b.points / b.attempts : NaN;
+        const efg = b.fgAttempts > 0 ? b.efgNumerator / b.fgAttempts : NaN;
+        const contributionPer100 = Number.isFinite(attemptsPer100) && Number.isFinite(ppa)
+          ? attemptsPer100 * ppa
+          : NaN;
+        const baseline = baselineById.get(b.id);
+        const delta = Number.isFinite(ppa) && baseline && Number.isFinite(baseline.ppa)
+          ? ppa - baseline.ppa
+          : NaN;
+        return {
+          ...b,
+          attemptsPer100,
+          ppa,
+          efg,
+          contributionPer100,
+          baselinePpa: baseline ? baseline.ppa : NaN,
+          deltaVsLeague: delta
+        };
+      });
+    }
+
+    async function aggregateTeamForFilters(teamName, season, filters, baselineById) {
+      const games = gamesForSeason(season).filter((g) =>
+        gameMatchesTeamContext(g, teamName, filters.homeAway, filters.opponent)
+      );
+      if (!games.length) {
+        return { teamName, bins: finalizeBinMetrics(buildBinStats(), NaN, baselineById), games: 0, possessions: NaN };
+      }
+
+      const bins = buildBinStats();
+      let totalPoss = 0;
+      let possCountedGames = 0;
+
+      await mapWithConcurrency(games, 12, async (game) => {
+        const bundle = await loadGameBundle(game);
+        const teamShort = game.team_a === teamName ? bundle.teamAShort : bundle.teamBShort;
+        const teamPoss = bundle.possByShort.get(teamShort);
+        if (Number.isFinite(teamPoss)) {
+          totalPoss += teamPoss;
+          possCountedGames += 1;
+        }
+
+        for (const row of bundle.rows) {
+          if (text(row.TEAM) !== teamShort) continue;
+          const action = normalizeAction(row.ID_ACTION);
+          if (!action) continue;
+          if (filters.possType !== "all" && classifyPoss(row) !== filters.possType) continue;
+          if (filters.phase !== "all" && classifyPhase(row) !== filters.phase) continue;
+
+          const idx = indexForCoord(Number(row.COORD_X), Number(row.COORD_Y));
+          if (idx < 0) continue;
+          accumulateAttempt(bins[idx], action, row.POINTS);
+        }
+      });
+
+      const possessions = possCountedGames ? totalPoss : NaN;
+      return {
+        teamName,
+        bins: finalizeBinMetrics(bins, possessions, baselineById),
+        games: games.length,
+        possessions
+      };
+    }
+
+    async function computeLeagueBaseline(season, filters) {
+      const key = `${season}|${filters.possType}|${filters.phase}`;
+      if (baselineCache.has(key)) return baselineCache.get(key);
+
+      const bins = buildBinStats();
+      const games = gamesForSeason(season);
+
+      await mapWithConcurrency(games, 12, async (game) => {
+        const bundle = await loadGameBundle(game);
+        for (const row of bundle.rows) {
+          const action = normalizeAction(row.ID_ACTION);
+          if (!action) continue;
+          if (filters.possType !== "all" && classifyPoss(row) !== filters.possType) continue;
+          if (filters.phase !== "all" && classifyPhase(row) !== filters.phase) continue;
+          const idx = indexForCoord(Number(row.COORD_X), Number(row.COORD_Y));
+          if (idx < 0) continue;
+          accumulateAttempt(bins[idx], action, row.POINTS);
+        }
+      });
+
+      const baselineById = new Map();
+      for (const b of bins) {
+        baselineById.set(b.id, {
+          ppa: b.attempts > 0 ? b.points / b.attempts : NaN
+        });
+      }
+      baselineCache.set(key, baselineById);
+      return baselineById;
+    }
+
+    function colorForDelta(delta) {
+      if (!Number.isFinite(delta)) return "#8f9ea0";
+      const d = clamp(delta, -0.45, 0.45);
+      if (d >= 0) {
+        const t = d / 0.45;
+        const r = Math.round(217 - 157 * t);
+        const g = Math.round(221 + 24 * t);
+        const b = Math.round(225 - 110 * t);
+        return `rgb(${r},${g},${b})`;
+      }
+      const t = Math.abs(d) / 0.45;
+      const r = Math.round(217 + 32 * t);
+      const g = Math.round(221 - 96 * t);
+      const b = Math.round(225 - 99 * t);
+      return `rgb(${r},${g},${b})`;
+    }
+
+    function valueForMetric(bin) {
+      if (activeMetric === "volume") return bin.attemptsPer100;
+      if (activeMetric === "efficiency") return bin.deltaVsLeague;
+      return bin.contributionPer100;
+    }
+
+    function renderCourtCard(container, aggregate, maxMetricValue, maxVolume, maxContribution) {
+      const width = 540;
+      const height = 420;
+      const pad = { t: 26, r: 14, b: 14, l: 14 };
+      const innerW = width - pad.l - pad.r;
+      const innerH = height - pad.t - pad.b;
+
+      const card = document.createElement("div");
+      card.className = "viz-card";
+
+      const name = document.createElement("div");
+      name.className = "viz-name";
+      name.textContent = `${aggregate.teamName} · ${aggregate.games} games`;
+      card.appendChild(name);
+
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      svg.style.width = "100%";
+      svg.style.height = "auto";
+      svg.style.display = "block";
+
+      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      g.setAttribute("transform", `translate(${pad.l},${pad.t})`);
+      svg.appendChild(g);
+
+      const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      bg.setAttribute("x", "0");
+      bg.setAttribute("y", "0");
+      bg.setAttribute("width", String(innerW));
+      bg.setAttribute("height", String(innerH));
+      bg.setAttribute("rx", "8");
+      bg.setAttribute("fill", "#11241d");
+      bg.setAttribute("stroke", "rgba(151,197,176,0.26)");
+      g.appendChild(bg);
+
+      drawHalfCourt(g, innerW, innerH);
+
+      const cellW = innerW / binsX;
+      const cellH = innerH / binsY;
+
+      for (const b of aggregate.bins) {
+        const x = b.bx * cellW;
+        const y = b.by * cellH;
+
+        const cell = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        cell.setAttribute("x", String(x));
+        cell.setAttribute("y", String(y));
+        cell.setAttribute("width", String(cellW));
+        cell.setAttribute("height", String(cellH));
+        cell.setAttribute("fill", "transparent");
+        cell.setAttribute("stroke", "rgba(145,191,172,0.15)");
+        g.appendChild(cell);
+
+        let rawHeight = 0;
+        if (activeMetric === "efficiency") {
+          rawHeight = Math.abs(Number.isFinite(b.deltaVsLeague) ? b.deltaVsLeague : 0);
+        } else if (activeMetric === "contribution") {
+          rawHeight = Number.isFinite(b.contributionPer100) ? b.contributionPer100 : 0;
+        } else {
+          rawHeight = Number.isFinite(b.attemptsPer100) ? b.attemptsPer100 : 0;
+        }
+
+        const scaleBase = activeMetric === "efficiency"
+          ? Math.max(0.001, maxMetricValue)
+          : activeMetric === "contribution"
+            ? Math.max(0.001, maxContribution)
+            : Math.max(0.001, maxVolume);
+
+        const barH = Math.max(0, (rawHeight / scaleBase) * (cellH - 4));
+        const barW = cellW * 0.7;
+        const barX = x + (cellW - barW) / 2;
+        const barY = y + cellH - barH - 2;
+
+        const bar = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        bar.setAttribute("x", String(barX));
+        bar.setAttribute("y", String(barY));
+        bar.setAttribute("width", String(barW));
+        bar.setAttribute("height", String(barH));
+        bar.setAttribute("rx", "2");
+        bar.setAttribute("fill", colorForDelta(b.deltaVsLeague));
+        bar.setAttribute("fill-opacity", b.attempts > 0 ? "0.95" : "0.35");
+        bar.setAttribute("stroke", "rgba(8,16,14,0.65)");
+        bar.setAttribute("stroke-width", "0.4");
+
+        bar.addEventListener("mousemove", (ev) => showTooltip(ev, b, aggregate.teamName));
+        bar.addEventListener("mouseenter", (ev) => showTooltip(ev, b, aggregate.teamName));
+        bar.addEventListener("mouseleave", hideTooltip);
+
+        g.appendChild(bar);
+      }
+
+      card.appendChild(svg);
+      container.appendChild(card);
+    }
+
+    function drawHalfCourt(g, w, h) {
+      const ns = "http://www.w3.org/2000/svg";
+
+      const hoopX = w / 2;
+      const hoopY = h * 0.06;
+      const laneW = w * 0.26;
+      const laneH = h * 0.19;
+
+      const arc = document.createElementNS(ns, "path");
+      const arcR = w * 0.22;
+      arc.setAttribute("d", `M ${hoopX - arcR} ${hoopY + 2} A ${arcR} ${arcR} 0 0 0 ${hoopX + arcR} ${hoopY + 2}`);
+      arc.setAttribute("fill", "none");
+      arc.setAttribute("stroke", "rgba(170,220,200,0.42)");
+      arc.setAttribute("stroke-width", "1.2");
+      g.appendChild(arc);
+
+      const lane = document.createElementNS(ns, "rect");
+      lane.setAttribute("x", String((w - laneW) / 2));
+      lane.setAttribute("y", String(hoopY));
+      lane.setAttribute("width", String(laneW));
+      lane.setAttribute("height", String(laneH));
+      lane.setAttribute("fill", "none");
+      lane.setAttribute("stroke", "rgba(170,220,200,0.35)");
+      lane.setAttribute("stroke-width", "1");
+      g.appendChild(lane);
+
+      const hoop = document.createElementNS(ns, "circle");
+      hoop.setAttribute("cx", String(hoopX));
+      hoop.setAttribute("cy", String(hoopY + 2));
+      hoop.setAttribute("r", "4");
+      hoop.setAttribute("fill", "none");
+      hoop.setAttribute("stroke", "rgba(246,208,130,0.86)");
+      hoop.setAttribute("stroke-width", "1.3");
+      g.appendChild(hoop);
+
+      const threeL = document.createElementNS(ns, "line");
+      threeL.setAttribute("x1", String(w * 0.13));
+      threeL.setAttribute("y1", String(h * 0.26));
+      threeL.setAttribute("x2", String(w * 0.13));
+      threeL.setAttribute("y2", String(h));
+      threeL.setAttribute("stroke", "rgba(170,220,200,0.3)");
+      threeL.setAttribute("stroke-width", "1");
+      g.appendChild(threeL);
+
+      const threeR = document.createElementNS(ns, "line");
+      threeR.setAttribute("x1", String(w * 0.87));
+      threeR.setAttribute("y1", String(h * 0.26));
+      threeR.setAttribute("x2", String(w * 0.87));
+      threeR.setAttribute("y2", String(h));
+      threeR.setAttribute("stroke", "rgba(170,220,200,0.3)");
+      threeR.setAttribute("stroke-width", "1");
+      g.appendChild(threeR);
+
+      const threeArc = document.createElementNS(ns, "path");
+      const arcR2 = w * 0.39;
+      threeArc.setAttribute("d", `M ${hoopX - arcR2} ${h * 0.26} A ${arcR2} ${arcR2} 0 0 0 ${hoopX + arcR2} ${h * 0.26}`);
+      threeArc.setAttribute("fill", "none");
+      threeArc.setAttribute("stroke", "rgba(170,220,200,0.3)");
+      threeArc.setAttribute("stroke-width", "1");
+      g.appendChild(threeArc);
+    }
+
+    function showTooltip(ev, b, teamName) {
+      tooltipEl.style.display = "block";
+      const deltaText = Number.isFinite(b.deltaVsLeague) ? (b.deltaVsLeague >= 0 ? "+" : "") + b.deltaVsLeague.toFixed(3) : "-";
+      tooltipEl.innerHTML = `
+        <div class="tt-title">${teamName} · Bin (${b.bx + 1}, ${b.by + 1})</div>
+        <div class="tt-row"><span>Attempts</span><b>${b.attempts}</b></div>
+        <div class="tt-row"><span>Attempts / 100</span><b>${fmt(b.attemptsPer100, 2)}</b></div>
+        <div class="tt-row"><span>FG%</span><b>${Number.isFinite(b.fgAttempts) && b.fgAttempts > 0 ? fmt((b.fgMakes / b.fgAttempts) * 100, 1) + "%" : "-"}</b></div>
+        <div class="tt-row"><span>eFG%</span><b>${Number.isFinite(b.efg) ? fmt(b.efg * 100, 1) + "%" : "-"}</b></div>
+        <div class="tt-row"><span>Points / attempt</span><b>${fmt(b.ppa, 3)}</b></div>
+        <div class="tt-row"><span>Contribution / 100</span><b>${fmt(b.contributionPer100, 2)}</b></div>
+        <div class="tt-row"><span>League delta</span><b>${deltaText}</b></div>
+      `;
+      tooltipEl.style.left = (ev.clientX + 14) + "px";
+      tooltipEl.style.top = (ev.clientY + 14) + "px";
+    }
+
+    function hideTooltip() {
+      tooltipEl.style.display = "none";
+    }
+
+    function fillRank(el, items, kind) {
+      if (!items.length) {
+        el.innerHTML = "<li>No bins with attempts in this filter.</li>";
+        return;
+      }
+      el.innerHTML = items.map((b) => {
+        let val = "";
+        if (kind === "volume") {
+          val = `${fmt(b.attemptsPer100, 2)} att/100`;
+        } else if (kind === "efficiency") {
+          val = `${fmt(b.ppa, 3)} ppa`;
+        } else {
+          val = `${fmt(b.contributionPer100, 2)} /100`;
+        }
+        return `<li>Bin ${b.bx + 1}-${b.by + 1} · ${val} · ${b.attempts} att</li>`;
+      }).join("");
+    }
+
+    function updateRanks(primaryAggregate) {
+      const bins = primaryAggregate.bins.filter((b) => b.attempts > 0);
+      const topVolume = bins.slice().sort((a, b) => (b.attemptsPer100 || -999) - (a.attemptsPer100 || -999)).slice(0, 8);
+      const topEff = bins.slice().sort((a, b) => (b.ppa || -999) - (a.ppa || -999)).slice(0, 8);
+      const topContrib = bins.slice().sort((a, b) => (b.contributionPer100 || -999) - (a.contributionPer100 || -999)).slice(0, 8);
+      fillRank(rankVolumeEl, topVolume, "volume");
+      fillRank(rankEfficiencyEl, topEff, "efficiency");
+      fillRank(rankContributionEl, topContrib, "contribution");
+    }
+
+    function metricMax(aggregates) {
+      let maxMetric = 0;
+      let maxVolume = 0;
+      let maxContribution = 0;
+
+      for (const agg of aggregates) {
+        for (const b of agg.bins) {
+          if (Number.isFinite(b.attemptsPer100)) maxVolume = Math.max(maxVolume, b.attemptsPer100);
+          if (Number.isFinite(b.contributionPer100)) maxContribution = Math.max(maxContribution, b.contributionPer100);
+          if (activeMetric === "efficiency") {
+            if (Number.isFinite(b.deltaVsLeague)) maxMetric = Math.max(maxMetric, Math.abs(b.deltaVsLeague));
+          } else {
+            const v = valueForMetric(b);
+            if (Number.isFinite(v)) maxMetric = Math.max(maxMetric, v);
+          }
+        }
+      }
+      return {
+        maxMetric,
+        maxVolume,
+        maxContribution
+      };
+    }
+
+    async function render() {
+      const season = seasonEl.value;
+      const teamA = teamAEl.value;
+      const mode = modeEl.value;
+      const teamB = teamBEl.value;
+      const filters = {
+        homeAway: homeAwayEl.value,
+        opponent: opponentEl.value,
+        possType: possTypeEl.value,
+        phase: phaseEl.value
+      };
+
+      if (!season || !teamA) return;
+      if (mode === "compare" && !teamB) return;
+
+      chartGridEl.innerHTML = "";
+      status("Computing league baseline and team bins...");
+
+      try {
+        const baselineById = await computeLeagueBaseline(season, filters);
+        const primary = await aggregateTeamForFilters(teamA, season, filters, baselineById);
+        const allAgg = [primary];
+
+        if (mode === "compare" && teamB && teamB !== teamA) {
+          const second = await aggregateTeamForFilters(teamB, season, filters, baselineById);
+          allAgg.push(second);
+        }
+
+        const { maxMetric, maxVolume, maxContribution } = metricMax(allAgg);
+
+        chartGridEl.className = "chart-grid" + (allAgg.length > 1 ? " compare" : "");
+        for (const agg of allAgg) {
+          renderCourtCard(chartGridEl, agg, maxMetric, maxVolume, maxContribution);
+        }
+
+        updateRanks(primary);
+        chartTitleEl.textContent = allAgg.length > 1 ? "Compare style map (locked scales)" : "Single team style map";
+        chartMetaEl.textContent = `Metric: ${activeMetric} · ${season} · ${filters.possType} · ${filters.phase}`;
+
+        status(`Rendered ${allAgg.length} map(s). Possessions are estimated from boxscore team totals.`);
+      } catch (err) {
+        status(`Render failed: ${err.message}`);
+      }
+    }
+
+    function handleModeChange() {
+      const compare = modeEl.value === "compare";
+      teamBEl.disabled = !compare;
+    }
+
+    async function init() {
+      status("Loading games manifest...");
+      await loadManifest();
+      const seasons = seasonsFromManifest();
+      fillSelect(seasonEl, seasons, seasons[seasons.length - 1]);
+      refreshSeasonDrivenInputs();
+      handleModeChange();
+      status("Ready.");
+      await render();
+    }
+
+    seasonEl.addEventListener("change", () => {
+      refreshSeasonDrivenInputs();
+      render();
+    });
+    teamAEl.addEventListener("change", render);
+    teamBEl.addEventListener("change", render);
+    modeEl.addEventListener("change", () => {
+      handleModeChange();
+      render();
+    });
+    homeAwayEl.addEventListener("change", render);
+    opponentEl.addEventListener("change", render);
+    possTypeEl.addEventListener("change", render);
+    phaseEl.addEventListener("change", render);
+    loadBtn.addEventListener("click", render);
+
+    metricPills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        activeMetric = pill.dataset.metric;
+        metricPills.forEach((p) => p.classList.toggle("active", p === pill));
+        render();
+      });
+    });
+
+    init().catch((err) => {
+      status(`Init failed: ${err.message}`);
+    });
+  })();
+  </script>
+</body>
+</html>

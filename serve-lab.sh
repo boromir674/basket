@@ -51,8 +51,16 @@ else
   echo "⚠  No raw_pts_*.json in assets/ — chart proof pages will show fetch errors."
 fi
 
+if ls assets/raw_box_*.json 1>/dev/null 2>&1; then
+  cp assets/raw_box_*.json public-lab/assets/
+  echo "✓ raw_box files copied"
+else
+  echo "⚠  No raw_box_*.json in assets/ — shot map pages will show fetch errors."
+fi
+
 echo "→ Serving public-lab/ on http://localhost:${PORT}"
 echo "   Open: http://localhost:${PORT}/lab/index.html"
+echo "   Open: http://localhost:${PORT}/lab/shot-style-map.html"
 echo "   Open: http://localhost:${PORT}/lab/style-consistency-lab.html"
 echo "   Open: http://localhost:${PORT}/prod/style-insights.html"
 echo "   Open: http://localhost:${PORT}/prod/score-d52-v2.html"
