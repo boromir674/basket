@@ -45,16 +45,16 @@ lab:
 	PORT=$(PORT) ./serve-lab.sh
 
 preflight:
-	./scripts/preflight_local.sh --mode all
+	./scripts/preflight.sh --mode all
 
 preflight-app:
-	./scripts/preflight_local.sh --mode app
+	./scripts/preflight.sh --mode app
 
 preflight-lab:
-	./scripts/preflight_local.sh --mode lab
+	./scripts/preflight.sh --mode lab
 
 preflight-clean:
-	./scripts/preflight_local.sh --mode app --require-clean
+	./scripts/preflight.sh --mode app --require-clean
 
 install-hooks:
 	./scripts/install_git_hooks.sh

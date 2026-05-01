@@ -233,6 +233,7 @@ If required JSON files exist locally but are ignored by git, deploys can fail wi
 - `make preflight` checks app + lab
 - `make preflight-clean` checks app bundle config + tracking and also prints dirty-worktree sample status (advisory only for now)
 - `make install-hooks` installs a `pre-push` hook that runs `preflight-app --require-clean`
+- CI (`.github/workflows/build-bundle.yml`) now runs default preflight (`scripts/preflight.sh`) before the bundle build step.
 
 Guarantee scope:
 
