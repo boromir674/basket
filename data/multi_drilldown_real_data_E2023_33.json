@@ -1,0 +1,5797 @@
+{
+  "meta": {
+    "seasoncode": "E2023",
+    "gamecode": 33,
+    "team_a": "ALBA Berlin",
+    "team_b": "AS Monaco",
+    "score_a": 75,
+    "score_b": 86,
+    "winner": "AS Monaco",
+    "gamedate": "2023-10-20",
+    "synced_at": "2026-04-25T12:39:37.930954+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P006919": {
+      "name": "OLINDE, LOUIS",
+      "team": "ALBA Berlin"
+    },
+    "PLCZ": {
+      "name": "MOTIEJUNAS, DONATAS",
+      "team": "AS Monaco"
+    },
+    "P005985": {
+      "name": "JAMES, MIKE",
+      "team": "AS Monaco"
+    },
+    "P003958": {
+      "name": "THIEMANN, JOHANNES",
+      "team": "ALBA Berlin"
+    },
+    "P010588": {
+      "name": "BROWN, JOHN",
+      "team": "AS Monaco"
+    },
+    "P008173": {
+      "name": "SPAGNOLO, MATTEO",
+      "team": "ALBA Berlin"
+    },
+    "P011226": {
+      "name": "DIALLO, ALPHA",
+      "team": "AS Monaco"
+    },
+    "P008099": {
+      "name": "STRAZEL, MATTHEW",
+      "team": "AS Monaco"
+    },
+    "P012720": {
+      "name": "BROWN, STERLING",
+      "team": "ALBA Berlin"
+    },
+    "P008967": {
+      "name": "THOMAS, MATT",
+      "team": "ALBA Berlin"
+    },
+    "P011231": {
+      "name": "BLOSSOMGAME, JARON",
+      "team": "AS Monaco"
+    },
+    "P008211": {
+      "name": "DELOW, MALTE",
+      "team": "ALBA Berlin"
+    },
+    "P007025": {
+      "name": "MATTISSECK, JONAS",
+      "team": "ALBA Berlin"
+    },
+    "P002581": {
+      "name": "JAITEH, MAM",
+      "team": "AS Monaco"
+    },
+    "P006251": {
+      "name": "SCHNEIDER, TIM",
+      "team": "ALBA Berlin"
+    },
+    "P011212": {
+      "name": "OKOBO, ELIE",
+      "team": "AS Monaco"
+    },
+    "P004197": {
+      "name": "OUATTARA, YAKUBA",
+      "team": "AS Monaco"
+    },
+    "P012709": {
+      "name": "WALKER, KEMBA",
+      "team": "AS Monaco"
+    },
+    "P012721": {
+      "name": "BEAN, JUSTIN",
+      "team": "ALBA Berlin"
+    },
+    "P011196": {
+      "name": "HALL, DONTA",
+      "team": "AS Monaco"
+    },
+    "P008384": {
+      "name": "PROCIDA, GABRIELE",
+      "team": "ALBA Berlin"
+    },
+    "P004790": {
+      "name": "CORNELIE, PETR",
+      "team": "AS Monaco"
+    },
+    "P006819": {
+      "name": "NIKIC, KRESIMIR",
+      "team": "ALBA Berlin"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P011212",
+      "player_name": "OKOBO, ELIE",
+      "team": "MCO",
+      "minutes": "21:55",
+      "points": 7,
+      "valuation": -1,
+      "plusminus": -1,
+      "assists": 3,
+      "rebounds": 0,
+      "turnovers": 4
+    },
+    {
+      "player_id": "P011231",
+      "player_name": "BLOSSOMGAME, JARON",
+      "team": "MCO",
+      "minutes": "11:36",
+      "points": 8,
+      "valuation": 9,
+      "plusminus": -1,
+      "assists": 2,
+      "rebounds": 4,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P010588",
+      "player_name": "BROWN, JOHN",
+      "team": "MCO",
+      "minutes": "19:50",
+      "points": 8,
+      "valuation": 10,
+      "plusminus": 17,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P011226",
+      "player_name": "DIALLO, ALPHA",
+      "team": "MCO",
+      "minutes": "29:24",
+      "points": 9,
+      "valuation": 18,
+      "plusminus": 7,
+      "assists": 4,
+      "rebounds": 6,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004790",
+      "player_name": "CORNELIE, PETR",
+      "team": "MCO",
+      "minutes": "13:38",
+      "points": 9,
+      "valuation": 9,
+      "plusminus": -4,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P002581",
+      "player_name": "JAITEH, MAM",
+      "team": "MCO",
+      "minutes": "03:29",
+      "points": 2,
+      "valuation": 3,
+      "plusminus": -7,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P012709",
+      "player_name": "WALKER, KEMBA",
+      "team": "MCO",
+      "minutes": "12:42",
+      "points": 5,
+      "valuation": 4,
+      "plusminus": 5,
+      "assists": 3,
+      "rebounds": 1,
+      "turnovers": 2
+    },
+    {
+      "player_id": "PLCZ",
+      "player_name": "MOTIEJUNAS, DONATAS",
+      "team": "MCO",
+      "minutes": "14:50",
+      "points": 6,
+      "valuation": 15,
+      "plusminus": 16,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004197",
+      "player_name": "OUATTARA, YAKUBA",
+      "team": "MCO",
+      "minutes": "13:50",
+      "points": 9,
+      "valuation": 10,
+      "plusminus": 1,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008099",
+      "player_name": "STRAZEL, MATTHEW",
+      "team": "MCO",
+      "minutes": "14:17",
+      "points": 2,
+      "valuation": -2,
+      "plusminus": 9,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P011196",
+      "player_name": "HALL, DONTA",
+      "team": "MCO",
+      "minutes": "16:41",
+      "points": 4,
+      "valuation": 9,
+      "plusminus": 1,
+      "assists": 0,
+      "rebounds": 4,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P005985",
+      "player_name": "JAMES, MIKE",
+      "team": "MCO",
+      "minutes": "27:48",
+      "points": 17,
+      "valuation": 23,
+      "plusminus": 12,
+      "assists": 7,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P012720",
+      "player_name": "BROWN, STERLING",
+      "team": "BER",
+      "minutes": "24:20",
+      "points": 15,
+      "valuation": 14,
+      "plusminus": -5,
+      "assists": 3,
+      "rebounds": 4,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008384",
+      "player_name": "PROCIDA, GABRIELE",
+      "team": "BER",
+      "minutes": "15:08",
+      "points": 7,
+      "valuation": 8,
+      "plusminus": 1,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008173",
+      "player_name": "SPAGNOLO, MATTEO",
+      "team": "BER",
+      "minutes": "19:52",
+      "points": 0,
+      "valuation": -6,
+      "plusminus": -16,
+      "assists": 3,
+      "rebounds": 1,
+      "turnovers": 5
+    },
+    {
+      "player_id": "P008211",
+      "player_name": "DELOW, MALTE",
+      "team": "BER",
+      "minutes": "20:08",
+      "points": 10,
+      "valuation": 10,
+      "plusminus": 5,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P007025",
+      "player_name": "MATTISSECK, JONAS",
+      "team": "BER",
+      "minutes": "05:04",
+      "points": 3,
+      "valuation": 5,
+      "plusminus": 1,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006251",
+      "player_name": "SCHNEIDER, TIM",
+      "team": "BER",
+      "minutes": "15:22",
+      "points": 2,
+      "valuation": 0,
+      "plusminus": -2,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008967",
+      "player_name": "THOMAS, MATT",
+      "team": "BER",
+      "minutes": "26:40",
+      "points": 17,
+      "valuation": 17,
+      "plusminus": -15,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P006819",
+      "player_name": "NIKIC, KRESIMIR",
+      "team": "BER",
+      "minutes": "11:52",
+      "points": 0,
+      "valuation": -5,
+      "plusminus": 9,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007550",
+      "player_name": "SAMAR, ZIGA",
+      "team": "BER",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006919",
+      "player_name": "OLINDE, LOUIS",
+      "team": "BER",
+      "minutes": "21:31",
+      "points": 8,
+      "valuation": 7,
+      "plusminus": -5,
+      "assists": 0,
+      "rebounds": 4,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P003958",
+      "player_name": "THIEMANN, JOHANNES",
+      "team": "BER",
+      "minutes": "25:06",
+      "points": 7,
+      "valuation": 9,
+      "plusminus": -21,
+      "assists": 1,
+      "rebounds": 7,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P012721",
+      "player_name": "BEAN, JUSTIN",
+      "team": "BER",
+      "minutes": "14:57",
+      "points": 6,
+      "valuation": 13,
+      "plusminus": -7,
+      "assists": 3,
+      "rebounds": 3,
+      "turnovers": 1
+    }
+  ],
+  "colors": {
+    "ALBA Berlin": "#d62839",
+    "AS Monaco": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "ALBA Berlin": 83,
+        "AS Monaco": 80
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "ALBA Berlin starts",
+          "83"
+        ],
+        [
+          "AS Monaco starts",
+          "80"
+        ],
+        [
+          "ALBA Berlin points per poss.",
+          "0.90"
+        ],
+        [
+          "ALBA Berlin Made 3 share",
+          "13%"
+        ],
+        [
+          "AS Monaco points per poss.",
+          "1.07"
+        ],
+        [
+          "AS Monaco Made 3 share",
+          "11%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "ALBA Berlin generated 0.90 points per possession over 83 tracked possessions.",
+        "AS Monaco generated 1.07 points per possession over 80 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Start",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Half-court",
+          "name": "Half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_After_OREB",
+          "name": "After OREB",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "AS_Monaco_start",
+          "name": "AS Monaco Start",
+          "team": "AS Monaco",
+          "stage": "start"
+        },
+        {
+          "id": "AS_Monaco_Half-court",
+          "name": "Half-court",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_After_OREB",
+          "name": "After OREB",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Turnover",
+          "name": "Turnover",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Missed_shot",
+          "name": "Missed shot",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Made_2",
+          "name": "Made 2",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Made_3",
+          "name": "Made 3",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS Monaco_0",
+          "name": "0 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_1",
+          "name": "1 pt",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_2",
+          "name": "2 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_3",
+          "name": "3 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Half-court",
+          "value": 49
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 29
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Transition_Fast_break",
+          "value": 31
+        },
+        {
+          "source": "AS_Monaco_Transition_Fast_break",
+          "target": "AS_Monaco_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_Missed_shot",
+          "target": "AS Monaco_0",
+          "value": 18
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Transition_Fast_break",
+          "value": 23
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 11
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Half-court",
+          "value": 43
+        },
+        {
+          "source": "AS_Monaco_Half-court",
+          "target": "AS_Monaco_Turnover",
+          "value": 8
+        },
+        {
+          "source": "AS_Monaco_Turnover",
+          "target": "AS Monaco_0",
+          "value": 16
+        },
+        {
+          "source": "AS_Monaco_Transition_Fast_break",
+          "target": "AS_Monaco_Made_2",
+          "value": 12
+        },
+        {
+          "source": "AS_Monaco_Made_2",
+          "target": "AS Monaco_2",
+          "value": 25
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_OREB",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 14
+        },
+        {
+          "source": "AS_Monaco_Half-court",
+          "target": "AS_Monaco_Shooting_foul_FTs",
+          "value": 10
+        },
+        {
+          "source": "AS_Monaco_Shooting_foul_FTs",
+          "target": "AS Monaco_0",
+          "value": 3
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_After_OREB",
+          "value": 6
+        },
+        {
+          "source": "AS_Monaco_After_OREB",
+          "target": "AS_Monaco_Made_2",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Half-court",
+          "target": "AS_Monaco_Made_2",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 12
+        },
+        {
+          "source": "AS_Monaco_Half-court",
+          "target": "AS_Monaco_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_After_OREB",
+          "target": "AS_Monaco_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Shooting_foul_FTs",
+          "target": "AS Monaco_1",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Transition_Fast_break",
+          "target": "AS_Monaco_Turnover",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 15
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_Half-court",
+          "target": "AS_Monaco_Made_3",
+          "value": 5
+        },
+        {
+          "source": "AS_Monaco_Made_3",
+          "target": "AS Monaco_3",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_After_OREB",
+          "target": "AS_Monaco_Turnover",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Transition_Fast_break",
+          "target": "AS_Monaco_Made_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Half-court": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 10
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 9
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006819",
+            "player_name": "NIKIC, KRESIMIR",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006819",
+            "player_name": "NIKIC, KRESIMIR",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006819",
+            "player_name": "NIKIC, KRESIMIR",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_Transition_Fast_break": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 6
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 6
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Transition_Fast_break->AS_Monaco_Missed_shot": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Missed_shot->AS Monaco_0": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Transition_Fast_break": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_Half-court": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 10
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Half-court->AS_Monaco_Turnover": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Turnover->AS Monaco_0": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::AS Monaco",
+            "player_name": "Unknown",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Transition_Fast_break->AS_Monaco_Made_2": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_2->AS Monaco_2": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_After_OREB": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Half-court->AS_Monaco_Shooting_foul_FTs": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Shooting_foul_FTs->AS Monaco_0": [
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_After_OREB": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::AS Monaco",
+            "player_name": "Unknown",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_OREB->AS_Monaco_Made_2": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Half-court->AS_Monaco_Made_2": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Half-court->AS_Monaco_Missed_shot": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_OREB->AS_Monaco_Shooting_foul_FTs": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Shooting_foul_FTs->AS Monaco_1": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Transition_Fast_break->AS_Monaco_Turnover": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Half-court->AS_Monaco_Made_3": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_3->AS Monaco_3": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_OREB->AS_Monaco_Turnover": [
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::AS Monaco",
+            "player_name": "Unknown",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Transition_Fast_break->AS_Monaco_Made_3": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "ALBA Berlin": 49,
+        "AS Monaco": 43
+      },
+      "title": "Zoomed Detail — Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "49"
+        ],
+        [
+          "AS Monaco count",
+          "43"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Half-court",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "AS_Monaco_start",
+          "name": "AS Monaco Half-court",
+          "team": "AS Monaco",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "AS_Monaco_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Made_2",
+          "name": "Made 2",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Made_3",
+          "name": "Made 3",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Missed_shot",
+          "name": "Missed shot",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Turnover",
+          "name": "Turnover",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS Monaco_0",
+          "name": "0 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_1",
+          "name": "1 pt",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_2",
+          "name": "2 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_3",
+          "name": "3 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_PnR_handler_action",
+          "value": 43
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 14
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_PnR_handler_action",
+          "value": 38
+        },
+        {
+          "source": "AS_Monaco_PnR_handler_action",
+          "target": "AS_Monaco_Turnover",
+          "value": 8
+        },
+        {
+          "source": "AS_Monaco_Turnover",
+          "target": "AS Monaco_0",
+          "value": 8
+        },
+        {
+          "source": "AS_Monaco_PnR_handler_action",
+          "target": "AS_Monaco_Shooting_foul_FTs",
+          "value": 10
+        },
+        {
+          "source": "AS_Monaco_Shooting_foul_FTs",
+          "target": "AS Monaco_0",
+          "value": 3
+        },
+        {
+          "source": "AS_Monaco_PnR_handler_action",
+          "target": "AS_Monaco_Made_2",
+          "value": 11
+        },
+        {
+          "source": "AS_Monaco_Made_2",
+          "target": "AS Monaco_2",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_PnR_handler_action",
+          "target": "AS_Monaco_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_Missed_shot",
+          "target": "AS Monaco_0",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Shooting_foul_FTs",
+          "target": "AS Monaco_1",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Spot-up_swing",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Spot-up_swing",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Spot-up_swing",
+          "value": 5
+        },
+        {
+          "source": "AS_Monaco_Spot-up_swing",
+          "target": "AS_Monaco_Made_3",
+          "value": 5
+        },
+        {
+          "source": "AS_Monaco_Made_3",
+          "target": "AS Monaco_3",
+          "value": 5
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_PnR_handler_action": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006819",
+            "player_name": "NIKIC, KRESIMIR",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006819",
+            "player_name": "NIKIC, KRESIMIR",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006819",
+            "player_name": "NIKIC, KRESIMIR",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_PnR_handler_action": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 10
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_PnR_handler_action->AS_Monaco_Turnover": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Turnover->AS Monaco_0": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_PnR_handler_action->AS_Monaco_Shooting_foul_FTs": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Shooting_foul_FTs->AS Monaco_0": [
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_PnR_handler_action->AS_Monaco_Made_2": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_2->AS Monaco_2": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_PnR_handler_action->AS_Monaco_Missed_shot": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Missed_shot->AS Monaco_0": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Shooting_foul_FTs->AS Monaco_1": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Spot-up_swing": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Spot-up_swing->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_Spot-up_swing": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Spot-up_swing->AS_Monaco_Made_3": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_3->AS Monaco_3": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "ALBA Berlin": 23,
+        "AS Monaco": 31
+      },
+      "title": "Zoomed Detail — Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "23"
+        ],
+        [
+          "AS Monaco count",
+          "31"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Transition",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "AS_Monaco_start",
+          "name": "AS Monaco Transition",
+          "team": "AS Monaco",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "AS_Monaco_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Made_2",
+          "name": "Made 2",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Made_3",
+          "name": "Made 3",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Missed_shot",
+          "name": "Missed shot",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Turnover",
+          "name": "Turnover",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS Monaco_0",
+          "name": "0 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_1",
+          "name": "1 pt",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_2",
+          "name": "2 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_3",
+          "name": "3 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_After_defensive_rebound",
+          "value": 31
+        },
+        {
+          "source": "AS_Monaco_After_defensive_rebound",
+          "target": "AS_Monaco_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_Missed_shot",
+          "target": "AS Monaco_0",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_defensive_rebound",
+          "value": 23
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 3
+        },
+        {
+          "source": "AS_Monaco_After_defensive_rebound",
+          "target": "AS_Monaco_Made_2",
+          "value": 12
+        },
+        {
+          "source": "AS_Monaco_Made_2",
+          "target": "AS Monaco_2",
+          "value": 12
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 4
+        },
+        {
+          "source": "AS_Monaco_After_defensive_rebound",
+          "target": "AS_Monaco_Turnover",
+          "value": 6
+        },
+        {
+          "source": "AS_Monaco_Turnover",
+          "target": "AS Monaco_0",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 5
+        },
+        {
+          "source": "AS_Monaco_After_defensive_rebound",
+          "target": "AS_Monaco_Made_3",
+          "value": 4
+        },
+        {
+          "source": "AS_Monaco_Made_3",
+          "target": "AS Monaco_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 3
+        }
+      ],
+      "player_flows": {
+        "AS_Monaco_start->AS_Monaco_After_defensive_rebound": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 6
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 6
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_defensive_rebound->AS_Monaco_Missed_shot": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Missed_shot->AS Monaco_0": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_After_defensive_rebound": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_defensive_rebound->AS_Monaco_Made_2": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_2->AS Monaco_2": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_defensive_rebound->AS_Monaco_Turnover": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Turnover->AS Monaco_0": [
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_After_defensive_rebound->AS_Monaco_Made_3": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_3->AS Monaco_3": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "ALBA Berlin": 11,
+        "AS Monaco": 6
+      },
+      "title": "Zoomed Detail — After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "11"
+        ],
+        [
+          "AS Monaco count",
+          "6"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin After OREB",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "AS_Monaco_start",
+          "name": "AS Monaco After OREB",
+          "team": "AS Monaco",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "AS_Monaco_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Made_2",
+          "name": "Made 2",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Made_3",
+          "name": "Made 3",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Missed_shot",
+          "name": "Missed shot",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS_Monaco_Turnover",
+          "name": "Turnover",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS Monaco_0",
+          "name": "0 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_1",
+          "name": "1 pt",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_2",
+          "name": "2 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        },
+        {
+          "id": "AS Monaco_3",
+          "name": "3 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Reset_half-court",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 7
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Immediate_putback",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Immediate_putback",
+          "target": "AS_Monaco_Made_2",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Made_2",
+          "target": "AS Monaco_2",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Reset_half-court",
+          "value": 4
+        },
+        {
+          "source": "AS_Monaco_Reset_half-court",
+          "target": "AS_Monaco_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Shooting_foul_FTs",
+          "target": "AS Monaco_1",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Kick-out_perimeter",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Kick-out_perimeter",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Reset_half-court",
+          "target": "AS_Monaco_Turnover",
+          "value": 2
+        },
+        {
+          "source": "AS_Monaco_Turnover",
+          "target": "AS Monaco_0",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Immediate_putback",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Immediate_putback",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Reset_half-court": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_Immediate_putback": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Immediate_putback->AS_Monaco_Made_2": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_2->AS Monaco_2": [
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_Reset_half-court": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::AS Monaco",
+            "player_name": "Unknown",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Reset_half-court->AS_Monaco_Shooting_foul_FTs": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Shooting_foul_FTs->AS Monaco_1": [
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Kick-out_perimeter": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Kick-out_perimeter->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Reset_half-court->AS_Monaco_Turnover": [
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::AS Monaco",
+            "player_name": "Unknown",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Turnover->AS Monaco_0": [
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::AS Monaco",
+            "player_name": "Unknown",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Immediate_putback": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Immediate_putback->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "ALBA Berlin": 15,
+        "AS Monaco": 25
+      },
+      "title": "Zoomed Detail — Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "15"
+        ],
+        [
+          "AS Monaco count",
+          "25"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 2",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "AS_Monaco_start",
+          "name": "AS Monaco Made 2",
+          "team": "AS Monaco",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Layup_runner",
+          "name": "Layup / runner",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "AS_Monaco_Layup_runner",
+          "name": "Layup / runner",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Made_2",
+          "name": "Made 2",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS Monaco_2",
+          "name": "2 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Layup_runner",
+          "value": 25
+        },
+        {
+          "source": "AS_Monaco_Layup_runner",
+          "target": "AS_Monaco_Made_2",
+          "value": 25
+        },
+        {
+          "source": "AS_Monaco_Made_2",
+          "target": "AS Monaco_2",
+          "value": 25
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Layup_runner",
+          "value": 15
+        },
+        {
+          "source": "ALBA_Berlin_Layup_runner",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 15
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 15
+        }
+      ],
+      "player_flows": {
+        "AS_Monaco_start->AS_Monaco_Layup_runner": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Layup_runner->AS_Monaco_Made_2": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_2->AS Monaco_2": [
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 5
+          },
+          {
+            "player_id": "P010588",
+            "player_name": "BROWN, JOHN",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "P011226",
+            "player_name": "DIALLO, ALPHA",
+            "team": "AS Monaco",
+            "poss": 4
+          },
+          {
+            "player_id": "PLCZ",
+            "player_name": "MOTIEJUNAS, DONATAS",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P011196",
+            "player_name": "HALL, DONTA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P002581",
+            "player_name": "JAITEH, MAM",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P008099",
+            "player_name": "STRAZEL, MATTHEW",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Layup_runner": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Layup_runner->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P012721",
+            "player_name": "BEAN, JUSTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "ALBA Berlin": 11,
+        "AS Monaco": 9
+      },
+      "title": "Zoomed Detail — Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "11"
+        ],
+        [
+          "AS Monaco count",
+          "9"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 3",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "AS_Monaco_start",
+          "name": "AS Monaco Made 3",
+          "team": "AS Monaco",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "AS_Monaco_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "AS Monaco",
+          "stage": "type"
+        },
+        {
+          "id": "AS_Monaco_Made_3",
+          "name": "Made 3",
+          "team": "AS Monaco",
+          "stage": "event"
+        },
+        {
+          "id": "AS Monaco_3",
+          "name": "3 pts",
+          "team": "AS Monaco",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Above-the-break_C&S",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_Above-the-break_C&S",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 11
+        },
+        {
+          "source": "AS_Monaco_start",
+          "target": "AS_Monaco_Above-the-break_C&S",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_Above-the-break_C&S",
+          "target": "AS_Monaco_Made_3",
+          "value": 9
+        },
+        {
+          "source": "AS_Monaco_Made_3",
+          "target": "AS Monaco_3",
+          "value": 9
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Above-the-break_C&S": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Above-the-break_C&S->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012720",
+            "player_name": "BROWN, STERLING",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_start->AS_Monaco_Above-the-break_C&S": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Above-the-break_C&S->AS_Monaco_Made_3": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ],
+        "AS_Monaco_Made_3->AS Monaco_3": [
+          {
+            "player_id": "P004790",
+            "player_name": "CORNELIE, PETR",
+            "team": "AS Monaco",
+            "poss": 3
+          },
+          {
+            "player_id": "P011231",
+            "player_name": "BLOSSOMGAME, JARON",
+            "team": "AS Monaco",
+            "poss": 2
+          },
+          {
+            "player_id": "P005985",
+            "player_name": "JAMES, MIKE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P011212",
+            "player_name": "OKOBO, ELIE",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P004197",
+            "player_name": "OUATTARA, YAKUBA",
+            "team": "AS Monaco",
+            "poss": 1
+          },
+          {
+            "player_id": "P012709",
+            "player_name": "WALKER, KEMBA",
+            "team": "AS Monaco",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,6388 @@
+{
+  "meta": {
+    "seasoncode": "E2024",
+    "gamecode": 117,
+    "team_a": "ALBA Berlin",
+    "team_b": "Virtus Bologna",
+    "score_a": 90,
+    "score_b": 88,
+    "winner": "ALBA Berlin",
+    "gamedate": "2024-12-04",
+    "synced_at": "2026-04-25T12:32:48.173170+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P013386": {
+      "name": "MC CORMACK, DAVID",
+      "team": "ALBA Berlin"
+    },
+    "P004888": {
+      "name": "CLYBURN, WILL",
+      "team": "Virtus Bologna"
+    },
+    "P008384": {
+      "name": "PROCIDA, GABRIELE",
+      "team": "ALBA Berlin"
+    },
+    "P001133": {
+      "name": "SHENGELIA, TORNIKE",
+      "team": "Virtus Bologna"
+    },
+    "P011934": {
+      "name": "WETZELL, YANNI",
+      "team": "ALBA Berlin"
+    },
+    "P004554": {
+      "name": "ZIZIC, ANTE",
+      "team": "Virtus Bologna"
+    },
+    "P009549": {
+      "name": "CORDINIER, ISAIA",
+      "team": "Virtus Bologna"
+    },
+    "P008780": {
+      "name": "HERMANNSSON, MARTIN",
+      "team": "ALBA Berlin"
+    },
+    "P006739": {
+      "name": "PAJOLA, ALESSANDRO",
+      "team": "Virtus Bologna"
+    },
+    "P006251": {
+      "name": "SCHNEIDER, TIM",
+      "team": "ALBA Berlin"
+    },
+    "P012585": {
+      "name": "MORGAN, MATTHEW",
+      "team": "Virtus Bologna"
+    },
+    "P012604": {
+      "name": "WILLIAMS, TREVION",
+      "team": "ALBA Berlin"
+    },
+    "P002084": {
+      "name": "POLONARA, ACHILLE",
+      "team": "Virtus Bologna"
+    },
+    "P008967": {
+      "name": "THOMAS, MATT",
+      "team": "ALBA Berlin"
+    },
+    "P013374": {
+      "name": "DIOUF, MOUHAMET",
+      "team": "Virtus Bologna"
+    },
+    "P008173": {
+      "name": "SPAGNOLO, MATTEO",
+      "team": "ALBA Berlin"
+    },
+    "P001844": {
+      "name": "HACKETT, DANIEL",
+      "team": "Virtus Bologna"
+    },
+    "PBCN": {
+      "name": "BELINELLI, MARCO",
+      "team": "Virtus Bologna"
+    },
+    "P005738": {
+      "name": "GRAZULIS, ANDREJS",
+      "team": "Virtus Bologna"
+    },
+    "P012591": {
+      "name": "TUCKER, RAYJON",
+      "team": "Virtus Bologna"
+    },
+    "P007550": {
+      "name": "SAMAR, ZIGA",
+      "team": "ALBA Berlin"
+    },
+    "P008211": {
+      "name": "DELOW, MALTE",
+      "team": "ALBA Berlin"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P009549",
+      "player_name": "CORDINIER, ISAIA",
+      "team": "VIR",
+      "minutes": "30:44",
+      "points": 8,
+      "valuation": -1,
+      "plusminus": -4,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 3
+    },
+    {
+      "player_id": "PBCN",
+      "player_name": "BELINELLI, MARCO",
+      "team": "VIR",
+      "minutes": "18:48",
+      "points": 9,
+      "valuation": 0,
+      "plusminus": 14,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006739",
+      "player_name": "PAJOLA, ALESSANDRO",
+      "team": "VIR",
+      "minutes": "25:58",
+      "points": 3,
+      "valuation": 10,
+      "plusminus": -5,
+      "assists": 6,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P004888",
+      "player_name": "CLYBURN, WILL",
+      "team": "VIR",
+      "minutes": "32:18",
+      "points": 23,
+      "valuation": 20,
+      "plusminus": -10,
+      "assists": 1,
+      "rebounds": 7,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P001133",
+      "player_name": "SHENGELIA, TORNIKE",
+      "team": "VIR",
+      "minutes": "21:29",
+      "points": 2,
+      "valuation": 4,
+      "plusminus": -10,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P001844",
+      "player_name": "HACKETT, DANIEL",
+      "team": "VIR",
+      "minutes": "17:47",
+      "points": 3,
+      "valuation": 4,
+      "plusminus": 0,
+      "assists": 5,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P005738",
+      "player_name": "GRAZULIS, ANDREJS",
+      "team": "VIR",
+      "minutes": "03:09",
+      "points": 0,
+      "valuation": -2,
+      "plusminus": -9,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P012585",
+      "player_name": "MORGAN, MATTHEW",
+      "team": "VIR",
+      "minutes": "15:11",
+      "points": 6,
+      "valuation": 13,
+      "plusminus": 4,
+      "assists": 6,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P002084",
+      "player_name": "POLONARA, ACHILLE",
+      "team": "VIR",
+      "minutes": "15:12",
+      "points": 7,
+      "valuation": 14,
+      "plusminus": 4,
+      "assists": 2,
+      "rebounds": 6,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P013374",
+      "player_name": "DIOUF, MOUHAMET",
+      "team": "VIR",
+      "minutes": "25:27",
+      "points": 12,
+      "valuation": 22,
+      "plusminus": 8,
+      "assists": 0,
+      "rebounds": 8,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004554",
+      "player_name": "ZIZIC, ANTE",
+      "team": "VIR",
+      "minutes": "16:39",
+      "points": 13,
+      "valuation": 15,
+      "plusminus": -4,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P012591",
+      "player_name": "TUCKER, RAYJON",
+      "team": "VIR",
+      "minutes": "02:18",
+      "points": 2,
+      "valuation": -1,
+      "plusminus": 2,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008384",
+      "player_name": "PROCIDA, GABRIELE",
+      "team": "BER",
+      "minutes": "30:44",
+      "points": 20,
+      "valuation": 16,
+      "plusminus": 8,
+      "assists": 2,
+      "rebounds": 4,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P008173",
+      "player_name": "SPAGNOLO, MATTEO",
+      "team": "BER",
+      "minutes": "30:50",
+      "points": 10,
+      "valuation": 16,
+      "plusminus": 5,
+      "assists": 5,
+      "rebounds": 8,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P011934",
+      "player_name": "WETZELL, YANNI",
+      "team": "BER",
+      "minutes": "22:10",
+      "points": 6,
+      "valuation": 4,
+      "plusminus": 5,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008211",
+      "player_name": "DELOW, MALTE",
+      "team": "BER",
+      "minutes": "14:21",
+      "points": 4,
+      "valuation": 1,
+      "plusminus": -5,
+      "assists": 1,
+      "rebounds": 1,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P007025",
+      "player_name": "MATTISSECK, JONAS",
+      "team": "BER",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006251",
+      "player_name": "SCHNEIDER, TIM",
+      "team": "BER",
+      "minutes": "22:58",
+      "points": 7,
+      "valuation": 3,
+      "plusminus": -1,
+      "assists": 0,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008967",
+      "player_name": "THOMAS, MATT",
+      "team": "BER",
+      "minutes": "20:47",
+      "points": 13,
+      "valuation": 13,
+      "plusminus": -6,
+      "assists": 3,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008780",
+      "player_name": "HERMANNSSON, MARTIN",
+      "team": "BER",
+      "minutes": "24:58",
+      "points": 4,
+      "valuation": 6,
+      "plusminus": 8,
+      "assists": 6,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P007550",
+      "player_name": "SAMAR, ZIGA",
+      "team": "BER",
+      "minutes": "13:25",
+      "points": 3,
+      "valuation": 2,
+      "plusminus": -3,
+      "assists": 4,
+      "rebounds": 0,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P011631",
+      "player_name": "RAPIEQUE, ELIAS",
+      "team": "BER",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P013386",
+      "player_name": "MC CORMACK, DAVID",
+      "team": "BER",
+      "minutes": "25:51",
+      "points": 16,
+      "valuation": 24,
+      "plusminus": 9,
+      "assists": 1,
+      "rebounds": 14,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P012604",
+      "player_name": "WILLIAMS, TREVION",
+      "team": "BER",
+      "minutes": "18:56",
+      "points": 7,
+      "valuation": 8,
+      "plusminus": -10,
+      "assists": 2,
+      "rebounds": 8,
+      "turnovers": 2
+    }
+  ],
+  "colors": {
+    "ALBA Berlin": "#d62839",
+    "Virtus Bologna": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "ALBA Berlin": 105,
+        "Virtus Bologna": 105
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "ALBA Berlin starts",
+          "105"
+        ],
+        [
+          "Virtus Bologna starts",
+          "105"
+        ],
+        [
+          "ALBA Berlin points per poss.",
+          "0.86"
+        ],
+        [
+          "ALBA Berlin Made 3 share",
+          "7%"
+        ],
+        [
+          "Virtus Bologna points per poss.",
+          "0.84"
+        ],
+        [
+          "Virtus Bologna Made 3 share",
+          "6%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "ALBA Berlin generated 0.86 points per possession over 105 tracked possessions.",
+        "Virtus Bologna generated 0.84 points per possession over 105 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Start",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Half-court",
+          "name": "Half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_After_OREB",
+          "name": "After OREB",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_start",
+          "name": "Virtus Bologna Start",
+          "team": "Virtus Bologna",
+          "stage": "start"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Half-court",
+          "name": "Half-court",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_After_OREB",
+          "name": "After OREB",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Turnover",
+          "name": "Turnover",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Missed_shot",
+          "name": "Missed shot",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_2",
+          "name": "Made 2",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_3",
+          "name": "Made 3",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus Bologna_0",
+          "name": "0 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_1",
+          "name": "1 pt",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_2",
+          "name": "2 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_3",
+          "name": "3 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Half-court",
+          "value": 57
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 26
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Half-court",
+          "value": 63
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Half-court",
+          "target": "Virtus_Segafredo_Bologna_Missed_shot",
+          "value": 18
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Missed_shot",
+          "target": "Virtus Bologna_0",
+          "value": 35
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_OREB",
+          "value": 16
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 33
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "value": 30
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_2",
+          "target": "Virtus Bologna_2",
+          "value": 26
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 16
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "target": "Virtus_Segafredo_Bologna_Missed_shot",
+          "value": 12
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Transition_Fast_break",
+          "value": 32
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 17
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 16
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Half-court",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 14
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Half-court",
+          "target": "Virtus_Segafredo_Bologna_Turnover",
+          "value": 12
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Turnover",
+          "target": "Virtus Bologna_0",
+          "value": 14
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "target": "Virtus_Segafredo_Bologna_Turnover",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 17
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Half-court",
+          "target": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_0",
+          "value": 6
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_1",
+          "value": 18
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "target": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_After_OREB",
+          "value": 12
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_OREB",
+          "target": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Half-court",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_3",
+          "target": "Virtus Bologna_3",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Transition_Fast_break",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 3
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_OREB",
+          "target": "Virtus_Segafredo_Bologna_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_OREB",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_OREB",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Half-court": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 10
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 9
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Half-court": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 15
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P005738",
+            "player_name": "GRAZULIS, ANDREJS",
+            "team": "Virtus Bologna",
+            "poss": 2
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Half-court->Virtus_Segafredo_Bologna_Missed_shot": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Missed_shot->Virtus Bologna_0": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 10
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_After_OREB": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Transition_Fast_break": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Transition_Fast_break->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_2->Virtus Bologna_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Transition_Fast_break->Virtus_Segafredo_Bologna_Missed_shot": [
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Transition_Fast_break": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Half-court->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Half-court->Virtus_Segafredo_Bologna_Turnover": [
+          {
+            "player_id": "P005738",
+            "player_name": "GRAZULIS, ANDREJS",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Turnover->Virtus Bologna_0": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P005738",
+            "player_name": "GRAZULIS, ANDREJS",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Transition_Fast_break->Virtus_Segafredo_Bologna_Turnover": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Half-court->Virtus_Segafredo_Bologna_Shooting_foul_FTs": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_0": [
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_1": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Transition_Fast_break->Virtus_Segafredo_Bologna_Shooting_foul_FTs": [
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_After_OREB": [
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_OREB->Virtus_Segafredo_Bologna_Shooting_foul_FTs": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Half-court->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_3->Virtus Bologna_3": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Transition_Fast_break->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_OREB->Virtus_Segafredo_Bologna_Missed_shot": [
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_OREB->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_OREB->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "ALBA Berlin": 57,
+        "Virtus Bologna": 63
+      },
+      "title": "Zoomed Detail — Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "57"
+        ],
+        [
+          "Virtus Bologna count",
+          "63"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Half-court",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_start",
+          "name": "Virtus Bologna Half-court",
+          "team": "Virtus Bologna",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_2",
+          "name": "Made 2",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_3",
+          "name": "Made 3",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Missed_shot",
+          "name": "Missed shot",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Turnover",
+          "name": "Turnover",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus Bologna_0",
+          "name": "0 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_1",
+          "name": "1 pt",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_2",
+          "name": "2 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_3",
+          "name": "3 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_PnR_handler_action",
+          "value": 53
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 14
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_PnR_handler_action",
+          "value": 61
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_PnR_handler_action",
+          "target": "Virtus_Segafredo_Bologna_Missed_shot",
+          "value": 18
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Missed_shot",
+          "target": "Virtus Bologna_0",
+          "value": 18
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 16
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 16
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 16
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 13
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_PnR_handler_action",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 14
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_2",
+          "target": "Virtus Bologna_2",
+          "value": 14
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_PnR_handler_action",
+          "target": "Virtus_Segafredo_Bologna_Turnover",
+          "value": 12
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Turnover",
+          "target": "Virtus Bologna_0",
+          "value": 12
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_PnR_handler_action",
+          "target": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_0",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_1",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Spot-up_swing",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Spot-up_swing",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Spot-up_swing",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Spot-up_swing",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_3",
+          "target": "Virtus Bologna_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 3
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_PnR_handler_action": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 9
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_PnR_handler_action": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 15
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P005738",
+            "player_name": "GRAZULIS, ANDREJS",
+            "team": "Virtus Bologna",
+            "poss": 2
+          }
+        ],
+        "Virtus_Segafredo_Bologna_PnR_handler_action->Virtus_Segafredo_Bologna_Missed_shot": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Missed_shot->Virtus Bologna_0": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_PnR_handler_action->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_2->Virtus Bologna_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_PnR_handler_action->Virtus_Segafredo_Bologna_Turnover": [
+          {
+            "player_id": "P005738",
+            "player_name": "GRAZULIS, ANDREJS",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Turnover->Virtus Bologna_0": [
+          {
+            "player_id": "P005738",
+            "player_name": "GRAZULIS, ANDREJS",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_PnR_handler_action->Virtus_Segafredo_Bologna_Shooting_foul_FTs": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_0": [
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_1": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Spot-up_swing": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Spot-up_swing->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Spot-up_swing": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Spot-up_swing->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_3->Virtus Bologna_3": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "ALBA Berlin": 32,
+        "Virtus Bologna": 30
+      },
+      "title": "Zoomed Detail — Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "32"
+        ],
+        [
+          "Virtus Bologna count",
+          "30"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Transition",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_start",
+          "name": "Virtus Bologna Transition",
+          "team": "Virtus Bologna",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_2",
+          "name": "Made 2",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_3",
+          "name": "Made 3",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Missed_shot",
+          "name": "Missed shot",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Turnover",
+          "name": "Turnover",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus Bologna_0",
+          "name": "0 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_1",
+          "name": "1 pt",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_2",
+          "name": "2 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_3",
+          "name": "3 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "value": 30
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_2",
+          "target": "Virtus Bologna_2",
+          "value": 8
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "target": "Virtus_Segafredo_Bologna_Missed_shot",
+          "value": 12
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Missed_shot",
+          "target": "Virtus Bologna_0",
+          "value": 12
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_defensive_rebound",
+          "value": 32
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "target": "Virtus_Segafredo_Bologna_Turnover",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Turnover",
+          "target": "Virtus Bologna_0",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 10
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "target": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_1",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_After_defensive_rebound",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 3
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_3",
+          "target": "Virtus Bologna_3",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 1
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_0",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_After_defensive_rebound": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 5
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 4
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_defensive_rebound->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_2->Virtus Bologna_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_defensive_rebound->Virtus_Segafredo_Bologna_Missed_shot": [
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Missed_shot->Virtus Bologna_0": [
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_After_defensive_rebound": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_defensive_rebound->Virtus_Segafredo_Bologna_Turnover": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Turnover->Virtus Bologna_0": [
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_defensive_rebound->Virtus_Segafredo_Bologna_Shooting_foul_FTs": [
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_1": [
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          }
+        ],
+        "Virtus_Segafredo_Bologna_After_defensive_rebound->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_3->Virtus Bologna_3": [
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_0": [
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "ALBA Berlin": 16,
+        "Virtus Bologna": 12
+      },
+      "title": "Zoomed Detail — After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "16"
+        ],
+        [
+          "Virtus Bologna count",
+          "12"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin After OREB",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_start",
+          "name": "Virtus Bologna After OREB",
+          "team": "Virtus Bologna",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_2",
+          "name": "Made 2",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_3",
+          "name": "Made 3",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Missed_shot",
+          "name": "Missed shot",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Turnover",
+          "name": "Turnover",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus Bologna_0",
+          "name": "0 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_1",
+          "name": "1 pt",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_2",
+          "name": "2 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus Bologna_3",
+          "name": "3 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Reset_half-court",
+          "value": 10
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Immediate_putback",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Immediate_putback",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Reset_half-court",
+          "value": 7
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Reset_half-court",
+          "target": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_1",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Reset_half-court",
+          "target": "Virtus_Segafredo_Bologna_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Missed_shot",
+          "target": "Virtus Bologna_0",
+          "value": 5
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Immediate_putback",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Immediate_putback",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_2",
+          "target": "Virtus Bologna_2",
+          "value": 4
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Shooting_foul_FTs",
+          "target": "Virtus Bologna_0",
+          "value": 1
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Kick-out_perimeter",
+          "value": 1
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Kick-out_perimeter",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_3",
+          "target": "Virtus Bologna_3",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Kick-out_perimeter",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Kick-out_perimeter",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Reset_half-court": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Immediate_putback": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Immediate_putback->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Reset_half-court": [
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Reset_half-court->Virtus_Segafredo_Bologna_Shooting_foul_FTs": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_1": [
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Reset_half-court->Virtus_Segafredo_Bologna_Missed_shot": [
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Missed_shot->Virtus Bologna_0": [
+          {
+            "player_id": "P001133",
+            "player_name": "SHENGELIA, TORNIKE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Immediate_putback": [
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Immediate_putback->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_2->Virtus Bologna_2": [
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Shooting_foul_FTs->Virtus Bologna_0": [
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Kick-out_perimeter": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Kick-out_perimeter->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_3->Virtus Bologna_3": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Kick-out_perimeter": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Kick-out_perimeter->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "ALBA Berlin": 26,
+        "Virtus Bologna": 26
+      },
+      "title": "Zoomed Detail — Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "26"
+        ],
+        [
+          "Virtus Bologna count",
+          "26"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 2",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_start",
+          "name": "Virtus Bologna Made 2",
+          "team": "Virtus Bologna",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Layup_runner",
+          "name": "Layup / runner",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_2",
+          "name": "Made 2",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus Bologna_2",
+          "name": "2 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Layup_runner",
+          "value": 26
+        },
+        {
+          "source": "ALBA_Berlin_Layup_runner",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 26
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 26
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Layup_runner",
+          "value": 26
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Layup_runner",
+          "target": "Virtus_Segafredo_Bologna_Made_2",
+          "value": 26
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_2",
+          "target": "Virtus Bologna_2",
+          "value": 26
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Layup_runner": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Layup_runner->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "MC CORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P012604",
+            "player_name": "WILLIAMS, TREVION",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Layup_runner": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Layup_runner->Virtus_Segafredo_Bologna_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_2->Virtus Bologna_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 8
+          },
+          {
+            "player_id": "P004554",
+            "player_name": "ZIZIC, ANTE",
+            "team": "Virtus Bologna",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P013374",
+            "player_name": "DIOUF, MOUHAMET",
+            "team": "Virtus Bologna",
+            "poss": 3
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P012585",
+            "player_name": "MORGAN, MATTHEW",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "P006739",
+            "player_name": "PAJOLA, ALESSANDRO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P012591",
+            "player_name": "TUCKER, RAYJON",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "ALBA Berlin": 7,
+        "Virtus Bologna": 6
+      },
+      "title": "Zoomed Detail — Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "7"
+        ],
+        [
+          "Virtus Bologna count",
+          "6"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 3",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_start",
+          "name": "Virtus Bologna Made 3",
+          "team": "Virtus Bologna",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Virtus Bologna",
+          "stage": "type"
+        },
+        {
+          "id": "Virtus_Segafredo_Bologna_Made_3",
+          "name": "Made 3",
+          "team": "Virtus Bologna",
+          "stage": "event"
+        },
+        {
+          "id": "Virtus Bologna_3",
+          "name": "3 pts",
+          "team": "Virtus Bologna",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Above-the-break_C&S",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Above-the-break_C&S",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 7
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_start",
+          "target": "Virtus_Segafredo_Bologna_Above-the-break_C&S",
+          "value": 6
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Above-the-break_C&S",
+          "target": "Virtus_Segafredo_Bologna_Made_3",
+          "value": 6
+        },
+        {
+          "source": "Virtus_Segafredo_Bologna_Made_3",
+          "target": "Virtus Bologna_3",
+          "value": 6
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Above-the-break_C&S": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Above-the-break_C&S->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008384",
+            "player_name": "PROCIDA, GABRIELE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_start->Virtus_Segafredo_Bologna_Above-the-break_C&S": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Above-the-break_C&S->Virtus_Segafredo_Bologna_Made_3": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ],
+        "Virtus_Segafredo_Bologna_Made_3->Virtus Bologna_3": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "Virtus Bologna",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCN",
+            "player_name": "BELINELLI, MARCO",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P009549",
+            "player_name": "CORDINIER, ISAIA",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P001844",
+            "player_name": "HACKETT, DANIEL",
+            "team": "Virtus Bologna",
+            "poss": 1
+          },
+          {
+            "player_id": "P002084",
+            "player_name": "POLONARA, ACHILLE",
+            "team": "Virtus Bologna",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}

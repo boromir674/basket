@@ -1,0 +1,5512 @@
+{
+  "meta": {
+    "seasoncode": "E2024",
+    "gamecode": 155,
+    "team_a": "Real Madrid",
+    "team_b": "ALBA Berlin",
+    "score_a": 80,
+    "score_b": 69,
+    "winner": "Real Madrid",
+    "gamedate": "2024-12-26",
+    "synced_at": "2026-04-25T12:33:25.473056+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P005928": {
+      "name": "CAMPAZZO, FACUNDO",
+      "team": "Real Madrid"
+    },
+    "P013386": {
+      "name": "McCORMACK, DAVID",
+      "team": "ALBA Berlin"
+    },
+    "P006540": {
+      "name": "MUSA, DZANAN",
+      "team": "Real Madrid"
+    },
+    "P008780": {
+      "name": "HERMANNSSON, MARTIN",
+      "team": "ALBA Berlin"
+    },
+    "P003733": {
+      "name": "ABALDE, ALBERTO",
+      "team": "Real Madrid"
+    },
+    "P008211": {
+      "name": "DELOW, MALTE",
+      "team": "ALBA Berlin"
+    },
+    "P005791": {
+      "name": "TAVARES, WALTER",
+      "team": "Real Madrid"
+    },
+    "P008967": {
+      "name": "THOMAS, MATT",
+      "team": "ALBA Berlin"
+    },
+    "P009005": {
+      "name": "DECK, GABRIEL",
+      "team": "Real Madrid"
+    },
+    "P008173": {
+      "name": "SPAGNOLO, MATTEO",
+      "team": "ALBA Berlin"
+    },
+    "P003108": {
+      "name": "HEZONJA, MARIO",
+      "team": "Real Madrid"
+    },
+    "P011934": {
+      "name": "WETZELL, YANNI",
+      "team": "ALBA Berlin"
+    },
+    "P006919": {
+      "name": "OLINDE, LOUIS",
+      "team": "ALBA Berlin"
+    },
+    "PTGB": {
+      "name": "LLULL, SERGIO",
+      "team": "Real Madrid"
+    },
+    "P011649": {
+      "name": "GONZALEZ, HUGO",
+      "team": "Real Madrid"
+    },
+    "P011631": {
+      "name": "RAPIEQUE, ELIAS",
+      "team": "ALBA Berlin"
+    },
+    "P007630": {
+      "name": "GARUBA, USMAN",
+      "team": "Real Madrid"
+    },
+    "P011247": {
+      "name": "FELIZ, ANDRES",
+      "team": "Real Madrid"
+    },
+    "P006251": {
+      "name": "SCHNEIDER, TIM",
+      "team": "ALBA Berlin"
+    },
+    "P007550": {
+      "name": "SAMAR, ZIGA",
+      "team": "ALBA Berlin"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P008173",
+      "player_name": "SPAGNOLO, MATTEO",
+      "team": "BER",
+      "minutes": "15:38",
+      "points": 10,
+      "valuation": 11,
+      "plusminus": -12,
+      "assists": 3,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P011934",
+      "player_name": "WETZELL, YANNI",
+      "team": "BER",
+      "minutes": "19:14",
+      "points": 7,
+      "valuation": 6,
+      "plusminus": -19,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P008211",
+      "player_name": "DELOW, MALTE",
+      "team": "BER",
+      "minutes": "21:44",
+      "points": 13,
+      "valuation": 15,
+      "plusminus": 0,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008062",
+      "player_name": "MCDOWELL-WHITE, WILL",
+      "team": "BER",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007025",
+      "player_name": "MATTISSECK, JONAS",
+      "team": "BER",
+      "minutes": "04:35",
+      "points": 0,
+      "valuation": -2,
+      "plusminus": -11,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006251",
+      "player_name": "SCHNEIDER, TIM",
+      "team": "BER",
+      "minutes": "20:51",
+      "points": 5,
+      "valuation": 2,
+      "plusminus": 5,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008967",
+      "player_name": "THOMAS, MATT",
+      "team": "BER",
+      "minutes": "24:56",
+      "points": 7,
+      "valuation": -1,
+      "plusminus": -1,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008780",
+      "player_name": "HERMANNSSON, MARTIN",
+      "team": "BER",
+      "minutes": "27:08",
+      "points": 8,
+      "valuation": 17,
+      "plusminus": 1,
+      "assists": 8,
+      "rebounds": 1,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P007550",
+      "player_name": "SAMAR, ZIGA",
+      "team": "BER",
+      "minutes": "07:43",
+      "points": 0,
+      "valuation": -2,
+      "plusminus": 1,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006919",
+      "player_name": "OLINDE, LOUIS",
+      "team": "BER",
+      "minutes": "18:16",
+      "points": 4,
+      "valuation": 6,
+      "plusminus": -11,
+      "assists": 0,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P011631",
+      "player_name": "RAPIEQUE, ELIAS",
+      "team": "BER",
+      "minutes": "07:38",
+      "points": 0,
+      "valuation": -2,
+      "plusminus": -13,
+      "assists": 1,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P013386",
+      "player_name": "McCORMACK, DAVID",
+      "team": "BER",
+      "minutes": "32:17",
+      "points": 15,
+      "valuation": 21,
+      "plusminus": 5,
+      "assists": 0,
+      "rebounds": 8,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P003733",
+      "player_name": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "minutes": "19:08",
+      "points": 2,
+      "valuation": 2,
+      "plusminus": 5,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P005928",
+      "player_name": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "minutes": "26:16",
+      "points": 9,
+      "valuation": 19,
+      "plusminus": 9,
+      "assists": 9,
+      "rebounds": 4,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P013378",
+      "player_name": "RATHAN-MAYES, XAVIER",
+      "team": "MAD",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P011649",
+      "player_name": "GONZALEZ, HUGO",
+      "team": "MAD",
+      "minutes": "08:02",
+      "points": 4,
+      "valuation": 4,
+      "plusminus": 1,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003108",
+      "player_name": "HEZONJA, MARIO",
+      "team": "MAD",
+      "minutes": "24:57",
+      "points": 18,
+      "valuation": 21,
+      "plusminus": 10,
+      "assists": 1,
+      "rebounds": 6,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006540",
+      "player_name": "MUSA, DZANAN",
+      "team": "MAD",
+      "minutes": "23:38",
+      "points": 10,
+      "valuation": 0,
+      "plusminus": 4,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P009005",
+      "player_name": "DECK, GABRIEL",
+      "team": "MAD",
+      "minutes": "24:31",
+      "points": 6,
+      "valuation": 13,
+      "plusminus": 4,
+      "assists": 3,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007630",
+      "player_name": "GARUBA, USMAN",
+      "team": "MAD",
+      "minutes": "10:46",
+      "points": 0,
+      "valuation": -1,
+      "plusminus": 8,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P003583",
+      "player_name": "IBAKA, SERGE",
+      "team": "MAD",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005791",
+      "player_name": "TAVARES, WALTER",
+      "team": "MAD",
+      "minutes": "29:00",
+      "points": 9,
+      "valuation": 15,
+      "plusminus": 1,
+      "assists": 1,
+      "rebounds": 10,
+      "turnovers": 4
+    },
+    {
+      "player_id": "PTGB",
+      "player_name": "LLULL, SERGIO",
+      "team": "MAD",
+      "minutes": "19:58",
+      "points": 20,
+      "valuation": 15,
+      "plusminus": 11,
+      "assists": 1,
+      "rebounds": 1,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P011247",
+      "player_name": "FELIZ, ANDRES",
+      "team": "MAD",
+      "minutes": "13:44",
+      "points": 2,
+      "valuation": 0,
+      "plusminus": 2,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 1
+    }
+  ],
+  "colors": {
+    "Real Madrid": "#d62839",
+    "ALBA Berlin": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "Real Madrid": 81,
+        "ALBA Berlin": 76
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "Real Madrid starts",
+          "81"
+        ],
+        [
+          "ALBA Berlin starts",
+          "76"
+        ],
+        [
+          "Real Madrid points per poss.",
+          "0.99"
+        ],
+        [
+          "Real Madrid Made 3 share",
+          "16%"
+        ],
+        [
+          "ALBA Berlin points per poss.",
+          "0.91"
+        ],
+        [
+          "ALBA Berlin Made 3 share",
+          "4%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "Real Madrid generated 0.99 points per possession over 81 tracked possessions.",
+        "ALBA Berlin generated 0.91 points per possession over 76 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Start",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_Half-court",
+          "name": "Half-court",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_After_OREB",
+          "name": "After OREB",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Start",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Half-court",
+          "name": "Half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_After_OREB",
+          "name": "After OREB",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Half-court",
+          "value": 42
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 12
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 21
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Transition_Fast_break",
+          "value": 26
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 27
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_After_OREB",
+          "value": 9
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Made_2",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 15
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Half-court",
+          "value": 37
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 9
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Transition_Fast_break",
+          "value": 30
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Turnover",
+          "value": 8
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 19
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Turnover",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_OREB",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 10
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 29
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Made_3",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 14
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Made_2",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_0",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 12
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_1",
+          "value": 11
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Real_Madrid_start->Real_Madrid_Half-court": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 9
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 9
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Transition_Fast_break": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_After_OREB": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Real Madrid",
+            "player_name": "Unknown",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Made_2": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Half-court": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Transition_Fast_break": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 7
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Turnover": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Real Madrid",
+            "player_name": "Unknown",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Turnover": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_After_OREB": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Made_3": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Made_3": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Made_2": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Made_3": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_0": [
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_1": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Turnover": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Real Madrid",
+            "player_name": "Unknown",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Made_2": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "Real Madrid": 42,
+        "ALBA Berlin": 37
+      },
+      "title": "Zoomed Detail — Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "Real Madrid count",
+          "42"
+        ],
+        [
+          "ALBA Berlin count",
+          "37"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Half-court",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Half-court",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA_Berlin_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_PnR_handler_action",
+          "value": 36
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 12
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 12
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_PnR_handler_action",
+          "value": 35
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Spot-up_swing",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Spot-up_swing",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Spot-up_swing",
+          "value": 6
+        },
+        {
+          "source": "Real_Madrid_Spot-up_swing",
+          "target": "Real_Madrid_Made_3",
+          "value": 6
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 11
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 12
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_1",
+          "value": 11
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_0",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Real_Madrid_start->Real_Madrid_PnR_handler_action": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 9
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 9
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_PnR_handler_action": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Turnover": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Spot-up_swing": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Spot-up_swing->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Spot-up_swing": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_Spot-up_swing->Real_Madrid_Made_3": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007550",
+            "player_name": "SAMAR, ZIGA",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_1": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_0": [
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Made_2": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "Real Madrid": 30,
+        "ALBA Berlin": 26
+      },
+      "title": "Zoomed Detail — Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "Real Madrid count",
+          "30"
+        ],
+        [
+          "ALBA Berlin count",
+          "26"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Transition",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Transition",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA_Berlin_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_defensive_rebound",
+          "value": 26
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 6
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 6
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_After_defensive_rebound",
+          "value": 30
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Turnover",
+          "value": 8
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Made_2",
+          "value": 9
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 9
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_0",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_After_defensive_rebound": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_After_defensive_rebound": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 7
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Turnover": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Made_2": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P007630",
+            "player_name": "GARUBA, USMAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Made_3": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_0": [
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "Real Madrid": 9,
+        "ALBA Berlin": 13
+      },
+      "title": "Zoomed Detail — After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "Real Madrid count",
+          "9"
+        ],
+        [
+          "ALBA Berlin count",
+          "13"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid After OREB",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin After OREB",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA_Berlin_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Immediate_putback",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Immediate_putback",
+          "target": "Real_Madrid_Made_2",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Immediate_putback",
+          "value": 10
+        },
+        {
+          "source": "ALBA_Berlin_Immediate_putback",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 10
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 10
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Kick-out_perimeter",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Kick-out_perimeter",
+          "target": "Real_Madrid_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Reset_half-court",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Reset_half-court",
+          "value": 6
+        },
+        {
+          "source": "Real_Madrid_Reset_half-court",
+          "target": "Real_Madrid_Turnover",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_Reset_half-court",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Real_Madrid_start->Real_Madrid_Immediate_putback": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Immediate_putback->Real_Madrid_Made_2": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Immediate_putback": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Immediate_putback->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Kick-out_perimeter": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Kick-out_perimeter->Real_Madrid_Made_3": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Reset_half-court": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P011631",
+            "player_name": "RAPIEQUE, ELIAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Reset_half-court": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Real Madrid",
+            "player_name": "Unknown",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Reset_half-court->Real_Madrid_Turnover": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Real Madrid",
+            "player_name": "Unknown",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Real Madrid",
+            "player_name": "Unknown",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Reset_half-court->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "Real Madrid": 15,
+        "ALBA Berlin": 27
+      },
+      "title": "Zoomed Detail — Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Real Madrid count",
+          "15"
+        ],
+        [
+          "ALBA Berlin count",
+          "27"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Made 2",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 2",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA_Berlin_Layup_runner",
+          "name": "Layup / runner",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Layup_runner",
+          "value": 27
+        },
+        {
+          "source": "ALBA_Berlin_Layup_runner",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 27
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 27
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Layup_runner",
+          "value": 15
+        },
+        {
+          "source": "Real_Madrid_Layup_runner",
+          "target": "Real_Madrid_Made_2",
+          "value": 15
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 15
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Layup_runner": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Layup_runner->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P013386",
+            "player_name": "McCORMACK, DAVID",
+            "team": "ALBA Berlin",
+            "poss": 7
+          },
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008173",
+            "player_name": "SPAGNOLO, MATTEO",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006919",
+            "player_name": "OLINDE, LOUIS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P011934",
+            "player_name": "WETZELL, YANNI",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Layup_runner": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Layup_runner->Real_Madrid_Made_2": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011247",
+            "player_name": "FELIZ, ANDRES",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "Real Madrid": 13,
+        "ALBA Berlin": 3
+      },
+      "title": "Zoomed Detail — Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Real Madrid count",
+          "13"
+        ],
+        [
+          "ALBA Berlin count",
+          "3"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Made 3",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 3",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA_Berlin_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Above-the-break_C&S",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_Above-the-break_C&S",
+          "target": "Real_Madrid_Made_3",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Above-the-break_C&S",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Above-the-break_C&S",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 3
+        }
+      ],
+      "player_flows": {
+        "Real_Madrid_start->Real_Madrid_Above-the-break_C&S": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Above-the-break_C&S->Real_Madrid_Made_3": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P003108",
+            "player_name": "HEZONJA, MARIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005928",
+            "player_name": "CAMPAZZO, FACUNDO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P011649",
+            "player_name": "GONZALEZ, HUGO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Above-the-break_C&S": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Above-the-break_C&S->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P008211",
+            "player_name": "DELOW, MALTE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P008967",
+            "player_name": "THOMAS, MATT",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}
