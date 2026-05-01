@@ -219,6 +219,7 @@ Notes:
 | Header ELO badge | `elo_{seasoncode}.json` (`ratings` map), `meta.team_a/team_b` | `computed` | Ratings derived from Boxscore totals; if Boxscore team names are codes, scores are summed via player points mapped through `players`. |
 | Elo showcase timeline | `elo_multiseason.json` (`seasoncodes`, `history[].seasoncode`, `history[].season_label`, `history[].gamedate`, teams/scores/winner) | `computed` | UI enforces consecutive season selection and recomputes ratings in-browser from selected seasons only. Timeline x-axis uses fixture-style buckets (grouped by season + date). |
 | Style Insights page | `style_insights_{season}.json` (`teams[].consistency_score`, `teams[].adaptability_score`, `teams[].evidence.consistency[]`, `teams[].evidence.adaptability[]`) | `computed` + `modeled/inferred` from timeline events | Spotlight cards auto-select top teams and open modal evidence; representative games are deterministic and include reason tags plus mix/shift summaries. |
+| 2D Shot Style Map Lab | `raw_pts_{season}_{game}.json`, `raw_box_{season}_{game}.json`, `games_manifest.json` | `raw API` + `computed` in-browser | Bins half-court coordinates and computes attempts/100, points/attempt, contribution/100, and league-bin baseline deltas with optional filters (team/opponent/home-away/phase/possession type). |
 
 ## 6.1) ELO Inputs (Why All-1500 Happens)
 
