@@ -260,7 +260,8 @@
 (function(){
   const qs = new URLSearchParams(window.location.search);
   const inProdSubdir = window.location.pathname.includes("/prod/");
-  const processedBase = inProdSubdir ? "../assets/processed" : "./assets/processed";
+  let processedBase = inProdSubdir ? "../assets/processed" : "./assets/processed";
+  const fallbackProcessedBase = inProdSubdir ? "./assets/processed" : "../assets/processed";
   const manifestFile = "__BASKET_MANIFEST_FILE__" === "__BASKET_MANIFEST_FILE__"
     ? "games_manifest.json"
     : "__BASKET_MANIFEST_FILE__";
@@ -297,6 +298,25 @@
   let searchFilterText = "";
 
   const normalizedCache = new Map();
+
+  async function fetchJsonFromCandidateBases(relativePath){
+    const tried = [];
+    const bases = [processedBase, fallbackProcessedBase];
+    for(const base of bases){
+      if(tried.includes(base)) continue;
+      tried.push(base);
+      const url = `${base}/${relativePath}`;
+      try{
+        const res = await fetch(url);
+        if(!res.ok) continue;
+        processedBase = base;
+        return await res.json();
+      }catch(_err){
+        // try next base
+      }
+    }
+    throw new Error(`Failed to load ${relativePath} from ${tried.join(" or ")}`);
+  }
 
   function modeParams(mode){
     const showTypeNodes = !!(showTypeNodesEl && showTypeNodesEl.checked);
@@ -614,8 +634,7 @@
     });
   }
 
-  fetch(`${processedBase}/${manifestFile}`)
-    .then((r) => r.json())
+  fetchJsonFromCandidateBases(manifestFile)
     .then((data) => {
       if(!Array.isArray(data) || !data.length){
         gamesEl.textContent = "No games found. Generate data first.";
@@ -640,7 +659,7 @@
       renderGames();
     })
     .catch(() => {
-      gamesEl.textContent = `Failed to load ${processedBase}/${manifestFile}`;
+      gamesEl.textContent = `Failed to load ${manifestFile}`;
     });
 })();
 </script>
