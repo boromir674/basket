@@ -474,6 +474,11 @@ export function initScoreChart({ variant }) {
   let currentMode = 'points';
   let currentData = null;
 
+  const runtimeConfig = window.BasketRuntimeConfig;
+  if (!runtimeConfig) {
+    throw new Error('Missing runtime config. Ensure runtime-config.js is loaded before score-chart.js.');
+  }
+
   function populateGameSelect(season) {
     const count = GAME_COUNTS[season] || 200;
     selGame.innerHTML = '';
@@ -498,7 +503,11 @@ export function initScoreChart({ variant }) {
   async function loadGame() {
     const season = selSeason.value;
     const game = selGame.value;
-    const url = `../assets/raw_pts_${season}_${game}.json`;
+    const rawFilename = runtimeConfig.applyPattern(runtimeConfig.rawPtsPattern, {
+      season,
+      game,
+    });
+    const url = runtimeConfig.buildRawAssetUrl(rawFilename);
 
     chartArea.innerHTML = '<div class="status loading">Loading…</div>';
     legend.style.display = 'none';

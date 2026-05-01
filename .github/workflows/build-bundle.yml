@@ -48,6 +48,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Preflight (default checks)
+        run: bash scripts/preflight.sh
+
       - name: 'Prepare production bundle with shared builder'
         run: bash scripts/build_bundle.sh --mode app --out public
 

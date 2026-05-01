@@ -367,6 +367,7 @@
     </div>
   </div>
 
+  <script src="./runtime-config.js"></script>
   <script>
     (function () {
       const STORAGE_KEY = 'styleInsights.spotlightCount';
@@ -398,6 +399,11 @@
       };
 
       spotlightCountInput.value = String(state.spotlightCount);
+
+      const runtimeConfig = window.BasketRuntimeConfig;
+      if (!runtimeConfig) {
+        throw new Error('Missing runtime config. Ensure runtime-config.js is loaded.');
+      }
 
       function readSpotlightCount() {
         const raw = window.localStorage.getItem(STORAGE_KEY);
@@ -665,14 +671,15 @@
         cards.innerHTML = '';
 
         try {
-          const url = `assets/processed/style_insights_${season}.json`;
+          const filename = runtimeConfig.applyPattern(runtimeConfig.styleInsightsPattern, { season });
+          const url = runtimeConfig.buildProcessedUrl(filename);
           const res = await fetch(url);
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const payload = await res.json();
           render(payload);
         } catch (err) {
           status.classList.add('error');
-          status.textContent = `Could not load assets/processed/style_insights_${season}.json. Run timeline + insights pipeline first.`;
+          status.textContent = `Could not load ${runtimeConfig.applyPattern(runtimeConfig.styleInsightsPattern, { season })}. Run timeline + insights pipeline first.`;
           meta.textContent = '';
         }
       }

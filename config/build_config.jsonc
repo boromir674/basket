@@ -1,0 +1,74 @@
+{
+  "description": "Declarative build config: defines required and optional files for each build mode",
+  "sources": {
+    "processed_data_dir": "data",
+    "raw_data_dir": "data/raw",
+    "notes": "Single canonical source for all processed/computed game and manifest files. Build script copies from here only—no fallback logic."
+  },
+  "assets": {
+    "processed_subdir": "assets/processed",
+    "raw_assets_subdir": "assets",
+    "default_bundle_file": "multi_drilldown_real_data.json",
+    "manifest_file": "games_manifest.json",
+    "raw_pts_pattern": "raw_pts_{season}_{game}.json",
+    "elo_pattern": "elo_{season}.json",
+    "style_insights_pattern": "style_insights_{season}.json"
+  },
+  "modes": {
+    "app": {
+      "description": "Production Sankey viewer and analytics surfaces",
+      "required_static_files": {
+        "data/games_manifest.json": "Powers game discovery in game-explorer.html dropdown",
+        "data/elo_multiseason.json": "Time-series Elo ratings for elo.html and rankings"
+      },
+      "path_patterns": [
+        // Core Sankey graph payload for every game listed in games_manifest.json.
+        "data/multi_drilldown_real_data_E*.json",
+        // Required by cone chart and score-diff / score-d52 families (classic + v2/full-paint).
+        "data/raw/raw_pts_E*.json",
+        // Precomputed timeline payload used for cheap score-diff and score-d52 rendering.
+        "data/score_timeline_E*.json"
+      ],
+      "html_pages": [
+        "prod/index.html",
+        "prod/game-explorer.html",
+        "prod/game-flow-viewer.html",
+        "prod/elo.html",
+        "prod/score-diff.html",
+        "prod/score-d52.html",
+        "prod/score-diff-v2.html",
+        "prod/score-d52-v2.html",
+        "prod/style-insights.html"
+      ],
+      "js_modules": [
+        "src/sankey-renderer.js",
+        "prod/runtime-config.js",
+        "prod/score-chart.js"
+      ]
+    },
+    "lab": {
+      "description": "Lab landing with experimental visualizations",
+      "inherits_from": "app",
+      "path_patterns": [
+        // Required box-score payloads used by shot-style and consistency lab surfaces.
+        "data/raw/raw_box_E*.json"
+      ],
+      "html_pages": [
+        "lab/index.html",
+        "lab/game-flow-switcher.html",
+        "lab/shot-style-map.html",
+        "lab/shot-style-map-3d.html",
+        "lab/style-consistency-lab.html"
+      ],
+      "copy_directories": [
+        "lab"
+      ]
+    }
+  },
+  "notes": [
+    "All required path_patterns must exist for all games in games_manifest.json where applicable",
+    "path_patterns is a flat array of required glob patterns",
+    "processed_data_dir is the single source of truth—build never falls back to other locations",
+    "Pipeline (entrypoint.py) must output to the canonical processed_data_dir"
+  ]
+}
