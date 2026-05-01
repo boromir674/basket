@@ -58,9 +58,16 @@ PORT=9000 ./serve.sh
 The script builds a `public/` bundle identical to what CI deploys, then serves it.
 Open `http://localhost:8080/index.html` for the MVP surface.
 
+Shared builder used by local scripts and CI:
+
+```bash
+bash scripts/build_bundle.sh --mode app --out public
+bash scripts/build_bundle.sh --mode lab --out public-lab
+```
+
 > **Why `./serve.sh` instead of `python -m http.server` directly?**
 > The deployed site is served from a flat `public/` directory (CI puts `prod/index.html`
-> and `poss-flow-map-multi-drilldown-real-data.html` side-by-side with `assets/processed/`).
+> and `prod/game-flow-viewer.html` side-by-side with `assets/processed/`).
 > Serving the repo root directly would put `index.html` one level below the assets, making
 > all relative asset paths wrong. `serve.sh` mirrors the exact CI layout so paths are
 > identical in every environment — no conditionals, no env vars, no surprises.

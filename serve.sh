@@ -15,39 +15,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 cd "$SCRIPT_DIR"
 
-echo "→ Building public/ bundle..."
-rm -rf public
-mkdir -p public/assets/processed
-mkdir -p public/src
-
-cp prod/index.html                             public/
-cp prod/game-explorer.html                     public/
-cp prod/elo.html                               public/
-cp prod/score-diff.html                        public/
-cp prod/score-d52.html                         public/
-cp prod/score-diff-v2.html                     public/
-cp prod/score-d52-v2.html                      public/
-cp prod/style-insights.html                    public/
-cp prod/score-chart.js                         public/
-
-cp prod/game-flow-viewer.html public/
-cp src/sankey-renderer.js public/src/
-
-if ls data/*.json 1>/dev/null 2>&1; then
-  cp data/*.json public/assets/processed/
-  echo "✓ Data files copied from data/"
-else
-  echo "⚠  No data in data/ — run 'docker compose run --rm demo' first."
-fi
-
-# Copy raw_pts scoring event files needed by score-diff.html
-mkdir -p public/assets
-if ls assets/raw_pts_*.json 1>/dev/null 2>&1; then
-  cp assets/raw_pts_*.json public/assets/
-  echo "✓ raw_pts files copied"
-else
-  echo "⚠  No raw_pts_*.json in assets/ — score-diff page will show fetch errors."
-fi
+scripts/build_bundle.sh --mode app --out public
 
 echo "→ Serving public/ on http://localhost:${PORT}"
 echo "   Open: http://localhost:${PORT}/index.html"

@@ -785,7 +785,7 @@
 
     function valueForMetric(bin) {
       if (activeMetric === "volume") return bin.attemptsPer100;
-      if (activeMetric === "efficiency") return bin.deltaVsLeague;
+      if (activeMetric === "efficiency") return bin.ppa;
       return bin.contributionPer100;
     }
 
@@ -844,7 +844,7 @@
 
         let rawHeight = 0;
         if (activeMetric === "efficiency") {
-          rawHeight = Math.abs(Number.isFinite(b.deltaVsLeague) ? b.deltaVsLeague : 0);
+          rawHeight = Number.isFinite(b.ppa) ? b.ppa : 0;
         } else if (activeMetric === "contribution") {
           rawHeight = Number.isFinite(b.contributionPer100) ? b.contributionPer100 : 0;
         } else {
@@ -1005,7 +1005,7 @@
           if (Number.isFinite(b.attemptsPer100)) maxVolume = Math.max(maxVolume, b.attemptsPer100);
           if (Number.isFinite(b.contributionPer100)) maxContribution = Math.max(maxContribution, b.contributionPer100);
           if (activeMetric === "efficiency") {
-            if (Number.isFinite(b.deltaVsLeague)) maxMetric = Math.max(maxMetric, Math.abs(b.deltaVsLeague));
+            if (Number.isFinite(b.ppa)) maxMetric = Math.max(maxMetric, b.ppa);
           } else {
             const v = valueForMetric(b);
             if (Number.isFinite(v)) maxMetric = Math.max(maxMetric, v);
