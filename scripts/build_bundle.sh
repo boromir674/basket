@@ -54,92 +54,125 @@ if [[ ! -f "$CONTRACT_FILE" ]]; then
   exit 1
 fi
 
-# Check for required static files
-validate_required_files() {
-  local file="$1"
-  if [[ ! -f "$file" ]]; then
-    echo "✗ Required file missing: $file"
-    return 1
+if ! command -v jq >/dev/null 2>&1; then
+  echo "✗ jq is required to read ${CONTRACT_FILE}"
+  exit 1
+fi
+
+MODE_CONFIG_JSON="$(jq -c --arg mode "$MODE" '
+  def merged_mode($m):
+  .modes[$m] as $cur
+  | (if (($cur.inherits_from? // "") != "") then merged_mode($cur.inherits_from) else {} end) as $parent
+  | {
+    required_static_files: (($parent.required_static_files // {}) + ($cur.required_static_files // {})),
+    required_per_game_files: (($parent.required_per_game_files // {}) + ($cur.required_per_game_files // {})),
+    additional_required_per_game_files: (($parent.additional_required_per_game_files // {}) + ($cur.additional_required_per_game_files // {})),
+    html_pages: (((($parent.html_pages // []) + ($cur.html_pages // [])) | unique)),
+    js_modules: (((($parent.js_modules // []) + ($cur.js_modules // [])) | unique)),
+    copy_directories: (((($parent.copy_directories // []) + ($cur.copy_directories // [])) | unique)),
+    optional_asset_globs: (($parent.optional_asset_globs // {}) + ($cur.optional_asset_globs // {}))
+  };
+  {
+  processed_data_dir: (.sources.processed_data_dir // "data"),
+  mode: merged_mode($mode)
+  }
+' "$CONTRACT_FILE")"
+
+PROCESSED_DATA_DIR="$(jq -r '.processed_data_dir' <<<"$MODE_CONFIG_JSON")"
+mapfile -t REQUIRED_STATIC_FILES < <(jq -r '.mode.required_static_files | keys[]?' <<<"$MODE_CONFIG_JSON")
+mapfile -t REQUIRED_PER_GAME_PATTERNS < <(jq -r '((.mode.required_per_game_files // {} | keys) + (.mode.additional_required_per_game_files // {} | keys))[]?' <<<"$MODE_CONFIG_JSON")
+mapfile -t HTML_PAGES < <(jq -r '.mode.html_pages[]?' <<<"$MODE_CONFIG_JSON")
+mapfile -t JS_MODULES < <(jq -r '.mode.js_modules[]?' <<<"$MODE_CONFIG_JSON")
+mapfile -t COPY_DIRECTORIES < <(jq -r '.mode.copy_directories[]?' <<<"$MODE_CONFIG_JSON")
+mapfile -t OPTIONAL_ASSET_GLOBS < <(jq -r '.mode.optional_asset_globs | keys[]?' <<<"$MODE_CONFIG_JSON")
+
+for req_file in "${REQUIRED_STATIC_FILES[@]}"; do
+  if [[ ! -f "$req_file" ]]; then
+    echo "✗ Build contract violation: required file missing: $req_file"
+    exit 1
   fi
-}
+done
 
-# Contract validation: ensure games_manifest and at least one per-game sankey file exist
-if ! validate_required_files "data/games_manifest.json"; then
-  echo "✗ Build contract violation: data/games_manifest.json is required"
-  exit 1
-fi
+game_files_found=0
+for pattern in "${REQUIRED_PER_GAME_PATTERNS[@]}"; do
+  count=$(compgen -G "$pattern" | wc -l || true)
+  if [[ "$count" -eq 0 ]]; then
+    echo "✗ Build contract violation: no files found for pattern: $pattern"
+    echo "  Pipeline must generate these outputs before bundling."
+    exit 1
+  fi
+  game_files_found=$((game_files_found + count))
+done
 
-# Count available per-game sankey files
-game_files_found=$(ls data/multi_drilldown_real_data_E*.json 2>/dev/null | wc -l || echo 0)
-if [[ "$game_files_found" -eq 0 ]]; then
-  echo "✗ Build contract violation: No per-game files found (data/multi_drilldown_real_data_E*.json)"
-  echo "   The pipeline must generate these files before bundling."
-  exit 1
-fi
-echo "✓ Contract validated (${game_files_found} per-game sankey files found)"
+echo "✓ Contract validated (${game_files_found} files found across required per-game patterns)"
 
 echo "→ Building ${OUT_DIR}/ bundle (mode=${MODE})..."
 rm -rf "$OUT_DIR"
 
 if [[ "$MODE" == "app" ]]; then
-  mkdir -p "$OUT_DIR/assets/processed"
-  mkdir -p "$OUT_DIR/src"
-
-  cp prod/index.html                             "$OUT_DIR/"
-  cp prod/game-explorer.html                     "$OUT_DIR/"
-  cp prod/elo.html                               "$OUT_DIR/"
-  cp prod/score-diff.html                        "$OUT_DIR/"
-  cp prod/score-d52.html                         "$OUT_DIR/"
-  cp prod/score-diff-v2.html                     "$OUT_DIR/"
-  cp prod/score-d52-v2.html                      "$OUT_DIR/"
-  cp prod/style-insights.html                    "$OUT_DIR/"
-  cp prod/score-chart.js                         "$OUT_DIR/"
-
-  cp prod/game-flow-viewer.html                  "$OUT_DIR/"
-  cp src/sankey-renderer.js                      "$OUT_DIR/src/"
+  mkdir -p "$OUT_DIR/assets/processed" "$OUT_DIR/src" "$OUT_DIR/lab"
 else
-  mkdir -p "$OUT_DIR/assets/processed" "$OUT_DIR/prod" "$OUT_DIR/src"
-
-  cp -r ./lab "$OUT_DIR/lab"
-
-  cp prod/index.html                             "$OUT_DIR/prod/"
-  cp prod/game-explorer.html                     "$OUT_DIR/prod/"
-  cp prod/elo.html                               "$OUT_DIR/prod/"
-  cp prod/score-diff.html                        "$OUT_DIR/prod/"
-  cp prod/score-d52.html                         "$OUT_DIR/prod/"
-  cp prod/score-diff-v2.html                     "$OUT_DIR/prod/"
-  cp prod/score-d52-v2.html                      "$OUT_DIR/prod/"
-  cp prod/style-insights.html                    "$OUT_DIR/prod/"
-  cp prod/score-chart.js                         "$OUT_DIR/prod/"
-
-  cp prod/game-flow-viewer.html                  "$OUT_DIR/prod/"
-  cp lab/game-flow-switcher.html                 "$OUT_DIR/lab/"
-  cp src/sankey-renderer.js                      "$OUT_DIR/src/"
+  mkdir -p "$OUT_DIR/assets/processed" "$OUT_DIR/prod" "$OUT_DIR/src" "$OUT_DIR/lab"
 fi
 
-if ls data/*.json 1>/dev/null 2>&1; then
-  cp data/*.json "$OUT_DIR/assets/processed/"
-  echo "✓ Data files copied from data/"
+copy_contract_file() {
+  local source_path="$1"
+  local destination_dir="$OUT_DIR"
+
+  if [[ "$MODE" == "app" ]]; then
+    if [[ "$source_path" == prod/* ]]; then
+      destination_dir="$OUT_DIR"
+    elif [[ "$source_path" == src/* ]]; then
+      destination_dir="$OUT_DIR/src"
+    elif [[ "$source_path" == lab/* ]]; then
+      destination_dir="$OUT_DIR/lab"
+    fi
+  else
+    if [[ "$source_path" == prod/* ]]; then
+      destination_dir="$OUT_DIR/prod"
+    elif [[ "$source_path" == src/* ]]; then
+      destination_dir="$OUT_DIR/src"
+    elif [[ "$source_path" == lab/* ]]; then
+      destination_dir="$OUT_DIR/lab"
+    fi
+  fi
+
+  mkdir -p "$destination_dir"
+  cp "$source_path" "$destination_dir/"
+}
+
+for dir_to_copy in "${COPY_DIRECTORIES[@]}"; do
+  if [[ -d "$dir_to_copy" ]]; then
+    cp -R "$dir_to_copy" "$OUT_DIR/"
+  fi
+done
+
+for page in "${HTML_PAGES[@]}"; do
+  copy_contract_file "$page"
+done
+
+for module in "${JS_MODULES[@]}"; do
+  copy_contract_file "$module"
+done
+
+if ls "$PROCESSED_DATA_DIR"/*.json 1>/dev/null 2>&1; then
+  cp "$PROCESSED_DATA_DIR"/*.json "$OUT_DIR/assets/processed/"
+  echo "✓ Data files copied from ${PROCESSED_DATA_DIR}/ (canonical per contract)"
 else
-  echo "⚠  No data in data/"
+  echo "✗ No data files found in ${PROCESSED_DATA_DIR}/"
+  echo "  Build contract requires processed data in ${PROCESSED_DATA_DIR}/"
+  exit 1
 fi
 
 mkdir -p "$OUT_DIR/assets"
-if ls assets/raw_pts_*.json 1>/dev/null 2>&1; then
-  cp assets/raw_pts_*.json "$OUT_DIR/assets/"
-  echo "✓ raw_pts files copied"
-else
-  echo "⚠  No raw_pts_*.json in assets/"
-fi
-
-if [[ "$MODE" == "lab" ]]; then
-  if ls assets/raw_box_*.json 1>/dev/null 2>&1; then
-    cp assets/raw_box_*.json "$OUT_DIR/assets/"
-    echo "✓ raw_box files copied"
+for glob in "${OPTIONAL_ASSET_GLOBS[@]}"; do
+  if compgen -G "$glob" > /dev/null; then
+    cp $glob "$OUT_DIR/assets/"
+    echo "✓ Optional assets copied for pattern: $glob"
   else
-    echo "⚠  No raw_box_*.json in assets/"
+    echo "⚠  No files found for optional pattern: $glob"
   fi
-fi
+done
 
 echo ""
 echo "✓ Bundle ready: ${OUT_DIR}/"

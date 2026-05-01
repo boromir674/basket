@@ -1,5 +1,9 @@
 {
   "description": "Declarative build contract: defines required/optional files for each build mode",
+  "sources": {
+    "processed_data_dir": "data",
+    "notes": "Single canonical source for all processed/computed game and manifest files. Build script copies from here only—no fallback logic."
+  },
   "modes": {
     "app": {
       "description": "Production Sankey viewer and analytics surfaces",
@@ -18,34 +22,45 @@
         "prod/game-explorer.html",
         "prod/game-flow-viewer.html",
         "prod/elo.html",
+        "prod/score-diff.html",
+        "prod/score-d52.html",
+        "prod/score-diff-v2.html",
+        "prod/score-d52-v2.html",
         "prod/style-insights.html"
       ],
       "js_modules": [
-        "src/sankey-renderer.js"
-      ]
+        "src/sankey-renderer.js",
+        "prod/score-chart.js"
+      ],
+      "optional_asset_globs": {
+        "assets/raw_pts_*.json": "Score timeline artifacts for score-diff pages"
+      }
     },
     "lab": {
       "description": "Lab landing with experimental visualizations",
       "inherits_from": "app",
       "additional_required_per_game_files": {
-        "data/raw_box_E*.json": "Box score details for shot-style-map drilling + consistency analysis"
+        "assets/raw_box_E*.json": "Box score details for shot-style-map drilling + consistency analysis"
       },
       "html_pages": [
         "lab/index.html",
+        "lab/game-flow-switcher.html",
         "lab/shot-style-map.html",
         "lab/shot-style-map-3d.html",
         "lab/style-consistency-lab.html"
-      ]
+      ],
+      "copy_directories": [
+        "lab"
+      ],
+      "optional_asset_globs": {
+        "assets/raw_box_*.json": "Lab box score payloads for shot-map and consistency labs"
+      }
     }
   },
-  "file_source_priority": [
-    "data/",
-    "assets/processed/"
-  ],
   "notes": [
     "All required_per_game_files must exist for all games in games_manifest.json",
     "optional_files will be copied if they exist; missing optional files do not fail the build",
-    "The build process looks for data in data/ first, then falls back to assets/processed/ for backward compat",
-    "This contract is read by scripts/build_bundle.sh and should be consulted by pipeline (entrypoint.py) for output validation"
+    "processed_data_dir is the single source of truth—build never falls back to other locations",
+    "Pipeline (entrypoint.py) must output to the canonical processed_data_dir"
   ]
 }
