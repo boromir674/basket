@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Style Insights</title>
+  <style>
+    :root {
+      --bg: #071223;
+      --bg2: #0d1f3b;
+      --panel: #0f2443;
+      --line: #2f4975;
+      --text: #eaf2ff;
+      --muted: #9ab0d4;
+      --accent: #6ec8ff;
+      --accent-2: #9effd5;
+      --danger: #ff93ac;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 10% 0%, #163257 0%, var(--bg) 50%), linear-gradient(180deg, var(--bg2), var(--bg));
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 14px 32px;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0.02em;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--panel) 90%, #000 10%);
+    }
+    select,
+    input[type="number"] {
+      background: #102643;
+      border: 1px solid #3a5d8f;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 7px 9px;
+    }
+    .btn {
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #1c3a67;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .status {
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .status.error { color: var(--danger); }
+
+    .spotlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .spotlight {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(155deg, #12315a, #0c223f 70%);
+      padding: 12px;
+      box-shadow: inset 0 0 0 1px #1f3e67;
+    }
+    .spotlight-title {
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .spotlight-list {
+      display: grid;
+      gap: 8px;
+    }
+    .spotlight-item {
+      border: 1px solid #2b4a75;
+      border-radius: 11px;
+      background: #0c1e38;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      cursor: pointer;
+    }
+    .spotlight-item:hover {
+      border-color: #4f78b0;
+      background: #0f274a;
+    }
+    .team {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .score-row {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .score-val {
+      color: var(--accent-2);
+      margin-left: 4px;
+      font-weight: 700;
+    }
+    .small {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+    }
+    .card {
+      background: #0d223f;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .list {
+      margin: 8px 0 0 15px;
+      padding: 0;
+    }
+    .list li {
+      margin: 3px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 8, 16, 0.82);
+      display: none;
+      z-index: 3000;
+      padding: 14px;
+    }
+    .modal.open { display: block; }
+    .modal-panel {
+      max-width: 1220px;
+      height: min(92vh, 880px);
+      margin: 0 auto;
+      border: 1px solid #365887;
+      border-radius: 14px;
+      background: #081a32;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      overflow: hidden;
+    }
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-bottom: 1px solid #2a446a;
+      background: #0b223f;
+    }
+    .modal-title {
+      margin: 0;
+      font-size: 15px;
+    }
+    .modal-sub {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+    .close-btn {
+      border: 1px solid #365887;
+      background: #14315a;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 6px 9px;
+      cursor: pointer;
+    }
+    .evidence-strip {
+      border-bottom: 1px solid #2a446a;
+      padding: 8px 12px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #0a1c34;
+    }
+    .ev-chip {
+      border: 1px solid #325584;
+      background: #12325d;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .ev-chip.active {
+      border-color: #6fc0ff;
+      box-shadow: 0 0 0 1px #6fc0ff;
+      background: #1a457c;
+    }
+    .ev-summary {
+      flex: 1;
+      min-width: 260px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .modal-main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+    }
+    .chart-wrap {
+      min-height: 0;
+      background: #050f20;
+    }
+    .chart-iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .evidence-panel {
+      border-left: 1px solid #2a446a;
+      padding: 10px;
+      overflow: auto;
+      background: #0a1f3a;
+    }
+    .ev-block {
+      border: 1px solid #2b4a75;
+      border-radius: 10px;
+      background: #0e284c;
+      padding: 9px;
+      margin-bottom: 8px;
+    }
+    .ev-label {
+      color: #9dc4f5;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .ev-row {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .ev-link {
+      text-decoration: none;
+      color: #9bd4ff;
+      font-size: 12px;
+    }
+
+    @media (max-width: 950px) {
+      .modal-main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 54vh auto;
+      }
+      .evidence-panel {
+        border-left: 0;
+        border-top: 1px solid #2a446a;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Team Style Insights</h1>
+        <div class="muted">Evidence-first view: auto-spotlight top teams and open full-paint proof games.</div>
+      </div>
+      <a class="btn" href="./index.html">Back</a>
+    </div>
+
+    <div class="controls">
+      <label for="season">Season:</label>
+      <select id="season">
+        <option value="E2025">E2025</option>
+        <option value="E2024">E2024</option>
+        <option value="E2023">E2023</option>
+        <option value="E2022">E2022</option>
+        <option value="E2021">E2021</option>
+      </select>
+
+      <label for="spotlight-count">Top teams per metric:</label>
+      <input id="spotlight-count" type="number" min="1" max="5" step="1" value="1" />
+
+      <span id="meta" class="muted"></span>
+    </div>
+
+    <div id="status" class="status">Loading...</div>
+
+    <h2 class="section-title">Automatic Spotlight</h2>
+    <div id="spotlights" class="spotlights"></div>
+
+    <h2 class="section-title">All Teams</h2>
+    <div id="cards" class="grid"></div>
+  </div>
+
+  <div id="evidence-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-panel">
+      <div class="modal-top">
+        <div>
+          <h3 id="modal-title" class="modal-title">Evidence</h3>
+          <div id="modal-sub" class="modal-sub"></div>
+        </div>
+        <button id="close-modal" class="close-btn" type="button">Close</button>
+      </div>
+
+      <div class="evidence-strip">
+        <div id="evidence-games"></div>
+        <div id="evidence-summary" class="ev-summary"></div>
+      </div>
+
+      <div class="modal-main">
+        <div class="chart-wrap">
+          <iframe id="evidence-chart" class="chart-iframe" title="Score D52 evidence chart"></iframe>
+        </div>
+        <aside id="evidence-panel" class="evidence-panel"></aside>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const STORAGE_KEY = 'styleInsights.spotlightCount';
+      const seasonSel = document.getElementById('season');
+      const spotlightCountInput = document.getElementById('spotlight-count');
+      const status = document.getElementById('status');
+      const cards = document.getElementById('cards');
+      const spotlights = document.getElementById('spotlights');
+      const meta = document.getElementById('meta');
+
+      const modalRoot = document.getElementById('evidence-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalSub = document.getElementById('modal-sub');
+      const closeModalBtn = document.getElementById('close-modal');
+      const evidenceGames = document.getElementById('evidence-games');
+      const evidenceSummary = document.getElementById('evidence-summary');
+      const evidencePanel = document.getElementById('evidence-panel');
+      const evidenceChart = document.getElementById('evidence-chart');
+
+      const state = {
+        payload: null,
+        spotlightCount: readSpotlightCount(),
+        modal: {
+          team: null,
+          metric: null,
+          evidence: [],
+          selectedIndex: -1,
+        },
+      };
+
+      spotlightCountInput.value = String(state.spotlightCount);
+
+      function readSpotlightCount() {
+        const raw = window.localStorage.getItem(STORAGE_KEY);
+        const parsed = parseInt(raw || '1', 10);
+        if (!Number.isFinite(parsed)) return 1;
+        return Math.max(1, Math.min(5, parsed));
+      }
+
+      function writeSpotlightCount(value) {
+        window.localStorage.setItem(STORAGE_KEY, String(value));
+      }
+
+      function toNum(value) {
+        const n = Number(value);
+        if (!Number.isFinite(n)) return 0;
+        return Math.round(n * 100) / 100;
+      }
+
+      function getEvidence(team, metric) {
+        const evidenceObj = team && team.evidence ? team.evidence : null;
+        const rows = evidenceObj && Array.isArray(evidenceObj[metric]) ? evidenceObj[metric] : [];
+        if (rows.length) return rows;
+
+        const fallback = Array.isArray(team && team.exemplar_games) ? team.exemplar_games : [];
+        return fallback.map((row, idx) => ({
+          seasoncode: seasonSel.value,
+          gamecode: row.gamecode,
+          evidence_tag: idx === 0 ? 'fallback_primary' : 'fallback',
+          summary: row.summary || 'Representative game from legacy exemplar selection.',
+          quick_text: row.summary || '',
+          points_mix: row.points_share || null,
+          attempts_mix: row.attempts_share || null,
+        }));
+      }
+
+      function renderTeamCards(teams) {
+        cards.innerHTML = teams
+          .map((team) => {
+            const insights = Array.isArray(team.insights) ? team.insights : [];
+            return `
+              <div class="card">
+                <div class="title">${team.team_code || 'Unknown team'}</div>
+                <div class="score-row">Consistency:<span class="score-val">${toNum(team.consistency_score)}</span></div>
+                <div class="score-row">Adaptability:<span class="score-val">${toNum(team.adaptability_score)}</span></div>
+                <ul class="list">
+                  ${insights.map((line) => `<li>${line}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          })
+          .join('');
+      }
+
+      function renderSpotlightColumn(title, teams, metric) {
+        if (!teams.length) {
+          return `
+            <section class="spotlight">
+              <div class="spotlight-title">${title}</div>
+              <div class="small">No teams available.</div>
+            </section>
+          `;
+        }
+
+        const cardsHtml = teams
+          .map((team) => {
+            const score = metric === 'consistency' ? team.consistency_score : team.adaptability_score;
+            const evidenceCount = getEvidence(team, metric).length;
+            return `
+              <article class="spotlight-item" data-action="open-evidence" data-team="${team.team_code}" data-metric="${metric}">
+                <div>
+                  <div class="team">${team.team_code}</div>
+                  <div class="score-row">${metric === 'consistency' ? 'Consistency' : 'Adaptability'}<span class="score-val">${toNum(score)}</span></div>
+                  <div class="small">Evidence games: ${evidenceCount}</div>
+                </div>
+                <button class="btn" type="button">See evidence</button>
+              </article>
+            `;
+          })
+          .join('');
+
+        return `
+          <section class="spotlight">
+            <div class="spotlight-title">${title}</div>
+            <div class="spotlight-list">${cardsHtml}</div>
+          </section>
+        `;
+      }
+
+      function renderSpotlights(teams) {
+        const n = state.spotlightCount;
+        const byConsistency = teams.slice().sort((a, b) => (b.consistency_score || 0) - (a.consistency_score || 0));
+        const byAdaptability = teams.slice().sort((a, b) => (b.adaptability_score || 0) - (a.adaptability_score || 0));
+
+        spotlights.innerHTML = `
+          ${renderSpotlightColumn('Most Consistent Teams', byConsistency.slice(0, n), 'consistency')}
+          ${renderSpotlightColumn('Most Adaptable Teams', byAdaptability.slice(0, n), 'adaptability')}
+        `;
+      }
+
+      function findTeam(teamCode) {
+        const teams = state.payload && Array.isArray(state.payload.teams) ? state.payload.teams : [];
+        return teams.find((row) => row.team_code === teamCode) || null;
+      }
+
+      function updateEvidencePanel(entry) {
+        const pointsMix = entry && entry.points_mix ? entry.points_mix : null;
+        const attemptsMix = entry && entry.attempts_mix ? entry.attempts_mix : null;
+        const stateShift = entry && entry.state_shift ? entry.state_shift : null;
+
+        const blocks = [];
+        if (entry) {
+          blocks.push(`
+            <div class="ev-block">
+              <div class="ev-label">Selection reason</div>
+              <div class="ev-row">${entry.summary || 'No summary available.'}</div>
+              <div class="ev-row">Tag: ${entry.evidence_tag || 'n/a'}</div>
+            </div>
+          `);
+        }
+
+        if (pointsMix) {
+          blocks.push(`
+            <div class="ev-block">
+              <div class="ev-label">Points mix</div>
+              <div class="ev-row">3PT ${Math.round((pointsMix.three || 0) * 100)}%</div>
+              <div class="ev-row">2PT ${Math.round((pointsMix.two || 0) * 100)}%</div>
+              <div class="ev-row">FT ${Math.round((pointsMix.ft || 0) * 100)}%</div>
+            </div>
+          `);
+        }
+
+        if (attemptsMix) {
+          blocks.push(`
+            <div class="ev-block">
+              <div class="ev-label">Attempts mix</div>
+              <div class="ev-row">3PT ${Math.round((attemptsMix.three || 0) * 100)}%</div>
+              <div class="ev-row">2PT ${Math.round((attemptsMix.two || 0) * 100)}%</div>
+              <div class="ev-row">FT ${Math.round((attemptsMix.ft || 0) * 100)}%</div>
+            </div>
+          `);
+        }
+
+        if (stateShift) {
+          blocks.push(`
+            <div class="ev-block">
+              <div class="ev-label">State-conditioned shift</div>
+              <div class="ev-row">Leading: ${toNum(stateShift.leading || 0)}</div>
+              <div class="ev-row">Tied: ${toNum(stateShift.tied || 0)}</div>
+              <div class="ev-row">Trailing: ${toNum(stateShift.trailing || 0)}</div>
+            </div>
+          `);
+        }
+
+        if (entry && entry.gamecode) {
+          const chartUrl = `./score-d52-v2.html?season=${encodeURIComponent(seasonSel.value)}&game=${encodeURIComponent(entry.gamecode)}&mode=attempts&lockMode=1`;
+          blocks.push(`
+            <div class="ev-block">
+              <div class="ev-label">Deep dive</div>
+              <a class="ev-link" href="${chartUrl}" target="_blank" rel="noopener noreferrer">Open this game in full chart page</a>
+            </div>
+          `);
+        }
+
+        evidencePanel.innerHTML = blocks.join('');
+      }
+
+      function selectEvidence(index) {
+        const entry = state.modal.evidence[index];
+        if (!entry) return;
+
+        state.modal.selectedIndex = index;
+        const gamecode = entry.gamecode;
+        const seasoncode = entry.seasoncode || seasonSel.value;
+
+        Array.from(evidenceGames.querySelectorAll('.ev-chip')).forEach((chip) => {
+          chip.classList.toggle('active', Number(chip.dataset.idx) === index);
+        });
+
+        evidenceSummary.textContent = entry.quick_text || entry.summary || '';
+        updateEvidencePanel(entry);
+
+        if (gamecode) {
+          const src = `./score-d52-v2.html?season=${encodeURIComponent(seasoncode)}&game=${encodeURIComponent(gamecode)}&mode=attempts&lockMode=1`;
+          evidenceChart.src = src;
+        } else {
+          evidenceChart.src = '';
+        }
+      }
+
+      function openEvidenceModal(teamCode, metric) {
+        const team = findTeam(teamCode);
+        if (!team) return;
+
+        state.modal.team = team;
+        state.modal.metric = metric;
+        state.modal.evidence = getEvidence(team, metric);
+        state.modal.selectedIndex = -1;
+
+        modalTitle.textContent = `${team.team_code} · ${metric === 'consistency' ? 'Consistency evidence' : 'Adaptability evidence'}`;
+        modalSub.textContent = `Season ${seasonSel.value} · full-paint score proof via representative games.`;
+
+        if (!state.modal.evidence.length) {
+          evidenceGames.innerHTML = '';
+          evidenceSummary.textContent = 'No representative games found for this team/metric.';
+          evidencePanel.innerHTML = '<div class="ev-row">Run the latest style insights pipeline to populate evidence fields.</div>';
+          evidenceChart.src = '';
+          modalRoot.classList.add('open');
+          modalRoot.setAttribute('aria-hidden', 'false');
+          return;
+        }
+
+        evidenceGames.innerHTML = state.modal.evidence
+          .map((row, idx) => {
+            const label = row.evidence_tag ? row.evidence_tag.replace(/_/g, ' ') : 'evidence';
+            return `<button class="ev-chip" type="button" data-idx="${idx}">G${row.gamecode || '?'} · ${label}</button>`;
+          })
+          .join('');
+
+        Array.from(evidenceGames.querySelectorAll('.ev-chip')).forEach((chip) => {
+          chip.addEventListener('mouseenter', () => {
+            const idx = Number(chip.dataset.idx);
+            const row = state.modal.evidence[idx];
+            if (!row) return;
+            evidenceSummary.textContent = row.quick_text || row.summary || '';
+          });
+          chip.addEventListener('click', () => {
+            selectEvidence(Number(chip.dataset.idx));
+          });
+        });
+
+        selectEvidence(0);
+        modalRoot.classList.add('open');
+        modalRoot.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeEvidenceModal() {
+        modalRoot.classList.remove('open');
+        modalRoot.setAttribute('aria-hidden', 'true');
+      }
+
+      function render(payload) {
+        state.payload = payload;
+        const teams = Array.isArray(payload.teams) ? payload.teams : [];
+        const metaObj = payload.meta || {};
+        meta.textContent = `Games scanned: ${metaObj.games_scanned || 0} | Teams: ${metaObj.teams || 0}`;
+
+        if (!teams.length) {
+          spotlights.innerHTML = '';
+          cards.innerHTML = '';
+          status.textContent = 'No teams found in file.';
+          return;
+        }
+
+        status.textContent = '';
+        renderSpotlights(teams);
+        const byConsistency = teams.slice().sort((a, b) => (b.consistency_score || 0) - (a.consistency_score || 0));
+        renderTeamCards(byConsistency);
+      }
+
+      async function load() {
+        const season = seasonSel.value;
+        status.classList.remove('error');
+        status.textContent = 'Loading...';
+        spotlights.innerHTML = '';
+        cards.innerHTML = '';
+
+        try {
+          const url = `assets/processed/style_insights_${season}.json`;
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const payload = await res.json();
+          render(payload);
+        } catch (err) {
+          status.classList.add('error');
+          status.textContent = `Could not load assets/processed/style_insights_${season}.json. Run timeline + insights pipeline first.`;
+          meta.textContent = '';
+        }
+      }
+
+      seasonSel.addEventListener('change', load);
+
+      spotlightCountInput.addEventListener('change', () => {
+        const parsed = parseInt(spotlightCountInput.value || '1', 10);
+        const normalized = Number.isFinite(parsed) ? Math.max(1, Math.min(5, parsed)) : 1;
+        state.spotlightCount = normalized;
+        spotlightCountInput.value = String(normalized);
+        writeSpotlightCount(normalized);
+        if (state.payload) {
+          render(state.payload);
+        }
+      });
+
+      spotlights.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) return;
+        const row = target.closest('[data-action="open-evidence"]');
+        if (!row) return;
+        const teamCode = row.getAttribute('data-team');
+        const metric = row.getAttribute('data-metric');
+        if (!teamCode || !metric) return;
+        openEvidenceModal(teamCode, metric);
+      });
+
+      closeModalBtn.addEventListener('click', closeEvidenceModal);
+      modalRoot.addEventListener('click', (event) => {
+        if (event.target === modalRoot) closeEvidenceModal();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modalRoot.classList.contains('open')) {
+          closeEvidenceModal();
+        }
+      });
+
+      load();
+    })();
+  </script>
+</body>
+</html>

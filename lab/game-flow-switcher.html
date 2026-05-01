@@ -17,6 +17,9 @@
     .subtitle { color:var(--muted); font-size:13px; margin-bottom:14px; }
     .layout { display:grid; grid-template-columns:320px minmax(0,1fr); gap:14px; align-items:stretch; }
     .card { background:var(--card-bg); border-radius:16px; border:1px solid var(--border); padding:12px 12px 14px; }
+    .switcher-toolbar { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+    .toggle-row { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
+    .toggle-row input { accent-color: var(--accent); }
     .games-list { max-height:80vh; overflow:auto; }
     .game-row { padding:8px 10px; border-radius:10px; border:1px solid transparent; cursor:pointer; margin-bottom:6px; }
     .game-row:hover { border-color:rgba(111,132,171,.6); background:rgba(15,24,42,.9); }
@@ -26,6 +29,15 @@
     .pill { display:inline-block; font-size:11px; padding:2px 7px; border-radius:999px; border:1px solid rgba(111,132,171,.5); margin-right:4px; color:var(--muted); }
     .iframe-wrap { height:80vh; border-radius:14px; overflow:hidden; border:1px solid var(--border); background:#050816; }
     iframe { width:100%; height:100%; border:0; }
+    @media (max-width: 980px) {
+      .wrap { padding:12px 8px 16px; }
+      .layout { grid-template-columns: 1fr; }
+      .viewer-card { order: 1; }
+      .games-card { order: 2; }
+      .iframe-wrap { height: 72vh; min-height: 420px; }
+      .games-list { max-height: 34vh; }
+      .game-row { padding: 10px 10px; }
+    }
   </style>
 </head>
 <body>
@@ -38,12 +50,19 @@
   <div class="subtitle">Pick any synced game on the left. The main Sankey view on the right reloads with that game's JSON.</div>
 
   <div class="layout">
-    <div class="card">
+    <div class="card games-card">
+      <div class="switcher-toolbar">
+        <div style="font-size:13px; font-weight:600;">Games</div>
+        <label class="toggle-row">
+          <input id="show-type-nodes" type="checkbox" />
+          <span>Show possession type nodes</span>
+        </label>
+      </div>
       <div class="games-list" id="games-list">Loading games_manifest.json…</div>
     </div>
-    <div class="card">
+    <div class="card viewer-card">
       <div class="iframe-wrap">
-        <iframe id="viewer" src="./poss-flow-map-multi-drilldown-real-data.html" title="Possession Flow Map"></iframe>
+        <iframe id="viewer" src="../prod/game-flow-viewer.html" title="Possession Flow Map"></iframe>
       </div>
     </div>
   </div>
@@ -52,7 +71,44 @@
 (function () {
   var listEl = document.getElementById("games-list");
   var viewer = document.getElementById("viewer");
+  var showTypeNodesEl = document.getElementById("show-type-nodes");
+  var activeFile = null;
+  var viewerReady = false;
   if (!listEl || !viewer) return;
+
+  function renderModeParams() {
+    var showTypeNodes = !!(showTypeNodesEl && showTypeNodesEl.checked);
+    return {
+      initialView: 'top',
+      typeZoomVariant: '4',
+      skipTypeStage: showTypeNodes ? '0' : '1'
+    };
+  }
+
+  function toParamString(obj) {
+    var usp = new URLSearchParams();
+    Object.keys(obj).forEach(function (k) {
+      usp.set(k, obj[k]);
+    });
+    return usp.toString();
+  }
+
+  function postRenderModeOnly() {
+    if (!viewerReady || !viewer.contentWindow || !activeFile) return;
+    viewer.contentWindow.postMessage({
+      type: 'setRenderMode',
+      params: toParamString(renderModeParams())
+    }, '*');
+  }
+
+  function postLoadBundle(file) {
+    if (!viewer.contentWindow) return;
+    viewer.contentWindow.postMessage({
+      type: 'loadBundle',
+      url: file,
+      params: toParamString(renderModeParams())
+    }, '*');
+  }
 
   function setActive(rowEl) {
     Array.prototype.forEach.call(listEl.querySelectorAll('.game-row'), function (el) {
@@ -62,11 +118,24 @@
   }
 
   function loadGame(file) {
-    var url = './poss-flow-map-multi-drilldown-real-data.html?file=' + encodeURIComponent(file);
-    viewer.src = url;
+    activeFile = file;
+    if (!viewerReady) return;
+    postLoadBundle(file);
   }
 
-  fetch('./assets/processed/games_manifest.json')
+  if (showTypeNodesEl) {
+    showTypeNodesEl.checked = false;
+    showTypeNodesEl.addEventListener('change', function () {
+      postRenderModeOnly();
+    });
+  }
+
+  viewer.addEventListener('load', function () {
+    viewerReady = true;
+    if (activeFile) postLoadBundle(activeFile);
+  });
+
+  fetch('../assets/processed/games_manifest.json')
     .then(function (r) { return r.json(); })
     .then(function (entries) {
       if (!Array.isArray(entries) || !entries.length) {
@@ -78,7 +147,7 @@
       entries.forEach(function (g, idx) {
         var row = document.createElement('div');
         row.className = 'game-row';
-        row.dataset.file = `assets/processed/${g.file}`;
+        row.dataset.file = `../assets/processed/${g.file}`;
 
         var title = document.createElement('div');
         title.className = 'game-title';
@@ -98,7 +167,7 @@
         row.appendChild(meta2);
 
         row.addEventListener('click', function () {
-          loadGame(`assets/processed/${g.file}`);
+          loadGame(`../assets/processed/${g.file}`);
           setActive(row);
         });
 
@@ -106,7 +175,7 @@
 
         if (idx === 0) {
           // Auto-select first game.
-          loadGame(`assets/processed/${g.file}`);
+          loadGame(`../assets/processed/${g.file}`);
           setActive(row);
         }
       });

@@ -1,4 +1,4 @@
-.PHONY: help sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates report prepare-season test
+.PHONY: help dev lab sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates report prepare-season test
 
 help:
 	@echo "Targets:"
@@ -11,6 +11,8 @@ help:
 	@echo "  make elo SEASON=E2025"
 	@echo "  make elo-multi SEASONS='E2022,E2023,E2024'"
 	@echo "  make elo-auto"
+	@echo "  make dev [PORT=8080]"
+	@echo "  make lab [PORT=8081]"
 	@echo "  make report SEASON=E2025"
 	@echo "  make prepare-season SEASON=E2025 START=1 END=200"
 	@echo "  make test"
@@ -29,6 +31,13 @@ LOG_LEVEL ?= INFO
 RAW_DIR ?= /app/assets
 SEASONS ?= E2021 E2022 E2023 E2024
 SEASONS_CSV ?= E2021,E2022,E2023,E2024
+PORT ?= 8080
+
+dev:
+	PORT=$(PORT) ./serve.sh
+
+lab:
+	PORT=$(PORT) ./serve-lab.sh
 
 redo-season:
 	docker-compose run --rm --build ops redo_season --seasoncode $(SEASON) --data-dir $(DATA_DIR) --raw-dir $(RAW_DIR) --concurrency $(CONCURRENCY) --gap-limit $(GAP_LIMIT) --max-gamecode $(MAX_GAMECODE)

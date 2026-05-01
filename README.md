@@ -12,6 +12,8 @@ This README is onboarding-first: you can come back later and re-onboard quickly.
 
 -> Simulate Elo values from start to end of Seasons in DB: `make elo-auto`
 
+-> Build Games Manifest (cheap way of frontend to discover content) from "current data": `docker-compose run --rm ops rebuild_manifest --all-seasons`
+
 ## 1) Project At A Glance
 
 - Pipeline: Python scripts fetch Euroleague API data and build Sankey JSON.
@@ -112,6 +114,18 @@ docker run --rm -v "${PWD}:/app" -w /app euroleague-sankey \
   rebuild_manifest --seasoncode E2021 --output-dir /app/assets/processed
 ```
 
+### Build score timeline artifacts from raw points
+
+```bash
+docker compose run --rm ops build_score_timeline --seasoncode E2025 --raw-dir /app/assets --output-dir /app/data
+```
+
+### Build team style insights (consistency + adaptability)
+
+```bash
+docker compose run --rm ops style_insights --seasoncode E2025 --data-dir /app/data --output-dir /app/data
+```
+
 ### Run test suite (network/API dependent)
 
 ```bash
@@ -204,6 +218,8 @@ Notes:
 | Global player registry (optional utility) | `players` map (`player_id -> {name, team}`) | `processed` | Built from possession-level player attribution gathered from raw PBP rows. |
 | Header ELO badge | `elo_{seasoncode}.json` (`ratings` map), `meta.team_a/team_b` | `computed` | Ratings derived from Boxscore totals; if Boxscore team names are codes, scores are summed via player points mapped through `players`. |
 | Elo showcase timeline | `elo_multiseason.json` (`seasoncodes`, `history[].seasoncode`, `history[].season_label`, `history[].gamedate`, teams/scores/winner) | `computed` | UI enforces consecutive season selection and recomputes ratings in-browser from selected seasons only. Timeline x-axis uses fixture-style buckets (grouped by season + date). |
+| Style Insights page | `style_insights_{season}.json` (`teams[].consistency_score`, `teams[].adaptability_score`, `teams[].evidence.consistency[]`, `teams[].evidence.adaptability[]`) | `computed` + `modeled/inferred` from timeline events | Spotlight cards auto-select top teams and open modal evidence; representative games are deterministic and include reason tags plus mix/shift summaries. |
+| 2D Shot Style Map Lab | `raw_pts_{season}_{game}.json`, `raw_box_{season}_{game}.json`, `games_manifest.json` | `raw API` + `computed` in-browser | Bins half-court coordinates and computes attempts/100, points/attempt, contribution/100, and league-bin baseline deltas with optional filters (team/opponent/home-away/phase/possession type). |
 
 ## 6.1) ELO Inputs (Why All-1500 Happens)
 
@@ -269,6 +285,8 @@ docker compose run --rm ops compute_elo --auto \
 - `?typeZoomVariant=3`: 4 -> 3 transition prototype.
   - entering a type zoom from a non-type view uses the intentional push effect.
   - switching between type zooms (`halfcourt`, `transition`, `oreb`) now morphs in place (3 -> 3), no extra push.
+- `Made 2 breakdown` and `Made 3 breakdown` subviews were removed from navigation in both lab and prod hosts.
+  - direct navigation requests for `made2`/`made3` are normalized back to `top`.
 - `?explodeLab=1`: flow explode lab mode.
   - click a link to split it into player-colored micro-flows.
   - uses real `player_flows` data when present in processed JSON.
@@ -293,8 +311,8 @@ docker compose run --rm ops compute_elo --auto \
 - Pipeline: `build_from_euroleague_api.py`, `pipeline_runner.py`
 - Validation: `validate_output.py`
 - Batch sync + manifest: `season_sync.py`
-- Main viewer: `poss-flow-map-multi-drilldown-real-data.html`
-- Landing/game switchers: `index.html`, `poss-flow-index.html`
+- Main viewer: `prod/game-flow-viewer.html`
+- Landing/game switchers: `index.html`, `lab/game-flow-switcher.html`, `prod/game-explorer.html`
 - Team notes/spike context: `efforts/`, `epics_catalog.md`, `.github/copilot-instructions.md`
 
 ## 9) Product Surface Separation (Prod vs Labs)
@@ -321,6 +339,13 @@ Release gate:
   - post-release refinement backlog
 
 See `docs/dev_guide.md` for day-to-day workflow details.
+
+### Games Manifest
+
+Canonical source: `data/games_manifest.json` (copied to `public/assets/processed/` and `dist/` by build scripts).
+To rebuild for all seasons: `python entrypoint.py rebuild_manifest --all-seasons --output-dir assets/processed`.
+Single-season rebuild (backwards compatible): `python entrypoint.py rebuild_manifest --seasoncode E2025`.
+Note: the manifest currently only contains E2025 — run the all-seasons rebuild after any multi-season sync.
 
 ## 10) Surface Builds (Prod vs Preview)
 

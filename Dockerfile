@@ -11,7 +11,7 @@ ENV PYTHONPATH=/app/src
 RUN pip install --no-cache-dir requests attrs pyyaml
 
 # Copy pipeline and helper scripts once into the base image.
-COPY build_from_euroleague_api.py pipeline_runner.py validate_output.py entrypoint.py season_sync.py season_ops.py regression_tests.py elo.py ./
+COPY build_from_euroleague_api.py pipeline_runner.py validate_output.py entrypoint.py season_sync.py season_ops.py regression_tests.py elo.py build_score_timeline.py style_insights.py ./
 
 # Shared library code (single source of truth for Elo computations).
 COPY src ./src

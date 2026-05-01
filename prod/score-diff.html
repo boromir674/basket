@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Score Diff — Euroleague</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <style>
+    :root {
+      --bg: #081425;
+      --panel: #0d1e38;
+      --border: #1e3a5f;
+      --text: #edf3ff;
+      --muted: #7a9cc4;
+      --accent: #3a86ff;
+      --home: #3a86ff;
+      --away: #ff5a7a;
+      --ft: #a78bfa;
+      --two: #34d399;
+      --three: #fbbf24;
+      --diff-line: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(180deg, #0e203b, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Layout ── */
+    .page { max-width: 960px; margin: 0 auto; padding: 16px; }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    header h1 { font-size: 18px; font-weight: 700; flex: 1; min-width: 160px; }
+    .back-btn {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    .back-btn:hover { color: var(--text); border-color: var(--accent); }
+
+    /* ── Controls ── */
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    @media (min-width: 640px) {
+      .controls { grid-template-columns: auto auto 1fr auto; align-items: end; }
+    }
+
+    .ctrl-group { display: flex; flex-direction: column; gap: 4px; }
+    .ctrl-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+
+    select {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9cc4' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 28px;
+    }
+    select:focus { outline: none; border-color: var(--accent); }
+
+    /* Mode pills */
+    .mode-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .pill {
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .pill.active { border-color: var(--accent); background: #1a3a6e; color: var(--text); }
+    .pill:hover:not(.active) { border-color: #3a5080; color: var(--text); }
+
+    /* ── Game info bar ── */
+    .game-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 44px;
+    }
+    .game-info .teams { font-size: 15px; font-weight: 600; }
+    .game-info .score { font-size: 20px; font-weight: 700; letter-spacing: .04em; }
+    .game-info .date  { font-size: 12px; color: var(--muted); }
+    .team-home { color: var(--home); }
+    .team-away { color: var(--away); }
+    .info-placeholder { color: var(--muted); font-size: 13px; }
+
+    /* ── Chart card ── */
+    .chart-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      position: relative;
+    }
+
+    #chart-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Legend ── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 14px;
+      padding: 0 4px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .legend-swatch {
+      width: 14px; height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .legend-sep {
+      width: 100%;
+      height: 0;
+      border-top: 1px solid var(--border);
+      margin: 2px 0;
+    }
+
+    /* ── Status / error ── */
+    .status {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .status.error { color: #ff5a7a; }
+
+    /* ── Tooltip ── */
+    .tooltip {
+      position: fixed;
+      background: #0f2040;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .1s;
+      max-width: 200px;
+      z-index: 999;
+    }
+    .tooltip.visible { opacity: 1; }
+    .tooltip .tt-title { font-weight: 600; margin-bottom: 4px; }
+    .tooltip .tt-row { color: var(--muted); margin-top: 2px; }
+    .tooltip .tt-row span { color: var(--text); }
+
+    /* ── Quarter markers ── */
+    .q-label { font-size: 10px; fill: var(--muted); }
+    .q-line  { stroke: var(--border); stroke-dasharray: 3 3; }
+
+    /* ── Diff line ── */
+    .diff-path { fill: none; stroke: var(--diff-line); stroke-width: 2; }
+    .zero-line { stroke: var(--border); stroke-width: 1; }
+
+    /* ── Loading pulse ── */
+    @keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+    .loading { animation: pulse 1.2s infinite; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Score Differential</h1>
+    <a class="back-btn" href="./index.html">← Back</a>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Season</span>
+      <select id="sel-season">
+        <option value="E2025">E2025</option>
+        <option value="E2024">E2024</option>
+        <option value="E2023">E2023</option>
+        <option value="E2022">E2022</option>
+        <option value="E2021">E2021</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Game #</span>
+      <select id="sel-game"></select>
+    </div>
+    <div></div><!-- spacer on wide screens -->
+    <div class="ctrl-group">
+      <span class="ctrl-label">Stack mode</span>
+      <div class="mode-pills">
+        <button class="pill active" data-mode="points">By Points</button>
+        <button class="pill" data-mode="makes">By Makes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-info" id="game-info">
+    <span class="info-placeholder">Select a game above</span>
+  </div>
+
+  <div class="chart-card">
+    <div id="chart-area">
+      <div class="status">Choose a season and game to load.</div>
+    </div>
+    <div class="legend" id="legend" style="display:none">
+      <div class="legend-item">
+        <div class="legend-swatch" style="background:var(--diff-line)"></div>
+        Score diff line
+      </div>
+      <div class="legend-sep" style="width:100%"></div>
+      <div style="font-size:11px;color:var(--muted);width:100%;" id="legend-home-label">▲ Home — cumulative points above zero</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--three)"></div>3PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--two)"></div>2PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--ft)"></div>FT</div>
+      <div class="legend-sep" style="width:100%"></div>
+      <div style="font-size:11px;color:var(--muted);width:100%;" id="legend-away-label">▼ Away — cumulative points below zero</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--three);opacity:.6"></div>3PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--two);opacity:.6"></div>2PT</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--ft);opacity:.6"></div>FT</div>
+    </div>
+  </div>
+
+</div>
+      <div class="legend-sep" style="width:100%"></div>
+      <div style="font-size:11px;color:var(--muted);width:100%;line-height:1.6">
+        Taller upper band = more home points scored. Taller lower band = more away points.<br>
+        Margin line <strong style="color:#fff">below zero</strong> = home leading &nbsp;|&nbsp; <strong style="color:#fff">above zero</strong> = away leading.<br>
+        ● White dot = lead change.
+      </div>
+
+<div class="tooltip" id="tooltip">
+  <div class="tt-title" id="tt-title"></div>
+  <div class="tt-row" id="tt-score"></div>
+  <div class="tt-row" id="tt-diff"></div>
+  <div class="tt-row" id="tt-mode"></div>
+</div>
+
+<script>
+(function () {
+  // ── Constants ──────────────────────────────────────────────────────────────
+  const SEASONS = ['E2025','E2024','E2023','E2022','E2021'];
+  const GAME_COUNTS = { E2025: 380, E2024: 330, E2023: 333, E2022: 330, E2021: 192 };
+  // Approximate quarter boundaries in minutes (Euroleague: 4×10min + OT)
+  const QUARTER_MINS = [0, 10, 20, 30, 40];
+
+  const COLORS = {
+    home: { three: '#fbbf24', two: '#34d399', ft: '#a78bfa' },
+    away: { three: '#f59e0b', two: '#10b981', ft: '#8b5cf6' },
+  };
+
+  // ── State ──────────────────────────────────────────────────────────────────
+  let currentMode = 'points'; // 'points' | 'makes'
+  let currentData = null;     // processed timeline array
+
+  // ── DOM refs ───────────────────────────────────────────────────────────────
+  const selSeason  = document.getElementById('sel-season');
+  const selGame    = document.getElementById('sel-game');
+  const chartArea  = document.getElementById('chart-area');
+  const gameInfo   = document.getElementById('game-info');
+  const legendEl   = document.getElementById('legend');
+  const tooltip    = document.getElementById('tooltip');
+  const ttTitle    = document.getElementById('tt-title');
+  const ttScore    = document.getElementById('tt-score');
+  const ttDiff     = document.getElementById('tt-diff');
+  const ttMode     = document.getElementById('tt-mode');
+
+  // ── Init game selector ────────────────────────────────────────────────────
+  function populateGameSelect(season) {
+    const count = GAME_COUNTS[season] || 200;
+    selGame.innerHTML = '';
+    for (let i = 1; i <= count; i++) {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = `Game ${i}`;
+      selGame.appendChild(opt);
+    }
+  }
+
+  // ── URL params support ────────────────────────────────────────────────────
+  const qs = new URLSearchParams(window.location.search);
+  const initSeason = qs.get('season') || 'E2025';
+  const initGame   = parseInt(qs.get('game') || '1', 10);
+  const initMode   = qs.get('mode') || 'points';
+
+  if (SEASONS.includes(initSeason)) selSeason.value = initSeason;
+  populateGameSelect(selSeason.value);
+  selGame.value = initGame;
+  if (initMode === 'makes') {
+    currentMode = 'makes';
+    document.querySelectorAll('.pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.mode === 'makes');
+    });
+  }
+
+  // ── Event listeners ────────────────────────────────────────────────────────
+  selSeason.addEventListener('change', () => {
+    populateGameSelect(selSeason.value);
+    loadGame();
+  });
+  selGame.addEventListener('change', loadGame);
+
+  document.querySelectorAll('.pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentMode = btn.dataset.mode;
+      document.querySelectorAll('.pill').forEach(p =>
+        p.classList.toggle('active', p.dataset.mode === currentMode));
+      if (currentData) renderChart(currentData);
+    });
+  });
+
+  // ── Data loading ───────────────────────────────────────────────────────────
+  async function loadGame() {
+    const season = selSeason.value;
+    const game   = selGame.value;
+    const url    = `../assets/raw_pts_${season}_${game}.json`;
+
+    chartArea.innerHTML = '<div class="status loading">Loading…</div>';
+    legendEl.style.display = 'none';
+    gameInfo.innerHTML = '<span class="info-placeholder">Loading…</span>';
+
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      currentData = processRows(json.Rows || []);
+      renderGameInfo(currentData, season, game);
+      renderChart(currentData);
+      legendEl.style.display = 'flex';
+          // Update the selected option label to show team names
+          const opt = selGame.options[selGame.selectedIndex];
+          if (opt && currentData.homeTeam && currentData.awayTeam) {
+            opt.textContent = `${currentData.homeTeam} vs ${currentData.awayTeam} (G${game})`;
+          }
+          // Update legend side labels
+          const lh = document.getElementById('legend-home-label');
+          const la = document.getElementById('legend-away-label');
+          if (lh && currentData.homeTeam) lh.textContent = `▲ ${currentData.homeTeam} (home) — cumulative points above zero`;
+          if (la && currentData.awayTeam) la.textContent = `▼ ${currentData.awayTeam} (away) — cumulative points below zero`;
+    } catch (e) {
+      chartArea.innerHTML = `<div class="status error">Could not load game ${game} for ${season}. Try another game.</div>`;
+      gameInfo.innerHTML = '<span class="info-placeholder">No data</span>';
+    }
+  }
+
+  // ── Data processing ────────────────────────────────────────────────────────
+  function classifyAction(id_action) {
+    if (!id_action) return null;
+    const a = id_action.trim().toUpperCase();
+    if (a === 'FTM')  return 'ft';
+    if (a === '2FGM') return 'two';
+    if (a === '3FGM') return 'three';
+    return null;
+  }
+
+  function processRows(rows) {
+    // Identify home team (increments POINTS_A) vs away (increments POINTS_B) via deltas
+    let homeTeam = null, awayTeam = null;
+    let prevA = 0, prevB = 0;
+    for (const r of rows) {
+      if (!classifyAction(r.ID_ACTION)) continue;
+      const pa = r.POINTS_A || 0, pb = r.POINTS_B || 0;
+      const team = (r.TEAM || '').trim();
+      if (pa > prevA && homeTeam === null) homeTeam = team;
+      if (pb > prevB && awayTeam === null) awayTeam = team;
+      prevA = pa; prevB = pb;
+      if (homeTeam && awayTeam) break;
+    }
+
+    // Running accumulators per team per type
+    const acc = {
+      home: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0 },
+      away: { ft: 0, two: 0, three: 0, total: 0, ftM: 0, twoM: 0, threeM: 0 },
+    };
+
+    const timeline = [];
+
+    for (const r of rows) {
+      const type = classifyAction(r.ID_ACTION);
+      if (!type) continue;
+
+      const teamKey = (r.TEAM || '').trim() === homeTeam ? 'home' : 'away';
+      const pts = r.POINTS || 0;
+
+      acc[teamKey][type] += pts;
+      acc[teamKey].total += pts;
+      acc[teamKey][type + 'M'] += 1;
+
+      const ptsA = r.POINTS_A || 0;
+      const ptsB = r.POINTS_B || 0;
+
+      // Parse CONSOLE (mm:ss) to fractional minutes for smoother x-axis
+      const cons = r.CONSOLE || '';
+      const parts = cons.split(':');
+      let tMin = r.MINUTE || 0;
+      if (parts.length === 2) {
+        const mm = parseInt(parts[0], 10);
+        const ss = parseInt(parts[1], 10);
+        // CONSOLE counts DOWN within the quarter; MINUTE counts up overall
+        // Use MINUTE as base + interpolate seconds within that minute
+        tMin = (r.MINUTE || 0) + (ss > 0 ? (60 - ss) / 60 : 0);
+      }
+
+      timeline.push({
+        minute: tMin,
+        console: cons,
+        team: teamKey,
+        teamName: (r.TEAM || '').trim(),
+        type,
+        pts,
+        ptsA,
+        ptsB,
+        diff: ptsB - ptsA,
+        home: { ...acc.home },
+        away: { ...acc.away },
+      });
+    }
+
+    // Add a t=0 sentinel
+    timeline.unshift({
+      minute: 0, console: '', team: null, type: null, pts: 0,
+      ptsA: 0, ptsB: 0, diff: 0,
+      home: { ft:0, two:0, three:0, total:0, ftM:0, twoM:0, threeM:0 },
+      away: { ft:0, two:0, three:0, total:0, ftM:0, twoM:0, threeM:0 },
+    });
+
+    return { points: timeline, homeTeam, awayTeam };
+  }
+
+  // ── Game info bar ──────────────────────────────────────────────────────────
+  function renderGameInfo(data, season, game) {
+    if (!data || !data.points.length) return;
+    const last = data.points[data.points.length - 1];
+    const homeShort = data.homeTeam || 'Home';
+    const awayShort = data.awayTeam || 'Away';
+    gameInfo.innerHTML = `
+      <div class="teams">
+        <span class="team-home">${homeShort}</span>
+        <span style="color:var(--muted);margin:0 6px">vs</span>
+        <span class="team-away">${awayShort}</span>
+      </div>
+      <div class="score">
+        <span class="team-home">${last.ptsA}</span>
+        <span style="color:var(--muted);margin:0 4px">–</span>
+        <span class="team-away">${last.ptsB}</span>
+      </div>
+      <div class="date">${season} / Game ${game}</div>
+    `;
+  }
+
+  // ── Chart rendering ────────────────────────────────────────────────────────
+  function renderChart(data) {
+    chartArea.innerHTML = '';
+    if (!data || !data.points.length) return;
+
+    const pts = data.points;
+    const W = 800, H = 400;
+    const margin = { top: 24, right: 20, bottom: 30, left: 44 };
+    const iW = W - margin.left - margin.right;
+    const iH = H - margin.top - margin.bottom;
+
+    const maxMinute = d3.max(pts, d => d.minute) || 40;
+    // Symmetric y-axis: upper half = home cumulative score, lower = away cumulative
+    const last = pts[pts.length - 1];
+    const maxScore = Math.max(last.ptsA, last.ptsB, 10);
+    const yPad = Math.max(6, maxScore * 0.1);
+
+    const x = d3.scaleLinear().domain([0, maxMinute]).range([0, iW]);
+    const y = d3.scaleLinear().domain([-(maxScore + yPad), (maxScore + yPad)]).range([iH, 0]);
+    const y0 = y(0); // pixel position of zero line
+
+    const svg = d3.create('svg')
+      .attr('id', 'chart-svg')
+      .attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // ── Quarter lines ──────────────────────────────────────────────────────
+    QUARTER_MINS.forEach((qm, i) => {
+      if (qm === 0 || qm > maxMinute) return;
+      g.append('line')
+        .attr('class', 'q-line')
+        .attr('x1', x(qm)).attr('x2', x(qm))
+        .attr('y1', 0).attr('y2', iH);
+      g.append('text')
+        .attr('class', 'q-label')
+        .attr('x', x(qm) + 3).attr('y', 12)
+        .text(`Q${i + 1}`);
+    });
+
+    // ── Zero line ─────────────────────────────────────────────────────────
+    // Zero baseline
+    g.append('line')
+      .attr('class', 'zero-line')
+      .attr('x1', 0).attr('x2', iW)
+      .attr('y1', y0).attr('y2', y0);
+
+    // ── Symmetric stacked area design ────────────────────────────────────
+    // Upper half (above 0): home cumulative score by type, stacked up from 0
+    // Lower half (below 0): away cumulative score by type, stacked down from 0
+    // Diff line: actual ptsA - ptsB (wanders between the two bands)
+    //
+    // This ensures: bigger surface = more points scored. When away leads,
+    // lower band is taller. Diff line dipping below 0 means away is ahead.
+
+    const types = ['ft', 'two', 'three'];
+
+    function getValues(teamAcc, mode) {
+      if (mode === 'makes') {
+        return { ft: teamAcc.ftM, two: teamAcc.twoM, three: teamAcc.threeM };
+      }
+      return { ft: teamAcc.ft, two: teamAcc.two, three: teamAcc.three };
+    }
+
+    // For "makes" mode we need to scale so that the stacked height still
+    // matches the score scale (otherwise bands and diff line live on different scales).
+    // Solution: for makes mode, keep y-axis in score units but scale makes
+    // proportionally so full stack = actual total score.
+    function getScaledValues(teamAcc, mode, totalScore) {
+      if (mode === 'points') {
+        return { ft: teamAcc.ft, two: teamAcc.two, three: teamAcc.three };
+      }
+      // makes mode: proportion of makes, scaled to actual score height
+      const { ft, two, three } = getValues(teamAcc, mode);
+      const totalMakes = ft + two + three;
+      if (!totalMakes || !totalScore) return { ft: 0, two: 0, three: 0 };
+      const scale = totalScore / totalMakes;
+      return { ft: ft * scale, two: two * scale, three: three * scale };
+    }
+
+    // Build layer paths for one side
+    function buildLayers(side, mode) {
+      return types.map((type, li) => {
+        const points = pts.map(d => {
+          const totalScore = side === 'home' ? d.ptsA : d.ptsB;
+          const vals = getScaledValues(d[side], mode, totalScore);
+          // cumulative base = sum of previous layers
+          const base = types.slice(0, li).reduce((s, t) => s + (vals[t] || 0), 0);
+          const top  = base + (vals[type] || 0);
+          if (side === 'home') {
+            // stack upward (positive y data)
+            return { xv: x(d.minute), y0v: y(base), y1v: y(top) };
+          } else {
+            // stack downward (negative y data)
+            return { xv: x(d.minute), y0v: y(-base), y1v: y(-top) };
+          }
+        });
+        return { type, side, points };
+      });
+    }
+
+    const areaGen = d3.area()
+      .x(d => d.xv)
+      .y0(d => d.y0v)
+      .y1(d => d.y1v)
+      .curve(d3.curveCatmullRom.alpha(0.5));
+
+    const typeOpacity = { home: 0.78, away: 0.60 };
+
+    [...buildLayers('home', currentMode), ...buildLayers('away', currentMode)].forEach(layer => {
+      g.append('path')
+        .datum(layer.points)
+        .attr('d', areaGen)
+        .attr('fill', COLORS[layer.side][layer.type])
+        .attr('opacity', typeOpacity[layer.side]);
+    });
+
+    // ── Diff line ─────────────────────────────────────────────────────────
+    // Renders the running score margin. Stays between the two bands when
+    // both teams are close. Crossing zero = lead change.
+    const lineGen = d3.line()
+      .x(d => x(d.minute))
+      .y(d => y(d.diff))
+      .curve(d3.curveCatmullRom.alpha(0.5));
+
+    g.append('path')
+      .datum(pts)
+      .attr('class', 'diff-path')
+      .attr('d', lineGen);
+
+    // Lead-change zero-crossing annotation dots
+    for (let i = 1; i < pts.length; i++) {
+      if ((pts[i-1].diff < 0 && pts[i].diff > 0) || (pts[i-1].diff > 0 && pts[i].diff < 0)) {
+        const t = pts[i-1].diff / (pts[i-1].diff - pts[i].diff);
+        const xc = x(pts[i-1].minute + t * (pts[i].minute - pts[i-1].minute));
+        g.append('circle').attr('cx', xc).attr('cy', y0)
+          .attr('r', 4).attr('fill', '#ffffff').attr('opacity', 0.7);
+      }
+    }
+
+    // ── Axes ──────────────────────────────────────────────────────────────
+    g.append('g')
+      .attr('transform', `translate(0,${iH})`)
+      .call(d3.axisBottom(x).ticks(Math.min(maxMinute, 8)).tickFormat(d => `${d}'`))
+      .call(ax => ax.select('.domain').attr('stroke', '#1e3a5f'))
+      .call(ax => ax.selectAll('text').attr('fill', '#7a9cc4').attr('font-size', 11))
+      .call(ax => ax.selectAll('line').attr('stroke', '#1e3a5f'));
+
+    g.append('g')
+      .call(d3.axisLeft(y).ticks(6))
+      .call(ax => ax.select('.domain').attr('stroke', '#1e3a5f'))
+      .call(ax => ax.selectAll('text').attr('fill', '#7a9cc4').attr('font-size', 11))
+      .call(ax => ax.selectAll('line').attr('stroke', '#1e3a5f'));
+
+    // ── Hover interaction ─────────────────────────────────────────────────
+    const bisect = d3.bisector(d => d.minute).left;
+
+    const hoverLine = g.append('line')
+      .attr('stroke', '#ffffff44')
+      .attr('stroke-width', 1)
+      .attr('y1', 0).attr('y2', iH)
+      .style('display', 'none');
+
+    const hoverDot = g.append('circle')
+      .attr('r', 4)
+      .attr('fill', 'white')
+      .attr('stroke', '#081425')
+      .attr('stroke-width', 2)
+      .style('display', 'none');
+
+    g.append('rect')
+      .attr('width', iW).attr('height', iH)
+      .attr('fill', 'transparent')
+      .on('mousemove', function(event) {
+        const [mx] = d3.pointer(event, this);
+        const minute = x.invert(mx);
+        const idx = Math.min(bisect(pts, minute), pts.length - 1);
+        const d = pts[idx];
+        if (!d) return;
+
+        hoverLine.attr('x1', x(d.minute)).attr('x2', x(d.minute)).style('display', null);
+        hoverDot.attr('cx', x(d.minute)).attr('cy', y(d.diff)).style('display', null);
+
+        const homeTotal = d.home.ft + d.home.two + d.home.three || 1;
+        const awayTotal = d.away.ft + d.away.two + d.away.three || 1;
+        const hFt3 = `FT ${(d.home.ft/homeTotal*100).toFixed(0)}% · 2PT ${(d.home.two/homeTotal*100).toFixed(0)}% · 3PT ${(d.home.three/homeTotal*100).toFixed(0)}%`;
+        const aFt3 = `FT ${(d.away.ft/awayTotal*100).toFixed(0)}% · 2PT ${(d.away.two/awayTotal*100).toFixed(0)}% · 3PT ${(d.away.three/awayTotal*100).toFixed(0)}%`;
+        const minLabel = d.console ? `${d.console}` : `${Math.floor(d.minute)}'`;
+
+        ttTitle.textContent = `Q${Math.min(4, Math.floor(d.minute / 10) + 1)} · ${minLabel}`;
+        ttScore.innerHTML = `Score: <span>${d.ptsA} – ${d.ptsB}</span>`;
+        ttDiff.innerHTML  = `Diff: <span>${d.diff > 0 ? '+' : ''}${d.diff}</span>`;
+        ttMode.innerHTML  = `↑ ${hFt3}<br>↓ ${aFt3}`;
+
+        const rect = document.getElementById('chart-svg').getBoundingClientRect();
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY - 40) + 'px';
+        tooltip.classList.add('visible');
+      })
+      .on('mouseleave', function() {
+        hoverLine.style('display', 'none');
+        hoverDot.style('display', 'none');
+        tooltip.classList.remove('visible');
+      });
+
+    chartArea.appendChild(svg.node());
+  }
+
+  // ── Initial load ───────────────────────────────────────────────────────────
+  loadGame();
+
+})();
+</script>
+</body>
+</html>

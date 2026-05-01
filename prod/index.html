@@ -59,8 +59,10 @@
       cursor:pointer;
     }
     button.active { border-color:#62b6ff; background:#25508a; }
+    .toggle-row { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin:0 0 8px; }
+    .toggle-row input { accent-color: var(--anchor); }
     .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
-    select {
+    select, input[type="search"] {
       width:100%;
       border:1px solid #355783;
       border-radius:10px;
@@ -133,18 +135,71 @@
     /* Hide legacy/spike home which is no longer relevant for the MVP */
     a.btn[href="../index.html"] { display:none !important; }
     iframe.loading { opacity:.15; }
+
+    /* On narrow viewports, keep Sankey first-class: viewer on top and taller. */
+    @media (max-width: 1060px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .layout > .card:first-child {
+        order: 2;
+      }
+      .layout > .card:last-child {
+        order: 1;
+      }
+      .wrap {
+        padding: 10px;
+      }
+      .viewer-head {
+        margin-bottom: 6px;
+      }
+      iframe {
+        min-width: 0;
+        height: 84vh;
+        min-height: 560px;
+      }
+      .games {
+        max-height: 44vh;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top {
+        margin-bottom: 8px;
+      }
+      .title {
+        font-size: 18px;
+      }
+      .btn {
+        font-size: 11px;
+        padding: 6px 9px;
+      }
+      .viewer-head {
+        min-height: 52px;
+        padding: 7px 8px;
+      }
+      iframe {
+        height: 86vh;
+        min-height: 520px;
+      }
+      .games {
+        max-height: 40vh;
+      }
+    }
   </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="title">MVP Unified Explorer</div>
-      <div class="muted">One screen for Core, Flow Explode, Live Replay, and Team Anchor Compare.</div>
+      <div class="title">Game Discovery + Flow Analysis</div>
+      <div class="muted">Search games, filter quickly, then inspect Sankey flow modes with optional anchor perspective.</div>
     </div>
     <div style="display:flex; gap:8px;">
       <a class="btn" href="./index.html">MVP Home</a>
       <a class="btn" href="./elo.html?seasoncodes=E2022,E2023,E2024">Elo Showcase</a>
+      <a class="btn" href="./style-insights.html">Style Insights</a>
+      <a class="btn" href="./lab/style-consistency-lab.html">Style Lab</a>
       <a class="btn" href="../index.html">Spike Home</a>
     </div>
   </div>
@@ -156,6 +211,10 @@
         <button class="mode-btn active" data-mode="core">Core</button>
         <button class="mode-btn" data-mode="replay">Live Replay</button>
       </div>
+      <label class="toggle-row">
+        <input id="show-type-nodes" type="checkbox" />
+        <span>Show possession type nodes</span>
+      </label>
 
       <div class="row split" style="margin-top:6px;">
         <div class="label" style="margin:0;">Game Scope</div>
@@ -171,6 +230,14 @@
         <div class="muted">Anchor color remains fixed across game switches.</div>
       </div>
 
+      <div class="label" style="margin:10px 0 4px;">Game Search</div>
+      <div class="row" style="margin-bottom:6px;">
+        <select id="seasonFilter" style="margin-bottom:0;"><option value="all">All seasons</option></select>
+        <select id="teamFilter" style="margin-bottom:0;"><option value="all">All teams</option></select>
+      </div>
+      <input id="searchFilter" type="search" placeholder="Search by team, season, game code, or date" />
+      <div class="muted" id="resultCount" style="margin-bottom:6px;">Filtering games...</div>
+
       <div class="games" id="games" style="margin-top:10px;">Loading games...</div>
     </div>
 
@@ -181,9 +248,10 @@
           <span class="team-chip opp" id="chipOpp">Opponent: --</span>
         </div>
         <div class="vh-game" id="gameMeta">Select a game.</div>
+        <div class="vh-game" id="gameHomeAway">Original matchup: Home -- · Away --</div>
       </div>
       <div class="iframe-wrap">
-        <iframe id="viewer" src="./poss-flow-map-multi-drilldown-real-data.html" title="Sankey Viewer"></iframe>
+        <iframe id="viewer" src="./game-flow-viewer.html" title="Sankey Viewer"></iframe>
       </div>
     </div>
   </div>
@@ -195,13 +263,19 @@
   const gamesEl = document.getElementById("games");
   const viewer = document.getElementById("viewer");
   const modeBtns = Array.from(document.querySelectorAll(".mode-btn"));
+  const showTypeNodesEl = document.getElementById("show-type-nodes");
   const scopeAllBtn = document.getElementById("scope-all");
   const scopeAnchorBtn = document.getElementById("scope-anchor");
   const anchorBlock = document.getElementById("anchorBlock");
   const teamSelect = document.getElementById("teamSelect");
+  const seasonFilterEl = document.getElementById("seasonFilter");
+  const teamFilterEl = document.getElementById("teamFilter");
+  const searchFilterEl = document.getElementById("searchFilter");
+  const resultCountEl = document.getElementById("resultCount");
   const chipAnchor = document.getElementById("chipAnchor");
   const chipOpp = document.getElementById("chipOpp");
   const gameMeta = document.getElementById("gameMeta");
+  const gameHomeAway = document.getElementById("gameHomeAway");
 
   const ANCHOR_COLOR = "#3a86ff";
   const OPP_COLOR = "#ff5a7a";
@@ -213,13 +287,17 @@
   let selectedGame = null;
   let viewerReady = false;
   let pendingLoad = false;
+  let selectedSeasonFilter = "all";
+  let selectedTeamFilter = "all";
+  let searchFilterText = "";
 
   const normalizedCache = new Map();
 
   function modeParams(mode){
+    const showTypeNodes = !!(showTypeNodesEl && showTypeNodesEl.checked);
     // explode interactions are always available by default; do not require an explicit mode.
-    if(mode === "replay") return "typeZoomVariant=4&replayLab=1";
-    return "typeZoomVariant=4";
+    if(mode === "replay") return `typeZoomVariant=4&replayLab=1&skipTypeStage=${showTypeNodes ? "0" : "1"}`;
+    return `typeZoomVariant=4&skipTypeStage=${showTypeNodes ? "0" : "1"}`;
   }
 
   function setMode(mode){
@@ -237,6 +315,51 @@
   }
 
   function teamInGame(g, t){ return g.team_a === t || g.team_b === t; }
+
+  function gameHomeTeam(g){
+    return (g && (g.home_team || g.team_home || g.team_a)) || "?";
+  }
+
+  function gameAwayTeam(g){
+    return (g && (g.away_team || g.team_away || g.team_b)) || "?";
+  }
+
+  function matchesSearch(g, query){
+    if(!query) return true;
+    const hay = [
+      g.seasoncode,
+      g.gamecode,
+      g.gamedate,
+      g.team_a,
+      g.team_b,
+      gameHomeTeam(g),
+      gameAwayTeam(g),
+    ].map(v => String(v || "").toLowerCase()).join(" ");
+    return hay.includes(query);
+  }
+
+  function getFilteredRows(){
+    const query = searchFilterText.trim().toLowerCase();
+    return entries.filter((g) => {
+      if(selectedSeasonFilter !== "all" && String(g.seasoncode || "") !== selectedSeasonFilter) return false;
+      if(selectedTeamFilter !== "all" && !teamInGame(g, selectedTeamFilter)) return false;
+      if(anchorMode && selectedTeam && !teamInGame(g, selectedTeam)) return false;
+      if(!matchesSearch(g, query)) return false;
+      return true;
+    });
+  }
+
+  function renderFilterOptions(){
+    if(!seasonFilterEl || !teamFilterEl) return;
+    const seasons = Array.from(new Set(entries.map(g => String(g.seasoncode || "")).filter(Boolean))).sort();
+    const teams = Array.from(new Set(entries.flatMap((g) => [g.team_a, g.team_b]).filter(Boolean))).sort();
+    seasonFilterEl.innerHTML = `<option value="all">All seasons</option>${seasons.map(s => `<option value="${s}">${s}</option>`).join("")}`;
+    teamFilterEl.innerHTML = `<option value="all">All teams</option>${teams.map(t => `<option value="${t}">${t}</option>`).join("")}`;
+    seasonFilterEl.value = seasons.includes(selectedSeasonFilter) ? selectedSeasonFilter : "all";
+    teamFilterEl.value = teams.includes(selectedTeamFilter) ? selectedTeamFilter : "all";
+    selectedSeasonFilter = seasonFilterEl.value;
+    selectedTeamFilter = teamFilterEl.value;
+  }
 
   function escapeRegExp(str){
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -301,7 +424,7 @@
   }
 
   async function resolveGameFile(g){
-    const rawPath = `assets/processed/${g.file}`;
+    const rawPath = `../assets/processed/${g.file}`;
     if(!anchorMode || !selectedTeam) return rawPath;
 
     const key = `${rawPath}|${selectedTeam}`;
@@ -320,15 +443,22 @@
     chipAnchor.classList.add("fade-step");
     chipOpp.classList.add("fade-step");
     gameMeta.classList.add("fade-step");
+    if(gameHomeAway) gameHomeAway.classList.add("fade-step");
     window.setTimeout(() => {
       chipAnchor.textContent = `Anchor: ${anchorTeam || "--"}`;
       chipOpp.textContent = `Opponent: ${oppTeam || "--"}`;
       const title = game ? `${game.seasoncode || "?"} / ${game.gamecode || "?"}` : "--";
       const date = game ? (game.gamedate || "date unknown") : "--";
       gameMeta.textContent = `${title} · ${date}`;
+      if(gameHomeAway){
+        const home = game ? gameHomeTeam(game) : "--";
+        const away = game ? gameAwayTeam(game) : "--";
+        gameHomeAway.textContent = `Original matchup: Home ${home} · Away ${away}`;
+      }
       chipAnchor.classList.remove("fade-step");
       chipOpp.classList.remove("fade-step");
       gameMeta.classList.remove("fade-step");
+      if(gameHomeAway) gameHomeAway.classList.remove("fade-step");
     }, 120);
   }
 
@@ -369,11 +499,11 @@
         viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params }, '*');
       } else {
         // Fallback: set src (keeps older behavior)
-        viewer.src = `./poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+        viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
       }
     }catch(e){
       // On any failure, fallback to setting src
-      viewer.src = `./poss-flow-map-multi-drilldown-real-data.html?file=${encodeURIComponent(file)}&${params}`;
+      viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
     }
   }
 
@@ -398,25 +528,31 @@
   });
 
   function renderGames(){
-    const rows = anchorMode && selectedTeam
-      ? entries.filter((g) => teamInGame(g, selectedTeam))
-      : entries.slice();
+    const rows = getFilteredRows();
 
     gamesEl.innerHTML = "";
     if(!rows.length){
       gamesEl.textContent = "No games available for current filter.";
       selectedGame = null;
+      if(resultCountEl) resultCountEl.textContent = "0 games";
       return;
     }
 
-    rows.forEach((g, idx) => {
+    if(resultCountEl) resultCountEl.textContent = `${rows.length} game${rows.length === 1 ? "" : "s"}`;
+
+    const hasSelected = !!(selectedGame && rows.some((g) => g.file === selectedGame.file));
+    if(!hasSelected) selectedGame = rows[0];
+
+    rows.forEach((g) => {
       const row = document.createElement("div");
       row.className = "game-row";
       const anchor = anchorMode && selectedTeam ? selectedTeam : (g.team_a || "?");
       const opp = anchor === g.team_a ? (g.team_b || "?") : (anchor === g.team_b ? (g.team_a || "?") : (g.team_b || "?"));
       const eloA = g.elo_a != null ? `<span class="elo-badge">★${Math.round(g.elo_a)}</span>` : "";
       const eloB = g.elo_b != null ? `<span class="elo-badge">★${Math.round(g.elo_b)}</span>` : "";
-      row.innerHTML = `<div class="g-title">${g.seasoncode || "?"} / ${g.gamecode || "?"}</div><div class="g-meta">${g.team_a || "?"}${eloA} vs ${g.team_b || "?"}${eloB}</div><div class="g-meta">${g.gamedate || "date unknown"}</div><div class="pill">Anchor ${anchor} · Opp ${opp}</div>`;
+      const home = gameHomeTeam(g);
+      const away = gameAwayTeam(g);
+      row.innerHTML = `<div class="g-title">${g.seasoncode || "?"} / ${g.gamecode || "?"}</div><div class="g-meta">${g.team_a || "?"}${eloA} vs ${g.team_b || "?"}${eloB}</div><div class="g-meta">${g.gamedate || "date unknown"} · Home ${home} · Away ${away}</div><div class="pill">Anchor ${anchor} · Opp ${opp}</div>`;
       row.addEventListener("click", async () => {
         selectedGame = g;
         document.querySelectorAll(".game-row").forEach((el) => el.classList.remove("active"));
@@ -424,11 +560,7 @@
         await loadSelectedGame();
       });
       gamesEl.appendChild(row);
-
-      if(idx === 0){
-        selectedGame = g;
-        row.classList.add("active");
-      }
+      if(selectedGame && g.file === selectedGame.file) row.classList.add("active");
     });
 
     loadSelectedGame();
@@ -448,8 +580,31 @@
     selectedTeam = teamSelect.value;
     renderGames();
   });
+  if(seasonFilterEl){
+    seasonFilterEl.addEventListener("change", () => {
+      selectedSeasonFilter = seasonFilterEl.value || "all";
+      renderGames();
+    });
+  }
+  if(teamFilterEl){
+    teamFilterEl.addEventListener("change", () => {
+      selectedTeamFilter = teamFilterEl.value || "all";
+      renderGames();
+    });
+  }
+  if(searchFilterEl){
+    searchFilterEl.addEventListener("input", () => {
+      searchFilterText = String(searchFilterEl.value || "");
+      renderGames();
+    });
+  }
+  if(showTypeNodesEl){
+    showTypeNodesEl.addEventListener("change", () => {
+      if(selectedGame) loadSelectedGame();
+    });
+  }
 
-  fetch("assets/processed/games_manifest.json")
+  fetch("../assets/processed/games_manifest.json")
     .then((r) => r.json())
     .then((data) => {
       if(!Array.isArray(data) || !data.length){
@@ -458,6 +613,7 @@
       }
       entries = data;
       renderTeamSelect();
+      renderFilterOptions();
       const initialTeam = qs.get("anchorTeam");
       if(initialTeam && Array.from(teamSelect.options).some((o) => o.value === initialTeam)){
         selectedTeam = initialTeam;
@@ -474,7 +630,7 @@
       renderGames();
     })
     .catch(() => {
-      gamesEl.textContent = "Failed to load assets/processed/games_manifest.json";
+      gamesEl.textContent = "Failed to load ../assets/processed/games_manifest.json";
     });
 })();
 </script>

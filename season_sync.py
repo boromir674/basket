@@ -171,10 +171,13 @@ def _load_elo_ratings(output_dir: Path, seasoncode: str) -> Dict[str, float]:
     return {}
 
 
-def build_manifest(output_dir: Path, seasoncode: str) -> None:
+def build_manifest(output_dir: Path, seasoncode: str | None = None) -> None:
     """Scan JSON files and write a simple manifest for the UI.
 
-    Manifest shape:
+    If seasoncode is None, all seasons found in output_dir are indexed.
+    Backwards compatible: passing a single seasoncode still works as before.
+
+    Manifest shape (unchanged, multi-season just means more entries):
     [{"file": "multi_drilldown_real_data_E2021_54.json",
       "seasoncode": "E2021",
       "gamecode": 54,
@@ -187,39 +190,53 @@ def build_manifest(output_dir: Path, seasoncode: str) -> None:
       "elo_b": 1488.0}, ...]
     """
     entries: List[Dict[str, Any]] = []
-    elo_ratings = _load_elo_ratings(output_dir, seasoncode)
 
-    pattern = f"multi_drilldown_real_data_{seasoncode}_*.json"
-    for path in sorted(output_dir.glob(pattern)):
-        try:
-            data = json.loads(path.read_text(encoding="utf-8"))
-        except Exception:  # noqa: BLE001
-            continue
-        if not isinstance(data, dict):
-            continue
-        meta = data.get("meta", {})
-        try:
-            gamecode = int(meta.get("gamecode"))
-        except Exception:  # noqa: BLE001
-            continue
-        team_a = meta.get("team_a")
-        team_b = meta.get("team_b")
-        entries.append(
-            {
-                "file": path.name,
-                "seasoncode": seasoncode,
-                "gamecode": gamecode,
-                "team_a": team_a,
-                "team_b": team_b,
-                "score_a": meta.get("score_a"),
-                "score_b": meta.get("score_b"),
-                "winner": meta.get("winner"),
-                "elo_a": elo_ratings.get(team_a),
-                "elo_b": elo_ratings.get(team_b),
-                "gamedate": meta.get("gamedate"),
-                "synced_at": meta.get("synced_at"),
-            }
-        )
+    # Determine which seasons to index
+    if seasoncode is not None:
+        seasoncodes = [seasoncode]
+    else:
+        # Auto-detect all seasons present in the directory
+        import re as _re
+        detected = set()
+        for p in output_dir.glob("multi_drilldown_real_data_E*.json"):
+            m = _re.match(r"multi_drilldown_real_data_(E\d+)_", p.name)
+            if m:
+                detected.add(m.group(1))
+        seasoncodes = sorted(detected)
+
+    for sc in seasoncodes:
+        elo_ratings = _load_elo_ratings(output_dir, sc)
+        pattern = f"multi_drilldown_real_data_{sc}_*.json"
+        for path in sorted(output_dir.glob(pattern)):
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except Exception:  # noqa: BLE001
+                continue
+            if not isinstance(data, dict):
+                continue
+            meta = data.get("meta", {})
+            try:
+                gamecode = int(meta.get("gamecode"))
+            except Exception:  # noqa: BLE001
+                continue
+            team_a = meta.get("team_a")
+            team_b = meta.get("team_b")
+            entries.append(
+                {
+                    "file": path.name,
+                    "seasoncode": sc,
+                    "gamecode": gamecode,
+                    "team_a": team_a,
+                    "team_b": team_b,
+                    "score_a": meta.get("score_a"),
+                    "score_b": meta.get("score_b"),
+                    "winner": meta.get("winner"),
+                    "elo_a": elo_ratings.get(team_a),
+                    "elo_b": elo_ratings.get(team_b),
+                    "gamedate": meta.get("gamedate"),
+                    "synced_at": meta.get("synced_at"),
+                }
+            )
 
     manifest_path = output_dir / "games_manifest.json"
     manifest_path.write_text(json.dumps(entries, indent=2), encoding="utf-8")
