@@ -86,7 +86,7 @@
     .g-meta { font-size:12px; color:var(--muted); }
     .pill { display:inline-block; border:1px solid #3f608f; border-radius:999px; padding:2px 8px; font-size:11px; color:#b7cdf1; margin-top:5px; }
     .elo-badge { display:inline-block; background:#1e3a5f; border:1px solid #3a6fa8; border-radius:4px; padding:0 4px; font-size:10px; color:#62b6ff; margin-left:3px; vertical-align:middle; }
-    .viewer-head {
+    .viewer-context {
       margin-bottom:8px;
       border:1px solid var(--line);
       background:rgba(11,22,40,.84);
@@ -150,7 +150,7 @@
       .wrap {
         padding: 10px;
       }
-      .viewer-head {
+      .viewer-context {
         margin-bottom: 6px;
       }
       iframe {
@@ -174,7 +174,7 @@
         font-size: 11px;
         padding: 6px 9px;
       }
-      .viewer-head {
+      .viewer-context {
         min-height: 52px;
         padding: 7px 8px;
       }
@@ -199,7 +199,6 @@
       <a class="btn" href="./index.html">MVP Home</a>
       <a class="btn" href="./elo.html?seasoncodes=E2022,E2023,E2024">Elo Showcase</a>
       <a class="btn" href="./style-insights.html">Style Insights</a>
-      <a class="btn" href="./lab/style-consistency-lab.html">Style Lab</a>
       <a class="btn" href="../index.html">Spike Home</a>
     </div>
   </div>
@@ -242,16 +241,16 @@
     </div>
 
     <div class="card">
-      <div class="viewer-head">
-        <div class="vh-top">
+      <div class="iframe-wrap">
+        <iframe id="viewer" src="./game-flow-viewer.html" title="Sankey Viewer"></iframe>
+      </div>
+      <div class="viewer-context">
+        <div class="vh-top" id="headChips" style="display:none;">
           <span class="team-chip anchor" id="chipAnchor">Anchor: --</span>
           <span class="team-chip opp" id="chipOpp">Opponent: --</span>
         </div>
         <div class="vh-game" id="gameMeta">Select a game.</div>
-        <div class="vh-game" id="gameHomeAway">Original matchup: Home -- · Away --</div>
-      </div>
-      <div class="iframe-wrap">
-        <iframe id="viewer" src="./game-flow-viewer.html" title="Sankey Viewer"></iframe>
+        <div class="vh-game" id="gameHomeAway">Home -- · Away --</div>
       </div>
     </div>
   </div>
@@ -272,6 +271,7 @@
   const teamFilterEl = document.getElementById("teamFilter");
   const searchFilterEl = document.getElementById("searchFilter");
   const resultCountEl = document.getElementById("resultCount");
+  const headChips = document.getElementById("headChips");
   const chipAnchor = document.getElementById("chipAnchor");
   const chipOpp = document.getElementById("chipOpp");
   const gameMeta = document.getElementById("gameMeta");
@@ -440,23 +440,28 @@
   }
 
   function setHead(anchorTeam, oppTeam, game){
-    chipAnchor.classList.add("fade-step");
-    chipOpp.classList.add("fade-step");
+    if(chipAnchor) chipAnchor.classList.add("fade-step");
+    if(chipOpp) chipOpp.classList.add("fade-step");
     gameMeta.classList.add("fade-step");
     if(gameHomeAway) gameHomeAway.classList.add("fade-step");
     window.setTimeout(() => {
-      chipAnchor.textContent = `Anchor: ${anchorTeam || "--"}`;
-      chipOpp.textContent = `Opponent: ${oppTeam || "--"}`;
+      const anchored = !!(anchorMode && selectedTeam);
+      if(headChips) headChips.style.display = anchored ? "flex" : "none";
+      if(chipAnchor) chipAnchor.textContent = `Anchor: ${anchorTeam || "--"}`;
+      if(chipOpp) chipOpp.textContent = `Opponent: ${oppTeam || "--"}`;
+
       const title = game ? `${game.seasoncode || "?"} / ${game.gamecode || "?"}` : "--";
       const date = game ? (game.gamedate || "date unknown") : "--";
-      gameMeta.textContent = `${title} · ${date}`;
+      const matchup = game ? `${game.team_a || "--"} vs ${game.team_b || "--"}` : "--";
+      gameMeta.textContent = `${title} · ${date} · ${matchup}`;
+
       if(gameHomeAway){
         const home = game ? gameHomeTeam(game) : "--";
         const away = game ? gameAwayTeam(game) : "--";
-        gameHomeAway.textContent = `Original matchup: Home ${home} · Away ${away}`;
+        gameHomeAway.textContent = `Home ${home} · Away ${away}`;
       }
-      chipAnchor.classList.remove("fade-step");
-      chipOpp.classList.remove("fade-step");
+      if(chipAnchor) chipAnchor.classList.remove("fade-step");
+      if(chipOpp) chipOpp.classList.remove("fade-step");
       gameMeta.classList.remove("fade-step");
       if(gameHomeAway) gameHomeAway.classList.remove("fade-step");
     }, 120);
@@ -465,7 +470,7 @@
   function currentAnchorForGame(g){
     if(!g) return "";
     if(anchorMode && selectedTeam) return selectedTeam;
-    return g.team_a || "";
+    return "";
   }
 
   function currentOppForGame(g){
