@@ -1,4 +1,4 @@
-.PHONY: help dev lab sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates report prepare-season test
+.PHONY: help dev lab preflight preflight-app preflight-lab preflight-clean install-hooks sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates report prepare-season test
 
 help:
 	@echo "Targets:"
@@ -13,6 +13,11 @@ help:
 	@echo "  make elo-auto"
 	@echo "  make dev [PORT=8080]"
 	@echo "  make lab [PORT=8081]"
+	@echo "  make preflight"
+	@echo "  make preflight-app"
+	@echo "  make preflight-lab"
+	@echo "  make preflight-clean"
+	@echo "  make install-hooks"
 	@echo "  make report SEASON=E2025"
 	@echo "  make prepare-season SEASON=E2025 START=1 END=200"
 	@echo "  make test"
@@ -38,6 +43,21 @@ dev:
 
 lab:
 	PORT=$(PORT) ./serve-lab.sh
+
+preflight:
+	./scripts/preflight_local.sh --mode all
+
+preflight-app:
+	./scripts/preflight_local.sh --mode app
+
+preflight-lab:
+	./scripts/preflight_local.sh --mode lab
+
+preflight-clean:
+	./scripts/preflight_local.sh --mode app --require-clean
+
+install-hooks:
+	./scripts/install_git_hooks.sh
 
 redo-season:
 	docker-compose run --rm --build ops redo_season --seasoncode $(SEASON) --data-dir $(DATA_DIR) --raw-dir $(RAW_DIR) --concurrency $(CONCURRENCY) --gap-limit $(GAP_LIMIT) --max-gamecode $(MAX_GAMECODE)

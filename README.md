@@ -65,6 +65,16 @@ bash scripts/build_bundle.sh --mode app --out public
 bash scripts/build_bundle.sh --mode lab --out public-lab
 ```
 
+Run a local deploy preflight (config + git-tracking checks):
+
+```bash
+make preflight-app
+# or
+make preflight
+# optional advisory mode: also print dirty-worktree sample (non-blocking for now)
+make preflight-clean
+```
+
 > **Why `./serve.sh` instead of `python -m http.server` directly?**
 > The deployed site is served from a flat `public/` directory (CI puts `prod/index.html`
 > and `prod/game-flow-viewer.html` side-by-side with `assets/processed/`).
@@ -190,7 +200,11 @@ docker run --rm \
 
 ### Static viewer runtime config (S3 / CDN)
 
-When deploying the static `prod/` content to S3 or CDN, the viewer can load processed JSON from a different base path than the repository `assets/` folder. Two options are supported:
+When deploying static content, both build-time file requirements and runtime asset settings come from `config/build_config.jsonc`. The build emits those runtime settings into `prod/runtime-config.js` during `scripts/build_bundle.sh`.
+
+This means production pages (`index`, `game-explorer`, `game-flow-viewer`, score pages, Elo, style insights) resolve manifests and assets from the same config values, not page-local hardcoded paths.
+
+To point to remote storage (S3/CDN), two options are supported:
 
 - Add a small runtime config file that your bundler or deployment step writes into the published `prod/` folder, for example `prod/config.js`:
 
@@ -210,6 +224,23 @@ http://my-host/poss-flow-map-multi-drilldown-real-data.html?file=multi_drilldown
 Notes:
 - The viewer automatically preserves `blob:` object URLs (used by `prod/game-explorer.html` when normalizing bundles) and will not attempt to prefix or append cache-busters to them.
 - Keep the `BASKET_APP_FILE_STORE_URI` convention aligned with pipeline defaults so dev -> prod paths are consistent.
+
+### Local deploy guard (missing tracked JSON prevention)
+
+If required JSON files exist locally but are ignored by git, deploys can fail with file-not-found in production. The shared bundle builder now validates that all config-required files are already present in `HEAD`, not merely staged in the index.
+
+- `make preflight-app` checks app bundle config + tracking
+- `make preflight` checks app + lab
+- `make preflight-clean` checks app bundle config + tracking and also prints dirty-worktree sample status (advisory only for now)
+- `make install-hooks` installs a `pre-push` hook that runs `preflight-app --require-clean`
+
+Guarantee scope:
+
+- Deploys already build from a fresh CI checkout, so files that were never committed or pushed are not present in CI and cannot silently ship.
+- Required build-config files are now validated for existence, manifest coverage, raw timeline coverage, and presence in `HEAD`.
+- Score-diff families (`score-diff`, `score-d52`, and v2/full-paint variants) are explicitly covered through required `raw_pts` and `score_timeline` dataset checks in build config.
+- To also catch the broader "local looked fine because my worktree had extra changes" case, use the clean-worktree guard (`make preflight-clean`) or install the hook.
+- This still only protects assets and pages covered by `config/build_config.jsonc`. If a future surface is added and not added to the build config, it is outside this guarantee.
 
 ## 6) Visualization Data Catalog
 
