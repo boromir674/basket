@@ -86,6 +86,14 @@ mapfile -t JS_MODULES < <(jq -r '.mode.js_modules[]?' <<<"$MODE_CONFIG_JSON")
 mapfile -t COPY_DIRECTORIES < <(jq -r '.mode.copy_directories[]?' <<<"$MODE_CONFIG_JSON")
 mapfile -t OPTIONAL_ASSET_GLOBS < <(jq -r '.mode.optional_asset_globs | keys[]?' <<<"$MODE_CONFIG_JSON")
 
+# Derive runtime manifest filename from required_static_files so the contract
+# has a single declaration of this requirement.
+MANIFEST_FILE="$(jq -r '
+  [(.mode.required_static_files | keys[]?)
+   | select(test("(^|/)games_manifest\\.json$"))
+   | split("/") | last][0] // "games_manifest.json"
+' <<<"$MODE_CONFIG_JSON")"
+
 for req_file in "${REQUIRED_STATIC_FILES[@]}"; do
   if [[ ! -f "$req_file" ]]; then
     echo "✗ Build contract violation: required file missing: $req_file"
@@ -118,6 +126,7 @@ fi
 copy_contract_file() {
   local source_path="$1"
   local destination_dir="$OUT_DIR"
+  local destination_file=""
 
   if [[ "$MODE" == "app" ]]; then
     if [[ "$source_path" == prod/* ]]; then
@@ -138,7 +147,13 @@ copy_contract_file() {
   fi
 
   mkdir -p "$destination_dir"
-  cp "$source_path" "$destination_dir/"
+  destination_file="$destination_dir/$(basename "$source_path")"
+  cp "$source_path" "$destination_file"
+
+  # Inject runtime manifest filename from contract into HTML pages.
+  if [[ "$destination_file" == *.html ]]; then
+    sed -i "s/__BASKET_MANIFEST_FILE__/${MANIFEST_FILE}/g" "$destination_file"
+  fi
 }
 
 for dir_to_copy in "${COPY_DIRECTORIES[@]}"; do

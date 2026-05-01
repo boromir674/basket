@@ -259,6 +259,11 @@
 <script>
 (function(){
   const qs = new URLSearchParams(window.location.search);
+  const inProdSubdir = window.location.pathname.includes("/prod/");
+  const processedBase = inProdSubdir ? "../assets/processed" : "./assets/processed";
+  const manifestFile = "__BASKET_MANIFEST_FILE__" === "__BASKET_MANIFEST_FILE__"
+    ? "games_manifest.json"
+    : "__BASKET_MANIFEST_FILE__";
   const gamesEl = document.getElementById("games");
   const viewer = document.getElementById("viewer");
   const modeBtns = Array.from(document.querySelectorAll(".mode-btn"));
@@ -424,7 +429,7 @@
   }
 
   async function resolveGameFile(g){
-    const rawPath = `../assets/processed/${g.file}`;
+    const rawPath = `${processedBase}/${g.file}`;
     if(!anchorMode || !selectedTeam) return rawPath;
 
     const key = `${rawPath}|${selectedTeam}`;
@@ -609,7 +614,7 @@
     });
   }
 
-  fetch("../assets/processed/games_manifest.json")
+  fetch(`${processedBase}/${manifestFile}`)
     .then((r) => r.json())
     .then((data) => {
       if(!Array.isArray(data) || !data.length){
@@ -635,7 +640,7 @@
       renderGames();
     })
     .catch(() => {
-      gamesEl.textContent = "Failed to load ../assets/processed/games_manifest.json";
+      gamesEl.textContent = `Failed to load ${processedBase}/${manifestFile}`;
     });
 })();
 </script>
