@@ -4,6 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elo Showcase</title>
+  <script>
+    document.documentElement.classList.add('preload');
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove('preload');
+        document.documentElement.classList.add('ready');
+      });
+    }, { once: true });
+  </script>
   <style>
     :root{
       --bg:#0b0f16;
@@ -17,11 +26,14 @@
       --warn:#ffb15a;
     }
     html,body{height:100%;}
+    html.preload body{visibility:hidden; opacity:0;}
+    html.ready body{visibility:visible; opacity:1;}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background:var(--bg);
       color:var(--text);
+      transition:opacity .12s ease-out;
     }
     a{color:var(--accent); text-decoration:none;}
     a:hover{text-decoration:underline;}
@@ -99,6 +111,7 @@
     }
     .seasonBtn.active{border-color:#3a6fa8; background:#0f1e33;}
     .warn{color:var(--warn); font-size:12px; margin-top:6px; min-height:15px;}
+
     .simControls{margin-top:10px; border-top:1px solid var(--border); padding-top:10px;}
     .simGrid{display:grid; grid-template-columns:1fr; gap:8px;}
     .simToggle{display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px;}
@@ -204,7 +217,7 @@
       <div class="muted">Rank teams by Elo (as-of a fixture tick) + replay season progression.</div>
     </div>
     <div class="row" style="justify-content:flex-end;">
-      <a class="btn" href="./index.html">Back to MVP Home</a>
+      <a class="btn" href="./mvp-home.html">Open MVP Home</a>
     </div>
   </div>
 
@@ -301,6 +314,7 @@
   const seasonLabelEl = document.getElementById('seasonLabel');
   const seasonFiltersEl = document.getElementById('seasonFilters');
   const seasonWarnEl = document.getElementById('seasonWarn');
+
   const asOfPillEl = document.getElementById('asOfPill');
   const teamSelect = document.getElementById('teamSelect');
   const rankTable = document.getElementById('rankTable');
@@ -329,6 +343,56 @@
 
   const compareTipEl = document.getElementById('compareTip');
   const runtimeConfig = window.BasketRuntimeConfig;
+  const ELO_PAGE_STORAGE_KEY = 'elo_page';
+  const SEASON_WINNERS = Object.freeze({
+    E2015: 'CSKA Moscow',
+    E2016: 'Fenerbahce Istanbul',
+    E2017: 'Real Madrid',
+    E2018: 'CSKA Moscow',
+    E2019: 'Season cancelled',
+    E2020: 'Anadolu Efes Istanbul',
+    E2021: 'Anadolu Efes Istanbul',
+    E2022: 'Real Madrid',
+    E2023: 'Panathinaikos Athens',
+    E2024: 'Fenerbahce Beko Istanbul',
+  });
+  const TEAM_ALIASES = Object.freeze({
+    'ALBA Berlin': 'ALBA',
+    'Anadolu Efes Istanbul': 'Efes',
+    'AS Monaco': 'Monaco',
+    'Baskonia Vitoria-Gasteiz': 'Baskonia',
+    'Brose Bamberg': 'Bamberg',
+    'Buducnost VOLI Podgorica': 'Buducnost',
+    'CSKA Moscow': 'CSKA',
+    'Crvena Zvezda Belgrade': 'Crvena Zvezda',
+    'Darussafaka Tekfen Istanbul': 'Darussafaka',
+    'Dubai Basketball': 'Dubai',
+    'EA7 Emporio Armani Milan': 'Olimpia Milano',
+    'FB Dogus': 'FB Dogus',
+    'FC Barcelona': 'Barcelona',
+    'FC Bayern Munich': 'Bayern',
+    'Fenerbahce Beko Istanbul': 'Fenerbahce',
+    'Fenerbahce Istanbul': 'Fenerbahce',
+    'Galatsaray Odeabank Istanbul': 'Galatasaray',
+    'Hapoel IBI Tel Aviv': 'Hapoel',
+    'Herbalife Gran Canaria': 'Gran Canaria',
+    'Khimki Moscow Region': 'Khimki',
+    'LDLC ASVEL Villeurbanne': 'ASVEL',
+    'Maccabi Tel Aviv': 'Maccabi',
+    'Olympiacos Piraeus': 'Olympiacos',
+    'Panathinaikos Athens': 'Panathinaikos',
+    'Paris Basketball': 'Paris',
+    'Partizan Mozzart Bet Belgrade': 'Partizan',
+    'Real Madrid': 'Real Madrid',
+    'Season cancelled': 'cancelled',
+    'Unicaja Malaga': 'Unicaja',
+    'UNICS Kazan': 'UNICS',
+    'Valencia Basket': 'Valencia',
+    'Virtus Bologna': 'Virtus',
+    'Zalgiris Kaunas': 'Zalgiris',
+    'Zenit St Petersburg': 'Zenit',
+  });
+  function teamAlias(name){ return TEAM_ALIASES[name] || name; }
   if(!runtimeConfig) throw new Error('Missing runtime config. Ensure runtime-config.js is loaded.');
 
   function seasonYear(code){
@@ -374,6 +438,37 @@
   function clearError(){
     errEl.style.display = 'none';
     errEl.textContent = '';
+  }
+
+  function parseTeamSeedOverridesText(text){
+    const map = Object.create(null);
+    String(text || '').split(/\r?\n/).forEach((line) => {
+      const s = line.trim();
+      if(!s) return;
+      const m = s.match(/^(.+?)\s*(=|:)\s*(-?\d+(?:\.\d+)?)\s*$/);
+      if(!m) return;
+      const team = String(m[1] || '').trim();
+      const val = Number(m[3]);
+      if(team && Number.isFinite(val)) map[team] = val;
+    });
+    return map;
+  }
+
+  function readStoredPageState(){
+    try{
+      const raw = window.localStorage.getItem(ELO_PAGE_STORAGE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    }catch(_e){
+      return null;
+    }
+  }
+
+  function writeStoredPageState(state){
+    try{
+      window.localStorage.setItem(ELO_PAGE_STORAGE_KEY, JSON.stringify(state));
+    }catch(_e){
+      // Ignore storage failures.
+    }
   }
 
   let elo = null;
@@ -1121,6 +1216,58 @@
     return `${seasonLabelFromCode(sorted[0])} -> ${seasonLabelFromCode(sorted[sorted.length - 1])}`;
   }
 
+
+
+  function topRankedTeams(limit){
+    const rows = rankRows(computeRatingsAt(fixtures.length));
+    return rows.slice(0, Math.max(1, limit || 1)).map((row) => row.team);
+  }
+
+  function applyInitialPageState(storedState){
+    const defaultSelected = topRankedTeams(4);
+    const defaultActive = defaultSelected[0] || teams[0] || '';
+    const savedSelected = Array.isArray(storedState && storedState.selectedTeams)
+      ? storedState.selectedTeams.filter((team) => teams.includes(team)).slice(0, MAX_COMPARE)
+      : [];
+    const savedActive = teams.includes(storedState && storedState.activeTeam) ? storedState.activeTeam : '';
+    const savedTickRaw = parseInt(storedState && storedState.tick, 10);
+    const savedTick = Number.isFinite(savedTickRaw) ? Math.max(0, Math.min(savedTickRaw, fixtures.length)) : fixtures.length;
+
+    if(storedState && typeof storedState.compareTapMode === 'boolean') setCompareMode(storedState.compareTapMode);
+    else setCompareMode(true);
+
+    if(savedSelected.length){
+      selectedSet = new Set(savedSelected);
+      activeTeam = selectedSet.has(savedActive) ? savedActive : (savedSelected[0] || defaultActive);
+      tick = savedTick;
+    } else {
+      selectedSet = new Set(defaultSelected.length ? defaultSelected : [defaultActive]);
+      activeTeam = defaultActive;
+      tick = fixtures.length;
+      setCompareMode(true);
+    }
+
+    if(!selectedSet.size && defaultActive) selectedSet = new Set([defaultActive]);
+    if(!selectedSet.has(activeTeam)) activeTeam = Array.from(selectedSet)[0] || defaultActive;
+    teamSelect.value = activeTeam;
+    tickRange.value = String(tick);
+  }
+
+  function persistPageState(){
+    if(playing || !elo || !teams.length) return;
+    writeStoredPageState({
+      version: 1,
+      selectedSeasoncodes: selectedSeasoncodes.slice(),
+      selectedTeams: Array.from(selectedSet),
+      activeTeam,
+      tick,
+      compareTapMode,
+      preserveHistoricalBaseline,
+      globalInitialSeed,
+      teamSeedOverridesText: teamSeedOverridesEl ? String(teamSeedOverridesEl.value || '') : ''
+    });
+  }
+
   function updateTeamSelectOptions(){
     const prev = teamSelect.value;
     teamSelect.innerHTML = '';
@@ -1259,6 +1406,7 @@
         .attr('stroke-width', 1);
 
       const seasonLinesG = root.append('g').attr('class', 'season-lines');
+      const seasonLabelsG = root.append('g').attr('class', 'season-labels');
 
       const hoverG = root.append('g').attr('class', 'hover');
       const hoverLine = hoverG.append('line')
@@ -1279,7 +1427,7 @@
         .attr('fill', 'transparent')
         .style('pointer-events', 'all');
 
-      chartState = { svg, title, desc, root, axis, tickLine, seasonLinesG, hoverLine, hoverG, seriesG, markersG, overlay, xScale, yScale, maxX, minY, maxY };
+      chartState = { svg, title, desc, root, axis, tickLine, seasonLinesG, seasonLabelsG, hoverLine, hoverG, seriesG, markersG, overlay, xScale, yScale, maxX, minY, maxY };
     }
 
     function setTooltip(visible, text, clientX, clientY){
@@ -1416,6 +1564,22 @@
       .attr('x1', cx)
       .attr('x2', cx);
 
+    // Compute per-season midpoints for winner labels
+    const seasonBands = [];
+    if(fixtures && fixtures.length){
+      let curCode = fixtures[0].seasoncode;
+      let xStart = fixtures[0].x;
+      for(let i = 1; i < fixtures.length; i++){
+        if(fixtures[i].seasoncode !== curCode){
+          const xEnd = fixtures[i - 1].x;
+          seasonBands.push({ code: curCode, xMid: (xStart + xEnd) / 2 });
+          curCode = fixtures[i].seasoncode;
+          xStart = fixtures[i].x;
+        }
+      }
+      seasonBands.push({ code: curCode, xMid: (xStart + fixtures[fixtures.length - 1].x) / 2 });
+    }
+
     const seasonLines = chartState.seasonLinesG
       .selectAll('line.season-boundary')
       .data((seasonBoundaryTicks || []).slice(), (d) => String(d));
@@ -1441,6 +1605,33 @@
       ),
       (exit) => exit.call((exit) => exit.transition(t).attr('opacity', 0).remove())
     );
+
+    // Season winner labels on chart bands
+    chartState.seasonLabelsG
+      .selectAll('text.season-winner-label')
+      .data(seasonBands, (d) => d.code)
+      .join(
+        (enter) => enter.append('text')
+          .attr('class', 'season-winner-label')
+          .attr('text-anchor', 'middle')
+          .attr('dominant-baseline', 'hanging')
+          .attr('y', (d, i) => padT + 4 + (i % 2) * 14)
+          .attr('fill', 'rgba(200,215,235,.45)')
+          .attr('font-size', '10')
+          .attr('font-family', 'inherit')
+          .attr('pointer-events', 'none')
+          .attr('x', (d) => xScale(d.xMid))
+          .text((d) => { const w = SEASON_WINNERS[d.code]; return w ? teamAlias(w) : ''; })
+          .attr('opacity', 0)
+          .call((e) => e.transition(t).attr('opacity', 1)),
+        (update) => update.call((u) => u.transition(t)
+          .attr('x', (d) => xScale(d.xMid))
+          .attr('y', (d, i) => padT + 4 + (i % 2) * 14)
+          .text((d) => { const w = SEASON_WINNERS[d.code]; return w ? teamAlias(w) : ''; })
+          .attr('opacity', 1)
+        ),
+        (exit) => exit.call((e) => e.transition(t).attr('opacity', 0).remove())
+      );
 
     const line = d3.line()
       .x((p) => xScale(p.x))
@@ -1575,6 +1766,7 @@
 
     yRangeEl.textContent = `Elo range (chart): ${Math.round(minY)} – ${Math.round(maxY)}`;
     xRangeEl.textContent = `Fixtures: 0 – ${maxX}`;
+    persistPageState();
   }
 
   function seriesForTeam(team, t){
@@ -1871,9 +2063,15 @@
       return;
     }
 
+    const storedPageState = readStoredPageState();
+    const storedSeasoncodes = Array.isArray(storedPageState && storedPageState.selectedSeasoncodes)
+      ? storedPageState.selectedSeasoncodes.filter((s) => allSeasoncodes.includes(s))
+      : [];
     const requestedValid = requestedSeasoncodes.filter((s) => allSeasoncodes.includes(s));
     if(requestedValid.length && areConsecutiveSeasoncodes(requestedValid)){
       selectedSeasoncodes = requestedValid.slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+    }else if(storedSeasoncodes.length && areConsecutiveSeasoncodes(storedSeasoncodes)){
+      selectedSeasoncodes = storedSeasoncodes.slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
     }else if(areConsecutiveSeasoncodes(allSeasoncodes)){
       selectedSeasoncodes = allSeasoncodes.slice();
     }else{
@@ -1884,8 +2082,20 @@
     selectedSet = new Set();
     activeTeam = '';
 
+    if(storedPageState && typeof storedPageState.preserveHistoricalBaseline === 'boolean'){
+      preserveHistoricalBaseline = !!storedPageState.preserveHistoricalBaseline;
+    }
+    if(storedPageState){
+      globalInitialSeed = parseMaybeNumber(storedPageState.globalInitialSeed);
+    }
+    if(teamSeedOverridesEl && storedPageState && typeof storedPageState.teamSeedOverridesText === 'string'){
+      teamSeedOverridesEl.value = storedPageState.teamSeedOverridesText;
+    }
+    teamSeedOverrides = parseTeamSeedOverridesText(teamSeedOverridesEl && teamSeedOverridesEl.value);
+
     if(globalSeedInput){
-      globalSeedInput.value = String(Math.round(initialRating('')));
+      const initial = globalInitialSeed != null ? globalInitialSeed : initialRating('');
+      globalSeedInput.value = String(Math.round(initial));
     }
 
     if(preserveBaselineToggle){
@@ -1897,25 +2107,11 @@
       });
     }
 
-    function parseTeamSeedOverrides(text){
-      const map = Object.create(null);
-      String(text || '').split(/\r?\n/).forEach((line) => {
-        const s = line.trim();
-        if(!s) return;
-        const m = s.match(/^(.+?)\s*(=|:)\s*(-?\d+(?:\.\d+)?)\s*$/);
-        if(!m) return;
-        const team = String(m[1] || '').trim();
-        const val = Number(m[3]);
-        if(team && Number.isFinite(val)) map[team] = val;
-      });
-      return map;
-    }
-
     if(applySeedsBtn){
       applySeedsBtn.addEventListener('click', () => {
         const g = parseMaybeNumber(globalSeedInput && globalSeedInput.value);
         globalInitialSeed = g;
-        teamSeedOverrides = parseTeamSeedOverrides(teamSeedOverridesEl && teamSeedOverridesEl.value);
+        teamSeedOverrides = parseTeamSeedOverridesText(teamSeedOverridesEl && teamSeedOverridesEl.value);
         fullTimelineCache = null;
         stop();
         applySeasonSelection(true);
@@ -1925,6 +2121,7 @@
     renderSeasonFilters();
     applySeasonSelection(true);
     if(!teams.length) return;
+    applyInitialPageState(storedPageState);
 
     teamSelect.addEventListener('change', () => setSelectedTeam(teamSelect.value));
     tickRange.addEventListener('input', () => {
@@ -1968,7 +2165,6 @@
       }
     });
 
-    setCompareMode(isCoarsePointer());
     render();
 
     function initEloHelpPopover(){

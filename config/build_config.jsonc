@@ -15,7 +15,7 @@
   },
   "modes": {
     "app": {
-      "description": "Production Sankey viewer and analytics surfaces",
+      "description": "Production canonical pages; landing and compatibility aliases are generated at build time",
       "required_static_files": {
         "data/games_manifest.json": "Powers game discovery in game-explorer.html dropdown",
         "data/elo_multiseason.json": "Time-series Elo ratings for elo.html and rankings"
@@ -29,8 +29,7 @@
         "data/score_timeline_E*.json"
       ],
       "html_pages": [
-        "prod/index.html",
-        "prod/game-explorer.html",
+        "prod/mvp-home.html",
         "prod/game-flow-viewer.html",
         "prod/elo.html",
         "prod/score-diff.html",

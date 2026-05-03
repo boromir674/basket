@@ -504,6 +504,16 @@ for page in "${HTML_PAGES[@]}"; do
   copy_config_file "$page"
 done
 
+if [[ "$MODE" == "app" && -f "$OUT_DIR/elo.html" ]]; then
+  cp "$OUT_DIR/elo.html" "$OUT_DIR/index.html"
+  echo "✓ Flagship landing generated from elo.html -> ${OUT_DIR}/index.html"
+fi
+
+if [[ "$MODE" == "app" && -f "$OUT_DIR/mvp-home.html" ]]; then
+  cp "$OUT_DIR/mvp-home.html" "$OUT_DIR/game-explorer.html"
+  echo "✓ Explorer alias generated from mvp-home.html -> ${OUT_DIR}/game-explorer.html"
+fi
+
 for module in "${JS_MODULES[@]}"; do
   copy_config_file "$module"
 done
