@@ -21,8 +21,21 @@ This README is onboarding-first: you can come back later and re-onboard quickly.
           <li>Full season sync (raw + multi + score_timeline + style_insights all at once): <code>make sync-season-full SEASON=E2026</code></li>
           <li>Normalize club/team names for that season: <code>make normalize-season SEASON=E2026</code></li>
           <li>Recompute Elo outputs for that season: <code>make elo SEASON=E2026</code></li>
+          <li>Rerun ELO simulation <code>rm data/elo_multiseason.json && make elo-auto</code></li>
           <li>Rebuild the manifest so the frontend game switchers discover new games: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
           <li>Run a season report sanity check: <code>make report SEASON=E2026</code></li>
+        </ol>
+      </td>
+    </tr>
+      <td>Add newest published games in (current) Season (raw + processed + manifest + normalization + Elo)</td>
+      <td>
+        <ol>
+          <li>Full season sync (raw + multi + score_timeline + style_insights all at once): <code>make sync-season-full SEASON=E2025</code></li>
+          <li>Normalize club/team names for that season: <code>make normalize-season SEASON=E2025</code></li>
+          <li>Recompute Elo outputs for that season: <code>make elo SEASON=E2025</code></li>
+          <li>Rerun ELO simulation <code>rm data/elo_multiseason.json && make elo-auto</code></li>
+          <li>Rebuild the manifest so the frontend game switchers discover new games: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+          <li>Run a season report sanity check: <code>make report SEASON=E2025</code></li>
         </ol>
       </td>
     </tr>
