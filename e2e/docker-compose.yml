@@ -1,0 +1,36 @@
+# e2e/docker-compose.yml from repo
+
+version: '3.2'
+services:
+
+  # this is the web application we are going to test
+  # this can be a static file server, an apache instance, etc
+  my_app:
+    build:
+      context: ../
+      target: serve_files
+    ports:
+      - "9001:9000"
+    # environment:
+    #   - PORT=8123
+
+  # Run Headless Cypress CI: docker-compose run --build --rm cypress  /  docker-compose up cypress --exit-code-from cypress
+  cypress:
+    image: cypress/included:cypress-12.17.3-node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
+    depends_on:
+      - my_app
+    environment:
+      # pass base url to test pointing at the web application
+      - CYPRESS_baseUrl=http://my_app:9000
+      - CYPRESS_BROWSER=${CYPRESS_BROWSER:-chrome}  # Default to chrome if not set
+
+    # share the current folder as volume to avoid copying
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    # overwrite the default command to run Cypress tests
+    # on electron browser in headless mode
+    entrypoint: cypress run --spec "cypress/e2e/*.cy.js"
+    # run specs and avoid specs in cypress/integration/examples folder:
+    # - cypress/integration/margins_spec.cy.ts
+    # - cypress/integration/spec.cy.ts
