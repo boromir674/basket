@@ -84,6 +84,11 @@ normalize-all-seasons:
 check-dates:
 	docker-compose run --rm ops check_dates --data-dir $(DATA_DIR) $(if $(SEASON),--seasoncode $(SEASON),)
 
+
+manifest-rebuild:  # Rebuild Manifest, by scanning all stored Seasons
+	docker-compose run --rm --build ops rebuild_manifest --all-seasons --output-dir $(DATA_DIR)
+
+
 manifest-sanity:
 	docker-compose run --build --rm --entrypoint python ops /app/scripts/check_manifest_sanity.py --data-dir $(DATA_DIR)
 
