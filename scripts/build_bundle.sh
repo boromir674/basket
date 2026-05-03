@@ -212,7 +212,13 @@ PY
     if [[ -n "$missing_sample" ]]; then
       echo "  Missing sample: ${missing_sample}"
     fi
-    echo "  Fix data/ or regenerate manifest before bundling."
+    echo "  This is usually a real mismatch between manifest rows and available game JSON files."
+    echo "  Next steps:"
+    echo "    1) If you only care about current season incremental updates:"
+    echo "       docker-compose run --rm --build ops rebuild_manifest --seasoncode E2025 --output-dir /app/data"
+    echo "    2) If you want all seasons in manifest, ensure missing game files exist first, then rebuild manifest:"
+    echo "       docker-compose run --rm --build ops rebuild_manifest --all-seasons --output-dir /app/data"
+    echo "  Re-run: bash scripts/build_bundle.sh --mode ${MODE} --out ${OUT_DIR}"
     exit 1
   fi
   echo "✓ Manifest coverage validated (${manifest_entries} entries, 0 missing files)"
@@ -256,6 +262,14 @@ PY
         echo "  Missing raw_pts sample: ${missing_raw_pts_sample}"
       fi
       echo "  Cone chart requires raw_pts_{season}_{game}.json for each game in manifest."
+      echo "  This is usually a real mismatch (manifest includes games that raw points were not generated for)."
+      echo "  Next steps:"
+      echo "    1) Current-season incremental workflow (recommended while ingesting latest season):"
+      echo "       docker-compose run --rm --build ops rebuild_manifest --seasoncode E2025 --output-dir /app/data"
+      echo "    2) Historical/all-seasons workflow: generate missing raw points by syncing those seasons, then rebuild manifest."
+      echo "       make sync-seasons SEASONS='E2021 E2022 E2023 E2024 E2025'"
+      echo "       docker-compose run --rm --build ops rebuild_manifest --all-seasons --output-dir /app/data"
+      echo "  Re-run: bash scripts/build_bundle.sh --mode ${MODE} --out ${OUT_DIR}"
       exit 1
     fi
     echo "✓ raw_pts coverage validated (0 missing files)"
@@ -300,6 +314,14 @@ PY
         echo "  Missing score_timeline sample: ${missing_score_timeline_sample}"
       fi
       echo "  Score-diff/score-d52 pages require score_timeline_{season}_{game}.json for each game in manifest."
+      echo "  This is usually a real mismatch (manifest includes games not yet processed into score_timeline)."
+      echo "  Next steps:"
+      echo "    1) Current-season incremental workflow:"
+      echo "       docker-compose run --rm --build ops rebuild_manifest --seasoncode E2025 --output-dir /app/data"
+      echo "    2) Full workflow with score timelines:"
+      echo "       docker-compose run --rm --build ops build_score_timeline --seasoncode E2025 --raw-dir /app/assets --output-dir /app/data"
+      echo "       docker-compose run --rm --build ops rebuild_manifest --seasoncode E2025 --output-dir /app/data"
+      echo "  Re-run: bash scripts/build_bundle.sh --mode ${MODE} --out ${OUT_DIR}"
       exit 1
     fi
     echo "✓ score_timeline coverage validated (0 missing files)"
