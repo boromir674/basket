@@ -31,3 +31,13 @@ public/
 public-lab/
 
 data/logs/
+
+e2e/cypress/e2e/zzzz-examples
+season-2015-investigation/
+data/season_sync_failures_E2026.json
+
+# pbp is not consumed by Frontend
+data/raw/raw_pbp_*.json
+
+# box is consumed by the 2D shot chart currently only rendered in Lab, not in App
+data/raw/raw_box_*.json
