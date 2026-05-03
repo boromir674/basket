@@ -28,7 +28,7 @@
       fromToken("__BASKET_RAW_ASSETS_SUBDIR__", "assets"),
       "assets"
     ),
-    defaultBundleFile: fromToken("__BASKET_DEFAULT_BUNDLE_FILE__", "multi_drilldown_real_data.json"),
+    defaultBundleFile: fromToken("__BASKET_DEFAULT_BUNDLE_FILE__", ""),
     manifestFile: fromToken("__BASKET_MANIFEST_FILE__", "games_manifest.json"),
     rawPtsPattern: normalizePattern(
       fromToken("__BASKET_RAW_PTS_PATTERN__", "raw_pts_{season}_{game}.json"),

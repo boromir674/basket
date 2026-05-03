@@ -391,7 +391,7 @@ const paramFile = params.get("file");
 const paramAutoInsightsFile = params.get("autoInsightsFile");
 const paramInitialView = params.get("initialView");
 let skipTypeStage = params.get("skipTypeStage") === "1";
-let dataFile = paramFile || runtimeConfig.defaultBundleFile;
+let dataFile = paramFile || "";
 if (paramFile && !paramFile.includes("/")) {
   dataFile = paramFile;
 }
@@ -405,7 +405,7 @@ const fileBaseParam = params.get("fileBase");
 const runtimeBase = runtimeConfig.resolveFileStoreBase
   ? runtimeConfig.resolveFileStoreBase(fileBaseParam)
   : ((typeof window !== 'undefined' && window.BASKET_APP_FILE_STORE_URI) || fileBaseParam || null);
-if (!String(dataFile).startsWith('http') && !String(dataFile).startsWith('/') && !String(dataFile).startsWith('blob:')) {
+if (dataFile && !String(dataFile).startsWith('http') && !String(dataFile).startsWith('/') && !String(dataFile).startsWith('blob:')) {
   dataFile = runtimeConfig.buildProcessedUrl(dataFile, { fileBase: runtimeBase || undefined });
 }
 
@@ -2678,20 +2678,7 @@ function renderView(viewKey, opts = {}){
   linkLayer.selectAll("path.link").style("opacity", 1);
 }
 
-// Add a tiny cache-buster so that when JSON files are regenerated on disk
-// (via Docker pipeline runs), the browser does not keep serving a stale
-// cached copy. Query params are ignored by the simple static server, so this
-// is backwards-compatible while forcing a fresh fetch per load.
-// NOTE: if `dataFile` is a blob/object URL (starts with `blob:`) we must
-// not append query params because blob URLs do not accept them. Handle that
-// case explicitly so normalized bundles passed as object URLs from the
-// parent (iframe) remain reachable.
-let fetchUrl;
-if (String(dataFile).startsWith('blob:')) {
-  fetchUrl = dataFile;
-} else {
-  fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
-}
+// Initial bundle URL is dataFile; request cache busting is handled centrally by withCacheBust().
 
 // Update the scoreboard element (computes team totals from boxscore_players when possible)
 function updateScoreboard(){
@@ -2727,12 +2714,7 @@ function updateScoreboard(){
   el.innerHTML = `<div class="scoreboard-primary">${scoreLine}</div><div class="scoreboard-secondary">${eloLine}</div>`;
 }
 
-fetch(fetchUrl).then(r=>{
-  if(!r.ok){
-    throw new Error(`Failed to fetch JSON: ${fetchUrl} (HTTP ${r.status})`);
-  }
-  return r.json();
-}).then(bundle=>{
+function applyLoadedBundle(bundle, initialViewKey){
   dataBundle=bundle;
   colors=bundle.colors||{};
   const meta=bundle.meta||{};
@@ -2759,10 +2741,65 @@ fetch(fetchUrl).then(r=>{
   try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
   // Notify parent that the bundle has been loaded so parent can clear any loading UI
   try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
-  }).catch(err=>{
-  document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
-  console.error(err);
-});
+}
+
+function withCacheBust(url){
+  if(String(url).startsWith('blob:')) return url;
+  return url + (url.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+}
+
+async function fetchBundleFromUrl(url){
+  const response = await fetch(withCacheBust(url));
+  if(!response.ok){
+    throw new Error(`Failed to fetch JSON: ${url} (HTTP ${response.status})`);
+  }
+  return response.json();
+}
+
+async function fallbackToFirstManifestBundle(){
+  const manifestFile = runtimeConfig.manifestFile || 'games_manifest.json';
+  const manifestUrl = runtimeConfig.buildProcessedUrl(manifestFile, { fileBase: runtimeBase || undefined });
+  const manifestResp = await fetch(withCacheBust(manifestUrl));
+  if(!manifestResp.ok){
+    throw new Error(`Failed to fetch manifest: ${manifestUrl} (HTTP ${manifestResp.status})`);
+  }
+  const rows = await manifestResp.json();
+  if(!Array.isArray(rows) || rows.length === 0){
+    throw new Error(`Manifest has no rows: ${manifestUrl}`);
+  }
+
+  const first = rows.find(r => r && r.file) || rows[0];
+  if(!first || !first.file){
+    throw new Error(`Manifest row missing file field: ${manifestUrl}`);
+  }
+
+  dataFile = runtimeConfig.buildProcessedUrl(String(first.file), { fileBase: runtimeBase || undefined });
+  const bundle = await fetchBundleFromUrl(dataFile);
+  applyLoadedBundle(bundle, paramInitialView);
+}
+
+if(dataFile){
+  fetchBundleFromUrl(dataFile).then(bundle=>{
+    applyLoadedBundle(bundle, paramInitialView);
+  }).catch(async err=>{
+    const usingDefaultBundle = !paramFile;
+    if(usingDefaultBundle){
+      try {
+        await fallbackToFirstManifestBundle();
+        return;
+      } catch (fallbackErr) {
+        console.error('fallbackToFirstManifestBundle failed', fallbackErr);
+      }
+    }
+    document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
+    console.error(err);
+  });
+} else {
+  fallbackToFirstManifestBundle().catch((err) => {
+    document.getElementById("headline").textContent = "Failed to load initial game from manifest";
+    console.error(err);
+  });
+}
 
 // Added a placeholder for the renderAutoInsights function to prevent errors.
 function renderAutoInsights(data) {

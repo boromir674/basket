@@ -377,8 +377,9 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  - {alias} -> {DEFAULT_REGISTRY.normalize_team_name(alias)}")
 
         if not args.dry_run:
-            # Keep the UI game switcher consistent with any rewritten team labels.
-            build_manifest(data_dir, args.seasoncode)
+            # Rebuild full manifest so normalization of one season does not
+            # accidentally narrow UI coverage to a single season.
+            build_manifest(data_dir)
             print("manifest_rebuilt=1")
             if not args.skip_elo_refresh:
                 compute_elo_for_season(output_dir=data_dir, seasoncode=args.seasoncode)
@@ -457,8 +458,6 @@ def main(argv: list[str] | None = None) -> int:
                     f"{seasoncode}: {verb}_aliases={len(season_aliases)}, {verb}_canonical_clubs={len(season_canonical)}"
                 )
             if not args.dry_run:
-                build_manifest(data_dir, seasoncode)
-                print(f"{seasoncode}: manifest_rebuilt=1")
                 if not args.skip_elo_refresh:
                     compute_elo_for_season(output_dir=data_dir, seasoncode=seasoncode)
                     print(f"{seasoncode}: elo_rebuilt=1")
@@ -477,6 +476,11 @@ def main(argv: list[str] | None = None) -> int:
                 output_name="elo_multiseason.json",
             )
             print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
+
+        if not args.dry_run:
+            # Rebuild once across all stored seasons after bulk normalization.
+            build_manifest(data_dir)
+            print("manifest_rebuilt=1")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=sorted(seasoncodes))
         if unknown:
