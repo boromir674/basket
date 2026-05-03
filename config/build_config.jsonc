@@ -11,7 +11,6 @@
     "default_bundle_file": "multi_drilldown_real_data.json",
     "manifest_file": "games_manifest.json",
     "raw_pts_pattern": "raw_pts_{season}_{game}.json",
-    "elo_pattern": "elo_{season}.json",
     "style_insights_pattern": "style_insights_{season}.json"
   },
   "modes": {
@@ -27,9 +26,7 @@
         // Required by 'Cone' chart and score-diff / score-d52 families (classic + v2/full-paint).
         "data/raw/raw_pts_E*.json",
         // Precomputed timeline payload used for cheap score-diff and score-d52 rendering.
-        "data/score_timeline_E*.json",
-        // ELO data per Season, used for static Elo representation of past ELOs on Game Viewer (aka Sankey) page
-        "data/elo_E*.json"
+        "data/score_timeline_E*.json"
       ],
       "html_pages": [
         "prod/index.html",

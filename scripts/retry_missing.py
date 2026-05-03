@@ -102,14 +102,7 @@ def main() -> None:
 
     print(f"Retry summary: successes={successes}, failures={failures}")
 
-    # rebuild manifest
-    try:
-        from season_sync import build_manifest
-
-        build_manifest(output_dir, args.seasoncode)
-    except Exception:
-        # best-effort; ignore if we can't import
-        pass
+    print(f"manifest_not_rebuilt=1 (decoupled) | run: rebuild_manifest --all-seasons --output-dir {output_dir}")
 
 
 if __name__ == "__main__":

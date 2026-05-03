@@ -427,15 +427,46 @@ function formatEloValue(value){
   return Math.round(num);
 }
 
-function fetchEloForSeason(meta){
-  if(!meta || !meta.seasoncode) return Promise.resolve(null);
-  const eloFilename = runtimeConfig.applyPattern(runtimeConfig.eloPattern || 'elo_{season}.json', {
-    season: meta.seasoncode,
-  });
-  const eloFile = runtimeConfig.buildProcessedUrl(eloFilename, { fileBase: runtimeBase || undefined });
+function fetchMultiseasonElo(){
+  const eloFile = runtimeConfig.buildProcessedUrl('elo_multiseason.json', { fileBase: runtimeBase || undefined });
   return fetch(eloFile)
     .then(r => (r.ok ? r.json() : null))
     .catch(() => null);
+}
+
+function resolvePregameElo(meta){
+  const history = (eloPayload && Array.isArray(eloPayload.history)) ? eloPayload.history : null;
+  if(!meta || !history || !history.length) return { eloA: null, eloB: null };
+
+  const seasoncode = String(meta.seasoncode || "");
+  const gamecode = Number(meta.gamecode);
+  if(!seasoncode || !isFinite(gamecode)) return { eloA: null, eloB: null };
+
+  const gameRow = history.find(row =>
+    String(row && row.seasoncode ? row.seasoncode : "") === seasoncode
+    && Number(row && row.gamecode) === gamecode
+  );
+  if(!gameRow) return { eloA: null, eloB: null };
+
+  const teamA = String(meta.team_a || "");
+  const teamB = String(meta.team_b || "");
+  const rowTeamA = String(gameRow.team_a || "");
+  const rowTeamB = String(gameRow.team_b || "");
+
+  if(teamA && teamB && teamA === rowTeamA && teamB === rowTeamB){
+    return { eloA: gameRow.elo_a_before, eloB: gameRow.elo_b_before };
+  }
+  if(teamA && teamB && teamA === rowTeamB && teamB === rowTeamA){
+    return { eloA: gameRow.elo_b_before, eloB: gameRow.elo_a_before };
+  }
+
+  const byTeam = {};
+  if(rowTeamA) byTeam[rowTeamA] = gameRow.elo_a_before;
+  if(rowTeamB) byTeam[rowTeamB] = gameRow.elo_b_before;
+  return {
+    eloA: byTeam[teamA] ?? null,
+    eloB: byTeam[teamB] ?? null,
+  };
 }
 
 // PoC switch: when drilling into possession-type views, render either 4 columns (default)
@@ -2707,10 +2738,10 @@ function updateScoreboard(){
   const teamA = meta.team_a || "Team A";
   const teamB = meta.team_b || "Team B";
   const scoreLine = hasScoreRows ? `${scoreA} — ${scoreB}` : "—";
-  const ratings = (eloPayload && eloPayload.ratings) ? eloPayload.ratings : {};
-  const eloA = formatEloValue(ratings[teamA]);
-  const eloB = formatEloValue(ratings[teamB]);
-  const eloLine = `ELO: ${teamA} ${eloA} · ${teamB} ${eloB}`;
+  const pregame = resolvePregameElo(meta);
+  const eloA = formatEloValue(pregame.eloA);
+  const eloB = formatEloValue(pregame.eloB);
+  const eloLine = `Pregame ELO: ${teamA} ${eloA} · ${teamB} ${eloB}`;
   el.innerHTML = `<div class="scoreboard-primary">${scoreLine}</div><div class="scoreboard-secondary">${eloLine}</div>`;
 }
 
@@ -2722,7 +2753,7 @@ function applyLoadedBundle(bundle, initialViewKey){
     ? " · Mode: Live Replay Lab"
     : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
   renderHeaderSummary(meta, modeLabel);
-  fetchEloForSeason(meta).then(payload => {
+  fetchMultiseasonElo().then(payload => {
     eloPayload = payload;
     updateScoreboard();
   });
@@ -2851,7 +2882,7 @@ window.addEventListener('message', (ev) => {
           ? " · Mode: Live Replay Lab"
           : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
         renderHeaderSummary(meta, modeLabel);
-        fetchEloForSeason(meta).then(payload => {
+        fetchMultiseasonElo().then(payload => {
           eloPayload = payload;
           updateScoreboard();
         });

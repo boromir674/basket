@@ -662,7 +662,7 @@ def main(argv: list[str] | None = None) -> int:
     print_stored_seasons_inventory(output_dir)
 
     if processed > 0:
-        build_manifest(output_dir, seasoncode)
+        print(f"manifest_not_rebuilt=1 (decoupled) | run: rebuild_manifest --all-seasons --output-dir {output_dir}")
     else:
         logger.warning("No successful games; manifest not updated")
 

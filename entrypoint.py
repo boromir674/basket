@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 
 from basket.clubs import DEFAULT_REGISTRY
-from basket.elo import compute_elo_for_season, recompute_multiseason_elo_if_needed
+from basket.elo import recompute_multiseason_elo_if_needed
 from pipeline_runner import main as run_pipeline_main
 from validate_output import validate_file
 from season_sync import build_manifest, print_stored_seasons_inventory, main as season_sync_main
@@ -127,10 +127,8 @@ def run_pipeline_and_validate(argv: list[str]) -> int:
             any_failed = True
 
     if not any_failed:
-        # Refresh manifest for this season so the game switcher UI knows about
-        # newly generated JSON files.
         out_dir = Path(args.output_dir).resolve()
-        build_manifest(out_dir, args.seasoncode)
+        print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {out_dir}")
 
     return 1 if any_failed else 0
 
@@ -209,9 +207,7 @@ def main(argv: list[str] | None = None) -> int:
                 any_failed = True
 
         if not any_failed:
-            # Refresh manifest for this season so the game switcher can list
-            # the demo games without running season_sync separately.
-            build_manifest(out_dir, "E2021")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {out_dir}")
 
         return 1 if any_failed else 0
 
@@ -377,19 +373,14 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  - {alias} -> {DEFAULT_REGISTRY.normalize_team_name(alias)}")
 
         if not args.dry_run:
-            # Rebuild full manifest so normalization of one season does not
-            # accidentally narrow UI coverage to a single season.
-            build_manifest(data_dir)
-            print("manifest_rebuilt=1")
             if not args.skip_elo_refresh:
-                compute_elo_for_season(output_dir=data_dir, seasoncode=args.seasoncode)
                 recomputed, _payload, reason = recompute_multiseason_elo_if_needed(
                     output_dir=data_dir,
                     force=True,
                     output_name="elo_multiseason.json",
                 )
-                print("elo_season_rebuilt=1")
                 print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=[args.seasoncode])
         if unknown:
@@ -457,10 +448,6 @@ def main(argv: list[str] | None = None) -> int:
                 print(
                     f"{seasoncode}: {verb}_aliases={len(season_aliases)}, {verb}_canonical_clubs={len(season_canonical)}"
                 )
-            if not args.dry_run:
-                if not args.skip_elo_refresh:
-                    compute_elo_for_season(output_dir=data_dir, seasoncode=seasoncode)
-                    print(f"{seasoncode}: elo_rebuilt=1")
 
         verb = "would_normalize" if args.dry_run else "normalized"
         print(f"{verb}_aliases_total={len(all_aliases)}, {verb}_canonical_clubs_total={len(all_canonical)}")
@@ -478,9 +465,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
 
         if not args.dry_run:
-            # Rebuild once across all stored seasons after bulk normalization.
-            build_manifest(data_dir)
-            print("manifest_rebuilt=1")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=sorted(seasoncodes))
         if unknown:
@@ -520,8 +505,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"=== backfill_gamedates ({mode}) {args.seasoncode} in {data_dir} using {raw_dir} ===")
         print(f"files_total={counts['files_total']}, files_changed={counts['files_changed']}, missing_raw={counts['missing_raw']}, missing_date={counts['missing_date']}")
         if not args.dry_run:
-            build_manifest(data_dir, args.seasoncode)
-            print("manifest_rebuilt=1")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
         return 0
 
     if command == "check_dates":
@@ -654,8 +638,8 @@ def main(argv: list[str] | None = None) -> int:
         print("=== [3/5] Compute Elo ===")
         elo_main(["--seasoncode", args.seasoncode, "--output-dir", str(data_dir)])
 
-        print("=== [4/5] Rebuild manifest (includes Elo badges) ===")
-        build_manifest(data_dir, args.seasoncode)
+        print(f"=== [4/5] Manifest (decoupled; not rebuilt) ===")
+        print(f"manifest_not_rebuilt=1 | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
 
         print("=== [5/5] Report ===")
         report = build_season_report(seasoncode=args.seasoncode, data_dir=data_dir)

@@ -1,4 +1,4 @@
-.PHONY: help dev lab preflight preflight-app preflight-lab preflight-clean install-hooks sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates manifest-sanity report prepare-season test
+.PHONY: help dev lab preflight preflight-app preflight-lab preflight-clean install-hooks sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season manifest-rebuild elo elo-multi elo-auto check-dates manifest-sanity report prepare-season test
 
 help:
 	@echo "Targets:"
@@ -10,7 +10,7 @@ help:
 	@echo "  make check-dates [SEASON=E2025] [DATA_DIR=/app/data]"
 	@echo "  make manifest-sanity [DATA_DIR=/app/data]"
 	@echo "  make backfill-gamedates SEASON=E2025 RAW_DIR=/app/assets"
-	@echo "  make elo SEASON=E2025"
+	@echo "  make elo # alias of elo-auto (multi-season carry-forward)"
 	@echo "  make elo-multi SEASONS='E2022,E2023,E2024'"
 	@echo "  make elo-auto"
 	@echo "  make dev [PORT=8080]"
@@ -96,7 +96,7 @@ backfill-gamedates:
 	docker-compose run --rm ops backfill_gamedates --seasoncode $(SEASON) --data-dir $(DATA_DIR) --raw-dir $(RAW_DIR)
 
 elo:
-	docker-compose run --rm ops compute_elo --seasoncode $(SEASON) --output-dir $(DATA_DIR)
+	docker-compose run --rm ops compute_elo --auto --output-dir $(DATA_DIR) --output-name elo_multiseason.json
 
 elo-multi:
 	docker-compose run --rm ops compute_elo --seasoncodes $(SEASONS_CSV) --output-dir $(DATA_DIR) --output-name elo_multiseason.json
