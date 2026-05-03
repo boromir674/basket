@@ -29,6 +29,40 @@
     .wrap{max-width:1416px; margin:0 auto; padding:16px;}
     .top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:12px;}
     .title{font-size:18px; font-weight:700; letter-spacing:.2px;}
+    .titleRow{display:flex; align-items:center; gap:8px; position:relative;}
+    .eloHelpBtn{
+      width:20px;
+      height:20px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--panel2);
+      color:var(--accent);
+      font-size:12px;
+      font-weight:700;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      line-height:1;
+    }
+    .eloHelpBtn:hover{filter:brightness(1.08);}
+    .eloHelpPopover{
+      position:absolute;
+      top:28px;
+      left:0;
+      width:min(360px, 92vw);
+      display:none;
+      z-index:20;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:0 10px 32px rgba(0,0,0,.35);
+      padding:12px;
+    }
+    .eloHelpPopover .helpTitle{font-size:13px; font-weight:700; margin-bottom:8px;}
+    .eloHelpPopover .helpLine{font-size:12px; color:var(--muted); line-height:1.4; margin:0 0 6px;}
+    .eloHelpPopover .helpLine:last-child{margin-bottom:0;}
     .muted{color:var(--muted); font-size:12px;}
 
     .btn{
@@ -65,6 +99,14 @@
     }
     .seasonBtn.active{border-color:#3a6fa8; background:#0f1e33;}
     .warn{color:var(--warn); font-size:12px; margin-top:6px; min-height:15px;}
+    .simControls{margin-top:10px; border-top:1px solid var(--border); padding-top:10px;}
+    .simGrid{display:grid; grid-template-columns:1fr; gap:8px;}
+    .simToggle{display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px;}
+    .simToggle input{width:auto; margin:0;}
+    .seedRow{display:flex; gap:8px; align-items:center;}
+    .seedRow input{flex:1;}
+    .seedHelp{font-size:11px; color:var(--muted);}
+    .seedText{width:100%; min-height:72px; background:var(--panel2); border:1px solid var(--border); color:var(--text); border-radius:10px; padding:8px; font-size:12px;}
     select, input[type="range"]{
       width:100%;
       background:var(--panel2);
@@ -147,7 +189,18 @@
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="title">Elo Showcase</div>
+      <div class="titleRow">
+        <div class="title">Elo Showcase</div>
+        <button class="eloHelpBtn" id="eloHelpToggle" aria-label="What is Elo?" title="What is Elo?">?</button>
+        <div class="eloHelpPopover" id="eloHelpPopover" role="dialog" aria-label="Elo help">
+          <div class="helpTitle">What is Elo?</div>
+          <p class="helpLine">Elo is a strength rating that updates after each game based on result and opponent strength.</p>
+          <p class="helpLine">Higher Elo means stronger recent performance relative to league peers.</p>
+          <p class="helpLine">Use trend and deltas to spot momentum, overperformance, or decline.</p>
+          <p class="helpLine">Formula: E_new = E_old + K * (S - E_expected), where E_expected = 1 / (1 + 10^((opp - E_old)/400)).</p>
+          <p class="helpLine">Here S is actual outcome (1 win, 0.5 draw, 0 loss), K is rating sensitivity.</p>
+        </div>
+      </div>
       <div class="muted">Rank teams by Elo (as-of a fixture tick) + replay season progression.</div>
     </div>
     <div class="row" style="justify-content:flex-end;">
@@ -190,6 +243,22 @@
           <input id="tickRange" type="range" min="0" max="0" step="1" value="0" />
         </div>
         <div class="muted" style="margin-top:6px;">Tip: “Now” jumps to the latest fixture (most current Elo).</div>
+      </div>
+
+      <div class="simControls">
+        <div class="label">Elo Simulation Controls</div>
+        <div class="simGrid">
+          <label class="simToggle" for="preserveBaselineToggle">
+            <input id="preserveBaselineToggle" type="checkbox" checked />
+            Preserve historical baseline when trimming oldest season
+          </label>
+          <div class="seedRow">
+            <input id="globalSeedInput" type="number" step="1" placeholder="Global starting Elo (default from payload/config)" />
+            <button class="btn" id="applySeedsBtn" type="button">Apply</button>
+          </div>
+          <textarea id="teamSeedOverrides" class="seedText" placeholder="Per-team starting Elo overrides (one per line):&#10;Olympiacos Piraeus=1624&#10;Valencia Basket=1492"></textarea>
+          <div class="seedHelp">Overrides apply before Elo replay recomputation. Use '=' or ':' as separator.</div>
+        </div>
       </div>
 
       <div class="table" id="rankTable">
@@ -249,6 +318,12 @@
   const compareModeBtn = document.getElementById('compareModeBtn');
   const compareChips = document.getElementById('compareChips');
   const srStatus = document.getElementById('srStatus');
+  const eloHelpToggle = document.getElementById('eloHelpToggle');
+  const eloHelpPopover = document.getElementById('eloHelpPopover');
+  const preserveBaselineToggle = document.getElementById('preserveBaselineToggle');
+  const globalSeedInput = document.getElementById('globalSeedInput');
+  const teamSeedOverridesEl = document.getElementById('teamSeedOverrides');
+  const applySeedsBtn = document.getElementById('applySeedsBtn');
 
   const chartTooltip = document.getElementById('chartTooltip');
 
@@ -322,6 +397,15 @@
   let stylesByTeam = Object.create(null);
   let styleCache = Object.create(null);
   let compareTapMode = false;
+  let preserveHistoricalBaseline = true;
+  let fullTimelineCache = null;
+  let globalInitialSeed = null;
+  let teamSeedOverrides = Object.create(null);
+
+  function parseMaybeNumber(v){
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  }
 
   function isCoarsePointer(){
     try{
@@ -628,9 +712,20 @@
     });
   }
 
-  function initialRating(){
-    const v = (elo && typeof elo.initial_rating === 'number') ? elo.initial_rating : 1500;
-    return v;
+  function initialRating(team){
+    const teamKey = String(team || '');
+    if(teamKey && teamSeedOverrides[teamKey] != null) return teamSeedOverrides[teamKey];
+    if(globalInitialSeed != null) return globalInitialSeed;
+
+    const cfgSeed = parseMaybeNumber((runtimeConfig && runtimeConfig.eloInitialRating));
+    if(cfgSeed != null) return cfgSeed;
+
+    const globalCfgSeed = parseMaybeNumber(window.BASKET_ELO_INITIAL_RATING);
+    if(globalCfgSeed != null) return globalCfgSeed;
+
+    const payloadSeed = parseMaybeNumber(elo && elo.initial_rating);
+    if(payloadSeed != null) return payloadSeed;
+    return 1500;
   }
 
   function parseDateKey(gamedate){
@@ -673,11 +768,7 @@
     });
   }
 
-  function buildDerivedTimeline(){
-    const allowed = new Set(selectedSeasoncodes);
-    const sorted = sortHistoryEntries(rawHistory.filter(e => e && allowed.has(String(e.seasoncode || ''))));
-
-    const init = initialRating();
+  function deriveTimelineFromSorted(sorted){
     const ratings = Object.create(null);
     const teamsSet = new Set();
     const derivedHistory = [];
@@ -717,8 +808,8 @@
 
         teamsSet.add(teamA);
         teamsSet.add(teamB);
-        if(ratings[teamA] == null) ratings[teamA] = init;
-        if(ratings[teamB] == null) ratings[teamB] = init;
+        if(ratings[teamA] == null) ratings[teamA] = initialRating(teamA);
+        if(ratings[teamB] == null) ratings[teamB] = initialRating(teamB);
 
         const eloABefore = ratings[teamA];
         const eloBBefore = ratings[teamB];
@@ -767,11 +858,70 @@
       nextSnapshots.push(Object.assign({}, ratings));
     });
 
-    history = derivedHistory;
-    fixtures = nextFixtures;
-    fixtureSnapshots = nextSnapshots;
-    seasonBoundaryTicks = boundaries;
-    teams = Array.from(teamsSet).sort((a,b) => a.localeCompare(b));
+    return {
+      history: derivedHistory,
+      fixtures: nextFixtures,
+      fixtureSnapshots: nextSnapshots,
+      seasonBoundaryTicks: boundaries,
+      teams: Array.from(teamsSet).sort((a,b) => a.localeCompare(b)),
+    };
+  }
+
+  function buildDerivedTimeline(){
+    const allowed = new Set(selectedSeasoncodes);
+
+    if(preserveHistoricalBaseline){
+      if(!fullTimelineCache){
+        const fullSorted = sortHistoryEntries(rawHistory.filter(Boolean));
+        fullTimelineCache = deriveTimelineFromSorted(fullSorted);
+      }
+
+      const selectedFixtureIndexes = [];
+      const fixtureIndexMap = Object.create(null);
+      const selectedFixtures = [];
+      const selectedSnapshots = [];
+      const boundaries = [];
+
+      (fullTimelineCache.fixtures || []).forEach((f, idx) => {
+        const originalFixtureIndex = idx + 1;
+        if(!allowed.has(String((f && f.seasoncode) || ''))) return;
+        selectedFixtureIndexes.push(originalFixtureIndex);
+        fixtureIndexMap[originalFixtureIndex] = selectedFixtureIndexes.length;
+        const prev = selectedFixtures[selectedFixtures.length - 1];
+        if(prev && prev.seasoncode !== f.seasoncode){
+          boundaries.push((selectedFixtureIndexes.length - 1) + 0.5);
+        }
+        selectedFixtures.push(Object.assign({}, f, { x: selectedFixtureIndexes.length }));
+        selectedSnapshots.push(Object.assign({}, (fullTimelineCache.fixtureSnapshots[originalFixtureIndex - 1] || {})));
+      });
+
+      const filteredHistory = (fullTimelineCache.history || [])
+        .filter((e) => {
+          if(!allowed.has(String((e && e.seasoncode) || ''))) return false;
+          return fixtureIndexMap[e.fixture_index] != null;
+        })
+        .map((e) => Object.assign({}, e, { fixture_index: fixtureIndexMap[e.fixture_index] }));
+
+      const teamsSet = new Set();
+      filteredHistory.forEach((e) => {
+        if(e.team_a) teamsSet.add(e.team_a);
+        if(e.team_b) teamsSet.add(e.team_b);
+      });
+
+      history = filteredHistory;
+      fixtures = selectedFixtures;
+      fixtureSnapshots = selectedSnapshots;
+      seasonBoundaryTicks = boundaries;
+      teams = Array.from(teamsSet).sort((a,b) => a.localeCompare(b));
+    } else {
+      const sorted = sortHistoryEntries(rawHistory.filter(e => e && allowed.has(String(e.seasoncode || ''))));
+      const next = deriveTimelineFromSorted(sorted);
+      history = next.history;
+      fixtures = next.fixtures;
+      fixtureSnapshots = next.fixtureSnapshots;
+      seasonBoundaryTicks = next.seasonBoundaryTicks;
+      teams = next.teams;
+    }
 
     tickRange.min = '0';
     tickRange.max = String(fixtures.length);
@@ -781,8 +931,7 @@
 
   function computeRatingsAt(t){
     const ratings = {};
-    const init = initialRating();
-    teams.forEach(team => ratings[team] = init);
+    teams.forEach(team => ratings[team] = initialRating(team));
 
     const n = Math.max(0, Math.min(t, fixtures.length));
     if(n <= 0) return ratings;
@@ -1371,7 +1520,7 @@
   }
 
   function seriesForTeam(team, t){
-    const init = initialRating();
+    const init = initialRating(team);
     const pts = [{ x: 0, y: init }];
     const n = Math.max(0, Math.min(t, fixtures.length));
     for(let i=1;i<=n;i++){
@@ -1628,6 +1777,7 @@
     }
 
     rawHistory = Array.isArray(elo.history) ? elo.history.slice() : [];
+    fullTimelineCache = null;
     if(!rawHistory.length){
       showError('Elo file loaded but contains no history.');
       return;
@@ -1675,6 +1825,45 @@
 
     selectedSet = new Set();
     activeTeam = '';
+
+    if(globalSeedInput){
+      globalSeedInput.value = String(Math.round(initialRating('')));
+    }
+
+    if(preserveBaselineToggle){
+      preserveBaselineToggle.checked = preserveHistoricalBaseline;
+      preserveBaselineToggle.addEventListener('change', () => {
+        preserveHistoricalBaseline = !!preserveBaselineToggle.checked;
+        stop();
+        applySeasonSelection(true);
+      });
+    }
+
+    function parseTeamSeedOverrides(text){
+      const map = Object.create(null);
+      String(text || '').split(/\r?\n/).forEach((line) => {
+        const s = line.trim();
+        if(!s) return;
+        const m = s.match(/^(.+?)\s*(=|:)\s*(-?\d+(?:\.\d+)?)\s*$/);
+        if(!m) return;
+        const team = String(m[1] || '').trim();
+        const val = Number(m[3]);
+        if(team && Number.isFinite(val)) map[team] = val;
+      });
+      return map;
+    }
+
+    if(applySeedsBtn){
+      applySeedsBtn.addEventListener('click', () => {
+        const g = parseMaybeNumber(globalSeedInput && globalSeedInput.value);
+        globalInitialSeed = g;
+        teamSeedOverrides = parseTeamSeedOverrides(teamSeedOverridesEl && teamSeedOverridesEl.value);
+        fullTimelineCache = null;
+        stop();
+        applySeasonSelection(true);
+      });
+    }
+
     renderSeasonFilters();
     applySeasonSelection(true);
     if(!teams.length) return;
@@ -1723,6 +1912,42 @@
 
     setCompareMode(isCoarsePointer());
     render();
+
+    function initEloHelpPopover(){
+      if(!eloHelpToggle || !eloHelpPopover) return;
+      let isOpen = false;
+
+      const close = () => {
+        isOpen = false;
+        eloHelpPopover.style.display = 'none';
+        eloHelpToggle.setAttribute('aria-expanded', 'false');
+      };
+
+      const open = () => {
+        isOpen = true;
+        eloHelpPopover.style.display = 'block';
+        eloHelpToggle.setAttribute('aria-expanded', 'true');
+      };
+
+      eloHelpToggle.setAttribute('aria-expanded', 'false');
+      eloHelpToggle.addEventListener('click', () => {
+        if(isOpen) close();
+        else open();
+      });
+
+      // Close on any click anywhere on the page.
+      document.addEventListener('click', (e) => {
+        const target = e && e.target;
+        if(target && (eloHelpToggle.contains(target) || eloHelpPopover.contains(target))) return;
+        if(isOpen) close();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && isOpen) close();
+      });
+    }
+
+    initEloHelpPopover();
   }
 
   init();
