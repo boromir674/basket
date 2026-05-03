@@ -1,4 +1,4 @@
-.PHONY: help dev lab preflight preflight-app preflight-lab preflight-clean install-hooks sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates report prepare-season test
+.PHONY: help dev lab preflight preflight-app preflight-lab preflight-clean install-hooks sync-season sync-seasons normalize-season normalize-all-seasons backfill-gamedates redo-season elo elo-multi elo-auto check-dates manifest-sanity report prepare-season test
 
 help:
 	@echo "Targets:"
@@ -8,6 +8,7 @@ help:
 	@echo "  make normalize-season SEASON=E2025 NORMALIZE_WORKERS=8"
 	@echo "  make normalize-all-seasons NORMALIZE_WORKERS=8"
 	@echo "  make check-dates [SEASON=E2025] [DATA_DIR=/app/data]"
+	@echo "  make manifest-sanity [DATA_DIR=/app/data]"
 	@echo "  make backfill-gamedates SEASON=E2025 RAW_DIR=/app/assets"
 	@echo "  make elo SEASON=E2025"
 	@echo "  make elo-multi SEASONS='E2022,E2023,E2024'"
@@ -82,6 +83,9 @@ normalize-all-seasons:
 
 check-dates:
 	docker-compose run --rm ops check_dates --data-dir $(DATA_DIR) $(if $(SEASON),--seasoncode $(SEASON),)
+
+manifest-sanity:
+	docker-compose run --build --rm --entrypoint python ops /app/scripts/check_manifest_sanity.py --data-dir $(DATA_DIR)
 
 backfill-gamedates:
 	docker-compose run --rm ops backfill_gamedates --seasoncode $(SEASON) --data-dir $(DATA_DIR) --raw-dir $(RAW_DIR)
