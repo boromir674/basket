@@ -1,3 +1,12 @@
+# here we have a little file server similar to serve.sh
+FROM python:3.12-slim AS serve_files
+WORKDIR /app
+
+COPY public public
+
+CMD ["python3", "-m", "http.server", "8080", "--directory", "public"]
+
+
 FROM python:3.12-slim AS base
 WORKDIR /app
 

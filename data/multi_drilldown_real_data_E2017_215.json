@@ -1,0 +1,5583 @@
+{
+  "meta": {
+    "seasoncode": "E2017",
+    "gamecode": 215,
+    "team_a": "Olympiacos Piraeus",
+    "team_b": "CSKA Moscow",
+    "score_a": 81,
+    "score_b": 89,
+    "winner": "CSKA Moscow",
+    "gamedate": "2018-03-21",
+    "synced_at": "2026-05-02T21:46:28.613658+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P002091": {
+      "name": "ROBERTS, BRIAN",
+      "team": "Olympiacos Piraeus"
+    },
+    "P004888": {
+      "name": "CLYBURN, WILL",
+      "team": "CSKA Moscow"
+    },
+    "P005161": {
+      "name": "PAPAPETROU, IOANNIS",
+      "team": "Olympiacos Piraeus"
+    },
+    "P002812": {
+      "name": "HINES, KYLE",
+      "team": "CSKA Moscow"
+    },
+    "PAMM": {
+      "name": "PRINTEZIS, GEORGIOS",
+      "team": "Olympiacos Piraeus"
+    },
+    "PJUO": {
+      "name": "SPANOULIS, VASSILIS",
+      "team": "Olympiacos Piraeus"
+    },
+    "PJLX": {
+      "name": "KURBANOV, NIKITA",
+      "team": "CSKA Moscow"
+    },
+    "PCVM": {
+      "name": "RODRIGUEZ, SERGIO",
+      "team": "CSKA Moscow"
+    },
+    "P002100": {
+      "name": "DE COLO, NANDO",
+      "team": "CSKA Moscow"
+    },
+    "P003941": {
+      "name": "MILUTINOV, NIKOLA",
+      "team": "Olympiacos Piraeus"
+    },
+    "P006450": {
+      "name": "HIGGINS, CORY",
+      "team": "CSKA Moscow"
+    },
+    "P004941": {
+      "name": "ANTONOV, SEMEN",
+      "team": "CSKA Moscow"
+    },
+    "P000129": {
+      "name": "BROWN, BOBBY",
+      "team": "Olympiacos Piraeus"
+    },
+    "P002744": {
+      "name": "TILLIE, KIM",
+      "team": "Olympiacos Piraeus"
+    },
+    "P000046": {
+      "name": "STRELNIEKS, JANIS",
+      "team": "Olympiacos Piraeus"
+    },
+    "P004418": {
+      "name": "MCLEAN, JAMEL",
+      "team": "Olympiacos Piraeus"
+    },
+    "P008014": {
+      "name": "THOMPSON, HOLLIS",
+      "team": "Olympiacos Piraeus"
+    },
+    "P005160": {
+      "name": "HUNTER, OTHELLO",
+      "team": "CSKA Moscow"
+    },
+    "PLLH": {
+      "name": "FRIDZON, VITALY",
+      "team": "CSKA Moscow"
+    },
+    "P002543": {
+      "name": "WESTERMANN, LEO",
+      "team": "CSKA Moscow"
+    },
+    "PLHI": {
+      "name": "VORONTSEVICH, ANDREY",
+      "team": "CSKA Moscow"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P002100",
+      "player_name": "DE COLO, NANDO",
+      "team": "CSK",
+      "minutes": "26:41",
+      "points": 25,
+      "valuation": 31,
+      "plusminus": 17,
+      "assists": 4,
+      "rebounds": 5,
+      "turnovers": 4
+    },
+    {
+      "player_id": "P006536",
+      "player_name": "RUDD, VICTOR",
+      "team": "CSK",
+      "minutes": "03:49",
+      "points": 0,
+      "valuation": -1,
+      "plusminus": -3,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PLLH",
+      "player_name": "FRIDZON, VITALY",
+      "team": "CSK",
+      "minutes": "05:21",
+      "points": 0,
+      "valuation": -4,
+      "plusminus": 4,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P002543",
+      "player_name": "WESTERMANN, LEO",
+      "team": "CSK",
+      "minutes": "03:49",
+      "points": 0,
+      "valuation": 1,
+      "plusminus": -3,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004941",
+      "player_name": "ANTONOV, SEMEN",
+      "team": "CSK",
+      "minutes": "13:10",
+      "points": 5,
+      "valuation": 6,
+      "plusminus": 11,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PCVM",
+      "player_name": "RODRIGUEZ, SERGIO",
+      "team": "CSK",
+      "minutes": "24:07",
+      "points": 13,
+      "valuation": 13,
+      "plusminus": -4,
+      "assists": 3,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PLHI",
+      "player_name": "VORONTSEVICH, ANDREY",
+      "team": "CSK",
+      "minutes": "19:55",
+      "points": 3,
+      "valuation": 3,
+      "plusminus": 2,
+      "assists": 1,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004888",
+      "player_name": "CLYBURN, WILL",
+      "team": "CSK",
+      "minutes": "25:22",
+      "points": 12,
+      "valuation": 14,
+      "plusminus": 8,
+      "assists": 2,
+      "rebounds": 6,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P006450",
+      "player_name": "HIGGINS, CORY",
+      "team": "CSK",
+      "minutes": "21:33",
+      "points": 14,
+      "valuation": 15,
+      "plusminus": 5,
+      "assists": 4,
+      "rebounds": 2,
+      "turnovers": 3
+    },
+    {
+      "player_id": "PJLX",
+      "player_name": "KURBANOV, NIKITA",
+      "team": "CSK",
+      "minutes": "16:19",
+      "points": 4,
+      "valuation": 3,
+      "plusminus": -5,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P002812",
+      "player_name": "HINES, KYLE",
+      "team": "CSK",
+      "minutes": "17:49",
+      "points": 7,
+      "valuation": 7,
+      "plusminus": -6,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005160",
+      "player_name": "HUNTER, OTHELLO",
+      "team": "CSK",
+      "minutes": "22:05",
+      "points": 6,
+      "valuation": 11,
+      "plusminus": 14,
+      "assists": 0,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004418",
+      "player_name": "MCLEAN, JAMEL",
+      "team": "OLY",
+      "minutes": "22:52",
+      "points": 3,
+      "valuation": 12,
+      "plusminus": -13,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P000129",
+      "player_name": "BROWN, BOBBY",
+      "team": "OLY",
+      "minutes": "11:19",
+      "points": 3,
+      "valuation": -3,
+      "plusminus": -19,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005161",
+      "player_name": "PAPAPETROU, IOANNIS",
+      "team": "OLY",
+      "minutes": "32:27",
+      "points": 2,
+      "valuation": 2,
+      "plusminus": 2,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PJUO",
+      "player_name": "SPANOULIS, VASSILIS",
+      "team": "OLY",
+      "minutes": "29:22",
+      "points": 17,
+      "valuation": 8,
+      "plusminus": 11,
+      "assists": 6,
+      "rebounds": 0,
+      "turnovers": 5
+    },
+    {
+      "player_id": "P003941",
+      "player_name": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "minutes": "16:57",
+      "points": 10,
+      "valuation": 16,
+      "plusminus": 5,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P000046",
+      "player_name": "STRELNIEKS, JANIS",
+      "team": "OLY",
+      "minutes": "17:49",
+      "points": 5,
+      "valuation": 0,
+      "plusminus": -17,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P002744",
+      "player_name": "TILLIE, KIM",
+      "team": "OLY",
+      "minutes": "11:49",
+      "points": 3,
+      "valuation": 2,
+      "plusminus": -14,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PAMM",
+      "player_name": "PRINTEZIS, GEORGIOS",
+      "team": "OLY",
+      "minutes": "27:14",
+      "points": 24,
+      "valuation": 28,
+      "plusminus": 8,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P002091",
+      "player_name": "ROBERTS, BRIAN",
+      "team": "OLY",
+      "minutes": "20:13",
+      "points": 9,
+      "valuation": 13,
+      "plusminus": 2,
+      "assists": 3,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P001933",
+      "player_name": "BOGRIS, GEORGIOS",
+      "team": "OLY",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008052",
+      "player_name": "WILTJER, KYLE",
+      "team": "OLY",
+      "minutes": "00:35",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008014",
+      "player_name": "THOMPSON, HOLLIS",
+      "team": "OLY",
+      "minutes": "09:23",
+      "points": 5,
+      "valuation": 3,
+      "plusminus": -5,
+      "assists": 0,
+      "rebounds": 4,
+      "turnovers": 0
+    }
+  ],
+  "colors": {
+    "Olympiacos Piraeus": "#d62839",
+    "CSKA Moscow": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "Olympiacos Piraeus": 91,
+        "CSKA Moscow": 79
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "Olympiacos Piraeus starts",
+          "91"
+        ],
+        [
+          "CSKA Moscow starts",
+          "79"
+        ],
+        [
+          "Olympiacos Piraeus points per poss.",
+          "0.89"
+        ],
+        [
+          "Olympiacos Piraeus Made 3 share",
+          "7%"
+        ],
+        [
+          "CSKA Moscow points per poss.",
+          "1.13"
+        ],
+        [
+          "CSKA Moscow Made 3 share",
+          "10%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "Olympiacos Piraeus generated 0.89 points per possession over 91 tracked possessions.",
+        "CSKA Moscow generated 1.13 points per possession over 79 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Olympiacos_Piraeus_start",
+          "name": "Olympiacos Piraeus Start",
+          "team": "Olympiacos Piraeus",
+          "stage": "start"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Half-court",
+          "name": "Half-court",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_After_OREB",
+          "name": "After OREB",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Turnover",
+          "name": "Turnover",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Missed_shot",
+          "name": "Missed shot",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_2",
+          "name": "Made 2",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_3",
+          "name": "Made 3",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos Piraeus_0",
+          "name": "0 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_1",
+          "name": "1 pt",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_2",
+          "name": "2 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_3",
+          "name": "3 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA_Moscow_start",
+          "name": "CSKA Moscow Start",
+          "team": "CSKA Moscow",
+          "stage": "start"
+        },
+        {
+          "id": "CSKA_Moscow_Half-court",
+          "name": "Half-court",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_After_OREB",
+          "name": "After OREB",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Turnover",
+          "name": "Turnover",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Missed_shot",
+          "name": "Missed shot",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Made_2",
+          "name": "Made 2",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Made_3",
+          "name": "Made 3",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA Moscow_0",
+          "name": "0 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_1",
+          "name": "1 pt",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_2",
+          "name": "2 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_3",
+          "name": "3 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Half-court",
+          "value": 61
+        },
+        {
+          "source": "Olympiacos_Piraeus_Half-court",
+          "target": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "value": 24
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_1",
+          "value": 21
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Half-court",
+          "value": 40
+        },
+        {
+          "source": "CSKA_Moscow_Half-court",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 13
+        },
+        {
+          "source": "CSKA_Moscow_Made_2",
+          "target": "CSKA Moscow_2",
+          "value": 28
+        },
+        {
+          "source": "Olympiacos_Piraeus_Half-court",
+          "target": "Olympiacos_Piraeus_Missed_shot",
+          "value": 16
+        },
+        {
+          "source": "Olympiacos_Piraeus_Missed_shot",
+          "target": "Olympiacos Piraeus_0",
+          "value": 23
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Transition_Fast_break",
+          "value": 27
+        },
+        {
+          "source": "CSKA_Moscow_Transition_Fast_break",
+          "target": "CSKA_Moscow_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Shooting_foul_FTs",
+          "target": "CSKA Moscow_1",
+          "value": 9
+        },
+        {
+          "source": "CSKA_Moscow_Half-court",
+          "target": "CSKA_Moscow_Shooting_foul_FTs",
+          "value": 10
+        },
+        {
+          "source": "CSKA_Moscow_Shooting_foul_FTs",
+          "target": "CSKA Moscow_0",
+          "value": 3
+        },
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Transition_Fast_break",
+          "value": 22
+        },
+        {
+          "source": "Olympiacos_Piraeus_Transition_Fast_break",
+          "target": "Olympiacos_Piraeus_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "CSKA_Moscow_Transition_Fast_break",
+          "target": "CSKA_Moscow_Turnover",
+          "value": 7
+        },
+        {
+          "source": "CSKA_Moscow_Turnover",
+          "target": "CSKA Moscow_0",
+          "value": 14
+        },
+        {
+          "source": "Olympiacos_Piraeus_Half-court",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 7
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_2",
+          "target": "Olympiacos Piraeus_2",
+          "value": 21
+        },
+        {
+          "source": "CSKA_Moscow_Half-court",
+          "target": "CSKA_Moscow_Turnover",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_After_OREB",
+          "value": 8
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_OREB",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 6
+        },
+        {
+          "source": "Olympiacos_Piraeus_Half-court",
+          "target": "Olympiacos_Piraeus_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_3",
+          "target": "Olympiacos Piraeus_3",
+          "value": 6
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_After_OREB",
+          "value": 12
+        },
+        {
+          "source": "CSKA_Moscow_After_OREB",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 4
+        },
+        {
+          "source": "Olympiacos_Piraeus_Half-court",
+          "target": "Olympiacos_Piraeus_Turnover",
+          "value": 9
+        },
+        {
+          "source": "Olympiacos_Piraeus_Turnover",
+          "target": "Olympiacos Piraeus_0",
+          "value": 12
+        },
+        {
+          "source": "CSKA_Moscow_Transition_Fast_break",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 11
+        },
+        {
+          "source": "CSKA_Moscow_Half-court",
+          "target": "CSKA_Moscow_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "CSKA_Moscow_Missed_shot",
+          "target": "CSKA Moscow_0",
+          "value": 17
+        },
+        {
+          "source": "Olympiacos_Piraeus_Transition_Fast_break",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 8
+        },
+        {
+          "source": "CSKA_Moscow_Half-court",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Made_3",
+          "target": "CSKA Moscow_3",
+          "value": 8
+        },
+        {
+          "source": "CSKA_Moscow_After_OREB",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_After_OREB",
+          "target": "CSKA_Moscow_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Transition_Fast_break",
+          "target": "CSKA_Moscow_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_Transition_Fast_break",
+          "target": "Olympiacos_Piraeus_Turnover",
+          "value": 3
+        },
+        {
+          "source": "CSKA_Moscow_Transition_Fast_break",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_0",
+          "value": 8
+        },
+        {
+          "source": "Olympiacos_Piraeus_Transition_Fast_break",
+          "target": "Olympiacos_Piraeus_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Olympiacos_Piraeus_Transition_Fast_break",
+          "target": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "value": 4
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_OREB",
+          "target": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "CSKA_Moscow_After_OREB",
+          "target": "CSKA_Moscow_Turnover",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_OREB",
+          "target": "Olympiacos_Piraeus_Missed_shot",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Half-court": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 16
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 13
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Olympiacos Piraeus",
+            "player_name": "Unknown",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Half-court->Olympiacos_Piraeus_Shooting_foul_FTs": [
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 6
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_1": [
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 7
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Half-court": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 8
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 7
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 6
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Half-court->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_2->CSKA Moscow_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Half-court->Olympiacos_Piraeus_Missed_shot": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Missed_shot->Olympiacos Piraeus_0": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Transition_Fast_break": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 8
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 6
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Transition_Fast_break->CSKA_Moscow_Shooting_foul_FTs": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Shooting_foul_FTs->CSKA Moscow_1": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Half-court->CSKA_Moscow_Shooting_foul_FTs": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Shooting_foul_FTs->CSKA Moscow_0": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Transition_Fast_break": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 6
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Transition_Fast_break->Olympiacos_Piraeus_Missed_shot": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Transition_Fast_break->CSKA_Moscow_Turnover": [
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Turnover->CSKA Moscow_0": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::CSKA Moscow",
+            "player_name": "Unknown",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Half-court->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_2->Olympiacos Piraeus_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Half-court->CSKA_Moscow_Turnover": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_After_OREB": [
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_OREB->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Half-court->Olympiacos_Piraeus_Made_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_3->Olympiacos Piraeus_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_After_OREB": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::CSKA Moscow",
+            "player_name": "Unknown",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002543",
+            "player_name": "WESTERMANN, LEO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_OREB->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Half-court->Olympiacos_Piraeus_Turnover": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Olympiacos Piraeus",
+            "player_name": "Unknown",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Turnover->Olympiacos Piraeus_0": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Olympiacos Piraeus",
+            "player_name": "Unknown",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Transition_Fast_break->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Half-court->CSKA_Moscow_Missed_shot": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Missed_shot->CSKA Moscow_0": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002543",
+            "player_name": "WESTERMANN, LEO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Transition_Fast_break->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Half-court->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_3->CSKA Moscow_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_OREB->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_OREB->CSKA_Moscow_Missed_shot": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002543",
+            "player_name": "WESTERMANN, LEO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Transition_Fast_break->CSKA_Moscow_Missed_shot": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Transition_Fast_break->Olympiacos_Piraeus_Turnover": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Transition_Fast_break->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_0": [
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Transition_Fast_break->Olympiacos_Piraeus_Made_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Transition_Fast_break->Olympiacos_Piraeus_Shooting_foul_FTs": [
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_OREB->Olympiacos_Piraeus_Shooting_foul_FTs": [
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_OREB->CSKA_Moscow_Turnover": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::CSKA Moscow",
+            "player_name": "Unknown",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_OREB->Olympiacos_Piraeus_Missed_shot": [
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "Olympiacos Piraeus": 61,
+        "CSKA Moscow": 40
+      },
+      "title": "Zoomed Detail \u2014 Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "Olympiacos Piraeus count",
+          "61"
+        ],
+        [
+          "CSKA Moscow count",
+          "40"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Olympiacos_Piraeus_start",
+          "name": "Olympiacos Piraeus Half-court",
+          "team": "Olympiacos Piraeus",
+          "stage": "start"
+        },
+        {
+          "id": "CSKA_Moscow_start",
+          "name": "CSKA Moscow Half-court",
+          "team": "CSKA Moscow",
+          "stage": "start"
+        },
+        {
+          "id": "Olympiacos_Piraeus_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_2",
+          "name": "Made 2",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_3",
+          "name": "Made 3",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Missed_shot",
+          "name": "Missed shot",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Turnover",
+          "name": "Turnover",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos Piraeus_0",
+          "name": "0 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_1",
+          "name": "1 pt",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_2",
+          "name": "2 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_3",
+          "name": "3 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA_Moscow_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Made_2",
+          "name": "Made 2",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Made_3",
+          "name": "Made 3",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Missed_shot",
+          "name": "Missed shot",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Turnover",
+          "name": "Turnover",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA Moscow_0",
+          "name": "0 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_1",
+          "name": "1 pt",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_2",
+          "name": "2 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_3",
+          "name": "3 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_PnR_handler_action",
+          "value": 56
+        },
+        {
+          "source": "Olympiacos_Piraeus_PnR_handler_action",
+          "target": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "value": 24
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_1",
+          "value": 19
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_PnR_handler_action",
+          "value": 38
+        },
+        {
+          "source": "CSKA_Moscow_PnR_handler_action",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 13
+        },
+        {
+          "source": "CSKA_Moscow_Made_2",
+          "target": "CSKA Moscow_2",
+          "value": 13
+        },
+        {
+          "source": "Olympiacos_Piraeus_PnR_handler_action",
+          "target": "Olympiacos_Piraeus_Missed_shot",
+          "value": 16
+        },
+        {
+          "source": "Olympiacos_Piraeus_Missed_shot",
+          "target": "Olympiacos Piraeus_0",
+          "value": 16
+        },
+        {
+          "source": "CSKA_Moscow_PnR_handler_action",
+          "target": "CSKA_Moscow_Shooting_foul_FTs",
+          "value": 10
+        },
+        {
+          "source": "CSKA_Moscow_Shooting_foul_FTs",
+          "target": "CSKA Moscow_0",
+          "value": 3
+        },
+        {
+          "source": "Olympiacos_Piraeus_PnR_handler_action",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 7
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_2",
+          "target": "Olympiacos Piraeus_2",
+          "value": 7
+        },
+        {
+          "source": "CSKA_Moscow_PnR_handler_action",
+          "target": "CSKA_Moscow_Turnover",
+          "value": 5
+        },
+        {
+          "source": "CSKA_Moscow_Turnover",
+          "target": "CSKA Moscow_0",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Spot-up_swing",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_Spot-up_swing",
+          "target": "Olympiacos_Piraeus_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_3",
+          "target": "Olympiacos Piraeus_3",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_PnR_handler_action",
+          "target": "Olympiacos_Piraeus_Turnover",
+          "value": 9
+        },
+        {
+          "source": "Olympiacos_Piraeus_Turnover",
+          "target": "Olympiacos Piraeus_0",
+          "value": 9
+        },
+        {
+          "source": "CSKA_Moscow_PnR_handler_action",
+          "target": "CSKA_Moscow_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "CSKA_Moscow_Missed_shot",
+          "target": "CSKA Moscow_0",
+          "value": 10
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Spot-up_swing",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Spot-up_swing",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Made_3",
+          "target": "CSKA Moscow_3",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_0",
+          "value": 5
+        },
+        {
+          "source": "CSKA_Moscow_Shooting_foul_FTs",
+          "target": "CSKA Moscow_1",
+          "value": 7
+        }
+      ],
+      "player_flows": {
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_PnR_handler_action": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 14
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 12
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Olympiacos Piraeus",
+            "player_name": "Unknown",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_PnR_handler_action->Olympiacos_Piraeus_Shooting_foul_FTs": [
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 6
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_1": [
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 6
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_PnR_handler_action": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 7
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 6
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 6
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_PnR_handler_action->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_2->CSKA Moscow_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_PnR_handler_action->Olympiacos_Piraeus_Missed_shot": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Missed_shot->Olympiacos Piraeus_0": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_PnR_handler_action->CSKA_Moscow_Shooting_foul_FTs": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Shooting_foul_FTs->CSKA Moscow_0": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_PnR_handler_action->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_2->Olympiacos Piraeus_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_PnR_handler_action->CSKA_Moscow_Turnover": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Turnover->CSKA Moscow_0": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Spot-up_swing": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Spot-up_swing->Olympiacos_Piraeus_Made_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_3->Olympiacos Piraeus_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_PnR_handler_action->Olympiacos_Piraeus_Turnover": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Olympiacos Piraeus",
+            "player_name": "Unknown",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Turnover->Olympiacos Piraeus_0": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Olympiacos Piraeus",
+            "player_name": "Unknown",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_PnR_handler_action->CSKA_Moscow_Missed_shot": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Missed_shot->CSKA Moscow_0": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Spot-up_swing": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Spot-up_swing->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_3->CSKA Moscow_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_0": [
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Shooting_foul_FTs->CSKA Moscow_1": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "Olympiacos Piraeus": 22,
+        "CSKA Moscow": 27
+      },
+      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "Olympiacos Piraeus count",
+          "22"
+        ],
+        [
+          "CSKA Moscow count",
+          "27"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Olympiacos_Piraeus_start",
+          "name": "Olympiacos Piraeus Transition",
+          "team": "Olympiacos Piraeus",
+          "stage": "start"
+        },
+        {
+          "id": "CSKA_Moscow_start",
+          "name": "CSKA Moscow Transition",
+          "team": "CSKA Moscow",
+          "stage": "start"
+        },
+        {
+          "id": "Olympiacos_Piraeus_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_2",
+          "name": "Made 2",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_3",
+          "name": "Made 3",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Missed_shot",
+          "name": "Missed shot",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Turnover",
+          "name": "Turnover",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos Piraeus_0",
+          "name": "0 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_1",
+          "name": "1 pt",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_2",
+          "name": "2 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_3",
+          "name": "3 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA_Moscow_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Made_2",
+          "name": "Made 2",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Made_3",
+          "name": "Made 3",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Missed_shot",
+          "name": "Missed shot",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Turnover",
+          "name": "Turnover",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA Moscow_0",
+          "name": "0 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_1",
+          "name": "1 pt",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_2",
+          "name": "2 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_3",
+          "name": "3 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_After_defensive_rebound",
+          "value": 27
+        },
+        {
+          "source": "CSKA_Moscow_After_defensive_rebound",
+          "target": "CSKA_Moscow_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Shooting_foul_FTs",
+          "target": "CSKA Moscow_1",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_After_defensive_rebound",
+          "value": 22
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_defensive_rebound",
+          "target": "Olympiacos_Piraeus_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Olympiacos_Piraeus_Missed_shot",
+          "target": "Olympiacos Piraeus_0",
+          "value": 6
+        },
+        {
+          "source": "CSKA_Moscow_After_defensive_rebound",
+          "target": "CSKA_Moscow_Turnover",
+          "value": 7
+        },
+        {
+          "source": "CSKA_Moscow_Turnover",
+          "target": "CSKA Moscow_0",
+          "value": 7
+        },
+        {
+          "source": "CSKA_Moscow_After_defensive_rebound",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 11
+        },
+        {
+          "source": "CSKA_Moscow_Made_2",
+          "target": "CSKA Moscow_2",
+          "value": 11
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_defensive_rebound",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_2",
+          "target": "Olympiacos Piraeus_2",
+          "value": 8
+        },
+        {
+          "source": "CSKA_Moscow_After_defensive_rebound",
+          "target": "CSKA_Moscow_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "CSKA_Moscow_Missed_shot",
+          "target": "CSKA Moscow_0",
+          "value": 5
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_defensive_rebound",
+          "target": "Olympiacos_Piraeus_Turnover",
+          "value": 3
+        },
+        {
+          "source": "Olympiacos_Piraeus_Turnover",
+          "target": "Olympiacos Piraeus_0",
+          "value": 3
+        },
+        {
+          "source": "CSKA_Moscow_After_defensive_rebound",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Made_3",
+          "target": "CSKA Moscow_3",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_defensive_rebound",
+          "target": "Olympiacos_Piraeus_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_3",
+          "target": "Olympiacos Piraeus_3",
+          "value": 1
+        },
+        {
+          "source": "Olympiacos_Piraeus_After_defensive_rebound",
+          "target": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "value": 4
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_0",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_1",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "CSKA_Moscow_start->CSKA_Moscow_After_defensive_rebound": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 8
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 6
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_defensive_rebound->CSKA_Moscow_Shooting_foul_FTs": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Shooting_foul_FTs->CSKA Moscow_1": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_After_defensive_rebound": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 6
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 4
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_defensive_rebound->Olympiacos_Piraeus_Missed_shot": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Missed_shot->Olympiacos Piraeus_0": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_defensive_rebound->CSKA_Moscow_Turnover": [
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Turnover->CSKA Moscow_0": [
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_defensive_rebound->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_2->CSKA Moscow_2": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_defensive_rebound->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_2->Olympiacos Piraeus_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_defensive_rebound->CSKA_Moscow_Missed_shot": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Missed_shot->CSKA Moscow_0": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PLLH",
+            "player_name": "FRIDZON, VITALY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_defensive_rebound->Olympiacos_Piraeus_Turnover": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Turnover->Olympiacos Piraeus_0": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_After_defensive_rebound->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_3->CSKA Moscow_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_defensive_rebound->Olympiacos_Piraeus_Made_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_3->Olympiacos Piraeus_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_After_defensive_rebound->Olympiacos_Piraeus_Shooting_foul_FTs": [
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_0": [
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_1": [
+          {
+            "player_id": "P004418",
+            "player_name": "MCLEAN, JAMEL",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "Olympiacos Piraeus": 8,
+        "CSKA Moscow": 12
+      },
+      "title": "Zoomed Detail \u2014 After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "Olympiacos Piraeus count",
+          "8"
+        ],
+        [
+          "CSKA Moscow count",
+          "12"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Olympiacos_Piraeus_start",
+          "name": "Olympiacos Piraeus After OREB",
+          "team": "Olympiacos Piraeus",
+          "stage": "start"
+        },
+        {
+          "id": "CSKA_Moscow_start",
+          "name": "CSKA Moscow After OREB",
+          "team": "CSKA Moscow",
+          "stage": "start"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_2",
+          "name": "Made 2",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_3",
+          "name": "Made 3",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Missed_shot",
+          "name": "Missed shot",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Turnover",
+          "name": "Turnover",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos Piraeus_0",
+          "name": "0 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_2",
+          "name": "2 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "Olympiacos Piraeus_3",
+          "name": "3 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA_Moscow_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Made_2",
+          "name": "Made 2",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Made_3",
+          "name": "Made 3",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Missed_shot",
+          "name": "Missed shot",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA_Moscow_Turnover",
+          "name": "Turnover",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA Moscow_0",
+          "name": "0 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_2",
+          "name": "2 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA Moscow_3",
+          "name": "3 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Immediate_putback",
+          "value": 6
+        },
+        {
+          "source": "Olympiacos_Piraeus_Immediate_putback",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 6
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_2",
+          "target": "Olympiacos Piraeus_2",
+          "value": 6
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Immediate_putback",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_Immediate_putback",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_Made_2",
+          "target": "CSKA Moscow_2",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Kick-out_perimeter",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_Kick-out_perimeter",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_Made_3",
+          "target": "CSKA Moscow_3",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Reset_half-court",
+          "value": 4
+        },
+        {
+          "source": "CSKA_Moscow_Reset_half-court",
+          "target": "CSKA_Moscow_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Missed_shot",
+          "target": "CSKA Moscow_0",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Reset_half-court",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_Reset_half-court",
+          "target": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Olympiacos_Piraeus_Shooting_foul_FTs",
+          "target": "Olympiacos Piraeus_0",
+          "value": 1
+        },
+        {
+          "source": "CSKA_Moscow_Reset_half-court",
+          "target": "CSKA_Moscow_Turnover",
+          "value": 2
+        },
+        {
+          "source": "CSKA_Moscow_Turnover",
+          "target": "CSKA Moscow_0",
+          "value": 2
+        },
+        {
+          "source": "Olympiacos_Piraeus_Reset_half-court",
+          "target": "Olympiacos_Piraeus_Missed_shot",
+          "value": 1
+        },
+        {
+          "source": "Olympiacos_Piraeus_Missed_shot",
+          "target": "Olympiacos Piraeus_0",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Immediate_putback": [
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Immediate_putback->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_2->Olympiacos Piraeus_2": [
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Immediate_putback": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Immediate_putback->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_2->CSKA Moscow_2": [
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Kick-out_perimeter": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Kick-out_perimeter->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_3->CSKA Moscow_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Reset_half-court": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::CSKA Moscow",
+            "player_name": "Unknown",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002543",
+            "player_name": "WESTERMANN, LEO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Reset_half-court->CSKA_Moscow_Missed_shot": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002543",
+            "player_name": "WESTERMANN, LEO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Missed_shot->CSKA Moscow_0": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P002543",
+            "player_name": "WESTERMANN, LEO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Reset_half-court": [
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Reset_half-court->Olympiacos_Piraeus_Shooting_foul_FTs": [
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Shooting_foul_FTs->Olympiacos Piraeus_0": [
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Reset_half-court->CSKA_Moscow_Turnover": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::CSKA Moscow",
+            "player_name": "Unknown",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Turnover->CSKA Moscow_0": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::CSKA Moscow",
+            "player_name": "Unknown",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Reset_half-court->Olympiacos_Piraeus_Missed_shot": [
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Missed_shot->Olympiacos Piraeus_0": [
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "Olympiacos Piraeus": 21,
+        "CSKA Moscow": 28
+      },
+      "title": "Zoomed Detail \u2014 Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Olympiacos Piraeus count",
+          "21"
+        ],
+        [
+          "CSKA Moscow count",
+          "28"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Olympiacos_Piraeus_start",
+          "name": "Olympiacos Piraeus Made 2",
+          "team": "Olympiacos Piraeus",
+          "stage": "start"
+        },
+        {
+          "id": "CSKA_Moscow_start",
+          "name": "CSKA Moscow Made 2",
+          "team": "CSKA Moscow",
+          "stage": "start"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_2",
+          "name": "Made 2",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos Piraeus_2",
+          "name": "2 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA_Moscow_Layup_runner",
+          "name": "Layup / runner",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Made_2",
+          "name": "Made 2",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA Moscow_2",
+          "name": "2 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Layup_runner",
+          "value": 28
+        },
+        {
+          "source": "CSKA_Moscow_Layup_runner",
+          "target": "CSKA_Moscow_Made_2",
+          "value": 28
+        },
+        {
+          "source": "CSKA_Moscow_Made_2",
+          "target": "CSKA Moscow_2",
+          "value": 28
+        },
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Layup_runner",
+          "value": 21
+        },
+        {
+          "source": "Olympiacos_Piraeus_Layup_runner",
+          "target": "Olympiacos_Piraeus_Made_2",
+          "value": 21
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_2",
+          "target": "Olympiacos Piraeus_2",
+          "value": 21
+        }
+      ],
+      "player_flows": {
+        "CSKA_Moscow_start->CSKA_Moscow_Layup_runner": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Layup_runner->CSKA_Moscow_Made_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_2->CSKA Moscow_2": [
+          {
+            "player_id": "P004888",
+            "player_name": "CLYBURN, WILL",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 5
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P002812",
+            "player_name": "HINES, KYLE",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "P005160",
+            "player_name": "HUNTER, OTHELLO",
+            "team": "CSKA Moscow",
+            "poss": 3
+          },
+          {
+            "player_id": "PJLX",
+            "player_name": "KURBANOV, NIKITA",
+            "team": "CSKA Moscow",
+            "poss": 2
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Layup_runner": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Layup_runner->Olympiacos_Piraeus_Made_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_2->Olympiacos Piraeus_2": [
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 8
+          },
+          {
+            "player_id": "P003941",
+            "player_name": "MILUTINOV, NIKOLA",
+            "team": "Olympiacos Piraeus",
+            "poss": 5
+          },
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 2
+          },
+          {
+            "player_id": "P000129",
+            "player_name": "BROWN, BOBBY",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P005161",
+            "player_name": "PAPAPETROU, IOANNIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002091",
+            "player_name": "ROBERTS, BRIAN",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P002744",
+            "player_name": "TILLIE, KIM",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "Olympiacos Piraeus": 6,
+        "CSKA Moscow": 8
+      },
+      "title": "Zoomed Detail \u2014 Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Olympiacos Piraeus count",
+          "6"
+        ],
+        [
+          "CSKA Moscow count",
+          "8"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Olympiacos_Piraeus_start",
+          "name": "Olympiacos Piraeus Made 3",
+          "team": "Olympiacos Piraeus",
+          "stage": "start"
+        },
+        {
+          "id": "CSKA_Moscow_start",
+          "name": "CSKA Moscow Made 3",
+          "team": "CSKA Moscow",
+          "stage": "start"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Olympiacos Piraeus",
+          "stage": "type"
+        },
+        {
+          "id": "Olympiacos_Piraeus_Made_3",
+          "name": "Made 3",
+          "team": "Olympiacos Piraeus",
+          "stage": "event"
+        },
+        {
+          "id": "Olympiacos Piraeus_3",
+          "name": "3 pts",
+          "team": "Olympiacos Piraeus",
+          "stage": "points"
+        },
+        {
+          "id": "CSKA_Moscow_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "CSKA Moscow",
+          "stage": "type"
+        },
+        {
+          "id": "CSKA_Moscow_Made_3",
+          "name": "Made 3",
+          "team": "CSKA Moscow",
+          "stage": "event"
+        },
+        {
+          "id": "CSKA Moscow_3",
+          "name": "3 pts",
+          "team": "CSKA Moscow",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Olympiacos_Piraeus_start",
+          "target": "Olympiacos_Piraeus_Above-the-break_C&S",
+          "value": 6
+        },
+        {
+          "source": "Olympiacos_Piraeus_Above-the-break_C&S",
+          "target": "Olympiacos_Piraeus_Made_3",
+          "value": 6
+        },
+        {
+          "source": "Olympiacos_Piraeus_Made_3",
+          "target": "Olympiacos Piraeus_3",
+          "value": 6
+        },
+        {
+          "source": "CSKA_Moscow_start",
+          "target": "CSKA_Moscow_Above-the-break_C&S",
+          "value": 8
+        },
+        {
+          "source": "CSKA_Moscow_Above-the-break_C&S",
+          "target": "CSKA_Moscow_Made_3",
+          "value": 8
+        },
+        {
+          "source": "CSKA_Moscow_Made_3",
+          "target": "CSKA Moscow_3",
+          "value": 8
+        }
+      ],
+      "player_flows": {
+        "Olympiacos_Piraeus_start->Olympiacos_Piraeus_Above-the-break_C&S": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Above-the-break_C&S->Olympiacos_Piraeus_Made_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "Olympiacos_Piraeus_Made_3->Olympiacos Piraeus_3": [
+          {
+            "player_id": "PJUO",
+            "player_name": "SPANOULIS, VASSILIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 3
+          },
+          {
+            "player_id": "PAMM",
+            "player_name": "PRINTEZIS, GEORGIOS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P000046",
+            "player_name": "STRELNIEKS, JANIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          },
+          {
+            "player_id": "P008014",
+            "player_name": "THOMPSON, HOLLIS",
+            "team": "Olympiacos Piraeus",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_start->CSKA_Moscow_Above-the-break_C&S": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Above-the-break_C&S->CSKA_Moscow_Made_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ],
+        "CSKA_Moscow_Made_3->CSKA Moscow_3": [
+          {
+            "player_id": "P002100",
+            "player_name": "DE COLO, NANDO",
+            "team": "CSKA Moscow",
+            "poss": 4
+          },
+          {
+            "player_id": "P004941",
+            "player_name": "ANTONOV, SEMEN",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PCVM",
+            "player_name": "RODRIGUEZ, SERGIO",
+            "team": "CSKA Moscow",
+            "poss": 1
+          },
+          {
+            "player_id": "PLHI",
+            "player_name": "VORONTSEVICH, ANDREY",
+            "team": "CSKA Moscow",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}

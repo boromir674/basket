@@ -8,15 +8,66 @@ from pathlib import Path
 import os
 
 from basket.clubs import DEFAULT_REGISTRY
+from basket.elo import recompute_multiseason_elo_if_needed
 from pipeline_runner import main as run_pipeline_main
 from validate_output import validate_file
-from season_sync import build_manifest, print_stored_seasons_inventory
+from season_sync import build_manifest, print_stored_seasons_inventory, main as season_sync_main
+from style_insights import main as style_insights_main
 from season_ops import (
     backfill_season_gamedates,
     build_season_report,
     find_unknown_club_names,
     normalize_season_data_files,
 )
+
+
+def orchestrate_full_season_sync(
+    *,
+    seasoncode: str,
+    output_dir: Path,
+    sync_fn,  # Injected season_sync main callable
+    insights_fn,  # Injected style_insights main callable
+) -> int:
+    """Orchestrate full season pipeline: sync (raw + multi + score_timeline) + style_insights.
+
+    Uses composition and dependency injection to keep sync and insights decoupled.
+    Both remain standalone and testable; this orchestrator chains them.
+    """
+    print(f"\n=== Full Season Sync: {seasoncode} ===")
+
+    # Step 1: season_sync (produces raw, multi, score_timeline)
+    print(f"=== [1/2] Syncing season data (raw + multi + score_timeline) ===")
+    sync_result = sync_fn(
+        [
+            "--seasoncode",
+            seasoncode,
+            "--output-dir",
+            str(output_dir),
+        ]
+    )
+    if sync_result != 0:
+        print(f"ERROR: season_sync failed with code {sync_result}")
+        return sync_result
+
+    # Step 2: style_insights (produces style_insights_E####.json)
+    print(f"=== [2/2] Building style insights (consistency + adaptability) ===")
+    insights_result = insights_fn(
+        [
+            "--seasoncode",
+            seasoncode,
+            "--data-dir",
+            str(output_dir),
+            "--output-dir",
+            str(output_dir),
+        ]
+    )
+    if insights_result != 0:
+        print(f"ERROR: style_insights failed with code {insights_result}")
+        return insights_result
+
+    print(f"\n✓ Full season sync complete: {seasoncode}")
+    print(f"  Artifacts: raw_*, multi_*, score_timeline_*, style_insights_*")
+    return 0
 
 
 def run_pipeline_and_validate(argv: list[str]) -> int:
@@ -76,10 +127,8 @@ def run_pipeline_and_validate(argv: list[str]) -> int:
             any_failed = True
 
     if not any_failed:
-        # Refresh manifest for this season so the game switcher UI knows about
-        # newly generated JSON files.
         out_dir = Path(args.output_dir).resolve()
-        build_manifest(out_dir, args.seasoncode)
+        print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {out_dir}")
 
     return 1 if any_failed else 0
 
@@ -93,14 +142,15 @@ def main(argv: list[str] | None = None) -> int:
         print("  entrypoint.py run_pipeline_and_validate [ARGS...]")
         print("  entrypoint.py demo")
         print("  entrypoint.py demo_auto_insights")
+        print("  entrypoint.py sync_season_full --seasoncode E2025 --output-dir data [--log-level DEBUG]")
         print("  entrypoint.py redo_season --seasoncode E2025 [--data-dir /app/data] [--concurrency 16] [--dry-run]")
-        print("  entrypoint.py sync_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --output-dir data [--log-level DEBUG]")
+        print("  entrypoint.py sync_season --seasoncode E2025 --output-dir data [--log-level DEBUG]")
         print("  entrypoint.py normalize_season_data --seasoncode E2025 --data-dir data [--workers 8] [--dry-run]")
         print("  entrypoint.py normalize_all_seasons --data-dir data [--workers 8] [--dry-run]")
         print("  entrypoint.py backfill_gamedates --seasoncode E2025 --data-dir data --raw-dir assets [--dry-run]")
         print("  entrypoint.py report_season --seasoncode E2025 --data-dir data")
         print("  entrypoint.py report_inventory [--output-dir assets/processed]")
-        print("  entrypoint.py prepare_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --data-dir data")
+        print("  entrypoint.py prepare_season --seasoncode E2025 --data-dir data")
         print("  entrypoint.py compute_elo --seasoncode E2021 [--output-dir assets/processed] [--k-factor 32] [--initial-rating 1500]")
         print("  entrypoint.py compute_elo --seasoncodes E2022,E2023,E2024 [--output-dir assets/processed] [--output-name elo_multiseason.json]")
         print("  entrypoint.py compute_elo --auto [--output-dir assets/processed] [--output-name elo_multiseason.json] [--force]")
@@ -157,9 +207,7 @@ def main(argv: list[str] | None = None) -> int:
                 any_failed = True
 
         if not any_failed:
-            # Refresh manifest for this season so the game switcher can list
-            # the demo games without running season_sync separately.
-            build_manifest(out_dir, "E2021")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {out_dir}")
 
         return 1 if any_failed else 0
 
@@ -216,8 +264,6 @@ def main(argv: list[str] | None = None) -> int:
                             help="Report delete + ingest plan without changing files")
         args = parser.parse_args(rest)
 
-        from season_sync import main as season_sync_main
-
         seasoncode = args.seasoncode
         data_dir = Path(args.data_dir).resolve()
         raw_dir = Path(args.raw_dir).resolve()
@@ -249,8 +295,6 @@ def main(argv: list[str] | None = None) -> int:
         os.environ["BASKET_APP_FILE_STORE_URI"] = str(raw_dir)
         sync_args = [
             "--seasoncode", seasoncode,
-            "--start-gamecode", "1",
-            "--end-gamecode", str(args.max_gamecode),
             "--output-dir", str(data_dir),
             "--concurrency", str(args.concurrency),
             "--max-failures", str(args.gap_limit),
@@ -259,10 +303,32 @@ def main(argv: list[str] | None = None) -> int:
         ]
         return season_sync_main(sync_args)
 
+    if command == "sync_season_full":
+        # Orchestrate full season sync: raw + multi + score_timeline + style_insights.
+        # Demonstrates composition and dependency injection for clean decoupling.
+        parser = argparse.ArgumentParser(
+            description="Full season sync: orchestrates season_sync + style_insights in sequence."
+        )
+        parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2025")
+        parser.add_argument(
+            "--output-dir",
+            default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
+            help="Directory for all outputs (default: BASKET_APP_FILE_STORE_URI/processed)",
+        )
+        args = parser.parse_args(rest)
+        output_dir = Path(args.output_dir).resolve()
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Inject both sync and insights functions as dependencies
+        return orchestrate_full_season_sync(
+            seasoncode=args.seasoncode,
+            output_dir=output_dir,
+            sync_fn=season_sync_main,
+            insights_fn=style_insights_main,
+        )
+
     if command == "sync_season":
         # Wrapper around season_sync so we keep a single top-level entrypoint.
-        from season_sync import main as season_sync_main
-
         return season_sync_main(rest)
 
     if command == "normalize_season_data":
@@ -273,8 +339,18 @@ def main(argv: list[str] | None = None) -> int:
             default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
             help="Directory containing season JSON files (default: BASKET_APP_FILE_STORE_URI/processed)",
         )
-        parser.add_argument("--workers", type=int, default=1, help="Thread workers for concurrent file I/O")
+        parser.add_argument(
+            "--workers",
+            type=int,
+            default=max(1, min(16, os.cpu_count() or 1)),
+            help="Thread workers for concurrent file I/O (default: min(16, CPU count))",
+        )
         parser.add_argument("--dry-run", action="store_true", help="Report what would change without writing files")
+        parser.add_argument(
+            "--skip-elo-refresh",
+            action="store_true",
+            help="Skip recomputing ELO payloads after normalization",
+        )
         args = parser.parse_args(rest)
 
         data_dir = Path(args.data_dir).resolve()
@@ -297,9 +373,14 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  - {alias} -> {DEFAULT_REGISTRY.normalize_team_name(alias)}")
 
         if not args.dry_run:
-            # Keep the UI game switcher consistent with any rewritten team labels.
-            build_manifest(data_dir, args.seasoncode)
-            print("manifest_rebuilt=1")
+            if not args.skip_elo_refresh:
+                recomputed, _payload, reason = recompute_multiseason_elo_if_needed(
+                    output_dir=data_dir,
+                    force=True,
+                    output_name="elo_multiseason.json",
+                )
+                print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=[args.seasoncode])
         if unknown:
@@ -318,8 +399,18 @@ def main(argv: list[str] | None = None) -> int:
             default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
             help="Directory containing season JSON files (default: BASKET_APP_FILE_STORE_URI/processed)",
         )
-        parser.add_argument("--workers", type=int, default=1, help="Thread workers for concurrent file I/O")
+        parser.add_argument(
+            "--workers",
+            type=int,
+            default=max(1, min(16, os.cpu_count() or 1)),
+            help="Thread workers for concurrent file I/O (default: min(16, CPU count))",
+        )
         parser.add_argument("--dry-run", action="store_true", help="Report what would change without writing files")
+        parser.add_argument(
+            "--skip-elo-refresh",
+            action="store_true",
+            help="Skip recomputing ELO payloads after normalization",
+        )
         args = parser.parse_args(rest)
 
         data_dir = Path(args.data_dir).resolve()
@@ -357,9 +448,6 @@ def main(argv: list[str] | None = None) -> int:
                 print(
                     f"{seasoncode}: {verb}_aliases={len(season_aliases)}, {verb}_canonical_clubs={len(season_canonical)}"
                 )
-            if not args.dry_run:
-                build_manifest(data_dir, seasoncode)
-                print(f"{seasoncode}: manifest_rebuilt=1")
 
         verb = "would_normalize" if args.dry_run else "normalized"
         print(f"{verb}_aliases_total={len(all_aliases)}, {verb}_canonical_clubs_total={len(all_canonical)}")
@@ -367,6 +455,17 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{verb}_club_mappings=")
             for alias in sorted(all_aliases):
                 print(f"  - {alias} -> {DEFAULT_REGISTRY.normalize_team_name(alias)}")
+
+        if not args.dry_run and (not args.skip_elo_refresh):
+            recomputed, _payload, reason = recompute_multiseason_elo_if_needed(
+                output_dir=data_dir,
+                force=True,
+                output_name="elo_multiseason.json",
+            )
+            print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
+
+        if not args.dry_run:
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=sorted(seasoncodes))
         if unknown:
@@ -406,8 +505,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"=== backfill_gamedates ({mode}) {args.seasoncode} in {data_dir} using {raw_dir} ===")
         print(f"files_total={counts['files_total']}, files_changed={counts['files_changed']}, missing_raw={counts['missing_raw']}, missing_date={counts['missing_date']}")
         if not args.dry_run:
-            build_manifest(data_dir, args.seasoncode)
-            print("manifest_rebuilt=1")
+            print(f"manifest_not_rebuilt=1 (decoupled) | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
         return 0
 
     if command == "check_dates":
@@ -515,7 +613,6 @@ def main(argv: list[str] | None = None) -> int:
         data_dir = Path(args.data_dir).resolve()
         data_dir.mkdir(parents=True, exist_ok=True)
 
-        from season_sync import main as season_sync_main
         from elo import main as elo_main
 
         print("=== [1/5] Sync season ===")
@@ -541,8 +638,8 @@ def main(argv: list[str] | None = None) -> int:
         print("=== [3/5] Compute Elo ===")
         elo_main(["--seasoncode", args.seasoncode, "--output-dir", str(data_dir)])
 
-        print("=== [4/5] Rebuild manifest (includes Elo badges) ===")
-        build_manifest(data_dir, args.seasoncode)
+        print(f"=== [4/5] Manifest (decoupled; not rebuilt) ===")
+        print(f"manifest_not_rebuilt=1 | run: entrypoint.py rebuild_manifest --all-seasons --output-dir {data_dir}")
 
         print("=== [5/5] Report ===")
         report = build_season_report(seasoncode=args.seasoncode, data_dir=data_dir)
@@ -574,8 +671,6 @@ def main(argv: list[str] | None = None) -> int:
         return build_score_timeline_main(rest)
 
     if command == "style_insights":
-        from style_insights import main as style_insights_main
-
         return style_insights_main(rest)
 
     print(f"Unknown command: {command}")

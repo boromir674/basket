@@ -61,6 +61,8 @@
     button.active { border-color:#62b6ff; background:#25508a; }
     .toggle-row { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin:0 0 8px; }
     .toggle-row input { accent-color: var(--anchor); }
+    .toggle-row.swipe { display:none; margin-top:4px; padding:7px 8px; border:1px solid #355783; border-radius:10px; background:rgba(15,33,63,.72); }
+    .swipe-hint { margin-left:auto; font-size:11px; color:#b7cdf1; text-align:right; }
     .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
     select, input[type="search"] {
       width:100%;
@@ -113,6 +115,8 @@
       transition:opacity .24s ease, transform .24s ease;
     }
     .fade-step { opacity:0; transform:translateY(-4px); }
+    .swipe-nav-buttons { display:none; margin-top:8px; gap:8px; }
+    .swipe-nav-buttons button { flex:1; }
     .cone-wrap {
       margin-top:10px;
       border:1px solid var(--line);
@@ -161,7 +165,7 @@
     iframe.loading { opacity:.15; }
 
     /* On narrow viewports, keep Sankey first-class: viewer on top and taller. */
-    @media (max-width: 1060px) {
+    @media (max-width: 1060px) and (pointer: coarse) {
       .layout {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -175,8 +179,9 @@
         padding: 10px;
       }
       .viewer-context {
-        margin-bottom: 6px;
+        display:none;
       }
+      .cone-wrap { display:none; }
       iframe {
         min-width: 0;
         height: 84vh;
@@ -185,29 +190,65 @@
       .games {
         max-height: 44vh;
       }
+      .toggle-row.swipe { display:flex; }
+      .swipe-nav-buttons { display:flex; }
+      body.swipe-nav-enabled .top { display:none; }
+      .toggle-row.swipe { display:none; }
+      body.swipe-nav-enabled .layout > .card:first-child {
+        background:transparent;
+        border:0;
+        padding:0;
+        min-height:0;
+      }
+      body.swipe-nav-enabled .layout > .card:first-child > :not(.toggle-row.swipe):not(.swipe-nav-buttons) {
+        display:none !important;
+      }
+      body.swipe-nav-enabled .toggle-row.swipe {
+        position:fixed;
+        top:8px;
+        left:8px;
+        right:8px;
+        z-index:10040;
+        margin:0;
+      }
+      body.swipe-nav-enabled .swipe-nav-buttons {
+        position:fixed;
+        left:8px;
+        right:8px;
+        bottom:10px;
+        z-index:10040;
+        margin:0;
+      }
+      body.swipe-nav-enabled iframe {
+        height: 92vh;
+        min-height: 620px;
+      }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 640px) and (pointer: coarse) {
       .top {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
       .title {
-        font-size: 18px;
+        font-size: 16px;
       }
+      .top .muted { display:none; }
       .btn {
-        font-size: 11px;
-        padding: 6px 9px;
+        font-size: 10px;
+        padding: 5px 8px;
       }
+      .card { padding: 8px; }
       .viewer-context {
-        min-height: 52px;
-        padding: 7px 8px;
+        min-height: 42px;
+        padding: 5px 7px;
       }
+      #gameHomeAway { display:none; }
       iframe {
-        height: 86vh;
-        min-height: 520px;
+        height: 90vh;
+        min-height: 560px;
       }
       .games {
-        max-height: 40vh;
+        max-height: 26vh;
       }
     }
   </style>
@@ -221,7 +262,10 @@
     </div>
     <div style="display:flex; gap:8px;">
       <a class="btn" href="./index.html">MVP Home</a>
-      <a class="btn" href="./elo.html?seasoncodes=E2022,E2023,E2024">Elo Showcase</a>
+      <!-- Show by default latest 5 Seasons -->
+      <!-- <a class="btn" href="./elo.html?seasoncodes=E2021,E2022,E2023,E2024,E2025">Elo Showcase</a> -->
+      <!-- Show by default All Seasons -->
+      <a class="btn" href="./elo.html">Elo Showcase</a>
       <a class="btn" href="./style-insights.html">Style Insights</a>
       <a class="btn" href="../index.html">Spike Home</a>
     </div>
@@ -237,6 +281,11 @@
       <label class="toggle-row">
         <input id="show-type-nodes" type="checkbox" />
         <span>Show possession type nodes</span>
+      </label>
+      <label class="toggle-row swipe">
+        <input id="swipe-nav-toggle" type="checkbox" />
+        <span>Mobile swipe game switch</span>
+        <span class="swipe-hint" id="swipe-nav-hint">Off</span>
       </label>
 
       <div class="row split" style="margin-top:6px;">
@@ -262,6 +311,10 @@
       <div class="muted" id="resultCount" style="margin-bottom:6px;">Filtering games...</div>
 
       <div class="games" id="games" style="margin-top:10px;">Loading games...</div>
+      <div class="swipe-nav-buttons" id="swipe-nav-buttons">
+        <button id="prev-game" type="button">Prev game</button>
+        <button id="next-game" type="button">Next game</button>
+      </div>
     </div>
 
     <div class="card">
@@ -307,6 +360,10 @@
   const teamFilterEl = document.getElementById("teamFilter");
   const searchFilterEl = document.getElementById("searchFilter");
   const resultCountEl = document.getElementById("resultCount");
+  const swipeNavToggleEl = document.getElementById("swipe-nav-toggle");
+  const swipeNavHintEl = document.getElementById("swipe-nav-hint");
+  const prevGameBtn = document.getElementById("prev-game");
+  const nextGameBtn = document.getElementById("next-game");
   const headChips = document.getElementById("headChips");
   const chipAnchor = document.getElementById("chipAnchor");
   const chipOpp = document.getElementById("chipOpp");
@@ -317,12 +374,15 @@
 
   const ANCHOR_COLOR = "#3a86ff";
   const OPP_COLOR = "#ff5a7a";
+  const SWIPE_TOGGLE_STORAGE_KEY = "basket.mobileSwipeNav";
 
   let entries = [];
+  let filteredRows = [];
   let selectedMode = "core";
   let anchorMode = false;
   let selectedTeam = "";
   let selectedGame = null;
+  let swipeNavEnabled = false;
   let viewerReady = false;
   let pendingLoad = false;
   let selectedSeasonFilter = "all";
@@ -398,12 +458,81 @@
     if(!seasonFilterEl || !teamFilterEl) return;
     const seasons = Array.from(new Set(entries.map(g => String(g.seasoncode || "")).filter(Boolean))).sort();
     const teams = Array.from(new Set(entries.flatMap((g) => [g.team_a, g.team_b]).filter(Boolean))).sort();
+    const seasonRank = (code) => {
+      const m = String(code || "").match(/(\d{4})/);
+      return m ? parseInt(m[1], 10) : 0;
+    };
+    const latestSeason = seasons.slice().sort((a, b) => {
+      const byYear = seasonRank(b) - seasonRank(a);
+      if(byYear !== 0) return byYear;
+      return String(b).localeCompare(String(a));
+    })[0] || "all";
+    if(selectedSeasonFilter === "all" && latestSeason !== "all"){
+      selectedSeasonFilter = latestSeason;
+    }
     seasonFilterEl.innerHTML = `<option value="all">All seasons</option>${seasons.map(s => `<option value="${s}">${s}</option>`).join("")}`;
     teamFilterEl.innerHTML = `<option value="all">All teams</option>${teams.map(t => `<option value="${t}">${t}</option>`).join("")}`;
     seasonFilterEl.value = seasons.includes(selectedSeasonFilter) ? selectedSeasonFilter : "all";
     teamFilterEl.value = teams.includes(selectedTeamFilter) ? selectedTeamFilter : "all";
     selectedSeasonFilter = seasonFilterEl.value;
     selectedTeamFilter = teamFilterEl.value;
+  }
+
+  function isMobileViewport(){
+    return window.matchMedia("(max-width: 1060px) and (pointer: coarse)").matches;
+  }
+
+  function applySwipeNavUiState(){
+    const mobileSwipeEnabled = isMobileViewport();
+    if(mobileSwipeEnabled) swipeNavEnabled = true;
+    else swipeNavEnabled = false;
+    document.body.classList.toggle("swipe-nav-enabled", swipeNavEnabled && mobileSwipeEnabled);
+    document.body.style.overflow = (swipeNavEnabled && mobileSwipeEnabled) ? "hidden" : "";
+    document.documentElement.style.overflow = (swipeNavEnabled && mobileSwipeEnabled) ? "hidden" : "";
+    if(swipeNavHintEl) swipeNavHintEl.textContent = swipeNavEnabled ? "On (left next / right prev)" : "Off";
+    if(swipeNavToggleEl) swipeNavToggleEl.checked = swipeNavEnabled;
+    syncSwipeNavToViewer();
+  }
+
+  function syncSwipeNavToViewer(){
+    try {
+      if(viewer && viewer.contentWindow && typeof viewer.contentWindow.postMessage === "function"){
+        viewer.contentWindow.postMessage({ type: "setSwipeNav", enabled: swipeNavEnabled }, "*");
+      }
+    } catch(_e) {}
+  }
+
+  function persistSwipeNavEnabled(){
+    try {
+      localStorage.setItem(SWIPE_TOGGLE_STORAGE_KEY, swipeNavEnabled ? "1" : "0");
+    } catch(_e) {}
+  }
+
+  function restoreSwipeNavEnabled(){
+    // Mobile is swipe-first by product requirement: keep this ON on small screens.
+    swipeNavEnabled = isMobileViewport() ? true : false;
+    try { localStorage.setItem(SWIPE_TOGGLE_STORAGE_KEY, swipeNavEnabled ? "1" : "0"); } catch(_e) {}
+    applySwipeNavUiState();
+  }
+
+  async function navigateGameByDelta(delta){
+    if(!filteredRows.length || !selectedGame || delta === 0) return;
+    const currentIdx = filteredRows.findIndex((g) => g.file === selectedGame.file);
+    if(currentIdx === -1) return;
+    const nextIdx = Math.max(0, Math.min(filteredRows.length - 1, currentIdx + delta));
+    if(nextIdx === currentIdx) return;
+    selectedGame = filteredRows[nextIdx];
+    document.querySelectorAll(".game-row").forEach((el) => {
+      const isActive = el.dataset.file === selectedGame.file;
+      el.classList.toggle("active", isActive);
+      if(isActive) el.scrollIntoView({ block: "nearest" });
+    });
+    if(navigator.vibrate) navigator.vibrate(8);
+    await loadSelectedGame();
+  }
+
+  function bindSwipeNavigation(){
+    // Navigation gestures are handled inside the viewer iframe.
   }
 
   function escapeRegExp(str){
@@ -444,6 +573,9 @@
     // to change — node IDs, link IDs, player team labels, and starts values are
     // already keyed by the real team names and must stay untouched so that data
     // attribution (scores, PPP, node labels, single-team focus) remains correct.
+    // Preserve canonical home/away before swap so the viewer header stays correct.
+    meta.home_team = meta.home_team || meta.team_home || a;
+    meta.away_team = meta.away_team || meta.team_away || b;
     meta.team_a = b;
     meta.team_b = a;
     copy.meta = meta;
@@ -553,7 +685,7 @@
     // the iframe isn't ready to receive postMessage.
     try{
       if(viewer && viewer.contentWindow && typeof viewer.contentWindow.postMessage === 'function'){
-        viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params }, '*');
+        viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params, swipeNavEnabled: swipeNavEnabled }, '*');
       } else {
         // Fallback: set src (keeps older behavior)
         viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
@@ -579,13 +711,24 @@
   window.addEventListener('message', (ev) => {
     try{
       const msg = ev && ev.data;
-      if(!msg || msg.type !== 'bundleLoaded') return;
-      viewer.classList.remove('loading');
+      if(!msg || !msg.type) return;
+      if(msg.type === 'bundleLoaded'){
+        viewer.classList.remove('loading');
+        syncSwipeNavToViewer();
+        return;
+      }
+      if(msg.type === 'navigateGameDelta'){
+        if(!swipeNavEnabled || !isMobileViewport()) return;
+        const delta = Number(msg.delta || 0);
+        if(delta > 0) navigateGameByDelta(1);
+        if(delta < 0) navigateGameByDelta(-1);
+      }
     }catch(e){ /* ignore */ }
   });
 
   function renderGames(){
     const rows = getFilteredRows();
+    filteredRows = rows;
 
     gamesEl.innerHTML = "";
     if(!rows.length){
@@ -603,6 +746,7 @@
     rows.forEach((g) => {
       const row = document.createElement("div");
       row.className = "game-row";
+      row.dataset.file = g.file || "";
       const anchor = anchorMode && selectedTeam ? selectedTeam : (g.team_a || "?");
       const opp = anchor === g.team_a ? (g.team_b || "?") : (anchor === g.team_b ? (g.team_a || "?") : (g.team_b || "?"));
       const eloA = g.elo_a != null ? `<span class="elo-badge">★${Math.round(g.elo_a)}</span>` : "";
@@ -660,6 +804,32 @@
       if(selectedGame) loadSelectedGame();
     });
   }
+  if(swipeNavToggleEl){
+    swipeNavToggleEl.addEventListener("change", () => {
+      if(isMobileViewport()){
+        swipeNavEnabled = true;
+        applySwipeNavUiState();
+        return;
+      }
+      swipeNavEnabled = !!swipeNavToggleEl.checked;
+      persistSwipeNavEnabled();
+      applySwipeNavUiState();
+    });
+  }
+  if(prevGameBtn){
+    prevGameBtn.addEventListener("click", async () => {
+      await navigateGameByDelta(-1);
+    });
+  }
+  if(nextGameBtn){
+    nextGameBtn.addEventListener("click", async () => {
+      await navigateGameByDelta(1);
+    });
+  }
+  window.addEventListener("resize", applySwipeNavUiState);
+
+  bindSwipeNavigation();
+  restoreSwipeNavEnabled();
 
   fetchJsonFromProcessedBase(manifestFile)
     .then((data) => {

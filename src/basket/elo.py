@@ -16,6 +16,8 @@ import re
 from pathlib import Path
 from typing import Any, Iterable, Optional
 
+from basket.clubs import DEFAULT_REGISTRY
+
 DEFAULT_K = 32
 DEFAULT_INITIAL = 1500
 SEASONCODE_RE = re.compile(r"^E(\d{4})$")
@@ -137,6 +139,18 @@ def _outcome_score(
             return 0.0
         return 0.5
     return None
+
+
+def _canonicalize_game_teams(
+    team_a: Any,
+    team_b: Any,
+    winner: Any,
+) -> tuple[str | None, str | None, str | None]:
+    """Normalize team labels so Elo aggregates per canonical club identity."""
+    a = DEFAULT_REGISTRY.normalize_team_name(team_a) if team_a else None
+    b = DEFAULT_REGISTRY.normalize_team_name(team_b) if team_b else None
+    w = DEFAULT_REGISTRY.normalize_team_name(winner) if winner else None
+    return a, b, w
 
 
 # ---------------------------------------------------------------------------
@@ -285,15 +299,20 @@ def compute_elo_for_season(
             gamecode = int(meta.get("gamecode", 0))
         except (ValueError, TypeError):
             continue
+        team_a, team_b, winner = _canonicalize_game_teams(
+            meta.get("team_a"),
+            meta.get("team_b"),
+            meta.get("winner"),
+        )
         games.append(
             {
                 "gamecode": gamecode,
                 "gamedate": meta.get("gamedate"),
-                "team_a": meta.get("team_a"),
-                "team_b": meta.get("team_b"),
+                "team_a": team_a,
+                "team_b": team_b,
                 "score_a": meta.get("score_a"),
                 "score_b": meta.get("score_b"),
-                "winner": meta.get("winner"),
+                "winner": winner,
             }
         )
 
@@ -337,17 +356,22 @@ def _collect_games_for_seasoncodes(output_dir: Path, seasoncodes: Iterable[str])
                 gamecode = int(meta.get("gamecode", 0))
             except (ValueError, TypeError):
                 continue
+            team_a, team_b, winner = _canonicalize_game_teams(
+                meta.get("team_a"),
+                meta.get("team_b"),
+                meta.get("winner"),
+            )
             games.append(
                 {
                     "seasoncode": seasoncode,
                     "season_label": season_label_from_code(seasoncode),
                     "gamecode": gamecode,
                     "gamedate": meta.get("gamedate"),
-                    "team_a": meta.get("team_a"),
-                    "team_b": meta.get("team_b"),
+                    "team_a": team_a,
+                    "team_b": team_b,
                     "score_a": meta.get("score_a"),
                     "score_b": meta.get("score_b"),
-                    "winner": meta.get("winner"),
+                    "winner": winner,
                 }
             )
     return games

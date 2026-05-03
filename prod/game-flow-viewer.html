@@ -14,22 +14,29 @@
     body { margin:0; color:var(--text); font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at top left,#12203b 0%,#0b1220 45%), linear-gradient(180deg,#0b1220 0%,#0a1020 100%); }
     .wrap { max-width:1420px; margin:0 auto; padding:20px 16px 30px; }
     .grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
-    .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.32); }
-    .header { padding:16px 24px 10px; border-bottom:1px solid rgba(111,132,171,.12); }
-    .header-top { display:grid; grid-template-columns:minmax(0,1fr) minmax(340px,560px); gap:12px 16px; align-items:start; }
-    .header-meta { min-width:0; }
-    .header-controls { min-width:0; min-height:36px; display:flex; align-items:center; }
+    .card { background:rgba(16,25,43,.94); border:1px solid rgba(111,132,171,.18); border-radius:18px; overflow:visible; box-shadow:0 18px 50px rgba(0,0,0,.32); }
+    .header { padding:18px 24px 14px; border-bottom:1px solid rgba(111,132,171,.12); display:grid; gap:12px; }
+    .header-top { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; align-items:start; }
+    .header-meta { min-width:0; display:grid; gap:8px; }
+    .header-controls { min-width:0; display:block; }
     .eyebrow,.crumbs,.muted,.node-pct-label,.col-label { color:var(--muted); }
     .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
-    h1 { margin:0 0 8px; font-size:28px; line-height:1.12; }
-    .headline { color:#d9e6ff; font-size:15px; line-height:1.55; max-width:940px; }
-    .controls { margin-top:0; min-height:34px; display:flex; flex-wrap:nowrap; gap:8px; justify-content:flex-end; overflow-x:auto; overflow-y:hidden; white-space:nowrap; scrollbar-width:none; -ms-overflow-style:none; padding-bottom:0; }
+    h1 { margin:0; font-size:32px; line-height:1.08; letter-spacing:-.02em; }
+    .headline { color:#d9e6ff; font-size:14px; line-height:1.45; max-width:none; }
+    .controls { margin-top:0; display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-start; overflow:visible; white-space:normal; }
     .controls::-webkit-scrollbar { display:none; height:0; }
-    #page-title, #headline, #scoreboard { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    #page-title, #headline, #scoreboard { white-space:normal; overflow:visible; text-overflow:clip; }
+    .scoreboard { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+    .scoreboard-primary { font-size:24px; font-weight:800; color:#f4f8ff; letter-spacing:-.02em; }
+    .scoreboard-secondary { font-size:13px; color:#9db0cf; }
+    .crumbs { min-height:18px; white-space:normal; overflow:visible; text-overflow:clip; font-size:13px; }
     .controls-divider { width:1px; height:28px; background:rgba(111,132,171,.32); margin:0 4px; align-self:center; }
+    @media (max-width: 1320px) {
+      .controls-divider { display:none; }
+    }
     button { background:#14223e; color:var(--text); border:1px solid rgba(111,132,171,.22); border-radius:999px; padding:8px 12px; cursor:pointer; font-size:13px; }
     button.active { background:#21365e; border-color:#4f6b99; }
-    .viz { position:relative; padding:8px 8px 10px; }
+    .viz { position:relative; padding:8px 8px 10px; overflow:visible; z-index:10000; }
     #chart { width:100%; height:720px; display:block; }
     .side svg { height:auto; display:block; }
     .col-label { fill:var(--muted); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
@@ -39,10 +46,29 @@
     .node-main-label { fill:var(--text); font-size:12px; font-weight:600; dominant-baseline:middle; pointer-events:none; }
     .node-pct-label { fill:var(--muted); font-size:11px; dominant-baseline:middle; pointer-events:none; }
     .footer { padding:0 24px 20px; color:var(--muted); font-size:13px; line-height:1.45; }
-    .tooltip { position:absolute; z-index:90; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
+    .tooltip { position:absolute; z-index:11000; pointer-events:none; background:var(--tooltip); color:var(--text); border:1px solid rgba(111,132,171,.28); border-radius:12px; padding:10px 12px; min-width:220px; font-size:12px; line-height:1.4; box-shadow:0 10px 30px rgba(0,0,0,.45); opacity:0; transform:translateY(6px); transition:opacity .1s ease, transform .1s ease; }
     .tooltip.show { opacity:1; transform:translateY(0); }
-    .explode-pop { position:absolute; z-index:120; min-width:260px; max-width:320px; background:rgba(7,11,20,.97); color:var(--text); border:1px solid rgba(111,132,171,.32); border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.5); opacity:0; pointer-events:none; transform:translateY(8px); transition:opacity .16s ease, transform .16s ease; }
+    .explode-pop { position:absolute; z-index:11010; min-width:260px; max-width:320px; background:rgba(7,11,20,.97); color:var(--text); border:1px solid rgba(111,132,171,.32); border-radius:12px; padding:10px 12px; box-shadow:0 10px 30px rgba(0,0,0,.5); opacity:0; pointer-events:none; transform:translateY(8px); transition:opacity .16s ease, transform .16s ease; }
     .explode-pop.show { opacity:1; transform:translateY(0); }
+    .swipe-instruction {
+      position:absolute;
+      left:50%;
+      bottom:10px;
+      transform:translateX(-50%);
+      z-index:12000;
+      pointer-events:none;
+      background:rgba(6,12,23,.82);
+      border:1px solid rgba(111,132,171,.36);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:11px;
+      color:#d9e6ff;
+      letter-spacing:.02em;
+      opacity:0;
+      transition:opacity .18s ease;
+      white-space:nowrap;
+    }
+    .swipe-instruction.show { opacity:1; }
     .explode-title { font-size:12px; color:#d9e6ff; margin-bottom:6px; }
     .explode-stack { height:10px; border-radius:999px; overflow:hidden; display:flex; background:rgba(111,132,171,.18); margin-bottom:8px; }
     .explode-seg { height:100%; }
@@ -119,30 +145,24 @@
     .radar-subtitle { font-size:11px; color:var(--muted); margin-bottom:4px; }
     .radar-legend { display:flex; flex-wrap:wrap; gap:8px; font-size:11px; color:var(--muted); margin-top:4px; }
     .radar-dot { width:8px; height:8px; border-radius:999px; display:inline-block; margin-right:4px; }
-    @media (max-width: 1100px) {
-      .grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-      .wrap { padding: 12px 8px 16px; }
-      .header { padding: 12px 12px 8px; }
-      .header-top { grid-template-columns:minmax(0,1fr); gap:10px; }
-      .header-controls { min-height:0; }
-      h1 { font-size: 22px; }
-      .headline { font-size: 13px; line-height: 1.4; }
-      #page-title, #headline, #scoreboard { white-space:normal; overflow:visible; text-overflow:clip; }
-      .controls { min-height:0; justify-content:flex-start; }
-      #chart { height: 72vh; min-height: 420px; }
-      .side { padding: 12px 12px 10px; }
-      .side .panel-title,
-      .side .muted,
-      .side .tile .label,
-      .side .tile .value,
-      .side .list .item,
-      .side .hint { font-size: 12px; }
-      .kpi { grid-template-columns: 1fr; }
+    @media (max-width: 1100px) and (pointer: coarse) {
+      html, body { height:100%; overflow:hidden; }
+      .wrap { max-width:none; padding:0; height:100vh; }
+      .grid { display:block; height:100vh; }
+      .grid > .card:first-child {
+        height:100vh;
+        border-radius:0;
+        border:0;
+        box-shadow:none;
+      }
+      .grid > .card:last-child { display:none; }
+      .header { display:none; }
+      .viz { padding:0; height:100vh; }
+      #chart { height: 100vh; min-height: 100vh; }
+      .swipe-instruction { bottom:12px; }
     }
-    @media (max-width: 720px) {
-      #chart { height: 76vh; min-height: 460px; }
-      .controls { gap: 6px; }
-      button { padding: 7px 10px; font-size: 12px; }
+    @media (max-width: 720px) and (pointer: coarse) {
+      #chart { height: 100vh; min-height: 100vh; }
     }
   </style>
 </head>
@@ -155,7 +175,7 @@
           <div class="header-meta">
             <h1 id="page-title">Loading matchup...</h1>
             <div class="headline" id="headline">Loading…</div>
-            <div id="scoreboard" style="margin-top:8px;font-weight:700;color:#d9e6ff;font-size:15px;">&nbsp;</div>
+            <div id="scoreboard" class="scoreboard">&nbsp;</div>
           </div>
           <div class="header-controls">
             <div class="controls" id="controls"></div>
@@ -166,6 +186,7 @@
       <div class="viz">
         <div class="tooltip" id="tooltip"></div>
         <div class="explode-pop" id="explode-pop"></div>
+        <div class="swipe-instruction" id="swipe-instruction">Swipe left: next game · Swipe right: previous game</div>
         <svg id="chart" viewBox="0 0 1280 860"></svg>
       </div>
     </div>
@@ -370,7 +391,7 @@ const paramFile = params.get("file");
 const paramAutoInsightsFile = params.get("autoInsightsFile");
 const paramInitialView = params.get("initialView");
 let skipTypeStage = params.get("skipTypeStage") === "1";
-let dataFile = paramFile || runtimeConfig.defaultBundleFile;
+let dataFile = paramFile || "";
 if (paramFile && !paramFile.includes("/")) {
   dataFile = paramFile;
 }
@@ -384,7 +405,7 @@ const fileBaseParam = params.get("fileBase");
 const runtimeBase = runtimeConfig.resolveFileStoreBase
   ? runtimeConfig.resolveFileStoreBase(fileBaseParam)
   : ((typeof window !== 'undefined' && window.BASKET_APP_FILE_STORE_URI) || fileBaseParam || null);
-if (!String(dataFile).startsWith('http') && !String(dataFile).startsWith('/') && !String(dataFile).startsWith('blob:')) {
+if (dataFile && !String(dataFile).startsWith('http') && !String(dataFile).startsWith('/') && !String(dataFile).startsWith('blob:')) {
   dataFile = runtimeConfig.buildProcessedUrl(dataFile, { fileBase: runtimeBase || undefined });
 }
 
@@ -406,15 +427,48 @@ function formatEloValue(value){
   return Math.round(num);
 }
 
-function fetchEloForSeason(meta){
-  if(!meta || !meta.seasoncode) return Promise.resolve(null);
-  const eloFilename = runtimeConfig.applyPattern(runtimeConfig.eloPattern || 'elo_{season}.json', {
-    season: meta.seasoncode,
-  });
-  const eloFile = runtimeConfig.buildProcessedUrl(eloFilename, { fileBase: runtimeBase || undefined });
+function fetchMultiseasonElo(){
+  const eloFile = runtimeConfig.buildProcessedUrl('elo_multiseason.json', { fileBase: runtimeBase || undefined });
   return fetch(eloFile)
     .then(r => (r.ok ? r.json() : null))
     .catch(() => null);
+}
+
+function resolvePregameElo(meta){
+  const history = (eloPayload && Array.isArray(eloPayload.history)) ? eloPayload.history : null;
+  if(!meta || !history || !history.length) return { eloA: null, eloB: null };
+
+  const seasoncode = String(meta.seasoncode || "");
+  const gamecode = Number(meta.gamecode);
+  if(!seasoncode || !isFinite(gamecode)) return { eloA: null, eloB: null };
+
+  const gameRow = history.find(row =>
+    String(row && row.seasoncode ? row.seasoncode : "") === seasoncode
+    && Number(row && row.gamecode) === gamecode
+  );
+  if(!gameRow) return { eloA: null, eloB: null };
+
+  // Use canonical Home/Away labels for display semantics.
+  // In anchor mode, meta.team_a/meta.team_b can be reshaped for lane rendering.
+  const teamA = String(getHomeTeamName(meta) || "");
+  const teamB = String(getAwayTeamName(meta) || "");
+  const rowTeamA = String(gameRow.team_a || "");
+  const rowTeamB = String(gameRow.team_b || "");
+
+  if(teamA && teamB && teamA === rowTeamA && teamB === rowTeamB){
+    return { eloA: gameRow.elo_a_before, eloB: gameRow.elo_b_before };
+  }
+  if(teamA && teamB && teamA === rowTeamB && teamB === rowTeamA){
+    return { eloA: gameRow.elo_b_before, eloB: gameRow.elo_a_before };
+  }
+
+  const byTeam = {};
+  if(rowTeamA) byTeam[rowTeamA] = gameRow.elo_a_before;
+  if(rowTeamB) byTeam[rowTeamB] = gameRow.elo_b_before;
+  return {
+    eloA: byTeam[teamA] ?? null,
+    eloB: byTeam[teamB] ?? null,
+  };
 }
 
 // PoC switch: when drilling into possession-type views, render either 4 columns (default)
@@ -431,6 +485,108 @@ let explodeLab = params.get("explodeLab") !== "0" || flowIndexLab;
 let twinLab = params.get("twinLab") === "1";
 let xrayLab = params.get("xrayLab") === "1" || twinLab;
 let replayLab = params.get("replayLab") === "1";
+let swipeNavEnabled = false;
+const swipeInstructionEl = document.getElementById("swipe-instruction");
+
+function isMobileSwipeViewport(){
+  return window.matchMedia("(max-width: 1100px) and (pointer: coarse)").matches;
+}
+
+function renderSwipeInstruction(){
+  if(!swipeInstructionEl) return;
+  swipeInstructionEl.classList.toggle("show", !!swipeNavEnabled && isMobileSwipeViewport());
+}
+
+function notifyParentNavigate(delta){
+  try {
+    if(!swipeNavEnabled) return;
+    if(window.parent && window.parent !== window && typeof window.parent.postMessage === "function"){
+      window.parent.postMessage({ type: "navigateGameDelta", delta: delta }, "*");
+    }
+  } catch(_e) {}
+}
+
+function getHomeTeamName(meta){
+  return (meta && (meta.home_team || meta.team_home || meta.team_a)) || "?";
+}
+
+function getAwayTeamName(meta){
+  return (meta && (meta.away_team || meta.team_away || meta.team_b)) || "?";
+}
+
+function formatHeaderDetail(meta, modeLabel){
+  let displayDate = "";
+  try {
+    if(meta && meta.gamedate) displayDate = String(meta.gamedate).trim();
+    if(!displayDate && meta && meta.seasoncode){
+      const match = String(meta.seasoncode).match(/(\d{4})/);
+      if(match) displayDate = match[1];
+    }
+  } catch(_e) {
+    displayDate = "";
+  }
+
+  const parts = [];
+  if(displayDate) parts.push(displayDate);
+  parts.push(`Home: ${getHomeTeamName(meta)}`);
+  parts.push(`Away: ${getAwayTeamName(meta)}`);
+  if(modeLabel) parts.push(modeLabel.replace(/^\s*·\s*/, ""));
+  return parts.join(" · ");
+}
+
+function renderHeaderSummary(meta, modeLabel = ""){
+  const titleEl = document.getElementById("page-title");
+  const headlineEl = document.getElementById("headline");
+  if(titleEl) titleEl.textContent = `${getHomeTeamName(meta)} vs ${getAwayTeamName(meta)}`;
+  if(headlineEl) headlineEl.textContent = formatHeaderDetail(meta, modeLabel);
+}
+
+function bindViewerSwipeNavigation(){
+  const chartEl = document.getElementById("chart");
+  const vizEl = document.querySelector(".viz");
+  const targetEl = vizEl || chartEl;
+  if(!targetEl) return;
+  let startX = 0;
+  let startY = 0;
+  let startTs = 0;
+
+  targetEl.addEventListener("touchstart", (ev) => {
+    if(!swipeNavEnabled || !isMobileSwipeViewport()) return;
+    const t = ev.touches && ev.touches[0];
+    if(!t) return;
+    startX = t.clientX;
+    startY = t.clientY;
+    startTs = Date.now();
+  }, { passive: true });
+
+  targetEl.addEventListener("touchmove", (ev) => {
+    if(!swipeNavEnabled || !isMobileSwipeViewport()) return;
+    ev.preventDefault();
+  }, { passive: false });
+
+  targetEl.addEventListener("touchend", (ev) => {
+    if(!swipeNavEnabled || !isMobileSwipeViewport()) return;
+    const t = ev.changedTouches && ev.changedTouches[0];
+    if(!t) return;
+    const dx = t.clientX - startX;
+    const dy = t.clientY - startY;
+    const dt = Date.now() - startTs;
+    if(dt > 750) return;
+    if(Math.abs(dx) < 36) return;
+    if(Math.abs(dx) < Math.abs(dy) * 1.15) return;
+    notifyParentNavigate(dx < 0 ? 1 : -1);
+  }, { passive: true });
+
+  targetEl.addEventListener("wheel", (ev) => {
+    if(!swipeNavEnabled || !isMobileSwipeViewport()) return;
+    if(Math.abs(ev.deltaY) < 10) return;
+    ev.preventDefault();
+    notifyParentNavigate(ev.deltaY > 0 ? 1 : -1);
+  }, { passive: false });
+}
+
+bindViewerSwipeNavigation();
+renderSwipeInstruction();
 
 function resolveInitialView(bundle, requestedView) {
   const removedViews = new Set(["made2", "made3"]);
@@ -2555,26 +2711,15 @@ function renderView(viewKey, opts = {}){
   linkLayer.selectAll("path.link").style("opacity", 1);
 }
 
-// Add a tiny cache-buster so that when JSON files are regenerated on disk
-// (via Docker pipeline runs), the browser does not keep serving a stale
-// cached copy. Query params are ignored by the simple static server, so this
-// is backwards-compatible while forcing a fresh fetch per load.
-// NOTE: if `dataFile` is a blob/object URL (starts with `blob:`) we must
-// not append query params because blob URLs do not accept them. Handle that
-// case explicitly so normalized bundles passed as object URLs from the
-// parent (iframe) remain reachable.
-let fetchUrl;
-if (String(dataFile).startsWith('blob:')) {
-  fetchUrl = dataFile;
-} else {
-  fetchUrl = dataFile + (dataFile.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
-}
+// Initial bundle URL is dataFile; request cache busting is handled centrally by withCacheBust().
 
 // Update the scoreboard element (computes team totals from boxscore_players when possible)
 function updateScoreboard(){
   const el = document.getElementById("scoreboard");
   if(!el || !dataBundle) return;
   const meta = dataBundle.meta || {};
+  const teamA = getHomeTeamName(meta);
+  const teamB = getAwayTeamName(meta);
   let scoreA = 0, scoreB = 0;
   let hasScoreRows = false;
   const playersMap = dataBundle.players || {};
@@ -2584,57 +2729,34 @@ function updateScoreboard(){
       let teamName = null;
       if(pid && playersMap[pid] && playersMap[pid].team) teamName = playersMap[pid].team;
       if(!teamName && typeof r.team === 'string') teamName = r.team;
-      if(teamName === meta.team_a){
+      if(teamName === teamA){
         scoreA += (r.points || 0);
         hasScoreRows = true;
       }
-      else if(teamName === meta.team_b){
+      else if(teamName === teamB){
         scoreB += (r.points || 0);
         hasScoreRows = true;
       }
     });
   }
-  const teamA = meta.team_a || "Team A";
-  const teamB = meta.team_b || "Team B";
-  const matchupLine = hasScoreRows
-    ? `${teamA} ${scoreA} — ${scoreB} ${teamB}`
-    : `${teamA} vs ${teamB}`;
-  const titleEl = document.getElementById("page-title");
-  if(titleEl) titleEl.textContent = matchupLine;
-  const ratings = (eloPayload && eloPayload.ratings) ? eloPayload.ratings : {};
-  const eloA = formatEloValue(ratings[teamA]);
-  const eloB = formatEloValue(ratings[teamB]);
-  const eloLine = `ELO: ${teamA} ${eloA} · ${teamB} ${eloB}`;
-  el.innerHTML = `<div style=\"font-size:12px;color:#9db0cf;\">${eloLine}</div>`;
+  // Keep scoreboard tied to canonical Home/Away ordering (title + headline).
+  const scoreLine = hasScoreRows ? `${scoreA} — ${scoreB}` : "—";
+  const pregame = resolvePregameElo(meta);
+  const eloA = formatEloValue(pregame.eloA);
+  const eloB = formatEloValue(pregame.eloB);
+  const eloLine = `Pregame ELO: ${teamA} ${eloA} · ${teamB} ${eloB}`;
+  el.innerHTML = `<div class="scoreboard-primary">${scoreLine}</div><div class="scoreboard-secondary">${eloLine}</div>`;
 }
 
-fetch(fetchUrl).then(r=>{
-  if(!r.ok){
-    throw new Error(`Failed to fetch JSON: ${fetchUrl} (HTTP ${r.status})`);
-  }
-  return r.json();
-}).then(bundle=>{
+function applyLoadedBundle(bundle, initialViewKey){
   dataBundle=bundle;
   colors=bundle.colors||{};
   const meta=bundle.meta||{};
   const modeLabel = replayLab
     ? " · Mode: Live Replay Lab"
     : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
-  document.getElementById("page-title").textContent=`${meta.team_a||""} vs ${meta.team_b||""}`;
-  // Prefer showing a human-readable game date; fall back to season year from seasoncode; otherwise leave blank.
-  (function(){
-    var displayDate = "";
-    try{
-      if(meta && meta.gamedate) displayDate = String(meta.gamedate).trim();
-      if(!displayDate && meta && meta.seasoncode){
-        var match = String(meta.seasoncode).match(/(\d{4})/);
-        if(match) displayDate = match[1];
-      }
-    }catch(e){ displayDate = ""; }
-    var headlineText = displayDate ? (displayDate + (modeLabel || "")) : (modeLabel ? modeLabel.replace(/^\s*·\s*/, '') : '');
-    document.getElementById("headline").textContent = headlineText || '';
-  })();
-  fetchEloForSeason(meta).then(payload => {
+  renderHeaderSummary(meta, modeLabel);
+  fetchMultiseasonElo().then(payload => {
     eloPayload = payload;
     updateScoreboard();
   });
@@ -2653,10 +2775,65 @@ fetch(fetchUrl).then(r=>{
   try{ updateScoreboard(); }catch(e){ console.warn("updateScoreboard failed",e); }
   // Notify parent that the bundle has been loaded so parent can clear any loading UI
   try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
-  }).catch(err=>{
-  document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
-  console.error(err);
-});
+}
+
+function withCacheBust(url){
+  if(String(url).startsWith('blob:')) return url;
+  return url + (url.indexOf("?") === -1 ? `?ts=${Date.now()}` : `&ts=${Date.now()}`);
+}
+
+async function fetchBundleFromUrl(url){
+  const response = await fetch(withCacheBust(url));
+  if(!response.ok){
+    throw new Error(`Failed to fetch JSON: ${url} (HTTP ${response.status})`);
+  }
+  return response.json();
+}
+
+async function fallbackToFirstManifestBundle(){
+  const manifestFile = runtimeConfig.manifestFile || 'games_manifest.json';
+  const manifestUrl = runtimeConfig.buildProcessedUrl(manifestFile, { fileBase: runtimeBase || undefined });
+  const manifestResp = await fetch(withCacheBust(manifestUrl));
+  if(!manifestResp.ok){
+    throw new Error(`Failed to fetch manifest: ${manifestUrl} (HTTP ${manifestResp.status})`);
+  }
+  const rows = await manifestResp.json();
+  if(!Array.isArray(rows) || rows.length === 0){
+    throw new Error(`Manifest has no rows: ${manifestUrl}`);
+  }
+
+  const first = rows.find(r => r && r.file) || rows[0];
+  if(!first || !first.file){
+    throw new Error(`Manifest row missing file field: ${manifestUrl}`);
+  }
+
+  dataFile = runtimeConfig.buildProcessedUrl(String(first.file), { fileBase: runtimeBase || undefined });
+  const bundle = await fetchBundleFromUrl(dataFile);
+  applyLoadedBundle(bundle, paramInitialView);
+}
+
+if(dataFile){
+  fetchBundleFromUrl(dataFile).then(bundle=>{
+    applyLoadedBundle(bundle, paramInitialView);
+  }).catch(async err=>{
+    const usingDefaultBundle = !paramFile;
+    if(usingDefaultBundle){
+      try {
+        await fallbackToFirstManifestBundle();
+        return;
+      } catch (fallbackErr) {
+        console.error('fallbackToFirstManifestBundle failed', fallbackErr);
+      }
+    }
+    document.getElementById("headline").textContent=`Failed to load ${dataFile}`;
+    console.error(err);
+  });
+} else {
+  fallbackToFirstManifestBundle().catch((err) => {
+    document.getElementById("headline").textContent = "Failed to load initial game from manifest";
+    console.error(err);
+  });
+}
 
 // Added a placeholder for the renderAutoInsights function to prevent errors.
 function renderAutoInsights(data) {
@@ -2673,6 +2850,8 @@ window.addEventListener('message', (ev) => {
     if(msg.type === 'loadBundle'){
       const url = msg.url;
       const paramsString = msg.params || '';
+      swipeNavEnabled = !!msg.swipeNavEnabled;
+      renderSwipeInstruction();
       // Parse params string and update local mode flags
       if(paramsString){
         const p = new URLSearchParams(paramsString);
@@ -2705,20 +2884,8 @@ window.addEventListener('message', (ev) => {
         const modeLabel = replayLab
           ? " · Mode: Live Replay Lab"
           : (twinLab ? " · Mode: Tactical Twin Sankey lab (pseudo-3D dual lane)" : (xrayLab ? " · Mode: Tactical X-Ray lab" : ""));
-        document.getElementById("page-title").textContent=`${meta.team_a||""} vs ${meta.team_b||""}`;
-        (function(){
-          var displayDate = "";
-          try{
-            if(meta && meta.gamedate) displayDate = String(meta.gamedate).trim();
-            if(!displayDate && meta && meta.seasoncode){
-              var match = String(meta.seasoncode).match(/(\d{4})/);
-              if(match) displayDate = match[1];
-            }
-          }catch(e){ displayDate = ""; }
-          var headlineText = displayDate ? (displayDate + (modeLabel || "")) : (modeLabel ? modeLabel.replace(/^\s*·\s*/, '') : '');
-          document.getElementById("headline").textContent = headlineText || '';
-        })();
-        fetchEloForSeason(meta).then(payload => {
+        renderHeaderSummary(meta, modeLabel);
+        fetchMultiseasonElo().then(payload => {
           eloPayload = payload;
           updateScoreboard();
         });
@@ -2737,6 +2904,12 @@ window.addEventListener('message', (ev) => {
         // Notify parent that the bundle from postMessage load has been handled
         try{ if(window.parent && window.parent !== window && typeof window.parent.postMessage === 'function'){ window.parent.postMessage({ type: 'bundleLoaded' }, '*'); } }catch(e){ /* ignore */ }
       }).catch(err=>{ console.error('loadBundle failed', err); document.getElementById("headline").textContent=`Failed to load ${dataFile}`; });
+      return;
+    }
+
+    if(msg.type === 'setSwipeNav'){
+      swipeNavEnabled = !!msg.enabled;
+      renderSwipeInstruction();
       return;
     }
 

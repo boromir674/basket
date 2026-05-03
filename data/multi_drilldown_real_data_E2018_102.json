@@ -1,0 +1,5818 @@
+{
+  "meta": {
+    "seasoncode": "E2018",
+    "gamecode": 102,
+    "team_a": "Maccabi Tel Aviv",
+    "team_b": "Khimki Moscow Region",
+    "score_a": 79,
+    "score_b": 63,
+    "winner": "Maccabi Tel Aviv",
+    "gamedate": "2018-12-19",
+    "synced_at": "2026-05-02T21:53:00.146052+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P006661": {
+      "name": "WILBEKIN, SCOTTIE",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P009037": {
+      "name": "GREEN, GARLON",
+      "team": "Khimki Moscow Region"
+    },
+    "P005781": {
+      "name": "KANE, DEANDRE",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P004251": {
+      "name": "THOMAS, MALCOLM",
+      "team": "Khimki Moscow Region"
+    },
+    "P009004": {
+      "name": "O'BRYANT, JOHNNY",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P008991": {
+      "name": "BLACK, TARIK",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P004264": {
+      "name": "BOST, DEE",
+      "team": "Khimki Moscow Region"
+    },
+    "P005014": {
+      "name": "JENKINS, CHARLES",
+      "team": "Khimki Moscow Region"
+    },
+    "P005771": {
+      "name": "CALOIARO, ANGELO",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P007916": {
+      "name": "CROCKER, TONY",
+      "team": "Khimki Moscow Region"
+    },
+    "P008847": {
+      "name": "MICKEY, JORDAN",
+      "team": "Khimki Moscow Region"
+    },
+    "P005145": {
+      "name": "COHEN, JAKE",
+      "team": "Maccabi Tel Aviv"
+    },
+    "PBFX": {
+      "name": "MONIA, SERGEY",
+      "team": "Khimki Moscow Region"
+    },
+    "P004119": {
+      "name": "TYUS, ALEX",
+      "team": "Maccabi Tel Aviv"
+    },
+    "PBGV": {
+      "name": "VIALTSEV, EGOR",
+      "team": "Khimki Moscow Region"
+    },
+    "P007990": {
+      "name": "DIBARTOLOMEO, JOHN",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P004974": {
+      "name": "ROLL, MICHAEL",
+      "team": "Maccabi Tel Aviv"
+    },
+    "PLME": {
+      "name": "MARKOVIC, STEFAN",
+      "team": "Khimki Moscow Region"
+    },
+    "P003573": {
+      "name": "ZUBKOV, ANDREY",
+      "team": "Khimki Moscow Region"
+    },
+    "P006625": {
+      "name": "ZOOSMAN, YOVEL",
+      "team": "Maccabi Tel Aviv"
+    },
+    "P009003": {
+      "name": "RAY, KENDRICK",
+      "team": "Maccabi Tel Aviv"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P009003",
+      "player_name": "RAY, KENDRICK",
+      "team": "TEL",
+      "minutes": "14:36",
+      "points": 17,
+      "valuation": 19,
+      "plusminus": 5,
+      "assists": 1,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006661",
+      "player_name": "WILBEKIN, SCOTTIE",
+      "team": "TEL",
+      "minutes": "25:56",
+      "points": 14,
+      "valuation": 14,
+      "plusminus": 16,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P009004",
+      "player_name": "O'BRYANT, JOHNNY",
+      "team": "TEL",
+      "minutes": "21:09",
+      "points": 5,
+      "valuation": -2,
+      "plusminus": 12,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P005771",
+      "player_name": "CALOIARO, ANGELO",
+      "team": "TEL",
+      "minutes": "25:02",
+      "points": 7,
+      "valuation": 5,
+      "plusminus": 11,
+      "assists": 0,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004974",
+      "player_name": "ROLL, MICHAEL",
+      "team": "TEL",
+      "minutes": "23:54",
+      "points": 10,
+      "valuation": 14,
+      "plusminus": 12,
+      "assists": 5,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P005781",
+      "player_name": "KANE, DEANDRE",
+      "team": "TEL",
+      "minutes": "27:27",
+      "points": 9,
+      "valuation": 9,
+      "plusminus": 22,
+      "assists": 3,
+      "rebounds": 5,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P004119",
+      "player_name": "TYUS, ALEX",
+      "team": "TEL",
+      "minutes": "18:43",
+      "points": 2,
+      "valuation": 8,
+      "plusminus": 4,
+      "assists": 0,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P007768",
+      "player_name": "LEVI, NIMROD",
+      "team": "TEL",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007990",
+      "player_name": "DIBARTOLOMEO, JOHN",
+      "team": "TEL",
+      "minutes": "05:50",
+      "points": 3,
+      "valuation": 3,
+      "plusminus": -7,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005145",
+      "player_name": "COHEN, JAKE",
+      "team": "TEL",
+      "minutes": "04:32",
+      "points": 3,
+      "valuation": 0,
+      "plusminus": -10,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008991",
+      "player_name": "BLACK, TARIK",
+      "team": "TEL",
+      "minutes": "20:05",
+      "points": 6,
+      "valuation": 11,
+      "plusminus": 14,
+      "assists": 0,
+      "rebounds": 9,
+      "turnovers": 4
+    },
+    {
+      "player_id": "P006625",
+      "player_name": "ZOOSMAN, YOVEL",
+      "team": "TEL",
+      "minutes": "12:46",
+      "points": 3,
+      "valuation": 7,
+      "plusminus": 1,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004264",
+      "player_name": "BOST, DEE",
+      "team": "KHI",
+      "minutes": "24:27",
+      "points": 6,
+      "valuation": 5,
+      "plusminus": -13,
+      "assists": 3,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P007916",
+      "player_name": "CROCKER, TONY",
+      "team": "KHI",
+      "minutes": "15:26",
+      "points": 11,
+      "valuation": 4,
+      "plusminus": 2,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PBGV",
+      "player_name": "VIALTSEV, EGOR",
+      "team": "KHI",
+      "minutes": "16:56",
+      "points": 11,
+      "valuation": 12,
+      "plusminus": -4,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P009037",
+      "player_name": "GREEN, GARLON",
+      "team": "KHI",
+      "minutes": "11:58",
+      "points": 0,
+      "valuation": -4,
+      "plusminus": -11,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PLME",
+      "player_name": "MARKOVIC, STEFAN",
+      "team": "KHI",
+      "minutes": "25:45",
+      "points": 2,
+      "valuation": 10,
+      "plusminus": -7,
+      "assists": 7,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "PBFX",
+      "player_name": "MONIA, SERGEY",
+      "team": "KHI",
+      "minutes": "22:18",
+      "points": 5,
+      "valuation": 4,
+      "plusminus": -7,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PKLS",
+      "player_name": "GUBANOV, PETR",
+      "team": "KHI",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004628",
+      "player_name": "YAKUSHIN, TIMOFEY",
+      "team": "KHI",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003573",
+      "player_name": "ZUBKOV, ANDREY",
+      "team": "KHI",
+      "minutes": "12:13",
+      "points": 0,
+      "valuation": -4,
+      "plusminus": -11,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P005014",
+      "player_name": "JENKINS, CHARLES",
+      "team": "KHI",
+      "minutes": "25:28",
+      "points": 8,
+      "valuation": 7,
+      "plusminus": -15,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P004251",
+      "player_name": "THOMAS, MALCOLM",
+      "team": "KHI",
+      "minutes": "18:44",
+      "points": 5,
+      "valuation": 9,
+      "plusminus": -4,
+      "assists": 0,
+      "rebounds": 7,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P008847",
+      "player_name": "MICKEY, JORDAN",
+      "team": "KHI",
+      "minutes": "26:45",
+      "points": 15,
+      "valuation": 15,
+      "plusminus": -10,
+      "assists": 0,
+      "rebounds": 7,
+      "turnovers": 0
+    }
+  ],
+  "colors": {
+    "Maccabi Tel Aviv": "#d62839",
+    "Khimki Moscow Region": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "Maccabi Tel Aviv": 78,
+        "Khimki Moscow Region": 78
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "Maccabi Tel Aviv starts",
+          "78"
+        ],
+        [
+          "Khimki Moscow Region starts",
+          "78"
+        ],
+        [
+          "Maccabi Tel Aviv points per poss.",
+          "1.01"
+        ],
+        [
+          "Maccabi Tel Aviv Made 3 share",
+          "17%"
+        ],
+        [
+          "Khimki Moscow Region points per poss.",
+          "0.81"
+        ],
+        [
+          "Khimki Moscow Region Made 3 share",
+          "8%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "Maccabi Tel Aviv generated 1.01 points per possession over 78 tracked possessions.",
+        "Khimki Moscow Region generated 0.81 points per possession over 78 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Maccabi_Tel_Aviv_start",
+          "name": "Maccabi Tel Aviv Start",
+          "team": "Maccabi Tel Aviv",
+          "stage": "start"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Half-court",
+          "name": "Half-court",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_After_OREB",
+          "name": "After OREB",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Turnover",
+          "name": "Turnover",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Missed_shot",
+          "name": "Missed shot",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_2",
+          "name": "Made 2",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_3",
+          "name": "Made 3",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi Tel Aviv_0",
+          "name": "0 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_1",
+          "name": "1 pt",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_2",
+          "name": "2 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_3",
+          "name": "3 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki_Moscow_Region_start",
+          "name": "Khimki Moscow Region Start",
+          "team": "Khimki Moscow Region",
+          "stage": "start"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Half-court",
+          "name": "Half-court",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_After_OREB",
+          "name": "After OREB",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Turnover",
+          "name": "Turnover",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Missed_shot",
+          "name": "Missed shot",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_2",
+          "name": "Made 2",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_3",
+          "name": "Made 3",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki Moscow Region_0",
+          "name": "0 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_1",
+          "name": "1 pt",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_2",
+          "name": "2 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_3",
+          "name": "3 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Half-court",
+          "value": 42
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Half-court",
+          "target": "Maccabi_Tel_Aviv_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Missed_shot",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 14
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_After_OREB",
+          "value": 11
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_OREB",
+          "target": "Khimki_Moscow_Region_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Khimki_Moscow_Region_Missed_shot",
+          "target": "Khimki Moscow Region_0",
+          "value": 24
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_After_OREB",
+          "value": 12
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_OREB",
+          "target": "Maccabi_Tel_Aviv_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Turnover",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 19
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Transition_Fast_break",
+          "value": 19
+        },
+        {
+          "source": "Khimki_Moscow_Region_Transition_Fast_break",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_2",
+          "target": "Khimki Moscow Region_2",
+          "value": 16
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Half-court",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_2",
+          "target": "Maccabi Tel Aviv_2",
+          "value": 14
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Half-court",
+          "value": 48
+        },
+        {
+          "source": "Khimki_Moscow_Region_Half-court",
+          "target": "Khimki_Moscow_Region_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "Khimki_Moscow_Region_Transition_Fast_break",
+          "target": "Khimki_Moscow_Region_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "value": 24
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "target": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_1",
+          "value": 12
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Half-court",
+          "target": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "value": 12
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "target": "Maccabi_Tel_Aviv_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Half-court",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "target": "Maccabi_Tel_Aviv_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "Khimki_Moscow_Region_Transition_Fast_break",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_3",
+          "target": "Khimki Moscow Region_3",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Half-court",
+          "target": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "value": 13
+        },
+        {
+          "source": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "target": "Khimki Moscow Region_1",
+          "value": 13
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_OREB",
+          "target": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Transition_Fast_break",
+          "target": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "value": 4
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Half-court",
+          "target": "Maccabi_Tel_Aviv_Made_3",
+          "value": 11
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_3",
+          "target": "Maccabi Tel Aviv_3",
+          "value": 13
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_OREB",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Transition_Fast_break",
+          "target": "Khimki_Moscow_Region_Turnover",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Turnover",
+          "target": "Khimki Moscow Region_0",
+          "value": 15
+        },
+        {
+          "source": "Khimki_Moscow_Region_Half-court",
+          "target": "Khimki_Moscow_Region_Turnover",
+          "value": 11
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Half-court",
+          "target": "Maccabi_Tel_Aviv_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_OREB",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Khimki_Moscow_Region_Half-court",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Transition_Fast_break",
+          "target": "Maccabi_Tel_Aviv_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_OREB",
+          "target": "Khimki_Moscow_Region_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_OREB",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "target": "Khimki Moscow Region_0",
+          "value": 4
+        }
+      ],
+      "player_flows": {
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Half-court": [
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 8
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 7
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 5
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 5
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Half-court->Maccabi_Tel_Aviv_Missed_shot": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_After_OREB": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_OREB->Khimki_Moscow_Region_Missed_shot": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Missed_shot->Khimki Moscow Region_0": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 6
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_After_OREB": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_OREB->Maccabi_Tel_Aviv_Turnover": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 5
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Maccabi Tel Aviv",
+            "player_name": "Unknown",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Transition_Fast_break": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 6
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 4
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Transition_Fast_break->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_2->Khimki Moscow Region_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Half-court->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Half-court": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 9
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 8
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 7
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::Khimki Moscow Region",
+            "player_name": "Unknown",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Half-court->Khimki_Moscow_Region_Missed_shot": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Transition_Fast_break->Khimki_Moscow_Region_Missed_shot": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Transition_Fast_break": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 7
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Maccabi Tel Aviv",
+            "player_name": "Unknown",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Transition_Fast_break->Maccabi_Tel_Aviv_Shooting_foul_FTs": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Half-court->Maccabi_Tel_Aviv_Shooting_foul_FTs": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Transition_Fast_break->Maccabi_Tel_Aviv_Turnover": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Maccabi Tel Aviv",
+            "player_name": "Unknown",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Half-court->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Transition_Fast_break->Maccabi_Tel_Aviv_Missed_shot": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Transition_Fast_break->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_3->Khimki Moscow Region_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Half-court->Khimki_Moscow_Region_Shooting_foul_FTs": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Shooting_foul_FTs->Khimki Moscow Region_1": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_OREB->Maccabi_Tel_Aviv_Shooting_foul_FTs": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Transition_Fast_break->Khimki_Moscow_Region_Shooting_foul_FTs": [
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Half-court->Maccabi_Tel_Aviv_Made_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_OREB->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Transition_Fast_break->Khimki_Moscow_Region_Turnover": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Turnover->Khimki Moscow Region_0": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Khimki Moscow Region",
+            "player_name": "Unknown",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Half-court->Khimki_Moscow_Region_Turnover": [
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Khimki Moscow Region",
+            "player_name": "Unknown",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Half-court->Maccabi_Tel_Aviv_Turnover": [
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_OREB->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Transition_Fast_break->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Half-court->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Transition_Fast_break->Maccabi_Tel_Aviv_Made_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          }
+        ],
+        "Khimki_Moscow_Region_After_OREB->Khimki_Moscow_Region_Turnover": [
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_OREB->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Shooting_foul_FTs->Khimki Moscow Region_0": [
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "Maccabi Tel Aviv": 42,
+        "Khimki Moscow Region": 48
+      },
+      "title": "Zoomed Detail \u2014 Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "Maccabi Tel Aviv count",
+          "42"
+        ],
+        [
+          "Khimki Moscow Region count",
+          "48"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Maccabi_Tel_Aviv_start",
+          "name": "Maccabi Tel Aviv Half-court",
+          "team": "Maccabi Tel Aviv",
+          "stage": "start"
+        },
+        {
+          "id": "Khimki_Moscow_Region_start",
+          "name": "Khimki Moscow Region Half-court",
+          "team": "Khimki Moscow Region",
+          "stage": "start"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_2",
+          "name": "Made 2",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_3",
+          "name": "Made 3",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Missed_shot",
+          "name": "Missed shot",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Turnover",
+          "name": "Turnover",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi Tel Aviv_0",
+          "name": "0 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_1",
+          "name": "1 pt",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_2",
+          "name": "2 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_3",
+          "name": "3 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki_Moscow_Region_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_2",
+          "name": "Made 2",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_3",
+          "name": "Made 3",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Missed_shot",
+          "name": "Missed shot",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Turnover",
+          "name": "Turnover",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki Moscow Region_0",
+          "name": "0 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_1",
+          "name": "1 pt",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_2",
+          "name": "2 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_3",
+          "name": "3 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_PnR_handler_action",
+          "value": 31
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_PnR_handler_action",
+          "target": "Maccabi_Tel_Aviv_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Missed_shot",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_PnR_handler_action",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_2",
+          "target": "Maccabi Tel Aviv_2",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_PnR_handler_action",
+          "value": 45
+        },
+        {
+          "source": "Khimki_Moscow_Region_PnR_handler_action",
+          "target": "Khimki_Moscow_Region_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "Khimki_Moscow_Region_Missed_shot",
+          "target": "Khimki Moscow Region_0",
+          "value": 13
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_PnR_handler_action",
+          "target": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "value": 12
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_1",
+          "value": 8
+        },
+        {
+          "source": "Khimki_Moscow_Region_PnR_handler_action",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_2",
+          "target": "Khimki Moscow Region_2",
+          "value": 8
+        },
+        {
+          "source": "Khimki_Moscow_Region_PnR_handler_action",
+          "target": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "value": 13
+        },
+        {
+          "source": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "target": "Khimki Moscow Region_1",
+          "value": 11
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 4
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Spot-up_swing",
+          "value": 11
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Spot-up_swing",
+          "target": "Maccabi_Tel_Aviv_Made_3",
+          "value": 11
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_3",
+          "target": "Maccabi Tel Aviv_3",
+          "value": 11
+        },
+        {
+          "source": "Khimki_Moscow_Region_PnR_handler_action",
+          "target": "Khimki_Moscow_Region_Turnover",
+          "value": 11
+        },
+        {
+          "source": "Khimki_Moscow_Region_Turnover",
+          "target": "Khimki Moscow Region_0",
+          "value": 11
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_PnR_handler_action",
+          "target": "Maccabi_Tel_Aviv_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Turnover",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 7
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Spot-up_swing",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Spot-up_swing",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_3",
+          "target": "Khimki Moscow Region_3",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "target": "Khimki Moscow Region_0",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_PnR_handler_action": [
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 6
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 6
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_PnR_handler_action->Maccabi_Tel_Aviv_Missed_shot": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_PnR_handler_action->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_PnR_handler_action": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 9
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 8
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 6
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Khimki Moscow Region",
+            "player_name": "Unknown",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_PnR_handler_action->Khimki_Moscow_Region_Missed_shot": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Missed_shot->Khimki Moscow Region_0": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_PnR_handler_action->Maccabi_Tel_Aviv_Shooting_foul_FTs": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_PnR_handler_action->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_2->Khimki Moscow Region_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_PnR_handler_action->Khimki_Moscow_Region_Shooting_foul_FTs": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Shooting_foul_FTs->Khimki Moscow Region_1": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 4
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Spot-up_swing": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Spot-up_swing->Maccabi_Tel_Aviv_Made_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_PnR_handler_action->Khimki_Moscow_Region_Turnover": [
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Khimki Moscow Region",
+            "player_name": "Unknown",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Turnover->Khimki Moscow Region_0": [
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Khimki Moscow Region",
+            "player_name": "Unknown",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_PnR_handler_action->Maccabi_Tel_Aviv_Turnover": [
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Spot-up_swing": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Spot-up_swing->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_3->Khimki Moscow Region_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Shooting_foul_FTs->Khimki Moscow Region_0": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "Maccabi Tel Aviv": 24,
+        "Khimki Moscow Region": 19
+      },
+      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "Maccabi Tel Aviv count",
+          "24"
+        ],
+        [
+          "Khimki Moscow Region count",
+          "19"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Maccabi_Tel_Aviv_start",
+          "name": "Maccabi Tel Aviv Transition",
+          "team": "Maccabi Tel Aviv",
+          "stage": "start"
+        },
+        {
+          "id": "Khimki_Moscow_Region_start",
+          "name": "Khimki Moscow Region Transition",
+          "team": "Khimki Moscow Region",
+          "stage": "start"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_2",
+          "name": "Made 2",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_3",
+          "name": "Made 3",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Missed_shot",
+          "name": "Missed shot",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Turnover",
+          "name": "Turnover",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi Tel Aviv_0",
+          "name": "0 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_1",
+          "name": "1 pt",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_2",
+          "name": "2 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_3",
+          "name": "3 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki_Moscow_Region_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_2",
+          "name": "Made 2",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_3",
+          "name": "Made 3",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Missed_shot",
+          "name": "Missed shot",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Turnover",
+          "name": "Turnover",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki Moscow Region_0",
+          "name": "0 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_1",
+          "name": "1 pt",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_2",
+          "name": "2 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_3",
+          "name": "3 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_After_defensive_rebound",
+          "value": 19
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_defensive_rebound",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_2",
+          "target": "Khimki Moscow Region_2",
+          "value": 5
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_defensive_rebound",
+          "target": "Khimki_Moscow_Region_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Missed_shot",
+          "target": "Khimki Moscow Region_0",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "value": 24
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "target": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_1",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "target": "Maccabi_Tel_Aviv_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Turnover",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "target": "Maccabi_Tel_Aviv_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Missed_shot",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 8
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_defensive_rebound",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_3",
+          "target": "Khimki Moscow Region_3",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_defensive_rebound",
+          "target": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "value": 4
+        },
+        {
+          "source": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "target": "Khimki Moscow Region_1",
+          "value": 2
+        },
+        {
+          "source": "Khimki_Moscow_Region_After_defensive_rebound",
+          "target": "Khimki_Moscow_Region_Turnover",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Turnover",
+          "target": "Khimki Moscow Region_0",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_2",
+          "target": "Maccabi Tel Aviv_2",
+          "value": 5
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_After_defensive_rebound",
+          "target": "Maccabi_Tel_Aviv_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_3",
+          "target": "Maccabi Tel Aviv_3",
+          "value": 2
+        },
+        {
+          "source": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "target": "Khimki Moscow Region_0",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_After_defensive_rebound": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 6
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 4
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_defensive_rebound->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_2->Khimki Moscow Region_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_defensive_rebound->Khimki_Moscow_Region_Missed_shot": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Missed_shot->Khimki Moscow Region_0": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 3
+          },
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_After_defensive_rebound": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 7
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Maccabi Tel Aviv",
+            "player_name": "Unknown",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_defensive_rebound->Maccabi_Tel_Aviv_Shooting_foul_FTs": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_defensive_rebound->Maccabi_Tel_Aviv_Turnover": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Maccabi Tel Aviv",
+            "player_name": "Unknown",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Maccabi Tel Aviv",
+            "player_name": "Unknown",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_defensive_rebound->Maccabi_Tel_Aviv_Missed_shot": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Missed_shot->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_defensive_rebound->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_3->Khimki Moscow Region_3": [
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_defensive_rebound->Khimki_Moscow_Region_Shooting_foul_FTs": [
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Shooting_foul_FTs->Khimki Moscow Region_1": [
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_After_defensive_rebound->Khimki_Moscow_Region_Turnover": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Turnover->Khimki Moscow Region_0": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_defensive_rebound->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_After_defensive_rebound->Maccabi_Tel_Aviv_Made_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          }
+        ],
+        "Khimki_Moscow_Region_Shooting_foul_FTs->Khimki Moscow Region_0": [
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "Maccabi Tel Aviv": 12,
+        "Khimki Moscow Region": 11
+      },
+      "title": "Zoomed Detail \u2014 After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "Maccabi Tel Aviv count",
+          "12"
+        ],
+        [
+          "Khimki Moscow Region count",
+          "11"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Maccabi_Tel_Aviv_start",
+          "name": "Maccabi Tel Aviv After OREB",
+          "team": "Maccabi Tel Aviv",
+          "stage": "start"
+        },
+        {
+          "id": "Khimki_Moscow_Region_start",
+          "name": "Khimki Moscow Region After OREB",
+          "team": "Khimki Moscow Region",
+          "stage": "start"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_2",
+          "name": "Made 2",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_3",
+          "name": "Made 3",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Missed_shot",
+          "name": "Missed shot",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Turnover",
+          "name": "Turnover",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi Tel Aviv_0",
+          "name": "0 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_1",
+          "name": "1 pt",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_2",
+          "name": "2 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Maccabi Tel Aviv_3",
+          "name": "3 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_2",
+          "name": "Made 2",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_3",
+          "name": "Made 3",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Missed_shot",
+          "name": "Missed shot",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Turnover",
+          "name": "Turnover",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki Moscow Region_0",
+          "name": "0 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_1",
+          "name": "1 pt",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_2",
+          "name": "2 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki Moscow Region_3",
+          "name": "3 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Reset_half-court",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Reset_half-court",
+          "target": "Khimki_Moscow_Region_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Khimki_Moscow_Region_Missed_shot",
+          "target": "Khimki Moscow Region_0",
+          "value": 5
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Reset_half-court",
+          "value": 9
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Reset_half-court",
+          "target": "Maccabi_Tel_Aviv_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Turnover",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Reset_half-court",
+          "target": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_1",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Immediate_putback",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Immediate_putback",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_2",
+          "target": "Khimki Moscow Region_2",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Shooting_foul_FTs",
+          "target": "Maccabi Tel Aviv_0",
+          "value": 2
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Immediate_putback",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Immediate_putback",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_2",
+          "target": "Maccabi Tel Aviv_2",
+          "value": 3
+        },
+        {
+          "source": "Khimki_Moscow_Region_Reset_half-court",
+          "target": "Khimki_Moscow_Region_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_Turnover",
+          "target": "Khimki Moscow Region_0",
+          "value": 1
+        },
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Kick-out_perimeter",
+          "value": 2
+        },
+        {
+          "source": "Khimki_Moscow_Region_Kick-out_perimeter",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_3",
+          "target": "Khimki Moscow Region_3",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Reset_half-court": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Reset_half-court->Khimki_Moscow_Region_Missed_shot": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Missed_shot->Khimki Moscow Region_0": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P009037",
+            "player_name": "GREEN, GARLON",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PLME",
+            "player_name": "MARKOVIC, STEFAN",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Reset_half-court": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Reset_half-court->Maccabi_Tel_Aviv_Turnover": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Turnover->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Reset_half-court->Maccabi_Tel_Aviv_Shooting_foul_FTs": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_1": [
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Immediate_putback": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Immediate_putback->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_2->Khimki Moscow Region_2": [
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Shooting_foul_FTs->Maccabi Tel Aviv_0": [
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Immediate_putback": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Immediate_putback->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Reset_half-court->Khimki_Moscow_Region_Turnover": [
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Turnover->Khimki Moscow Region_0": [
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Kick-out_perimeter": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Kick-out_perimeter->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_3->Khimki Moscow Region_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "Maccabi Tel Aviv": 14,
+        "Khimki Moscow Region": 16
+      },
+      "title": "Zoomed Detail \u2014 Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Maccabi Tel Aviv count",
+          "14"
+        ],
+        [
+          "Khimki Moscow Region count",
+          "16"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Maccabi_Tel_Aviv_start",
+          "name": "Maccabi Tel Aviv Made 2",
+          "team": "Maccabi Tel Aviv",
+          "stage": "start"
+        },
+        {
+          "id": "Khimki_Moscow_Region_start",
+          "name": "Khimki Moscow Region Made 2",
+          "team": "Khimki Moscow Region",
+          "stage": "start"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_2",
+          "name": "Made 2",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi Tel Aviv_2",
+          "name": "2 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_2",
+          "name": "Made 2",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki Moscow Region_2",
+          "name": "2 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Layup_runner",
+          "value": 16
+        },
+        {
+          "source": "Khimki_Moscow_Region_Layup_runner",
+          "target": "Khimki_Moscow_Region_Made_2",
+          "value": 16
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_2",
+          "target": "Khimki Moscow Region_2",
+          "value": 16
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Layup_runner",
+          "value": 14
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Layup_runner",
+          "target": "Maccabi_Tel_Aviv_Made_2",
+          "value": 14
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_2",
+          "target": "Maccabi Tel Aviv_2",
+          "value": 14
+        }
+      ],
+      "player_flows": {
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Layup_runner": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Layup_runner->Khimki_Moscow_Region_Made_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_2->Khimki Moscow Region_2": [
+          {
+            "player_id": "P007916",
+            "player_name": "CROCKER, TONY",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P008847",
+            "player_name": "MICKEY, JORDAN",
+            "team": "Khimki Moscow Region",
+            "poss": 5
+          },
+          {
+            "player_id": "P004251",
+            "player_name": "THOMAS, MALCOLM",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Layup_runner": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Layup_runner->Maccabi_Tel_Aviv_Made_2": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_2->Maccabi Tel Aviv_2": [
+          {
+            "player_id": "P005771",
+            "player_name": "CALOIARO, ANGELO",
+            "team": "Maccabi Tel Aviv",
+            "poss": 3
+          },
+          {
+            "player_id": "P008991",
+            "player_name": "BLACK, TARIK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P004119",
+            "player_name": "TYUS, ALEX",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "Maccabi Tel Aviv": 13,
+        "Khimki Moscow Region": 6
+      },
+      "title": "Zoomed Detail \u2014 Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Maccabi Tel Aviv count",
+          "13"
+        ],
+        [
+          "Khimki Moscow Region count",
+          "6"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Maccabi_Tel_Aviv_start",
+          "name": "Maccabi Tel Aviv Made 3",
+          "team": "Maccabi Tel Aviv",
+          "stage": "start"
+        },
+        {
+          "id": "Khimki_Moscow_Region_start",
+          "name": "Khimki Moscow Region Made 3",
+          "team": "Khimki Moscow Region",
+          "stage": "start"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Maccabi Tel Aviv",
+          "stage": "type"
+        },
+        {
+          "id": "Maccabi_Tel_Aviv_Made_3",
+          "name": "Made 3",
+          "team": "Maccabi Tel Aviv",
+          "stage": "event"
+        },
+        {
+          "id": "Maccabi Tel Aviv_3",
+          "name": "3 pts",
+          "team": "Maccabi Tel Aviv",
+          "stage": "points"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Khimki Moscow Region",
+          "stage": "type"
+        },
+        {
+          "id": "Khimki_Moscow_Region_Made_3",
+          "name": "Made 3",
+          "team": "Khimki Moscow Region",
+          "stage": "event"
+        },
+        {
+          "id": "Khimki Moscow Region_3",
+          "name": "3 pts",
+          "team": "Khimki Moscow Region",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Khimki_Moscow_Region_start",
+          "target": "Khimki_Moscow_Region_Above-the-break_C&S",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Above-the-break_C&S",
+          "target": "Khimki_Moscow_Region_Made_3",
+          "value": 6
+        },
+        {
+          "source": "Khimki_Moscow_Region_Made_3",
+          "target": "Khimki Moscow Region_3",
+          "value": 6
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_start",
+          "target": "Maccabi_Tel_Aviv_Above-the-break_C&S",
+          "value": 13
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Above-the-break_C&S",
+          "target": "Maccabi_Tel_Aviv_Made_3",
+          "value": 13
+        },
+        {
+          "source": "Maccabi_Tel_Aviv_Made_3",
+          "target": "Maccabi Tel Aviv_3",
+          "value": 13
+        }
+      ],
+      "player_flows": {
+        "Khimki_Moscow_Region_start->Khimki_Moscow_Region_Above-the-break_C&S": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Above-the-break_C&S->Khimki_Moscow_Region_Made_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Khimki_Moscow_Region_Made_3->Khimki Moscow Region_3": [
+          {
+            "player_id": "P004264",
+            "player_name": "BOST, DEE",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "PBGV",
+            "player_name": "VIALTSEV, EGOR",
+            "team": "Khimki Moscow Region",
+            "poss": 2
+          },
+          {
+            "player_id": "P005014",
+            "player_name": "JENKINS, CHARLES",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          },
+          {
+            "player_id": "PBFX",
+            "player_name": "MONIA, SERGEY",
+            "team": "Khimki Moscow Region",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_start->Maccabi_Tel_Aviv_Above-the-break_C&S": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Above-the-break_C&S->Maccabi_Tel_Aviv_Made_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ],
+        "Maccabi_Tel_Aviv_Made_3->Maccabi Tel Aviv_3": [
+          {
+            "player_id": "P009003",
+            "player_name": "RAY, KENDRICK",
+            "team": "Maccabi Tel Aviv",
+            "poss": 4
+          },
+          {
+            "player_id": "P004974",
+            "player_name": "ROLL, MICHAEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P006661",
+            "player_name": "WILBEKIN, SCOTTIE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 2
+          },
+          {
+            "player_id": "P005145",
+            "player_name": "COHEN, JAKE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P007990",
+            "player_name": "DIBARTOLOMEO, JOHN",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P005781",
+            "player_name": "KANE, DEANDRE",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P009004",
+            "player_name": "O'BRYANT, JOHNNY",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          },
+          {
+            "player_id": "P006625",
+            "player_name": "ZOOSMAN, YOVEL",
+            "team": "Maccabi Tel Aviv",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}

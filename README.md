@@ -4,11 +4,90 @@ Docker-first Euroleague possession-flow pipeline + static D3 viewer.
 
 This README is onboarding-first: you can come back later and re-onboard quickly.
 
+## Guide
+
+<table>
+  <thead>
+    <tr>
+      <th>Operation / Flow To Achieve</th>
+      <th>Step-wise How-to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Add a new season (end-to-end: raw + processed + manifest + normalization + Elo)</td>
+      <td>
+        <ol>
+          <li>Full season sync (raw + multi + score_timeline + style_insights all at once): <code>make sync-season-full SEASON=E2026</code></li>
+          <li>Normalize club/team names for that season: <code>make normalize-season SEASON=E2026</code></li>
+          <li>Recompute Elo timeline across stored seasons (carry-forward): <code>make elo-auto</code></li>
+          <li>Rebuild the manifest so the frontend game switchers discover new games: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+          <li>Run a season report sanity check: <code>make report SEASON=E2026</code></li>
+        </ol>
+      </td>
+    </tr>
+      <td>Add newest published games in (current) Season (raw + processed + manifest + normalization + Elo)</td>
+      <td>
+        <ol>
+          <li>Full season sync (raw + multi + score_timeline + style_insights all at once): <code>make sync-season-full SEASON=E2025</code></li>
+          <li>Normalize club/team names for that season: <code>make normalize-season SEASON=E2025</code></li>
+          <li>Recompute Elo timeline across stored seasons (carry-forward): <code>make elo-auto</code></li>
+          <li>Rebuild the manifest so the frontend game switchers discover new games: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+          <li>Run a season report sanity check: <code>make report SEASON=E2025</code></li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>Backfill style insights only (already ingested seasons; no re-sync)</td>
+      <td>
+        <ol>
+          <li>Run style insights only for target seasons (example older seasons): <code>for s in E2017 E2018 E2019 E2020; do docker compose run --rm ops style_insights --seasoncode $s --data-dir /app/data --output-dir /app/data; done</code></li>
+          <li>(Optional) Rebuild manifest if downstream pages rely on fresh derived metadata snapshots: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>After data model change: update ingested seasons in-place (all required updates)</td>
+      <td>
+        <ol>
+          <li>Re-sync all relevant seasons so processed JSONs and score_timeline artifacts are rebuilt against current logic: <code>make sync-seasons SEASONS='E2017 E2018 E2019 E2020 E2021 E2022 E2023 E2024 E2025'</code></li>
+          <li>Re-run normalization across all ingested seasons: <code>make normalize-all-seasons</code></li>
+          <li>Re-run Elo from earliest to latest season to refresh Elo-derived fields: <code>make elo-auto</code></li>
+          <li>Rebuild manifest for all seasons so frontend discovery metadata is aligned with regenerated data: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+          <li>Validate via reports across seasons: <code>make report</code></li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>After adding a new normalization mapping: renormalize club names only (all data)</td>
+      <td>
+        <ol>
+          <li>Apply club-name normalization in-place to all seasons: <code>make normalize-all-seasons</code></li>
+          <li>Rebuild manifest so any normalized labels shown in lists/cards are updated consistently: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+          <li>Run reports to confirm expected naming and no unknown club leftovers: <code>make report</code></li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>Elo algorithm changed in backend: rerun Elo simulation end-to-end and refresh Elo-dependent outputs</td>
+      <td>
+        <ol>
+          <li>Recompute Elo from earliest to latest season: <code>make elo-auto</code></li>
+          <li>Rebuild manifest so Elo badges/metadata used by frontend pages are refreshed: <code>docker-compose run --rm ops rebuild_manifest --all-seasons --output-dir /app/data</code></li>
+          <li>Run reports to verify Elo availability and season-level consistency: <code>make report</code></li>
+        </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Cheatsheet
 
 -> Get a whole season "prepared via latest data model": `make redo-season SEASON="E2025`
 
 -> Normalize external Club names cause they might have variance: `make normalize-all-seasons` or `make normalize-season SEASON=E2025` 
+
+-> Sync full seasons without START/END args (auto-detected): `make sync-seasons SEASONS='E2022 E2023 E2024'`
 
 -> Simulate Elo values from start to end of Seasons in DB: `make elo-auto`
 
@@ -115,6 +194,10 @@ docker compose run --rm season_sync
 ### Sync multiple seasons in one command
 
 ```bash
+# All seasons with auto-detected game ranges (based on season code)
+make sync-seasons SEASONS='E2022 E2023 E2024'
+
+# Or specify custom START/END ranges
 make sync-seasons SEASONS='E2022 E2023 E2024' START=1 END=380
 ```
 
@@ -165,6 +248,13 @@ What `make elo-auto` does:
 
 ## 4) Data Flow
 
+Artifact families in current MVP:
+
+- `raw`: `raw_pbp_*`, `raw_pts_*`, `raw_box_*`
+- `multi`: `multi_drilldown_real_data_*`
+- `score_timeline`: `score_timeline_*`
+- `style_insights`: `style_insights_*`
+
 1. `build_from_euroleague_api.py`
    - fetches `PlaybyPlay`, `Points`, `Boxscore`
    - writes raw snapshots to `assets/`
@@ -179,7 +269,10 @@ What `make elo-auto` does:
 4. `season_sync.py`
    - batch sync over gamecode ranges
    - rebuilds `games_manifest.json`
-5. UI pages
+5. `style_insights.py`
+  - computes season-level style consistency/adaptability from `score_timeline_*`
+  - writes `style_insights_<season>.json`
+6. UI pages
    - load processed files directly from disk (`assets/processed/...`)
 
 ## 5) App Config
@@ -298,7 +391,26 @@ Notes:
 - Season filter selections must remain consecutive (A,B,C allowed; A,B,D blocked).
 - When replaying more than one season, the chart renders vertical divider lines at season boundaries.
 
-## 6.3) Re-seed ELO From A Different Initial Value
+## 6.3) Elo First-Run Onboarding (Mobile-First UX)
+
+The Elo showcase page now includes a lightweight first-run modal that explains Elo in under 20 seconds:
+
+- **What is Elo?** Plain-language definition: "Elo is a strength rating that updates after each game based on result and opponent strength."
+- **Why it matters?** "Higher Elo means stronger recent performance relative to league peers."
+- **How to use?** "Use season buttons to filter, then hit Play to watch Elo evolve fixture-by-fixture."
+
+**Behavior:**
+- Modal appears once per browser (localStorage-persisted dismissal).
+- All visible seasons are preselected by default (enabling immediate multi-season replay).
+- Dismissal is stored in `elo_onboarding_dismissed` localStorage key.
+- Tap/click the backdrop or "Got it" button to close.
+
+**Access:**
+- Entry point: `prod/elo.html` (plain, no query params) triggers onboarding on first visit.
+- Lab tile: "Elo First-Run Onboarding" in `lab/index.html` shortcuts to the onboarding experience.
+- Skip onboarding: Any query param (e.g., `?seasoncodes=E2025`) or revisit after dismissal will skip the modal.
+
+## 6.4) Re-seed ELO From A Different Initial Value
 
 When you want to recompute Elo from a different starting value (instead of 1500), use this quick flow:
 
@@ -411,3 +523,30 @@ UAT and launch docs:
 - `docs/uat_checklist.md`
 - `docs/launch_runbook_2h.md`
  - `docs/product_specs.md` — concise product-level MVP spec and acceptance criteria for the Unified Explorer.
+
+## 11) E2E Testing (Cypress)
+
+Cypress specs live in `e2e/cypress/e2e/` and cover MVP interaction flows:
+
+### Run E2E tests
+
+```bash
+# Run all E2E tests in interactive mode
+cd e2e && npm test
+
+# Run specific spec
+npm test -- cypress/e2e/elo-season-preselect.cy.js
+
+# Run headless (CI mode)
+npm run test:headless
+```
+
+### Key specs
+
+- **`elo-season-preselect.cy.js`** — Verifies Elo onboarding UX:
+  - All available seasons are preselected on first load
+  - Onboarding modal appears and has dismiss button
+  - Dismissal is persisted across page reloads
+  - Rank table populates correctly with multi-season data
+
+**Design goal:** Tests are written with GIVEN/WHEN/THEN comments for clarity and serve as executable specification of expected MVP behavior.

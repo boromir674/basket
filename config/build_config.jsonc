@@ -11,7 +11,6 @@
     "default_bundle_file": "multi_drilldown_real_data.json",
     "manifest_file": "games_manifest.json",
     "raw_pts_pattern": "raw_pts_{season}_{game}.json",
-    "elo_pattern": "elo_{season}.json",
     "style_insights_pattern": "style_insights_{season}.json"
   },
   "modes": {
@@ -24,7 +23,7 @@
       "path_patterns": [
         // Core Sankey graph payload for every game listed in games_manifest.json.
         "data/multi_drilldown_real_data_E*.json",
-        // Required by cone chart and score-diff / score-d52 families (classic + v2/full-paint).
+        // Required by 'Cone' chart and score-diff / score-d52 families (classic + v2/full-paint).
         "data/raw/raw_pts_E*.json",
         // Precomputed timeline payload used for cheap score-diff and score-d52 rendering.
         "data/score_timeline_E*.json"
@@ -50,7 +49,7 @@
       "description": "Lab landing with experimental visualizations",
       "inherits_from": "app",
       "path_patterns": [
-        // Required box-score payloads used by shot-style and consistency lab surfaces.
+        // Required box-score payloads used by Shot maps (3D or 3D)
         "data/raw/raw_box_E*.json"
       ],
       "html_pages": [

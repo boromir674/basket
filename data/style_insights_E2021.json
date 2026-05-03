@@ -1,0 +1,4501 @@
+{
+  "meta": {
+    "seasoncode": "E2021",
+    "games_scanned": 186,
+    "teams": 18,
+    "notes": [
+      "Consistency is modeled as inverse average L1 distance from team baseline shares.",
+      "Adaptability is modeled as average context-to-baseline distance across leading/trailing/tied."
+    ]
+  },
+  "rankings": {
+    "consistency": [
+      {
+        "team_code": "MCO",
+        "score": 93.37
+      },
+      {
+        "team_code": "IST",
+        "score": 92.58
+      },
+      {
+        "team_code": "UNK",
+        "score": 92.3
+      },
+      {
+        "team_code": "BAS",
+        "score": 92.27
+      },
+      {
+        "team_code": "BER",
+        "score": 92.23
+      },
+      {
+        "team_code": "ULK",
+        "score": 92.15
+      },
+      {
+        "team_code": "RED",
+        "score": 91.89
+      },
+      {
+        "team_code": "MIL",
+        "score": 91.81
+      },
+      {
+        "team_code": "OLY",
+        "score": 91.58
+      },
+      {
+        "team_code": "ZAL",
+        "score": 91.58
+      },
+      {
+        "team_code": "TEL",
+        "score": 91.52
+      },
+      {
+        "team_code": "ASV",
+        "score": 91.46
+      },
+      {
+        "team_code": "CSK",
+        "score": 91.42
+      },
+      {
+        "team_code": "BAR",
+        "score": 90.87
+      },
+      {
+        "team_code": "DYR",
+        "score": 90.73
+      },
+      {
+        "team_code": "MAD",
+        "score": 90.02
+      },
+      {
+        "team_code": "MUN",
+        "score": 90.0
+      },
+      {
+        "team_code": "PAN",
+        "score": 89.84
+      }
+    ],
+    "adaptability": [
+      {
+        "team_code": "MUN",
+        "score": 5.46
+      },
+      {
+        "team_code": "BAR",
+        "score": 4.98
+      },
+      {
+        "team_code": "OLY",
+        "score": 4.91
+      },
+      {
+        "team_code": "CSK",
+        "score": 4.85
+      },
+      {
+        "team_code": "BER",
+        "score": 4.78
+      },
+      {
+        "team_code": "MIL",
+        "score": 4.67
+      },
+      {
+        "team_code": "ZAL",
+        "score": 4.47
+      },
+      {
+        "team_code": "ULK",
+        "score": 3.84
+      },
+      {
+        "team_code": "MCO",
+        "score": 3.75
+      },
+      {
+        "team_code": "IST",
+        "score": 3.29
+      },
+      {
+        "team_code": "BAS",
+        "score": 3.28
+      },
+      {
+        "team_code": "UNK",
+        "score": 3.25
+      },
+      {
+        "team_code": "PAN",
+        "score": 3.18
+      },
+      {
+        "team_code": "MAD",
+        "score": 2.9
+      },
+      {
+        "team_code": "RED",
+        "score": 2.88
+      },
+      {
+        "team_code": "ASV",
+        "score": 2.44
+      },
+      {
+        "team_code": "TEL",
+        "score": 2.36
+      },
+      {
+        "team_code": "DYR",
+        "score": 1.98
+      }
+    ]
+  },
+  "teams": [
+    {
+      "team_code": "ASV",
+      "consistency_score": 91.46,
+      "adaptability_score": 2.44,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.14402173913043478,
+          "two": 0.5788043478260869,
+          "three": 0.27717391304347827
+        },
+        "attempts_overall_share": {
+          "ft": 0.150997150997151,
+          "two": 0.5747863247863247,
+          "three": 0.2742165242165242
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.1524008350730689,
+            "two": 0.5594989561586639,
+            "three": 0.2881002087682672
+          },
+          "trailing": {
+            "ft": 0.1425364758698092,
+            "two": 0.5881032547699214,
+            "three": 0.26936026936026936
+          },
+          "tied": {
+            "ft": 0.11764705882352941,
+            "two": 0.5882352941176471,
+            "three": 0.29411764705882354
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.15766738660907129,
+            "two": 0.5421166306695464,
+            "three": 0.3002159827213823
+          },
+          "trailing": {
+            "ft": 0.15137067938021453,
+            "two": 0.5935637663885578,
+            "three": 0.2550655542312277
+          },
+          "tied": {
+            "ft": 0.11764705882352941,
+            "two": 0.5686274509803921,
+            "three": 0.3137254901960784
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 150,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.14285714285714285,
+              "two": 0.5714285714285714,
+              "three": 0.2857142857142857
+            },
+            "attempts_mix": {
+              "ft": 0.16901408450704225,
+              "two": 0.5352112676056338,
+              "three": 0.29577464788732394
+            },
+            "points_l1_distance": 0.0171,
+            "attempts_l1_distance": 0.0792,
+            "average_l1_distance": 0.0481,
+            "quick_text": "Points mix: 3PT 29% \u00b7 2PT 57% \u00b7 FT 14%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 7,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.07954545454545454,
+              "two": 0.5454545454545454,
+              "three": 0.375
+            },
+            "attempts_mix": {
+              "ft": 0.1,
+              "two": 0.5714285714285714,
+              "three": 0.32857142857142857
+            },
+            "points_l1_distance": 0.1957,
+            "attempts_l1_distance": 0.1087,
+            "average_l1_distance": 0.1522,
+            "quick_text": "Points mix: 3PT 38% \u00b7 2PT 55% \u00b7 FT 8%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 40,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.1111111111111111,
+              "two": 0.3888888888888889,
+              "three": 0.5
+            },
+            "attempts_mix": {
+              "ft": 0.12307692307692308,
+              "two": 0.47692307692307695,
+              "three": 0.4
+            },
+            "points_l1_distance": 0.4457,
+            "attempts_l1_distance": 0.2516,
+            "average_l1_distance": 0.3486,
+            "quick_text": "Points mix: 3PT 50% \u00b7 2PT 39% \u00b7 FT 11%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 74,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.6326,
+            "average_state_shift": 0.8853,
+            "state_shift": {
+              "leading": 1.0,
+              "trailing": 0.0234,
+              "tied": 1.6326
+            },
+            "points_mix": {
+              "ft": 0.19402985074626866,
+              "two": 0.6268656716417911,
+              "three": 0.1791044776119403
+            },
+            "attempts_mix": {
+              "ft": 0.17333333333333334,
+              "two": 0.5733333333333334,
+              "three": 0.25333333333333335
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.8853)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 122,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 0.6994,
+            "average_state_shift": 0.3554,
+            "state_shift": {
+              "leading": 0.6994,
+              "trailing": 0.108,
+              "tied": 0.2589
+            },
+            "points_mix": {
+              "ft": 0.19696969696969696,
+              "two": 0.48484848484848486,
+              "three": 0.3181818181818182
+            },
+            "attempts_mix": {
+              "ft": 0.17105263157894737,
+              "two": 0.5657894736842105,
+              "three": 0.2631578947368421
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.3554)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 106,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.2725,
+            "average_state_shift": 0.1321,
+            "state_shift": {
+              "leading": 0.0699,
+              "trailing": 0.054,
+              "tied": 0.2725
+            },
+            "points_mix": {
+              "ft": 0.10588235294117647,
+              "two": 0.5411764705882353,
+              "three": 0.35294117647058826
+            },
+            "attempts_mix": {
+              "ft": 0.13043478260869565,
+              "two": 0.5362318840579711,
+              "three": 0.3333333333333333
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1321)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 150,
+          "points_share": {
+            "ft": 0.14285714285714285,
+            "two": 0.5714285714285714,
+            "three": 0.2857142857142857
+          },
+          "attempts_share": {
+            "ft": 0.16901408450704225,
+            "two": 0.5352112676056338,
+            "three": 0.29577464788732394
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 7,
+          "points_share": {
+            "ft": 0.07954545454545454,
+            "two": 0.5454545454545454,
+            "three": 0.375
+          },
+          "attempts_share": {
+            "ft": 0.1,
+            "two": 0.5714285714285714,
+            "three": 0.32857142857142857
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 40,
+          "points_share": {
+            "ft": 0.1111111111111111,
+            "two": 0.3888888888888889,
+            "three": 0.5
+          },
+          "attempts_share": {
+            "ft": 0.12307692307692308,
+            "two": 0.47692307692307695,
+            "three": 0.4
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 28%, 2PT 58%, FT 14%.",
+        "Consistency score: 91.46 / 100.",
+        "Adaptability score: 2.44 / 100."
+      ]
+    },
+    {
+      "team_code": "BAR",
+      "consistency_score": 90.87,
+      "adaptability_score": 4.98,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.18427095292766935,
+          "two": 0.48679678530424797,
+          "three": 0.32893226176808266
+        },
+        "attempts_overall_share": {
+          "ft": 0.20214105793450882,
+          "two": 0.5031486146095718,
+          "three": 0.2947103274559194
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.1771177117711771,
+            "two": 0.46644664466446645,
+            "three": 0.3564356435643564
+          },
+          "trailing": {
+            "ft": 0.1911170928667564,
+            "two": 0.4979811574697174,
+            "three": 0.31090174966352624
+          },
+          "tied": {
+            "ft": 0.2,
+            "two": 0.6,
+            "three": 0.2
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.2022613065326633,
+            "two": 0.48115577889447236,
+            "three": 0.3165829145728643
+          },
+          "trailing": {
+            "ft": 0.20141843971631207,
+            "two": 0.5177304964539007,
+            "three": 0.28085106382978725
+          },
+          "tied": {
+            "ft": 0.20689655172413793,
+            "two": 0.5862068965517241,
+            "three": 0.20689655172413793
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 137,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.18823529411764706,
+              "two": 0.49411764705882355,
+              "three": 0.3176470588235294
+            },
+            "attempts_mix": {
+              "ft": 0.1951219512195122,
+              "two": 0.4878048780487805,
+              "three": 0.3170731707317073
+            },
+            "points_l1_distance": 0.0226,
+            "attempts_l1_distance": 0.0447,
+            "average_l1_distance": 0.0336,
+            "quick_text": "Points mix: 3PT 32% \u00b7 2PT 49% \u00b7 FT 19%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 108,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.16666666666666666,
+              "two": 0.3958333333333333,
+              "three": 0.4375
+            },
+            "attempts_mix": {
+              "ft": 0.2191780821917808,
+              "two": 0.4246575342465753,
+              "three": 0.3561643835616438
+            },
+            "points_l1_distance": 0.2171,
+            "attempts_l1_distance": 0.157,
+            "average_l1_distance": 0.1871,
+            "quick_text": "Points mix: 3PT 44% \u00b7 2PT 40% \u00b7 FT 17%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 148,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.3783783783783784,
+              "two": 0.32432432432432434,
+              "three": 0.2972972972972973
+            },
+            "attempts_mix": {
+              "ft": 0.4329896907216495,
+              "two": 0.31958762886597936,
+              "three": 0.24742268041237114
+            },
+            "points_l1_distance": 0.3882,
+            "attempts_l1_distance": 0.4617,
+            "average_l1_distance": 0.425,
+            "quick_text": "Points mix: 3PT 30% \u00b7 2PT 32% \u00b7 FT 38%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 9,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.8977,
+            "average_state_shift": 0.9741,
+            "state_shift": {
+              "leading": 0.0245,
+              "trailing": 1.0,
+              "tied": 1.8977
+            },
+            "points_mix": {
+              "ft": 0.041666666666666664,
+              "two": 0.5208333333333334,
+              "three": 0.4375
+            },
+            "attempts_mix": {
+              "ft": 0.06060606060606061,
+              "two": 0.6212121212121212,
+              "three": 0.3181818181818182
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.9741)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 108,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.0,
+            "average_state_shift": 0.4244,
+            "state_shift": {
+              "leading": 0.0402,
+              "trailing": 0.2331,
+              "tied": 1.0
+            },
+            "points_mix": {
+              "ft": 0.16666666666666666,
+              "two": 0.3958333333333333,
+              "three": 0.4375
+            },
+            "attempts_mix": {
+              "ft": 0.2191780821917808,
+              "two": 0.4246575342465753,
+              "three": 0.3561643835616438
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4244)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 178,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 0.1619,
+            "average_state_shift": 0.1314,
+            "state_shift": {
+              "leading": 0.1619,
+              "trailing": 0.116,
+              "tied": 0.1163
+            },
+            "points_mix": {
+              "ft": 0.0821917808219178,
+              "two": 0.547945205479452,
+              "three": 0.3698630136986301
+            },
+            "attempts_mix": {
+              "ft": 0.09836065573770492,
+              "two": 0.5081967213114754,
+              "three": 0.39344262295081966
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.1314)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 137,
+          "points_share": {
+            "ft": 0.18823529411764706,
+            "two": 0.49411764705882355,
+            "three": 0.3176470588235294
+          },
+          "attempts_share": {
+            "ft": 0.1951219512195122,
+            "two": 0.4878048780487805,
+            "three": 0.3170731707317073
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 108,
+          "points_share": {
+            "ft": 0.16666666666666666,
+            "two": 0.3958333333333333,
+            "three": 0.4375
+          },
+          "attempts_share": {
+            "ft": 0.2191780821917808,
+            "two": 0.4246575342465753,
+            "three": 0.3561643835616438
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 148,
+          "points_share": {
+            "ft": 0.3783783783783784,
+            "two": 0.32432432432432434,
+            "three": 0.2972972972972973
+          },
+          "attempts_share": {
+            "ft": 0.4329896907216495,
+            "two": 0.31958762886597936,
+            "three": 0.24742268041237114
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 33%, 2PT 49%, FT 18%.",
+        "Consistency score: 90.87 / 100.",
+        "Adaptability score: 4.98 / 100."
+      ]
+    },
+    {
+      "team_code": "BAS",
+      "consistency_score": 92.27,
+      "adaptability_score": 3.28,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.13853092783505155,
+          "two": 0.5193298969072165,
+          "three": 0.34213917525773196
+        },
+        "attempts_overall_share": {
+          "ft": 0.14200792602377807,
+          "two": 0.511889035667107,
+          "three": 0.34610303830911493
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.15481832543443919,
+            "two": 0.48973143759873616,
+            "three": 0.35545023696682465
+          },
+          "trailing": {
+            "ft": 0.12617924528301888,
+            "two": 0.5448113207547169,
+            "three": 0.3290094339622642
+          },
+          "tied": {
+            "ft": 0.14084507042253522,
+            "two": 0.4788732394366197,
+            "three": 0.38028169014084506
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.1678082191780822,
+            "two": 0.5,
+            "three": 0.3321917808219178
+          },
+          "trailing": {
+            "ft": 0.12384259259259259,
+            "two": 0.5243055555555556,
+            "three": 0.35185185185185186
+          },
+          "tied": {
+            "ft": 0.15151515151515152,
+            "two": 0.45454545454545453,
+            "three": 0.3939393939393939
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 30,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.1375,
+              "two": 0.525,
+              "three": 0.3375
+            },
+            "attempts_mix": {
+              "ft": 0.1506849315068493,
+              "two": 0.5205479452054794,
+              "three": 0.3287671232876712
+            },
+            "points_l1_distance": 0.0113,
+            "attempts_l1_distance": 0.0347,
+            "average_l1_distance": 0.023,
+            "quick_text": "Points mix: 3PT 34% \u00b7 2PT 52% \u00b7 FT 14%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 127,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.1111111111111111,
+              "two": 0.4722222222222222,
+              "three": 0.4166666666666667
+            },
+            "attempts_mix": {
+              "ft": 0.1111111111111111,
+              "two": 0.4722222222222222,
+              "three": 0.4166666666666667
+            },
+            "points_l1_distance": 0.1491,
+            "attempts_l1_distance": 0.1411,
+            "average_l1_distance": 0.1451,
+            "quick_text": "Points mix: 3PT 42% \u00b7 2PT 47% \u00b7 FT 11%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 24,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.19753086419753085,
+              "two": 0.32098765432098764,
+              "three": 0.48148148148148145
+            },
+            "attempts_mix": {
+              "ft": 0.2191780821917808,
+              "two": 0.3698630136986301,
+              "three": 0.410958904109589
+            },
+            "points_l1_distance": 0.3967,
+            "attempts_l1_distance": 0.2841,
+            "average_l1_distance": 0.3404,
+            "quick_text": "Points mix: 3PT 48% \u00b7 2PT 32% \u00b7 FT 20%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 8,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 1.6529,
+            "average_state_shift": 0.9355,
+            "state_shift": {
+              "leading": 1.6529,
+              "trailing": 0.0935,
+              "tied": 1.06
+            },
+            "points_mix": {
+              "ft": 0.2,
+              "two": 0.56,
+              "three": 0.24
+            },
+            "attempts_mix": {
+              "ft": 0.14705882352941177,
+              "two": 0.5,
+              "three": 0.35294117647058826
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.9355)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 30,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.9545,
+            "average_state_shift": 0.5441,
+            "state_shift": {
+              "leading": 0.0315,
+              "trailing": 0.6462,
+              "tied": 0.9545
+            },
+            "points_mix": {
+              "ft": 0.1375,
+              "two": 0.525,
+              "three": 0.3375
+            },
+            "attempts_mix": {
+              "ft": 0.1506849315068493,
+              "two": 0.5205479452054794,
+              "three": 0.3287671232876712
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.5441)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 60,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.5065,
+            "average_state_shift": 0.1989,
+            "state_shift": {
+              "leading": 0.0444,
+              "trailing": 0.0458,
+              "tied": 0.5065
+            },
+            "points_mix": {
+              "ft": 0.16666666666666666,
+              "two": 0.5555555555555556,
+              "three": 0.2777777777777778
+            },
+            "attempts_mix": {
+              "ft": 0.1323529411764706,
+              "two": 0.6176470588235294,
+              "three": 0.25
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1989)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 30,
+          "points_share": {
+            "ft": 0.1375,
+            "two": 0.525,
+            "three": 0.3375
+          },
+          "attempts_share": {
+            "ft": 0.1506849315068493,
+            "two": 0.5205479452054794,
+            "three": 0.3287671232876712
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 127,
+          "points_share": {
+            "ft": 0.1111111111111111,
+            "two": 0.4722222222222222,
+            "three": 0.4166666666666667
+          },
+          "attempts_share": {
+            "ft": 0.1111111111111111,
+            "two": 0.4722222222222222,
+            "three": 0.4166666666666667
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 24,
+          "points_share": {
+            "ft": 0.19753086419753085,
+            "two": 0.32098765432098764,
+            "three": 0.48148148148148145
+          },
+          "attempts_share": {
+            "ft": 0.2191780821917808,
+            "two": 0.3698630136986301,
+            "three": 0.410958904109589
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 34%, 2PT 52%, FT 14%.",
+        "Consistency score: 92.27 / 100.",
+        "Adaptability score: 3.28 / 100."
+      ]
+    },
+    {
+      "team_code": "BER",
+      "consistency_score": 92.23,
+      "adaptability_score": 4.78,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.14258793969849246,
+          "two": 0.478643216080402,
+          "three": 0.3787688442211055
+        },
+        "attempts_overall_share": {
+          "ft": 0.14778645833333334,
+          "two": 0.490234375,
+          "three": 0.3619791666666667
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.1347305389221557,
+            "two": 0.4880239520958084,
+            "three": 0.3772455089820359
+          },
+          "trailing": {
+            "ft": 0.15576694411414982,
+            "two": 0.4589774078478002,
+            "three": 0.38525564803804996
+          },
+          "tied": {
+            "ft": 0.07228915662650602,
+            "two": 0.6024096385542169,
+            "three": 0.3253012048192771
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.1487603305785124,
+            "two": 0.4925619834710744,
+            "three": 0.3586776859504132
+          },
+          "trailing": {
+            "ft": 0.15558194774346792,
+            "two": 0.47624703087885983,
+            "three": 0.3681710213776722
+          },
+          "tied": {
+            "ft": 0.06741573033707865,
+            "two": 0.6067415730337079,
+            "three": 0.3258426966292135
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 30,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.13157894736842105,
+              "two": 0.47368421052631576,
+              "three": 0.39473684210526316
+            },
+            "attempts_mix": {
+              "ft": 0.14084507042253522,
+              "two": 0.49295774647887325,
+              "three": 0.36619718309859156
+            },
+            "points_l1_distance": 0.0319,
+            "attempts_l1_distance": 0.0139,
+            "average_l1_distance": 0.0229,
+            "quick_text": "Points mix: 3PT 39% \u00b7 2PT 47% \u00b7 FT 13%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 69,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.16455696202531644,
+              "two": 0.5316455696202531,
+              "three": 0.3037974683544304
+            },
+            "attempts_mix": {
+              "ft": 0.18309859154929578,
+              "two": 0.5352112676056338,
+              "three": 0.28169014084507044
+            },
+            "points_l1_distance": 0.1499,
+            "attempts_l1_distance": 0.1606,
+            "average_l1_distance": 0.1553,
+            "quick_text": "Points mix: 3PT 30% \u00b7 2PT 53% \u00b7 FT 16%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 187,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.07575757575757576,
+              "two": 0.3333333333333333,
+              "three": 0.5909090909090909
+            },
+            "attempts_mix": {
+              "ft": 0.08064516129032258,
+              "two": 0.45161290322580644,
+              "three": 0.46774193548387094
+            },
+            "points_l1_distance": 0.4243,
+            "attempts_l1_distance": 0.2115,
+            "average_l1_distance": 0.3179,
+            "quick_text": "Points mix: 3PT 59% \u00b7 2PT 33% \u00b7 FT 8%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 187,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.8436,
+            "average_state_shift": 0.852,
+            "state_shift": {
+              "leading": 0.2151,
+              "trailing": 0.4974,
+              "tied": 1.8436
+            },
+            "points_mix": {
+              "ft": 0.07575757575757576,
+              "two": 0.3333333333333333,
+              "three": 0.5909090909090909
+            },
+            "attempts_mix": {
+              "ft": 0.08064516129032258,
+              "two": 0.45161290322580644,
+              "three": 0.46774193548387094
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.852)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 164,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 0.8984,
+            "average_state_shift": 0.4653,
+            "state_shift": {
+              "leading": 0.0983,
+              "trailing": 0.8984,
+              "tied": 0.3992
+            },
+            "points_mix": {
+              "ft": 0.08045977011494253,
+              "two": 0.4367816091954023,
+              "three": 0.4827586206896552
+            },
+            "attempts_mix": {
+              "ft": 0.08433734939759036,
+              "two": 0.5180722891566265,
+              "three": 0.39759036144578314
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.4653)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 157,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 0.1999,
+            "average_state_shift": 0.1078,
+            "state_shift": {
+              "leading": 0.1999,
+              "trailing": 0.0433,
+              "tied": 0.0801
+            },
+            "points_mix": {
+              "ft": 0.2236842105263158,
+              "two": 0.42105263157894735,
+              "three": 0.35526315789473684
+            },
+            "attempts_mix": {
+              "ft": 0.2328767123287671,
+              "two": 0.4246575342465753,
+              "three": 0.3424657534246575
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.1078)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 30,
+          "points_share": {
+            "ft": 0.13157894736842105,
+            "two": 0.47368421052631576,
+            "three": 0.39473684210526316
+          },
+          "attempts_share": {
+            "ft": 0.14084507042253522,
+            "two": 0.49295774647887325,
+            "three": 0.36619718309859156
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 69,
+          "points_share": {
+            "ft": 0.16455696202531644,
+            "two": 0.5316455696202531,
+            "three": 0.3037974683544304
+          },
+          "attempts_share": {
+            "ft": 0.18309859154929578,
+            "two": 0.5352112676056338,
+            "three": 0.28169014084507044
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 187,
+          "points_share": {
+            "ft": 0.07575757575757576,
+            "two": 0.3333333333333333,
+            "three": 0.5909090909090909
+          },
+          "attempts_share": {
+            "ft": 0.08064516129032258,
+            "two": 0.45161290322580644,
+            "three": 0.46774193548387094
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 38%, 2PT 48%, FT 14%.",
+        "Consistency score: 92.23 / 100.",
+        "Adaptability score: 4.78 / 100."
+      ]
+    },
+    {
+      "team_code": "CSK",
+      "consistency_score": 91.42,
+      "adaptability_score": 4.85,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.15971316818774445,
+          "two": 0.4745762711864407,
+          "three": 0.36571056062581486
+        },
+        "attempts_overall_share": {
+          "ft": 0.1674641148325359,
+          "two": 0.4805194805194805,
+          "three": 0.3520164046479836
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.19922879177377892,
+            "two": 0.4498714652956298,
+            "three": 0.3508997429305913
+          },
+          "trailing": {
+            "ft": 0.12460567823343849,
+            "two": 0.501577287066246,
+            "three": 0.37381703470031546
+          },
+          "tied": {
+            "ft": 0.09016393442622951,
+            "two": 0.4918032786885246,
+            "three": 0.4180327868852459
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.20945945945945946,
+            "two": 0.46621621621621623,
+            "three": 0.32432432432432434
+          },
+          "trailing": {
+            "ft": 0.12845528455284552,
+            "two": 0.4959349593495935,
+            "three": 0.375609756097561
+          },
+          "tied": {
+            "ft": 0.10185185185185185,
+            "two": 0.49074074074074076,
+            "three": 0.4074074074074074
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 144,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.17204301075268819,
+              "two": 0.4731182795698925,
+              "three": 0.3548387096774194
+            },
+            "attempts_mix": {
+              "ft": 0.1839080459770115,
+              "two": 0.47126436781609193,
+              "three": 0.3448275862068966
+            },
+            "points_l1_distance": 0.0247,
+            "attempts_l1_distance": 0.0329,
+            "average_l1_distance": 0.0288,
+            "quick_text": "Points mix: 3PT 35% \u00b7 2PT 47% \u00b7 FT 17%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 64,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.10975609756097561,
+              "two": 0.4878048780487805,
+              "three": 0.4024390243902439
+            },
+            "attempts_mix": {
+              "ft": 0.11538461538461539,
+              "two": 0.4230769230769231,
+              "three": 0.46153846153846156
+            },
+            "points_l1_distance": 0.0999,
+            "attempts_l1_distance": 0.219,
+            "average_l1_distance": 0.1595,
+            "quick_text": "Points mix: 3PT 40% \u00b7 2PT 49% \u00b7 FT 11%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 53,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.07352941176470588,
+              "two": 0.7058823529411765,
+              "three": 0.22058823529411764
+            },
+            "attempts_mix": {
+              "ft": 0.0684931506849315,
+              "two": 0.6027397260273972,
+              "three": 0.3287671232876712
+            },
+            "points_l1_distance": 0.4626,
+            "attempts_l1_distance": 0.2444,
+            "average_l1_distance": 0.3535,
+            "quick_text": "Points mix: 3PT 22% \u00b7 2PT 71% \u00b7 FT 7%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 109,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 1.1986,
+            "average_state_shift": 0.751,
+            "state_shift": {
+              "leading": 0.0417,
+              "trailing": 1.1986,
+              "tied": 1.0126
+            },
+            "points_mix": {
+              "ft": 0.09278350515463918,
+              "two": 0.4742268041237113,
+              "three": 0.4329896907216495
+            },
+            "attempts_mix": {
+              "ft": 0.11842105263157894,
+              "two": 0.5131578947368421,
+              "three": 0.3684210526315789
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.751)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 61,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.7318,
+            "average_state_shift": 0.3466,
+            "state_shift": {
+              "leading": 0.1076,
+              "trailing": 0.2004,
+              "tied": 0.7318
+            },
+            "points_mix": {
+              "ft": 0.175,
+              "two": 0.45,
+              "three": 0.375
+            },
+            "attempts_mix": {
+              "ft": 0.18181818181818182,
+              "two": 0.4805194805194805,
+              "three": 0.33766233766233766
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.3466)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 132,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 0.1566,
+            "average_state_shift": 0.092,
+            "state_shift": {
+              "leading": 0.1566,
+              "trailing": 0.0324,
+              "tied": 0.087
+            },
+            "points_mix": {
+              "ft": 0.029850746268656716,
+              "two": 0.5671641791044776,
+              "three": 0.40298507462686567
+            },
+            "attempts_mix": {
+              "ft": 0.02857142857142857,
+              "two": 0.5142857142857142,
+              "three": 0.45714285714285713
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.092)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 144,
+          "points_share": {
+            "ft": 0.17204301075268819,
+            "two": 0.4731182795698925,
+            "three": 0.3548387096774194
+          },
+          "attempts_share": {
+            "ft": 0.1839080459770115,
+            "two": 0.47126436781609193,
+            "three": 0.3448275862068966
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 64,
+          "points_share": {
+            "ft": 0.10975609756097561,
+            "two": 0.4878048780487805,
+            "three": 0.4024390243902439
+          },
+          "attempts_share": {
+            "ft": 0.11538461538461539,
+            "two": 0.4230769230769231,
+            "three": 0.46153846153846156
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 53,
+          "points_share": {
+            "ft": 0.07352941176470588,
+            "two": 0.7058823529411765,
+            "three": 0.22058823529411764
+          },
+          "attempts_share": {
+            "ft": 0.0684931506849315,
+            "two": 0.6027397260273972,
+            "three": 0.3287671232876712
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 37%, 2PT 47%, FT 16%.",
+        "Consistency score: 91.42 / 100.",
+        "Adaptability score: 4.85 / 100."
+      ]
+    },
+    {
+      "team_code": "DYR",
+      "consistency_score": 90.73,
+      "adaptability_score": 1.98,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.15789473684210525,
+          "two": 0.4879089615931721,
+          "three": 0.3541963015647226
+        },
+        "attempts_overall_share": {
+          "ft": 0.16716867469879518,
+          "two": 0.4894578313253012,
+          "three": 0.3433734939759036
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.15521978021978022,
+            "two": 0.48626373626373626,
+            "three": 0.3585164835164835
+          },
+          "trailing": {
+            "ft": 0.16336633663366337,
+            "two": 0.49504950495049505,
+            "three": 0.3415841584158416
+          },
+          "tied": {
+            "ft": 0.1388888888888889,
+            "two": 0.4444444444444444,
+            "three": 0.4166666666666667
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.1652046783625731,
+            "two": 0.49122807017543857,
+            "three": 0.3435672514619883
+          },
+          "trailing": {
+            "ft": 0.16981132075471697,
+            "two": 0.49056603773584906,
+            "three": 0.33962264150943394
+          },
+          "tied": {
+            "ft": 0.16393442622950818,
+            "two": 0.45901639344262296,
+            "three": 0.3770491803278688
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 78,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.11904761904761904,
+              "two": 0.5238095238095238,
+              "three": 0.35714285714285715
+            },
+            "attempts_mix": {
+              "ft": 0.14492753623188406,
+              "two": 0.4927536231884058,
+              "three": 0.36231884057971014
+            },
+            "points_l1_distance": 0.0777,
+            "attempts_l1_distance": 0.0445,
+            "average_l1_distance": 0.0611,
+            "quick_text": "Points mix: 3PT 36% \u00b7 2PT 52% \u00b7 FT 12%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 142,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.18823529411764706,
+              "two": 0.35294117647058826,
+              "three": 0.4588235294117647
+            },
+            "attempts_mix": {
+              "ft": 0.2222222222222222,
+              "two": 0.4305555555555556,
+              "three": 0.3472222222222222
+            },
+            "points_l1_distance": 0.2699,
+            "attempts_l1_distance": 0.1178,
+            "average_l1_distance": 0.1939,
+            "quick_text": "Points mix: 3PT 46% \u00b7 2PT 35% \u00b7 FT 19%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 45,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.2413793103448276,
+              "two": 0.6551724137931034,
+              "three": 0.10344827586206896
+            },
+            "attempts_mix": {
+              "ft": 0.21875,
+              "two": 0.625,
+              "three": 0.15625
+            },
+            "points_l1_distance": 0.5015,
+            "attempts_l1_distance": 0.3742,
+            "average_l1_distance": 0.4379,
+            "quick_text": "Points mix: 3PT 10% \u00b7 2PT 66% \u00b7 FT 24%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 149,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 1.2605,
+            "average_state_shift": 0.8679,
+            "state_shift": {
+              "leading": 0.0828,
+              "trailing": 1.2605,
+              "tied": 1.2605
+            },
+            "points_mix": {
+              "ft": 0.1232876712328767,
+              "two": 0.4657534246575342,
+              "three": 0.410958904109589
+            },
+            "attempts_mix": {
+              "ft": 0.12857142857142856,
+              "two": 0.5428571428571428,
+              "three": 0.32857142857142857
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.8679)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 118,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.8321,
+            "average_state_shift": 0.399,
+            "state_shift": {
+              "leading": 0.2188,
+              "trailing": 0.1462,
+              "tied": 0.8321
+            },
+            "points_mix": {
+              "ft": 0.1125,
+              "two": 0.4,
+              "three": 0.4875
+            },
+            "attempts_mix": {
+              "ft": 0.13432835820895522,
+              "two": 0.44776119402985076,
+              "three": 0.417910447761194
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.399)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 45,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 0.4601,
+            "average_state_shift": 0.2684,
+            "state_shift": {
+              "leading": 0.4601,
+              "trailing": 0.0853,
+              "tied": 0.2597
+            },
+            "points_mix": {
+              "ft": 0.2413793103448276,
+              "two": 0.6551724137931034,
+              "three": 0.10344827586206896
+            },
+            "attempts_mix": {
+              "ft": 0.21875,
+              "two": 0.625,
+              "three": 0.15625
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.2684)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 78,
+          "points_share": {
+            "ft": 0.11904761904761904,
+            "two": 0.5238095238095238,
+            "three": 0.35714285714285715
+          },
+          "attempts_share": {
+            "ft": 0.14492753623188406,
+            "two": 0.4927536231884058,
+            "three": 0.36231884057971014
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 142,
+          "points_share": {
+            "ft": 0.18823529411764706,
+            "two": 0.35294117647058826,
+            "three": 0.4588235294117647
+          },
+          "attempts_share": {
+            "ft": 0.2222222222222222,
+            "two": 0.4305555555555556,
+            "three": 0.3472222222222222
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 45,
+          "points_share": {
+            "ft": 0.2413793103448276,
+            "two": 0.6551724137931034,
+            "three": 0.10344827586206896
+          },
+          "attempts_share": {
+            "ft": 0.21875,
+            "two": 0.625,
+            "three": 0.15625
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 35%, 2PT 49%, FT 16%.",
+        "Consistency score: 90.73 / 100.",
+        "Adaptability score: 1.98 / 100."
+      ]
+    },
+    {
+      "team_code": "IST",
+      "consistency_score": 92.58,
+      "adaptability_score": 3.29,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.1786339754816112,
+          "two": 0.4798598949211909,
+          "three": 0.3415061295971979
+        },
+        "attempts_overall_share": {
+          "ft": 0.19077306733167082,
+          "two": 0.4619700748129676,
+          "three": 0.3472568578553616
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.17296511627906977,
+            "two": 0.4563953488372093,
+            "three": 0.3706395348837209
+          },
+          "trailing": {
+            "ft": 0.18597236981934112,
+            "two": 0.4952178533475027,
+            "three": 0.3188097768331562
+          },
+          "tied": {
+            "ft": 0.14285714285714285,
+            "two": 0.5,
+            "three": 0.35714285714285715
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.18769716088328076,
+            "two": 0.44637223974763407,
+            "three": 0.3659305993690852
+          },
+          "trailing": {
+            "ft": 0.1968503937007874,
+            "two": 0.46569178852643417,
+            "three": 0.3374578177727784
+          },
+          "tied": {
+            "ft": 0.14814814814814814,
+            "two": 0.5432098765432098,
+            "three": 0.30864197530864196
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 101,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.1797752808988764,
+              "two": 0.5168539325842697,
+              "three": 0.30337078651685395
+            },
+            "attempts_mix": {
+              "ft": 0.2077922077922078,
+              "two": 0.44155844155844154,
+              "three": 0.35064935064935066
+            },
+            "points_l1_distance": 0.0763,
+            "attempts_l1_distance": 0.0408,
+            "average_l1_distance": 0.0585,
+            "quick_text": "Points mix: 3PT 30% \u00b7 2PT 52% \u00b7 FT 18%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 145,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.20238095238095238,
+              "two": 0.40476190476190477,
+              "three": 0.39285714285714285
+            },
+            "attempts_mix": {
+              "ft": 0.2361111111111111,
+              "two": 0.4027777777777778,
+              "three": 0.3611111111111111
+            },
+            "points_l1_distance": 0.1502,
+            "attempts_l1_distance": 0.1184,
+            "average_l1_distance": 0.1343,
+            "quick_text": "Points mix: 3PT 39% \u00b7 2PT 40% \u00b7 FT 20%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 185,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.36363636363636365,
+              "two": 0.44155844155844154,
+              "three": 0.19480519480519481
+            },
+            "attempts_mix": {
+              "ft": 0.3146067415730337,
+              "two": 0.39325842696629215,
+              "three": 0.29213483146067415
+            },
+            "points_l1_distance": 0.37,
+            "attempts_l1_distance": 0.2477,
+            "average_l1_distance": 0.3088,
+            "quick_text": "Points mix: 3PT 19% \u00b7 2PT 44% \u00b7 FT 36%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 15,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 1.5371,
+            "average_state_shift": 0.8514,
+            "state_shift": {
+              "leading": 1.5371,
+              "trailing": 0.0171,
+              "tied": 1.0
+            },
+            "points_mix": {
+              "ft": 0.21875,
+              "two": 0.4375,
+              "three": 0.34375
+            },
+            "attempts_mix": {
+              "ft": 0.2441860465116279,
+              "two": 0.4186046511627907,
+              "three": 0.3372093023255814
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.8514)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 22,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 0.7609,
+            "average_state_shift": 0.4463,
+            "state_shift": {
+              "leading": 0.1505,
+              "trailing": 0.7609,
+              "tied": 0.4276
+            },
+            "points_mix": {
+              "ft": 0.136986301369863,
+              "two": 0.4931506849315068,
+              "three": 0.3698630136986301
+            },
+            "attempts_mix": {
+              "ft": 0.15384615384615385,
+              "two": 0.47692307692307695,
+              "three": 0.36923076923076925
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.4463)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 88,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.2821,
+            "average_state_shift": 0.1677,
+            "state_shift": {
+              "leading": 0.1379,
+              "trailing": 0.0832,
+              "tied": 0.2821
+            },
+            "points_mix": {
+              "ft": 0.1590909090909091,
+              "two": 0.4318181818181818,
+              "three": 0.4090909090909091
+            },
+            "attempts_mix": {
+              "ft": 0.1728395061728395,
+              "two": 0.41975308641975306,
+              "three": 0.4074074074074074
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1677)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 101,
+          "points_share": {
+            "ft": 0.1797752808988764,
+            "two": 0.5168539325842697,
+            "three": 0.30337078651685395
+          },
+          "attempts_share": {
+            "ft": 0.2077922077922078,
+            "two": 0.44155844155844154,
+            "three": 0.35064935064935066
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 145,
+          "points_share": {
+            "ft": 0.20238095238095238,
+            "two": 0.40476190476190477,
+            "three": 0.39285714285714285
+          },
+          "attempts_share": {
+            "ft": 0.2361111111111111,
+            "two": 0.4027777777777778,
+            "three": 0.3611111111111111
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 185,
+          "points_share": {
+            "ft": 0.36363636363636365,
+            "two": 0.44155844155844154,
+            "three": 0.19480519480519481
+          },
+          "attempts_share": {
+            "ft": 0.3146067415730337,
+            "two": 0.39325842696629215,
+            "three": 0.29213483146067415
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 34%, 2PT 48%, FT 18%.",
+        "Consistency score: 92.58 / 100.",
+        "Adaptability score: 3.29 / 100."
+      ]
+    },
+    {
+      "team_code": "MAD",
+      "consistency_score": 90.02,
+      "adaptability_score": 2.9,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.14425427872860636,
+          "two": 0.4963325183374083,
+          "three": 0.3594132029339853
+        },
+        "attempts_overall_share": {
+          "ft": 0.15284974093264247,
+          "two": 0.48251295336787564,
+          "three": 0.3646373056994819
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.14818355640535372,
+            "two": 0.49904397705544934,
+            "three": 0.3527724665391969
+          },
+          "trailing": {
+            "ft": 0.14644351464435146,
+            "two": 0.502092050209205,
+            "three": 0.3514644351464435
+          },
+          "tied": {
+            "ft": 0.09821428571428571,
+            "two": 0.44642857142857145,
+            "three": 0.45535714285714285
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.16129032258064516,
+            "two": 0.47658688865764826,
+            "three": 0.36212278876170656
+          },
+          "trailing": {
+            "ft": 0.14553014553014554,
+            "two": 0.49272349272349275,
+            "three": 0.36174636174636177
+          },
+          "tied": {
+            "ft": 0.10784313725490197,
+            "two": 0.49019607843137253,
+            "three": 0.4019607843137255
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 189,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.11235955056179775,
+              "two": 0.5168539325842697,
+              "three": 0.3707865168539326
+            },
+            "attempts_mix": {
+              "ft": 0.13157894736842105,
+              "two": 0.4868421052631579,
+              "three": 0.3815789473684211
+            },
+            "points_l1_distance": 0.0638,
+            "attempts_l1_distance": 0.0425,
+            "average_l1_distance": 0.0532,
+            "quick_text": "Points mix: 3PT 37% \u00b7 2PT 52% \u00b7 FT 11%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 166,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.08235294117647059,
+              "two": 0.4235294117647059,
+              "three": 0.49411764705882355
+            },
+            "attempts_mix": {
+              "ft": 0.09859154929577464,
+              "two": 0.4647887323943662,
+              "three": 0.43661971830985913
+            },
+            "points_l1_distance": 0.2694,
+            "attempts_l1_distance": 0.144,
+            "average_l1_distance": 0.2067,
+            "quick_text": "Points mix: 3PT 49% \u00b7 2PT 42% \u00b7 FT 8%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 113,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.1111111111111111,
+              "two": 0.7222222222222222,
+              "three": 0.16666666666666666
+            },
+            "attempts_mix": {
+              "ft": 0.10810810810810811,
+              "two": 0.6351351351351351,
+              "three": 0.25675675675675674
+            },
+            "points_l1_distance": 0.4518,
+            "attempts_l1_distance": 0.3052,
+            "average_l1_distance": 0.3785,
+            "quick_text": "Points mix: 3PT 17% \u00b7 2PT 72% \u00b7 FT 11%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 83,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 1.2538,
+            "average_state_shift": 0.8518,
+            "state_shift": {
+              "leading": 0.0477,
+              "trailing": 1.2538,
+              "tied": 1.2538
+            },
+            "points_mix": {
+              "ft": 0.1839080459770115,
+              "two": 0.367816091954023,
+              "three": 0.4482758620689655
+            },
+            "attempts_mix": {
+              "ft": 0.21621621621621623,
+              "two": 0.3783783783783784,
+              "three": 0.40540540540540543
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.8518)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 59,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.6598,
+            "average_state_shift": 0.3959,
+            "state_shift": {
+              "leading": 0.361,
+              "trailing": 0.167,
+              "tied": 0.6598
+            },
+            "points_mix": {
+              "ft": 0.13793103448275862,
+              "two": 0.6551724137931034,
+              "three": 0.20689655172413793
+            },
+            "attempts_mix": {
+              "ft": 0.12121212121212122,
+              "two": 0.5454545454545454,
+              "three": 0.3333333333333333
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.3959)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 72,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 0.2269,
+            "average_state_shift": 0.1899,
+            "state_shift": {
+              "leading": 0.1229,
+              "trailing": 0.2269,
+              "tied": 0.2199
+            },
+            "points_mix": {
+              "ft": 0.2125,
+              "two": 0.375,
+              "three": 0.4125
+            },
+            "attempts_mix": {
+              "ft": 0.2236842105263158,
+              "two": 0.35526315789473684,
+              "three": 0.42105263157894735
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.1899)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 189,
+          "points_share": {
+            "ft": 0.11235955056179775,
+            "two": 0.5168539325842697,
+            "three": 0.3707865168539326
+          },
+          "attempts_share": {
+            "ft": 0.13157894736842105,
+            "two": 0.4868421052631579,
+            "three": 0.3815789473684211
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 166,
+          "points_share": {
+            "ft": 0.08235294117647059,
+            "two": 0.4235294117647059,
+            "three": 0.49411764705882355
+          },
+          "attempts_share": {
+            "ft": 0.09859154929577464,
+            "two": 0.4647887323943662,
+            "three": 0.43661971830985913
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 113,
+          "points_share": {
+            "ft": 0.1111111111111111,
+            "two": 0.7222222222222222,
+            "three": 0.16666666666666666
+          },
+          "attempts_share": {
+            "ft": 0.10810810810810811,
+            "two": 0.6351351351351351,
+            "three": 0.25675675675675674
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 36%, 2PT 50%, FT 14%.",
+        "Consistency score: 90.02 / 100.",
+        "Adaptability score: 2.9 / 100."
+      ]
+    },
+    {
+      "team_code": "MCO",
+      "consistency_score": 93.37,
+      "adaptability_score": 3.75,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.1583011583011583,
+          "two": 0.5339216767788196,
+          "three": 0.30777716492002205
+        },
+        "attempts_overall_share": {
+          "ft": 0.16773816481589712,
+          "two": 0.5347749853886616,
+          "three": 0.29748684979544127
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.17263427109974425,
+            "two": 0.5319693094629157,
+            "three": 0.29539641943734013
+          },
+          "trailing": {
+            "ft": 0.14855875831485588,
+            "two": 0.5254988913525499,
+            "three": 0.3259423503325942
+          },
+          "tied": {
+            "ft": 0.13953488372093023,
+            "two": 0.6046511627906976,
+            "three": 0.2558139534883721
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.18218623481781376,
+            "two": 0.5222672064777328,
+            "three": 0.29554655870445345
+          },
+          "trailing": {
+            "ft": 0.15690866510538642,
+            "two": 0.5327868852459017,
+            "three": 0.31030444964871196
+          },
+          "tied": {
+            "ft": 0.15517241379310345,
+            "two": 0.6293103448275862,
+            "three": 0.21551724137931033
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 89,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.15476190476190477,
+              "two": 0.5238095238095238,
+              "three": 0.32142857142857145
+            },
+            "attempts_mix": {
+              "ft": 0.14130434782608695,
+              "two": 0.5543478260869565,
+              "three": 0.30434782608695654
+            },
+            "points_l1_distance": 0.0273,
+            "attempts_l1_distance": 0.0529,
+            "average_l1_distance": 0.0401,
+            "quick_text": "Points mix: 3PT 32% \u00b7 2PT 52% \u00b7 FT 15%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 46,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.14285714285714285,
+              "two": 0.6,
+              "three": 0.2571428571428571
+            },
+            "attempts_mix": {
+              "ft": 0.13157894736842105,
+              "two": 0.5263157894736842,
+              "three": 0.34210526315789475
+            },
+            "points_l1_distance": 0.1322,
+            "attempts_l1_distance": 0.0892,
+            "average_l1_distance": 0.1107,
+            "quick_text": "Points mix: 3PT 26% \u00b7 2PT 60% \u00b7 FT 14%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 110,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.18604651162790697,
+              "two": 0.3953488372093023,
+              "three": 0.4186046511627907
+            },
+            "attempts_mix": {
+              "ft": 0.20253164556962025,
+              "two": 0.3924050632911392,
+              "three": 0.4050632911392405
+            },
+            "points_l1_distance": 0.2771,
+            "attempts_l1_distance": 0.2847,
+            "average_l1_distance": 0.2809,
+            "quick_text": "Points mix: 3PT 42% \u00b7 2PT 40% \u00b7 FT 19%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 124,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 1.5024,
+            "average_state_shift": 1.0167,
+            "state_shift": {
+              "leading": 1.5024,
+              "trailing": 0.0453,
+              "tied": 1.5024
+            },
+            "points_mix": {
+              "ft": 0.26153846153846155,
+              "two": 0.46153846153846156,
+              "three": 0.27692307692307694
+            },
+            "attempts_mix": {
+              "ft": 0.2361111111111111,
+              "two": 0.4861111111111111,
+              "three": 0.2777777777777778
+            },
+            "quick_text": "Largest shift while leading (avg shift 1.0167)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 46,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.8763,
+            "average_state_shift": 0.4264,
+            "state_shift": {
+              "leading": 0.0988,
+              "trailing": 0.304,
+              "tied": 0.8763
+            },
+            "points_mix": {
+              "ft": 0.14285714285714285,
+              "two": 0.6,
+              "three": 0.2571428571428571
+            },
+            "attempts_mix": {
+              "ft": 0.13157894736842105,
+              "two": 0.5263157894736842,
+              "three": 0.34210526315789475
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4264)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 70,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.2987,
+            "average_state_shift": 0.1423,
+            "state_shift": {
+              "leading": 0.0228,
+              "trailing": 0.1054,
+              "tied": 0.2987
+            },
+            "points_mix": {
+              "ft": 0.13846153846153847,
+              "two": 0.49230769230769234,
+              "three": 0.36923076923076925
+            },
+            "attempts_mix": {
+              "ft": 0.11842105263157894,
+              "two": 0.5921052631578947,
+              "three": 0.2894736842105263
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1423)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 89,
+          "points_share": {
+            "ft": 0.15476190476190477,
+            "two": 0.5238095238095238,
+            "three": 0.32142857142857145
+          },
+          "attempts_share": {
+            "ft": 0.14130434782608695,
+            "two": 0.5543478260869565,
+            "three": 0.30434782608695654
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 46,
+          "points_share": {
+            "ft": 0.14285714285714285,
+            "two": 0.6,
+            "three": 0.2571428571428571
+          },
+          "attempts_share": {
+            "ft": 0.13157894736842105,
+            "two": 0.5263157894736842,
+            "three": 0.34210526315789475
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 110,
+          "points_share": {
+            "ft": 0.18604651162790697,
+            "two": 0.3953488372093023,
+            "three": 0.4186046511627907
+          },
+          "attempts_share": {
+            "ft": 0.20253164556962025,
+            "two": 0.3924050632911392,
+            "three": 0.4050632911392405
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 31%, 2PT 53%, FT 16%.",
+        "Consistency score: 93.37 / 100.",
+        "Adaptability score: 3.75 / 100."
+      ]
+    },
+    {
+      "team_code": "MIL",
+      "consistency_score": 91.81,
+      "adaptability_score": 4.67,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.15073272854152128,
+          "two": 0.4829030006978367,
+          "three": 0.366364270760642
+        },
+        "attempts_overall_share": {
+          "ft": 0.1581259150805271,
+          "two": 0.4904831625183016,
+          "three": 0.3513909224011713
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.16765578635014836,
+            "two": 0.4540059347181009,
+            "three": 0.37833827893175076
+          },
+          "trailing": {
+            "ft": 0.14786585365853658,
+            "two": 0.5,
+            "three": 0.3521341463414634
+          },
+          "tied": {
+            "ft": 0.05825242718446602,
+            "two": 0.5631067961165048,
+            "three": 0.3786407766990291
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.1661764705882353,
+            "two": 0.47058823529411764,
+            "three": 0.36323529411764705
+          },
+          "trailing": {
+            "ft": 0.1658119658119658,
+            "two": 0.505982905982906,
+            "three": 0.3282051282051282
+          },
+          "tied": {
+            "ft": 0.0594059405940594,
+            "two": 0.5346534653465347,
+            "three": 0.40594059405940597
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 107,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.1527777777777778,
+              "two": 0.4722222222222222,
+              "three": 0.375
+            },
+            "attempts_mix": {
+              "ft": 0.15492957746478872,
+              "two": 0.49295774647887325,
+              "three": 0.352112676056338
+            },
+            "points_l1_distance": 0.0214,
+            "attempts_l1_distance": 0.0064,
+            "average_l1_distance": 0.0139,
+            "quick_text": "Points mix: 3PT 38% \u00b7 2PT 47% \u00b7 FT 15%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 18,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.07692307692307693,
+              "two": 0.46153846153846156,
+              "three": 0.46153846153846156
+            },
+            "attempts_mix": {
+              "ft": 0.08108108108108109,
+              "two": 0.5540540540540541,
+              "three": 0.36486486486486486
+            },
+            "points_l1_distance": 0.1903,
+            "attempts_l1_distance": 0.1541,
+            "average_l1_distance": 0.1722,
+            "quick_text": "Points mix: 3PT 46% \u00b7 2PT 46% \u00b7 FT 8%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 50,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.23376623376623376,
+              "two": 0.6493506493506493,
+              "three": 0.11688311688311688
+            },
+            "attempts_mix": {
+              "ft": 0.2535211267605634,
+              "two": 0.4788732394366197,
+              "three": 0.2676056338028169
+            },
+            "points_l1_distance": 0.499,
+            "attempts_l1_distance": 0.1908,
+            "average_l1_distance": 0.3449,
+            "quick_text": "Points mix: 3PT 12% \u00b7 2PT 65% \u00b7 FT 23%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 107,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 1.0,
+            "average_state_shift": 0.6667,
+            "state_shift": {
+              "leading": 1.0,
+              "trailing": 0.0,
+              "tied": 1.0
+            },
+            "points_mix": {
+              "ft": 0.1527777777777778,
+              "two": 0.4722222222222222,
+              "three": 0.375
+            },
+            "attempts_mix": {
+              "ft": 0.15492957746478872,
+              "two": 0.49295774647887325,
+              "three": 0.352112676056338
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.6667)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 67,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.7923,
+            "average_state_shift": 0.4007,
+            "state_shift": {
+              "leading": 0.0354,
+              "trailing": 0.3744,
+              "tied": 0.7923
+            },
+            "points_mix": {
+              "ft": 0.2,
+              "two": 0.4,
+              "three": 0.4
+            },
+            "attempts_mix": {
+              "ft": 0.19230769230769232,
+              "two": 0.47435897435897434,
+              "three": 0.3333333333333333
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4007)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 157,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.4711,
+            "average_state_shift": 0.2151,
+            "state_shift": {
+              "leading": 0.0698,
+              "trailing": 0.1044,
+              "tied": 0.4711
+            },
+            "points_mix": {
+              "ft": 0.13095238095238096,
+              "two": 0.5476190476190477,
+              "three": 0.32142857142857145
+            },
+            "attempts_mix": {
+              "ft": 0.1506849315068493,
+              "two": 0.4931506849315068,
+              "three": 0.3561643835616438
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.2151)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 107,
+          "points_share": {
+            "ft": 0.1527777777777778,
+            "two": 0.4722222222222222,
+            "three": 0.375
+          },
+          "attempts_share": {
+            "ft": 0.15492957746478872,
+            "two": 0.49295774647887325,
+            "three": 0.352112676056338
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 18,
+          "points_share": {
+            "ft": 0.07692307692307693,
+            "two": 0.46153846153846156,
+            "three": 0.46153846153846156
+          },
+          "attempts_share": {
+            "ft": 0.08108108108108109,
+            "two": 0.5540540540540541,
+            "three": 0.36486486486486486
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 50,
+          "points_share": {
+            "ft": 0.23376623376623376,
+            "two": 0.6493506493506493,
+            "three": 0.11688311688311688
+          },
+          "attempts_share": {
+            "ft": 0.2535211267605634,
+            "two": 0.4788732394366197,
+            "three": 0.2676056338028169
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 37%, 2PT 48%, FT 15%.",
+        "Consistency score: 91.81 / 100.",
+        "Adaptability score: 4.67 / 100."
+      ]
+    },
+    {
+      "team_code": "MUN",
+      "consistency_score": 90.0,
+      "adaptability_score": 5.46,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.16889738687061823,
+          "two": 0.4754620777565328,
+          "three": 0.35564053537284895
+        },
+        "attempts_overall_share": {
+          "ft": 0.17785234899328858,
+          "two": 0.4771812080536913,
+          "three": 0.34496644295302015
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.18407960199004975,
+            "two": 0.417910447761194,
+            "three": 0.39800995024875624
+          },
+          "trailing": {
+            "ft": 0.14965197215777262,
+            "two": 0.505800464037123,
+            "three": 0.34454756380510443
+          },
+          "tied": {
+            "ft": 0.2403846153846154,
+            "two": 0.5576923076923077,
+            "three": 0.20192307692307693
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.19104991394148021,
+            "two": 0.45438898450946646,
+            "three": 0.35456110154905335
+          },
+          "trailing": {
+            "ft": 0.16329113924050634,
+            "two": 0.5,
+            "three": 0.3367088607594937
+          },
+          "tied": {
+            "ft": 0.21008403361344538,
+            "two": 0.4369747899159664,
+            "three": 0.35294117647058826
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 84,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.15492957746478872,
+              "two": 0.5070422535211268,
+              "three": 0.3380281690140845
+            },
+            "attempts_mix": {
+              "ft": 0.16417910447761194,
+              "two": 0.47761194029850745,
+              "three": 0.3582089552238806
+            },
+            "points_l1_distance": 0.0632,
+            "attempts_l1_distance": 0.0273,
+            "average_l1_distance": 0.0453,
+            "quick_text": "Points mix: 3PT 34% \u00b7 2PT 51% \u00b7 FT 15%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 112,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.1917808219178082,
+              "two": 0.6027397260273972,
+              "three": 0.2054794520547945
+            },
+            "attempts_mix": {
+              "ft": 0.2,
+              "two": 0.4857142857142857,
+              "three": 0.3142857142857143
+            },
+            "points_l1_distance": 0.3003,
+            "attempts_l1_distance": 0.0614,
+            "average_l1_distance": 0.1808,
+            "quick_text": "Points mix: 3PT 21% \u00b7 2PT 60% \u00b7 FT 19%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 80,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.14084507042253522,
+              "two": 0.7323943661971831,
+              "three": 0.1267605633802817
+            },
+            "attempts_mix": {
+              "ft": 0.15384615384615385,
+              "two": 0.6615384615384615,
+              "three": 0.18461538461538463
+            },
+            "points_l1_distance": 0.5139,
+            "attempts_l1_distance": 0.3687,
+            "average_l1_distance": 0.4413,
+            "quick_text": "Points mix: 3PT 13% \u00b7 2PT 73% \u00b7 FT 14%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 160,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 1.0,
+            "average_state_shift": 0.6691,
+            "state_shift": {
+              "leading": 0.0982,
+              "trailing": 1.0,
+              "tied": 0.9091
+            },
+            "points_mix": {
+              "ft": 0.025974025974025976,
+              "two": 0.5454545454545454,
+              "three": 0.42857142857142855
+            },
+            "attempts_mix": {
+              "ft": 0.03636363636363636,
+              "two": 0.5454545454545454,
+              "three": 0.41818181818181815
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.6691)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 100,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.7659,
+            "average_state_shift": 0.4034,
+            "state_shift": {
+              "leading": 0.0596,
+              "trailing": 0.3847,
+              "tied": 0.7659
+            },
+            "points_mix": {
+              "ft": 0.28378378378378377,
+              "two": 0.2702702702702703,
+              "three": 0.44594594594594594
+            },
+            "attempts_mix": {
+              "ft": 0.28,
+              "two": 0.37333333333333335,
+              "three": 0.3466666666666667
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4034)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 72,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.4246,
+            "average_state_shift": 0.2236,
+            "state_shift": {
+              "leading": 0.1788,
+              "trailing": 0.0675,
+              "tied": 0.4246
+            },
+            "points_mix": {
+              "ft": 0.2236842105263158,
+              "two": 0.5,
+              "three": 0.27631578947368424
+            },
+            "attempts_mix": {
+              "ft": 0.22666666666666666,
+              "two": 0.5333333333333333,
+              "three": 0.24
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.2236)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 84,
+          "points_share": {
+            "ft": 0.15492957746478872,
+            "two": 0.5070422535211268,
+            "three": 0.3380281690140845
+          },
+          "attempts_share": {
+            "ft": 0.16417910447761194,
+            "two": 0.47761194029850745,
+            "three": 0.3582089552238806
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 112,
+          "points_share": {
+            "ft": 0.1917808219178082,
+            "two": 0.6027397260273972,
+            "three": 0.2054794520547945
+          },
+          "attempts_share": {
+            "ft": 0.2,
+            "two": 0.4857142857142857,
+            "three": 0.3142857142857143
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 80,
+          "points_share": {
+            "ft": 0.14084507042253522,
+            "two": 0.7323943661971831,
+            "three": 0.1267605633802817
+          },
+          "attempts_share": {
+            "ft": 0.15384615384615385,
+            "two": 0.6615384615384615,
+            "three": 0.18461538461538463
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 36%, 2PT 48%, FT 17%.",
+        "Consistency score: 90.0 / 100.",
+        "Adaptability score: 5.46 / 100."
+      ]
+    },
+    {
+      "team_code": "OLY",
+      "consistency_score": 91.58,
+      "adaptability_score": 4.91,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.15857605177993528,
+          "two": 0.4841423948220065,
+          "three": 0.3572815533980582
+        },
+        "attempts_overall_share": {
+          "ft": 0.17363571934798017,
+          "two": 0.46137491141034725,
+          "three": 0.3649893692416726
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.1674259681093394,
+            "two": 0.4601366742596811,
+            "three": 0.3724373576309795
+          },
+          "trailing": {
+            "ft": 0.15591397849462366,
+            "two": 0.4946236559139785,
+            "three": 0.34946236559139787
+          },
+          "tied": {
+            "ft": 0.10091743119266056,
+            "two": 0.6238532110091743,
+            "three": 0.27522935779816515
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.18513853904282115,
+            "two": 0.43702770780856426,
+            "three": 0.3778337531486146
+          },
+          "trailing": {
+            "ft": 0.17025440313111545,
+            "two": 0.487279843444227,
+            "three": 0.3424657534246575
+          },
+          "tied": {
+            "ft": 0.10377358490566038,
+            "two": 0.5188679245283019,
+            "three": 0.37735849056603776
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 143,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.14606741573033707,
+              "two": 0.5168539325842697,
+              "three": 0.33707865168539325
+            },
+            "attempts_mix": {
+              "ft": 0.1780821917808219,
+              "two": 0.4794520547945205,
+              "three": 0.3424657534246575
+            },
+            "points_l1_distance": 0.0654,
+            "attempts_l1_distance": 0.045,
+            "average_l1_distance": 0.0552,
+            "quick_text": "Points mix: 3PT 34% \u00b7 2PT 52% \u00b7 FT 15%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 70,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.19767441860465115,
+              "two": 0.5581395348837209,
+              "three": 0.2441860465116279
+            },
+            "attempts_mix": {
+              "ft": 0.20481927710843373,
+              "two": 0.4939759036144578,
+              "three": 0.30120481927710846
+            },
+            "points_l1_distance": 0.2262,
+            "attempts_l1_distance": 0.1276,
+            "average_l1_distance": 0.1769,
+            "quick_text": "Points mix: 3PT 24% \u00b7 2PT 56% \u00b7 FT 20%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 107,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.1827956989247312,
+              "two": 0.23655913978494625,
+              "three": 0.5806451612903226
+            },
+            "attempts_mix": {
+              "ft": 0.2236842105263158,
+              "two": 0.34210526315789475,
+              "three": 0.4342105263157895
+            },
+            "points_l1_distance": 0.4952,
+            "attempts_l1_distance": 0.2385,
+            "average_l1_distance": 0.3669,
+            "quick_text": "Points mix: 3PT 58% \u00b7 2PT 24% \u00b7 FT 18%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 97,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.2463,
+            "average_state_shift": 0.756,
+            "state_shift": {
+              "leading": 0.0216,
+              "trailing": 1.0,
+              "tied": 1.2463
+            },
+            "points_mix": {
+              "ft": 0.23333333333333334,
+              "two": 0.4,
+              "three": 0.36666666666666664
+            },
+            "attempts_mix": {
+              "ft": 0.25609756097560976,
+              "two": 0.35365853658536583,
+              "three": 0.3902439024390244
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.756)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 107,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 1.0,
+            "average_state_shift": 0.4538,
+            "state_shift": {
+              "leading": 0.0151,
+              "trailing": 1.0,
+              "tied": 0.3462
+            },
+            "points_mix": {
+              "ft": 0.1827956989247312,
+              "two": 0.23655913978494625,
+              "three": 0.5806451612903226
+            },
+            "attempts_mix": {
+              "ft": 0.2236842105263158,
+              "two": 0.34210526315789475,
+              "three": 0.4342105263157895
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.4538)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 17,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 0.1306,
+            "average_state_shift": 0.1108,
+            "state_shift": {
+              "leading": 0.1016,
+              "trailing": 0.1306,
+              "tied": 0.1003
+            },
+            "points_mix": {
+              "ft": 0.13513513513513514,
+              "two": 0.5405405405405406,
+              "three": 0.32432432432432434
+            },
+            "attempts_mix": {
+              "ft": 0.14084507042253522,
+              "two": 0.4788732394366197,
+              "three": 0.38028169014084506
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.1108)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 143,
+          "points_share": {
+            "ft": 0.14606741573033707,
+            "two": 0.5168539325842697,
+            "three": 0.33707865168539325
+          },
+          "attempts_share": {
+            "ft": 0.1780821917808219,
+            "two": 0.4794520547945205,
+            "three": 0.3424657534246575
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 70,
+          "points_share": {
+            "ft": 0.19767441860465115,
+            "two": 0.5581395348837209,
+            "three": 0.2441860465116279
+          },
+          "attempts_share": {
+            "ft": 0.20481927710843373,
+            "two": 0.4939759036144578,
+            "three": 0.30120481927710846
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 107,
+          "points_share": {
+            "ft": 0.1827956989247312,
+            "two": 0.23655913978494625,
+            "three": 0.5806451612903226
+          },
+          "attempts_share": {
+            "ft": 0.2236842105263158,
+            "two": 0.34210526315789475,
+            "three": 0.4342105263157895
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 36%, 2PT 48%, FT 16%.",
+        "Consistency score: 91.58 / 100.",
+        "Adaptability score: 4.91 / 100."
+      ]
+    },
+    {
+      "team_code": "PAN",
+      "consistency_score": 89.84,
+      "adaptability_score": 3.18,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.17537072856221791,
+          "two": 0.5093488072211476,
+          "three": 0.3152804642166344
+        },
+        "attempts_overall_share": {
+          "ft": 0.17882971729125574,
+          "two": 0.49441157133464825,
+          "three": 0.326758711374096
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.16714697406340057,
+            "two": 0.4956772334293948,
+            "three": 0.3371757925072046
+          },
+          "trailing": {
+            "ft": 0.17797356828193833,
+            "two": 0.507488986784141,
+            "three": 0.3145374449339207
+          },
+          "tied": {
+            "ft": 0.17391304347826086,
+            "two": 0.6086956521739131,
+            "three": 0.21739130434782608
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.18012422360248448,
+            "two": 0.4720496894409938,
+            "three": 0.34782608695652173
+          },
+          "trailing": {
+            "ft": 0.18116591928251122,
+            "two": 0.5004484304932736,
+            "three": 0.3183856502242152
+          },
+          "tied": {
+            "ft": 0.14285714285714285,
+            "two": 0.5,
+            "three": 0.35714285714285715
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 125,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.17073170731707318,
+              "two": 0.5365853658536586,
+              "three": 0.2926829268292683
+            },
+            "attempts_mix": {
+              "ft": 0.175,
+              "two": 0.5125,
+              "three": 0.3125
+            },
+            "points_l1_distance": 0.0545,
+            "attempts_l1_distance": 0.0362,
+            "average_l1_distance": 0.0453,
+            "quick_text": "Points mix: 3PT 29% \u00b7 2PT 54% \u00b7 FT 17%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 82,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.2753623188405797,
+              "two": 0.37681159420289856,
+              "three": 0.34782608695652173
+            },
+            "attempts_mix": {
+              "ft": 0.25,
+              "two": 0.4342105263157895,
+              "three": 0.3157894736842105
+            },
+            "points_l1_distance": 0.2651,
+            "attempts_l1_distance": 0.1423,
+            "average_l1_distance": 0.2037,
+            "quick_text": "Points mix: 3PT 35% \u00b7 2PT 38% \u00b7 FT 28%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 1,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.07936507936507936,
+              "two": 0.7301587301587301,
+              "three": 0.19047619047619047
+            },
+            "attempts_mix": {
+              "ft": 0.06756756756756757,
+              "two": 0.6756756756756757,
+              "three": 0.25675675675675674
+            },
+            "points_l1_distance": 0.4416,
+            "attempts_l1_distance": 0.3625,
+            "average_l1_distance": 0.4021,
+            "quick_text": "Points mix: 3PT 19% \u00b7 2PT 73% \u00b7 FT 8%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 109,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 1.7386,
+            "average_state_shift": 0.8776,
+            "state_shift": {
+              "leading": 1.7386,
+              "trailing": 0.0626,
+              "tied": 0.8317
+            },
+            "points_mix": {
+              "ft": 0.12987012987012986,
+              "two": 0.5974025974025974,
+              "three": 0.2727272727272727
+            },
+            "attempts_mix": {
+              "ft": 0.13157894736842105,
+              "two": 0.5394736842105263,
+              "three": 0.32894736842105265
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.8776)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 63,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.8524,
+            "average_state_shift": 0.4294,
+            "state_shift": {
+              "leading": 0.3857,
+              "trailing": 0.05,
+              "tied": 0.8524
+            },
+            "points_mix": {
+              "ft": 0.2714285714285714,
+              "two": 0.5142857142857142,
+              "three": 0.21428571428571427
+            },
+            "attempts_mix": {
+              "ft": 0.2714285714285714,
+              "two": 0.45714285714285713,
+              "three": 0.2714285714285714
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4294)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 76,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.3809,
+            "average_state_shift": 0.1842,
+            "state_shift": {
+              "leading": 0.0601,
+              "trailing": 0.1117,
+              "tied": 0.3809
+            },
+            "points_mix": {
+              "ft": 0.1527777777777778,
+              "two": 0.5555555555555556,
+              "three": 0.2916666666666667
+            },
+            "attempts_mix": {
+              "ft": 0.14473684210526316,
+              "two": 0.4868421052631579,
+              "three": 0.3684210526315789
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1842)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 125,
+          "points_share": {
+            "ft": 0.17073170731707318,
+            "two": 0.5365853658536586,
+            "three": 0.2926829268292683
+          },
+          "attempts_share": {
+            "ft": 0.175,
+            "two": 0.5125,
+            "three": 0.3125
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 82,
+          "points_share": {
+            "ft": 0.2753623188405797,
+            "two": 0.37681159420289856,
+            "three": 0.34782608695652173
+          },
+          "attempts_share": {
+            "ft": 0.25,
+            "two": 0.4342105263157895,
+            "three": 0.3157894736842105
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 1,
+          "points_share": {
+            "ft": 0.07936507936507936,
+            "two": 0.7301587301587301,
+            "three": 0.19047619047619047
+          },
+          "attempts_share": {
+            "ft": 0.06756756756756757,
+            "two": 0.6756756756756757,
+            "three": 0.25675675675675674
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 32%, 2PT 51%, FT 18%.",
+        "Consistency score: 89.84 / 100.",
+        "Adaptability score: 3.18 / 100."
+      ]
+    },
+    {
+      "team_code": "RED",
+      "consistency_score": 91.89,
+      "adaptability_score": 2.88,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.1704619388418998,
+          "two": 0.5465191932335719,
+          "three": 0.2830188679245283
+        },
+        "attempts_overall_share": {
+          "ft": 0.17478318879252835,
+          "two": 0.5170113408939293,
+          "three": 0.30820547031354234
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.185126582278481,
+            "two": 0.5253164556962026,
+            "three": 0.28955696202531644
+          },
+          "trailing": {
+            "ft": 0.1547029702970297,
+            "two": 0.5668316831683168,
+            "three": 0.2784653465346535
+          },
+          "tied": {
+            "ft": 0.20618556701030927,
+            "two": 0.5154639175257731,
+            "three": 0.27835051546391754
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.1828125,
+            "two": 0.5171875,
+            "three": 0.3
+          },
+          "trailing": {
+            "ft": 0.16318537859007834,
+            "two": 0.5130548302872062,
+            "three": 0.3237597911227154
+          },
+          "tied": {
+            "ft": 0.21505376344086022,
+            "two": 0.5483870967741935,
+            "three": 0.23655913978494625
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 159,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.17105263157894737,
+              "two": 0.5526315789473685,
+              "three": 0.27631578947368424
+            },
+            "attempts_mix": {
+              "ft": 0.16666666666666666,
+              "two": 0.5128205128205128,
+              "three": 0.32051282051282054
+            },
+            "points_l1_distance": 0.0134,
+            "attempts_l1_distance": 0.0246,
+            "average_l1_distance": 0.019,
+            "quick_text": "Points mix: 3PT 28% \u00b7 2PT 55% \u00b7 FT 17%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 141,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.18518518518518517,
+              "two": 0.4444444444444444,
+              "three": 0.37037037037037035
+            },
+            "attempts_mix": {
+              "ft": 0.22388059701492538,
+              "two": 0.5074626865671642,
+              "three": 0.26865671641791045
+            },
+            "points_l1_distance": 0.2041,
+            "attempts_l1_distance": 0.0982,
+            "average_l1_distance": 0.1512,
+            "quick_text": "Points mix: 3PT 37% \u00b7 2PT 44% \u00b7 FT 19%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 115,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.11594202898550725,
+              "two": 0.7536231884057971,
+              "three": 0.13043478260869565
+            },
+            "attempts_mix": {
+              "ft": 0.11940298507462686,
+              "two": 0.6716417910447762,
+              "three": 0.208955223880597
+            },
+            "points_l1_distance": 0.4142,
+            "attempts_l1_distance": 0.3093,
+            "average_l1_distance": 0.3617,
+            "quick_text": "Points mix: 3PT 13% \u00b7 2PT 75% \u00b7 FT 12%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 92,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 1.1849,
+            "average_state_shift": 0.73,
+            "state_shift": {
+              "leading": 1.1849,
+              "trailing": 0.0568,
+              "tied": 0.9483
+            },
+            "points_mix": {
+              "ft": 0.2537313432835821,
+              "two": 0.47761194029850745,
+              "three": 0.26865671641791045
+            },
+            "attempts_mix": {
+              "ft": 0.2328767123287671,
+              "two": 0.4520547945205479,
+              "three": 0.3150684931506849
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.73)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 65,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.7267,
+            "average_state_shift": 0.4047,
+            "state_shift": {
+              "leading": 0.0508,
+              "trailing": 0.4365,
+              "tied": 0.7267
+            },
+            "points_mix": {
+              "ft": 0.20987654320987653,
+              "two": 0.49382716049382713,
+              "three": 0.2962962962962963
+            },
+            "attempts_mix": {
+              "ft": 0.22666666666666666,
+              "two": 0.48,
+              "three": 0.29333333333333333
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4047)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 141,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "leading",
+            "dominant_state_shift": 0.3361,
+            "average_state_shift": 0.2051,
+            "state_shift": {
+              "leading": 0.3361,
+              "trailing": 0.2085,
+              "tied": 0.0706
+            },
+            "points_mix": {
+              "ft": 0.18518518518518517,
+              "two": 0.4444444444444444,
+              "three": 0.37037037037037035
+            },
+            "attempts_mix": {
+              "ft": 0.22388059701492538,
+              "two": 0.5074626865671642,
+              "three": 0.26865671641791045
+            },
+            "quick_text": "Largest shift while leading (avg shift 0.2051)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 159,
+          "points_share": {
+            "ft": 0.17105263157894737,
+            "two": 0.5526315789473685,
+            "three": 0.27631578947368424
+          },
+          "attempts_share": {
+            "ft": 0.16666666666666666,
+            "two": 0.5128205128205128,
+            "three": 0.32051282051282054
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 141,
+          "points_share": {
+            "ft": 0.18518518518518517,
+            "two": 0.4444444444444444,
+            "three": 0.37037037037037035
+          },
+          "attempts_share": {
+            "ft": 0.22388059701492538,
+            "two": 0.5074626865671642,
+            "three": 0.26865671641791045
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 115,
+          "points_share": {
+            "ft": 0.11594202898550725,
+            "two": 0.7536231884057971,
+            "three": 0.13043478260869565
+          },
+          "attempts_share": {
+            "ft": 0.11940298507462686,
+            "two": 0.6716417910447762,
+            "three": 0.208955223880597
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 28%, 2PT 55%, FT 17%.",
+        "Consistency score: 91.89 / 100.",
+        "Adaptability score: 2.88 / 100."
+      ]
+    },
+    {
+      "team_code": "TEL",
+      "consistency_score": 91.52,
+      "adaptability_score": 2.36,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.17393903167961747,
+          "two": 0.5319784817692768,
+          "three": 0.2940824865511058
+        },
+        "attempts_overall_share": {
+          "ft": 0.18267419962335216,
+          "two": 0.5116133082234777,
+          "three": 0.30571249215317015
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.17945205479452056,
+            "two": 0.5616438356164384,
+            "three": 0.2589041095890411
+          },
+          "trailing": {
+            "ft": 0.16990291262135923,
+            "two": 0.5024271844660194,
+            "three": 0.3276699029126214
+          },
+          "tied": {
+            "ft": 0.16806722689075632,
+            "two": 0.5546218487394958,
+            "three": 0.2773109243697479
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.18581560283687942,
+            "two": 0.524822695035461,
+            "three": 0.28936170212765955
+          },
+          "trailing": {
+            "ft": 0.17766497461928935,
+            "two": 0.5,
+            "three": 0.3223350253807107
+          },
+          "tied": {
+            "ft": 0.2,
+            "two": 0.51,
+            "three": 0.29
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 2,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.17391304347826086,
+              "two": 0.5217391304347826,
+              "three": 0.30434782608695654
+            },
+            "attempts_mix": {
+              "ft": 0.16666666666666666,
+              "two": 0.5277777777777778,
+              "three": 0.3055555555555556
+            },
+            "points_l1_distance": 0.0205,
+            "attempts_l1_distance": 0.0323,
+            "average_l1_distance": 0.0264,
+            "quick_text": "Points mix: 3PT 30% \u00b7 2PT 52% \u00b7 FT 17%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 188,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.08421052631578947,
+              "two": 0.5684210526315789,
+              "three": 0.3473684210526316
+            },
+            "attempts_mix": {
+              "ft": 0.1,
+              "two": 0.5625,
+              "three": 0.3375
+            },
+            "points_l1_distance": 0.1795,
+            "attempts_l1_distance": 0.1653,
+            "average_l1_distance": 0.1724,
+            "quick_text": "Points mix: 3PT 35% \u00b7 2PT 57% \u00b7 FT 8%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 73,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.2328767123287671,
+              "two": 0.684931506849315,
+              "three": 0.0821917808219178
+            },
+            "attempts_mix": {
+              "ft": 0.2361111111111111,
+              "two": 0.5833333333333334,
+              "three": 0.18055555555555555
+            },
+            "points_l1_distance": 0.4238,
+            "attempts_l1_distance": 0.2503,
+            "average_l1_distance": 0.337,
+            "quick_text": "Points mix: 3PT 8% \u00b7 2PT 68% \u00b7 FT 23%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 12,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.0775,
+            "average_state_shift": 0.6952,
+            "state_shift": {
+              "leading": 1.0,
+              "trailing": 0.0082,
+              "tied": 1.0775
+            },
+            "points_mix": {
+              "ft": 0.2698412698412698,
+              "two": 0.3492063492063492,
+              "three": 0.38095238095238093
+            },
+            "attempts_mix": {
+              "ft": 0.23943661971830985,
+              "two": 0.4225352112676056,
+              "three": 0.3380281690140845
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.6952)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 71,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.6625,
+            "average_state_shift": 0.3459,
+            "state_shift": {
+              "leading": 0.0559,
+              "trailing": 0.3194,
+              "tied": 0.6625
+            },
+            "points_mix": {
+              "ft": 0.14942528735632185,
+              "two": 0.5747126436781609,
+              "three": 0.27586206896551724
+            },
+            "attempts_mix": {
+              "ft": 0.16666666666666666,
+              "two": 0.5128205128205128,
+              "three": 0.32051282051282054
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.3459)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 89,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.406,
+            "average_state_shift": 0.1947,
+            "state_shift": {
+              "leading": 0.0639,
+              "trailing": 0.1143,
+              "tied": 0.406
+            },
+            "points_mix": {
+              "ft": 0.23157894736842105,
+              "two": 0.42105263157894735,
+              "three": 0.3473684210526316
+            },
+            "attempts_mix": {
+              "ft": 0.26506024096385544,
+              "two": 0.4578313253012048,
+              "three": 0.27710843373493976
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1947)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 2,
+          "points_share": {
+            "ft": 0.17391304347826086,
+            "two": 0.5217391304347826,
+            "three": 0.30434782608695654
+          },
+          "attempts_share": {
+            "ft": 0.16666666666666666,
+            "two": 0.5277777777777778,
+            "three": 0.3055555555555556
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 188,
+          "points_share": {
+            "ft": 0.08421052631578947,
+            "two": 0.5684210526315789,
+            "three": 0.3473684210526316
+          },
+          "attempts_share": {
+            "ft": 0.1,
+            "two": 0.5625,
+            "three": 0.3375
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 73,
+          "points_share": {
+            "ft": 0.2328767123287671,
+            "two": 0.684931506849315,
+            "three": 0.0821917808219178
+          },
+          "attempts_share": {
+            "ft": 0.2361111111111111,
+            "two": 0.5833333333333334,
+            "three": 0.18055555555555555
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 29%, 2PT 53%, FT 17%.",
+        "Consistency score: 91.52 / 100.",
+        "Adaptability score: 2.36 / 100."
+      ]
+    },
+    {
+      "team_code": "ULK",
+      "consistency_score": 92.15,
+      "adaptability_score": 3.84,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.1503030303030303,
+          "two": 0.5442424242424242,
+          "three": 0.3054545454545455
+        },
+        "attempts_overall_share": {
+          "ft": 0.16114359974009096,
+          "two": 0.5100714749837557,
+          "three": 0.32878492527615333
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.14869888475836432,
+            "two": 0.550185873605948,
+            "three": 0.30111524163568776
+          },
+          "trailing": {
+            "ft": 0.15053763440860216,
+            "two": 0.5591397849462365,
+            "three": 0.2903225806451613
+          },
+          "tied": {
+            "ft": 0.16161616161616163,
+            "two": 0.3838383838383838,
+            "three": 0.45454545454545453
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.15894039735099338,
+            "two": 0.519205298013245,
+            "three": 0.3218543046357616
+          },
+          "trailing": {
+            "ft": 0.16045845272206305,
+            "two": 0.504297994269341,
+            "three": 0.335243553008596
+          },
+          "tied": {
+            "ft": 0.18604651162790697,
+            "two": 0.47674418604651164,
+            "three": 0.3372093023255814
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 96,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.12,
+              "two": 0.56,
+              "three": 0.32
+            },
+            "attempts_mix": {
+              "ft": 0.14516129032258066,
+              "two": 0.5161290322580645,
+              "three": 0.3387096774193548
+            },
+            "points_l1_distance": 0.0606,
+            "attempts_l1_distance": 0.032,
+            "average_l1_distance": 0.0463,
+            "quick_text": "Points mix: 3PT 32% \u00b7 2PT 56% \u00b7 FT 12%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 64,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.17582417582417584,
+              "two": 0.46153846153846156,
+              "three": 0.3626373626373626
+            },
+            "attempts_mix": {
+              "ft": 0.2191780821917808,
+              "two": 0.5068493150684932,
+              "three": 0.273972602739726
+            },
+            "points_l1_distance": 0.1654,
+            "attempts_l1_distance": 0.1161,
+            "average_l1_distance": 0.1407,
+            "quick_text": "Points mix: 3PT 36% \u00b7 2PT 46% \u00b7 FT 18%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 41,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.07246376811594203,
+              "two": 0.6666666666666666,
+              "three": 0.2608695652173913
+            },
+            "attempts_mix": {
+              "ft": 0.08064516129032258,
+              "two": 0.6774193548387096,
+              "three": 0.24193548387096775
+            },
+            "points_l1_distance": 0.2448,
+            "attempts_l1_distance": 0.3347,
+            "average_l1_distance": 0.2898,
+            "quick_text": "Points mix: 3PT 26% \u00b7 2PT 67% \u00b7 FT 7%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 192,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.6666,
+            "average_state_shift": 1.0345,
+            "state_shift": {
+              "leading": 1.3145,
+              "trailing": 0.1223,
+              "tied": 1.6666
+            },
+            "points_mix": {
+              "ft": 0.1643835616438356,
+              "two": 0.4657534246575342,
+              "three": 0.3698630136986301
+            },
+            "attempts_mix": {
+              "ft": 0.16901408450704225,
+              "two": 0.4788732394366197,
+              "three": 0.352112676056338
+            },
+            "quick_text": "Largest shift while tied (avg shift 1.0345)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 187,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.8742,
+            "average_state_shift": 0.4375,
+            "state_shift": {
+              "leading": 0.2783,
+              "trailing": 0.1599,
+              "tied": 0.8742
+            },
+            "points_mix": {
+              "ft": 0.08771929824561403,
+              "two": 0.49122807017543857,
+              "three": 0.42105263157894735
+            },
+            "attempts_mix": {
+              "ft": 0.078125,
+              "two": 0.46875,
+              "three": 0.453125
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.4375)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 41,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.2903,
+            "average_state_shift": 0.126,
+            "state_shift": {
+              "leading": 0.0332,
+              "trailing": 0.0546,
+              "tied": 0.2903
+            },
+            "points_mix": {
+              "ft": 0.07246376811594203,
+              "two": 0.6666666666666666,
+              "three": 0.2608695652173913
+            },
+            "attempts_mix": {
+              "ft": 0.08064516129032258,
+              "two": 0.6774193548387096,
+              "three": 0.24193548387096775
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.126)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 96,
+          "points_share": {
+            "ft": 0.12,
+            "two": 0.56,
+            "three": 0.32
+          },
+          "attempts_share": {
+            "ft": 0.14516129032258066,
+            "two": 0.5161290322580645,
+            "three": 0.3387096774193548
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 64,
+          "points_share": {
+            "ft": 0.17582417582417584,
+            "two": 0.46153846153846156,
+            "three": 0.3626373626373626
+          },
+          "attempts_share": {
+            "ft": 0.2191780821917808,
+            "two": 0.5068493150684932,
+            "three": 0.273972602739726
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 41,
+          "points_share": {
+            "ft": 0.07246376811594203,
+            "two": 0.6666666666666666,
+            "three": 0.2608695652173913
+          },
+          "attempts_share": {
+            "ft": 0.08064516129032258,
+            "two": 0.6774193548387096,
+            "three": 0.24193548387096775
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 31%, 2PT 54%, FT 15%.",
+        "Consistency score: 92.15 / 100.",
+        "Adaptability score: 3.84 / 100."
+      ]
+    },
+    {
+      "team_code": "UNK",
+      "consistency_score": 92.3,
+      "adaptability_score": 3.25,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.13386308068459657,
+          "two": 0.508557457212714,
+          "three": 0.3575794621026895
+        },
+        "attempts_overall_share": {
+          "ft": 0.14388961892247043,
+          "two": 0.5203679369250985,
+          "three": 0.335742444152431
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.135,
+            "two": 0.4975,
+            "three": 0.3675
+          },
+          "trailing": {
+            "ft": 0.13598901098901098,
+            "two": 0.5302197802197802,
+            "three": 0.33379120879120877
+          },
+          "tied": {
+            "ft": 0.1111111111111111,
+            "two": 0.4444444444444444,
+            "three": 0.4444444444444444
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.14917127071823205,
+            "two": 0.5027624309392266,
+            "three": 0.34806629834254144
+          },
+          "trailing": {
+            "ft": 0.14558823529411766,
+            "two": 0.5323529411764706,
+            "three": 0.3220588235294118
+          },
+          "tied": {
+            "ft": 0.1016949152542373,
+            "two": 0.559322033898305,
+            "three": 0.3389830508474576
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 114,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.14285714285714285,
+              "two": 0.5,
+              "three": 0.35714285714285715
+            },
+            "attempts_mix": {
+              "ft": 0.14457831325301204,
+              "two": 0.5542168674698795,
+              "three": 0.30120481927710846
+            },
+            "points_l1_distance": 0.018,
+            "attempts_l1_distance": 0.0691,
+            "average_l1_distance": 0.0435,
+            "quick_text": "Points mix: 3PT 36% \u00b7 2PT 50% \u00b7 FT 14%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 86,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.1134020618556701,
+              "two": 0.4536082474226804,
+              "three": 0.4329896907216495
+            },
+            "attempts_mix": {
+              "ft": 0.1506849315068493,
+              "two": 0.4520547945205479,
+              "three": 0.3972602739726027
+            },
+            "points_l1_distance": 0.1508,
+            "attempts_l1_distance": 0.1366,
+            "average_l1_distance": 0.1437,
+            "quick_text": "Points mix: 3PT 43% \u00b7 2PT 45% \u00b7 FT 11%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 190,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.2571428571428571,
+              "two": 0.5714285714285714,
+              "three": 0.17142857142857143
+            },
+            "attempts_mix": {
+              "ft": 0.2727272727272727,
+              "two": 0.5151515151515151,
+              "three": 0.21212121212121213
+            },
+            "points_l1_distance": 0.3723,
+            "attempts_l1_distance": 0.2577,
+            "average_l1_distance": 0.315,
+            "quick_text": "Points mix: 3PT 17% \u00b7 2PT 57% \u00b7 FT 26%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 158,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.2453,
+            "average_state_shift": 0.76,
+            "state_shift": {
+              "leading": 0.0347,
+              "trailing": 1.0,
+              "tied": 1.2453
+            },
+            "points_mix": {
+              "ft": 0.10666666666666667,
+              "two": 0.5333333333333333,
+              "three": 0.36
+            },
+            "attempts_mix": {
+              "ft": 0.10526315789473684,
+              "two": 0.5,
+              "three": 0.39473684210526316
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.76)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 59,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.8629,
+            "average_state_shift": 0.3784,
+            "state_shift": {
+              "leading": 0.1302,
+              "trailing": 0.1421,
+              "tied": 0.8629
+            },
+            "points_mix": {
+              "ft": 0.1076923076923077,
+              "two": 0.6153846153846154,
+              "three": 0.27692307692307694
+            },
+            "attempts_mix": {
+              "ft": 0.11290322580645161,
+              "two": 0.5,
+              "three": 0.3870967741935484
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.3784)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 93,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.2519,
+            "average_state_shift": 0.1724,
+            "state_shift": {
+              "leading": 0.2021,
+              "trailing": 0.0632,
+              "tied": 0.2519
+            },
+            "points_mix": {
+              "ft": 0.18823529411764706,
+              "two": 0.5647058823529412,
+              "three": 0.24705882352941178
+            },
+            "attempts_mix": {
+              "ft": 0.21333333333333335,
+              "two": 0.5066666666666667,
+              "three": 0.28
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.1724)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 114,
+          "points_share": {
+            "ft": 0.14285714285714285,
+            "two": 0.5,
+            "three": 0.35714285714285715
+          },
+          "attempts_share": {
+            "ft": 0.14457831325301204,
+            "two": 0.5542168674698795,
+            "three": 0.30120481927710846
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 86,
+          "points_share": {
+            "ft": 0.1134020618556701,
+            "two": 0.4536082474226804,
+            "three": 0.4329896907216495
+          },
+          "attempts_share": {
+            "ft": 0.1506849315068493,
+            "two": 0.4520547945205479,
+            "three": 0.3972602739726027
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 190,
+          "points_share": {
+            "ft": 0.2571428571428571,
+            "two": 0.5714285714285714,
+            "three": 0.17142857142857143
+          },
+          "attempts_share": {
+            "ft": 0.2727272727272727,
+            "two": 0.5151515151515151,
+            "three": 0.21212121212121213
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 36%, 2PT 51%, FT 13%.",
+        "Consistency score: 92.3 / 100.",
+        "Adaptability score: 3.25 / 100."
+      ]
+    },
+    {
+      "team_code": "ZAL",
+      "consistency_score": 91.58,
+      "adaptability_score": 4.47,
+      "style": {
+        "points_overall_share": {
+          "ft": 0.155,
+          "two": 0.49625,
+          "three": 0.34875
+        },
+        "attempts_overall_share": {
+          "ft": 0.1587708066581306,
+          "two": 0.499359795134443,
+          "three": 0.3418693982074264
+        },
+        "points_state_share": {
+          "leading": {
+            "ft": 0.16637478108581435,
+            "two": 0.4868651488616462,
+            "three": 0.3467600700525394
+          },
+          "trailing": {
+            "ft": 0.15451577801958652,
+            "two": 0.48313384113166485,
+            "three": 0.36235038084874865
+          },
+          "tied": {
+            "ft": 0.1,
+            "two": 0.6545454545454545,
+            "three": 0.24545454545454545
+          }
+        },
+        "attempts_state_share": {
+          "leading": {
+            "ft": 0.17463235294117646,
+            "two": 0.4742647058823529,
+            "three": 0.35110294117647056
+          },
+          "trailing": {
+            "ft": 0.15318230852211434,
+            "two": 0.5091693635382956,
+            "three": 0.3376483279395901
+          },
+          "tied": {
+            "ft": 0.12087912087912088,
+            "two": 0.5494505494505495,
+            "three": 0.32967032967032966
+          }
+        }
+      },
+      "evidence": {
+        "consistency": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 49,
+            "evidence_tag": "most_typical",
+            "summary": "Closest to this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.14516129032258066,
+              "two": 0.5161290322580645,
+              "three": 0.3387096774193548
+            },
+            "attempts_mix": {
+              "ft": 0.1267605633802817,
+              "two": 0.5070422535211268,
+              "three": 0.36619718309859156
+            },
+            "points_l1_distance": 0.0398,
+            "attempts_l1_distance": 0.064,
+            "average_l1_distance": 0.0519,
+            "quick_text": "Points mix: 3PT 34% \u00b7 2PT 52% \u00b7 FT 15%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 181,
+            "evidence_tag": "mid_profile",
+            "summary": "Middle-of-the-road profile between typical and extreme games.",
+            "points_mix": {
+              "ft": 0.1941747572815534,
+              "two": 0.5436893203883495,
+              "three": 0.2621359223300971
+            },
+            "attempts_mix": {
+              "ft": 0.22988505747126436,
+              "two": 0.5172413793103449,
+              "three": 0.25287356321839083
+            },
+            "points_l1_distance": 0.1732,
+            "attempts_l1_distance": 0.178,
+            "average_l1_distance": 0.1756,
+            "quick_text": "Points mix: 3PT 26% \u00b7 2PT 54% \u00b7 FT 19%"
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 38,
+            "evidence_tag": "largest_deviation",
+            "summary": "Strongest deviation from this team's baseline shot identity.",
+            "points_mix": {
+              "ft": 0.273972602739726,
+              "two": 0.3561643835616438,
+              "three": 0.3698630136986301
+            },
+            "attempts_mix": {
+              "ft": 0.2564102564102564,
+              "two": 0.3717948717948718,
+              "three": 0.3717948717948718
+            },
+            "points_l1_distance": 0.2802,
+            "attempts_l1_distance": 0.2551,
+            "average_l1_distance": 0.2677,
+            "quick_text": "Points mix: 3PT 37% \u00b7 2PT 36% \u00b7 FT 27%"
+          }
+        ],
+        "adaptability": [
+          {
+            "seasoncode": "E2021",
+            "gamecode": 7,
+            "evidence_tag": "strongest_adaptation",
+            "summary": "Largest within-game state-conditioned style shifts.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 1.2333,
+            "average_state_shift": 0.7511,
+            "state_shift": {
+              "leading": 1.0,
+              "trailing": 0.0201,
+              "tied": 1.2333
+            },
+            "points_mix": {
+              "ft": 0.23684210526315788,
+              "two": 0.4473684210526316,
+              "three": 0.3157894736842105
+            },
+            "attempts_mix": {
+              "ft": 0.24,
+              "two": 0.49333333333333335,
+              "three": 0.26666666666666666
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.7511)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 38,
+            "evidence_tag": "mid_adaptation",
+            "summary": "Balanced adaptation signal between the extremes.",
+            "dominant_state": "trailing",
+            "dominant_state_shift": 0.8271,
+            "average_state_shift": 0.4403,
+            "state_shift": {
+              "leading": 0.1794,
+              "trailing": 0.8271,
+              "tied": 0.3145
+            },
+            "points_mix": {
+              "ft": 0.273972602739726,
+              "two": 0.3561643835616438,
+              "three": 0.3698630136986301
+            },
+            "attempts_mix": {
+              "ft": 0.2564102564102564,
+              "two": 0.3717948717948718,
+              "three": 0.3717948717948718
+            },
+            "quick_text": "Largest shift while trailing (avg shift 0.4403)."
+          },
+          {
+            "seasoncode": "E2021",
+            "gamecode": 169,
+            "evidence_tag": "state_stable",
+            "summary": "Most state-stable profile inside this team's season sample.",
+            "dominant_state": "tied",
+            "dominant_state_shift": 0.4161,
+            "average_state_shift": 0.2338,
+            "state_shift": {
+              "leading": 0.2219,
+              "trailing": 0.0633,
+              "tied": 0.4161
+            },
+            "points_mix": {
+              "ft": 0.136986301369863,
+              "two": 0.5753424657534246,
+              "three": 0.2876712328767123
+            },
+            "attempts_mix": {
+              "ft": 0.16393442622950818,
+              "two": 0.5409836065573771,
+              "three": 0.29508196721311475
+            },
+            "quick_text": "Largest shift while tied (avg shift 0.2338)."
+          }
+        ]
+      },
+      "exemplar_games": [
+        {
+          "gamecode": 49,
+          "points_share": {
+            "ft": 0.14516129032258066,
+            "two": 0.5161290322580645,
+            "three": 0.3387096774193548
+          },
+          "attempts_share": {
+            "ft": 0.1267605633802817,
+            "two": 0.5070422535211268,
+            "three": 0.36619718309859156
+          },
+          "summary": "Closest to this team's baseline shot identity."
+        },
+        {
+          "gamecode": 181,
+          "points_share": {
+            "ft": 0.1941747572815534,
+            "two": 0.5436893203883495,
+            "three": 0.2621359223300971
+          },
+          "attempts_share": {
+            "ft": 0.22988505747126436,
+            "two": 0.5172413793103449,
+            "three": 0.25287356321839083
+          },
+          "summary": "Middle-of-the-road profile between typical and extreme games."
+        },
+        {
+          "gamecode": 38,
+          "points_share": {
+            "ft": 0.273972602739726,
+            "two": 0.3561643835616438,
+            "three": 0.3698630136986301
+          },
+          "attempts_share": {
+            "ft": 0.2564102564102564,
+            "two": 0.3717948717948718,
+            "three": 0.3717948717948718
+          },
+          "summary": "Strongest deviation from this team's baseline shot identity."
+        }
+      ],
+      "insights": [
+        "Identity (points): 3PT 35%, 2PT 50%, FT 16%.",
+        "Consistency score: 91.58 / 100.",
+        "Adaptability score: 4.47 / 100."
+      ]
+    }
+  ]
+}

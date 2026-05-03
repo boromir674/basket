@@ -6,6 +6,9 @@ services:
     volumes:
       - ./assets:/app/assets
       - ./data:/app/data
+    environment:
+      # Raw API snapshots (raw_pts, raw_pbp, raw_box) go to data/raw/ to match build_config.jsonc.
+      - BASKET_APP_FILE_STORE_URI=/app/data/raw
     # Unified CLI entrypoint for all data ops + reporting.
     # Usage:
     #   docker compose run --rm ops report_season --seasoncode E2025 --data-dir /app/data
@@ -94,13 +97,16 @@ services:
   season_sync:
     image: euroleague-sankey
     working_dir: /app
-    # Mount only assets so season_sync writes into the assets folder (durable storage path).
+    # Raw API snapshots go to data/raw/ (aligned with build_config.jsonc raw_data_dir).
     volumes:
       - ./assets:/app/assets
       - ./data:/app/data
       - ./scripts:/app/scripts
       - ./build_from_euroleague_api.py:/app/build_from_euroleague_api.py
       - ./validate_output.py:/app/validate_output.py
+    environment:
+      # Raw API snapshots (raw_pts, raw_pbp, raw_box) go to data/raw/ to match build_config.jsonc.
+      - BASKET_APP_FILE_STORE_URI=/app/data/raw
     # Fill up data for a block of games in a given season and refresh `games_manifest.json`.
     # Classification: Backend (used to populate processed JSONs for the UI).
     # Usage: `docker compose run season_sync --seasoncode E2025 --dry-run`.
@@ -108,8 +114,6 @@ services:
     entrypoint: ["python", "season_sync.py"]
     command: [
       "--seasoncode", "E2021",
-      "--start-gamecode", "1",
-      "--end-gamecode", "200",
       "--output-dir", "/app"
     ]
 
@@ -125,8 +129,6 @@ services:
     entrypoint: ["python", "season_sync.py"]
     command: [
       "--seasoncode", "E2021",
-      "--start-gamecode", "1",
-      "--end-gamecode", "200",
       "--output-dir", "/app",
       "--dry-run"
     ]

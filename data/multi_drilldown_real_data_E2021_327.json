@@ -1,0 +1,5577 @@
+{
+  "meta": {
+    "seasoncode": "E2021",
+    "gamecode": 327,
+    "team_a": "FC Barcelona",
+    "team_b": "Real Madrid",
+    "score_a": 83,
+    "score_b": 86,
+    "winner": "Real Madrid",
+    "gamedate": "2022-05-19",
+    "synced_at": "2026-05-02T22:56:26.263697+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P006435": {
+      "name": "LAPROVITTOLA, NICOLAS",
+      "team": "FC Barcelona"
+    },
+    "P010357": {
+      "name": "YABUSELE, GUERSCHON",
+      "team": "Real Madrid"
+    },
+    "P011302": {
+      "name": "EXUM, DANTE LIMAN",
+      "team": "FC Barcelona"
+    },
+    "P005099": {
+      "name": "HANGA, ADAM",
+      "team": "Real Madrid"
+    },
+    "P001932": {
+      "name": "CALATHES, NICK",
+      "team": "FC Barcelona"
+    },
+    "P000796": {
+      "name": "MIROTIC, NIKOLA",
+      "team": "FC Barcelona"
+    },
+    "PTGB": {
+      "name": "LLULL, SERGIO",
+      "team": "Real Madrid"
+    },
+    "P007870": {
+      "name": "DAVIES, BRANDON",
+      "team": "FC Barcelona"
+    },
+    "P001392": {
+      "name": "CAUSEUR, FABIEN",
+      "team": "Real Madrid"
+    },
+    "P003478": {
+      "name": "ABRINES, ALEX",
+      "team": "FC Barcelona"
+    },
+    "P006546": {
+      "name": "TAYLOR, JEFFERY",
+      "team": "Real Madrid"
+    },
+    "P009005": {
+      "name": "DECK, GABRIEL",
+      "team": "Real Madrid"
+    },
+    "PBMT": {
+      "name": "FERNANDEZ, RUDY",
+      "team": "Real Madrid"
+    },
+    "P007519": {
+      "name": "JOKUBAITIS, ROKAS",
+      "team": "FC Barcelona"
+    },
+    "P005791": {
+      "name": "TAVARES, WALTER",
+      "team": "Real Madrid"
+    },
+    "P007109": {
+      "name": "SMITS, ROLANDS",
+      "team": "FC Barcelona"
+    },
+    "P003733": {
+      "name": "ABALDE, ALBERTO",
+      "team": "Real Madrid"
+    },
+    "P002968": {
+      "name": "SANLI, SERTAC",
+      "team": "FC Barcelona"
+    },
+    "P006450": {
+      "name": "HIGGINS, CORY",
+      "team": "FC Barcelona"
+    },
+    "P004887": {
+      "name": "POIRIER, VINCENT",
+      "team": "Real Madrid"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P007870",
+      "player_name": "DAVIES, BRANDON",
+      "team": "BAR",
+      "minutes": "23:02",
+      "points": 15,
+      "valuation": 12,
+      "plusminus": 2,
+      "assists": 2,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P011302",
+      "player_name": "EXUM, DANTE LIMAN",
+      "team": "BAR",
+      "minutes": "22:11",
+      "points": 7,
+      "valuation": 4,
+      "plusminus": 1,
+      "assists": 1,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P002968",
+      "player_name": "SANLI, SERTAC",
+      "team": "BAR",
+      "minutes": "11:49",
+      "points": 2,
+      "valuation": -1,
+      "plusminus": -5,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P007109",
+      "player_name": "SMITS, ROLANDS",
+      "team": "BAR",
+      "minutes": "04:19",
+      "points": 1,
+      "valuation": 1,
+      "plusminus": -2,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008962",
+      "player_name": "HAYES-DAVIS, NIGEL",
+      "team": "BAR",
+      "minutes": "08:21",
+      "points": 0,
+      "valuation": 3,
+      "plusminus": -6,
+      "assists": 0,
+      "rebounds": 3,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006435",
+      "player_name": "LAPROVITTOLA, NICOLAS",
+      "team": "BAR",
+      "minutes": "28:55",
+      "points": 17,
+      "valuation": 13,
+      "plusminus": 8,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P003478",
+      "player_name": "ABRINES, ALEX",
+      "team": "BAR",
+      "minutes": "16:41",
+      "points": 7,
+      "valuation": -1,
+      "plusminus": -4,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006450",
+      "player_name": "HIGGINS, CORY",
+      "team": "BAR",
+      "minutes": "11:29",
+      "points": 0,
+      "valuation": -1,
+      "plusminus": -15,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005789",
+      "player_name": "KURIC, KYLE",
+      "team": "BAR",
+      "minutes": "02:05",
+      "points": 0,
+      "valuation": -1,
+      "plusminus": 5,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007519",
+      "player_name": "JOKUBAITIS, ROKAS",
+      "team": "BAR",
+      "minutes": "10:01",
+      "points": 4,
+      "valuation": 6,
+      "plusminus": -16,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P000796",
+      "player_name": "MIROTIC, NIKOLA",
+      "team": "BAR",
+      "minutes": "32:10",
+      "points": 26,
+      "valuation": 39,
+      "plusminus": 5,
+      "assists": 5,
+      "rebounds": 12,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P001932",
+      "player_name": "CALATHES, NICK",
+      "team": "BAR",
+      "minutes": "28:57",
+      "points": 4,
+      "valuation": 14,
+      "plusminus": 12,
+      "assists": 9,
+      "rebounds": 3,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007982",
+      "player_name": "WILLIAMS-GOSS, NIGEL",
+      "team": "MAD",
+      "minutes": "00:52",
+      "points": 0,
+      "valuation": 1,
+      "plusminus": 1,
+      "assists": 1,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P001392",
+      "player_name": "CAUSEUR, FABIEN",
+      "team": "MAD",
+      "minutes": "28:07",
+      "points": 18,
+      "valuation": 18,
+      "plusminus": 7,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P005757",
+      "player_name": "RANDOLPH, ANTHONY",
+      "team": "MAD",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PBMT",
+      "player_name": "FERNANDEZ, RUDY",
+      "team": "MAD",
+      "minutes": "16:35",
+      "points": 3,
+      "valuation": -1,
+      "plusminus": 3,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003733",
+      "player_name": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "minutes": "12:44",
+      "points": 7,
+      "valuation": 4,
+      "plusminus": 9,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005099",
+      "player_name": "HANGA, ADAM",
+      "team": "MAD",
+      "minutes": "14:19",
+      "points": 4,
+      "valuation": 2,
+      "plusminus": 13,
+      "assists": 3,
+      "rebounds": 3,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P009005",
+      "player_name": "DECK, GABRIEL",
+      "team": "MAD",
+      "minutes": "25:23",
+      "points": 7,
+      "valuation": 12,
+      "plusminus": -6,
+      "assists": 1,
+      "rebounds": 7,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004887",
+      "player_name": "POIRIER, VINCENT",
+      "team": "MAD",
+      "minutes": "16:56",
+      "points": 6,
+      "valuation": 6,
+      "plusminus": 4,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P005791",
+      "player_name": "TAVARES, WALTER",
+      "team": "MAD",
+      "minutes": "18:45",
+      "points": 8,
+      "valuation": 14,
+      "plusminus": -4,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PTGB",
+      "player_name": "LLULL, SERGIO",
+      "team": "MAD",
+      "minutes": "29:10",
+      "points": 15,
+      "valuation": 14,
+      "plusminus": -6,
+      "assists": 3,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P010357",
+      "player_name": "YABUSELE, GUERSCHON",
+      "team": "MAD",
+      "minutes": "33:24",
+      "points": 18,
+      "valuation": 24,
+      "plusminus": 3,
+      "assists": 1,
+      "rebounds": 8,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006546",
+      "player_name": "TAYLOR, JEFFERY",
+      "team": "MAD",
+      "minutes": "03:45",
+      "points": 0,
+      "valuation": -3,
+      "plusminus": -9,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    }
+  ],
+  "colors": {
+    "FC Barcelona": "#d62839",
+    "Real Madrid": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "FC Barcelona": 85,
+        "Real Madrid": 86
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "FC Barcelona starts",
+          "85"
+        ],
+        [
+          "Real Madrid starts",
+          "86"
+        ],
+        [
+          "FC Barcelona points per poss.",
+          "0.98"
+        ],
+        [
+          "FC Barcelona Made 3 share",
+          "9%"
+        ],
+        [
+          "Real Madrid points per poss.",
+          "1.00"
+        ],
+        [
+          "Real Madrid Made 3 share",
+          "9%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "FC Barcelona generated 0.98 points per possession over 85 tracked possessions.",
+        "Real Madrid generated 1.00 points per possession over 86 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "FC_Barcelona_start",
+          "name": "FC Barcelona Start",
+          "team": "FC Barcelona",
+          "stage": "start"
+        },
+        {
+          "id": "FC_Barcelona_Half-court",
+          "name": "Half-court",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_After_OREB",
+          "name": "After OREB",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Turnover",
+          "name": "Turnover",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Missed_shot",
+          "name": "Missed shot",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Made_2",
+          "name": "Made 2",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Made_3",
+          "name": "Made 3",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC Barcelona_0",
+          "name": "0 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_1",
+          "name": "1 pt",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_2",
+          "name": "2 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_3",
+          "name": "3 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Start",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_Half-court",
+          "name": "Half-court",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_After_OREB",
+          "name": "After OREB",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Half-court",
+          "value": 51
+        },
+        {
+          "source": "FC_Barcelona_Half-court",
+          "target": "FC_Barcelona_Made_2",
+          "value": 10
+        },
+        {
+          "source": "FC_Barcelona_Made_2",
+          "target": "FC Barcelona_2",
+          "value": 22
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Half-court",
+          "value": 57
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 8
+        },
+        {
+          "source": "FC_Barcelona_Half-court",
+          "target": "FC_Barcelona_Missed_shot",
+          "value": 15
+        },
+        {
+          "source": "FC_Barcelona_Missed_shot",
+          "target": "FC Barcelona_0",
+          "value": 24
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Transition_Fast_break",
+          "value": 19
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 23
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Transition_Fast_break",
+          "value": 23
+        },
+        {
+          "source": "FC_Barcelona_Transition_Fast_break",
+          "target": "FC_Barcelona_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Made_3",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_Half-court",
+          "target": "FC_Barcelona_Turnover",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_Turnover",
+          "target": "FC Barcelona_0",
+          "value": 10
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 22
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "FC_Barcelona_Transition_Fast_break",
+          "target": "FC_Barcelona_Turnover",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_Transition_Fast_break",
+          "target": "FC_Barcelona_Made_2",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Made_2",
+          "value": 13
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_After_OREB",
+          "value": 11
+        },
+        {
+          "source": "FC_Barcelona_After_OREB",
+          "target": "FC_Barcelona_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_After_OREB",
+          "value": 10
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Made_2",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_After_OREB",
+          "target": "FC_Barcelona_Made_2",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_After_OREB",
+          "target": "FC_Barcelona_Made_3",
+          "value": 1
+        },
+        {
+          "source": "FC_Barcelona_Made_3",
+          "target": "FC Barcelona_3",
+          "value": 8
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_1",
+          "value": 18
+        },
+        {
+          "source": "FC_Barcelona_Half-court",
+          "target": "FC_Barcelona_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_1",
+          "value": 15
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_0",
+          "value": 4
+        },
+        {
+          "source": "FC_Barcelona_After_OREB",
+          "target": "FC_Barcelona_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_0",
+          "value": 6
+        },
+        {
+          "source": "FC_Barcelona_Half-court",
+          "target": "FC_Barcelona_Made_3",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Turnover",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 11
+        },
+        {
+          "source": "Real_Madrid_Half-court",
+          "target": "Real_Madrid_Turnover",
+          "value": 9
+        },
+        {
+          "source": "FC_Barcelona_Transition_Fast_break",
+          "target": "FC_Barcelona_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_Transition_Fast_break",
+          "target": "FC_Barcelona_Made_3",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_After_OREB",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_After_OREB",
+          "target": "FC_Barcelona_Turnover",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Transition_Fast_break",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "FC_Barcelona_start->FC_Barcelona_Half-court": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 10
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 10
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 5
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Half-court->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_2->FC Barcelona_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 7
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Half-court": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 12
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 11
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 8
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 7
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006546",
+            "player_name": "TAYLOR, JEFFERY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Made_3": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Half-court->FC_Barcelona_Missed_shot": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Missed_shot->FC Barcelona_0": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 5
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Transition_Fast_break": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006546",
+            "player_name": "TAYLOR, JEFFERY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_Transition_Fast_break": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Transition_Fast_break->FC_Barcelona_Missed_shot": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Made_3": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Half-court->FC_Barcelona_Turnover": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Turnover->FC Barcelona_0": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::FC Barcelona",
+            "player_name": "Unknown",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Made_2": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006546",
+            "player_name": "TAYLOR, JEFFERY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Transition_Fast_break->FC_Barcelona_Turnover": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Transition_Fast_break->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Made_2": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_After_OREB": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::FC Barcelona",
+            "player_name": "Unknown",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_OREB->FC_Barcelona_Missed_shot": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_After_OREB": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Made_2": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_OREB->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_OREB->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_3->FC Barcelona_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_1": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_Half-court->FC_Barcelona_Shooting_foul_FTs": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_1": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_0": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_After_OREB->FC_Barcelona_Shooting_foul_FTs": [
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_0": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Half-court->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Turnover": [
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Half-court->Real_Madrid_Turnover": [
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Transition_Fast_break->FC_Barcelona_Shooting_foul_FTs": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Transition_Fast_break->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_OREB->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_OREB->FC_Barcelona_Turnover": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::FC Barcelona",
+            "player_name": "Unknown",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Transition_Fast_break->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "FC Barcelona": 51,
+        "Real Madrid": 57
+      },
+      "title": "Zoomed Detail \u2014 Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "FC Barcelona count",
+          "51"
+        ],
+        [
+          "Real Madrid count",
+          "57"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "FC_Barcelona_start",
+          "name": "FC Barcelona Half-court",
+          "team": "FC Barcelona",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Half-court",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "FC_Barcelona_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Made_2",
+          "name": "Made 2",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Made_3",
+          "name": "Made 3",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Missed_shot",
+          "name": "Missed shot",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Turnover",
+          "name": "Turnover",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC Barcelona_0",
+          "name": "0 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_1",
+          "name": "1 pt",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_2",
+          "name": "2 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_3",
+          "name": "3 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "Real_Madrid_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_PnR_handler_action",
+          "value": 47
+        },
+        {
+          "source": "FC_Barcelona_PnR_handler_action",
+          "target": "FC_Barcelona_Made_2",
+          "value": 10
+        },
+        {
+          "source": "FC_Barcelona_Made_2",
+          "target": "FC Barcelona_2",
+          "value": 10
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Spot-up_swing",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Spot-up_swing",
+          "target": "Real_Madrid_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_PnR_handler_action",
+          "target": "FC_Barcelona_Missed_shot",
+          "value": 15
+        },
+        {
+          "source": "FC_Barcelona_Missed_shot",
+          "target": "FC Barcelona_0",
+          "value": 15
+        },
+        {
+          "source": "FC_Barcelona_PnR_handler_action",
+          "target": "FC_Barcelona_Turnover",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_Turnover",
+          "target": "FC Barcelona_0",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_PnR_handler_action",
+          "value": 52
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Made_2",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_1",
+          "value": 15
+        },
+        {
+          "source": "FC_Barcelona_PnR_handler_action",
+          "target": "FC_Barcelona_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_1",
+          "value": 13
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_0",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Spot-up_swing",
+          "value": 4
+        },
+        {
+          "source": "FC_Barcelona_Spot-up_swing",
+          "target": "FC_Barcelona_Made_3",
+          "value": 4
+        },
+        {
+          "source": "FC_Barcelona_Made_3",
+          "target": "FC Barcelona_3",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_PnR_handler_action",
+          "target": "Real_Madrid_Turnover",
+          "value": 9
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 9
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_0",
+          "value": 4
+        }
+      ],
+      "player_flows": {
+        "FC_Barcelona_start->FC_Barcelona_PnR_handler_action": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 9
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_PnR_handler_action->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_2->FC Barcelona_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Spot-up_swing": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Spot-up_swing->Real_Madrid_Made_3": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_PnR_handler_action->FC_Barcelona_Missed_shot": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Missed_shot->FC Barcelona_0": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006450",
+            "player_name": "HIGGINS, CORY",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_PnR_handler_action->FC_Barcelona_Turnover": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Turnover->FC Barcelona_0": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_PnR_handler_action": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 11
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 11
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 7
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006546",
+            "player_name": "TAYLOR, JEFFERY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006546",
+            "player_name": "TAYLOR, JEFFERY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P006546",
+            "player_name": "TAYLOR, JEFFERY",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Made_2": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 6
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_1": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_PnR_handler_action->FC_Barcelona_Shooting_foul_FTs": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_1": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_0": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_Spot-up_swing": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Spot-up_swing->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_3->FC Barcelona_3": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_PnR_handler_action->Real_Madrid_Turnover": [
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_0": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "FC Barcelona": 23,
+        "Real Madrid": 19
+      },
+      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "FC Barcelona count",
+          "23"
+        ],
+        [
+          "Real Madrid count",
+          "19"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "FC_Barcelona_start",
+          "name": "FC Barcelona Transition",
+          "team": "FC Barcelona",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Transition",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "FC_Barcelona_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Made_2",
+          "name": "Made 2",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Made_3",
+          "name": "Made 3",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Missed_shot",
+          "name": "Missed shot",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Turnover",
+          "name": "Turnover",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC Barcelona_0",
+          "name": "0 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_1",
+          "name": "1 pt",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_2",
+          "name": "2 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_3",
+          "name": "3 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "Real_Madrid_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_After_defensive_rebound",
+          "value": 19
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 7
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_After_defensive_rebound",
+          "value": 23
+        },
+        {
+          "source": "FC_Barcelona_After_defensive_rebound",
+          "target": "FC_Barcelona_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "FC_Barcelona_Missed_shot",
+          "target": "FC Barcelona_0",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Made_3",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_After_defensive_rebound",
+          "target": "FC_Barcelona_Turnover",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_Turnover",
+          "target": "FC Barcelona_0",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_After_defensive_rebound",
+          "target": "FC_Barcelona_Made_2",
+          "value": 7
+        },
+        {
+          "source": "FC_Barcelona_Made_2",
+          "target": "FC Barcelona_2",
+          "value": 7
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Turnover",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Turnover",
+          "target": "Real Madrid_0",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_After_defensive_rebound",
+          "target": "FC_Barcelona_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_1",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_After_defensive_rebound",
+          "target": "FC_Barcelona_Made_3",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_Made_3",
+          "target": "FC Barcelona_3",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_After_defensive_rebound",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_1",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_0",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Real_Madrid_start->Real_Madrid_After_defensive_rebound": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_After_defensive_rebound": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 8
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 6
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_defensive_rebound->FC_Barcelona_Missed_shot": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Missed_shot->FC Barcelona_0": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Made_3": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Made_2": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_defensive_rebound->FC_Barcelona_Turnover": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Turnover->FC Barcelona_0": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_defensive_rebound->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_2->FC Barcelona_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Turnover": [
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_Turnover->Real Madrid_0": [
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_After_defensive_rebound->FC_Barcelona_Shooting_foul_FTs": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_1": [
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_After_defensive_rebound->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_3->FC Barcelona_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_After_defensive_rebound->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_1": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_0": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "FC Barcelona": 11,
+        "Real Madrid": 10
+      },
+      "title": "Zoomed Detail \u2014 After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "FC Barcelona count",
+          "11"
+        ],
+        [
+          "Real Madrid count",
+          "10"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "FC_Barcelona_start",
+          "name": "FC Barcelona After OREB",
+          "team": "FC Barcelona",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid After OREB",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "FC_Barcelona_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Made_2",
+          "name": "Made 2",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Made_3",
+          "name": "Made 3",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Missed_shot",
+          "name": "Missed shot",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC_Barcelona_Turnover",
+          "name": "Turnover",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC Barcelona_0",
+          "name": "0 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_1",
+          "name": "1 pt",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_2",
+          "name": "2 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "FC Barcelona_3",
+          "name": "3 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "Real_Madrid_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Missed_shot",
+          "name": "Missed shot",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real_Madrid_Turnover",
+          "name": "Turnover",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_0",
+          "name": "0 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_1",
+          "name": "1 pt",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Reset_half-court",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_Reset_half-court",
+          "target": "FC_Barcelona_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_Missed_shot",
+          "target": "FC Barcelona_0",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Immediate_putback",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_Immediate_putback",
+          "target": "Real_Madrid_Made_2",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 4
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Reset_half-court",
+          "value": 6
+        },
+        {
+          "source": "Real_Madrid_Reset_half-court",
+          "target": "Real_Madrid_Missed_shot",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_Missed_shot",
+          "target": "Real Madrid_0",
+          "value": 3
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Immediate_putback",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_Immediate_putback",
+          "target": "FC_Barcelona_Made_2",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_Made_2",
+          "target": "FC Barcelona_2",
+          "value": 5
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Kick-out_perimeter",
+          "value": 1
+        },
+        {
+          "source": "FC_Barcelona_Kick-out_perimeter",
+          "target": "FC_Barcelona_Made_3",
+          "value": 1
+        },
+        {
+          "source": "FC_Barcelona_Made_3",
+          "target": "FC Barcelona_3",
+          "value": 1
+        },
+        {
+          "source": "FC_Barcelona_Reset_half-court",
+          "target": "FC_Barcelona_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "FC_Barcelona_Shooting_foul_FTs",
+          "target": "FC Barcelona_0",
+          "value": 1
+        },
+        {
+          "source": "Real_Madrid_Reset_half-court",
+          "target": "Real_Madrid_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_0",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_Reset_half-court",
+          "target": "FC_Barcelona_Turnover",
+          "value": 2
+        },
+        {
+          "source": "FC_Barcelona_Turnover",
+          "target": "FC Barcelona_0",
+          "value": 2
+        },
+        {
+          "source": "Real_Madrid_Shooting_foul_FTs",
+          "target": "Real Madrid_1",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "FC_Barcelona_start->FC_Barcelona_Reset_half-court": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::FC Barcelona",
+            "player_name": "Unknown",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Reset_half-court->FC_Barcelona_Missed_shot": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_Missed_shot->FC Barcelona_0": [
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 2
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Immediate_putback": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Immediate_putback->Real_Madrid_Made_2": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Reset_half-court": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Reset_half-court->Real_Madrid_Missed_shot": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Missed_shot->Real Madrid_0": [
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_Immediate_putback": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Immediate_putback->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_2->FC Barcelona_2": [
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_Kick-out_perimeter": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Kick-out_perimeter->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_3->FC Barcelona_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Reset_half-court->FC_Barcelona_Shooting_foul_FTs": [
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Shooting_foul_FTs->FC Barcelona_0": [
+          {
+            "player_id": "P007109",
+            "player_name": "SMITS, ROLANDS",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Reset_half-court->Real_Madrid_Shooting_foul_FTs": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_0": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          }
+        ],
+        "FC_Barcelona_Reset_half-court->FC_Barcelona_Turnover": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::FC Barcelona",
+            "player_name": "Unknown",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Turnover->FC Barcelona_0": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::FC Barcelona",
+            "player_name": "Unknown",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Shooting_foul_FTs->Real Madrid_1": [
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "FC Barcelona": 22,
+        "Real Madrid": 22
+      },
+      "title": "Zoomed Detail \u2014 Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "FC Barcelona count",
+          "22"
+        ],
+        [
+          "Real Madrid count",
+          "22"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "FC_Barcelona_start",
+          "name": "FC Barcelona Made 2",
+          "team": "FC Barcelona",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Made 2",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "FC_Barcelona_Layup_runner",
+          "name": "Layup / runner",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Made_2",
+          "name": "Made 2",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC Barcelona_2",
+          "name": "2 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "Real_Madrid_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_2",
+          "name": "Made 2",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_2",
+          "name": "2 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Layup_runner",
+          "value": 22
+        },
+        {
+          "source": "FC_Barcelona_Layup_runner",
+          "target": "FC_Barcelona_Made_2",
+          "value": 22
+        },
+        {
+          "source": "FC_Barcelona_Made_2",
+          "target": "FC Barcelona_2",
+          "value": 22
+        },
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Layup_runner",
+          "value": 22
+        },
+        {
+          "source": "Real_Madrid_Layup_runner",
+          "target": "Real_Madrid_Made_2",
+          "value": 22
+        },
+        {
+          "source": "Real_Madrid_Made_2",
+          "target": "Real Madrid_2",
+          "value": 22
+        }
+      ],
+      "player_flows": {
+        "FC_Barcelona_start->FC_Barcelona_Layup_runner": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 7
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Layup_runner->FC_Barcelona_Made_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 7
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_2->FC Barcelona_2": [
+          {
+            "player_id": "P007870",
+            "player_name": "DAVIES, BRANDON",
+            "team": "FC Barcelona",
+            "poss": 7
+          },
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P011302",
+            "player_name": "EXUM, DANTE LIMAN",
+            "team": "FC Barcelona",
+            "poss": 2
+          },
+          {
+            "player_id": "P007519",
+            "player_name": "JOKUBAITIS, ROKAS",
+            "team": "FC Barcelona",
+            "poss": 1
+          },
+          {
+            "player_id": "P002968",
+            "player_name": "SANLI, SERTAC",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_start->Real_Madrid_Layup_runner": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Layup_runner->Real_Madrid_Made_2": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_2->Real Madrid_2": [
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 5
+          },
+          {
+            "player_id": "P005791",
+            "player_name": "TAVARES, WALTER",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P004887",
+            "player_name": "POIRIER, VINCENT",
+            "team": "Real Madrid",
+            "poss": 3
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P009005",
+            "player_name": "DECK, GABRIEL",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 2
+          },
+          {
+            "player_id": "P005099",
+            "player_name": "HANGA, ADAM",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "FC Barcelona": 8,
+        "Real Madrid": 8
+      },
+      "title": "Zoomed Detail \u2014 Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "FC Barcelona count",
+          "8"
+        ],
+        [
+          "Real Madrid count",
+          "8"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "FC_Barcelona_start",
+          "name": "FC Barcelona Made 3",
+          "team": "FC Barcelona",
+          "stage": "start"
+        },
+        {
+          "id": "Real_Madrid_start",
+          "name": "Real Madrid Made 3",
+          "team": "Real Madrid",
+          "stage": "start"
+        },
+        {
+          "id": "FC_Barcelona_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "FC Barcelona",
+          "stage": "type"
+        },
+        {
+          "id": "FC_Barcelona_Made_3",
+          "name": "Made 3",
+          "team": "FC Barcelona",
+          "stage": "event"
+        },
+        {
+          "id": "FC Barcelona_3",
+          "name": "3 pts",
+          "team": "FC Barcelona",
+          "stage": "points"
+        },
+        {
+          "id": "Real_Madrid_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Real Madrid",
+          "stage": "type"
+        },
+        {
+          "id": "Real_Madrid_Made_3",
+          "name": "Made 3",
+          "team": "Real Madrid",
+          "stage": "event"
+        },
+        {
+          "id": "Real Madrid_3",
+          "name": "3 pts",
+          "team": "Real Madrid",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Real_Madrid_start",
+          "target": "Real_Madrid_Above-the-break_C&S",
+          "value": 8
+        },
+        {
+          "source": "Real_Madrid_Above-the-break_C&S",
+          "target": "Real_Madrid_Made_3",
+          "value": 8
+        },
+        {
+          "source": "Real_Madrid_Made_3",
+          "target": "Real Madrid_3",
+          "value": 8
+        },
+        {
+          "source": "FC_Barcelona_start",
+          "target": "FC_Barcelona_Above-the-break_C&S",
+          "value": 8
+        },
+        {
+          "source": "FC_Barcelona_Above-the-break_C&S",
+          "target": "FC_Barcelona_Made_3",
+          "value": 8
+        },
+        {
+          "source": "FC_Barcelona_Made_3",
+          "target": "FC Barcelona_3",
+          "value": 8
+        }
+      ],
+      "player_flows": {
+        "Real_Madrid_start->Real_Madrid_Above-the-break_C&S": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Above-the-break_C&S->Real_Madrid_Made_3": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "Real_Madrid_Made_3->Real Madrid_3": [
+          {
+            "player_id": "P010357",
+            "player_name": "YABUSELE, GUERSCHON",
+            "team": "Real Madrid",
+            "poss": 4
+          },
+          {
+            "player_id": "P003733",
+            "player_name": "ABALDE, ALBERTO",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "P001392",
+            "player_name": "CAUSEUR, FABIEN",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PBMT",
+            "player_name": "FERNANDEZ, RUDY",
+            "team": "Real Madrid",
+            "poss": 1
+          },
+          {
+            "player_id": "PTGB",
+            "player_name": "LLULL, SERGIO",
+            "team": "Real Madrid",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_start->FC_Barcelona_Above-the-break_C&S": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Above-the-break_C&S->FC_Barcelona_Made_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ],
+        "FC_Barcelona_Made_3->FC Barcelona_3": [
+          {
+            "player_id": "P000796",
+            "player_name": "MIROTIC, NIKOLA",
+            "team": "FC Barcelona",
+            "poss": 4
+          },
+          {
+            "player_id": "P006435",
+            "player_name": "LAPROVITTOLA, NICOLAS",
+            "team": "FC Barcelona",
+            "poss": 3
+          },
+          {
+            "player_id": "P003478",
+            "player_name": "ABRINES, ALEX",
+            "team": "FC Barcelona",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}

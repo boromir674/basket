@@ -432,55 +432,55 @@
       ],
       "nodes": [
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
           "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Start",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
           "name": "Half-court",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
           "name": "Transition / Fast break",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
           "name": "After OREB",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
@@ -590,17 +590,17 @@
       ],
       "links": [
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
           "value": 50
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 9
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 20
         },
@@ -620,17 +620,17 @@
           "value": 12
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
           "value": 24
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 5
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 17
         },
@@ -650,12 +650,12 @@
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 14
         },
@@ -680,8 +680,8 @@
           "value": 2
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 12
         },
         {
@@ -695,12 +695,12 @@
           "value": 20
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 10
         },
@@ -710,28 +710,28 @@
           "value": 15
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 14
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 3
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 15
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
           "value": 5
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 4
         },
         {
@@ -745,8 +745,8 @@
           "value": 9
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 5
         },
         {
@@ -775,18 +775,18 @@
           "value": 3
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 7
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 4
         },
         {
@@ -800,13 +800,13 @@
           "value": 1
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 1
         }
       ],
       "player_flows": {
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -868,7 +868,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -894,7 +894,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -1052,7 +1052,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break": [
           {
             "player_id": "PKIR",
             "player_name": "KAHUDI, CHARLES",
@@ -1096,7 +1096,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -1128,7 +1128,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1274,7 +1274,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1306,7 +1306,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1490,7 +1490,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1604,7 +1604,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1624,7 +1624,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1706,7 +1706,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1744,7 +1744,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1758,7 +1758,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -1802,7 +1802,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -1828,7 +1828,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -1918,7 +1918,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Half-court->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -2074,7 +2074,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -2100,7 +2100,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -2126,7 +2126,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Transition_Fast_break->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "PKIR",
             "player_name": "KAHUDI, CHARLES",
@@ -2174,7 +2174,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_OREB->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -2214,7 +2214,7 @@
       ],
       "nodes": [
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
           "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Half-court",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
@@ -2226,43 +2226,43 @@
           "stage": "start"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
           "name": "PnR / handler action",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
           "name": "Spot-up / swing",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
@@ -2360,17 +2360,17 @@
       ],
       "links": [
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
           "value": 45
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 9
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 9
         },
@@ -2390,22 +2390,22 @@
           "value": 8
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 12
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 12
         },
@@ -2420,17 +2420,17 @@
           "value": 15
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 14
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 3
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 11
         },
@@ -2445,17 +2445,17 @@
           "value": 7
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
           "value": 5
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 5
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 5
         },
@@ -2491,7 +2491,7 @@
         }
       ],
       "player_flows": {
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2553,7 +2553,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -2579,7 +2579,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -2719,7 +2719,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2751,7 +2751,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2783,7 +2783,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2821,7 +2821,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2935,7 +2935,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_PnR_handler_action->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2973,7 +2973,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -2987,7 +2987,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -3095,7 +3095,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -3127,7 +3127,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Spot-up_swing->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -3159,7 +3159,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -3373,7 +3373,7 @@
       ],
       "nodes": [
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
           "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Transition",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
@@ -3385,37 +3385,37 @@
           "stage": "start"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
           "name": "After defensive rebound",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "name": "Missed shot",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "name": "Turnover",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
@@ -3507,17 +3507,17 @@
       ],
       "links": [
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
           "value": 24
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "value": 5
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 5
         },
@@ -3557,12 +3557,12 @@
           "value": 7
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 4
         },
@@ -3577,32 +3577,32 @@
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 7
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 7
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1",
           "value": 4
         },
@@ -3623,7 +3623,7 @@
         }
       ],
       "player_flows": {
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound": [
           {
             "player_id": "PKIR",
             "player_name": "KAHUDI, CHARLES",
@@ -3667,7 +3667,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -3699,7 +3699,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Missed_shot->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -3973,7 +3973,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -3993,7 +3993,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -4065,7 +4065,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4091,7 +4091,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4117,7 +4117,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4143,7 +4143,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Turnover->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_0": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4169,7 +4169,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_After_defensive_rebound->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs": [
           {
             "player_id": "PKIR",
             "player_name": "KAHUDI, CHARLES",
@@ -4195,7 +4195,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_1": [
           {
             "player_id": "PKIR",
             "player_name": "KAHUDI, CHARLES",
@@ -4283,7 +4283,7 @@
       ],
       "nodes": [
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
           "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne After OREB",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
@@ -4295,37 +4295,37 @@
           "stage": "start"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
           "name": "Immediate putback",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
           "name": "Kick-out perimeter",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Reset_half-court",
           "name": "Reset half-court",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Shooting_foul_FTs",
           "name": "Shooting foul / FTs",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
@@ -4420,17 +4420,17 @@
           "value": 2
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 4
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 4
         },
@@ -4465,17 +4465,17 @@
           "value": 1
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
           "value": 1
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 1
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 1
         }
@@ -4523,7 +4523,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4543,7 +4543,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Immediate_putback->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4563,7 +4563,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P002980",
             "player_name": "GIST, JAMES",
@@ -4667,7 +4667,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -4675,7 +4675,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Kick-out_perimeter->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -4683,7 +4683,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P002534",
             "player_name": "HOWARD, WILLIAM",
@@ -4723,7 +4723,7 @@
       ],
       "nodes": [
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
           "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Made 2",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
@@ -4735,13 +4735,13 @@
           "stage": "start"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
           "name": "Layup / runner",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "name": "Made 2",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
@@ -4773,17 +4773,17 @@
       ],
       "links": [
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
           "value": 20
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "value": 20
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2",
           "value": 20
         },
@@ -4804,7 +4804,7 @@
         }
       ],
       "player_flows": {
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -4842,7 +4842,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Layup_runner->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -4880,7 +4880,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_2->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_2": [
           {
             "player_id": "P010568",
             "player_name": "JONES, CHRIS",
@@ -5100,7 +5100,7 @@
       ],
       "nodes": [
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
           "name": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne Made 3",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "start"
@@ -5112,13 +5112,13 @@
           "stage": "start"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
           "name": "Above-the-break C&S",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "type"
         },
         {
-          "id": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "id": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "name": "Made 3",
           "team": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne",
           "stage": "event"
@@ -5165,17 +5165,17 @@
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
-          "target": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S",
+          "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "value": 10
         },
         {
-          "source": "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
+          "source": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3",
           "target": "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3",
           "value": 10
         }
@@ -5259,7 +5259,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_start->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -5303,7 +5303,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S->LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Above-the-break_C&S->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
@@ -5347,7 +5347,7 @@
             "poss": 1
           }
         ],
-        "LDLC ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
+        "LDLC ASVEL Villeurbanne ASVEL Villeurbanne_ASVEL_Villeurbanne_Made_3->LDLC ASVEL Villeurbanne ASVEL Villeurbanne_3": [
           {
             "player_id": "P011212",
             "player_name": "OKOBO, ELIE",
