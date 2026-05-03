@@ -2,8 +2,9 @@
 
 help:
 	@echo "Targets:"
-	@echo "  make sync-season SEASON=E2025 START=1 END=200"
-	@echo "  make sync-seasons SEASONS='E2022 E2023 E2024' START=1 END=380"
+	@echo "  make sync-season-full SEASON=E2025"
+	@echo "  make sync-season SEASON=E2025"
+	@echo "  make sync-seasons SEASONS='E2022 E2023 E2024'"
 	@echo "  make normalize-season SEASON=E2025 NORMALIZE_WORKERS=8"
 	@echo "  make normalize-all-seasons NORMALIZE_WORKERS=8"
 	@echo "  make check-dates [SEASON=E2025] [DATA_DIR=/app/data]"
@@ -23,8 +24,6 @@ help:
 	@echo "  make test"
 
 SEASON ?= E2025
-START ?= 1
-END ?= 200
 DATA_DIR ?= /app/data
 CONCURRENCY ?= 8
 GAP_LIMIT ?= 10
@@ -34,8 +33,8 @@ PRESSURE ?= 1.0
 RETRY_PASS ?= 1
 LOG_LEVEL ?= INFO
 RAW_DIR ?= /app/assets
-SEASONS ?= E2021 E2022 E2023 E2024
-SEASONS_CSV ?= E2021,E2022,E2023,E2024
+SEASONS ?= E2017 E2018 E2019 E2020 E2021 E2022 E2023 E2024
+SEASONS_CSV ?= E2017,E2018,E2019,E2020,E2021,E2022,E2023,E2024
 PORT ?= 8080
 
 dev:
@@ -62,14 +61,17 @@ install-hooks:
 redo-season:
 	docker-compose run --rm --build ops redo_season --seasoncode $(SEASON) --data-dir $(DATA_DIR) --raw-dir $(RAW_DIR) --concurrency $(CONCURRENCY) --gap-limit $(GAP_LIMIT) --max-gamecode $(MAX_GAMECODE)
 
+sync-season-full:
+	docker-compose run --rm --build ops sync_season_full --seasoncode $(SEASON) --output-dir $(DATA_DIR)
+
 sync-season:
-	docker-compose run --rm ops sync_season --seasoncode $(SEASON) --start-gamecode $(START) --end-gamecode $(END) --output-dir $(DATA_DIR) --concurrency $(CONCURRENCY) --pressure $(PRESSURE) --log-level $(LOG_LEVEL) $(if $(filter $(RETRY_PASS),1 true TRUE yes YES),--retry-pass,)
+	docker-compose run --rm --build ops sync_season --seasoncode $(SEASON) --output-dir $(DATA_DIR) --concurrency $(CONCURRENCY) --pressure $(PRESSURE) --log-level $(LOG_LEVEL) $(if $(filter $(RETRY_PASS),1 true TRUE yes YES),--retry-pass,)
 
 sync-seasons:
 	@set -e; \
 	for s in $(SEASONS); do \
-	  echo "=== sync $$s ($(START)-$(END)) ==="; \
-	  $(MAKE) sync-season SEASON=$$s START=$(START) END=$(END) DATA_DIR=$(DATA_DIR) CONCURRENCY=$(CONCURRENCY) PRESSURE=$(PRESSURE) RETRY_PASS=$(RETRY_PASS) LOG_LEVEL=$(LOG_LEVEL); \
+	  echo "=== sync $$s (scan mode: tail stop at 5 misses) ==="; \
+	  $(MAKE) sync-season SEASON=$$s DATA_DIR=$(DATA_DIR) CONCURRENCY=$(CONCURRENCY) PRESSURE=$(PRESSURE) RETRY_PASS=$(RETRY_PASS) LOG_LEVEL=$(LOG_LEVEL); \
 	done
 
 normalize-season:
@@ -104,3 +106,13 @@ prepare-season:
 
 test:
 	docker-compose run --rm --build tests $(ARGS)
+
+
+# headless cypress tests
+e2e:
+	./scripts/e2e.sh
+
+
+# run Cypress with GUI (for debugging)
+e2e-gui:
+	./e2e/run-cypress-gui.sh
