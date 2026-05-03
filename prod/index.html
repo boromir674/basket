@@ -1,255 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MVP Unified Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elo Showcase</title>
+  <script>
+    document.documentElement.classList.add('preload');
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove('preload');
+        document.documentElement.classList.add('ready');
+      });
+    }, { once: true });
+  </script>
   <style>
-    :root {
-      --text:#edf3ff;
-      --muted:#9ab0d4;
-      --line:#2b4268;
-      --bg:#081425;
-      --panel:#0d1e38;
-      --anchor:#3a86ff;
-      --opp:#ff5a7a;
+    :root{
+      --bg:#0b0f16;
+      --panel:#101826;
+      --panel2:#0f1624;
+      --text:#e8f0ff;
+      --muted:#97a6bf;
+      --border:#24344a;
+      --accent:#62b6ff;
+      --ok:#64d2a5;
+      --warn:#ffb15a;
     }
-    * { box-sizing:border-box; }
-    body {
+    html,body{height:100%;}
+    html.preload body{visibility:hidden; opacity:0;}
+    html.ready body{visibility:visible; opacity:1;}
+    body{
       margin:0;
-      font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:var(--bg);
       color:var(--text);
-      background:linear-gradient(180deg,#0e203b,var(--bg));
+      transition:opacity .12s ease-out;
     }
-    .wrap { max-width:1500px; margin:0 auto; padding:16px; }
-    .top {
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      justify-content:space-between;
-      margin-bottom:10px;
-      flex-wrap:wrap;
-    }
-    .title { font-size:21px; font-weight:700; }
-    .muted { color:var(--muted); font-size:12px; }
-    .btn {
-      text-decoration:none;
-      border:1px solid var(--line);
-      background:#1a355e;
-      color:var(--text);
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    .wrap{max-width:1416px; margin:0 auto; padding:16px;}
+    .top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:12px;}
+    .title{font-size:18px; font-weight:700; letter-spacing:.2px;}
+    .titleRow{display:flex; align-items:center; gap:8px; position:relative;}
+    .eloHelpBtn{
+      width:20px;
+      height:20px;
       border-radius:999px;
-      padding:7px 11px;
+      border:1px solid var(--border);
+      background:var(--panel2);
+      color:var(--accent);
       font-size:12px;
-    }
-     /* Keep the viewer from shrinking by giving it a minimum width. The
-       left context/sidebar remains 360px; the viewer will not go below
-       560px which preserves Sankey rendering on narrow viewports while
-       reducing horizontal overflow. */
-     .layout { display:grid; grid-template-columns: 360px minmax(560px,1fr); gap:12px; }
-    .card { background:rgba(10,21,39,.94); border:1px solid var(--line); border-radius:14px; padding:11px; }
-    .row { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:8px; }
-    .row.split { justify-content:space-between; align-items:center; }
-    button {
-      border:1px solid var(--line);
-      background:#19345c;
-      color:var(--text);
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:12px;
+      font-weight:700;
       cursor:pointer;
-    }
-    button.active { border-color:#62b6ff; background:#25508a; }
-    .toggle-row { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin:0 0 8px; }
-    .toggle-row input { accent-color: var(--anchor); }
-    .toggle-row.swipe { display:none; margin-top:4px; padding:7px 8px; border:1px solid #355783; border-radius:10px; background:rgba(15,33,63,.72); }
-    .swipe-hint { margin-left:auto; font-size:11px; color:#b7cdf1; text-align:right; }
-    .label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
-    select, input[type="search"] {
-      width:100%;
-      border:1px solid #355783;
-      border-radius:10px;
-      padding:8px;
-      background:#0f213f;
-      color:var(--text);
-      margin-bottom:8px;
-    }
-    .hidden { display:none; }
-    .games { max-height:70vh; overflow:auto; }
-    .game-row {
-      border:1px solid transparent;
-      border-radius:10px;
-      padding:8px;
-      margin-bottom:6px;
-      cursor:pointer;
-    }
-    .game-row:hover { border-color:#406393; background:rgba(18,33,57,.75); }
-    .game-row.active { border-color:#62b6ff; background:rgba(38,80,138,.4); }
-    .g-title { font-size:13px; font-weight:600; }
-    .g-meta { font-size:12px; color:var(--muted); }
-    .pill { display:inline-block; border:1px solid #3f608f; border-radius:999px; padding:2px 8px; font-size:11px; color:#b7cdf1; margin-top:5px; }
-    .elo-badge { display:inline-block; background:#1e3a5f; border:1px solid #3a6fa8; border-radius:4px; padding:0 4px; font-size:10px; color:#62b6ff; margin-left:3px; vertical-align:middle; }
-    .viewer-context {
-      margin-bottom:8px;
-      border:1px solid var(--line);
-      background:rgba(11,22,40,.84);
-      border-radius:10px;
-      padding:8px 10px;
-      min-height:58px;
-    }
-    .vh-top { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
-    .team-chip {
       display:inline-flex;
       align-items:center;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:3px 9px;
-      font-size:12px;
-      transition:opacity .24s ease, transform .24s ease;
+      justify-content:center;
+      padding:0;
+      line-height:1;
     }
-    .team-chip.anchor { border-color:var(--anchor); color:#d7e9ff; }
-    .team-chip.opp { border-color:var(--opp); color:#ffd9e3; }
-    .vh-game {
-      margin-top:4px;
-      font-size:12px;
-      color:var(--muted);
-      transition:opacity .24s ease, transform .24s ease;
+    .eloHelpBtn:hover{filter:brightness(1.08);}
+    .eloHelpPopover{
+      position:absolute;
+      top:28px;
+      left:0;
+      width:min(360px, 92vw);
+      display:none;
+      z-index:20;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:0 10px 32px rgba(0,0,0,.35);
+      padding:12px;
     }
-    .fade-step { opacity:0; transform:translateY(-4px); }
-    .swipe-nav-buttons { display:none; margin-top:8px; gap:8px; }
-    .swipe-nav-buttons button { flex:1; }
-    .cone-wrap {
-      margin-top:10px;
-      border:1px solid var(--line);
-      border-radius:10px;
-      background:rgba(11,22,40,.84);
-      overflow:hidden;
-    }
-    .cone-head {
-      display:flex;
+    .eloHelpPopover .helpTitle{font-size:13px; font-weight:700; margin-bottom:8px;}
+    .eloHelpPopover .helpLine{font-size:12px; color:var(--muted); line-height:1.4; margin:0 0 6px;}
+    .eloHelpPopover .helpLine:last-child{margin-bottom:0;}
+    .muted{color:var(--muted); font-size:12px;}
+
+    .btn{
+      display:inline-flex;
       align-items:center;
-      justify-content:space-between;
-      gap:10px;
+      justify-content:center;
+      gap:6px;
       padding:8px 10px;
-      border-bottom:1px solid var(--line);
-    }
-    .cone-title { font-size:12px; font-weight:700; letter-spacing:.04em; }
-    .cone-sub { font-size:11px; color:var(--muted); }
-    .cone-frame {
-      width:100%;
-      height:440px;
-      border:0;
-      background:#081425;
-      display:block;
-    }
-    .iframe-wrap { position:relative; }
-    /* Keep iframe at a minimum width so the Sankey does not shrink; ensure
-       it renders above other page chrome so in-iframe tooltips are visible. */
-    iframe {
-      min-width:560px;
-      width:100%;
-      height:80vh;
-      border:0;
       border-radius:10px;
-      background:#04080f;
-      opacity:1;
-      transition:opacity .25s ease;
-      position:relative;
-      z-index:9999;
+      border:1px solid var(--border);
+      background:var(--panel2);
+      color:var(--text);
+      font-size:12px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{filter:brightness(1.08);}
+    .btn.primary{border-color:#3a6fa8; background:#0f1e33;}
+
+    .layout{display:grid; grid-template-columns: 420px minmax(672px, 1fr); gap:12px;}
+    .card{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:12px;}
+    .label{font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.8px;}
+
+    .row{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+    .seasonFilters{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;}
+    .seasonBtn{
+      border:1px solid var(--border);
+      background:var(--panel2);
+      color:var(--text);
+      border-radius:999px;
+      font-size:12px;
+      padding:6px 10px;
+      cursor:pointer;
+    }
+    .seasonBtn.active{border-color:#3a6fa8; background:#0f1e33;}
+    .warn{color:var(--warn); font-size:12px; margin-top:6px; min-height:15px;}
+
+    .simControls{margin-top:10px; border-top:1px solid var(--border); padding-top:10px;}
+    .simGrid{display:grid; grid-template-columns:1fr; gap:8px;}
+    .simToggle{display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px;}
+    .simToggle input{width:auto; margin:0;}
+    .seedRow{display:flex; gap:8px; align-items:center;}
+    .seedRow input{flex:1;}
+    .seedHelp{font-size:11px; color:var(--muted);}
+    .seedText{width:100%; min-height:72px; background:var(--panel2); border:1px solid var(--border); color:var(--text); border-radius:10px; padding:8px; font-size:12px;}
+    select, input[type="range"]{
+      width:100%;
+      background:var(--panel2);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:8px;
+      border-radius:10px;
+      font-size:12px;
+      outline:none;
     }
 
-    /* Lower z-index for surrounding page chrome so iframe popups are shown */
-    .panel, .card { position:relative; z-index:1; }
+    .subhead{display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:8px;}
+    .pill{display:inline-block; border:1px solid #3f608f; border-radius:999px; padding:2px 8px; font-size:11px; color:#b7cdf1;}
 
-    /* Hide legacy/spike home which is no longer relevant for the MVP */
-    a.btn[href="../index.html"] { display:none !important; }
-    iframe.loading { opacity:.15; }
+    .table{margin-top:10px; border-top:1px solid var(--border);}
+    .tr{display:grid; grid-template-columns: 42px 1fr 96px; gap:10px; padding:8px 0; border-bottom:1px solid rgba(36,52,74,.6);} 
+    .th{color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.7px;}
+    .rank{color:var(--muted); font-variant-numeric: tabular-nums;}
+    .elo{font-variant-numeric: tabular-nums; text-align:right;}
+    .tr.selected{background:rgba(98,182,255,.06); border-radius:10px; padding-left:8px; padding-right:8px;}
+    .tr.active{background:rgba(98,182,255,.12); border-radius:10px; padding-left:8px; padding-right:8px;}
 
-    /* On narrow viewports, keep Sankey first-class: viewer on top and taller. */
-    @media (max-width: 1060px) and (pointer: coarse) {
-      .layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .layout > .card:first-child {
-        order: 2;
-      }
-      .layout > .card:last-child {
-        order: 1;
-      }
-      .wrap {
-        padding: 10px;
-      }
-      .viewer-context {
-        display:none;
-      }
-      .cone-wrap { display:none; }
-      iframe {
-        min-width: 0;
-        height: 84vh;
-        min-height: 560px;
-      }
-      .games {
-        max-height: 44vh;
-      }
-      .toggle-row.swipe { display:flex; }
-      .swipe-nav-buttons { display:flex; }
-      body.swipe-nav-enabled .top { display:none; }
-      .toggle-row.swipe { display:none; }
-      body.swipe-nav-enabled .layout > .card:first-child {
-        background:transparent;
-        border:0;
-        padding:0;
-        min-height:0;
-      }
-      body.swipe-nav-enabled .layout > .card:first-child > :not(.toggle-row.swipe):not(.swipe-nav-buttons) {
-        display:none !important;
-      }
-      body.swipe-nav-enabled .toggle-row.swipe {
-        position:fixed;
-        top:8px;
-        left:8px;
-        right:8px;
-        z-index:10040;
-        margin:0;
-      }
-      body.swipe-nav-enabled .swipe-nav-buttons {
-        position:fixed;
-        left:8px;
-        right:8px;
-        bottom:10px;
-        z-index:10040;
-        margin:0;
-      }
-      body.swipe-nav-enabled iframe {
-        height: 92vh;
-        min-height: 620px;
-      }
+    .chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:5px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--panel2);
+      font-size:12px;
+    }
+    .chip .sw{width:44px; height:14px; display:inline-block;}
+    .chip .x{border:0; background:transparent; color:var(--muted); cursor:pointer; font-size:12px; padding:0; line-height:1;}
+    .chip .x:hover{color:var(--text);}
+
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+
+    .tr{outline:none;}
+    .tr:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:10px;}
+    .chip{outline:none;}
+    .chip:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+    .chartWrap{border:1px solid var(--border); border-radius:12px; background:var(--panel2); padding:10px; position:relative;}
+    .chartMeta{display:flex; justify-content:space-between; gap:10px; margin:8px 0 0;}
+    .chartMeta .muted{font-size:11px;}
+
+    .chartTooltip{
+      position:absolute;
+      display:none;
+      z-index:5;
+      pointer-events:none;
+      max-width:280px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:8px 10px;
+      color:var(--text);
+      font-size:12px;
+      line-height:1.25;
+      white-space:pre;
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
     }
 
-    @media (max-width: 640px) and (pointer: coarse) {
-      .top {
-        margin-bottom: 6px;
-      }
-      .title {
-        font-size: 16px;
-      }
-      .top .muted { display:none; }
-      .btn {
-        font-size: 10px;
-        padding: 5px 8px;
-      }
-      .card { padding: 8px; }
-      .viewer-context {
-        min-height: 42px;
-        padding: 5px 7px;
-      }
-      #gameHomeAway { display:none; }
-      iframe {
-        height: 90vh;
-        min-height: 560px;
-      }
-      .games {
-        max-height: 26vh;
-      }
+    .err{color:#ff7d7d; font-size:12px; white-space:pre-wrap;}
+
+    @media (max-width: 980px){
+      .wrap{padding:10px;}
+      .layout{grid-template-columns: 1fr;}
+      .layout > .card:nth-child(2){order:1;}
+      .layout > .card:nth-child(1){order:2;}
+      .chartWrap{padding:8px;}
+      .tr{padding:10px 0;}
+      .btn{min-height:36px;}
     }
   </style>
 </head>
@@ -257,607 +202,2009 @@
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="title">Game Discovery + Flow Analysis</div>
-      <div class="muted">Search games, filter quickly, then inspect Sankey flow modes with optional anchor perspective.</div>
+      <div class="titleRow">
+        <div class="title">Elo Showcase</div>
+        <button class="eloHelpBtn" id="eloHelpToggle" aria-label="What is Elo?" title="What is Elo?">?</button>
+        <div class="eloHelpPopover" id="eloHelpPopover" role="dialog" aria-label="Elo help">
+          <div class="helpTitle">What is Elo?</div>
+          <p class="helpLine">Elo is a strength rating that updates after each game based on result and opponent strength.</p>
+          <p class="helpLine">Higher Elo means stronger recent performance relative to league peers.</p>
+          <p class="helpLine">Use trend and deltas to spot momentum, overperformance, or decline.</p>
+          <p class="helpLine">Formula: E_new = E_old + K * (S - E_expected), where E_expected = 1 / (1 + 10^((opp - E_old)/400)).</p>
+          <p class="helpLine">Here S is actual outcome (1 win, 0.5 draw, 0 loss), K is rating sensitivity.</p>
+        </div>
+      </div>
+      <div class="muted">Rank teams by Elo (as-of a fixture tick) + replay season progression.</div>
     </div>
-    <div style="display:flex; gap:8px;">
-      <a class="btn" href="./index.html">MVP Home</a>
-      <!-- Show by default latest 5 Seasons -->
-      <!-- <a class="btn" href="./elo.html?seasoncodes=E2021,E2022,E2023,E2024,E2025">Elo Showcase</a> -->
-      <!-- Show by default All Seasons -->
-      <a class="btn" href="./elo.html">Elo Showcase</a>
-      <a class="btn" href="./style-insights.html">Style Insights</a>
-      <a class="btn" href="../index.html">Spike Home</a>
+    <div class="row" style="justify-content:flex-end;">
+      <a class="btn" href="./mvp-home.html">Open MVP Home</a>
     </div>
   </div>
 
   <div class="layout">
     <div class="card">
-      <div class="label" style="margin-bottom:4px;">Modes</div>
-      <div class="row" id="modeRow">
-        <button class="mode-btn active" data-mode="core">Core</button>
-        <button class="mode-btn" data-mode="replay">Live Replay</button>
+      <div class="subhead">
+        <div>
+          <div class="label">Season Range</div>
+          <div style="font-size:13px; font-weight:650;" id="seasonLabel">—</div>
+          <div id="seasonFilters" class="seasonFilters"></div>
+          <div id="seasonWarn" class="warn"></div>
+        </div>
+        <div class="pill" id="asOfPill">As of —</div>
       </div>
-      <label class="toggle-row">
-        <input id="show-type-nodes" type="checkbox" />
-        <span>Show possession type nodes</span>
-      </label>
-      <label class="toggle-row swipe">
-        <input id="swipe-nav-toggle" type="checkbox" />
-        <span>Mobile swipe game switch</span>
-        <span class="swipe-hint" id="swipe-nav-hint">Off</span>
-      </label>
 
-      <div class="row split" style="margin-top:6px;">
-        <div class="label" style="margin:0;">Game Scope</div>
-        <div class="row" style="margin:0;">
-          <button id="scope-all" class="active">All Games</button>
-          <button id="scope-anchor">Anchor Team</button>
+      <div style="margin-top:10px;">
+        <div class="label">Team</div>
+        <select id="teamSelect"></select>
+        <div class="row" style="margin-top:8px; justify-content:space-between;">
+          <div class="muted" id="compareTip">Tip: Ctrl/Cmd+click teams in the rank list to compare.</div>
+          <div class="row" style="justify-content:flex-end;">
+            <button class="btn" id="compareModeBtn" style="min-width:132px;">Tap compare: Off</button>
+            <button class="btn" id="clearBtn" style="min-width:120px;">Clear compare</button>
+          </div>
         </div>
       </div>
 
-      <div id="anchorBlock" class="hidden" style="margin-top:8px;">
-        <div class="label">Anchor Team (forced as Team A / top lane)</div>
-        <select id="teamSelect"></select>
-        <div class="muted">Anchor color remains fixed across game switches.</div>
+      <div style="margin-top:10px;">
+        <div class="label">Replay</div>
+        <div class="row" style="margin-top:6px;">
+          <button class="btn primary" id="playBtn" style="min-width:90px;">Play</button>
+          <button class="btn" id="endBtn" style="min-width:90px;">Now</button>
+          <div class="muted" id="tickLabel" style="flex:1; text-align:right;">—</div>
+        </div>
+        <div style="margin-top:8px;">
+          <input id="tickRange" type="range" min="0" max="0" step="1" value="0" />
+        </div>
+        <div class="muted" style="margin-top:6px;">Tip: “Now” jumps to the latest fixture (most current Elo).</div>
       </div>
 
-      <div class="label" style="margin:10px 0 4px;">Game Search</div>
-      <div class="row" style="margin-bottom:6px;">
-        <select id="seasonFilter" style="margin-bottom:0;"><option value="all">All seasons</option></select>
-        <select id="teamFilter" style="margin-bottom:0;"><option value="all">All teams</option></select>
+      <div class="simControls">
+        <div class="label">Elo Simulation Controls</div>
+        <div class="simGrid">
+          <label class="simToggle" for="preserveBaselineToggle">
+            <input id="preserveBaselineToggle" type="checkbox" checked />
+            Preserve historical baseline when trimming oldest season
+          </label>
+          <div class="seedRow">
+            <input id="globalSeedInput" type="number" step="1" placeholder="Global starting Elo (default from payload/config)" />
+            <button class="btn" id="applySeedsBtn" type="button">Apply</button>
+          </div>
+          <textarea id="teamSeedOverrides" class="seedText" placeholder="Per-team starting Elo overrides (one per line):&#10;Olympiacos Piraeus=1624&#10;Valencia Basket=1492"></textarea>
+          <div class="seedHelp">Overrides apply before Elo replay recomputation. Use '=' or ':' as separator.</div>
+        </div>
       </div>
-      <input id="searchFilter" type="search" placeholder="Search by team, season, game code, or date" />
-      <div class="muted" id="resultCount" style="margin-bottom:6px;">Filtering games...</div>
 
-      <div class="games" id="games" style="margin-top:10px;">Loading games...</div>
-      <div class="swipe-nav-buttons" id="swipe-nav-buttons">
-        <button id="prev-game" type="button">Prev game</button>
-        <button id="next-game" type="button">Next game</button>
+      <div class="table" id="rankTable">
+        <div class="tr th">
+          <div>#</div>
+          <div>Team</div>
+          <div style="text-align:right;">Elo</div>
+        </div>
       </div>
+      <div class="err" id="err" style="display:none; margin-top:8px;"></div>
     </div>
 
     <div class="card">
-      <div class="iframe-wrap">
-        <iframe id="viewer" src="./game-flow-viewer.html" title="Sankey Viewer"></iframe>
+      <div class="label">Selected Team Elo (Selected Seasons)</div>
+      <div style="font-size:14px; font-weight:700; margin-top:4px;" id="teamTitle">—</div>
+      <div class="muted" id="teamSubtitle" style="margin-top:2px;">—</div>
+
+      <div class="chips" id="compareChips"></div>
+      <div id="srStatus" class="sr-only" aria-live="polite"></div>
+
+      <div class="chartWrap" style="margin-top:10px;">
+        <svg id="chart" width="100%" height="461" viewBox="0 0 900 461" preserveAspectRatio="none"></svg>
+        <div id="chartTooltip" class="chartTooltip" role="status" aria-live="polite"></div>
       </div>
-      <div class="viewer-context">
-        <div class="vh-top" id="headChips" style="display:none;">
-          <span class="team-chip anchor" id="chipAnchor">Anchor: --</span>
-          <span class="team-chip opp" id="chipOpp">Opponent: --</span>
-        </div>
-        <div class="vh-game" id="gameMeta">Select a game.</div>
-        <div class="vh-game" id="gameHomeAway">Home -- · Away --</div>
-      </div>
-      <div class="cone-wrap">
-        <div class="cone-head">
-          <div class="cone-title">Score Diff Cone</div>
-          <div class="cone-sub" id="coneMeta">Loads per selected game</div>
-        </div>
-        <iframe id="coneFrame" class="cone-frame" src="about:blank" title="Per-game score diff cone"></iframe>
+      <div class="chartMeta">
+        <div class="muted" id="yRange">—</div>
+        <div class="muted" id="xRange">—</div>
       </div>
     </div>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+
 <script src="./runtime-config.js"></script>
 <script>
 (function(){
   const qs = new URLSearchParams(window.location.search);
+
+  const seasonLabelEl = document.getElementById('seasonLabel');
+  const seasonFiltersEl = document.getElementById('seasonFilters');
+  const seasonWarnEl = document.getElementById('seasonWarn');
+
+  const asOfPillEl = document.getElementById('asOfPill');
+  const teamSelect = document.getElementById('teamSelect');
+  const rankTable = document.getElementById('rankTable');
+  const playBtn = document.getElementById('playBtn');
+  const endBtn = document.getElementById('endBtn');
+  const tickRange = document.getElementById('tickRange');
+  const tickLabel = document.getElementById('tickLabel');
+  const teamTitle = document.getElementById('teamTitle');
+  const teamSubtitle = document.getElementById('teamSubtitle');
+  const chartSvg = document.getElementById('chart');
+  const yRangeEl = document.getElementById('yRange');
+  const xRangeEl = document.getElementById('xRange');
+  const errEl = document.getElementById('err');
+  const clearBtn = document.getElementById('clearBtn');
+  const compareModeBtn = document.getElementById('compareModeBtn');
+  const compareChips = document.getElementById('compareChips');
+  const srStatus = document.getElementById('srStatus');
+  const eloHelpToggle = document.getElementById('eloHelpToggle');
+  const eloHelpPopover = document.getElementById('eloHelpPopover');
+  const preserveBaselineToggle = document.getElementById('preserveBaselineToggle');
+  const globalSeedInput = document.getElementById('globalSeedInput');
+  const teamSeedOverridesEl = document.getElementById('teamSeedOverrides');
+  const applySeedsBtn = document.getElementById('applySeedsBtn');
+
+  const chartTooltip = document.getElementById('chartTooltip');
+
+  const compareTipEl = document.getElementById('compareTip');
   const runtimeConfig = window.BasketRuntimeConfig;
-  if(!runtimeConfig) throw new Error("Missing runtime config. Ensure runtime-config.js is loaded.");
-  const processedBase = runtimeConfig.relBaseForSubdir(runtimeConfig.processedSubdir);
-  const manifestFile = runtimeConfig.manifestFile || "games_manifest.json";
-  const gamesEl = document.getElementById("games");
-  const viewer = document.getElementById("viewer");
-  const modeBtns = Array.from(document.querySelectorAll(".mode-btn"));
-  const showTypeNodesEl = document.getElementById("show-type-nodes");
-  const scopeAllBtn = document.getElementById("scope-all");
-  const scopeAnchorBtn = document.getElementById("scope-anchor");
-  const anchorBlock = document.getElementById("anchorBlock");
-  const teamSelect = document.getElementById("teamSelect");
-  const seasonFilterEl = document.getElementById("seasonFilter");
-  const teamFilterEl = document.getElementById("teamFilter");
-  const searchFilterEl = document.getElementById("searchFilter");
-  const resultCountEl = document.getElementById("resultCount");
-  const swipeNavToggleEl = document.getElementById("swipe-nav-toggle");
-  const swipeNavHintEl = document.getElementById("swipe-nav-hint");
-  const prevGameBtn = document.getElementById("prev-game");
-  const nextGameBtn = document.getElementById("next-game");
-  const headChips = document.getElementById("headChips");
-  const chipAnchor = document.getElementById("chipAnchor");
-  const chipOpp = document.getElementById("chipOpp");
-  const gameMeta = document.getElementById("gameMeta");
-  const gameHomeAway = document.getElementById("gameHomeAway");
-  const coneFrame = document.getElementById("coneFrame");
-  const coneMeta = document.getElementById("coneMeta");
+  const ELO_PAGE_STORAGE_KEY = 'elo_page';
+  const SEASON_WINNERS = Object.freeze({
+    E2015: 'CSKA Moscow',
+    E2016: 'Fenerbahce Istanbul',
+    E2017: 'Real Madrid',
+    E2018: 'CSKA Moscow',
+    E2019: 'Season cancelled',
+    E2020: 'Anadolu Efes Istanbul',
+    E2021: 'Anadolu Efes Istanbul',
+    E2022: 'Real Madrid',
+    E2023: 'Panathinaikos Athens',
+    E2024: 'Fenerbahce Beko Istanbul',
+  });
+  const TEAM_ALIASES = Object.freeze({
+    'ALBA Berlin': 'ALBA',
+    'Anadolu Efes Istanbul': 'Efes',
+    'AS Monaco': 'Monaco',
+    'Baskonia Vitoria-Gasteiz': 'Baskonia',
+    'Brose Bamberg': 'Bamberg',
+    'Buducnost VOLI Podgorica': 'Buducnost',
+    'CSKA Moscow': 'CSKA',
+    'Crvena Zvezda Belgrade': 'Crvena Zvezda',
+    'Darussafaka Tekfen Istanbul': 'Darussafaka',
+    'Dubai Basketball': 'Dubai',
+    'EA7 Emporio Armani Milan': 'Olimpia Milano',
+    'FB Dogus': 'FB Dogus',
+    'FC Barcelona': 'Barcelona',
+    'FC Bayern Munich': 'Bayern',
+    'Fenerbahce Beko Istanbul': 'Fenerbahce',
+    'Fenerbahce Istanbul': 'Fenerbahce',
+    'Galatsaray Odeabank Istanbul': 'Galatasaray',
+    'Hapoel IBI Tel Aviv': 'Hapoel',
+    'Herbalife Gran Canaria': 'Gran Canaria',
+    'Khimki Moscow Region': 'Khimki',
+    'LDLC ASVEL Villeurbanne': 'ASVEL',
+    'Maccabi Tel Aviv': 'Maccabi',
+    'Olympiacos Piraeus': 'Olympiacos',
+    'Panathinaikos Athens': 'Panathinaikos',
+    'Paris Basketball': 'Paris',
+    'Partizan Mozzart Bet Belgrade': 'Partizan',
+    'Real Madrid': 'Real Madrid',
+    'Season cancelled': 'cancelled',
+    'Unicaja Malaga': 'Unicaja',
+    'UNICS Kazan': 'UNICS',
+    'Valencia Basket': 'Valencia',
+    'Virtus Bologna': 'Virtus',
+    'Zalgiris Kaunas': 'Zalgiris',
+    'Zenit St Petersburg': 'Zenit',
+  });
+  function teamAlias(name){ return TEAM_ALIASES[name] || name; }
+  if(!runtimeConfig) throw new Error('Missing runtime config. Ensure runtime-config.js is loaded.');
 
-  const ANCHOR_COLOR = "#3a86ff";
-  const OPP_COLOR = "#ff5a7a";
-  const SWIPE_TOGGLE_STORAGE_KEY = "basket.mobileSwipeNav";
-
-  let entries = [];
-  let filteredRows = [];
-  let selectedMode = "core";
-  let anchorMode = false;
-  let selectedTeam = "";
-  let selectedGame = null;
-  let swipeNavEnabled = false;
-  let viewerReady = false;
-  let pendingLoad = false;
-  let selectedSeasonFilter = "all";
-  let selectedTeamFilter = "all";
-  let searchFilterText = "";
-
-  const normalizedCache = new Map();
-
-  async function fetchJsonFromProcessedBase(relativePath){
-    const url = `${processedBase}/${relativePath}`;
-    const res = await fetch(url);
-    if(!res.ok) throw new Error(`Failed to load ${relativePath} from ${processedBase} (HTTP ${res.status})`);
-    return await res.json();
+  function seasonYear(code){
+    const m = String(code || '').trim().match(/^E(\d{4})$/);
+    return m ? parseInt(m[1], 10) : null;
   }
 
-  function modeParams(mode){
-    const showTypeNodes = !!(showTypeNodesEl && showTypeNodesEl.checked);
-    // explode interactions are always available by default; do not require an explicit mode.
-    if(mode === "replay") return `typeZoomVariant=4&replayLab=1&skipTypeStage=${showTypeNodes ? "0" : "1"}`;
-    return `typeZoomVariant=4&skipTypeStage=${showTypeNodes ? "0" : "1"}`;
+  function seasonLabelFromCode(code){
+    const y = seasonYear(code);
+    if(y == null) return String(code || '');
+    return `${y}-${y + 1}`;
   }
 
-  function setMode(mode){
-    selectedMode = mode;
-    modeBtns.forEach((btn) => btn.classList.toggle("active", btn.dataset.mode === mode));
-    if(selectedGame) loadSelectedGame();
+  function parseSeasoncodesFromQuery(){
+    const csv = String(qs.get('seasoncodes') || '').trim();
+    if(csv){
+      return csv.split(',').map(s => s.trim()).filter(Boolean);
+    }
+    const one = String(qs.get('seasoncode') || '').trim();
+    return one ? [one] : [];
   }
 
-  function setScope(isAnchor){
-    anchorMode = isAnchor;
-    scopeAllBtn.classList.toggle("active", !isAnchor);
-    scopeAnchorBtn.classList.toggle("active", isAnchor);
-    anchorBlock.classList.toggle("hidden", !isAnchor);
-    renderGames();
+  function resolveEloFilePath(){
+    const fileBaseParam = String(qs.get('fileBase') || '').trim();
+    return runtimeConfig.buildProcessedUrl('elo_multiseason.json', { fileBase: fileBaseParam });
   }
 
-  function teamInGame(g, t){ return g.team_a === t || g.team_b === t; }
-
-  function gameHomeTeam(g){
-    return (g && (g.home_team || g.team_home || g.team_a)) || "?";
+  function areConsecutiveSeasoncodes(codes){
+    if(!Array.isArray(codes) || !codes.length) return false;
+    const years = Array.from(new Set(codes.map(seasonYear).filter(v => Number.isInteger(v)))).sort((a,b) => a - b);
+    if(!years.length || years.length !== new Set(codes).size) return false;
+    for(let i=0;i<years.length-1;i++){
+      if((years[i+1] - years[i]) !== 1) return false;
+    }
+    return true;
   }
 
-  function gameAwayTeam(g){
-    return (g && (g.away_team || g.team_away || g.team_b)) || "?";
+  function showError(msg){
+    errEl.style.display = 'block';
+    errEl.textContent = msg;
   }
 
-  function matchesSearch(g, query){
-    if(!query) return true;
-    const hay = [
-      g.seasoncode,
-      g.gamecode,
-      g.gamedate,
-      g.team_a,
-      g.team_b,
-      gameHomeTeam(g),
-      gameAwayTeam(g),
-    ].map(v => String(v || "").toLowerCase()).join(" ");
-    return hay.includes(query);
+  function clearError(){
+    errEl.style.display = 'none';
+    errEl.textContent = '';
   }
 
-  function getFilteredRows(){
-    const query = searchFilterText.trim().toLowerCase();
-    return entries.filter((g) => {
-      if(selectedSeasonFilter !== "all" && String(g.seasoncode || "") !== selectedSeasonFilter) return false;
-      if(selectedTeamFilter !== "all" && !teamInGame(g, selectedTeamFilter)) return false;
-      if(anchorMode && selectedTeam && !teamInGame(g, selectedTeam)) return false;
-      if(!matchesSearch(g, query)) return false;
-      return true;
+  function parseTeamSeedOverridesText(text){
+    const map = Object.create(null);
+    String(text || '').split(/\r?\n/).forEach((line) => {
+      const s = line.trim();
+      if(!s) return;
+      const m = s.match(/^(.+?)\s*(=|:)\s*(-?\d+(?:\.\d+)?)\s*$/);
+      if(!m) return;
+      const team = String(m[1] || '').trim();
+      const val = Number(m[3]);
+      if(team && Number.isFinite(val)) map[team] = val;
     });
+    return map;
   }
 
-  function renderFilterOptions(){
-    if(!seasonFilterEl || !teamFilterEl) return;
-    const seasons = Array.from(new Set(entries.map(g => String(g.seasoncode || "")).filter(Boolean))).sort();
-    const teams = Array.from(new Set(entries.flatMap((g) => [g.team_a, g.team_b]).filter(Boolean))).sort();
-    const seasonRank = (code) => {
-      const m = String(code || "").match(/(\d{4})/);
-      return m ? parseInt(m[1], 10) : 0;
+  function readStoredPageState(){
+    try{
+      const raw = window.localStorage.getItem(ELO_PAGE_STORAGE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    }catch(_e){
+      return null;
+    }
+  }
+
+  function writeStoredPageState(state){
+    try{
+      window.localStorage.setItem(ELO_PAGE_STORAGE_KEY, JSON.stringify(state));
+    }catch(_e){
+      // Ignore storage failures.
+    }
+  }
+
+  let elo = null;
+  let teams = [];
+  let history = [];
+  let rawHistory = [];
+  let allSeasoncodes = [];
+  let selectedSeasoncodes = [];
+  let fixtures = [];
+  let fixtureSnapshots = [];
+  let seasonBoundaryTicks = [];
+  let tick = 0;
+  let playing = false;
+  let timer = null;
+  let activeTeam = '';
+  let selectedSet = new Set();
+  let chipHoverTeam = '';
+  let chartHoverTeam = '';
+  let chartHoverX = null; // int fixture index (x)
+
+  let stylesByTeam = Object.create(null);
+  let styleCache = Object.create(null);
+  let compareTapMode = false;
+  let preserveHistoricalBaseline = true;
+  let fullTimelineCache = null;
+  let globalInitialSeed = null;
+  let teamSeedOverrides = Object.create(null);
+
+  function parseMaybeNumber(v){
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  }
+
+  function isCoarsePointer(){
+    try{
+      return !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+    }catch(_e){
+      return false;
+    }
+  }
+
+  function setCompareMode(next){
+    compareTapMode = !!next;
+    if(compareModeBtn){
+      compareModeBtn.textContent = compareTapMode ? 'Tap compare: On' : 'Tap compare: Off';
+      compareModeBtn.classList.toggle('primary', compareTapMode);
+      compareModeBtn.setAttribute('aria-pressed', compareTapMode ? 'true' : 'false');
+    }
+  }
+
+  const CHART_W = 900;
+  const CHART_H = 461;
+  const CHART_PAD = { L: 46, R: 18, T: 18, B: 34 };
+
+  let chartState = null;
+
+  function effectiveHoverTeam(){
+    return chipHoverTeam || chartHoverTeam;
+  }
+
+  function clamp(n, lo, hi){
+    return Math.max(lo, Math.min(hi, n));
+  }
+
+  const MAX_COMPARE = 20;
+  const WARN_COMPARE = 8;
+
+  const COLOR_VARS = ['--accent','--ok','--warn'];
+  const MARKERS = ['circle','square','triangle','diamond','cross'];
+
+  function cssVar(name, fallback){
+    const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return v || fallback || '';
+  }
+
+  function parseColorToRgb(s){
+    const str = String(s || '').trim();
+    if(!str) return null;
+
+    // #rgb or #rrggbb
+    if(str[0] === '#'){
+      const hex = str.slice(1);
+      if(hex.length === 3){
+        const r = parseInt(hex[0] + hex[0], 16);
+        const g = parseInt(hex[1] + hex[1], 16);
+        const b = parseInt(hex[2] + hex[2], 16);
+        return { r, g, b };
+      }
+      if(hex.length === 6){
+        const r = parseInt(hex.slice(0,2), 16);
+        const g = parseInt(hex.slice(2,4), 16);
+        const b = parseInt(hex.slice(4,6), 16);
+        return { r, g, b };
+      }
+      return null;
+    }
+
+    // rgb()/rgba()
+    const m = str.match(/rgba?\(([^)]+)\)/i);
+    if(m){
+      const parts = m[1].split(',').map(x => x.trim());
+      if(parts.length >= 3){
+        const r = Math.max(0, Math.min(255, parseFloat(parts[0]) || 0));
+        const g = Math.max(0, Math.min(255, parseFloat(parts[1]) || 0));
+        const b = Math.max(0, Math.min(255, parseFloat(parts[2]) || 0));
+        return { r, g, b };
+      }
+    }
+    return null;
+  }
+
+  function rgbToHex(rgb){
+    if(!rgb) return '';
+    const to2 = (n) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2,'0');
+    return `#${to2(rgb.r)}${to2(rgb.g)}${to2(rgb.b)}`;
+  }
+
+  function mixRgb(a, b, t){
+    const tt = Math.max(0, Math.min(1, t));
+    return {
+      r: a.r + (b.r - a.r) * tt,
+      g: a.g + (b.g - a.g) * tt,
+      b: a.b + (b.b - a.b) * tt,
     };
-    const latestSeason = seasons.slice().sort((a, b) => {
-      const byYear = seasonRank(b) - seasonRank(a);
-      if(byYear !== 0) return byYear;
-      return String(b).localeCompare(String(a));
-    })[0] || "all";
-    if(selectedSeasonFilter === "all" && latestSeason !== "all"){
-      selectedSeasonFilter = latestSeason;
-    }
-    seasonFilterEl.innerHTML = `<option value="all">All seasons</option>${seasons.map(s => `<option value="${s}">${s}</option>`).join("")}`;
-    teamFilterEl.innerHTML = `<option value="all">All teams</option>${teams.map(t => `<option value="${t}">${t}</option>`).join("")}`;
-    seasonFilterEl.value = seasons.includes(selectedSeasonFilter) ? selectedSeasonFilter : "all";
-    teamFilterEl.value = teams.includes(selectedTeamFilter) ? selectedTeamFilter : "all";
-    selectedSeasonFilter = seasonFilterEl.value;
-    selectedTeamFilter = teamFilterEl.value;
   }
 
-  function isMobileViewport(){
-    return window.matchMedia("(max-width: 1060px) and (pointer: coarse)").matches;
-  }
+  function rgbToHsl(rgb){
+    const r = (rgb.r || 0) / 255;
+    const g = (rgb.g || 0) / 255;
+    const b = (rgb.b || 0) / 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    let h = 0;
+    let s = 0;
+    const l = (max + min) / 2;
 
-  function applySwipeNavUiState(){
-    const mobileSwipeEnabled = isMobileViewport();
-    if(mobileSwipeEnabled) swipeNavEnabled = true;
-    else swipeNavEnabled = false;
-    document.body.classList.toggle("swipe-nav-enabled", swipeNavEnabled && mobileSwipeEnabled);
-    document.body.style.overflow = (swipeNavEnabled && mobileSwipeEnabled) ? "hidden" : "";
-    document.documentElement.style.overflow = (swipeNavEnabled && mobileSwipeEnabled) ? "hidden" : "";
-    if(swipeNavHintEl) swipeNavHintEl.textContent = swipeNavEnabled ? "On (left next / right prev)" : "Off";
-    if(swipeNavToggleEl) swipeNavToggleEl.checked = swipeNavEnabled;
-    syncSwipeNavToViewer();
-  }
-
-  function syncSwipeNavToViewer(){
-    try {
-      if(viewer && viewer.contentWindow && typeof viewer.contentWindow.postMessage === "function"){
-        viewer.contentWindow.postMessage({ type: "setSwipeNav", enabled: swipeNavEnabled }, "*");
+    if(max !== min){
+      const d = max - min;
+      s = l > 0.5 ? (d / (2 - max - min)) : (d / (max + min));
+      switch(max){
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        default: h = (r - g) / d + 4; break;
       }
-    } catch(_e) {}
+      h *= 60;
+    }
+    return { h, s: s * 100, l: l * 100 };
   }
 
-  function persistSwipeNavEnabled(){
-    try {
-      localStorage.setItem(SWIPE_TOGGLE_STORAGE_KEY, swipeNavEnabled ? "1" : "0");
-    } catch(_e) {}
+  function hslToRgb(hsl){
+    let h = ((hsl.h || 0) % 360 + 360) % 360;
+    const s = Math.max(0, Math.min(100, hsl.s || 0)) / 100;
+    const l = Math.max(0, Math.min(100, hsl.l || 0)) / 100;
+
+    const c = (1 - Math.abs(2 * l - 1)) * s;
+    const hh = h / 60;
+    const x = c * (1 - Math.abs((hh % 2) - 1));
+    let r1 = 0, g1 = 0, b1 = 0;
+    if(hh >= 0 && hh < 1){ r1 = c; g1 = x; b1 = 0; }
+    else if(hh < 2){ r1 = x; g1 = c; b1 = 0; }
+    else if(hh < 3){ r1 = 0; g1 = c; b1 = x; }
+    else if(hh < 4){ r1 = 0; g1 = x; b1 = c; }
+    else if(hh < 5){ r1 = x; g1 = 0; b1 = c; }
+    else { r1 = c; g1 = 0; b1 = x; }
+
+    const m = l - c / 2;
+    return {
+      r: (r1 + m) * 255,
+      g: (g1 + m) * 255,
+      b: (b1 + m) * 255,
+    };
   }
 
-  function restoreSwipeNavEnabled(){
-    // Mobile is swipe-first by product requirement: keep this ON on small screens.
-    swipeNavEnabled = isMobileViewport() ? true : false;
-    try { localStorage.setItem(SWIPE_TOGGLE_STORAGE_KEY, swipeNavEnabled ? "1" : "0"); } catch(_e) {}
-    applySwipeNavUiState();
+  function rgbDistance(a, b){
+    const dr = (a.r || 0) - (b.r || 0);
+    const dg = (a.g || 0) - (b.g || 0);
+    const db = (a.b || 0) - (b.b || 0);
+    return Math.sqrt(dr*dr + dg*dg + db*db);
   }
 
-  async function navigateGameByDelta(delta){
-    if(!filteredRows.length || !selectedGame || delta === 0) return;
-    const currentIdx = filteredRows.findIndex((g) => g.file === selectedGame.file);
-    if(currentIdx === -1) return;
-    const nextIdx = Math.max(0, Math.min(filteredRows.length - 1, currentIdx + delta));
-    if(nextIdx === currentIdx) return;
-    selectedGame = filteredRows[nextIdx];
-    document.querySelectorAll(".game-row").forEach((el) => {
-      const isActive = el.dataset.file === selectedGame.file;
-      el.classList.toggle("active", isActive);
-      if(isActive) el.scrollIntoView({ block: "nearest" });
+  function hashToUint32(str){
+    let h = 2166136261;
+    for(let i=0;i<str.length;i++){
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return (h >>> 0);
+  }
+
+  function buildDistinctPalette(){
+    // Goal: a *qualitative* palette with strong hue separation for small sets.
+    // We derive the starting hue from theme --accent, then spread hues evenly.
+    const base = parseColorToRgb(cssVar('--accent', '#62b6ff')) || { r: 98, g: 182, b: 255 };
+    const baseH = rgbToHsl(base).h;
+
+    // On dark background we want bright-but-not-white strokes.
+    const S = 78;
+    const L = 56;
+    const N = 28;
+
+    const colors = [];
+    for(let i=0;i<N;i++){
+      const h = (baseH + (i * 360 / N)) % 360;
+      colors.push(rgbToHex(hslToRgb({ h, s: S, l: L })));
+    }
+
+    // Also include theme --ok/--warn if present (they often help vs pure hue wheel).
+    COLOR_VARS.forEach((v) => {
+      const c = cssVar(v, '');
+      if(c && c[0] === '#') colors.push(c);
     });
-    if(navigator.vibrate) navigator.vibrate(8);
-    await loadSelectedGame();
+
+    // De-dupe while preserving order.
+    const out = [];
+    const seen = new Set();
+    colors.forEach((c) => {
+      const key = String(c || '').toLowerCase();
+      if(!key || seen.has(key)) return;
+      seen.add(key);
+      out.push(c);
+    });
+    return out;
   }
 
-  function bindSwipeNavigation(){
-    // Navigation gestures are handled inside the viewer iframe.
-  }
+  function bestColorForTeam(team, takenRgbs, palette){
+    const h = hashToUint32(String(team || ''));
+    const start = palette.length ? (h % palette.length) : 0;
+    if(!takenRgbs || !takenRgbs.length){
+      return palette[start] || cssVar('--accent', '#62b6ff');
+    }
 
-  function escapeRegExp(str){
-    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  }
-
-  function swapName(v, a, b){
-    if(v === a) return b;
-    if(v === b) return a;
-    return v;
-  }
-
-  function swapNamesInText(text, a, b){
-    if(typeof text !== "string" || !text) return text;
-    const token = "__TMP_TEAM_TOKEN__";
-    return text
-      .replace(new RegExp(escapeRegExp(a), "g"), token)
-      .replace(new RegExp(escapeRegExp(b), "g"), a)
-      .replace(new RegExp(token, "g"), b);
-  }
-
-  function normalizeBundleForAnchor(bundle, anchorTeam){
-    const copy = JSON.parse(JSON.stringify(bundle));
-    const meta = copy.meta || {};
-    const a = meta.team_a;
-    const b = meta.team_b;
-    if(!a || !b || anchorTeam !== b){
-      if(copy.colors){
-        copy.colors[anchorTeam] = ANCHOR_COLOR;
-        const opp = anchorTeam === a ? b : a;
-        if(opp) copy.colors[opp] = OPP_COLOR;
+    let bestIdx = start;
+    let bestScore = -1;
+    for(let k=0;k<palette.length;k++){
+      const idx = (start + k) % palette.length;
+      const rgb = parseColorToRgb(palette[idx]);
+      if(!rgb) continue;
+      let minD = Infinity;
+      for(let j=0;j<takenRgbs.length;j++){
+        minD = Math.min(minD, rgbDistance(rgb, takenRgbs[j]));
       }
-      return copy;
+      if(minD > bestScore + 1e-9){
+        bestScore = minD;
+        bestIdx = idx;
+      }
+    }
+    return palette[bestIdx] || cssVar('--accent', '#62b6ff');
+  }
+
+  function bestMarkerForTeam(team, takenMarkers){
+    const h = hashToUint32(String(team || ''));
+    const start = MARKERS.length ? (h % MARKERS.length) : 0;
+    for(let k=0;k<MARKERS.length;k++){
+      const m = MARKERS[(start + k) % MARKERS.length];
+      if(!takenMarkers || !takenMarkers.has(m)) return m;
+    }
+    return 'circle';
+  }
+
+  function ensureStylesForSelectedTeams(teamList){
+    const teamsInOrder = Array.from(new Set(teamList || []));
+    const palette = buildDistinctPalette();
+
+    const takenRgbs = [];
+    const takenMarkers = new Set();
+
+    const map = Object.create(null);
+
+    // 1) Preserve existing team styles (avoid reshuffle when adding a new team).
+    teamsInOrder.forEach((team) => {
+      const st = styleCache && styleCache[team];
+      if(!st) return;
+      map[team] = st;
+      const rgb = parseColorToRgb(st.color);
+      if(rgb) takenRgbs.push(rgb);
+      if(st.marker) takenMarkers.add(st.marker);
+    });
+
+    // 2) Assign best-contrast colors to newly-added teams.
+    teamsInOrder.forEach((team) => {
+      if(map[team]) return;
+      const color = bestColorForTeam(team, takenRgbs, palette);
+      const marker = bestMarkerForTeam(team, takenMarkers);
+      const h = hashToUint32(String(team));
+      const dashOffset = (h % 23) * 1.7;
+      const st = { color, dash: '', marker, dashOffset };
+      map[team] = st;
+      styleCache[team] = st;
+      const rgb = parseColorToRgb(color);
+      if(rgb) takenRgbs.push(rgb);
+      takenMarkers.add(marker);
+    });
+
+    stylesByTeam = map;
+  }
+
+  function styleFor(team){
+    return stylesByTeam && stylesByTeam[team] ? stylesByTeam[team] : { color: cssVar('--accent', '#62b6ff'), dash: '', marker: 'circle', dashOffset: 0 };
+  }
+
+  function setCompareTip(text, kind){
+    if(!compareTipEl) return;
+    compareTipEl.textContent = text;
+    if(kind === 'warn') compareTipEl.style.color = 'var(--warn)';
+    else compareTipEl.style.color = '';
+  }
+
+  function applyHoverHighlight(hoverTeam){
+    const els = chartSvg.querySelectorAll('[data-team]');
+    els.forEach(el => {
+      const team = el.getAttribute('data-team') || '';
+      const baseOpacity = el.getAttribute('data-base-opacity');
+      const baseStrokeWidth = el.getAttribute('data-base-stroke-width');
+      const baseR = el.getAttribute('data-base-r');
+      const baseFillOpacity = el.getAttribute('data-base-fill-opacity');
+
+      if(!hoverTeam){
+        if(baseOpacity != null) el.setAttribute('opacity', baseOpacity);
+        if(baseStrokeWidth != null) el.setAttribute('stroke-width', baseStrokeWidth);
+        if(baseR != null) el.setAttribute('r', baseR);
+        if(baseFillOpacity != null) el.setAttribute('fill-opacity', baseFillOpacity);
+        return;
+      }
+
+      if(team === hoverTeam){
+        el.setAttribute('opacity', '1');
+        if(baseStrokeWidth != null && el.tagName.toLowerCase() === 'path'){
+          el.setAttribute('stroke-width', String(parseFloat(baseStrokeWidth) + 0.8));
+        }
+        if(baseR != null) el.setAttribute('r', String(parseFloat(baseR) + 0.8));
+        if(baseFillOpacity != null) el.setAttribute('fill-opacity', '1');
+      }else{
+        el.setAttribute('opacity', '0.15');
+        if(baseFillOpacity != null) el.setAttribute('fill-opacity', '0.15');
+      }
+    });
+  }
+
+  function initialRating(team){
+    const teamKey = String(team || '');
+    if(teamKey && teamSeedOverrides[teamKey] != null) return teamSeedOverrides[teamKey];
+    if(globalInitialSeed != null) return globalInitialSeed;
+
+    const cfgSeed = parseMaybeNumber((runtimeConfig && runtimeConfig.eloInitialRating));
+    if(cfgSeed != null) return cfgSeed;
+
+    const globalCfgSeed = parseMaybeNumber(window.BASKET_ELO_INITIAL_RATING);
+    if(globalCfgSeed != null) return globalCfgSeed;
+
+    const payloadSeed = parseMaybeNumber(elo && elo.initial_rating);
+    if(payloadSeed != null) return payloadSeed;
+    return 1500;
+  }
+
+  function parseDateKey(gamedate){
+    const s = String(gamedate || '').trim();
+    return s ? s.slice(0, 10) : '';
+  }
+
+  function expectedScore(a, b){
+    return 1 / (1 + Math.pow(10, (b - a) / 400));
+  }
+
+  function outcomeScore(entry){
+    if(!entry) return null;
+    const a = entry.team_a;
+    const b = entry.team_b;
+    const w = entry.winner;
+    const sa = entry.score_a;
+    const sb = entry.score_b;
+    if(w && a && w === a) return 1;
+    if(w && b && w === b) return 0;
+    if((sa != null) && (sb != null)){
+      if(sa > sb) return 1;
+      if(sb > sa) return 0;
+      return 0.5;
+    }
+    return null;
+  }
+
+  function sortHistoryEntries(entries){
+    return (entries || []).slice().sort((x, y) => {
+      const syx = seasonYear(x && x.seasoncode) || 0;
+      const syy = seasonYear(y && y.seasoncode) || 0;
+      if(syx !== syy) return syx - syy;
+      const dx = parseDateKey(x && x.gamedate);
+      const dy = parseDateKey(y && y.gamedate);
+      if(dx !== dy) return dx < dy ? -1 : 1;
+      const gx = Number((x && x.gamecode) || 0);
+      const gy = Number((y && y.gamecode) || 0);
+      return gx - gy;
+    });
+  }
+
+  function deriveTimelineFromSorted(sorted){
+    const ratings = Object.create(null);
+    const teamsSet = new Set();
+    const derivedHistory = [];
+    const nextFixtures = [];
+    const nextSnapshots = [];
+    const boundaries = [];
+
+    const groups = [];
+    const seasonOrder = [];
+    const seasonEntries = Object.create(null);
+
+    sorted.forEach((g) => {
+      const sc = String(g.seasoncode || '');
+      if(!seasonEntries[sc]){
+        seasonEntries[sc] = [];
+        seasonOrder.push(sc);
+      }
+      seasonEntries[sc].push(g);
+    });
+
+    // Use date-bearing seasons as reference for fixture count when a season has no dates at all.
+    const referenceFixtureCounts = [];
+    seasonOrder.forEach((sc) => {
+      const seasonGames = seasonEntries[sc] || [];
+      const dateKeys = new Set();
+      seasonGames.forEach((g) => {
+        const d = parseDateKey(g && g.gamedate);
+        if(d) dateKeys.add(d);
+      });
+      if(dateKeys.size > 0) referenceFixtureCounts.push(dateKeys.size);
+    });
+    const avgReferenceFixtures = referenceFixtureCounts.length
+      ? Math.max(1, Math.round(referenceFixtureCounts.reduce((a, b) => a + b, 0) / referenceFixtureCounts.length))
+      : 0;
+
+    seasonOrder.forEach((sc) => {
+      const seasonGames = seasonEntries[sc] || [];
+      if(!seasonGames.length) return;
+
+      const seasonLabel = String((seasonGames[0] && seasonGames[0].season_label) || seasonLabelFromCode(sc));
+      const hasAnyDate = seasonGames.some((g) => !!parseDateKey(g && g.gamedate));
+
+      if(hasAnyDate){
+        let lastKey = '';
+        seasonGames.forEach((g, idx) => {
+          const d = parseDateKey(g && g.gamedate);
+          const key = `${sc}|${d || 'g' + String(idx + 1)}`;
+          if(!groups.length || key !== lastKey){
+            groups.push({
+              key,
+              seasoncode: sc,
+              seasonLabel,
+              gamedate: d,
+              games: [],
+            });
+            lastKey = key;
+          }
+          groups[groups.length - 1].games.push(g);
+        });
+        return;
+      }
+
+      const targetFixtures = avgReferenceFixtures > 0
+        ? Math.min(seasonGames.length, avgReferenceFixtures)
+        : seasonGames.length;
+
+      const fixtureBuckets = Array.from({ length: targetFixtures }, () => []);
+      seasonGames.forEach((g, idx) => {
+        const bucketIdx = Math.floor((idx * targetFixtures) / seasonGames.length);
+        fixtureBuckets[bucketIdx].push(g);
+      });
+
+      fixtureBuckets.forEach((bucketGames, idx) => {
+        if(!bucketGames.length) return;
+        groups.push({
+          key: `${sc}|fallback_fx_${idx + 1}`,
+          seasoncode: sc,
+          seasonLabel,
+          gamedate: '',
+          games: bucketGames,
+        });
+      });
+    });
+
+    groups.forEach((group, gi) => {
+      if(gi > 0 && groups[gi - 1].seasoncode !== group.seasoncode){
+        boundaries.push(gi + 0.5);
+      }
+
+      const fixtureIndex = gi + 1;
+      group.games.forEach((e) => {
+        const teamA = String(e.team_a || '');
+        const teamB = String(e.team_b || '');
+        if(!teamA || !teamB) return;
+
+        teamsSet.add(teamA);
+        teamsSet.add(teamB);
+        if(ratings[teamA] == null) ratings[teamA] = initialRating(teamA);
+        if(ratings[teamB] == null) ratings[teamB] = initialRating(teamB);
+
+        const eloABefore = ratings[teamA];
+        const eloBBefore = ratings[teamB];
+        const outcome = outcomeScore(e);
+        let eloAAfter = eloABefore;
+        let eloBAfter = eloBBefore;
+        let unknown = false;
+
+        if(outcome == null){
+          unknown = true;
+        }else{
+          const ea = expectedScore(eloABefore, eloBBefore);
+          const k = (elo && typeof elo.k_factor === 'number') ? elo.k_factor : 32;
+          eloAAfter = Math.round((eloABefore + k * (outcome - ea)) * 100) / 100;
+          eloBAfter = Math.round((eloBBefore + k * ((1 - outcome) - (1 - ea))) * 100) / 100;
+          ratings[teamA] = eloAAfter;
+          ratings[teamB] = eloBAfter;
+        }
+
+        derivedHistory.push({
+          seasoncode: group.seasoncode,
+          season_label: group.seasonLabel,
+          gamedate: e.gamedate,
+          gamecode: e.gamecode,
+          team_a: teamA,
+          team_b: teamB,
+          score_a: e.score_a,
+          score_b: e.score_b,
+          winner: e.winner,
+          fixture_index: fixtureIndex,
+          elo_a_before: eloABefore,
+          elo_b_before: eloBBefore,
+          elo_a_after: eloAAfter,
+          elo_b_after: eloBAfter,
+          outcome_unknown: unknown,
+        });
+      });
+
+      nextFixtures.push({
+        x: fixtureIndex,
+        seasoncode: group.seasoncode,
+        season_label: group.seasonLabel,
+        gamedate: group.gamedate,
+        games_count: group.games.length,
+      });
+      nextSnapshots.push(Object.assign({}, ratings));
+    });
+
+    return {
+      history: derivedHistory,
+      fixtures: nextFixtures,
+      fixtureSnapshots: nextSnapshots,
+      seasonBoundaryTicks: boundaries,
+      teams: Array.from(teamsSet).sort((a,b) => a.localeCompare(b)),
+    };
+  }
+
+  function buildDerivedTimeline(){
+    const allowed = new Set(selectedSeasoncodes);
+
+    if(preserveHistoricalBaseline){
+      if(!fullTimelineCache){
+        const fullSorted = sortHistoryEntries(rawHistory.filter(Boolean));
+        fullTimelineCache = deriveTimelineFromSorted(fullSorted);
+      }
+
+      const selectedFixtureIndexes = [];
+      const fixtureIndexMap = Object.create(null);
+      const selectedFixtures = [];
+      const selectedSnapshots = [];
+      const boundaries = [];
+
+      (fullTimelineCache.fixtures || []).forEach((f, idx) => {
+        const originalFixtureIndex = idx + 1;
+        if(!allowed.has(String((f && f.seasoncode) || ''))) return;
+        selectedFixtureIndexes.push(originalFixtureIndex);
+        fixtureIndexMap[originalFixtureIndex] = selectedFixtureIndexes.length;
+        const prev = selectedFixtures[selectedFixtures.length - 1];
+        if(prev && prev.seasoncode !== f.seasoncode){
+          boundaries.push((selectedFixtureIndexes.length - 1) + 0.5);
+        }
+        selectedFixtures.push(Object.assign({}, f, { x: selectedFixtureIndexes.length }));
+        selectedSnapshots.push(Object.assign({}, (fullTimelineCache.fixtureSnapshots[originalFixtureIndex - 1] || {})));
+      });
+
+      const filteredHistory = (fullTimelineCache.history || [])
+        .filter((e) => {
+          if(!allowed.has(String((e && e.seasoncode) || ''))) return false;
+          return fixtureIndexMap[e.fixture_index] != null;
+        })
+        .map((e) => Object.assign({}, e, { fixture_index: fixtureIndexMap[e.fixture_index] }));
+
+      const teamsSet = new Set();
+      filteredHistory.forEach((e) => {
+        if(e.team_a) teamsSet.add(e.team_a);
+        if(e.team_b) teamsSet.add(e.team_b);
+      });
+
+      history = filteredHistory;
+      fixtures = selectedFixtures;
+      fixtureSnapshots = selectedSnapshots;
+      seasonBoundaryTicks = boundaries;
+      teams = Array.from(teamsSet).sort((a,b) => a.localeCompare(b));
+    } else {
+      const sorted = sortHistoryEntries(rawHistory.filter(e => e && allowed.has(String(e.seasoncode || ''))));
+      const next = deriveTimelineFromSorted(sorted);
+      history = next.history;
+      fixtures = next.fixtures;
+      fixtureSnapshots = next.fixtureSnapshots;
+      seasonBoundaryTicks = next.seasonBoundaryTicks;
+      teams = next.teams;
     }
 
-    // anchorTeam is team_b; promote it to team_a so the anchor always appears
-    // in the top lane with consistent anchor styling.  Only meta and colors need
-    // to change — node IDs, link IDs, player team labels, and starts values are
-    // already keyed by the real team names and must stay untouched so that data
-    // attribution (scores, PPP, node labels, single-team focus) remains correct.
-    // Preserve canonical home/away before swap so the viewer header stays correct.
-    meta.home_team = meta.home_team || meta.team_home || a;
-    meta.away_team = meta.away_team || meta.team_away || b;
-    meta.team_a = b;
-    meta.team_b = a;
-    copy.meta = meta;
+    tickRange.min = '0';
+    tickRange.max = String(fixtures.length);
+    if(tick > fixtures.length) tick = fixtures.length;
+    tickRange.value = String(tick);
+  }
 
-    if(copy.colors && typeof copy.colors === "object"){
-      copy.colors[b] = ANCHOR_COLOR;
-      copy.colors[a] = OPP_COLOR;
+  function computeRatingsAt(t){
+    const ratings = {};
+    teams.forEach(team => ratings[team] = initialRating(team));
+
+    const n = Math.max(0, Math.min(t, fixtures.length));
+    if(n <= 0) return ratings;
+
+    const snap = fixtureSnapshots[n - 1] || {};
+    teams.forEach(team => {
+      if(snap[team] != null) ratings[team] = snap[team];
+    });
+    return ratings;
+  }
+
+  function gamesAppliedAtTick(t){
+    const n = Math.max(0, Math.min(t, fixtures.length));
+    if(n <= 0) return 0;
+    let count = 0;
+    for(let i=0;i<history.length;i++){
+      if((history[i].fixture_index || 0) <= n) count += 1;
+    }
+    return count;
+  }
+
+  function rankRows(ratings){
+    const rows = teams.map(team => ({ team, elo: ratings[team] }));
+    rows.sort((a,b) => b.elo - a.elo);
+    return rows;
+  }
+
+  function asOfText(){
+    if(tick <= 0) return 'As of: start';
+    const f = fixtures[tick - 1];
+    const date = f && f.gamedate ? f.gamedate : 'date unknown';
+    const seasonLabel = f && f.season_label ? f.season_label : (f && f.seasoncode ? seasonLabelFromCode(f.seasoncode) : '?');
+    return `As of: fixture ${tick} / ${fixtures.length} · ${seasonLabel} · ${date}`;
+  }
+
+  function tickText(){
+    if(tick <= 0) return 'Start (no games applied)';
+    const f = fixtures[tick - 1];
+    const seasonLabel = f && f.season_label ? f.season_label : (f && f.seasoncode ? seasonLabelFromCode(f.seasoncode) : '?');
+    const date = f && f.gamedate ? f.gamedate : 'date unknown';
+    const games = f && f.games_count ? f.games_count : 0;
+    return `Fixture ${tick}: ${seasonLabel} · ${date} · ${games} game(s)`;
+  }
+
+  function setTick(next){
+    tick = Math.max(0, Math.min(next, fixtures.length));
+    tickRange.value = String(tick);
+    render();
+  }
+
+  function setSelectedTeam(team){
+    teamSelect.value = team;
+    // Selecting from the dropdown is the "single-team" happy path.
+    selectedSet = new Set([team]);
+    activeTeam = team;
+    render();
+  }
+
+  function toggleTeam(team){
+    if(selectedSet.has(team)) selectedSet.delete(team);
+    else {
+      if(selectedSet.size >= MAX_COMPARE){
+        setCompareTip(`Compare limit: ${MAX_COMPARE} teams (remove one to add).`, 'warn');
+        return;
+      }
+      selectedSet.add(team);
+    }
+    if(!selectedSet.size){
+      selectedSet.add(team);
+    }
+    if(!selectedSet.has(activeTeam)){
+      activeTeam = Array.from(selectedSet)[0] || team;
+    }
+    teamSelect.value = activeTeam;
+    render();
+  }
+
+  function soloTeam(team){
+    selectedSet = new Set([team]);
+    activeTeam = team;
+    teamSelect.value = team;
+    render();
+  }
+
+  function stop(){
+    playing = false;
+    playBtn.textContent = 'Play';
+    if(timer){
+      window.clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function start(){
+    if(playing) return;
+    playing = true;
+    playBtn.textContent = 'Pause';
+    if(tick >= fixtures.length) setTick(0);
+
+    timer = window.setInterval(() => {
+      if(tick >= fixtures.length){
+        stop();
+        return;
+      }
+      setTick(tick + 1);
+    }, 90);
+  }
+
+  function togglePlay(){
+    if(playing) stop();
+    else start();
+  }
+
+  function clearTable(){
+    while(rankTable.children.length > 1){
+      rankTable.removeChild(rankTable.lastChild);
+    }
+  }
+
+  function setSeasonWarning(msg){
+    if(!seasonWarnEl) return;
+    seasonWarnEl.textContent = String(msg || '');
+  }
+
+  function seasonRangeLabel(codes){
+    const sorted = (codes || []).slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+    if(!sorted.length) return '—';
+    if(sorted.length === 1) return seasonLabelFromCode(sorted[0]);
+    return `${seasonLabelFromCode(sorted[0])} -> ${seasonLabelFromCode(sorted[sorted.length - 1])}`;
+  }
+
+
+
+  function topRankedTeams(limit){
+    const rows = rankRows(computeRatingsAt(fixtures.length));
+    return rows.slice(0, Math.max(1, limit || 1)).map((row) => row.team);
+  }
+
+  function applyInitialPageState(storedState){
+    const defaultSelected = topRankedTeams(4);
+    const defaultActive = defaultSelected[0] || teams[0] || '';
+    const savedSelected = Array.isArray(storedState && storedState.selectedTeams)
+      ? storedState.selectedTeams.filter((team) => teams.includes(team)).slice(0, MAX_COMPARE)
+      : [];
+    const savedActive = teams.includes(storedState && storedState.activeTeam) ? storedState.activeTeam : '';
+    const savedTickRaw = parseInt(storedState && storedState.tick, 10);
+    const savedTick = Number.isFinite(savedTickRaw) ? Math.max(0, Math.min(savedTickRaw, fixtures.length)) : fixtures.length;
+
+    if(storedState && typeof storedState.compareTapMode === 'boolean') setCompareMode(storedState.compareTapMode);
+    else setCompareMode(true);
+
+    if(savedSelected.length){
+      selectedSet = new Set(savedSelected);
+      activeTeam = selectedSet.has(savedActive) ? savedActive : (savedSelected[0] || defaultActive);
+      tick = savedTick;
+    } else {
+      selectedSet = new Set(defaultSelected.length ? defaultSelected : [defaultActive]);
+      activeTeam = defaultActive;
+      tick = fixtures.length;
+      setCompareMode(true);
     }
 
-    // Reorder nodes so anchor-team nodes appear first in each view's node array.
-    // d3-sankey uses the initial array order for vertical placement, so this
-    // ensures the anchor team is rendered in the top lane.
-    if(copy.views && typeof copy.views === "object"){
-      Object.values(copy.views).forEach((view) => {
-        if(!view || !Array.isArray(view.nodes)) return;
-        const anchorNodes = view.nodes.filter(n => n && n.team === b);
-        const otherNodes = view.nodes.filter(n => !n || n.team !== b);
-        view.nodes = anchorNodes.concat(otherNodes);
+    if(!selectedSet.size && defaultActive) selectedSet = new Set([defaultActive]);
+    if(!selectedSet.has(activeTeam)) activeTeam = Array.from(selectedSet)[0] || defaultActive;
+    teamSelect.value = activeTeam;
+    tickRange.value = String(tick);
+  }
+
+  function persistPageState(){
+    if(playing || !elo || !teams.length) return;
+    writeStoredPageState({
+      version: 1,
+      selectedSeasoncodes: selectedSeasoncodes.slice(),
+      selectedTeams: Array.from(selectedSet),
+      activeTeam,
+      tick,
+      compareTapMode,
+      preserveHistoricalBaseline,
+      globalInitialSeed,
+      teamSeedOverridesText: teamSeedOverridesEl ? String(teamSeedOverridesEl.value || '') : ''
+    });
+  }
+
+  function updateTeamSelectOptions(){
+    const prev = teamSelect.value;
+    teamSelect.innerHTML = '';
+    teams.forEach((t) => {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t;
+      teamSelect.appendChild(opt);
+    });
+
+    if(!teams.length){
+      activeTeam = '';
+      return;
+    }
+
+    const preferred = teams.find(t => t.includes('Olympiacos')) || teams[0];
+    activeTeam = teams.includes(activeTeam) ? activeTeam : (teams.includes(prev) ? prev : preferred);
+
+    const filteredSelected = Array.from(selectedSet).filter(t => teams.includes(t));
+    selectedSet = new Set(filteredSelected.length ? filteredSelected : [activeTeam]);
+    if(!selectedSet.has(activeTeam)) activeTeam = Array.from(selectedSet)[0] || activeTeam;
+    teamSelect.value = activeTeam;
+  }
+
+  function applySeasonSelection(resetTickToNow){
+    clearError();
+    buildDerivedTimeline();
+    seasonLabelEl.textContent = seasonRangeLabel(selectedSeasoncodes);
+
+    if(!teams.length || !fixtures.length){
+      showError('No Elo history available for the selected season range.');
+      clearTable();
+      return;
+    }
+
+    updateTeamSelectOptions();
+    if(resetTickToNow) tick = fixtures.length;
+    tick = Math.max(0, Math.min(tick, fixtures.length));
+    tickRange.value = String(tick);
+    render();
+  }
+
+  function renderSeasonFilters(){
+    if(!seasonFiltersEl) return;
+    seasonFiltersEl.innerHTML = '';
+    allSeasoncodes.forEach((code) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'seasonBtn' + (selectedSeasoncodes.includes(code) ? ' active' : '');
+      btn.textContent = seasonLabelFromCode(code);
+      btn.addEventListener('click', () => {
+        const nextSet = new Set(selectedSeasoncodes);
+        if(nextSet.has(code)) nextSet.delete(code);
+        else nextSet.add(code);
+
+        const next = Array.from(nextSet).sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+        if(!next.length){
+          setSeasonWarning('Select at least one season.');
+          return;
+        }
+        if(!areConsecutiveSeasoncodes(next)){
+          setSeasonWarning('Selected seasons must be consecutive (example: A,B,C allowed; A,B,D blocked).');
+          return;
+        }
+
+        stop();
+        selectedSeasoncodes = next;
+        setSeasonWarning('');
+        renderSeasonFilters();
+        applySeasonSelection(true);
+      });
+      seasonFiltersEl.appendChild(btn);
+    });
+  }
+
+  function drawChartMulti(seriesByTeam, active, currentIdx){
+    if(!window.d3){
+      showError('D3 is required for chart interactions but failed to load.');
+      return;
+    }
+
+    const d3 = window.d3;
+    const W = CHART_W;
+    const H = CHART_H;
+    const padL = CHART_PAD.L;
+    const padR = CHART_PAD.R;
+    const padT = CHART_PAD.T;
+    const padB = CHART_PAD.B;
+
+    const allTeams = Object.keys(seriesByTeam || {});
+    if(!allTeams.length) return;
+
+    // Keep active team drawn last (on top).
+    const teamsOrdered = allTeams.filter(t => t !== active).concat([active]).filter(Boolean);
+    const seriesData = teamsOrdered
+      .filter((team) => Array.isArray(seriesByTeam[team]) && seriesByTeam[team].length)
+      .map((team) => ({ team, pts: seriesByTeam[team] }));
+    if(!seriesData.length) return;
+
+    let minY = Infinity;
+    let maxY = -Infinity;
+    seriesData.forEach((s) => {
+      (s.pts || []).forEach((p) => { minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y); });
+    });
+    if(!isFinite(minY) || !isFinite(maxY)) return;
+
+    const yPad = Math.max(8, (maxY - minY) * 0.08);
+    minY -= yPad;
+    maxY += yPad;
+
+    const anyPts = seriesData[0].pts || [];
+    const maxX = Math.max(1, (anyPts[anyPts.length - 1] || { x: 0 }).x);
+
+    const xScale = d3.scaleLinear().domain([0, maxX]).range([padL, W - padR]);
+    const yScale = d3.scaleLinear().domain([minY, maxY]).range([H - padB, padT]);
+
+    const svg = d3.select(chartSvg);
+    svg.attr('role', 'img');
+    svg.attr('tabindex', '0');
+
+    if(!chartState){
+      const title = svg.append('title').attr('id', 'chartTitle').text('Elo progression chart');
+      const desc = svg.append('desc').attr('id', 'chartDesc');
+      svg.attr('aria-labelledby', 'chartTitle chartDesc');
+
+      const root = svg.append('g').attr('class', 'root');
+      const axis = root.append('path')
+        .attr('class', 'axis')
+        .attr('stroke', 'rgba(36,52,74,.9)')
+        .attr('fill', 'none')
+        .attr('stroke-width', 1);
+
+      const tickLine = root.append('line')
+        .attr('class', 'tick')
+        .attr('stroke', 'rgba(255,177,90,.65)')
+        .attr('stroke-width', 1);
+
+      const seasonLinesG = root.append('g').attr('class', 'season-lines');
+      const seasonLabelsG = root.append('g').attr('class', 'season-labels');
+
+      const hoverG = root.append('g').attr('class', 'hover');
+      const hoverLine = hoverG.append('line')
+        .attr('class', 'hover-line')
+        .attr('stroke', 'rgba(232,240,255,.55)')
+        .attr('stroke-width', 1)
+        .attr('opacity', 0);
+
+      const seriesG = root.append('g').attr('class', 'series');
+      const markersG = root.append('g').attr('class', 'markers');
+
+      const overlay = root.append('rect')
+        .attr('class', 'overlay')
+        .attr('x', padL)
+        .attr('y', padT)
+        .attr('width', W - padL - padR)
+        .attr('height', H - padT - padB)
+        .attr('fill', 'transparent')
+        .style('pointer-events', 'all');
+
+      chartState = { svg, title, desc, root, axis, tickLine, seasonLinesG, seasonLabelsG, hoverLine, hoverG, seriesG, markersG, overlay, xScale, yScale, maxX, minY, maxY };
+    }
+
+    function setTooltip(visible, text, clientX, clientY){
+      if(!chartTooltip) return;
+      if(!visible){
+        chartTooltip.style.display = 'none';
+        return;
+      }
+      chartTooltip.textContent = text;
+      chartTooltip.style.display = 'block';
+
+      const wrap = chartTooltip.parentElement;
+      const r = wrap ? wrap.getBoundingClientRect() : null;
+      if(!r) return;
+      const x = (clientX != null) ? (clientX - r.left) : 20;
+      const y = (clientY != null) ? (clientY - r.top) : 20;
+      const pad = 8;
+      const w = chartTooltip.offsetWidth || 220;
+      const h = chartTooltip.offsetHeight || 60;
+      const left = clamp(x + 12, pad, Math.max(pad, r.width - w - pad));
+      const top = clamp(y + 12, pad, Math.max(pad, r.height - h - pad));
+      chartTooltip.style.left = left + 'px';
+      chartTooltip.style.top = top + 'px';
+    }
+
+    function nearestTeamAtX(mx, my, xVal){
+      let bestTeam = '';
+      let bestDist = Infinity;
+      for(const s of seriesData){
+        const pts = s.pts || [];
+        if(!pts.length) continue;
+        const p = pts[clamp(xVal, 0, pts.length - 1)];
+        const xx = chartState.xScale(p.x);
+        const yy = chartState.yScale(p.y);
+        const dx = Math.abs(xx - mx);
+        const dy = Math.abs(yy - my);
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if(d < bestDist){
+          bestDist = d;
+          bestTeam = s.team;
+        }
+      }
+      return bestTeam;
+    }
+
+    function renderHover(clientX, clientY, mx, my, xVal){
+      chartHoverX = xVal;
+      chartState.hoverLine
+        .attr('x1', mx)
+        .attr('x2', mx)
+        .attr('y1', padT)
+        .attr('y2', H - padB)
+        .attr('opacity', 1);
+
+      const bestTeam = nearestTeamAtX(mx, my, xVal);
+      chartHoverTeam = bestTeam || '';
+      applyHoverHighlight(effectiveHoverTeam());
+
+      if(bestTeam){
+        const pts = seriesByTeam[bestTeam] || [];
+        const p = pts[clamp(xVal, 0, pts.length - 1)] || { x: xVal, y: NaN };
+        const f = (xVal > 0 && fixtures[xVal - 1]) ? fixtures[xVal - 1] : null;
+        const date = (f && f.gamedate) ? f.gamedate : 'date unknown';
+        const seasonLabel = (f && f.season_label) ? f.season_label : (f && f.seasoncode ? seasonLabelFromCode(f.seasoncode) : '?');
+        const text = `${bestTeam}\nFixture ${xVal} / ${fixtures.length} · ${seasonLabel} · ${date}\nElo ${Math.round(p.y || 0)}`;
+        setTooltip(true, text, clientX, clientY);
+      }else{
+        setTooltip(false, '', null, null);
+      }
+    }
+
+    chartState.overlay
+      .on('mousemove', (ev) => {
+        const [mx, my] = d3.pointer(ev);
+        const xVal = clamp(Math.round(chartState.xScale.invert(mx)), 0, chartState.maxX);
+        const cx = chartState.xScale(xVal);
+        renderHover(ev.clientX, ev.clientY, cx, my, xVal);
+      })
+      .on('mouseleave', () => {
+        chartHoverTeam = '';
+        chartHoverX = null;
+        chartState.hoverLine.attr('opacity', 0);
+        setTooltip(false, '', null, null);
+        applyHoverHighlight(effectiveHoverTeam());
+      });
+
+    svg
+      .on('focus', () => {
+        if(chartHoverX == null) chartHoverX = currentIdx;
+        const cx = chartState.xScale(clamp(chartHoverX, 0, chartState.maxX));
+        const my = (padT + (H - padB)) / 2;
+        renderHover(null, null, cx, my, clamp(chartHoverX, 0, chartState.maxX));
+      })
+      .on('blur', () => {
+        chartHoverTeam = '';
+        chartHoverX = null;
+        chartState.hoverLine.attr('opacity', 0);
+        setTooltip(false, '', null, null);
+        applyHoverHighlight(effectiveHoverTeam());
+      })
+      .on('keydown', (ev) => {
+        if(ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+        ev.preventDefault();
+        if(chartHoverX == null) chartHoverX = currentIdx;
+        chartHoverX += (ev.key === 'ArrowRight') ? 1 : -1;
+        chartHoverX = clamp(chartHoverX, 0, chartState.maxX);
+        const cx = chartState.xScale(chartHoverX);
+        const my = (padT + (H - padB)) / 2;
+        renderHover(null, null, cx, my, chartHoverX);
+      });
+
+    // Update state
+    chartState.desc.text(`Selected teams: ${teamsOrdered.join(', ')}. Active team: ${active}.`);
+    chartState.xScale = xScale;
+    chartState.yScale = yScale;
+    chartState.maxX = maxX;
+    chartState.minY = minY;
+    chartState.maxY = maxY;
+
+    chartState.overlay
+      .attr('x', padL)
+      .attr('y', padT)
+      .attr('width', W - padL - padR)
+      .attr('height', H - padT - padB);
+
+    chartState.axis.attr('d', `M ${padL} ${padT} V ${H - padB} H ${W - padR}`);
+
+    const t = chartState.svg.transition().duration(220).ease(d3.easeCubicOut);
+    const cx = xScale(currentIdx);
+    chartState.tickLine
+      .attr('y1', padT)
+      .attr('y2', H - padB)
+      .transition(t)
+      .attr('x1', cx)
+      .attr('x2', cx);
+
+    // Compute per-season midpoints for winner labels
+    const seasonBands = [];
+    if(fixtures && fixtures.length){
+      let curCode = fixtures[0].seasoncode;
+      let xStart = fixtures[0].x;
+      for(let i = 1; i < fixtures.length; i++){
+        if(fixtures[i].seasoncode !== curCode){
+          const xEnd = fixtures[i - 1].x;
+          seasonBands.push({ code: curCode, xMid: (xStart + xEnd) / 2 });
+          curCode = fixtures[i].seasoncode;
+          xStart = fixtures[i].x;
+        }
+      }
+      seasonBands.push({ code: curCode, xMid: (xStart + fixtures[fixtures.length - 1].x) / 2 });
+    }
+
+    const seasonLines = chartState.seasonLinesG
+      .selectAll('line.season-boundary')
+      .data((seasonBoundaryTicks || []).slice(), (d) => String(d));
+
+    seasonLines.join(
+      (enter) => enter.append('line')
+        .attr('class', 'season-boundary')
+        .attr('stroke', 'rgba(151,166,191,.65)')
+        .attr('stroke-dasharray', '4 4')
+        .attr('stroke-width', 1)
+        .attr('y1', padT)
+        .attr('y2', H - padB)
+        .attr('x1', (d) => xScale(d))
+        .attr('x2', (d) => xScale(d))
+        .attr('opacity', 0)
+        .call((enter) => enter.transition(t).attr('opacity', 1)),
+      (update) => update.call((update) => update.transition(t)
+        .attr('y1', padT)
+        .attr('y2', H - padB)
+        .attr('x1', (d) => xScale(d))
+        .attr('x2', (d) => xScale(d))
+        .attr('opacity', 1)
+      ),
+      (exit) => exit.call((exit) => exit.transition(t).attr('opacity', 0).remove())
+    );
+
+    // Season winner labels on chart bands
+    chartState.seasonLabelsG
+      .selectAll('text.season-winner-label')
+      .data(seasonBands, (d) => d.code)
+      .join(
+        (enter) => enter.append('text')
+          .attr('class', 'season-winner-label')
+          .attr('text-anchor', 'middle')
+          .attr('dominant-baseline', 'hanging')
+          .attr('y', (d, i) => padT + 4 + (i % 2) * 14)
+          .attr('fill', 'rgba(200,215,235,.45)')
+          .attr('font-size', '10')
+          .attr('font-family', 'inherit')
+          .attr('pointer-events', 'none')
+          .attr('x', (d) => xScale(d.xMid))
+          .text((d) => { const w = SEASON_WINNERS[d.code]; return w ? teamAlias(w) : ''; })
+          .attr('opacity', 0)
+          .call((e) => e.transition(t).attr('opacity', 1)),
+        (update) => update.call((u) => u.transition(t)
+          .attr('x', (d) => xScale(d.xMid))
+          .attr('y', (d, i) => padT + 4 + (i % 2) * 14)
+          .text((d) => { const w = SEASON_WINNERS[d.code]; return w ? teamAlias(w) : ''; })
+          .attr('opacity', 1)
+        ),
+        (exit) => exit.call((e) => e.transition(t).attr('opacity', 0).remove())
+      );
+
+    const line = d3.line()
+      .x((p) => xScale(p.x))
+      .y((p) => yScale(p.y));
+
+    // Lines: keyed join so existing teams keep identity.
+    const paths = chartState.seriesG
+      .selectAll('path.team-line')
+      .data(seriesData, (d) => d.team);
+
+    paths.join(
+      (enter) => enter.append('path')
+        .attr('class', 'team-line')
+        .attr('fill', 'none')
+        .attr('data-team', (d) => d.team)
+        .attr('opacity', 0)
+        .attr('stroke-width', (d) => (d.team === active ? 3.2 : 2.0))
+        .attr('stroke', (d) => styleFor(d.team).color)
+        .attr('d', (d) => line(d.pts))
+        .each(function(d){
+          const el = d3.select(this);
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.74;
+          const baseStrokeWidth = isActive ? 3.2 : 2.0;
+          const st = styleFor(d.team);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-stroke-width', baseStrokeWidth);
+          if(st.dash){
+            el.attr('stroke-dasharray', st.dash)
+              .attr('stroke-dashoffset', st.dashOffset || 0);
+          }
+        })
+        .call((enter) => enter.transition(t).attr('opacity', (d) => (d.team === active ? 1 : 0.74))),
+      (update) => update
+        .each(function(d){
+          const el = d3.select(this);
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.74;
+          const baseStrokeWidth = isActive ? 3.2 : 2.0;
+          const st = styleFor(d.team);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-stroke-width', baseStrokeWidth);
+          if(st.dash){
+            el.attr('stroke-dasharray', st.dash)
+              .attr('stroke-dashoffset', st.dashOffset || 0);
+          }else{
+            el.attr('stroke-dasharray', null)
+              .attr('stroke-dashoffset', null);
+          }
+        })
+        .call((update) => update.transition(t)
+          .attr('stroke', (d) => styleFor(d.team).color)
+          .attr('stroke-width', (d) => (d.team === active ? 3.2 : 2.0))
+          .attr('opacity', (d) => (d.team === active ? 1 : 0.74))
+          .attr('d', (d) => line(d.pts))
+        ),
+      (exit) => exit.call((exit) => exit.transition(t).attr('opacity', 0).remove())
+    );
+
+    // Markers: keyed join, animate position and size.
+    const symbolTypes = {
+      circle: d3.symbolCircle,
+      square: d3.symbolSquare,
+      triangle: d3.symbolTriangle,
+      diamond: d3.symbolDiamond,
+      cross: d3.symbolCross,
+    };
+
+    const markers = chartState.markersG
+      .selectAll('path.team-marker')
+      .data(seriesData, (d) => d.team);
+
+    markers.join(
+      (enter) => enter.append('path')
+        .attr('class', 'team-marker')
+        .attr('data-team', (d) => d.team)
+        .attr('opacity', 0)
+        .attr('fill', (d) => styleFor(d.team).color)
+        .attr('stroke', 'rgba(16,24,38,.9)')
+        .attr('stroke-width', 2)
+        .each(function(d){
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.78;
+          const baseStrokeWidth = 2;
+          const el = d3.select(this);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-fill-opacity', baseOpacity)
+            .attr('data-base-stroke-width', baseStrokeWidth);
+        })
+        .attr('transform', (d) => {
+          const pts = d.pts || [];
+          const p = pts[clamp(currentIdx, 0, pts.length - 1)] || { x: 0, y: 0 };
+          return `translate(${xScale(p.x)},${yScale(p.y)})`;
+        })
+        .attr('d', (d) => {
+          const st = styleFor(d.team);
+          const isActive = d.team === active;
+          const r = isActive ? 4.6 : 3.6;
+          const sym = d3.symbol().type(symbolTypes[st.marker] || d3.symbolCircle).size((r * 2.2) * (r * 2.2));
+          return sym();
+        })
+        .call((enter) => enter.transition(t).attr('opacity', (d) => (d.team === active ? 1 : 0.78))),
+      (update) => update
+        .each(function(d){
+          const isActive = d.team === active;
+          const baseOpacity = isActive ? 1 : 0.78;
+          const el = d3.select(this);
+          el.attr('data-base-opacity', baseOpacity)
+            .attr('data-base-fill-opacity', baseOpacity)
+            .attr('data-base-stroke-width', 2);
+        })
+        .call((update) => update.transition(t)
+          .attr('fill', (d) => styleFor(d.team).color)
+          .attr('opacity', (d) => (d.team === active ? 1 : 0.78))
+          .attr('transform', (d) => {
+            const pts = d.pts || [];
+            const p = pts[clamp(currentIdx, 0, pts.length - 1)] || { x: 0, y: 0 };
+            return `translate(${xScale(p.x)},${yScale(p.y)})`;
+          })
+          .attr('d', (d) => {
+            const st = styleFor(d.team);
+            const isActive = d.team === active;
+            const r = isActive ? 4.6 : 3.6;
+            const sym = d3.symbol().type(symbolTypes[st.marker] || d3.symbolCircle).size((r * 2.2) * (r * 2.2));
+            return sym();
+          })
+        ),
+      (exit) => exit.call((exit) => exit.transition(t).attr('opacity', 0).remove())
+    );
+
+    applyHoverHighlight(effectiveHoverTeam());
+
+    yRangeEl.textContent = `Elo range (chart): ${Math.round(minY)} – ${Math.round(maxY)}`;
+    xRangeEl.textContent = `Fixtures: 0 – ${maxX}`;
+    persistPageState();
+  }
+
+  function seriesForTeam(team, t){
+    const init = initialRating(team);
+    const pts = [{ x: 0, y: init }];
+    const n = Math.max(0, Math.min(t, fixtures.length));
+    for(let i=1;i<=n;i++){
+      const snap = fixtureSnapshots[i - 1] || {};
+      const curr = (snap[team] != null) ? snap[team] : init;
+      pts.push({ x: i, y: curr });
+    }
+    return pts;
+  }
+
+  function render(){
+    if(!elo) return;
+
+    const selectedTeams = Array.from(selectedSet);
+    if(selectedTeams.length > WARN_COMPARE){
+      setCompareTip(`Comparing ${selectedTeams.length} teams. Tip: hover chips to spotlight a team.`, 'warn');
+    }else if(selectedTeams.length > 1){
+      if(compareTapMode){
+        setCompareTip(`Tap rows to add/remove teams (up to ${MAX_COMPARE}).`, '');
+      }else{
+        setCompareTip(`Tip: Ctrl/Cmd+click teams in the rank list to compare (up to ${MAX_COMPARE}).`, '');
+      }
+    }else{
+      if(compareTapMode){
+        setCompareTip('Tap rows to add/remove teams. Turn off Tap compare for single-select mode.', '');
+      }else{
+        setCompareTip('Tip: Ctrl/Cmd+click teams in the rank list to compare.', '');
+      }
+    }
+    if(!selectedTeams.length){
+      selectedTeams.push(teamSelect.value || teams[0]);
+      selectedSet = new Set(selectedTeams);
+    }
+
+    if(!activeTeam) activeTeam = teamSelect.value || selectedTeams[0];
+    if(!selectedSet.has(activeTeam)) activeTeam = selectedTeams[0];
+    teamSelect.value = activeTeam;
+
+    ensureStylesForSelectedTeams(selectedTeams);
+
+    const ratings = computeRatingsAt(tick);
+    const rows = rankRows(ratings);
+
+    clearTable();
+
+    const active = activeTeam;
+    rows.forEach((r, idx) => {
+      const tr = document.createElement('div');
+      const isSelected = selectedSet.has(r.team);
+      const isActive = r.team === active;
+      tr.className = 'tr' + (isSelected ? ' selected' : '') + (isActive ? ' active' : '');
+
+      tr.tabIndex = 0;
+      tr.setAttribute('role', 'button');
+      tr.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      tr.setAttribute('aria-label', `${r.team}. Rank ${idx + 1}. Elo ${Math.round(r.elo)}.`);
+
+      const rank = document.createElement('div');
+      rank.className = 'rank';
+      rank.textContent = String(idx + 1);
+
+      const name = document.createElement('div');
+      name.textContent = r.team;
+
+      const eloCell = document.createElement('div');
+      eloCell.className = 'elo';
+      eloCell.textContent = String(Math.round(r.elo));
+
+      tr.appendChild(rank);
+      tr.appendChild(name);
+      tr.appendChild(eloCell);
+
+      tr.addEventListener('click', (ev) => {
+        const multi = !!(compareTapMode || (ev && (ev.ctrlKey || ev.metaKey)));
+        if(multi) toggleTeam(r.team);
+        else soloTeam(r.team);
+      });
+
+      tr.addEventListener('keydown', (ev) => {
+        if(ev.key === 'Enter' || ev.key === ' '){
+          ev.preventDefault();
+          const multi = !!(compareTapMode || (ev && (ev.ctrlKey || ev.metaKey || ev.shiftKey)));
+          if(multi) toggleTeam(r.team);
+          else soloTeam(r.team);
+        }
+      });
+
+      rankTable.appendChild(tr);
+    });
+
+    // Compare chips
+    if(compareChips){
+      compareChips.innerHTML = '';
+      selectedTeams.forEach((team) => {
+        const style = styleFor(team);
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.tabIndex = 0;
+        chip.setAttribute('role', 'button');
+        chip.setAttribute('aria-label', `${team}. ${team === active ? 'Active team.' : 'Set active team.'}`);
+
+        chip.addEventListener('keydown', (ev) => {
+          if(ev.key === 'Enter' || ev.key === ' '){
+            ev.preventDefault();
+            activeTeam = team;
+            teamSelect.value = team;
+            render();
+          }
+        });
+
+        chip.addEventListener('mouseenter', () => { chipHoverTeam = team; applyHoverHighlight(effectiveHoverTeam()); });
+        chip.addEventListener('mouseleave', () => { chipHoverTeam = ''; applyHoverHighlight(effectiveHoverTeam()); });
+        chip.addEventListener('focus', () => { chipHoverTeam = team; applyHoverHighlight(effectiveHoverTeam()); });
+        chip.addEventListener('blur', () => { chipHoverTeam = ''; applyHoverHighlight(effectiveHoverTeam()); });
+
+        const sw = document.createElement('span');
+        sw.className = 'sw';
+        const swSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        swSvg.setAttribute('width', '44');
+        swSvg.setAttribute('height', '14');
+        swSvg.setAttribute('viewBox', '0 0 44 14');
+
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        line.setAttribute('d', 'M 2 7 H 38');
+        line.setAttribute('fill', 'none');
+        line.setAttribute('stroke', style.color);
+        line.setAttribute('stroke-width', team === active ? '3' : '2');
+        if(style.dash){
+          line.setAttribute('stroke-dasharray', style.dash);
+          line.setAttribute('stroke-dashoffset', String(style.dashOffset || 0));
+        }
+        swSvg.appendChild(line);
+
+        const cx = 38;
+        const cy = 7;
+        const r = team === active ? 3.2 : 2.8;
+        const stroke = 'rgba(16,24,38,.9)';
+
+        function addSwMarker(shape){
+          if(shape === 'circle'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            el.setAttribute('cx', String(cx));
+            el.setAttribute('cy', String(cy));
+            el.setAttribute('r', String(r));
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          if(shape === 'square'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            el.setAttribute('x', String(cx - r));
+            el.setAttribute('y', String(cy - r));
+            el.setAttribute('width', String(r * 2));
+            el.setAttribute('height', String(r * 2));
+            el.setAttribute('rx', '1');
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          if(shape === 'triangle'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            el.setAttribute('d', `M ${cx} ${cy - r} L ${cx + r} ${cy + r} L ${cx - r} ${cy + r} Z`);
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          if(shape === 'diamond'){
+            const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            el.setAttribute('d', `M ${cx} ${cy - r} L ${cx + r} ${cy} L ${cx} ${cy + r} L ${cx - r} ${cy} Z`);
+            el.setAttribute('fill', style.color);
+            el.setAttribute('stroke', stroke);
+            el.setAttribute('stroke-width', '2');
+            return el;
+          }
+          const el = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          el.setAttribute('d', `M ${cx - r} ${cy - r} L ${cx + r} ${cy + r} M ${cx + r} ${cy - r} L ${cx - r} ${cy + r}`);
+          el.setAttribute('fill', 'none');
+          el.setAttribute('stroke', style.color);
+          el.setAttribute('stroke-width', '2.4');
+          el.setAttribute('stroke-linecap', 'round');
+          return el;
+        }
+
+        swSvg.appendChild(addSwMarker(style.marker));
+        sw.appendChild(swSvg);
+
+        const label = document.createElement('span');
+        label.textContent = team;
+        label.style.cursor = 'pointer';
+        label.addEventListener('click', () => { activeTeam = team; teamSelect.value = team; render(); });
+
+        const x = document.createElement('button');
+        x.className = 'x';
+        x.textContent = '×';
+        x.title = 'Remove from compare';
+        x.addEventListener('click', (e) => { e.stopPropagation(); toggleTeam(team); });
+
+        chip.appendChild(sw);
+        chip.appendChild(label);
+        chip.appendChild(x);
+        compareChips.appendChild(chip);
       });
     }
 
-    return copy;
-  }
+    const rankIdx = rows.findIndex(r => r.team === active);
+    const myRank = rankIdx >= 0 ? (rankIdx + 1) : 0;
+    const myElo = (ratings[active] != null) ? ratings[active] : initialRating();
 
-  async function resolveGameFile(g){
-    const rawPath = `${processedBase}/${g.file}`;
-    if(!anchorMode || !selectedTeam) return rawPath;
+    asOfPillEl.textContent = asOfText();
+    tickLabel.textContent = tickText();
 
-    const key = `${rawPath}|${selectedTeam}`;
-    if(normalizedCache.has(key)) return normalizedCache.get(key);
-
-    const response = await fetch(rawPath);
-    const bundle = await response.json();
-    const normalized = normalizeBundleForAnchor(bundle, selectedTeam);
-    const blob = new Blob([JSON.stringify(normalized)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    normalizedCache.set(key, url);
-    return url;
-  }
-
-  function setHead(anchorTeam, oppTeam, game){
-    if(chipAnchor) chipAnchor.classList.add("fade-step");
-    if(chipOpp) chipOpp.classList.add("fade-step");
-    gameMeta.classList.add("fade-step");
-    if(gameHomeAway) gameHomeAway.classList.add("fade-step");
-    window.setTimeout(() => {
-      const anchored = !!(anchorMode && selectedTeam);
-      if(headChips) headChips.style.display = anchored ? "flex" : "none";
-      if(chipAnchor) chipAnchor.textContent = `Anchor: ${anchorTeam || "--"}`;
-      if(chipOpp) chipOpp.textContent = `Opponent: ${oppTeam || "--"}`;
-
-      const title = game ? `${game.seasoncode || "?"} / ${game.gamecode || "?"}` : "--";
-      const date = game ? (game.gamedate || "date unknown") : "--";
-      const matchup = game ? `${game.team_a || "--"} vs ${game.team_b || "--"}` : "--";
-      gameMeta.textContent = `${title} · ${date} · ${matchup}`;
-
-      if(gameHomeAway){
-        const home = game ? gameHomeTeam(game) : "--";
-        const away = game ? gameAwayTeam(game) : "--";
-        gameHomeAway.textContent = `Home ${home} · Away ${away}`;
-      }
-      if(chipAnchor) chipAnchor.classList.remove("fade-step");
-      if(chipOpp) chipOpp.classList.remove("fade-step");
-      gameMeta.classList.remove("fade-step");
-      if(gameHomeAway) gameHomeAway.classList.remove("fade-step");
-    }, 120);
-  }
-
-  function currentAnchorForGame(g){
-    if(!g) return "";
-    if(anchorMode && selectedTeam) return selectedTeam;
-    return "";
-  }
-
-  function currentOppForGame(g){
-    if(!g) return "";
-    const anchor = currentAnchorForGame(g);
-    if(!anchor) return "";
-    if(g.team_a === anchor) return g.team_b || "";
-    if(g.team_b === anchor) return g.team_a || "";
-    return g.team_b || "";
-  }
-
-  async function loadSelectedGame(){
-    if(!selectedGame) return;
-    // If the iframe hasn't finished loading yet, defer until its load event fires.
-    if(!viewerReady){
-      pendingLoad = true;
-      return;
+    if(selectedTeams.length <= 1){
+      teamTitle.textContent = active;
+    }else{
+      teamTitle.textContent = `Comparing ${selectedTeams.length} teams (active: ${active})`;
     }
-    const anchor = currentAnchorForGame(selectedGame);
-    const opp = currentOppForGame(selectedGame);
-    setHead(anchor, opp, selectedGame);
+    teamSubtitle.textContent = `Rank: ${myRank}/${rows.length} · Elo: ${Math.round(myElo)} · Fixtures: ${tick}/${fixtures.length} · Games: ${gamesAppliedAtTick(tick)}/${history.length}`;
 
-    if(coneFrame && selectedGame){
-      const season = encodeURIComponent(selectedGame.seasoncode || "");
-      const gamecode = encodeURIComponent(selectedGame.gamecode || "");
-      coneFrame.src = `./score-diff-v2.html?season=${season}&game=${gamecode}&lockMode=1&mode=points`;
-      if(coneMeta) coneMeta.textContent = `${selectedGame.seasoncode || "?"} / ${selectedGame.gamecode || "?"}`;
-    }
+    const seriesByTeam = {};
+    selectedTeams.forEach((t) => { seriesByTeam[t] = seriesForTeam(t, tick); });
+    const pts0 = seriesByTeam[active] || [];
+    drawChartMulti(seriesByTeam, active, Math.max(0, pts0.length - 1));
 
-    viewer.classList.add("loading");
-    const file = await resolveGameFile(selectedGame);
-    const params = modeParams(selectedMode);
-    // Prefer sending a postMessage to the iframe so the viewer can fetch and
-    // morph in-place (no full iframe reload). Fall back to setting src if
-    // the iframe isn't ready to receive postMessage.
-    try{
-      if(viewer && viewer.contentWindow && typeof viewer.contentWindow.postMessage === 'function'){
-        viewer.contentWindow.postMessage({ type: 'loadBundle', url: file, params: params, swipeNavEnabled: swipeNavEnabled }, '*');
-      } else {
-        // Fallback: set src (keeps older behavior)
-        viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
-      }
-    }catch(e){
-      // On any failure, fallback to setting src
-      viewer.src = `./game-flow-viewer.html?file=${encodeURIComponent(file)}&${params}`;
-    }
-  }
-
-  viewer.addEventListener("load", () => {
-    viewer.classList.remove("loading");
-    viewerReady = true;
-    // Flush any game load that was requested before the iframe was ready.
-    if(pendingLoad){
-      pendingLoad = false;
-      loadSelectedGame();
-    }
-  });
-
-  // Listen for bundleLoaded messages from the iframe (used when we postMessage
-  // the iframe to load a bundle so it can do an in-place morph without reloading).
-  window.addEventListener('message', (ev) => {
-    try{
-      const msg = ev && ev.data;
-      if(!msg || !msg.type) return;
-      if(msg.type === 'bundleLoaded'){
-        viewer.classList.remove('loading');
-        syncSwipeNavToViewer();
-        return;
-      }
-      if(msg.type === 'navigateGameDelta'){
-        if(!swipeNavEnabled || !isMobileViewport()) return;
-        const delta = Number(msg.delta || 0);
-        if(delta > 0) navigateGameByDelta(1);
-        if(delta < 0) navigateGameByDelta(-1);
-      }
-    }catch(e){ /* ignore */ }
-  });
-
-  function renderGames(){
-    const rows = getFilteredRows();
-    filteredRows = rows;
-
-    gamesEl.innerHTML = "";
-    if(!rows.length){
-      gamesEl.textContent = "No games available for current filter.";
-      selectedGame = null;
-      if(resultCountEl) resultCountEl.textContent = "0 games";
-      return;
-    }
-
-    if(resultCountEl) resultCountEl.textContent = `${rows.length} game${rows.length === 1 ? "" : "s"}`;
-
-    const hasSelected = !!(selectedGame && rows.some((g) => g.file === selectedGame.file));
-    if(!hasSelected) selectedGame = rows[0];
-
-    rows.forEach((g) => {
-      const row = document.createElement("div");
-      row.className = "game-row";
-      row.dataset.file = g.file || "";
-      const anchor = anchorMode && selectedTeam ? selectedTeam : (g.team_a || "?");
-      const opp = anchor === g.team_a ? (g.team_b || "?") : (anchor === g.team_b ? (g.team_a || "?") : (g.team_b || "?"));
-      const eloA = g.elo_a != null ? `<span class="elo-badge">★${Math.round(g.elo_a)}</span>` : "";
-      const eloB = g.elo_b != null ? `<span class="elo-badge">★${Math.round(g.elo_b)}</span>` : "";
-      const home = gameHomeTeam(g);
-      const away = gameAwayTeam(g);
-      row.innerHTML = `<div class="g-title">${g.seasoncode || "?"} / ${g.gamecode || "?"}</div><div class="g-meta">${g.team_a || "?"}${eloA} vs ${g.team_b || "?"}${eloB}</div><div class="g-meta">${g.gamedate || "date unknown"} · Home ${home} · Away ${away}</div><div class="pill">Anchor ${anchor} · Opp ${opp}</div>`;
-      row.addEventListener("click", async () => {
-        selectedGame = g;
-        document.querySelectorAll(".game-row").forEach((el) => el.classList.remove("active"));
-        row.classList.add("active");
-        await loadSelectedGame();
+    if(srStatus){
+      const parts = selectedTeams.map(t => {
+        const rnk = 1 + rows.findIndex(r => r.team === t);
+        const v = ratings[t];
+        const tag = (t === active) ? ' (active)' : '';
+        return `${t}: rank ${rnk}, Elo ${Math.round(v)}${tag}`;
       });
-      gamesEl.appendChild(row);
-      if(selectedGame && g.file === selectedGame.file) row.classList.add("active");
-    });
-
-    loadSelectedGame();
+      srStatus.setAttribute('aria-live', playing ? 'off' : 'polite');
+      srStatus.textContent = `${asOfText()}. ${tickText()}. Selected: ${parts.join('. ')}.`;
+    }
   }
 
-  function renderTeamSelect(){
-    const teams = Array.from(new Set(entries.flatMap((g) => [g.team_a, g.team_b]).filter(Boolean))).sort();
-    teamSelect.innerHTML = teams.map((t) => `<option value=\"${t}\">${t}</option>`).join("");
-    selectedTeam = teams[0] || "";
-    teamSelect.value = selectedTeam;
+  async function init(){
+    clearError();
+    setSeasonWarning('');
+
+    const requestedSeasoncodes = parseSeasoncodesFromQuery();
+    const defaultSeasoncode = requestedSeasoncodes[0] || 'E2025';
+
+    const eloFile = resolveEloFilePath();
+    try{
+      const resp = await fetch(eloFile);
+      if(!resp.ok) throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
+      elo = await resp.json();
+    }catch(err){
+      showError(`Failed to load Elo JSON\n\nExpected: ${eloFile}\n\n${String(err)}`);
+      return;
+    }
+
+    rawHistory = Array.isArray(elo.history) ? elo.history.slice() : [];
+    fullTimelineCache = null;
+    if(!rawHistory.length){
+      showError('Elo file loaded but contains no history.');
+      return;
+    }
+
+    const payloadSeasoncodes = Array.isArray(elo.seasoncodes)
+      ? elo.seasoncodes.map(s => String(s || '').trim()).filter(Boolean)
+      : [];
+
+    if(payloadSeasoncodes.length){
+      rawHistory = rawHistory.map((h) => {
+        const code = String(h && h.seasoncode || '').trim();
+        const seasoncode = code || payloadSeasoncodes[0];
+        return Object.assign({}, h, {
+          seasoncode,
+          season_label: String(h && h.season_label || seasonLabelFromCode(seasoncode)),
+        });
+      });
+      allSeasoncodes = payloadSeasoncodes.slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+    }else{
+      const single = defaultSeasoncode;
+      rawHistory = rawHistory.map((h) => Object.assign({}, h, {
+        seasoncode: String(h && h.seasoncode || single),
+        season_label: String(h && h.season_label || seasonLabelFromCode(single)),
+      }));
+      allSeasoncodes = Array.from(new Set(rawHistory.map(h => String(h.seasoncode || ''))))
+        .filter(Boolean)
+        .sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+    }
+
+    if(!allSeasoncodes.length){
+      showError('Unable to infer seasons from Elo history.');
+      return;
+    }
+
+    const storedPageState = readStoredPageState();
+    const storedSeasoncodes = Array.isArray(storedPageState && storedPageState.selectedSeasoncodes)
+      ? storedPageState.selectedSeasoncodes.filter((s) => allSeasoncodes.includes(s))
+      : [];
+    const requestedValid = requestedSeasoncodes.filter((s) => allSeasoncodes.includes(s));
+    if(requestedValid.length && areConsecutiveSeasoncodes(requestedValid)){
+      selectedSeasoncodes = requestedValid.slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+    }else if(storedSeasoncodes.length && areConsecutiveSeasoncodes(storedSeasoncodes)){
+      selectedSeasoncodes = storedSeasoncodes.slice().sort((a,b) => (seasonYear(a) || 0) - (seasonYear(b) || 0));
+    }else if(areConsecutiveSeasoncodes(allSeasoncodes)){
+      selectedSeasoncodes = allSeasoncodes.slice();
+    }else{
+      selectedSeasoncodes = [allSeasoncodes[0]];
+      setSeasonWarning('Stored seasons are not fully consecutive, so the UI starts from the first available season only.');
+    }
+
+    selectedSet = new Set();
+    activeTeam = '';
+
+    if(storedPageState && typeof storedPageState.preserveHistoricalBaseline === 'boolean'){
+      preserveHistoricalBaseline = !!storedPageState.preserveHistoricalBaseline;
+    }
+    if(storedPageState){
+      globalInitialSeed = parseMaybeNumber(storedPageState.globalInitialSeed);
+    }
+    if(teamSeedOverridesEl && storedPageState && typeof storedPageState.teamSeedOverridesText === 'string'){
+      teamSeedOverridesEl.value = storedPageState.teamSeedOverridesText;
+    }
+    teamSeedOverrides = parseTeamSeedOverridesText(teamSeedOverridesEl && teamSeedOverridesEl.value);
+
+    if(globalSeedInput){
+      const initial = globalInitialSeed != null ? globalInitialSeed : initialRating('');
+      globalSeedInput.value = String(Math.round(initial));
+    }
+
+    if(preserveBaselineToggle){
+      preserveBaselineToggle.checked = preserveHistoricalBaseline;
+      preserveBaselineToggle.addEventListener('change', () => {
+        preserveHistoricalBaseline = !!preserveBaselineToggle.checked;
+        stop();
+        applySeasonSelection(true);
+      });
+    }
+
+    if(applySeedsBtn){
+      applySeedsBtn.addEventListener('click', () => {
+        const g = parseMaybeNumber(globalSeedInput && globalSeedInput.value);
+        globalInitialSeed = g;
+        teamSeedOverrides = parseTeamSeedOverridesText(teamSeedOverridesEl && teamSeedOverridesEl.value);
+        fullTimelineCache = null;
+        stop();
+        applySeasonSelection(true);
+      });
+    }
+
+    renderSeasonFilters();
+    applySeasonSelection(true);
+    if(!teams.length) return;
+    applyInitialPageState(storedPageState);
+
+    teamSelect.addEventListener('change', () => setSelectedTeam(teamSelect.value));
+    tickRange.addEventListener('input', () => {
+      stop();
+      setTick(parseInt(tickRange.value, 10) || 0);
+    });
+    playBtn.addEventListener('click', togglePlay);
+    endBtn.addEventListener('click', () => { stop(); setTick(fixtures.length); });
+
+    if(compareModeBtn){
+      compareModeBtn.addEventListener('click', () => {
+        setCompareMode(!compareTapMode);
+        render();
+      });
+    }
+
+    if(clearBtn){
+      clearBtn.addEventListener('click', () => {
+        stop();
+        const preferred = teams.find(t => t.includes('Olympiacos')) || teams[0];
+        const solo = activeTeam || preferred;
+        selectedSet = new Set([solo]);
+        render();
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if(e.key === ' '){
+        e.preventDefault();
+        togglePlay();
+      }
+      if(e.key === 'ArrowLeft'){
+        e.preventDefault();
+        stop();
+        setTick(tick - 1);
+      }
+      if(e.key === 'ArrowRight'){
+        e.preventDefault();
+        stop();
+        setTick(tick + 1);
+      }
+    });
+
+    render();
+
+    function initEloHelpPopover(){
+      if(!eloHelpToggle || !eloHelpPopover) return;
+      let isOpen = false;
+
+      const close = () => {
+        isOpen = false;
+        eloHelpPopover.style.display = 'none';
+        eloHelpToggle.setAttribute('aria-expanded', 'false');
+      };
+
+      const open = () => {
+        isOpen = true;
+        eloHelpPopover.style.display = 'block';
+        eloHelpToggle.setAttribute('aria-expanded', 'true');
+      };
+
+      eloHelpToggle.setAttribute('aria-expanded', 'false');
+      eloHelpToggle.addEventListener('click', () => {
+        if(isOpen) close();
+        else open();
+      });
+
+      // Close on any click anywhere on the page.
+      document.addEventListener('click', (e) => {
+        const target = e && e.target;
+        if(target && (eloHelpToggle.contains(target) || eloHelpPopover.contains(target))) return;
+        if(isOpen) close();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && isOpen) close();
+      });
+    }
+
+    initEloHelpPopover();
   }
 
-  modeBtns.forEach((btn) => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
-  scopeAllBtn.addEventListener("click", () => setScope(false));
-  scopeAnchorBtn.addEventListener("click", () => setScope(true));
-  teamSelect.addEventListener("change", () => {
-    selectedTeam = teamSelect.value;
-    renderGames();
-  });
-  if(seasonFilterEl){
-    seasonFilterEl.addEventListener("change", () => {
-      selectedSeasonFilter = seasonFilterEl.value || "all";
-      renderGames();
-    });
-  }
-  if(teamFilterEl){
-    teamFilterEl.addEventListener("change", () => {
-      selectedTeamFilter = teamFilterEl.value || "all";
-      renderGames();
-    });
-  }
-  if(searchFilterEl){
-    searchFilterEl.addEventListener("input", () => {
-      searchFilterText = String(searchFilterEl.value || "");
-      renderGames();
-    });
-  }
-  if(showTypeNodesEl){
-    showTypeNodesEl.addEventListener("change", () => {
-      if(selectedGame) loadSelectedGame();
-    });
-  }
-  if(swipeNavToggleEl){
-    swipeNavToggleEl.addEventListener("change", () => {
-      if(isMobileViewport()){
-        swipeNavEnabled = true;
-        applySwipeNavUiState();
-        return;
-      }
-      swipeNavEnabled = !!swipeNavToggleEl.checked;
-      persistSwipeNavEnabled();
-      applySwipeNavUiState();
-    });
-  }
-  if(prevGameBtn){
-    prevGameBtn.addEventListener("click", async () => {
-      await navigateGameByDelta(-1);
-    });
-  }
-  if(nextGameBtn){
-    nextGameBtn.addEventListener("click", async () => {
-      await navigateGameByDelta(1);
-    });
-  }
-  window.addEventListener("resize", applySwipeNavUiState);
-
-  bindSwipeNavigation();
-  restoreSwipeNavEnabled();
-
-  fetchJsonFromProcessedBase(manifestFile)
-    .then((data) => {
-      if(!Array.isArray(data) || !data.length){
-        gamesEl.textContent = "No games found. Generate data first.";
-        return;
-      }
-      entries = data;
-      renderTeamSelect();
-      renderFilterOptions();
-      const initialTeam = qs.get("anchorTeam");
-      if(initialTeam && Array.from(teamSelect.options).some((o) => o.value === initialTeam)){
-        selectedTeam = initialTeam;
-        teamSelect.value = initialTeam;
-      }
-      const initialScope = (qs.get("scope") || "").toLowerCase();
-      if(initialScope === "anchor" || initialScope === "anchored"){
-        setScope(true);
-      }
-      const initialMode = (qs.get("mode") || "").toLowerCase();
-      if(["core", "explode", "replay"].includes(initialMode)){
-        setMode(initialMode);
-      }
-      renderGames();
-    })
-    .catch(() => {
-      gamesEl.textContent = `Failed to load ${manifestFile}`;
-    });
+  init();
 })();
 </script>
 </body>

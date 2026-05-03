@@ -22,15 +22,23 @@
 clubs:
 
   - name: 'ALBA Berlin'
+    alias: 'ALBA'
+    abbreviation: 'ALB'
     registered_names_historically: []
 
   - name: 'Anadolu Efes Istanbul'
+    alias: 'Efes'
+    abbreviation: 'EFS'
     registered_names_historically: []
 
   - name: 'AS Monaco'
+    alias: 'Monaco'
+    abbreviation: 'MON'
     registered_names_historically: []
 
   - name: 'Baskonia Vitoria-Gasteiz'
+    alias: 'Baskonia'
+    abbreviation: 'BAS'
     registered_names_historically:
       - Cazoo Baskonia Vitoria-Gasteiz  # Cazoo car marketplace sponsor era
       - Cazoo                           # truncated API artefact, same sponsor era
@@ -43,78 +51,116 @@ clubs:
       - 'Baskonia Vitoria Gasteiz'
 
   - name: 'Brose Bamberg'
+    alias: 'Bamberg'
+    abbreviation: 'BAM'
     registered_names_historically: []
   
   - name: 'Buducnost VOLI Podgorica'
+    alias: 'Buducnost'
+    abbreviation: 'BUD'
     registered_names_historically: []
 
   - name: 'CSKA Moscow'
+    alias: 'CSKA'
+    abbreviation: 'CSK'
     registered_names_historically: []
 
   - name: 'Crvena Zvezda Belgrade'
+    alias: 'Crvena Zvezda'
+    abbreviation: 'CZV'
     registered_names_historically:
       - 'Crvena Zvezda mts Belgrade'           # mts telecom sponsor era
       - 'Crvena Zvezda Meridianbet Belgrade'   # Meridianbet sponsor era
       - 'Crvena Zvezda Meridian Belgrade'
 
   - name: 'Darussafaka Tekfen Istanbul'
+    alias: 'Darussafaka'
+    abbreviation: 'DAR'
     registered_names_historically:
       - 'Darussafaka Istanbul'  # Tekfen construction sponsor era (E2022-E2024) dropped in E2025
 
   - name: 'Dubai Basketball'
+    alias: 'Dubai'
+    abbreviation: 'DUB'
     registered_names_historically: []
 
   - name: 'EA7 Emporio Armani Milan'
+    alias: 'Olimpia Milano'
+    abbreviation: 'MIL'
     registered_names_historically:
       - 'AX Armani Exchange Milan'
       - 'AX Armani Exchange Olimpia Milan'
 
   - name: 'FC Barcelona'
+    alias: 'Barcelona'
+    abbreviation: 'BAR'
     registered_names_historically:
       - 'FC Barcelona Lassa'    # Lassa Tyres sponsor era (E2022-E2024)
 
   - name: 'FC Bayern Munich'
+    alias: 'Bayern'
+    abbreviation: 'BAY'
     registered_names_historically: []
 
   - name: 'FB Dogus'
+    alias: 'FB Dogus'
+    abbreviation: 'FBD'
     registered_names_historically:
       - 'Darussafaka Dogus Istanbul'
 
   - name: 'Fenerbahce Beko Istanbul'
+    alias: 'Fenerbahce'
+    abbreviation: 'FNR'
     registered_names_historically:
       - 'Fenerbahce BEKO Istanbul'
       - 'Fenerbahce Dogus Istanbul'
       - 'Fenerbahce Istanbul'
 
   - name: 'Galatasaray Odeabank Istanbul'
+    alias: 'Galatasaray'
+    abbreviation: 'GAL'
     registered_names_historically:
       - 'Galatasaray Istanbul' # Odeabank sponsor era (E2022-E2024) dropped in E2025
 
   - name: 'Hapoel IBI Tel Aviv'
+    alias: 'Hapoel'
+    abbreviation: 'HAP'
     registered_names_historically: []
   
   - name: 'Herbalife Gran Canaria'
+    alias: 'Gran Canaria'
+    abbreviation: 'GCA'
     registered_names_historically: []
 
   - name: 'Khimki Moscow Region'
+    alias: 'Khimki'
+    abbreviation: 'KHI'
     registered_names_historically: []
 
   - name: 'LDLC ASVEL Villeurbanne'
+    alias: 'ASVEL'
+    abbreviation: 'ASV'
     registered_names_historically:
       - 'LDLC'    # truncated name in older API responses (E2022)
       - 'LDLC ASVEL Villeurbanne ASVEL Villeurbanne'
       - 'LDLC ASVEL Villeurbanne ASVEL Villeurbanne'
 
   - name: 'Maccabi Tel Aviv'
+    alias: 'Maccabi'
+    abbreviation: 'MAC'
     registered_names_historically:
       - 'Maccabi Rapyd Tel Aviv'       # Rapyd fintech sponsor era (E2025)
       - 'Maccabi Playtika Tel Aviv'    # Playtika gaming sponsor era (E2022-E2024)
       - 'Maccabi FOX Tel Aviv'
 
   - name: 'Olympiacos Piraeus'
+    alias: 'Olympiacos'
+    abbreviation: 'OLY'
     registered_names_historically: []
 
   - name: 'Panathinaikos Athens'
+    alias: 'Panathinaikos'
+    abbreviation: 'PAN'
     registered_names_historically:
       - 'Panathinaikos AKTOR Athens'   # AKTOR construction sponsor era (E2023+)
       - 'Panathinaikos BC'
@@ -122,30 +168,48 @@ clubs:
       - 'Panathinaikos Superfoods Athens'
 
   - name: 'Paris Basketball'
+    alias: 'Paris'
+    abbreviation: 'PAR'
     registered_names_historically: []
 
   - name: 'Partizan Mozzart Bet Belgrade'
+    alias: 'Partizan'
+    abbreviation: 'PAZ'
     registered_names_historically: []
 
   - name: 'Real Madrid'
+    alias: 'Real Madrid'
+    abbreviation: 'RMA'
     registered_names_historically: []
 
   - name: 'Unicaja Malaga'
+    alias: 'Unicaja'
+    abbreviation: 'UNI'
     registered_names_historically: []
 
   - name: 'UNICS Kazan'
+    alias: 'UNICS'
+    abbreviation: 'UNC'
     registered_names_historically:
       - 'Unics Kazan'
   
   - name: 'Valencia Basket'
+    alias: 'Valencia'
+    abbreviation: 'VAL'
     registered_names_historically: []
 
   - name: 'Virtus Bologna'
+    alias: 'Virtus'
+    abbreviation: 'VIR'
     registered_names_historically:
       - 'Virtus Segafredo Bologna'   # Segafredo coffee sponsor era (E2022-E2023)
 
   - name: 'Zalgiris Kaunas'
+    alias: 'Zalgiris'
+    abbreviation: 'ZAL'
     registered_names_historically: []
 
   - name: 'Zenit St Petersburg'
+    alias: 'Zenit'
+    abbreviation: 'ZEN'
     registered_names_historically: []

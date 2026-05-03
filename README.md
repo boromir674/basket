@@ -155,8 +155,8 @@ make preflight-clean
 ```
 
 > **Why `./serve.sh` instead of `python -m http.server` directly?**
-> The deployed site is served from a flat `public/` directory (CI puts `prod/index.html`
-> and `prod/game-flow-viewer.html` side-by-side with `assets/processed/`).
+> The deployed site is served from a flat `public/` directory (CI generates `index.html`
+> from `prod/elo.html` and keeps explorer/viewer pages side-by-side with `assets/processed/`).
 > Serving the repo root directly would put `index.html` one level below the assets, making
 > all relative asset paths wrong. `serve.sh` mirrors the exact CI layout so paths are
 > identical in every environment — no conditionals, no env vars, no surprises.
@@ -464,7 +464,10 @@ docker compose run --rm ops compute_elo --auto \
 - Validation: `validate_output.py`
 - Batch sync + manifest: `season_sync.py`
 - Main viewer: `prod/game-flow-viewer.html`
-- Landing/game switchers: `index.html`, `lab/game-flow-switcher.html`, `prod/game-explorer.html`
+- Flagship landing: `index.html` (generated from `prod/elo.html` at build time)
+- Canonical prod explorer: `prod/mvp-home.html`
+- Compatibility alias: `game-explorer.html` (generated from `prod/mvp-home.html` at build time)
+- Lab switchers: `lab/index.html`, `lab/game-flow-switcher.html`
 - Team notes/spike context: `efforts/`, `epics_catalog.md`, `.github/copilot-instructions.md`
 
 ## 9) Product Surface Separation (Prod vs Labs)
