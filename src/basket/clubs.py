@@ -82,24 +82,39 @@ class ClubRegistry:
         return out
 
 
-def canonicalize_json(obj: Any, *, registry: ClubRegistry) -> Any:
+def canonicalize_json(obj: Any, *, registry: ClubRegistry, _string_cache: dict[str, str] | None = None) -> Any:
     """Recursively canonicalize any strings found in a JSON-like structure.
 
     - Rewrites strings using registry.canonicalize_text() (substring replacement).
     - Also canonicalizes dict keys (important for `colors` maps keyed by team name).
     """
 
+    if _string_cache is None:
+        _string_cache = {}
+
     if isinstance(obj, str):
-        return registry.canonicalize_text(obj)
+        cached = _string_cache.get(obj)
+        if cached is not None:
+            return cached
+        normalized = registry.canonicalize_text(obj)
+        _string_cache[obj] = normalized
+        return normalized
 
     if isinstance(obj, list):
-        return [canonicalize_json(v, registry=registry) for v in obj]
+        return [canonicalize_json(v, registry=registry, _string_cache=_string_cache) for v in obj]
 
     if isinstance(obj, dict):
         out: dict[Any, Any] = {}
         for k, v in obj.items():
-            new_k = registry.canonicalize_text(k) if isinstance(k, str) else k
-            new_v = canonicalize_json(v, registry=registry)
+            if isinstance(k, str):
+                cached_key = _string_cache.get(k)
+                if cached_key is None:
+                    cached_key = registry.canonicalize_text(k)
+                    _string_cache[k] = cached_key
+                new_k = cached_key
+            else:
+                new_k = k
+            new_v = canonicalize_json(v, registry=registry, _string_cache=_string_cache)
             if new_k in out:
                 continue
             out[new_k] = new_v

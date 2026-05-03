@@ -777,22 +777,80 @@
     const boundaries = [];
 
     const groups = [];
-    let lastKey = '';
-    sorted.forEach((g, idx) => {
+    const seasonOrder = [];
+    const seasonEntries = Object.create(null);
+
+    sorted.forEach((g) => {
       const sc = String(g.seasoncode || '');
-      const d = parseDateKey(g.gamedate);
-      const key = `${sc}|${d || 'g' + String(idx + 1)}`;
-      if(!groups.length || key !== lastKey){
-        groups.push({
-          key,
-          seasoncode: sc,
-          seasonLabel: String(g.season_label || seasonLabelFromCode(sc)),
-          gamedate: d,
-          games: [],
-        });
-        lastKey = key;
+      if(!seasonEntries[sc]){
+        seasonEntries[sc] = [];
+        seasonOrder.push(sc);
       }
-      groups[groups.length - 1].games.push(g);
+      seasonEntries[sc].push(g);
+    });
+
+    // Use date-bearing seasons as reference for fixture count when a season has no dates at all.
+    const referenceFixtureCounts = [];
+    seasonOrder.forEach((sc) => {
+      const seasonGames = seasonEntries[sc] || [];
+      const dateKeys = new Set();
+      seasonGames.forEach((g) => {
+        const d = parseDateKey(g && g.gamedate);
+        if(d) dateKeys.add(d);
+      });
+      if(dateKeys.size > 0) referenceFixtureCounts.push(dateKeys.size);
+    });
+    const avgReferenceFixtures = referenceFixtureCounts.length
+      ? Math.max(1, Math.round(referenceFixtureCounts.reduce((a, b) => a + b, 0) / referenceFixtureCounts.length))
+      : 0;
+
+    seasonOrder.forEach((sc) => {
+      const seasonGames = seasonEntries[sc] || [];
+      if(!seasonGames.length) return;
+
+      const seasonLabel = String((seasonGames[0] && seasonGames[0].season_label) || seasonLabelFromCode(sc));
+      const hasAnyDate = seasonGames.some((g) => !!parseDateKey(g && g.gamedate));
+
+      if(hasAnyDate){
+        let lastKey = '';
+        seasonGames.forEach((g, idx) => {
+          const d = parseDateKey(g && g.gamedate);
+          const key = `${sc}|${d || 'g' + String(idx + 1)}`;
+          if(!groups.length || key !== lastKey){
+            groups.push({
+              key,
+              seasoncode: sc,
+              seasonLabel,
+              gamedate: d,
+              games: [],
+            });
+            lastKey = key;
+          }
+          groups[groups.length - 1].games.push(g);
+        });
+        return;
+      }
+
+      const targetFixtures = avgReferenceFixtures > 0
+        ? Math.min(seasonGames.length, avgReferenceFixtures)
+        : seasonGames.length;
+
+      const fixtureBuckets = Array.from({ length: targetFixtures }, () => []);
+      seasonGames.forEach((g, idx) => {
+        const bucketIdx = Math.floor((idx * targetFixtures) / seasonGames.length);
+        fixtureBuckets[bucketIdx].push(g);
+      });
+
+      fixtureBuckets.forEach((bucketGames, idx) => {
+        if(!bucketGames.length) return;
+        groups.push({
+          key: `${sc}|fallback_fx_${idx + 1}`,
+          seasoncode: sc,
+          seasonLabel,
+          gamedate: '',
+          games: bucketGames,
+        });
+      });
     });
 
     groups.forEach((group, gi) => {

@@ -8,6 +8,7 @@ from pathlib import Path
 import os
 
 from basket.clubs import DEFAULT_REGISTRY
+from basket.elo import compute_elo_for_season, recompute_multiseason_elo_if_needed
 from pipeline_runner import main as run_pipeline_main
 from validate_output import validate_file
 from season_sync import build_manifest, print_stored_seasons_inventory, main as season_sync_main
@@ -342,8 +343,18 @@ def main(argv: list[str] | None = None) -> int:
             default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
             help="Directory containing season JSON files (default: BASKET_APP_FILE_STORE_URI/processed)",
         )
-        parser.add_argument("--workers", type=int, default=1, help="Thread workers for concurrent file I/O")
+        parser.add_argument(
+            "--workers",
+            type=int,
+            default=max(1, min(16, os.cpu_count() or 1)),
+            help="Thread workers for concurrent file I/O (default: min(16, CPU count))",
+        )
         parser.add_argument("--dry-run", action="store_true", help="Report what would change without writing files")
+        parser.add_argument(
+            "--skip-elo-refresh",
+            action="store_true",
+            help="Skip recomputing ELO payloads after normalization",
+        )
         args = parser.parse_args(rest)
 
         data_dir = Path(args.data_dir).resolve()
@@ -369,6 +380,15 @@ def main(argv: list[str] | None = None) -> int:
             # Keep the UI game switcher consistent with any rewritten team labels.
             build_manifest(data_dir, args.seasoncode)
             print("manifest_rebuilt=1")
+            if not args.skip_elo_refresh:
+                compute_elo_for_season(output_dir=data_dir, seasoncode=args.seasoncode)
+                recomputed, _payload, reason = recompute_multiseason_elo_if_needed(
+                    output_dir=data_dir,
+                    force=True,
+                    output_name="elo_multiseason.json",
+                )
+                print("elo_season_rebuilt=1")
+                print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=[args.seasoncode])
         if unknown:
@@ -387,8 +407,18 @@ def main(argv: list[str] | None = None) -> int:
             default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
             help="Directory containing season JSON files (default: BASKET_APP_FILE_STORE_URI/processed)",
         )
-        parser.add_argument("--workers", type=int, default=1, help="Thread workers for concurrent file I/O")
+        parser.add_argument(
+            "--workers",
+            type=int,
+            default=max(1, min(16, os.cpu_count() or 1)),
+            help="Thread workers for concurrent file I/O (default: min(16, CPU count))",
+        )
         parser.add_argument("--dry-run", action="store_true", help="Report what would change without writing files")
+        parser.add_argument(
+            "--skip-elo-refresh",
+            action="store_true",
+            help="Skip recomputing ELO payloads after normalization",
+        )
         args = parser.parse_args(rest)
 
         data_dir = Path(args.data_dir).resolve()
@@ -429,6 +459,9 @@ def main(argv: list[str] | None = None) -> int:
             if not args.dry_run:
                 build_manifest(data_dir, seasoncode)
                 print(f"{seasoncode}: manifest_rebuilt=1")
+                if not args.skip_elo_refresh:
+                    compute_elo_for_season(output_dir=data_dir, seasoncode=seasoncode)
+                    print(f"{seasoncode}: elo_rebuilt=1")
 
         verb = "would_normalize" if args.dry_run else "normalized"
         print(f"{verb}_aliases_total={len(all_aliases)}, {verb}_canonical_clubs_total={len(all_canonical)}")
@@ -436,6 +469,14 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{verb}_club_mappings=")
             for alias in sorted(all_aliases):
                 print(f"  - {alias} -> {DEFAULT_REGISTRY.normalize_team_name(alias)}")
+
+        if not args.dry_run and (not args.skip_elo_refresh):
+            recomputed, _payload, reason = recompute_multiseason_elo_if_needed(
+                output_dir=data_dir,
+                force=True,
+                output_name="elo_multiseason.json",
+            )
+            print(f"elo_multiseason_rebuilt={'1' if recomputed else '0'} reason={reason}")
 
         unknown = find_unknown_club_names(data_dir=data_dir, seasoncodes=sorted(seasoncodes))
         if unknown:

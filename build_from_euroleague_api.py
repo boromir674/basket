@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -42,16 +43,35 @@ def safe_json_get(url: str, params: dict[str, Any]) -> Any:
 
 def fetch_sources(seasoncode: str, gamecode: int):
     params = {"seasoncode": seasoncode, "gamecode": gamecode}
-    pbp = safe_json_get(f"{BASE}/PlaybyPlay", params)
-    pts = safe_json_get(f"{BASE}/Points", params)
+    endpoints = {
+        "pbp": f"{BASE}/PlaybyPlay",
+        "pts": f"{BASE}/Points",
+        "box": f"{BASE}/Boxscore",
+    }
+    results: dict[str, Any] = {}
+    errors: dict[str, BaseException] = {}
+
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        futures = {pool.submit(safe_json_get, url, params): key for key, url in endpoints.items()}
+        for future in as_completed(futures):
+            key = futures[future]
+            try:
+                results[key] = future.result()
+            except Exception as exc:  # noqa: BLE001
+                errors[key] = exc
+                results[key] = {}
+
+    pbp = results.get("pbp", {})
+    pts = results.get("pts", {})
+    box = results.get("box", {})
+
     # Both primary sources empty → this gamecode does not exist in the API (playoff slot
     # never played, season gap, etc.). Raise so the caller skips it permanently.
+    # Re-raise the pbp error if one caused the miss (e.g. transient HTTP error).
     if not pbp and not pts:
+        if "pbp" in errors:
+            raise errors["pbp"]
         raise ValueError("game not available")
-    try:
-        box = safe_json_get(f"{BASE}/Boxscore", params)
-    except Exception:
-        box = {}
 
     # Save raw data to the specified directory
     output_dir = Path(os.getenv("BASKET_APP_FILE_STORE_URI", "assets"))
