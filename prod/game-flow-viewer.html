@@ -448,8 +448,10 @@ function resolvePregameElo(meta){
   );
   if(!gameRow) return { eloA: null, eloB: null };
 
-  const teamA = String(meta.team_a || "");
-  const teamB = String(meta.team_b || "");
+  // Use canonical Home/Away labels for display semantics.
+  // In anchor mode, meta.team_a/meta.team_b can be reshaped for lane rendering.
+  const teamA = String(getHomeTeamName(meta) || "");
+  const teamB = String(getAwayTeamName(meta) || "");
   const rowTeamA = String(gameRow.team_a || "");
   const rowTeamB = String(gameRow.team_b || "");
 
@@ -2716,6 +2718,8 @@ function updateScoreboard(){
   const el = document.getElementById("scoreboard");
   if(!el || !dataBundle) return;
   const meta = dataBundle.meta || {};
+  const teamA = getHomeTeamName(meta);
+  const teamB = getAwayTeamName(meta);
   let scoreA = 0, scoreB = 0;
   let hasScoreRows = false;
   const playersMap = dataBundle.players || {};
@@ -2725,18 +2729,17 @@ function updateScoreboard(){
       let teamName = null;
       if(pid && playersMap[pid] && playersMap[pid].team) teamName = playersMap[pid].team;
       if(!teamName && typeof r.team === 'string') teamName = r.team;
-      if(teamName === meta.team_a){
+      if(teamName === teamA){
         scoreA += (r.points || 0);
         hasScoreRows = true;
       }
-      else if(teamName === meta.team_b){
+      else if(teamName === teamB){
         scoreB += (r.points || 0);
         hasScoreRows = true;
       }
     });
   }
-  const teamA = meta.team_a || "Team A";
-  const teamB = meta.team_b || "Team B";
+  // Keep scoreboard tied to canonical Home/Away ordering (title + headline).
   const scoreLine = hasScoreRows ? `${scoreA} — ${scoreB}` : "—";
   const pregame = resolvePregameElo(meta);
   const eloA = formatEloValue(pregame.eloA);

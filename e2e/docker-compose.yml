@@ -19,10 +19,13 @@ services:
     image: cypress/included:cypress-12.17.3-node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
     depends_on:
       - my_app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       # pass base url to test pointing at the web application
-      - CYPRESS_baseUrl=http://my_app:8080
+      - CYPRESS_baseUrl=${CYPRESS_baseUrl:-http://my_app:8080}
       - CYPRESS_BROWSER=${CYPRESS_BROWSER:-chrome}  # Default to chrome if not set
+      - CYPRESS_SPEC=${CYPRESS_SPEC:-cypress/e2e/*.cy.js}
 
     # share the current folder as volume to avoid copying
     working_dir: /e2e
@@ -30,7 +33,7 @@ services:
       - ./:/e2e
     # overwrite the default command to run Cypress tests
     # on electron browser in headless mode
-    entrypoint: cypress run --spec "cypress/e2e/*.cy.js"
+    entrypoint: cypress run --spec "${CYPRESS_SPEC}"
     # run specs and avoid specs in cypress/integration/examples folder:
     # - cypress/integration/margins_spec.cy.ts
     # - cypress/integration/spec.cy.ts
