@@ -1,0 +1,5981 @@
+{
+  "meta": {
+    "seasoncode": "E2015",
+    "gamecode": 219,
+    "team_a": "Cedevita Zagreb",
+    "team_b": "Panathinaikos Athens",
+    "score_a": 60,
+    "score_b": 76,
+    "winner": "Panathinaikos Athens",
+    "gamedate": null,
+    "synced_at": "2026-05-03T10:26:19.432008+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P003622": {
+      "name": "BILAN, MIRO",
+      "team": "Cedevita Zagreb"
+    },
+    "P003479": {
+      "name": "KUZMIC, OGNJEN",
+      "team": "Panathinaikos Athens"
+    },
+    "P004355": {
+      "name": "PULLEN, JACOB",
+      "team": "Cedevita Zagreb"
+    },
+    "P007013": {
+      "name": "WILLIAMS, ELLIOT",
+      "team": "Panathinaikos Athens"
+    },
+    "P004402": {
+      "name": "ARAPOVIC, MARKO",
+      "team": "Cedevita Zagreb"
+    },
+    "P002980": {
+      "name": "GIST, JAMES",
+      "team": "Panathinaikos Athens"
+    },
+    "PTHC": {
+      "name": "WHITE, JAMES",
+      "team": "Cedevita Zagreb"
+    },
+    "PANE": {
+      "name": "PAVLOVIC, SASHA",
+      "team": "Panathinaikos Athens"
+    },
+    "P001761": {
+      "name": "BABIC, LUKA",
+      "team": "Cedevita Zagreb"
+    },
+    "P001932": {
+      "name": "CALATHES, NICK",
+      "team": "Panathinaikos Athens"
+    },
+    "P004551": {
+      "name": "ZGANEC, KARLO",
+      "team": "Cedevita Zagreb"
+    },
+    "PJKO": {
+      "name": "DIAMANTIDIS, DIMITRIS",
+      "team": "Panathinaikos Athens"
+    },
+    "PJDU": {
+      "name": "RADULJICA, MIROSLAV",
+      "team": "Panathinaikos Athens"
+    },
+    "P005918": {
+      "name": "FELDEINE, JAMES",
+      "team": "Panathinaikos Athens"
+    },
+    "P004316": {
+      "name": "PILEPIC, FRAN",
+      "team": "Cedevita Zagreb"
+    },
+    "P006540": {
+      "name": "MUSA, DZANAN",
+      "team": "Cedevita Zagreb"
+    },
+    "PBEZ": {
+      "name": "FOTSIS, ANTONIS",
+      "team": "Panathinaikos Athens"
+    },
+    "P001771": {
+      "name": "KATIC, TONI",
+      "team": "Cedevita Zagreb"
+    },
+    "P003601": {
+      "name": "HAYNES, MARQUEZ",
+      "team": "Panathinaikos Athens"
+    },
+    "P007018": {
+      "name": "HUNTER, VINCE",
+      "team": "Panathinaikos Athens"
+    },
+    "PBCB": {
+      "name": "ZORIC, LUKA",
+      "team": "Cedevita Zagreb"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P003601",
+      "player_name": "HAYNES, MARQUEZ",
+      "team": "PAN",
+      "minutes": "08:29",
+      "points": 6,
+      "valuation": 3,
+      "plusminus": 3,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PANE",
+      "player_name": "PAVLOVIC, SASHA",
+      "team": "PAN",
+      "minutes": "22:18",
+      "points": 9,
+      "valuation": 7,
+      "plusminus": 16,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P000411",
+      "player_name": "JANKOVIC, VLADIMIR",
+      "team": "PAN",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PBEZ",
+      "player_name": "FOTSIS, ANTONIS",
+      "team": "PAN",
+      "minutes": "18:58",
+      "points": 8,
+      "valuation": 7,
+      "plusminus": -1,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PJDU",
+      "player_name": "RADULJICA, MIROSLAV",
+      "team": "PAN",
+      "minutes": "17:32",
+      "points": 2,
+      "valuation": 1,
+      "plusminus": 11,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 4
+    },
+    {
+      "player_id": "P005918",
+      "player_name": "FELDEINE, JAMES",
+      "team": "PAN",
+      "minutes": "16:52",
+      "points": 7,
+      "valuation": 9,
+      "plusminus": -5,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PJKO",
+      "player_name": "DIAMANTIDIS, DIMITRIS",
+      "team": "PAN",
+      "minutes": "20:34",
+      "points": 10,
+      "valuation": 19,
+      "plusminus": 8,
+      "assists": 3,
+      "rebounds": 6,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P002980",
+      "player_name": "GIST, JAMES",
+      "team": "PAN",
+      "minutes": "25:49",
+      "points": 15,
+      "valuation": 19,
+      "plusminus": 22,
+      "assists": 1,
+      "rebounds": 9,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P001932",
+      "player_name": "CALATHES, NICK",
+      "team": "PAN",
+      "minutes": "31:31",
+      "points": 5,
+      "valuation": 14,
+      "plusminus": 13,
+      "assists": 6,
+      "rebounds": 6,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P003479",
+      "player_name": "KUZMIC, OGNJEN",
+      "team": "PAN",
+      "minutes": "08:54",
+      "points": 4,
+      "valuation": 5,
+      "plusminus": 5,
+      "assists": 0,
+      "rebounds": 4,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007013",
+      "player_name": "WILLIAMS, ELLIOT",
+      "team": "PAN",
+      "minutes": "20:16",
+      "points": 5,
+      "valuation": -1,
+      "plusminus": 13,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P007018",
+      "player_name": "HUNTER, VINCE",
+      "team": "PAN",
+      "minutes": "08:47",
+      "points": 5,
+      "valuation": 4,
+      "plusminus": -5,
+      "assists": 0,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004355",
+      "player_name": "PULLEN, JACOB",
+      "team": "CED",
+      "minutes": "17:56",
+      "points": 0,
+      "valuation": -4,
+      "plusminus": -14,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 4
+    },
+    {
+      "player_id": "PTHC",
+      "player_name": "WHITE, JAMES",
+      "team": "CED",
+      "minutes": "22:12",
+      "points": 6,
+      "valuation": 4,
+      "plusminus": -12,
+      "assists": 0,
+      "rebounds": 4,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P001771",
+      "player_name": "KATIC, TONI",
+      "team": "CED",
+      "minutes": "22:04",
+      "points": 9,
+      "valuation": 10,
+      "plusminus": -2,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P004316",
+      "player_name": "PILEPIC, FRAN",
+      "team": "CED",
+      "minutes": "24:43",
+      "points": 6,
+      "valuation": 3,
+      "plusminus": 5,
+      "assists": 3,
+      "rebounds": 0,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P001761",
+      "player_name": "BABIC, LUKA",
+      "team": "CED",
+      "minutes": "15:25",
+      "points": 5,
+      "valuation": 2,
+      "plusminus": -18,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004551",
+      "player_name": "ZGANEC, KARLO",
+      "team": "CED",
+      "minutes": "09:52",
+      "points": 5,
+      "valuation": 4,
+      "plusminus": -9,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006540",
+      "player_name": "MUSA, DZANAN",
+      "team": "CED",
+      "minutes": "17:40",
+      "points": 5,
+      "valuation": 0,
+      "plusminus": -7,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P003622",
+      "player_name": "BILAN, MIRO",
+      "team": "CED",
+      "minutes": "19:30",
+      "points": 5,
+      "valuation": 5,
+      "plusminus": -6,
+      "assists": 1,
+      "rebounds": 6,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P004401",
+      "player_name": "MAZALIN, LOVRO",
+      "team": "CED",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "PBCB",
+      "player_name": "ZORIC, LUKA",
+      "team": "CED",
+      "minutes": "20:30",
+      "points": 8,
+      "valuation": 6,
+      "plusminus": -10,
+      "assists": 2,
+      "rebounds": 4,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004402",
+      "player_name": "ARAPOVIC, MARKO",
+      "team": "CED",
+      "minutes": "30:08",
+      "points": 11,
+      "valuation": 15,
+      "plusminus": -7,
+      "assists": 2,
+      "rebounds": 8,
+      "turnovers": 1
+    }
+  ],
+  "colors": {
+    "Cedevita Zagreb": "#d62839",
+    "Panathinaikos Athens": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "Cedevita Zagreb": 83,
+        "Panathinaikos Athens": 89
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "Cedevita Zagreb starts",
+          "83"
+        ],
+        [
+          "Panathinaikos Athens starts",
+          "89"
+        ],
+        [
+          "Cedevita Zagreb points per poss.",
+          "0.72"
+        ],
+        [
+          "Cedevita Zagreb Made 3 share",
+          "2%"
+        ],
+        [
+          "Panathinaikos Athens points per poss.",
+          "0.85"
+        ],
+        [
+          "Panathinaikos Athens Made 3 share",
+          "10%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "Cedevita Zagreb generated 0.72 points per possession over 83 tracked possessions.",
+        "Panathinaikos Athens generated 0.85 points per possession over 89 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Cedevita_Zagreb_start",
+          "name": "Cedevita Zagreb Start",
+          "team": "Cedevita Zagreb",
+          "stage": "start"
+        },
+        {
+          "id": "Cedevita_Zagreb_Half-court",
+          "name": "Half-court",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_After_OREB",
+          "name": "After OREB",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Turnover",
+          "name": "Turnover",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Missed_shot",
+          "name": "Missed shot",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_2",
+          "name": "Made 2",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_3",
+          "name": "Made 3",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita Zagreb_0",
+          "name": "0 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_1",
+          "name": "1 pt",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_2",
+          "name": "2 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_3",
+          "name": "3 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos_Athens_start",
+          "name": "Panathinaikos Athens Start",
+          "team": "Panathinaikos Athens",
+          "stage": "start"
+        },
+        {
+          "id": "Panathinaikos_Athens_Half-court",
+          "name": "Half-court",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_After_OREB",
+          "name": "After OREB",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Turnover",
+          "name": "Turnover",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Missed_shot",
+          "name": "Missed shot",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_2",
+          "name": "Made 2",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_3",
+          "name": "Made 3",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos Athens_0",
+          "name": "0 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_1",
+          "name": "1 pt",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_2",
+          "name": "2 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_3",
+          "name": "3 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_Half-court",
+          "value": 43
+        },
+        {
+          "source": "Cedevita_Zagreb_Half-court",
+          "target": "Cedevita_Zagreb_Missed_shot",
+          "value": 12
+        },
+        {
+          "source": "Cedevita_Zagreb_Missed_shot",
+          "target": "Cedevita Zagreb_0",
+          "value": 27
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Transition_Fast_break",
+          "value": 33
+        },
+        {
+          "source": "Panathinaikos_Athens_Transition_Fast_break",
+          "target": "Panathinaikos_Athens_Missed_shot",
+          "value": 14
+        },
+        {
+          "source": "Panathinaikos_Athens_Missed_shot",
+          "target": "Panathinaikos Athens_0",
+          "value": 27
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_Transition_Fast_break",
+          "value": 27
+        },
+        {
+          "source": "Cedevita_Zagreb_Transition_Fast_break",
+          "target": "Cedevita_Zagreb_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "Cedevita_Zagreb_Transition_Fast_break",
+          "target": "Cedevita_Zagreb_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Cedevita_Zagreb_Turnover",
+          "target": "Cedevita Zagreb_0",
+          "value": 16
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Half-court",
+          "value": 44
+        },
+        {
+          "source": "Panathinaikos_Athens_Half-court",
+          "target": "Panathinaikos_Athens_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_After_OREB",
+          "value": 12
+        },
+        {
+          "source": "Panathinaikos_Athens_After_OREB",
+          "target": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "target": "Panathinaikos Athens_1",
+          "value": 15
+        },
+        {
+          "source": "Panathinaikos_Athens_Half-court",
+          "target": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "value": 19
+        },
+        {
+          "source": "Cedevita_Zagreb_Half-court",
+          "target": "Cedevita_Zagreb_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Transition_Fast_break",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_2",
+          "target": "Panathinaikos Athens_2",
+          "value": 17
+        },
+        {
+          "source": "Panathinaikos_Athens_After_OREB",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Half-court",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 12
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_2",
+          "target": "Cedevita Zagreb_2",
+          "value": 22
+        },
+        {
+          "source": "Panathinaikos_Athens_Half-court",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Cedevita_Zagreb_Half-court",
+          "target": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "value": 12
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_1",
+          "value": 10
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_0",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_After_OREB",
+          "target": "Panathinaikos_Athens_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_Turnover",
+          "target": "Panathinaikos Athens_0",
+          "value": 14
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_After_OREB",
+          "value": 13
+        },
+        {
+          "source": "Cedevita_Zagreb_After_OREB",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_After_OREB",
+          "target": "Cedevita_Zagreb_Turnover",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Transition_Fast_break",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Half-court",
+          "target": "Panathinaikos_Athens_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Transition_Fast_break",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_3",
+          "target": "Panathinaikos Athens_3",
+          "value": 9
+        },
+        {
+          "source": "Cedevita_Zagreb_After_OREB",
+          "target": "Cedevita_Zagreb_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_Transition_Fast_break",
+          "target": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "target": "Panathinaikos Athens_0",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Transition_Fast_break",
+          "target": "Panathinaikos_Athens_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_After_OREB",
+          "target": "Panathinaikos_Athens_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Panathinaikos_Athens_Half-court",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_Transition_Fast_break",
+          "target": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Transition_Fast_break",
+          "target": "Cedevita_Zagreb_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_3",
+          "target": "Cedevita Zagreb_3",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_After_OREB",
+          "target": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_After_OREB",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_Half-court": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 5
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 5
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Half-court->Cedevita_Zagreb_Missed_shot": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Missed_shot->Cedevita Zagreb_0": [
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Transition_Fast_break": [
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 8
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 6
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Transition_Fast_break->Panathinaikos_Athens_Missed_shot": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Missed_shot->Panathinaikos Athens_0": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 6
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_Transition_Fast_break": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Transition_Fast_break->Cedevita_Zagreb_Missed_shot": [
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Transition_Fast_break->Cedevita_Zagreb_Turnover": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Turnover->Cedevita Zagreb_0": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Half-court": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 7
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 7
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 6
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 5
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Half-court->Panathinaikos_Athens_Missed_shot": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_After_OREB": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_OREB->Panathinaikos_Athens_Shooting_foul_FTs": [
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Half-court->Panathinaikos_Athens_Shooting_foul_FTs": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Half-court->Cedevita_Zagreb_Turnover": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Transition_Fast_break->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_2->Panathinaikos Athens_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_OREB->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Half-court->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Made_2->Cedevita Zagreb_2": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Panathinaikos_Athens_Half-court->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Half-court->Cedevita_Zagreb_Shooting_foul_FTs": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_1": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_0": [
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_OREB->Panathinaikos_Athens_Turnover": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Turnover->Panathinaikos Athens_0": [
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_After_OREB": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_OREB->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_OREB->Cedevita_Zagreb_Turnover": [
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Transition_Fast_break->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Half-court->Panathinaikos_Athens_Turnover": [
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Transition_Fast_break->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_3->Panathinaikos Athens_3": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_OREB->Cedevita_Zagreb_Missed_shot": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Transition_Fast_break->Panathinaikos_Athens_Shooting_foul_FTs": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Transition_Fast_break->Panathinaikos_Athens_Turnover": [
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_OREB->Panathinaikos_Athens_Missed_shot": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Half-court->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Transition_Fast_break->Cedevita_Zagreb_Shooting_foul_FTs": [
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Transition_Fast_break->Cedevita_Zagreb_Made_3": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Made_3->Cedevita Zagreb_3": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_After_OREB->Cedevita_Zagreb_Shooting_foul_FTs": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_OREB->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "Cedevita Zagreb": 43,
+        "Panathinaikos Athens": 44
+      },
+      "title": "Zoomed Detail \u2014 Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "Cedevita Zagreb count",
+          "43"
+        ],
+        [
+          "Panathinaikos Athens count",
+          "44"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Cedevita_Zagreb_start",
+          "name": "Cedevita Zagreb Half-court",
+          "team": "Cedevita Zagreb",
+          "stage": "start"
+        },
+        {
+          "id": "Panathinaikos_Athens_start",
+          "name": "Panathinaikos Athens Half-court",
+          "team": "Panathinaikos Athens",
+          "stage": "start"
+        },
+        {
+          "id": "Cedevita_Zagreb_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_2",
+          "name": "Made 2",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_3",
+          "name": "Made 3",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Missed_shot",
+          "name": "Missed shot",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Turnover",
+          "name": "Turnover",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita Zagreb_0",
+          "name": "0 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_1",
+          "name": "1 pt",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_2",
+          "name": "2 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_3",
+          "name": "3 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos_Athens_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_2",
+          "name": "Made 2",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_3",
+          "name": "Made 3",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Missed_shot",
+          "name": "Missed shot",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Turnover",
+          "name": "Turnover",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos Athens_0",
+          "name": "0 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_1",
+          "name": "1 pt",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_2",
+          "name": "2 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_3",
+          "name": "3 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_PnR_handler_action",
+          "value": 43
+        },
+        {
+          "source": "Cedevita_Zagreb_PnR_handler_action",
+          "target": "Cedevita_Zagreb_Missed_shot",
+          "value": 12
+        },
+        {
+          "source": "Cedevita_Zagreb_Missed_shot",
+          "target": "Cedevita Zagreb_0",
+          "value": 12
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_PnR_handler_action",
+          "value": 42
+        },
+        {
+          "source": "Panathinaikos_Athens_PnR_handler_action",
+          "target": "Panathinaikos_Athens_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "Panathinaikos_Athens_Missed_shot",
+          "target": "Panathinaikos Athens_0",
+          "value": 8
+        },
+        {
+          "source": "Panathinaikos_Athens_PnR_handler_action",
+          "target": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "value": 19
+        },
+        {
+          "source": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "target": "Panathinaikos Athens_1",
+          "value": 14
+        },
+        {
+          "source": "Cedevita_Zagreb_PnR_handler_action",
+          "target": "Cedevita_Zagreb_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Cedevita_Zagreb_Turnover",
+          "target": "Cedevita Zagreb_0",
+          "value": 7
+        },
+        {
+          "source": "Cedevita_Zagreb_PnR_handler_action",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 12
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_2",
+          "target": "Cedevita Zagreb_2",
+          "value": 12
+        },
+        {
+          "source": "Panathinaikos_Athens_PnR_handler_action",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 8
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_2",
+          "target": "Panathinaikos Athens_2",
+          "value": 8
+        },
+        {
+          "source": "Cedevita_Zagreb_PnR_handler_action",
+          "target": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "value": 12
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_1",
+          "value": 8
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_0",
+          "value": 4
+        },
+        {
+          "source": "Panathinaikos_Athens_PnR_handler_action",
+          "target": "Panathinaikos_Athens_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Turnover",
+          "target": "Panathinaikos Athens_0",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "target": "Panathinaikos Athens_0",
+          "value": 5
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Spot-up_swing",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_Spot-up_swing",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_3",
+          "target": "Panathinaikos Athens_3",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_PnR_handler_action": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 6
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 5
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 5
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_PnR_handler_action->Cedevita_Zagreb_Missed_shot": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Missed_shot->Cedevita Zagreb_0": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_PnR_handler_action": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 7
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 7
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 6
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 5
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_PnR_handler_action->Panathinaikos_Athens_Missed_shot": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Missed_shot->Panathinaikos Athens_0": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_PnR_handler_action->Panathinaikos_Athens_Shooting_foul_FTs": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_PnR_handler_action->Cedevita_Zagreb_Turnover": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Turnover->Cedevita Zagreb_0": [
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_PnR_handler_action->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Made_2->Cedevita Zagreb_2": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_PnR_handler_action->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_2->Panathinaikos Athens_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_PnR_handler_action->Cedevita_Zagreb_Shooting_foul_FTs": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_1": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_0": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_PnR_handler_action->Panathinaikos_Athens_Turnover": [
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Turnover->Panathinaikos Athens_0": [
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Spot-up_swing": [
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Spot-up_swing->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_3->Panathinaikos Athens_3": [
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "Cedevita Zagreb": 27,
+        "Panathinaikos Athens": 33
+      },
+      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "Cedevita Zagreb count",
+          "27"
+        ],
+        [
+          "Panathinaikos Athens count",
+          "33"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Cedevita_Zagreb_start",
+          "name": "Cedevita Zagreb Transition",
+          "team": "Cedevita Zagreb",
+          "stage": "start"
+        },
+        {
+          "id": "Panathinaikos_Athens_start",
+          "name": "Panathinaikos Athens Transition",
+          "team": "Panathinaikos Athens",
+          "stage": "start"
+        },
+        {
+          "id": "Cedevita_Zagreb_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_2",
+          "name": "Made 2",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_3",
+          "name": "Made 3",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Missed_shot",
+          "name": "Missed shot",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Turnover",
+          "name": "Turnover",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita Zagreb_0",
+          "name": "0 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_1",
+          "name": "1 pt",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_2",
+          "name": "2 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_3",
+          "name": "3 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos_Athens_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_2",
+          "name": "Made 2",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_3",
+          "name": "Made 3",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Missed_shot",
+          "name": "Missed shot",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Turnover",
+          "name": "Turnover",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos Athens_0",
+          "name": "0 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_1",
+          "name": "1 pt",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_2",
+          "name": "2 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_3",
+          "name": "3 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_After_defensive_rebound",
+          "value": 33
+        },
+        {
+          "source": "Panathinaikos_Athens_After_defensive_rebound",
+          "target": "Panathinaikos_Athens_Missed_shot",
+          "value": 14
+        },
+        {
+          "source": "Panathinaikos_Athens_Missed_shot",
+          "target": "Panathinaikos Athens_0",
+          "value": 14
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_After_defensive_rebound",
+          "value": 27
+        },
+        {
+          "source": "Cedevita_Zagreb_After_defensive_rebound",
+          "target": "Cedevita_Zagreb_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "Cedevita_Zagreb_Missed_shot",
+          "target": "Cedevita Zagreb_0",
+          "value": 9
+        },
+        {
+          "source": "Cedevita_Zagreb_After_defensive_rebound",
+          "target": "Cedevita_Zagreb_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Cedevita_Zagreb_Turnover",
+          "target": "Cedevita Zagreb_0",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_After_defensive_rebound",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_2",
+          "target": "Panathinaikos Athens_2",
+          "value": 6
+        },
+        {
+          "source": "Cedevita_Zagreb_After_defensive_rebound",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 7
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_2",
+          "target": "Cedevita Zagreb_2",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_After_defensive_rebound",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_3",
+          "target": "Panathinaikos Athens_3",
+          "value": 5
+        },
+        {
+          "source": "Panathinaikos_Athens_After_defensive_rebound",
+          "target": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "target": "Panathinaikos Athens_0",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_After_defensive_rebound",
+          "target": "Panathinaikos_Athens_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_Turnover",
+          "target": "Panathinaikos Athens_0",
+          "value": 6
+        },
+        {
+          "source": "Cedevita_Zagreb_After_defensive_rebound",
+          "target": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_0",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_After_defensive_rebound",
+          "target": "Cedevita_Zagreb_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_3",
+          "target": "Cedevita Zagreb_3",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_1",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_After_defensive_rebound": [
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 8
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 6
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 4
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_defensive_rebound->Panathinaikos_Athens_Missed_shot": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Missed_shot->Panathinaikos Athens_0": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_After_defensive_rebound": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_defensive_rebound->Cedevita_Zagreb_Missed_shot": [
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Missed_shot->Cedevita Zagreb_0": [
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_defensive_rebound->Cedevita_Zagreb_Turnover": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Turnover->Cedevita Zagreb_0": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004355",
+            "player_name": "PULLEN, JACOB",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_defensive_rebound->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_2->Panathinaikos Athens_2": [
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_defensive_rebound->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Made_2->Cedevita Zagreb_2": [
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_defensive_rebound->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_3->Panathinaikos Athens_3": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_defensive_rebound->Panathinaikos_Athens_Shooting_foul_FTs": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Shooting_foul_FTs->Panathinaikos Athens_0": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_After_defensive_rebound->Panathinaikos_Athens_Turnover": [
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Turnover->Panathinaikos Athens_0": [
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_defensive_rebound->Cedevita_Zagreb_Shooting_foul_FTs": [
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_0": [
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_After_defensive_rebound->Cedevita_Zagreb_Made_3": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Made_3->Cedevita Zagreb_3": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_1": [
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "Cedevita Zagreb": 13,
+        "Panathinaikos Athens": 12
+      },
+      "title": "Zoomed Detail \u2014 After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "Cedevita Zagreb count",
+          "13"
+        ],
+        [
+          "Panathinaikos Athens count",
+          "12"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Cedevita_Zagreb_start",
+          "name": "Cedevita Zagreb After OREB",
+          "team": "Cedevita Zagreb",
+          "stage": "start"
+        },
+        {
+          "id": "Panathinaikos_Athens_start",
+          "name": "Panathinaikos Athens After OREB",
+          "team": "Panathinaikos Athens",
+          "stage": "start"
+        },
+        {
+          "id": "Cedevita_Zagreb_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_2",
+          "name": "Made 2",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_3",
+          "name": "Made 3",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Missed_shot",
+          "name": "Missed shot",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita_Zagreb_Turnover",
+          "name": "Turnover",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita Zagreb_0",
+          "name": "0 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_1",
+          "name": "1 pt",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_2",
+          "name": "2 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Cedevita Zagreb_3",
+          "name": "3 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos_Athens_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_2",
+          "name": "Made 2",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_3",
+          "name": "Made 3",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Missed_shot",
+          "name": "Missed shot",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos_Athens_Turnover",
+          "name": "Turnover",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos Athens_0",
+          "name": "0 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_1",
+          "name": "1 pt",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_2",
+          "name": "2 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos Athens_3",
+          "name": "3 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Reset_half-court",
+          "value": 7
+        },
+        {
+          "source": "Panathinaikos_Athens_Reset_half-court",
+          "target": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_Shooting_foul_FTs",
+          "target": "Panathinaikos Athens_1",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Immediate_putback",
+          "value": 3
+        },
+        {
+          "source": "Panathinaikos_Athens_Immediate_putback",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_2",
+          "target": "Panathinaikos Athens_2",
+          "value": 3
+        },
+        {
+          "source": "Panathinaikos_Athens_Reset_half-court",
+          "target": "Panathinaikos_Athens_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_Turnover",
+          "target": "Panathinaikos Athens_0",
+          "value": 1
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_Immediate_putback",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Immediate_putback",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_2",
+          "target": "Cedevita Zagreb_2",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_Reset_half-court",
+          "value": 10
+        },
+        {
+          "source": "Cedevita_Zagreb_Reset_half-court",
+          "target": "Cedevita_Zagreb_Turnover",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Turnover",
+          "target": "Cedevita Zagreb_0",
+          "value": 3
+        },
+        {
+          "source": "Cedevita_Zagreb_Reset_half-court",
+          "target": "Cedevita_Zagreb_Missed_shot",
+          "value": 6
+        },
+        {
+          "source": "Cedevita_Zagreb_Missed_shot",
+          "target": "Cedevita Zagreb_0",
+          "value": 6
+        },
+        {
+          "source": "Panathinaikos_Athens_Reset_half-court",
+          "target": "Panathinaikos_Athens_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Panathinaikos_Athens_Missed_shot",
+          "target": "Panathinaikos Athens_0",
+          "value": 5
+        },
+        {
+          "source": "Cedevita_Zagreb_Reset_half-court",
+          "target": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Cedevita_Zagreb_Shooting_foul_FTs",
+          "target": "Cedevita Zagreb_1",
+          "value": 1
+        },
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Kick-out_perimeter",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_Kick-out_perimeter",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_3",
+          "target": "Panathinaikos Athens_3",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Reset_half-court": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Reset_half-court->Panathinaikos_Athens_Shooting_foul_FTs": [
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Shooting_foul_FTs->Panathinaikos Athens_1": [
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Immediate_putback": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Immediate_putback->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_2->Panathinaikos Athens_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Reset_half-court->Panathinaikos_Athens_Turnover": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Turnover->Panathinaikos Athens_0": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_Immediate_putback": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Immediate_putback->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Made_2->Cedevita Zagreb_2": [
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_Reset_half-court": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Reset_half-court->Cedevita_Zagreb_Turnover": [
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Turnover->Cedevita Zagreb_0": [
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Reset_half-court->Cedevita_Zagreb_Missed_shot": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Missed_shot->Cedevita Zagreb_0": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Reset_half-court->Panathinaikos_Athens_Missed_shot": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Missed_shot->Panathinaikos Athens_0": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Reset_half-court->Cedevita_Zagreb_Shooting_foul_FTs": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_Shooting_foul_FTs->Cedevita Zagreb_1": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Kick-out_perimeter": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          }
+        ],
+        "Panathinaikos_Athens_Kick-out_perimeter->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          }
+        ],
+        "Panathinaikos_Athens_Made_3->Panathinaikos Athens_3": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "Cedevita Zagreb": 22,
+        "Panathinaikos Athens": 17
+      },
+      "title": "Zoomed Detail \u2014 Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Cedevita Zagreb count",
+          "22"
+        ],
+        [
+          "Panathinaikos Athens count",
+          "17"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Cedevita_Zagreb_start",
+          "name": "Cedevita Zagreb Made 2",
+          "team": "Cedevita Zagreb",
+          "stage": "start"
+        },
+        {
+          "id": "Panathinaikos_Athens_start",
+          "name": "Panathinaikos Athens Made 2",
+          "team": "Panathinaikos Athens",
+          "stage": "start"
+        },
+        {
+          "id": "Cedevita_Zagreb_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_2",
+          "name": "Made 2",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita Zagreb_2",
+          "name": "2 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos_Athens_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_2",
+          "name": "Made 2",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos Athens_2",
+          "name": "2 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Layup_runner",
+          "value": 17
+        },
+        {
+          "source": "Panathinaikos_Athens_Layup_runner",
+          "target": "Panathinaikos_Athens_Made_2",
+          "value": 17
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_2",
+          "target": "Panathinaikos Athens_2",
+          "value": 17
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_Layup_runner",
+          "value": 22
+        },
+        {
+          "source": "Cedevita_Zagreb_Layup_runner",
+          "target": "Cedevita_Zagreb_Made_2",
+          "value": 22
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_2",
+          "target": "Cedevita Zagreb_2",
+          "value": 22
+        }
+      ],
+      "player_flows": {
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Layup_runner": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Layup_runner->Panathinaikos_Athens_Made_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_2->Panathinaikos Athens_2": [
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 3
+          },
+          {
+            "player_id": "P005918",
+            "player_name": "FELDEINE, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007018",
+            "player_name": "HUNTER, VINCE",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P007013",
+            "player_name": "WILLIAMS, ELLIOT",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003479",
+            "player_name": "KUZMIC, OGNJEN",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PJDU",
+            "player_name": "RADULJICA, MIROSLAV",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_Layup_runner": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Layup_runner->Cedevita_Zagreb_Made_2": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Made_2->Cedevita Zagreb_2": [
+          {
+            "player_id": "P004402",
+            "player_name": "ARAPOVIC, MARKO",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "P001771",
+            "player_name": "KATIC, TONI",
+            "team": "Cedevita Zagreb",
+            "poss": 4
+          },
+          {
+            "player_id": "PTHC",
+            "player_name": "WHITE, JAMES",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "PBCB",
+            "player_name": "ZORIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 3
+          },
+          {
+            "player_id": "P001761",
+            "player_name": "BABIC, LUKA",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P003622",
+            "player_name": "BILAN, MIRO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P006540",
+            "player_name": "MUSA, DZANAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          },
+          {
+            "player_id": "P004551",
+            "player_name": "ZGANEC, KARLO",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "Cedevita Zagreb": 2,
+        "Panathinaikos Athens": 9
+      },
+      "title": "Zoomed Detail \u2014 Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Cedevita Zagreb count",
+          "2"
+        ],
+        [
+          "Panathinaikos Athens count",
+          "9"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Cedevita_Zagreb_start",
+          "name": "Cedevita Zagreb Made 3",
+          "team": "Cedevita Zagreb",
+          "stage": "start"
+        },
+        {
+          "id": "Panathinaikos_Athens_start",
+          "name": "Panathinaikos Athens Made 3",
+          "team": "Panathinaikos Athens",
+          "stage": "start"
+        },
+        {
+          "id": "Cedevita_Zagreb_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Cedevita Zagreb",
+          "stage": "type"
+        },
+        {
+          "id": "Cedevita_Zagreb_Made_3",
+          "name": "Made 3",
+          "team": "Cedevita Zagreb",
+          "stage": "event"
+        },
+        {
+          "id": "Cedevita Zagreb_3",
+          "name": "3 pts",
+          "team": "Cedevita Zagreb",
+          "stage": "points"
+        },
+        {
+          "id": "Panathinaikos_Athens_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Panathinaikos Athens",
+          "stage": "type"
+        },
+        {
+          "id": "Panathinaikos_Athens_Made_3",
+          "name": "Made 3",
+          "team": "Panathinaikos Athens",
+          "stage": "event"
+        },
+        {
+          "id": "Panathinaikos Athens_3",
+          "name": "3 pts",
+          "team": "Panathinaikos Athens",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Panathinaikos_Athens_start",
+          "target": "Panathinaikos_Athens_Above-the-break_C&S",
+          "value": 9
+        },
+        {
+          "source": "Panathinaikos_Athens_Above-the-break_C&S",
+          "target": "Panathinaikos_Athens_Made_3",
+          "value": 9
+        },
+        {
+          "source": "Panathinaikos_Athens_Made_3",
+          "target": "Panathinaikos Athens_3",
+          "value": 9
+        },
+        {
+          "source": "Cedevita_Zagreb_start",
+          "target": "Cedevita_Zagreb_Above-the-break_C&S",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_Above-the-break_C&S",
+          "target": "Cedevita_Zagreb_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Cedevita_Zagreb_Made_3",
+          "target": "Cedevita Zagreb_3",
+          "value": 2
+        }
+      ],
+      "player_flows": {
+        "Panathinaikos_Athens_start->Panathinaikos_Athens_Above-the-break_C&S": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Above-the-break_C&S->Panathinaikos_Athens_Made_3": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Panathinaikos_Athens_Made_3->Panathinaikos Athens_3": [
+          {
+            "player_id": "PJKO",
+            "player_name": "DIAMANTIDIS, DIMITRIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "PBEZ",
+            "player_name": "FOTSIS, ANTONIS",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P002980",
+            "player_name": "GIST, JAMES",
+            "team": "Panathinaikos Athens",
+            "poss": 2
+          },
+          {
+            "player_id": "P001932",
+            "player_name": "CALATHES, NICK",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "P003601",
+            "player_name": "HAYNES, MARQUEZ",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          },
+          {
+            "player_id": "PANE",
+            "player_name": "PAVLOVIC, SASHA",
+            "team": "Panathinaikos Athens",
+            "poss": 1
+          }
+        ],
+        "Cedevita_Zagreb_start->Cedevita_Zagreb_Above-the-break_C&S": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Above-the-break_C&S->Cedevita_Zagreb_Made_3": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ],
+        "Cedevita_Zagreb_Made_3->Cedevita Zagreb_3": [
+          {
+            "player_id": "P004316",
+            "player_name": "PILEPIC, FRAN",
+            "team": "Cedevita Zagreb",
+            "poss": 2
+          }
+        ]
+      }
+    }
+  }
+}
