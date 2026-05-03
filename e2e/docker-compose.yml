@@ -10,7 +10,7 @@ services:
       context: ../
       target: serve_files
     ports:
-      - "9001:9000"
+      - "8081:8080"
     # environment:
     #   - PORT=8123
 
@@ -21,7 +21,7 @@ services:
       - my_app
     environment:
       # pass base url to test pointing at the web application
-      - CYPRESS_baseUrl=http://my_app:9000
+      - CYPRESS_baseUrl=http://my_app:8080
       - CYPRESS_BROWSER=${CYPRESS_BROWSER:-chrome}  # Default to chrome if not set
 
     # share the current folder as volume to avoid copying

@@ -10,13 +10,63 @@ import os
 from basket.clubs import DEFAULT_REGISTRY
 from pipeline_runner import main as run_pipeline_main
 from validate_output import validate_file
-from season_sync import build_manifest, print_stored_seasons_inventory
+from season_sync import build_manifest, print_stored_seasons_inventory, main as season_sync_main
+from style_insights import main as style_insights_main
 from season_ops import (
     backfill_season_gamedates,
     build_season_report,
     find_unknown_club_names,
     normalize_season_data_files,
 )
+
+
+def orchestrate_full_season_sync(
+    *,
+    seasoncode: str,
+    output_dir: Path,
+    sync_fn,  # Injected season_sync main callable
+    insights_fn,  # Injected style_insights main callable
+) -> int:
+    """Orchestrate full season pipeline: sync (raw + multi + score_timeline) + style_insights.
+
+    Uses composition and dependency injection to keep sync and insights decoupled.
+    Both remain standalone and testable; this orchestrator chains them.
+    """
+    print(f"\n=== Full Season Sync: {seasoncode} ===")
+
+    # Step 1: season_sync (produces raw, multi, score_timeline)
+    print(f"=== [1/2] Syncing season data (raw + multi + score_timeline) ===")
+    sync_result = sync_fn(
+        [
+            "--seasoncode",
+            seasoncode,
+            "--output-dir",
+            str(output_dir),
+        ]
+    )
+    if sync_result != 0:
+        print(f"ERROR: season_sync failed with code {sync_result}")
+        return sync_result
+
+    # Step 2: style_insights (produces style_insights_E####.json)
+    print(f"=== [2/2] Building style insights (consistency + adaptability) ===")
+    insights_result = insights_fn(
+        [
+            "--seasoncode",
+            seasoncode,
+            "--data-dir",
+            str(output_dir),
+            "--output-dir",
+            str(output_dir),
+        ]
+    )
+    if insights_result != 0:
+        print(f"ERROR: style_insights failed with code {insights_result}")
+        return insights_result
+
+    print(f"\n✓ Full season sync complete: {seasoncode}")
+    print(f"  Artifacts: raw_*, multi_*, score_timeline_*, style_insights_*")
+    return 0
 
 
 def run_pipeline_and_validate(argv: list[str]) -> int:
@@ -93,14 +143,15 @@ def main(argv: list[str] | None = None) -> int:
         print("  entrypoint.py run_pipeline_and_validate [ARGS...]")
         print("  entrypoint.py demo")
         print("  entrypoint.py demo_auto_insights")
+        print("  entrypoint.py sync_season_full --seasoncode E2025 --output-dir data [--log-level DEBUG]")
         print("  entrypoint.py redo_season --seasoncode E2025 [--data-dir /app/data] [--concurrency 16] [--dry-run]")
-        print("  entrypoint.py sync_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --output-dir data [--log-level DEBUG]")
+        print("  entrypoint.py sync_season --seasoncode E2025 --output-dir data [--log-level DEBUG]")
         print("  entrypoint.py normalize_season_data --seasoncode E2025 --data-dir data [--workers 8] [--dry-run]")
         print("  entrypoint.py normalize_all_seasons --data-dir data [--workers 8] [--dry-run]")
         print("  entrypoint.py backfill_gamedates --seasoncode E2025 --data-dir data --raw-dir assets [--dry-run]")
         print("  entrypoint.py report_season --seasoncode E2025 --data-dir data")
         print("  entrypoint.py report_inventory [--output-dir assets/processed]")
-        print("  entrypoint.py prepare_season --seasoncode E2025 --start-gamecode 1 --end-gamecode 200 --data-dir data")
+        print("  entrypoint.py prepare_season --seasoncode E2025 --data-dir data")
         print("  entrypoint.py compute_elo --seasoncode E2021 [--output-dir assets/processed] [--k-factor 32] [--initial-rating 1500]")
         print("  entrypoint.py compute_elo --seasoncodes E2022,E2023,E2024 [--output-dir assets/processed] [--output-name elo_multiseason.json]")
         print("  entrypoint.py compute_elo --auto [--output-dir assets/processed] [--output-name elo_multiseason.json] [--force]")
@@ -216,8 +267,6 @@ def main(argv: list[str] | None = None) -> int:
                             help="Report delete + ingest plan without changing files")
         args = parser.parse_args(rest)
 
-        from season_sync import main as season_sync_main
-
         seasoncode = args.seasoncode
         data_dir = Path(args.data_dir).resolve()
         raw_dir = Path(args.raw_dir).resolve()
@@ -249,8 +298,6 @@ def main(argv: list[str] | None = None) -> int:
         os.environ["BASKET_APP_FILE_STORE_URI"] = str(raw_dir)
         sync_args = [
             "--seasoncode", seasoncode,
-            "--start-gamecode", "1",
-            "--end-gamecode", str(args.max_gamecode),
             "--output-dir", str(data_dir),
             "--concurrency", str(args.concurrency),
             "--max-failures", str(args.gap_limit),
@@ -259,10 +306,32 @@ def main(argv: list[str] | None = None) -> int:
         ]
         return season_sync_main(sync_args)
 
+    if command == "sync_season_full":
+        # Orchestrate full season sync: raw + multi + score_timeline + style_insights.
+        # Demonstrates composition and dependency injection for clean decoupling.
+        parser = argparse.ArgumentParser(
+            description="Full season sync: orchestrates season_sync + style_insights in sequence."
+        )
+        parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2025")
+        parser.add_argument(
+            "--output-dir",
+            default=os.getenv("BASKET_APP_FILE_STORE_URI", "assets") + "/processed",
+            help="Directory for all outputs (default: BASKET_APP_FILE_STORE_URI/processed)",
+        )
+        args = parser.parse_args(rest)
+        output_dir = Path(args.output_dir).resolve()
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Inject both sync and insights functions as dependencies
+        return orchestrate_full_season_sync(
+            seasoncode=args.seasoncode,
+            output_dir=output_dir,
+            sync_fn=season_sync_main,
+            insights_fn=style_insights_main,
+        )
+
     if command == "sync_season":
         # Wrapper around season_sync so we keep a single top-level entrypoint.
-        from season_sync import main as season_sync_main
-
         return season_sync_main(rest)
 
     if command == "normalize_season_data":
@@ -515,7 +584,6 @@ def main(argv: list[str] | None = None) -> int:
         data_dir = Path(args.data_dir).resolve()
         data_dir.mkdir(parents=True, exist_ok=True)
 
-        from season_sync import main as season_sync_main
         from elo import main as elo_main
 
         print("=== [1/5] Sync season ===")
@@ -574,8 +642,6 @@ def main(argv: list[str] | None = None) -> int:
         return build_score_timeline_main(rest)
 
     if command == "style_insights":
-        from style_insights import main as style_insights_main
-
         return style_insights_main(rest)
 
     print(f"Unknown command: {command}")

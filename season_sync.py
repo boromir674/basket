@@ -11,8 +11,12 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from build_from_euroleague_api import run_game
+from build_score_timeline import build_timeline_payload
 from basket.logging_utils import configure_logging
 from validate_output import validate_file
+
+
+TAIL_MISS_THRESHOLD = 5
 
 
 def _collect_stored_seasons_inventory(output_dir: Path) -> list[dict[str, Any]]:
@@ -136,8 +140,14 @@ def _build_one_game(
     seasoncode: str,
     gamecode: int,
     out_path: Path,
+    raw_dir: Optional[Path] = None,
+    score_timeline_dir: Optional[Path] = None,
 ) -> tuple[bool, Optional[dict[str, Any]], str, str]:
-    """Build+validate a single game. Returns (ok, meta, err_kind, err_msg)."""
+    """Build+validate a single game. Returns (ok, meta, err_kind, err_msg).
+
+    Also writes score_timeline_{seasoncode}_{gamecode}.json if raw_dir and
+    score_timeline_dir are provided (raw_pts file must exist after run_game).
+    """
     try:
         run_game(seasoncode, gamecode, str(out_path))
         is_valid, message = validate_file(out_path)
@@ -149,6 +159,22 @@ def _build_one_game(
             meta = data.get("meta", {}) if isinstance(data, dict) else {}
         except Exception:
             meta = None
+
+        # Build score_timeline artifact from the raw_pts file written by run_game.
+        if raw_dir is not None and score_timeline_dir is not None:
+            raw_pts = raw_dir / f"raw_pts_{seasoncode}_{gamecode}.json"
+            if raw_pts.exists():
+                try:
+                    payload = build_timeline_payload(raw_pts)
+                    tl_path = score_timeline_dir / f"score_timeline_{seasoncode}_{gamecode}.json"
+                    tl_path.write_text(
+                        json.dumps(payload, ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
+                except Exception as tl_exc:  # noqa: BLE001
+                    logging.getLogger("season_sync").warning(
+                        "score_timeline build failed for %s/%s: %s", seasoncode, gamecode, tl_exc
+                    )
 
         return True, meta, "", ""
     except BaseException as exc:  # noqa: BLE001
@@ -244,10 +270,10 @@ def build_manifest(output_dir: Path, seasoncode: str | None = None) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Sync a block of games for a season.")
+    parser = argparse.ArgumentParser(
+        description="Sync all games for a season by scanning gamecodes from 1 until tail miss threshold is reached."
+    )
     parser.add_argument("--seasoncode", required=True, help="Season code, e.g. E2024")
-    parser.add_argument("--start-gamecode", type=int, default=1, help="First gamecode to try (inclusive)")
-    parser.add_argument("--end-gamecode", type=int, default=200, help="Last gamecode to try (inclusive)")
     parser.add_argument(
         "--output-dir",
         default=".",
@@ -257,7 +283,7 @@ def main(argv: list[str] | None = None) -> int:
         "--max-failures",
         type=int,
         default=25,
-        help="Stop early after this many failures (e.g. missing games)",
+        help="Stop early after this many non-permanent failures (network/rate-limit)",
     )
     parser.add_argument(
         "--force",
@@ -278,37 +304,37 @@ def main(argv: list[str] | None = None) -> int:
         "--progress-interval",
         type=int,
         default=10,
-        help="Print a progress update every N processed games (default: 10)",
+        help="Print a progress update every N scanned gamecodes (default: 10)",
     )
     parser.add_argument(
         "--concurrency",
         type=int,
         default=_env_int("BASKET_SYSTEM_SYNC_CONCURRENCY", 1),
-        help="Max concurrent game builds (default: env BASKET_SYSTEM_SYNC_CONCURRENCY or 1)",
+        help="Deprecated for season_sync scan mode (sequential only).",
     )
     parser.add_argument(
         "--pressure",
         type=float,
         default=_env_float("BASKET_SYSTEM_API_PRESSURE", 1.0),
-        help="Initial API pressure in [0,1] (scales concurrency). Default: env BASKET_SYSTEM_API_PRESSURE or 1.0",
+        help="Deprecated for season_sync scan mode (sequential only).",
     )
     parser.add_argument(
         "--pressure-decay",
         type=float,
         default=0.7,
-        help="On HTTP 429, multiply pressure by this factor (default: 0.7)",
+        help="Deprecated for season_sync scan mode (sequential only).",
     )
     parser.add_argument(
         "--pressure-inc",
         type=float,
         default=0.05,
-        help="When stable (no 429s), add this to pressure periodically (default: 0.05)",
+        help="Deprecated for season_sync scan mode (sequential only).",
     )
     parser.add_argument(
         "--backoff-seconds",
         type=float,
         default=1.0,
-        help="Base backoff seconds on 429 (default: 1.0)",
+        help="Base backoff seconds on 429 during retry pass (default: 1.0)",
     )
     parser.add_argument(
         "--max-backoff-seconds",
@@ -319,7 +345,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--retry-pass",
         action="store_true",
-        help="After concurrent pass, retry failed games sequentially",
+        help="After initial scan, retry failed gamecodes sequentially",
     )
     parser.add_argument(
         "--write-failures",
@@ -329,7 +355,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Do not write or validate JSON, just log what would be done",
+        help="No-op summary for scan mode (open-ended scan cannot be dry-run enumerated)",
     )
     parser.add_argument(
         "--log-level",
@@ -347,10 +373,13 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     seasoncode: str = args.seasoncode
-    start_gc: int = args.start_gamecode
-    end_gc: int = args.end_gamecode
     output_dir = Path(args.output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # raw_dir: where build_from_euroleague_api.py writes raw_pts/raw_pbp/raw_box files.
+    raw_dir = Path(os.getenv("BASKET_APP_FILE_STORE_URI", "assets")).resolve()
+    # score_timeline files live alongside the processed game JSONs.
+    score_timeline_dir = output_dir
 
     # Logging: console INFO by default, file DEBUG by default.
     if str(args.log_file).strip():
@@ -362,36 +391,36 @@ def main(argv: list[str] | None = None) -> int:
     if configured is not None:
         logger.info("File logging enabled -> %s", configured)
 
+    if args.concurrency and args.concurrency > 1:
+        logger.info("Ignoring --concurrency=%s; scan mode is sequential by design.", args.concurrency)
+
     mode = "DRY-RUN" if args.dry_run else "LIVE"
-    logger.info("=== Season sync for %s: %s..%s (mode=%s) ===", seasoncode, start_gc, end_gc, mode)
+    logger.info(
+        "=== Season sync for %s: scan from gamecode=1 until %s consecutive permanent misses (mode=%s) ===",
+        seasoncode,
+        TAIL_MISS_THRESHOLD,
+        mode,
+    )
+
+    if args.dry_run:
+        print("\n[INFO] Dry-run not executed: season sync now scans until tail stop condition and has no fixed range.")
+        print(f"  seasoncode: {seasoncode}")
+        print(f"  stop_condition: {TAIL_MISS_THRESHOLD} consecutive permanent missing gamecodes")
+        return 0
 
     failures = 0
+    blocking_failures = 0
     processed = 0
+    skipped_existing = 0
+    scanned_total = 0
     first_game_meta = None
-    first_game_year = None
     prompted_after_first = False
+    found_gamecodes: set[int] = set()
 
-    # If interactive prompting is requested, force sequential mode so we don't
-    # schedule work ahead of user confirmation.
-    if args.interactive and args.concurrency and args.concurrency > 1:
-        print("[NOTICE] --interactive requested; forcing --concurrency=1")
-        args.concurrency = 1
-
-    # Build target list (respects --force and existing files).
-    targets: list[int] = []
-    for gamecode in range(start_gc, end_gc + 1):
-        out_name = f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
-        out_path = output_dir / out_name
-        if out_path.exists() and not args.force:
-            continue
-        targets.append(gamecode)
-
-    started_at = time.time()
-    total_to_build = len(targets)
-    logger.info("Planned builds: %s games (skipping existing unless --force)", total_to_build)
     print("\n[INFO] Starting season ingestion:")
     print(f"  seasoncode: {seasoncode}")
-    print(f"  planned_games: {total_to_build}")
+    print("  scan_mode: sequential from gamecode=1")
+    print(f"  stop_condition: {TAIL_MISS_THRESHOLD} consecutive permanent missing gamecodes (tail)")
 
     failed: list[dict[str, Any]] = []
 
@@ -405,15 +434,7 @@ def main(argv: list[str] | None = None) -> int:
         p.write_text(json.dumps(failed, indent=2), encoding="utf-8")
         print(f"Wrote failures ({len(failed)}) -> {p}")
 
-    def _split_tail_vs_holes(entries):
-        """
-        Split permanent failures into:
-          - tail: the trailing consecutive block at the highest gamecodes
-                  (expected — these are how we detect end-of-season)
-          - holes: permanent failures with a successful game at a higher gamecode
-                   (unexpected — real mid-season data gaps)
-        Non-permanent failures are returned as-is (neither tail nor hole logic applies).
-        """
+    def _split_tail_vs_holes(entries: list[dict[str, Any]], successes: set[int]):
         permanent = sorted(
             [e for e in entries if e.get("kind") == "permanent"],
             key=lambda e: e.get("gamecode", 0),
@@ -423,20 +444,28 @@ def main(argv: list[str] | None = None) -> int:
         if not permanent:
             return [], [], other
 
-        # Walk backwards from the highest gamecode; while consecutive, it's tail.
         tail_set = set()
-        prev = permanent[-1].get("gamecode", 0)
+        prev = int(permanent[-1].get("gamecode", 0))
         tail_set.add(prev)
         for entry in reversed(permanent[:-1]):
-            gc = entry.get("gamecode", 0)
+            gc = int(entry.get("gamecode", 0))
             if prev - gc == 1:
                 tail_set.add(gc)
                 prev = gc
             else:
                 break
 
-        tail = [e for e in permanent if e.get("gamecode") in tail_set]
-        holes = [e for e in permanent if e.get("gamecode") not in tail_set]
+        tail = [e for e in permanent if int(e.get("gamecode", 0)) in tail_set]
+        holes_raw = [e for e in permanent if int(e.get("gamecode", 0)) not in tail_set]
+        if not successes:
+            return tail, [], other
+
+        min_found = min(successes)
+        max_found = max(successes)
+        holes = [
+            e for e in holes_raw
+            if min_found < int(e.get("gamecode", 0)) < max_found
+        ]
         return tail, holes, other
 
     def print_failure_diagnostics(*, stopped_early: bool) -> None:
@@ -455,257 +484,145 @@ def main(argv: list[str] | None = None) -> int:
                 return m.split(":", 1)[0].strip() or "Unknown"
             return m or "Unknown"
 
-        tail, holes, other_failures = _split_tail_vs_holes(failed)
+        tail, holes, other_failures = _split_tail_vs_holes(failed, found_gamecodes)
 
         print("\n[INFO] Failure diagnostics:")
         print(f"  failures_total: {len(failed)}")
         print(f"  stopped_early: {'yes' if stopped_early else 'no'}")
 
-        # ── Tail block (expected end-of-season) ──────────────────────────────
         if tail:
-            tail_gcs = sorted(e.get("gamecode") for e in tail)
-            print(f"  end_of_season_tail: {len(tail)} gamecodes ({tail_gcs[0]}–{tail_gcs[-1]}) — no data on API, this is normal")
+            tail_gcs = sorted(int(e.get("gamecode", 0)) for e in tail)
+            print(f"  end_of_season_tail: {len(tail)} gamecodes ({tail_gcs[0]}–{tail_gcs[-1]}) — no data on API, expected")
 
-        # ── Mid-season holes (unexpected) ────────────────────────────────────
         if holes:
-            hole_gcs = sorted(e.get("gamecode") for e in holes)
-            print(f"  mid_season_holes: {len(holes)} gamecodes with no API data despite later games existing")
+            hole_gcs = sorted(int(e.get("gamecode", 0)) for e in holes)
+            print(f"  mid_season_holes: {len(holes)} gamecodes")
             print(f"    gamecodes: {hole_gcs}")
-            print(f"    ⚠  These are real gaps — investigate or re-run targeting these gamecodes.")
+            print("    NOTE: hole(s) do not stop ingestion; they are reported only.")
 
-        # ── Network / rate-limit failures ────────────────────────────────────
-        by_other = Counter(e.get("kind", "unknown") for e in other_failures)
         if other_failures:
-            KIND_LABELS = {
-                "rate_limited": "rate_limited (HTTP 429 — slow down concurrency)",
-                "transient": "transient (network/timeout — safe to retry)",
-            }
             print("  retriable_failures:")
+            by_other = Counter(e.get("kind", "unknown") for e in other_failures)
             by_exc = Counter(classify_exception_name(str(e.get("message", ""))) for e in other_failures)
             for kind, cnt in by_other.most_common():
-                label = KIND_LABELS.get(kind, kind)
-                print(f"    - {label}: {cnt}")
+                print(f"    - {kind}: {cnt}")
             for exc, cnt in by_exc.most_common(5):
                 print(f"    - exception: {exc}: {cnt}")
-            sample = other_failures[: min(5, len(other_failures))]
-            for entry in sample:
-                print(f"    - game={entry.get('gamecode')} type={entry.get('kind')} msg={entry.get('message')}")
 
-        # ── Mitigation hints ─────────────────────────────────────────────────
         joined = " | ".join(str(entry.get("message", "")) for entry in failed)
         hints = []
         if by_kind.get("rate_limited", 0) > 0 or "HTTP 429" in joined:
-            hints.append("API rate limiting detected: lower --concurrency and/or --pressure, keep --retry-pass enabled.")
+            hints.append("API rate limiting detected: lower load and keep --retry-pass enabled.")
         if "ReadTimeout" in joined or "ConnectTimeout" in joined or "ConnectionError" in joined:
-            hints.append("Network instability: lower --concurrency and rerun; transient failures should recover on retry pass.")
-        if holes:
-            hole_gcs = sorted(e.get("gamecode") for e in holes)
-            hints.append(f"Mid-season holes at {hole_gcs}: re-run sync_season targeting those gamecodes, or accept as permanently missing.")
-        if tail and stopped_early:
-            hints.append("Trailing tail is expected end-of-season behaviour — no action needed.")
+            hints.append("Network instability detected: rerun; transient failures should recover.")
         if hints:
             print("  mitigation:")
             for h in hints:
                 print(f"    - {h}")
 
-        if holes:
-            hole_gcs = sorted(e.get("gamecode") for e in holes)
-            print("\n  [ACTION] Re-run these hole gamecodes individually:")
-            for gc in hole_gcs:
-                print(
-                    f"    docker-compose run --rm ops sync_season"
-                    f" --seasoncode {seasoncode}"
-                    f" --start-gamecode {gc} --end-gamecode {gc}"
-                    f" --output-dir {output_dir}"
-                    f" --concurrency 1 --max-failures 1 --force"
+    started_at = time.time()
+    next_gamecode = 1
+    tail_miss_streak = 0
+
+    while True:
+        if blocking_failures >= args.max_failures:
+            logger.error("Too many non-permanent failures, stopping early.")
+            break
+
+        gamecode = next_gamecode
+        next_gamecode += 1
+        scanned_total += 1
+
+        out_name = f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
+        out_path = output_dir / out_name
+
+        if out_path.exists() and not args.force:
+            skipped_existing += 1
+            found_gamecodes.add(gamecode)
+            tail_miss_streak = 0
+            if scanned_total % max(1, args.progress_interval) == 0:
+                logger.info(
+                    "[PROGRESS] scanned=%s, ok=%s, skipped=%s, failures=%s, tail_miss_streak=%s",
+                    scanned_total,
+                    processed,
+                    skipped_existing,
+                    failures,
+                    tail_miss_streak,
                 )
+            continue
 
-    if args.dry_run:
-        for gamecode in targets:
-            out_path = output_dir / f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
-            logger.info("[DRY-RUN] would build %s/%s -> %s", seasoncode, gamecode, out_path)
-            processed += 1
-        logger.info("=== Done. processed=%s, failures=%s (mode=%s) ===", processed, failures, mode)
-        print("\n[INFO] Season ingestion summary:")
-        print(f"  seasoncode: {seasoncode}")
-        print(f"  downloaded_ok: {processed}/{total_to_build}")
-        print(f"  failures: {failures}")
-        print_stored_seasons_inventory(output_dir)
-        return 0
+        logger.info("[RUN] %s/%s -> %s", seasoncode, gamecode, out_path)
+        ok, meta, kind, msg = _build_one_game(
+            seasoncode=seasoncode, gamecode=gamecode, out_path=out_path,
+            raw_dir=raw_dir, score_timeline_dir=score_timeline_dir,
+        )
 
-    # Sequential mode (preserves previous behavior).
-    if not args.concurrency or args.concurrency <= 1:
-        for gamecode in range(start_gc, end_gc + 1):
-            out_name = f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
-            out_path = output_dir / out_name
+        if not ok:
+            logger.warning("[ERROR %s] %s/%s: %s", kind, seasoncode, gamecode, msg)
+            failures += 1
+            record_failure(gamecode, kind, msg)
 
-            if out_path.exists() and not args.force:
-                logger.debug("[SKIP existing] %s/%s -> %s", seasoncode, gamecode, out_path)
-                continue
-
-            logger.info("[RUN] %s/%s -> %s", seasoncode, gamecode, out_path)
-            ok, meta, kind, msg = _build_one_game(seasoncode=seasoncode, gamecode=gamecode, out_path=out_path)
-            if not ok:
-                logger.warning("[ERROR %s] %s/%s: %s", kind, seasoncode, gamecode, msg)
-                failures += 1
-                record_failure(gamecode, kind, msg)
-                if failures >= args.max_failures:
-                    logger.error("Too many failures, stopping early.")
-                    break
-                continue
-
-            logger.debug("[VALIDATION OK] %s/%s", seasoncode, gamecode)
-
-            # on first successful processed game, record metadata and optionally prompt
-            if processed == 0 and meta is not None:
-                first_game_meta = meta
-                gamedate = meta.get("gamedate") if isinstance(meta, dict) else None
-                if gamedate and isinstance(gamedate, str) and len(gamedate) >= 4:
-                    try:
-                        first_game_year = int(gamedate[:4])
-                    except Exception:
-                        first_game_year = None
-                print("\n[INFO] First successful game fetched:")
-                print(f"  seasoncode: {meta.get('seasoncode')}")
-                print(f"  gamecode:   {meta.get('gamecode')}")
-                print(f"  gamedate:   {meta.get('gamedate')}")
-                if args.interactive and not prompted_after_first:
-                    if args.yes:
-                        print("  [INTERACTIVE] --yes set, continuing without prompt")
-                    else:
-                        ans = input("Proceed with the rest of the season? [y/N]: ")
-                        if ans.strip().lower() not in ("y", "yes"):
-                            print("Aborting as requested by user.")
-                            break
-                    prompted_after_first = True
-
-            processed += 1
-            elapsed = max(0.001, time.time() - started_at)
-            rate = processed / elapsed
-            logger.info(
-                "Downloaded OK: %s/%s (failures=%s) | %.2f games/s | elapsed=%.1fs",
-                processed,
-                total_to_build,
-                failures,
-                rate,
-                elapsed,
-            )
-            if processed % args.progress_interval == 0:
-                logger.info("[PROGRESS] ok=%s, failures=%s", processed, failures)
-
-        logger.info("=== Done. processed=%s, failures=%s (mode=%s) ===", processed, failures, mode)
-        maybe_write_failures()
-        print_failure_diagnostics(stopped_early=failures >= args.max_failures)
-        print("\n[INFO] Season ingestion summary:")
-        print(f"  seasoncode: {seasoncode}")
-        print(f"  downloaded_ok: {processed}/{total_to_build}")
-        print(f"  failures: {failures}")
-        print_stored_seasons_inventory(output_dir)
-
-        # Avoid clobbering an existing manifest with an empty one when a probe run
-        # (or a bad seasoncode) yields zero successful games.
-        if processed > 0 or total_to_build == 0:
-            build_manifest(output_dir, seasoncode)
-        else:
-            logger.warning("No successful games; manifest not updated")
-        return 0
-
-    # Concurrent mode (game-level overlap).
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-
-    max_conc = max(1, int(args.concurrency))
-    pressure = _clamp(float(args.pressure), 0.05, 1.0)
-    decay = _clamp(float(args.pressure_decay), 0.1, 1.0)
-    inc = _clamp(float(args.pressure_inc), 0.0, 0.5)
-    backoff_base = max(0.0, float(args.backoff_seconds))
-    backoff_cap = max(0.0, float(args.max_backoff_seconds))
-
-    consecutive_429 = 0
-    stable_batches = 0
-
-    logger.info(
-        "[CONCURRENCY] enabled: max_concurrency=%s, initial_pressure=%.2f (effective=%s)",
-        max_conc,
-        pressure,
-        max(1, round(max_conc * pressure)),
-    )
-
-    idx = 0
-    with ThreadPoolExecutor(max_workers=max_conc) as ex:
-        while idx < len(targets):
-            if failures >= args.max_failures:
-                logger.error("Too many failures, stopping early.")
-                break
-
-            eff = max(1, int(round(max_conc * pressure)))
-            batch = targets[idx : idx + eff]
-            idx += len(batch)
-
-            futures = {}
-            for gamecode in batch:
-                out_path = output_dir / f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
-                futures[ex.submit(_build_one_game, seasoncode=seasoncode, gamecode=gamecode, out_path=out_path)] = gamecode
-
-            batch_429 = 0
-            for fut in as_completed(list(futures.keys())):
-                gamecode = futures[fut]
-                ok, meta, kind, msg = fut.result()
-                if ok:
-                    processed += 1
-                    if first_game_meta is None and meta is not None:
-                        first_game_meta = meta
-                    elapsed = max(0.001, time.time() - started_at)
-                    rate = processed / elapsed
-                    logger.info(
-                        "[OK] %s/%s | Downloaded OK: %s/%s (failures=%s) | %.2f games/s | elapsed=%.1fs",
-                        seasoncode,
-                        gamecode,
-                        processed,
-                        total_to_build,
-                        failures,
-                        rate,
-                        elapsed,
-                    )
-                else:
-                    logger.warning("[FAIL %s] %s/%s: %s", kind, seasoncode, gamecode, msg)
-                    failures += 1
-                    record_failure(gamecode, kind, msg)
-                    if kind == "rate_limited":
-                        batch_429 += 1
-
-            # Pressure update
-            if batch_429 > 0:
-                consecutive_429 += 1
-                stable_batches = 0
-                pressure = _clamp(pressure * decay, 0.05, 1.0)
-                if backoff_base > 0:
-                    sleep_s = min(backoff_cap, backoff_base * (2 ** (consecutive_429 - 1)))
-                    if sleep_s > 0:
-                        logger.info(
-                            "[BACKOFF] 429s=%s consecutive=%s pressure=%.2f sleep=%.1fs",
-                            batch_429,
-                            consecutive_429,
-                            pressure,
-                            sleep_s,
-                        )
-                        time.sleep(sleep_s)
+            if kind == "permanent":
+                tail_miss_streak += 1
             else:
-                consecutive_429 = 0
-                stable_batches += 1
-                if stable_batches >= 3 and inc > 0:
-                    pressure = _clamp(pressure + inc, 0.05, 1.0)
-                    stable_batches = 0
-                    logger.info(
-                        "[RAMP] pressure increased to %.2f (effective=%s)",
-                        pressure,
-                        max(1, round(max_conc * pressure)),
-                    )
+                blocking_failures += 1
+                tail_miss_streak = 0
 
-            if (processed + failures) % max(1, args.progress_interval) == 0:
-                logger.info("[PROGRESS] ok=%s, failures=%s, pressure=%.2f", processed, failures, pressure)
+            if tail_miss_streak >= TAIL_MISS_THRESHOLD:
+                logger.info(
+                    "Reached tail stop condition at gamecode=%s (%s consecutive permanent misses)",
+                    gamecode,
+                    tail_miss_streak,
+                )
+                break
+            continue
 
-    # Pass 2: retry failures sequentially (fallback).
-    if args.retry_pass and failed and failures < args.max_failures:
+        # Success path
+        found_gamecodes.add(gamecode)
+        tail_miss_streak = 0
+
+        if processed == 0 and meta is not None:
+            first_game_meta = meta
+            print("\n[INFO] First successful game fetched:")
+            print(f"  seasoncode: {meta.get('seasoncode')}")
+            print(f"  gamecode:   {meta.get('gamecode')}")
+            print(f"  gamedate:   {meta.get('gamedate')}")
+            if args.interactive and not prompted_after_first:
+                if args.yes:
+                    print("  [INTERACTIVE] --yes set, continuing without prompt")
+                else:
+                    ans = input("Proceed with the rest of the season? [y/N]: ")
+                    if ans.strip().lower() not in ("y", "yes"):
+                        print("Aborting as requested by user.")
+                        break
+                prompted_after_first = True
+
+        processed += 1
+        elapsed = max(0.001, time.time() - started_at)
+        rate = processed / elapsed
+        logger.info(
+            "Downloaded OK: %s (scanned=%s, skipped=%s, failures=%s) | %.2f games/s | elapsed=%.1fs",
+            processed,
+            scanned_total,
+            skipped_existing,
+            failures,
+            rate,
+            elapsed,
+        )
+        if scanned_total % max(1, args.progress_interval) == 0:
+            logger.info(
+                "[PROGRESS] scanned=%s, ok=%s, skipped=%s, failures=%s, tail_miss_streak=%s",
+                scanned_total,
+                processed,
+                skipped_existing,
+                failures,
+                tail_miss_streak,
+            )
+
+    # Retry pass for failed gamecodes (sequential)
+    if args.retry_pass and failed and blocking_failures < args.max_failures:
+        backoff_base = max(0.0, float(args.backoff_seconds))
+        backoff_cap = max(0.0, float(args.max_backoff_seconds))
         logger.info("=== Retry pass (sequential) for %s failed games ===", len(failed))
         retry_failed = list(failed)
         failed.clear()
@@ -713,28 +630,21 @@ def main(argv: list[str] | None = None) -> int:
             gamecode = int(entry["gamecode"])
             out_path = output_dir / f"multi_drilldown_real_data_{seasoncode}_{gamecode}.json"
             logger.info("[RETRY] %s/%s", seasoncode, gamecode)
-            ok, _meta, kind, msg = _build_one_game(seasoncode=seasoncode, gamecode=gamecode, out_path=out_path)
+            ok, _meta, kind, msg = _build_one_game(
+                seasoncode=seasoncode, gamecode=gamecode, out_path=out_path,
+                raw_dir=raw_dir, score_timeline_dir=score_timeline_dir,
+            )
             if ok:
                 processed += 1
-                elapsed = max(0.001, time.time() - started_at)
-                rate = processed / elapsed
-                logger.info(
-                    "[OK] %s/%s | Downloaded OK: %s/%s (failures=%s) | %.2f games/s | elapsed=%.1fs",
-                    seasoncode,
-                    gamecode,
-                    processed,
-                    total_to_build,
-                    failures,
-                    rate,
-                    elapsed,
-                )
+                found_gamecodes.add(gamecode)
             else:
-                logger.warning("[FAIL %s] %s/%s: %s", kind, seasoncode, gamecode, msg)
                 failures += 1
                 record_failure(gamecode, kind, msg)
-                if failures >= args.max_failures:
-                    logger.error("Too many failures, stopping early.")
-                    break
+                if kind != "permanent":
+                    blocking_failures += 1
+                    if blocking_failures >= args.max_failures:
+                        logger.error("Too many non-permanent failures, stopping early.")
+                        break
                 if kind == "rate_limited" and backoff_base > 0:
                     sleep_s = min(backoff_cap, backoff_base)
                     if sleep_s > 0:
@@ -742,17 +652,16 @@ def main(argv: list[str] | None = None) -> int:
 
     logger.info("=== Done. processed=%s, failures=%s (mode=%s) ===", processed, failures, mode)
     maybe_write_failures()
-    print_failure_diagnostics(stopped_early=failures >= args.max_failures)
+    print_failure_diagnostics(stopped_early=blocking_failures >= args.max_failures)
     print("\n[INFO] Season ingestion summary:")
     print(f"  seasoncode: {seasoncode}")
-    print(f"  downloaded_ok: {processed}/{total_to_build}")
+    print(f"  scanned_gamecodes: {scanned_total}")
+    print(f"  downloaded_ok: {processed}")
+    print(f"  skipped_existing: {skipped_existing}")
     print(f"  failures: {failures}")
     print_stored_seasons_inventory(output_dir)
 
-    # Refresh manifest for this season so the UI can list all games.
-    # If we had zero successes (e.g. probing a non-existent seasoncode), do not
-    # clobber an existing manifest with an empty file.
-    if processed > 0 or total_to_build == 0:
+    if processed > 0:
         build_manifest(output_dir, seasoncode)
     else:
         logger.warning("No successful games; manifest not updated")
