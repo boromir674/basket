@@ -1,0 +1,5459 @@
+{
+  "meta": {
+    "seasoncode": "E2020",
+    "gamecode": 226,
+    "team_a": "Valencia Basket",
+    "team_b": "Zenit St Petersburg",
+    "score_a": 91,
+    "score_b": 62,
+    "winner": "Valencia Basket",
+    "gamedate": "2021-02-25",
+    "synced_at": "2026-05-02T22:45:57.143559+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "PLRQ": {
+      "name": "VAN ROSSOM, SAM",
+      "team": "Valencia Basket"
+    },
+    "P006433": {
+      "name": "PANGOS, KEVIN",
+      "team": "Zenit St Petersburg"
+    },
+    "P009006": {
+      "name": "WILLIAMS, DERRICK",
+      "team": "Valencia Basket"
+    },
+    "P005856": {
+      "name": "THOMAS, WILL",
+      "team": "Zenit St Petersburg"
+    },
+    "P004866": {
+      "name": "KALINIC, NIKOLA",
+      "team": "Valencia Basket"
+    },
+    "P004172": {
+      "name": "PONITKA, MATEUSZ",
+      "team": "Zenit St Petersburg"
+    },
+    "P002742": {
+      "name": "DUBLJEVIC, BOJAN",
+      "team": "Valencia Basket"
+    },
+    "P009917": {
+      "name": "HOLLINS, AUSTIN",
+      "team": "Zenit St Petersburg"
+    },
+    "P002936": {
+      "name": "SASTRE, JOAN",
+      "team": "Valencia Basket"
+    },
+    "P005775": {
+      "name": "BARON, BILLY",
+      "team": "Zenit St Petersburg"
+    },
+    "P003120": {
+      "name": "GUDAITIS, ARTURAS",
+      "team": "Zenit St Petersburg"
+    },
+    "P002661": {
+      "name": "PREPELIC, KLEMEN",
+      "team": "Valencia Basket"
+    },
+    "P009960": {
+      "name": "POYTHRESS, ALEX",
+      "team": "Zenit St Petersburg"
+    },
+    "P008780": {
+      "name": "HERMANNSSON, MARTIN",
+      "team": "Valencia Basket"
+    },
+    "P004884": {
+      "name": "LABEYRIE, LOUIS",
+      "team": "Valencia Basket"
+    },
+    "P004761": {
+      "name": "MARINKOVIC, VANJA",
+      "team": "Valencia Basket"
+    },
+    "P003573": {
+      "name": "ZUBKOV, ANDREY",
+      "team": "Zenit St Petersburg"
+    },
+    "P007186": {
+      "name": "ZAKHAROV, DENIS",
+      "team": "Zenit St Petersburg"
+    },
+    "P002429": {
+      "name": "RIVERS, KC",
+      "team": "Zenit St Petersburg"
+    },
+    "P008966": {
+      "name": "TOBEY, MIKE",
+      "team": "Valencia Basket"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P002429",
+      "player_name": "RIVERS, KC",
+      "team": "DYR",
+      "minutes": "19:50",
+      "points": 1,
+      "valuation": -6,
+      "plusminus": -13,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007186",
+      "player_name": "ZAKHAROV, DENIS",
+      "team": "DYR",
+      "minutes": "10:02",
+      "points": 3,
+      "valuation": 2,
+      "plusminus": 6,
+      "assists": 3,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006433",
+      "player_name": "PANGOS, KEVIN",
+      "team": "DYR",
+      "minutes": "26:58",
+      "points": 9,
+      "valuation": 7,
+      "plusminus": -32,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 3
+    },
+    {
+      "player_id": "PLLH",
+      "player_name": "FRIDZON, VITALY",
+      "team": "DYR",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P009917",
+      "player_name": "HOLLINS, AUSTIN",
+      "team": "DYR",
+      "minutes": "16:53",
+      "points": 6,
+      "valuation": 8,
+      "plusminus": -6,
+      "assists": 0,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P005856",
+      "player_name": "THOMAS, WILL",
+      "team": "DYR",
+      "minutes": "22:42",
+      "points": 8,
+      "valuation": 10,
+      "plusminus": -31,
+      "assists": 2,
+      "rebounds": 4,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P005775",
+      "player_name": "BARON, BILLY",
+      "team": "DYR",
+      "minutes": "23:17",
+      "points": 11,
+      "valuation": 8,
+      "plusminus": -19,
+      "assists": 2,
+      "rebounds": 2,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P003370",
+      "player_name": "PUSHKOV, ANTON",
+      "team": "DYR",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003573",
+      "player_name": "ZUBKOV, ANDREY",
+      "team": "DYR",
+      "minutes": "17:26",
+      "points": 5,
+      "valuation": -1,
+      "plusminus": 2,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P009960",
+      "player_name": "POYTHRESS, ALEX",
+      "team": "DYR",
+      "minutes": "22:13",
+      "points": 12,
+      "valuation": 14,
+      "plusminus": -22,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004172",
+      "player_name": "PONITKA, MATEUSZ",
+      "team": "DYR",
+      "minutes": "22:52",
+      "points": 3,
+      "valuation": 3,
+      "plusminus": -23,
+      "assists": 3,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003120",
+      "player_name": "GUDAITIS, ARTURAS",
+      "team": "DYR",
+      "minutes": "17:47",
+      "points": 4,
+      "valuation": 6,
+      "plusminus": -7,
+      "assists": 1,
+      "rebounds": 4,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004761",
+      "player_name": "MARINKOVIC, VANJA",
+      "team": "PAM",
+      "minutes": "19:32",
+      "points": 5,
+      "valuation": 6,
+      "plusminus": 15,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P002661",
+      "player_name": "PREPELIC, KLEMEN",
+      "team": "PAM",
+      "minutes": "16:32",
+      "points": 8,
+      "valuation": 4,
+      "plusminus": 1,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P010393",
+      "player_name": "PRADILLA, JAIME",
+      "team": "PAM",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004884",
+      "player_name": "LABEYRIE, LOUIS",
+      "team": "PAM",
+      "minutes": "23:00",
+      "points": 6,
+      "valuation": 8,
+      "plusminus": 15,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PLRQ",
+      "player_name": "VAN ROSSOM, SAM",
+      "team": "PAM",
+      "minutes": "21:07",
+      "points": 10,
+      "valuation": 10,
+      "plusminus": 16,
+      "assists": 1,
+      "rebounds": 3,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P008966",
+      "player_name": "TOBEY, MIKE",
+      "team": "PAM",
+      "minutes": "17:40",
+      "points": 12,
+      "valuation": 23,
+      "plusminus": 13,
+      "assists": 3,
+      "rebounds": 4,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P004866",
+      "player_name": "KALINIC, NIKOLA",
+      "team": "PAM",
+      "minutes": "26:45",
+      "points": 12,
+      "valuation": 25,
+      "plusminus": 30,
+      "assists": 10,
+      "rebounds": 3,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P002742",
+      "player_name": "DUBLJEVIC, BOJAN",
+      "team": "PAM",
+      "minutes": "22:20",
+      "points": 19,
+      "valuation": 24,
+      "plusminus": 16,
+      "assists": 2,
+      "rebounds": 6,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P000518",
+      "player_name": "SAN EMETERIO, FERNANDO",
+      "team": "PAM",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P009006",
+      "player_name": "WILLIAMS, DERRICK",
+      "team": "PAM",
+      "minutes": "16:52",
+      "points": 10,
+      "valuation": 9,
+      "plusminus": 14,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P008780",
+      "player_name": "HERMANNSSON, MARTIN",
+      "team": "PAM",
+      "minutes": "18:53",
+      "points": 2,
+      "valuation": 2,
+      "plusminus": 13,
+      "assists": 3,
+      "rebounds": 3,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P002936",
+      "player_name": "SASTRE, JOAN",
+      "team": "PAM",
+      "minutes": "17:19",
+      "points": 7,
+      "valuation": 7,
+      "plusminus": 12,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    }
+  ],
+  "colors": {
+    "Valencia Basket": "#d62839",
+    "Zenit St Petersburg": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "Valencia Basket": 77,
+        "Zenit St Petersburg": 72
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "Valencia Basket starts",
+          "77"
+        ],
+        [
+          "Zenit St Petersburg starts",
+          "72"
+        ],
+        [
+          "Valencia Basket points per poss.",
+          "1.18"
+        ],
+        [
+          "Valencia Basket Made 3 share",
+          "12%"
+        ],
+        [
+          "Zenit St Petersburg points per poss.",
+          "0.86"
+        ],
+        [
+          "Zenit St Petersburg Made 3 share",
+          "8%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "Valencia Basket generated 1.18 points per possession over 77 tracked possessions.",
+        "Zenit St Petersburg generated 0.86 points per possession over 72 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Valencia_Basket_start",
+          "name": "Valencia Basket Start",
+          "team": "Valencia Basket",
+          "stage": "start"
+        },
+        {
+          "id": "Valencia_Basket_Half-court",
+          "name": "Half-court",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_After_OREB",
+          "name": "After OREB",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Turnover",
+          "name": "Turnover",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Missed_shot",
+          "name": "Missed shot",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Made_2",
+          "name": "Made 2",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Made_3",
+          "name": "Made 3",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia Basket_0",
+          "name": "0 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_1",
+          "name": "1 pt",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_2",
+          "name": "2 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_3",
+          "name": "3 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Start",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Half-court",
+          "name": "Half-court",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_After_OREB",
+          "name": "After OREB",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Half-court",
+          "value": 40
+        },
+        {
+          "source": "Valencia_Basket_Half-court",
+          "target": "Valencia_Basket_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Valencia_Basket_Turnover",
+          "target": "Valencia Basket_0",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Half-court",
+          "value": 47
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 25
+        },
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_After_OREB",
+          "value": 7
+        },
+        {
+          "source": "Valencia_Basket_After_OREB",
+          "target": "Valencia_Basket_Made_2",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Made_2",
+          "target": "Valencia Basket_2",
+          "value": 23
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Turnover",
+          "target": "Zenit St Petersburg_0",
+          "value": 12
+        },
+        {
+          "source": "Valencia_Basket_Half-court",
+          "target": "Valencia_Basket_Made_2",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 18
+        },
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Transition_Fast_break",
+          "value": 30
+        },
+        {
+          "source": "Valencia_Basket_Transition_Fast_break",
+          "target": "Valencia_Basket_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_Missed_shot",
+          "target": "Valencia Basket_0",
+          "value": 16
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Transition_Fast_break",
+          "value": 16
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "Valencia_Basket_Transition_Fast_break",
+          "target": "Valencia_Basket_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Made_3",
+          "target": "Valencia Basket_3",
+          "value": 9
+        },
+        {
+          "source": "Valencia_Basket_Transition_Fast_break",
+          "target": "Valencia_Basket_Turnover",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 6
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Valencia_Basket_Half-court",
+          "target": "Valencia_Basket_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_After_OREB",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_OREB",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 4
+        },
+        {
+          "source": "Valencia_Basket_Transition_Fast_break",
+          "target": "Valencia_Basket_Shooting_foul_FTs",
+          "value": 6
+        },
+        {
+          "source": "Valencia_Basket_Shooting_foul_FTs",
+          "target": "Valencia Basket_1",
+          "value": 18
+        },
+        {
+          "source": "Valencia_Basket_Half-court",
+          "target": "Valencia_Basket_Shooting_foul_FTs",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_1",
+          "value": 8
+        },
+        {
+          "source": "Valencia_Basket_Half-court",
+          "target": "Valencia_Basket_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Valencia_Basket_Transition_Fast_break",
+          "target": "Valencia_Basket_Made_2",
+          "value": 12
+        },
+        {
+          "source": "Valencia_Basket_After_OREB",
+          "target": "Valencia_Basket_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_OREB",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_After_OREB",
+          "target": "Valencia_Basket_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_0",
+          "value": 3
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Valencia_Basket_After_OREB",
+          "target": "Valencia_Basket_Shooting_foul_FTs",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Valencia_Basket_start->Valencia_Basket_Half-court": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 6
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 3
+          }
+        ],
+        "Valencia_Basket_Half-court->Valencia_Basket_Turnover": [
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Turnover->Valencia Basket_0": [
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Half-court": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 10
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 7
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_start->Valencia_Basket_After_OREB": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_OREB->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_2->Valencia Basket_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Turnover->Zenit St Petersburg_0": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Half-court->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_start->Valencia_Basket_Transition_Fast_break": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 7
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Transition_Fast_break->Valencia_Basket_Missed_shot": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Missed_shot->Valencia Basket_0": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 6
+          },
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Transition_Fast_break": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Transition_Fast_break->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_3->Valencia Basket_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Transition_Fast_break->Valencia_Basket_Turnover": [
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Half-court->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_After_OREB": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_OREB->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Transition_Fast_break->Valencia_Basket_Shooting_foul_FTs": [
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Shooting_foul_FTs->Valencia Basket_1": [
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          }
+        ],
+        "Valencia_Basket_Half-court->Valencia_Basket_Shooting_foul_FTs": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_1": [
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Half-court->Valencia_Basket_Missed_shot": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Transition_Fast_break->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_OREB->Valencia_Basket_Missed_shot": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_OREB->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_OREB->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_0": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_OREB->Valencia_Basket_Shooting_foul_FTs": [
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "Valencia Basket": 40,
+        "Zenit St Petersburg": 47
+      },
+      "title": "Zoomed Detail \u2014 Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "Valencia Basket count",
+          "40"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "47"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Valencia_Basket_start",
+          "name": "Valencia Basket Half-court",
+          "team": "Valencia Basket",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Half-court",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Valencia_Basket_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Made_2",
+          "name": "Made 2",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Made_3",
+          "name": "Made 3",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Missed_shot",
+          "name": "Missed shot",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Turnover",
+          "name": "Turnover",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia Basket_0",
+          "name": "0 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_1",
+          "name": "1 pt",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_2",
+          "name": "2 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_3",
+          "name": "3 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_PnR_handler_action",
+          "value": 35
+        },
+        {
+          "source": "Valencia_Basket_PnR_handler_action",
+          "target": "Valencia_Basket_Turnover",
+          "value": 6
+        },
+        {
+          "source": "Valencia_Basket_Turnover",
+          "target": "Valencia Basket_0",
+          "value": 6
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_PnR_handler_action",
+          "value": 42
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Turnover",
+          "target": "Zenit St Petersburg_0",
+          "value": 11
+        },
+        {
+          "source": "Valencia_Basket_PnR_handler_action",
+          "target": "Valencia_Basket_Made_2",
+          "value": 9
+        },
+        {
+          "source": "Valencia_Basket_Made_2",
+          "target": "Valencia Basket_2",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Spot-up_swing",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Spot-up_swing",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Spot-up_swing",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_Spot-up_swing",
+          "target": "Valencia_Basket_Made_3",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_Made_3",
+          "target": "Valencia Basket_3",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_PnR_handler_action",
+          "target": "Valencia_Basket_Shooting_foul_FTs",
+          "value": 11
+        },
+        {
+          "source": "Valencia_Basket_Shooting_foul_FTs",
+          "target": "Valencia Basket_1",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_1",
+          "value": 7
+        },
+        {
+          "source": "Valencia_Basket_PnR_handler_action",
+          "target": "Valencia_Basket_Missed_shot",
+          "value": 9
+        },
+        {
+          "source": "Valencia_Basket_Missed_shot",
+          "target": "Valencia Basket_0",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_0",
+          "value": 3
+        }
+      ],
+      "player_flows": {
+        "Valencia_Basket_start->Valencia_Basket_PnR_handler_action": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 2
+          }
+        ],
+        "Valencia_Basket_PnR_handler_action->Valencia_Basket_Turnover": [
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Turnover->Valencia Basket_0": [
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_PnR_handler_action": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 8
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 7
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Turnover->Zenit St Petersburg_0": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_PnR_handler_action->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_2->Valencia Basket_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Spot-up_swing": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Spot-up_swing->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_start->Valencia_Basket_Spot-up_swing": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Spot-up_swing->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_3->Valencia Basket_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_PnR_handler_action->Valencia_Basket_Shooting_foul_FTs": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Shooting_foul_FTs->Valencia Basket_1": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_1": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_PnR_handler_action->Valencia_Basket_Missed_shot": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Missed_shot->Valencia Basket_0": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 4
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_0": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "Valencia Basket": 30,
+        "Zenit St Petersburg": 16
+      },
+      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "Valencia Basket count",
+          "30"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "16"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Valencia_Basket_start",
+          "name": "Valencia Basket Transition",
+          "team": "Valencia Basket",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Transition",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Valencia_Basket_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Made_2",
+          "name": "Made 2",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Made_3",
+          "name": "Made 3",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Missed_shot",
+          "name": "Missed shot",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Turnover",
+          "name": "Turnover",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia Basket_0",
+          "name": "0 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_1",
+          "name": "1 pt",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_2",
+          "name": "2 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_3",
+          "name": "3 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_After_defensive_rebound",
+          "value": 30
+        },
+        {
+          "source": "Valencia_Basket_After_defensive_rebound",
+          "target": "Valencia_Basket_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_Missed_shot",
+          "target": "Valencia Basket_0",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_After_defensive_rebound",
+          "value": 16
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 10
+        },
+        {
+          "source": "Valencia_Basket_After_defensive_rebound",
+          "target": "Valencia_Basket_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Made_3",
+          "target": "Valencia Basket_3",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_After_defensive_rebound",
+          "target": "Valencia_Basket_Turnover",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_Turnover",
+          "target": "Valencia Basket_0",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 3
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 3
+        },
+        {
+          "source": "Valencia_Basket_After_defensive_rebound",
+          "target": "Valencia_Basket_Shooting_foul_FTs",
+          "value": 6
+        },
+        {
+          "source": "Valencia_Basket_Shooting_foul_FTs",
+          "target": "Valencia Basket_1",
+          "value": 6
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 1
+        },
+        {
+          "source": "Valencia_Basket_After_defensive_rebound",
+          "target": "Valencia_Basket_Made_2",
+          "value": 12
+        },
+        {
+          "source": "Valencia_Basket_Made_2",
+          "target": "Valencia Basket_2",
+          "value": 12
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_1",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Turnover",
+          "target": "Zenit St Petersburg_0",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Valencia_Basket_start->Valencia_Basket_After_defensive_rebound": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 7
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_defensive_rebound->Valencia_Basket_Missed_shot": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Missed_shot->Valencia Basket_0": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_After_defensive_rebound": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_defensive_rebound->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_3->Valencia Basket_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_defensive_rebound->Valencia_Basket_Turnover": [
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Turnover->Valencia Basket_0": [
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_defensive_rebound->Valencia_Basket_Shooting_foul_FTs": [
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Shooting_foul_FTs->Valencia Basket_1": [
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_After_defensive_rebound->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_2->Valencia Basket_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_1": [
+          {
+            "player_id": "P007186",
+            "player_name": "ZAKHAROV, DENIS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Turnover->Zenit St Petersburg_0": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "Valencia Basket": 7,
+        "Zenit St Petersburg": 9
+      },
+      "title": "Zoomed Detail \u2014 After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "Valencia Basket count",
+          "7"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "9"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Valencia_Basket_start",
+          "name": "Valencia Basket After OREB",
+          "team": "Valencia Basket",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg After OREB",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Valencia_Basket_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Made_2",
+          "name": "Made 2",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Made_3",
+          "name": "Made 3",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Missed_shot",
+          "name": "Missed shot",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia_Basket_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia Basket_0",
+          "name": "0 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_1",
+          "name": "1 pt",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_2",
+          "name": "2 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Valencia Basket_3",
+          "name": "3 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Immediate_putback",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Immediate_putback",
+          "target": "Valencia_Basket_Made_2",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Made_2",
+          "target": "Valencia Basket_2",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Reset_half-court",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Reset_half-court",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 4
+        },
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Reset_half-court",
+          "value": 3
+        },
+        {
+          "source": "Valencia_Basket_Reset_half-court",
+          "target": "Valencia_Basket_Missed_shot",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Missed_shot",
+          "target": "Valencia Basket_0",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Immediate_putback",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Immediate_putback",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 5
+        },
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Kick-out_perimeter",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Kick-out_perimeter",
+          "target": "Valencia_Basket_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Made_3",
+          "target": "Valencia Basket_3",
+          "value": 2
+        },
+        {
+          "source": "Valencia_Basket_Reset_half-court",
+          "target": "Valencia_Basket_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Valencia_Basket_Shooting_foul_FTs",
+          "target": "Valencia Basket_1",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "Valencia_Basket_start->Valencia_Basket_Immediate_putback": [
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Immediate_putback->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_2->Valencia Basket_2": [
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Reset_half-court": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Reset_half-court->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_start->Valencia_Basket_Reset_half-court": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Reset_half-court->Valencia_Basket_Missed_shot": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 2
+          }
+        ],
+        "Valencia_Basket_Missed_shot->Valencia Basket_0": [
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Immediate_putback": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Immediate_putback->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_start->Valencia_Basket_Kick-out_perimeter": [
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Kick-out_perimeter->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_3->Valencia Basket_3": [
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Reset_half-court->Valencia_Basket_Shooting_foul_FTs": [
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Shooting_foul_FTs->Valencia Basket_1": [
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "Valencia Basket": 23,
+        "Zenit St Petersburg": 18
+      },
+      "title": "Zoomed Detail \u2014 Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Valencia Basket count",
+          "23"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "18"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Valencia_Basket_start",
+          "name": "Valencia Basket Made 2",
+          "team": "Valencia Basket",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Valencia_Basket_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Made_2",
+          "name": "Made 2",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia Basket_2",
+          "name": "2 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Layup_runner",
+          "value": 23
+        },
+        {
+          "source": "Valencia_Basket_Layup_runner",
+          "target": "Valencia_Basket_Made_2",
+          "value": 23
+        },
+        {
+          "source": "Valencia_Basket_Made_2",
+          "target": "Valencia Basket_2",
+          "value": 23
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Layup_runner",
+          "value": 18
+        },
+        {
+          "source": "Zenit_St_Petersburg_Layup_runner",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 18
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 18
+        }
+      ],
+      "player_flows": {
+        "Valencia_Basket_start->Valencia_Basket_Layup_runner": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Layup_runner->Valencia_Basket_Made_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_2->Valencia Basket_2": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004866",
+            "player_name": "KALINIC, NIKOLA",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P009006",
+            "player_name": "WILLIAMS, DERRICK",
+            "team": "Valencia Basket",
+            "poss": 5
+          },
+          {
+            "player_id": "P004884",
+            "player_name": "LABEYRIE, LOUIS",
+            "team": "Valencia Basket",
+            "poss": 3
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008780",
+            "player_name": "HERMANNSSON, MARTIN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Layup_runner": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Layup_runner->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "Valencia Basket": 9,
+        "Zenit St Petersburg": 6
+      },
+      "title": "Zoomed Detail \u2014 Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "Valencia Basket count",
+          "9"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "6"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "Valencia_Basket_start",
+          "name": "Valencia Basket Made 3",
+          "team": "Valencia Basket",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Valencia_Basket_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Valencia Basket",
+          "stage": "type"
+        },
+        {
+          "id": "Valencia_Basket_Made_3",
+          "name": "Made 3",
+          "team": "Valencia Basket",
+          "stage": "event"
+        },
+        {
+          "id": "Valencia Basket_3",
+          "name": "3 pts",
+          "team": "Valencia Basket",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Valencia_Basket_start",
+          "target": "Valencia_Basket_Above-the-break_C&S",
+          "value": 9
+        },
+        {
+          "source": "Valencia_Basket_Above-the-break_C&S",
+          "target": "Valencia_Basket_Made_3",
+          "value": 9
+        },
+        {
+          "source": "Valencia_Basket_Made_3",
+          "target": "Valencia Basket_3",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Above-the-break_C&S",
+          "value": 6
+        },
+        {
+          "source": "Zenit_St_Petersburg_Above-the-break_C&S",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 6
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 6
+        }
+      ],
+      "player_flows": {
+        "Valencia_Basket_start->Valencia_Basket_Above-the-break_C&S": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Above-the-break_C&S->Valencia_Basket_Made_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Valencia_Basket_Made_3->Valencia Basket_3": [
+          {
+            "player_id": "P002742",
+            "player_name": "DUBLJEVIC, BOJAN",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P008966",
+            "player_name": "TOBEY, MIKE",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "PLRQ",
+            "player_name": "VAN ROSSOM, SAM",
+            "team": "Valencia Basket",
+            "poss": 2
+          },
+          {
+            "player_id": "P004761",
+            "player_name": "MARINKOVIC, VANJA",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002661",
+            "player_name": "PREPELIC, KLEMEN",
+            "team": "Valencia Basket",
+            "poss": 1
+          },
+          {
+            "player_id": "P002936",
+            "player_name": "SASTRE, JOAN",
+            "team": "Valencia Basket",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Above-the-break_C&S": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Above-the-break_C&S->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,5462 @@
+{
+  "meta": {
+    "seasoncode": "E2020",
+    "gamecode": 85,
+    "team_a": "ALBA Berlin",
+    "team_b": "Zenit St Petersburg",
+    "score_a": 66,
+    "score_b": 73,
+    "winner": "Zenit St Petersburg",
+    "gamedate": "2020-11-20",
+    "synced_at": "2026-05-02T21:24:38.730147+00:00",
+    "source_endpoints": [
+      "PlaybyPlay",
+      "Points",
+      "Boxscore"
+    ]
+  },
+  "players": {
+    "P004499": {
+      "name": "FONTECCHIO, SIMONE",
+      "team": "ALBA Berlin"
+    },
+    "P004172": {
+      "name": "PONITKA, MATEUSZ",
+      "team": "Zenit St Petersburg"
+    },
+    "P010385": {
+      "name": "LAMMERS, BEN",
+      "team": "ALBA Berlin"
+    },
+    "P005856": {
+      "name": "THOMAS, WILL",
+      "team": "Zenit St Petersburg"
+    },
+    "P006589": {
+      "name": "SIKMA, LUKE",
+      "team": "ALBA Berlin"
+    },
+    "P009917": {
+      "name": "HOLLINS, AUSTIN",
+      "team": "Zenit St Petersburg"
+    },
+    "P003024": {
+      "name": "GRANGER, JAYSON",
+      "team": "ALBA Berlin"
+    },
+    "P006433": {
+      "name": "PANGOS, KEVIN",
+      "team": "Zenit St Petersburg"
+    },
+    "P009960": {
+      "name": "POYTHRESS, ALEX",
+      "team": "Zenit St Petersburg"
+    },
+    "P001557": {
+      "name": "GIFFEY, NIELS",
+      "team": "ALBA Berlin"
+    },
+    "P007032": {
+      "name": "LO, MAODO",
+      "team": "ALBA Berlin"
+    },
+    "P002429": {
+      "name": "RIVERS, KC",
+      "team": "Zenit St Petersburg"
+    },
+    "P003958": {
+      "name": "THIEMANN, JOHANNES",
+      "team": "ALBA Berlin"
+    },
+    "P005775": {
+      "name": "BARON, BILLY",
+      "team": "Zenit St Petersburg"
+    },
+    "P003573": {
+      "name": "ZUBKOV, ANDREY",
+      "team": "Zenit St Petersburg"
+    },
+    "P007125": {
+      "name": "SIVA, PEYTON",
+      "team": "ALBA Berlin"
+    },
+    "P003151": {
+      "name": "ERIKSSON, MARCUS",
+      "team": "ALBA Berlin"
+    },
+    "PLKY": {
+      "name": "KHVOSTOV, DMITRY",
+      "team": "Zenit St Petersburg"
+    },
+    "P003120": {
+      "name": "GUDAITIS, ARTURAS",
+      "team": "Zenit St Petersburg"
+    },
+    "P007851": {
+      "name": "TRUSHKIN, VLADISLAV",
+      "team": "Zenit St Petersburg"
+    },
+    "P007025": {
+      "name": "MATTISSECK, JONAS",
+      "team": "ALBA Berlin"
+    },
+    "P006251": {
+      "name": "SCHNEIDER, TIM",
+      "team": "ALBA Berlin"
+    }
+  },
+  "boxscore_players": [
+    {
+      "player_id": "P007032",
+      "player_name": "LO, MAODO",
+      "team": "BER",
+      "minutes": "18:38",
+      "points": 4,
+      "valuation": 3,
+      "plusminus": -3,
+      "assists": 2,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P007125",
+      "player_name": "SIVA, PEYTON",
+      "team": "BER",
+      "minutes": "21:07",
+      "points": 8,
+      "valuation": 14,
+      "plusminus": -2,
+      "assists": 8,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P001557",
+      "player_name": "GIFFEY, NIELS",
+      "team": "BER",
+      "minutes": "16:57",
+      "points": 6,
+      "valuation": 1,
+      "plusminus": -8,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P008211",
+      "player_name": "DELOW, MALTE",
+      "team": "BER",
+      "minutes": "DNP",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003151",
+      "player_name": "ERIKSSON, MARCUS",
+      "team": "BER",
+      "minutes": "10:02",
+      "points": 4,
+      "valuation": 4,
+      "plusminus": -7,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P007025",
+      "player_name": "MATTISSECK, JONAS",
+      "team": "BER",
+      "minutes": "13:53",
+      "points": 6,
+      "valuation": 2,
+      "plusminus": 3,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006251",
+      "player_name": "SCHNEIDER, TIM",
+      "team": "BER",
+      "minutes": "09:00",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": -2,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P004499",
+      "player_name": "FONTECCHIO, SIMONE",
+      "team": "BER",
+      "minutes": "23:22",
+      "points": 2,
+      "valuation": 0,
+      "plusminus": -6,
+      "assists": 2,
+      "rebounds": 5,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P003958",
+      "player_name": "THIEMANN, JOHANNES",
+      "team": "BER",
+      "minutes": "12:53",
+      "points": 6,
+      "valuation": 3,
+      "plusminus": -12,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P003024",
+      "player_name": "GRANGER, JAYSON",
+      "team": "BER",
+      "minutes": "25:40",
+      "points": 7,
+      "valuation": 10,
+      "plusminus": -3,
+      "assists": 2,
+      "rebounds": 4,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P006589",
+      "player_name": "SIKMA, LUKE",
+      "team": "BER",
+      "minutes": "23:10",
+      "points": 8,
+      "valuation": 9,
+      "plusminus": 0,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P010385",
+      "player_name": "LAMMERS, BEN",
+      "team": "BER",
+      "minutes": "25:18",
+      "points": 15,
+      "valuation": 24,
+      "plusminus": 5,
+      "assists": 1,
+      "rebounds": 10,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P002429",
+      "player_name": "RIVERS, KC",
+      "team": "DYR",
+      "minutes": "14:01",
+      "points": 0,
+      "valuation": -4,
+      "plusminus": -2,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P006433",
+      "player_name": "PANGOS, KEVIN",
+      "team": "DYR",
+      "minutes": "30:19",
+      "points": 3,
+      "valuation": 7,
+      "plusminus": 11,
+      "assists": 8,
+      "rebounds": 4,
+      "turnovers": 4
+    },
+    {
+      "player_id": "PLLH",
+      "player_name": "FRIDZON, VITALY",
+      "team": "DYR",
+      "minutes": "03:06",
+      "points": 0,
+      "valuation": -1,
+      "plusminus": 8,
+      "assists": 0,
+      "rebounds": 0,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P009917",
+      "player_name": "HOLLINS, AUSTIN",
+      "team": "DYR",
+      "minutes": "23:53",
+      "points": 6,
+      "valuation": 3,
+      "plusminus": 4,
+      "assists": 2,
+      "rebounds": 1,
+      "turnovers": 2
+    },
+    {
+      "player_id": "P005856",
+      "player_name": "THOMAS, WILL",
+      "team": "DYR",
+      "minutes": "24:36",
+      "points": 17,
+      "valuation": 24,
+      "plusminus": 2,
+      "assists": 1,
+      "rebounds": 5,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P005775",
+      "player_name": "BARON, BILLY",
+      "team": "DYR",
+      "minutes": "09:01",
+      "points": 0,
+      "valuation": -6,
+      "plusminus": 0,
+      "assists": 0,
+      "rebounds": 1,
+      "turnovers": 1
+    },
+    {
+      "player_id": "PLKY",
+      "player_name": "KHVOSTOV, DMITRY",
+      "team": "DYR",
+      "minutes": "09:15",
+      "points": 2,
+      "valuation": 0,
+      "plusminus": -5,
+      "assists": 3,
+      "rebounds": 0,
+      "turnovers": 1
+    },
+    {
+      "player_id": "P007851",
+      "player_name": "TRUSHKIN, VLADISLAV",
+      "team": "DYR",
+      "minutes": "04:50",
+      "points": 0,
+      "valuation": 0,
+      "plusminus": 5,
+      "assists": 0,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003573",
+      "player_name": "ZUBKOV, ANDREY",
+      "team": "DYR",
+      "minutes": "15:57",
+      "points": 9,
+      "valuation": 13,
+      "plusminus": 3,
+      "assists": 1,
+      "rebounds": 4,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P009960",
+      "player_name": "POYTHRESS, ALEX",
+      "team": "DYR",
+      "minutes": "15:37",
+      "points": 6,
+      "valuation": 7,
+      "plusminus": -8,
+      "assists": 0,
+      "rebounds": 6,
+      "turnovers": 3
+    },
+    {
+      "player_id": "P004172",
+      "player_name": "PONITKA, MATEUSZ",
+      "team": "DYR",
+      "minutes": "25:35",
+      "points": 14,
+      "valuation": 17,
+      "plusminus": 0,
+      "assists": 1,
+      "rebounds": 2,
+      "turnovers": 0
+    },
+    {
+      "player_id": "P003120",
+      "player_name": "GUDAITIS, ARTURAS",
+      "team": "DYR",
+      "minutes": "23:50",
+      "points": 16,
+      "valuation": 24,
+      "plusminus": 17,
+      "assists": 2,
+      "rebounds": 3,
+      "turnovers": 2
+    }
+  ],
+  "colors": {
+    "ALBA Berlin": "#d62839",
+    "Zenit St Petersburg": "#3a86ff"
+  },
+  "views": {
+    "top": {
+      "label": "Top-level",
+      "starts": {
+        "ALBA Berlin": 82,
+        "Zenit St Petersburg": 88
+      },
+      "title": "Context",
+      "desc": "Top-level view derived from Euroleague PlayByPlay + Points endpoints.",
+      "kpis": [
+        [
+          "ALBA Berlin starts",
+          "82"
+        ],
+        [
+          "Zenit St Petersburg starts",
+          "88"
+        ],
+        [
+          "ALBA Berlin points per poss.",
+          "0.80"
+        ],
+        [
+          "ALBA Berlin Made 3 share",
+          "5%"
+        ],
+        [
+          "Zenit St Petersburg points per poss.",
+          "0.83"
+        ],
+        [
+          "Zenit St Petersburg Made 3 share",
+          "5%"
+        ]
+      ],
+      "insights": [
+        "Possession types are inferred, not native API fields.",
+        "This JSON is suitable both for Sankey rendering and later metrics expansion.",
+        "ALBA Berlin generated 0.80 points per possession over 82 tracked possessions.",
+        "Zenit St Petersburg generated 0.83 points per possession over 88 tracked possessions."
+      ],
+      "columns": [
+        "Start",
+        "Possession Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Start",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Half-court",
+          "name": "Half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_After_OREB",
+          "name": "After OREB",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Start",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Half-court",
+          "name": "Half-court",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Transition_Fast_break",
+          "name": "Transition / Fast break",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_After_OREB",
+          "name": "After OREB",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Half-court",
+          "value": 49
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 26
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_After_OREB",
+          "value": 6
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_OREB",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 21
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Transition_Fast_break",
+          "value": 21
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 20
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Half-court",
+          "value": 56
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 17
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Transition_Fast_break",
+          "value": 26
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_OREB",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Turnover",
+          "target": "Zenit St Petersburg_0",
+          "value": 18
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_OREB",
+          "value": 12
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Transition_Fast_break",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_1",
+          "value": 27
+        },
+        {
+          "source": "Zenit_St_Petersburg_Half-court",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 22
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 14
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Half-court",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_OREB",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_0",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_After_OREB",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Transition_Fast_break",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Half-court": [
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 9
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_After_OREB": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_After_OREB->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007851",
+            "player_name": "TRUSHKIN, VLADISLAV",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Transition_Fast_break": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Half-court": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 12
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 10
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 8
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::Zenit St Petersburg",
+            "player_name": "Unknown",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Transition_Fast_break": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007851",
+            "player_name": "TRUSHKIN, VLADISLAV",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007851",
+            "player_name": "TRUSHKIN, VLADISLAV",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_OREB->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Zenit St Petersburg",
+            "player_name": "Unknown",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Turnover->Zenit St Petersburg_0": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Zenit St Petersburg",
+            "player_name": "Unknown",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_After_OREB": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Transition_Fast_break->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_1": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 10
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 7
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Half-court->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 8
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Half-court->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_OREB->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_0": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_OREB->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Transition_Fast_break->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "halfcourt": {
+      "label": "Half-court breakdown",
+      "starts": {
+        "ALBA Berlin": 49,
+        "Zenit St Petersburg": 56
+      },
+      "title": "Zoomed Detail \u2014 Half-court",
+      "desc": "Half-court offense broken into inferred action families.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "49"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "56"
+        ]
+      ],
+      "insights": [
+        "Half-court breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Half-court Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Half-court",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Half-court",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_PnR_handler_action",
+          "name": "PnR / handler action",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Spot-up_swing",
+          "name": "Spot-up / swing",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_PnR_handler_action",
+          "value": 47
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 13
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_PnR_handler_action",
+          "value": 54
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 11
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 9
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 9
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_Turnover",
+          "target": "Zenit St Petersburg_0",
+          "value": 11
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 10
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Spot-up_swing",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Spot-up_swing",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_PnR_handler_action",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 22
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_1",
+          "value": 22
+        },
+        {
+          "source": "ALBA_Berlin_PnR_handler_action",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 17
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 13
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Spot-up_swing",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Spot-up_swing",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_0",
+          "value": 4
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_PnR_handler_action": [
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 9
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 8
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 5
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_PnR_handler_action": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 12
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 9
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 8
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "unknown::Zenit St Petersburg",
+            "player_name": "Unknown",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "unknown::ALBA Berlin",
+            "player_name": "Unknown",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006251",
+            "player_name": "SCHNEIDER, TIM",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Zenit St Petersburg",
+            "player_name": "Unknown",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Turnover->Zenit St Petersburg_0": [
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "unknown::Zenit St Petersburg",
+            "player_name": "Unknown",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Spot-up_swing": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Spot-up_swing->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_PnR_handler_action->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 8
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_1": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 8
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 6
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "PLKY",
+            "player_name": "KHVOSTOV, DMITRY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "ALBA_Berlin_PnR_handler_action->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Spot-up_swing": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Spot-up_swing->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_0": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "transition": {
+      "label": "Transition breakdown",
+      "starts": {
+        "ALBA Berlin": 21,
+        "Zenit St Petersburg": 26
+      },
+      "title": "Zoomed Detail \u2014 Transition / Fast break",
+      "desc": "Transition possessions split by inferred origin.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "21"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "26"
+        ]
+      ],
+      "insights": [
+        "Transition breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Transition Origin",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Transition",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Transition",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_1",
+          "name": "1 pt",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_After_defensive_rebound",
+          "name": "After defensive rebound",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_1",
+          "name": "1 pt",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_After_defensive_rebound",
+          "value": 21
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_After_defensive_rebound",
+          "value": 26
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 7
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 8
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 8
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Turnover",
+          "value": 7
+        },
+        {
+          "source": "Zenit_St_Petersburg_Turnover",
+          "target": "Zenit St Petersburg_0",
+          "value": 7
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_After_defensive_rebound",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_1",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_After_defensive_rebound",
+          "target": "ALBA_Berlin_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_Shooting_foul_FTs",
+          "target": "ALBA Berlin_1",
+          "value": 1
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_After_defensive_rebound": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 4
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_After_defensive_rebound": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 5
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007851",
+            "player_name": "TRUSHKIN, VLADISLAV",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007851",
+            "player_name": "TRUSHKIN, VLADISLAV",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P007851",
+            "player_name": "TRUSHKIN, VLADISLAV",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P002429",
+            "player_name": "RIVERS, KC",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Turnover": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Turnover->Zenit St Petersburg_0": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_After_defensive_rebound->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_1": [
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_After_defensive_rebound->ALBA_Berlin_Shooting_foul_FTs": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Shooting_foul_FTs->ALBA Berlin_1": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "oreb": {
+      "label": "After OREB breakdown",
+      "starts": {
+        "ALBA Berlin": 12,
+        "Zenit St Petersburg": 6
+      },
+      "title": "Zoomed Detail \u2014 After OREB",
+      "desc": "Second-chance possessions decomposed by inferred continuation type.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "12"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "6"
+        ]
+      ],
+      "insights": [
+        "After OREB breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Second-Chance Type",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin After OREB",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg After OREB",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Missed_shot",
+          "name": "Missed shot",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA_Berlin_Turnover",
+          "name": "Turnover",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_0",
+          "name": "0 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Immediate_putback",
+          "name": "Immediate putback",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Kick-out_perimeter",
+          "name": "Kick-out perimeter",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Reset_half-court",
+          "name": "Reset half-court",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Missed_shot",
+          "name": "Missed shot",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "name": "Shooting foul / FTs",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Turnover",
+          "name": "Turnover",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_0",
+          "name": "0 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Reset_half-court",
+          "value": 5
+        },
+        {
+          "source": "Zenit_St_Petersburg_Reset_half-court",
+          "target": "Zenit_St_Petersburg_Missed_shot",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Missed_shot",
+          "target": "Zenit St Petersburg_0",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Immediate_putback",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Immediate_putback",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Reset_half-court",
+          "value": 7
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Missed_shot",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Missed_shot",
+          "target": "ALBA Berlin_0",
+          "value": 5
+        },
+        {
+          "source": "ALBA_Berlin_Reset_half-court",
+          "target": "ALBA_Berlin_Turnover",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Turnover",
+          "target": "ALBA Berlin_0",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Kick-out_perimeter",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Kick-out_perimeter",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 2
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 2
+        },
+        {
+          "source": "Zenit_St_Petersburg_Reset_half-court",
+          "target": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "value": 1
+        },
+        {
+          "source": "Zenit_St_Petersburg_Shooting_foul_FTs",
+          "target": "Zenit St Petersburg_0",
+          "value": 1
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Immediate_putback",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Immediate_putback",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 3
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 3
+        }
+      ],
+      "player_flows": {
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Reset_half-court": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Reset_half-court->Zenit_St_Petersburg_Missed_shot": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Missed_shot->Zenit St Petersburg_0": [
+          {
+            "player_id": "P005775",
+            "player_name": "BARON, BILLY",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Immediate_putback": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Immediate_putback->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Reset_half-court": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Missed_shot": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Missed_shot->ALBA Berlin_0": [
+          {
+            "player_id": "P004499",
+            "player_name": "FONTECCHIO, SIMONE",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Reset_half-court->ALBA_Berlin_Turnover": [
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Turnover->ALBA Berlin_0": [
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Kick-out_perimeter": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Kick-out_perimeter->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Reset_half-court->Zenit_St_Petersburg_Shooting_foul_FTs": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Shooting_foul_FTs->Zenit St Petersburg_0": [
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Immediate_putback": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Immediate_putback->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    },
+    "made2": {
+      "label": "Made 2 breakdown",
+      "starts": {
+        "ALBA Berlin": 20,
+        "Zenit St Petersburg": 17
+      },
+      "title": "Zoomed Detail \u2014 Made 2",
+      "desc": "Made 2s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "20"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "17"
+        ]
+      ],
+      "insights": [
+        "Made 2 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 2 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 2",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Layup_runner",
+          "name": "Layup / runner",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_2",
+          "name": "Made 2",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_2",
+          "name": "2 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Layup_runner",
+          "name": "Layup / runner",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_2",
+          "name": "Made 2",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_2",
+          "name": "2 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Layup_runner",
+          "value": 20
+        },
+        {
+          "source": "ALBA_Berlin_Layup_runner",
+          "target": "ALBA_Berlin_Made_2",
+          "value": 20
+        },
+        {
+          "source": "ALBA_Berlin_Made_2",
+          "target": "ALBA Berlin_2",
+          "value": 20
+        },
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Layup_runner",
+          "value": 17
+        },
+        {
+          "source": "Zenit_St_Petersburg_Layup_runner",
+          "target": "Zenit_St_Petersburg_Made_2",
+          "value": 17
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_2",
+          "target": "Zenit St Petersburg_2",
+          "value": 17
+        }
+      ],
+      "player_flows": {
+        "ALBA_Berlin_start->ALBA_Berlin_Layup_runner": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Layup_runner->ALBA_Berlin_Made_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_2->ALBA Berlin_2": [
+          {
+            "player_id": "P010385",
+            "player_name": "LAMMERS, BEN",
+            "team": "ALBA Berlin",
+            "poss": 6
+          },
+          {
+            "player_id": "P001557",
+            "player_name": "GIFFEY, NIELS",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P006589",
+            "player_name": "SIKMA, LUKE",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003958",
+            "player_name": "THIEMANN, JOHANNES",
+            "team": "ALBA Berlin",
+            "poss": 3
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003151",
+            "player_name": "ERIKSSON, MARCUS",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007032",
+            "player_name": "LO, MAODO",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Layup_runner": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Layup_runner->Zenit_St_Petersburg_Made_2": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ],
+        "Zenit_St_Petersburg_Made_2->Zenit St Petersburg_2": [
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 4
+          },
+          {
+            "player_id": "P003120",
+            "player_name": "GUDAITIS, ARTURAS",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009960",
+            "player_name": "POYTHRESS, ALEX",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 3
+          },
+          {
+            "player_id": "P009917",
+            "player_name": "HOLLINS, AUSTIN",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 2
+          }
+        ]
+      }
+    },
+    "made3": {
+      "label": "Made 3 breakdown",
+      "starts": {
+        "ALBA Berlin": 4,
+        "Zenit St Petersburg": 4
+      },
+      "title": "Zoomed Detail \u2014 Made 3",
+      "desc": "Made 3s decomposed by inferred shot subtype from the Points endpoint.",
+      "kpis": [
+        [
+          "ALBA Berlin count",
+          "4"
+        ],
+        [
+          "Zenit St Petersburg count",
+          "4"
+        ]
+      ],
+      "insights": [
+        "Made 3 breakdown derived heuristically from real endpoint data.",
+        "Subtype names are inferred categories for the product spike."
+      ],
+      "columns": [
+        "Start",
+        "Made 3 Subtype",
+        "Terminal Event",
+        "Points"
+      ],
+      "nodes": [
+        {
+          "id": "ALBA_Berlin_start",
+          "name": "ALBA Berlin Made 3",
+          "team": "ALBA Berlin",
+          "stage": "start"
+        },
+        {
+          "id": "Zenit_St_Petersburg_start",
+          "name": "Zenit St Petersburg Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "start"
+        },
+        {
+          "id": "ALBA_Berlin_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "ALBA Berlin",
+          "stage": "type"
+        },
+        {
+          "id": "ALBA_Berlin_Made_3",
+          "name": "Made 3",
+          "team": "ALBA Berlin",
+          "stage": "event"
+        },
+        {
+          "id": "ALBA Berlin_3",
+          "name": "3 pts",
+          "team": "ALBA Berlin",
+          "stage": "points"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Above-the-break_C&S",
+          "name": "Above-the-break C&S",
+          "team": "Zenit St Petersburg",
+          "stage": "type"
+        },
+        {
+          "id": "Zenit_St_Petersburg_Made_3",
+          "name": "Made 3",
+          "team": "Zenit St Petersburg",
+          "stage": "event"
+        },
+        {
+          "id": "Zenit St Petersburg_3",
+          "name": "3 pts",
+          "team": "Zenit St Petersburg",
+          "stage": "points"
+        }
+      ],
+      "links": [
+        {
+          "source": "Zenit_St_Petersburg_start",
+          "target": "Zenit_St_Petersburg_Above-the-break_C&S",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Above-the-break_C&S",
+          "target": "Zenit_St_Petersburg_Made_3",
+          "value": 4
+        },
+        {
+          "source": "Zenit_St_Petersburg_Made_3",
+          "target": "Zenit St Petersburg_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_start",
+          "target": "ALBA_Berlin_Above-the-break_C&S",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Above-the-break_C&S",
+          "target": "ALBA_Berlin_Made_3",
+          "value": 4
+        },
+        {
+          "source": "ALBA_Berlin_Made_3",
+          "target": "ALBA Berlin_3",
+          "value": 4
+        }
+      ],
+      "player_flows": {
+        "Zenit_St_Petersburg_start->Zenit_St_Petersburg_Above-the-break_C&S": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Above-the-break_C&S->Zenit_St_Petersburg_Made_3": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "Zenit_St_Petersburg_Made_3->Zenit St Petersburg_3": [
+          {
+            "player_id": "P006433",
+            "player_name": "PANGOS, KEVIN",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P004172",
+            "player_name": "PONITKA, MATEUSZ",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P005856",
+            "player_name": "THOMAS, WILL",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          },
+          {
+            "player_id": "P003573",
+            "player_name": "ZUBKOV, ANDREY",
+            "team": "Zenit St Petersburg",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_start->ALBA_Berlin_Above-the-break_C&S": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Above-the-break_C&S->ALBA_Berlin_Made_3": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ],
+        "ALBA_Berlin_Made_3->ALBA Berlin_3": [
+          {
+            "player_id": "P007025",
+            "player_name": "MATTISSECK, JONAS",
+            "team": "ALBA Berlin",
+            "poss": 2
+          },
+          {
+            "player_id": "P003024",
+            "player_name": "GRANGER, JAYSON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          },
+          {
+            "player_id": "P007125",
+            "player_name": "SIVA, PEYTON",
+            "team": "ALBA Berlin",
+            "poss": 1
+          }
+        ]
+      }
+    }
+  }
+}
