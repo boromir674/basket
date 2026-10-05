@@ -46,6 +46,8 @@ jobs:
       needs_json: ${{ toJSON(needs) }}  # should never change
 
   signal_deploy:
+    # PROD_DEPLOYMENT: trigger when a tag is pushed on the main branch.
+    # TEST_DEPLOYMENT: trigger when a tag is pushed on the release branch.
     needs: check  # add ['test', 'e2e', ..] if 'check' job.if and/or job.needs changes
     if: ${{ startsWith(github.event.ref, 'refs/tags/v') }}
     uses: ./.github/workflows/signal-deploy.yml

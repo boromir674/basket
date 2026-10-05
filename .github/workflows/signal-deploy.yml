@@ -1,5 +1,34 @@
 name: 'Signal Automated Deployment'
 
+# Behaviour Explanation
+# This workflow signals one of:
+# - PROD_DEPLOYMENT
+# - TEST_DEPLOYMENT
+# - No deployment
+
+# Deployment Model and "Deployment Types" - Explanation
+
+# - PROD_DEPLOYMENT: (alias 'Prod Deployment')
+#   - a 'production release'
+#   - a public-internet-facing resource update (ie web server/site/service)
+#   - an End-User Delivery
+#   - a 'main branch update'
+
+# - TEST_DEPLOYMENT:
+#   - a 'prova generale' of any 'Prod Deployment' (ie from above)
+
+# - No deployment:
+#   - when internal pre-requisites not satisfied
+
+
+# Logic breakdown:
+# PROD_DEPLOYMENT: trigger when a tag is pushed on the main branch.
+# TEST_DEPLOYMENT: trigger when a tag is pushed on the release branch.
+
+# No deployment: trigger when a tag is pushed on any other branch.
+
+# Info: Tag name does not matter
+
 on:
   workflow_call:
     inputs:
