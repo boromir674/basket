@@ -24,22 +24,35 @@ clubs:
   - name: 'ALBA Berlin'
     alias: 'ALBA'
     abbreviation: 'ALB'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Alba Berlin'
 
   - name: 'Anadolu Efes Istanbul'
     alias: 'Efes'
     abbreviation: 'EFS'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Anadolu Efes Istanbul Istanbul'
+      - 'Anadolu Efes'
 
   - name: 'AS Monaco'
     alias: 'Monaco'
     abbreviation: 'MON'
     registered_names_historically: []
 
+  - name: 'Asseco Prokom Gdynia'
+    alias: 'Asseco Prokom'
+    abbreviation: 'ASP'
+    registered_names_historically:
+      - 'Asseco Prokom Gdynia Gdynia'
+      - 'Asseco Prokom'
+
   - name: 'Baskonia Vitoria-Gasteiz'
     alias: 'Baskonia'
     abbreviation: 'BAS'
     registered_names_historically:
+      - 'Baskonia Vitoria-Gasteiz Vitoria'
+      - 'Caja Laboral'
+      - 'Laboral Kutxa Vitoria'
       - Cazoo Baskonia Vitoria-Gasteiz  # Cazoo car marketplace sponsor era
       - Cazoo                           # truncated API artefact, same sponsor era
       - Kosner Baskonia Vitoria-Gasteiz
@@ -50,14 +63,51 @@ clubs:
       - 'TD Systems Baskonia Vitoria-Gasteiz'
       - 'Baskonia Vitoria Gasteiz'
 
+  - name: 'Belgacom Spirou Basket'
+    alias: 'Belgacom Spirou'
+    abbreviation: 'BSP'
+    registered_names_historically:
+      - 'Belgacom Spirou Basket Basket'
+      - 'Belgacom Spirou'
+
+  - name: 'Bennet Cantu'
+    alias: 'Bennet Cantu'
+    abbreviation: 'BEN'
+    registered_names_historically:
+      - 'Mapooro Cantu'
+
+  - name: 'Besiktas JK Istanbul'
+    alias: 'Besiktas'
+    abbreviation: 'BES'
+    registered_names_historically: []
+
+  - name: 'Bilbao Basket'
+    alias: 'Bilbao Basket'
+    abbreviation: 'BIL'
+    registered_names_historically:
+      - 'Bizkaia Bilbao Basket'
+      - 'Gescrap BB'
+
   - name: 'Brose Bamberg'
     alias: 'Bamberg'
     abbreviation: 'BAM'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Brose Baskets'
+      - 'Brose Baskets Bamberg'
   
   - name: 'Buducnost VOLI Podgorica'
     alias: 'Buducnost'
     abbreviation: 'BUD'
+    registered_names_historically: []
+
+  - name: 'Budivelnik Kiev'
+    alias: 'Budivelnik'
+    abbreviation: 'BDK'
+    registered_names_historically: []
+
+  - name: 'Cedevita Zagreb'
+    alias: 'Cedevita'
+    abbreviation: 'CED'
     registered_names_historically: []
 
   - name: 'CSKA Moscow'
@@ -69,6 +119,7 @@ clubs:
     alias: 'Crvena Zvezda'
     abbreviation: 'CZV'
     registered_names_historically:
+      - 'Crvena Zvezda Telekom Belgrade'
       - 'Crvena Zvezda mts Belgrade'           # mts telecom sponsor era
       - 'Crvena Zvezda Meridianbet Belgrade'   # Meridianbet sponsor era
       - 'Crvena Zvezda Meridian Belgrade'
@@ -79,6 +130,12 @@ clubs:
     registered_names_historically:
       - 'Darussafaka Istanbul'  # Tekfen construction sponsor era (E2022-E2024) dropped in E2025
 
+  - name: 'Dinamo Sassari'
+    alias: 'Dinamo Sassari'
+    abbreviation: 'SAS'
+    registered_names_historically:
+      - 'Dinamo Banco di Sardegna Sassari'
+
   - name: 'Dubai Basketball'
     alias: 'Dubai'
     abbreviation: 'DUB'
@@ -88,18 +145,13 @@ clubs:
     alias: 'Olimpia Milano'
     abbreviation: 'MIL'
     registered_names_historically:
+      - 'EA7 Emporio Armani Milano'
       - 'AX Armani Exchange Milan'
       - 'AX Armani Exchange Olimpia Milan'
 
-  - name: 'FC Barcelona'
-    alias: 'Barcelona'
-    abbreviation: 'BAR'
-    registered_names_historically:
-      - 'FC Barcelona Lassa'    # Lassa Tyres sponsor era (E2022-E2024)
-
-  - name: 'FC Bayern Munich'
-    alias: 'Bayern'
-    abbreviation: 'BAY'
+  - name: 'Elan Chalon-Sur-Saone'
+    alias: 'Elan Chalon'
+    abbreviation: 'ECS'
     registered_names_historically: []
 
   - name: 'FB Dogus'
@@ -108,10 +160,24 @@ clubs:
     registered_names_historically:
       - 'Darussafaka Dogus Istanbul'
 
+  - name: 'FC Barcelona'
+    alias: 'Barcelona'
+    abbreviation: 'BAR'
+    registered_names_historically:
+      - 'FC Barcelona Regal'
+      - 'FC Barcelona Lassa'    # Lassa Tyres sponsor era (E2022-E2024)
+
+  - name: 'FC Bayern Munich'
+    alias: 'Bayern'
+    abbreviation: 'BAY'
+    registered_names_historically: []
+
   - name: 'Fenerbahce Beko Istanbul'
     alias: 'Fenerbahce'
     abbreviation: 'FNR'
     registered_names_historically:
+      - 'Fenerbahce Ulker'
+      - 'Fenerbahce Ulker Istanbul'
       - 'Fenerbahce BEKO Istanbul'
       - 'Fenerbahce Dogus Istanbul'
       - 'Fenerbahce Istanbul'
@@ -120,22 +186,36 @@ clubs:
     alias: 'Galatasaray'
     abbreviation: 'GAL'
     registered_names_historically:
+      - 'Galatasaray Medical Park'
+      - 'Galatasaray Liv Hospital Istanbul'
       - 'Galatasaray Istanbul' # Odeabank sponsor era (E2022-E2024) dropped in E2025
 
   - name: 'Hapoel IBI Tel Aviv'
     alias: 'Hapoel'
     abbreviation: 'HAP'
     registered_names_historically: []
-  
+
   - name: 'Herbalife Gran Canaria'
     alias: 'Gran Canaria'
     abbreviation: 'GCA'
     registered_names_historically: []
 
+  - name: 'JSF Nanterre'
+    alias: 'Nanterre'
+    abbreviation: 'NAN'
+    registered_names_historically: []
+  
   - name: 'Khimki Moscow Region'
     alias: 'Khimki'
     abbreviation: 'KHI'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'BC Khimki Moscow Region'
+
+  - name: 'KK Zagreb'
+    alias: 'KK Zagreb'
+    abbreviation: 'ZAG'
+    registered_names_historically:
+      - 'KK Zagreb Croatia Osiguranje'
 
   - name: 'LDLC ASVEL Villeurbanne'
     alias: 'ASVEL'
@@ -145,23 +225,61 @@ clubs:
       - 'LDLC ASVEL Villeurbanne ASVEL Villeurbanne'
       - 'LDLC ASVEL Villeurbanne ASVEL Villeurbanne'
 
+  - name: 'Limoges CSP'
+    alias: 'Limoges'
+    abbreviation: 'LIM'
+    registered_names_historically: []
+
+  - name: 'Lietuvos Rytas Vilnius'
+    alias: 'Lietuvos Rytas'
+    abbreviation: 'LRV'
+    registered_names_historically: []
+
+  - name: 'Lokomotiv Kuban Krasnodar'
+    alias: 'Lokomotiv Kuban'
+    abbreviation: 'LKK'
+    registered_names_historically: []
+
   - name: 'Maccabi Tel Aviv'
     alias: 'Maccabi'
     abbreviation: 'MAC'
     registered_names_historically:
+      - 'Maccabi Electra'
+      - 'Maccabi Electra Tel Aviv'
       - 'Maccabi Rapyd Tel Aviv'       # Rapyd fintech sponsor era (E2025)
       - 'Maccabi Playtika Tel Aviv'    # Playtika gaming sponsor era (E2022-E2024)
       - 'Maccabi FOX Tel Aviv'
 
+  - name: 'Neptunas Klaipeda'
+    alias: 'Neptunas'
+    abbreviation: 'NEP'
+    registered_names_historically: []
+
+  - name: 'Montepaschi Siena'
+    alias: 'Montepaschi'
+    abbreviation: 'MPS'
+    registered_names_historically: []
+
+  - name: 'Nizhny Novgorod'
+    alias: 'Nizhny Novgorod'
+    abbreviation: 'NIZ'
+    registered_names_historically: []
+
   - name: 'Olympiacos Piraeus'
     alias: 'Olympiacos'
     abbreviation: 'OLY'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Olympiacos Piraeus Piraeus'
+      - 'Olympiacos'
+      - 'Olympiacos Piraeus BC'
 
   - name: 'Panathinaikos Athens'
     alias: 'Panathinaikos'
     abbreviation: 'PAN'
     registered_names_historically:
+      - 'Panathinaikos Athens Athens'
+      - 'Panathinaikos'
+      - 'Panathinaikos BSA Athens'
       - 'Panathinaikos AKTOR Athens'   # AKTOR construction sponsor era (E2023+)
       - 'Panathinaikos BC'
       - 'Panathinaikos OPAP Athens'
@@ -172,26 +290,61 @@ clubs:
     abbreviation: 'PAR'
     registered_names_historically: []
 
+  - name: 'PGE Turow Zgorzelec'
+    alias: 'PGE Turow'
+    abbreviation: 'TUW'
+    registered_names_historically: []
+
   - name: 'Partizan Mozzart Bet Belgrade'
     alias: 'Partizan'
     abbreviation: 'PAZ'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Partizan Mozzart Bet Belgrade Belgrade'
+      - 'Partizan mt:s'
+      - 'Partizan NIS Belgrade'
 
   - name: 'Real Madrid'
     alias: 'Real Madrid'
     abbreviation: 'RMA'
     registered_names_historically: []
 
+  - name: 'Stelmet Zielona Gora'
+    alias: 'Stelmet'
+    abbreviation: 'STZ'
+    registered_names_historically: []
+
+  - name: 'SLUC Nancy'
+    alias: 'SLUC Nancy'
+    abbreviation: 'SLN'
+    registered_names_historically:
+      - 'SLUC Nancy Basket'
+
+  - name: 'Strasbourg'
+    alias: 'Strasbourg'
+    abbreviation: 'STR'
+    registered_names_historically: []
+
   - name: 'Unicaja Malaga'
     alias: 'Unicaja'
     abbreviation: 'UNI'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Unicaja Malaga Malaga'
+      - 'Unicaja'
+      - 'Unicaja Malaga Malaga'
 
   - name: 'UNICS Kazan'
     alias: 'UNICS'
     abbreviation: 'UNC'
     registered_names_historically:
+      - 'Unics'
       - 'Unics Kazan'
+
+  - name: 'Union Olimpija Ljubljana'
+    alias: 'Union Olimpija'
+    abbreviation: 'UOL'
+    registered_names_historically:
+      - 'Union Olimpija Ljubljana Ljubljana'
+      - 'Union Olimpija'
   
   - name: 'Valencia Basket'
     alias: 'Valencia'
@@ -207,7 +360,9 @@ clubs:
   - name: 'Zalgiris Kaunas'
     alias: 'Zalgiris'
     abbreviation: 'ZAL'
-    registered_names_historically: []
+    registered_names_historically:
+      - 'Zalgiris'
+      - 'Zalgiris Kaunas Kaunas'
 
   - name: 'Zenit St Petersburg'
     alias: 'Zenit'
