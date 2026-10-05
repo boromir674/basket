@@ -25,4 +25,18 @@ echo "   Open: http://localhost:${PORT}/score-d52.html"
 echo "   Open: http://localhost:${PORT}/score-diff-v2.html"
 echo "   Open: http://localhost:${PORT}/score-d52-v2.html"
 echo "   Open: http://localhost:${PORT}/style-insights.html"
-python3 -m http.server "$PORT" --directory public
+
+# in case running on older hosts, python distirubtion installed might ship older version of http.server, so we do a little check here to, just make it
+# a bit more backwards compatible.
+
+# older http.server versions do not support --directory public, so we must
+# find workaraound, with a conditional
+
+if ! python3 -m http.server --help | grep -q -- '--directory'; then
+  echo "[INFO] Your Python http.server does not support --directory. Using workaround."
+  cd public
+  python3 -m http.server "$PORT"
+
+else
+  python3 -m http.server "$PORT" --directory public
+fi
