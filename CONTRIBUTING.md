@@ -116,7 +116,7 @@ POST_DOWNLOAD_OPS --> COMMIT
 
     5. Optional: Check for Season winner and update
 
-        Update the `SEASON_WINNERS` Object declared in `prod/index.html`
+        Update the `SEASON_WINNERS` Object declared in `prod/elo.html`
 
 3. Commit Changes
 
@@ -151,10 +151,10 @@ POST_DOWNLOAD_OPS --> COMMIT
         > **Info:** `Games Manifest` Is an `index` of the games data, allowing for efficient lookups.
         > **Info:** `ELO` data power the full ELO timeline and playback UI features
 
-    3. Optionally, `git add` the `prod/index.html`
+    3. Optionally, `git add` the `prod/elo.html`
 
         ```sh
-        git add "prod/index.html"
+        git add "prod/elo.html"
         ```
 
     3. Commit
