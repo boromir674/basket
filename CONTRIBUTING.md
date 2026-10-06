@@ -94,6 +94,9 @@ POST_DOWNLOAD_OPS --> COMMIT
 
         ```sh
         docker-compose -f docker-compose-legacy.yml run ops normalize_season_data --seasoncode "${SEASON}" --data-dir ${DATA_DIR}
+
+        # OR all seasons
+        docker-compose -f docker-compose-legacy.yml run ops normalize_all_seasons --data-dir ${DATA_DIR}
         ```
 
     3. Update `Games Manifest`, that powers "cheap lookups" to frontend page(s)
