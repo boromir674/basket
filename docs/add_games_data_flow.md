@@ -156,6 +156,182 @@ flowchart LR
 
 `score_timeline_*.json` is consumed by the style-insights generator and checked for coverage during the Pages build. Despite the build-config comment describing it as a cheap score-chart input, the current production chart implementation reads `raw_pts` directly; this document records the observed runtime path.
 
+## Per-page Data-to-UI Diagrams
+
+These diagrams trace persisted Data Sources to the page region that displays them. If a page embeds another HTML page in an iframe, the iframe is shown separately because that child page performs its own file loads.
+
+### `prod/mvp-home.html`
+
+```mermaid
+flowchart LR
+  Manifest["data/games_manifest.json"] --> GameList["Games list, filters, selected-game metadata"]
+  Manifest --> Selected["Selected entry: seasoncode, gamecode, file"]
+  Selected --> Viewer["Embedded prod/game-flow-viewer.html"]
+  Bundle["data/multi_drilldown_real_data_{season}_{game}.json"] --> Viewer
+  Viewer --> Sankey["Sankey canvas"]
+  Viewer --> Summary["Game title, score summary, KPIs, insights, view controls"]
+  Selected --> ConeFrame["Embedded prod/score-diff-v2.html?season=&game="]
+  RawPoints["data/raw/raw_pts_{season}_{game}.json"] --> ConeFrame --> Cone["Score Diff Cone iframe panel"]
+```
+
+### `prod/game-explorer.html`
+
+```mermaid
+flowchart LR
+  Manifest["data/games_manifest.json"] --> GameList["Games list, filters, selected-game metadata"]
+  Manifest --> Selected["Selected entry: seasoncode, gamecode, file"]
+  Selected --> Viewer["Embedded prod/game-flow-viewer.html"]
+  Bundle["data/multi_drilldown_real_data_{season}_{game}.json"] --> Viewer
+  Viewer --> Sankey["Sankey canvas"]
+  Viewer --> Summary["Game title, score summary, KPIs, insights, view controls"]
+  Selected --> ConeFrame["Embedded prod/score-diff-v2.html?season=&game="]
+  RawPoints["data/raw/raw_pts_{season}_{game}.json"] --> ConeFrame --> Cone["Score Diff Cone iframe panel"]
+```
+
+When anchor-team mode is enabled, `game-explorer.html` first fetches the selected multi bundle to reorder/style its team nodes, then passes the transformed bundle to the viewer. In ordinary mode it passes the selected manifest file URL directly.
+
+### `prod/game-flow-viewer.html`
+
+```mermaid
+flowchart LR
+  Manifest["data/games_manifest.json, only when no initial bundle URL is supplied"] --> Pick["Choose first game bundle as fallback"]
+  Pick --> BundleURL
+  BundleURL["Selected bundle URL"] --> Bundle["data/multi_drilldown_real_data_{season}_{game}.json"]
+  Bundle --> Meta["meta: page title, teams, date, score headline"]
+  Bundle --> Views["views nodes + links"] --> Sankey["Main Sankey canvas"]
+  Bundle --> ViewMeta["view title, desc, KPIs, insights"] --> SidePanel["Context / insight side panel"]
+  Bundle --> PlayerFlows["views.*.player_flows"] --> PlayerUI["Player-flow / explode / flow-impact UI"]
+  Elo["data/elo_multiseason.json"] --> EloLookup["Pregame Elo lookup by season + game"] --> Scoreboard["Scoreboard secondary line"]
+  Optional["Optional autoInsightsFile URL"] --> AutoInsights["renderAutoInsights placeholder; currently console-only"]
+```
+
+The viewer normally receives its selected bundle URL from a parent page or query parameter; the manifest is only its standalone fallback. The optional `autoInsightsFile` is fetched, but its current renderer is a placeholder rather than a visible UI panel.
+
+### `prod/elo.html`
+
+```mermaid
+flowchart LR
+  Elo["data/elo_multiseason.json"] --> History["history + seasoncodes"]
+  History --> Controls["Season/team selection and replay controls"]
+  History --> Ranking["Elo ranking table at selected fixture tick"]
+  History --> Trend["Selected-team Elo timeline chart"]
+  History --> Status["Selected team, rank, Elo, fixture/game status"]
+```
+
+### `prod/index.html` (Elo compatibility page)
+
+```mermaid
+flowchart LR
+  Elo["data/elo_multiseason.json"] --> History["history + seasoncodes"]
+  History --> Controls["Season/team selection and replay controls"]
+  History --> Ranking["Elo ranking table at selected fixture tick"]
+  History --> Trend["Selected-team Elo timeline chart"]
+  History --> Status["Selected team, rank, Elo, fixture/game status"]
+```
+
+### `prod/score-diff.html`
+
+```mermaid
+flowchart LR
+  RawPoints["data/raw/raw_pts_{season}_{game}.json: Rows"] --> Process["prod/score-chart.js: parse score, time, and shot rows"]
+  Process --> Info["Game info / home-away labels"]
+  Process --> Diff["Score-difference chart"]
+```
+
+### `prod/score-d52.html`
+
+```mermaid
+flowchart LR
+  RawPoints["data/raw/raw_pts_{season}_{game}.json: Rows"] --> Process["prod/score-chart.js: parse score, time, and shot rows"]
+  Process --> Info["Game info / home-away labels"]
+  Process --> D52["D52 score-state chart"]
+```
+
+### `prod/score-diff-v2.html`
+
+```mermaid
+flowchart LR
+  RawPoints["data/raw/raw_pts_{season}_{game}.json: Rows"] --> Process["prod/score-chart.js: parse score, time, and shot rows"]
+  Process --> Info["Game info / home-away labels"]
+  Process --> Diff["V2 score-difference chart"]
+```
+
+### `prod/score-d52-v2.html`
+
+```mermaid
+flowchart LR
+  RawPoints["data/raw/raw_pts_{season}_{game}.json: Rows"] --> Process["prod/score-chart.js: parse score, time, and shot rows"]
+  Process --> Info["Game info / home-away labels"]
+  Process --> D52["V2 D52 score-state chart"]
+```
+
+All four score pages use the shared `prod/score-chart.js` loader and read `raw_pts` directly. They do not fetch `score_timeline` in the current browser implementation.
+
+### `prod/style-insights.html`
+
+```mermaid
+flowchart LR
+  Insights["data/style_insights_{season}.json"] --> Teams["teams + rankings"]
+  Teams --> Spotlight["Automatic Spotlight: most consistent / adaptable teams"]
+  Teams --> Cards["Team cards and evidence summaries"]
+  Teams --> Meta["Season / sample metadata"]
+```
+
+### `lab/game-flow-switcher.html`
+
+```mermaid
+flowchart LR
+  Manifest["assets/processed/games_manifest.json"] --> List["Game list: season, game, teams, date, sync time"]
+  Manifest --> Selection["Selected entry file"]
+  Selection --> Bundle["assets/processed/multi_drilldown_real_data_{season}_{game}.json"]
+  Bundle --> Viewer["Embedded prod/game-flow-viewer.html"]
+  Viewer --> Sankey["Sankey canvas and viewer panels"]
+```
+
+### `lab/shot-style-map.html`
+
+```mermaid
+flowchart LR
+  Manifest["games_manifest.json"] --> Filters["Season/game/team/opponent selectors"]
+  Manifest --> Games["Games selected for aggregation"]
+  Pts["assets/raw_pts_{season}_{game}.json: shot rows, coordinates, outcomes"] --> Aggregate["Filter shots and compute court-bin metrics"]
+  Box["assets/raw_box_{season}_{game}.json: team/player totals"] --> Aggregate
+  Games --> Aggregate
+  Aggregate --> Map["2D court-bin chart(s), single team or comparison"]
+  Aggregate --> Rankings["Ranked shot zones / metric summaries"]
+```
+
+### `lab/shot-style-map-3d.html`
+
+```mermaid
+flowchart LR
+  Manifest["games_manifest.json"] --> Filters["Season/game/team/opponent selectors"]
+  Manifest --> Games["Games selected for aggregation"]
+  Pts["assets/raw_pts_{season}_{game}.json: shot rows, coordinates, outcomes"] --> Aggregate["Filter shots and compute court-bin metrics"]
+  Box["assets/raw_box_{season}_{game}.json: team/player totals"] --> Aggregate
+  Games --> Aggregate
+  Aggregate --> Offense["Offensive 3D hit map"]
+  Aggregate --> Defense["Defensive 3D hit map"]
+  Aggregate --> Combined["Bidirectional combined 3D court"]
+```
+
+### `lab/style-consistency-lab.html`
+
+```mermaid
+flowchart LR
+  Insights["style_insights_{season}.json"] --> TeamOptions["Team selector and consistency rankings"]
+  Insights --> Inspector["Top/bottom consistency inspector"]
+  Manifest["games_manifest.json"] --> Games["Season gamecodes to inspect"]
+  Pts["raw_pts_{season}_{game}.json for manifest games"] --> Vectors["Per-game shot-attempt vectors for selected team"]
+  TeamOptions --> Vectors
+  Games --> Vectors
+  Vectors --> Cloud["Season consistency ternary cloud"]
+  Vectors --> Strip["Shot-percentage variance strip"]
+  Vectors --> Inspector["Top/bottom consistency game-level inspector cards"]
+```
+
+The persisted payloads power the shown output regions; query controls and page-local settings are not Data Sources. `prod/team-anchor-compare.html` currently has no persisted JSON fetch and therefore is not included as a file-backed data flow.
+
 ## Code References
 
 - Sync orchestration and artifacts: `entrypoint.py`, `season_sync.py`, `build_from_euroleague_api.py`, `build_score_timeline.py`, `style_insights.py`
